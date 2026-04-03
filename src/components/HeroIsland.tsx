@@ -9,27 +9,41 @@ export default function HeroIsland() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [flow, setFlow] = useState<'selection' | 'checkout' | 'concierge'>('selection');
 
-  const videoRef = useRef<HTMLVideoElement>(null);
   const videos = ['/bali.mp4', '/padelv.mp4', '/vid2.mp4', '/vid3.mp4'];
   const [videoIndex, setVideoIndex] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
-    if (videoRef.current) {
-      const v = videoRef.current;
-      v.src = videos[videoIndex];
-      v.load();
-      v.playbackRate = 0.85; // Disminuir ligeramente la velocidad de reproducción
-      v.play().catch(e => console.error("Auto-play prevented", e));
-    }
+    videos.forEach((_, idx) => {
+      const v = videoRefs.current[idx];
+      if (v) {
+        if (idx === videoIndex) {
+          v.currentTime = 0;
+          v.play().catch(e => console.error("Auto-play prevented", e));
+        } else {
+          // Allow previous video to play through the crossfade (700ms) before pausing
+          setTimeout(() => {
+            if (videoRefs.current[idx] && idx !== videoIndex) {
+              videoRefs.current[idx]!.pause();
+            }
+          }, 700);
+        }
+      }
+    });
   }, [videoIndex]);
 
-  const handleVideoEnded = () => {
-    setVideoIndex((prev) => (prev + 1) % videos.length);
+  const handleNextVideo = (index: number) => {
+    if (index === videoIndex) {
+      setVideoIndex((prev) => (prev + 1) % videos.length);
+    }
   };
 
-  const handleTimeUpdate = () => {
-    if (videoRef.current && videoRef.current.currentTime >= 2) {
-      setVideoIndex((prev) => (prev + 1) % videos.length);
+  const handleTimeUpdate = (index: number) => {
+    if (index === videoIndex) {
+      const v = videoRefs.current[index];
+      if (v && v.currentTime >= 2) {
+        handleNextVideo(index);
+      }
     }
   };
 
@@ -44,20 +58,22 @@ export default function HeroIsland() {
     <>
       <section className="relative w-screen h-screen overflow-hidden flex items-end pb-32 px-8 md:px-16" >
         {/* Background Video */}
-        <div className="absolute inset-0 w-full h-full z-0 bg-cover bg-center bg-[url('/bmpic.JPG')] md:bg-[url('/bpic.jpg')]">
-          <video 
-            ref={videoRef}
-            autoPlay 
-            muted 
-            playsInline
-            onEnded={handleVideoEnded}
-            onTimeUpdate={handleTimeUpdate}
-            poster="/bpic.jpg"
-            className="w-full h-full object-cover scale-105"
-          >
-          </video>
+        <div className="absolute inset-0 w-full h-full z-0 bg-brand-dark">
+          {videos.map((src, idx) => (
+            <video 
+              key={src}
+              ref={(el) => { videoRefs.current[idx] = el; }}
+              src={src}
+              muted 
+              playsInline
+              preload="auto"
+              onTimeUpdate={() => handleTimeUpdate(idx)}
+              onEnded={() => handleNextVideo(idx)}
+              className={`absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-700 ease-in-out ${videoIndex === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+            />
+          ))}
           {/* Overlay gradient for text readability */}
-          <div className="absolute inset-0 bg-brand-dark/40 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-brand-dark/40 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent z-20"></div>
         </div>
 
         {/* Hero Content */}
