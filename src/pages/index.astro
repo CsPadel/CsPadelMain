@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LanguageToggle from '../components/LanguageToggle';
+import HeroIsland from '../components/HeroIsland';
+import GroupVillaLeader from '../components/GroupVillaLeader';
+import CorporateForm from '../components/CorporateForm';
+import FooterIsland from '../components/FooterIsland';
+---
+
+<Layout title="CourtSide | Premium Padel Experience">
+	<main class="w-full min-h-screen bg-brand-dark flex flex-col relative">
+		{/* Global Language Toggle */}
+		<LanguageToggle client:load />
+
+		{/* B2C Individual Flow */}
+		<HeroIsland client:load />
+
+		{/* B2C Group Flow */}
+		<GroupVillaLeader client:load />
+
+		{/* B2B Corporate Flow */}
+		<CorporateForm client:load />
+
+		{/* Reactive Footer */}
+		<FooterIsland client:load />
+	</main>
+</Layout>
