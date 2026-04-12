@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LanguageToggle from '../components/LanguageToggle';
+import { HeroRouter } from '../components/HeroRouter';
 import HeroIsland from '../components/HeroIsland';
 import GroupVillaLeader from '../components/GroupVillaLeader';
 import CorporateForm from '../components/CorporateForm';
@@ -8,20 +9,28 @@ import FooterIsland from '../components/FooterIsland';
 ---
 
 <Layout title="CourtSide | Premium Padel Experience">
-	<main class="w-full min-h-screen bg-brand-dark flex flex-col relative">
-		{/* Global Language Toggle */}
-		<LanguageToggle client:load />
+	<main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden">
+		{/* Global Language Toggle (Floating) */}
+		<div class="absolute top-6 right-6 z-50 fixed">
+			<LanguageToggle client:load />
+		</div>
 
-		{/* B2C Individual Flow */}
-		<HeroIsland client:load />
+		{/* Unified Digital Concierge Gateway */}
+		<HeroRouter client:load />
 
-		{/* B2C Group Flow */}
-		<GroupVillaLeader client:load />
+		{/* Landing Sections for Scroll Behavior */}
+		<div id="individual-section">
+			<HeroIsland client:load />
+		</div>
 
-		{/* B2B Corporate Flow */}
-		<CorporateForm client:load />
+		<div id="group-section">
+			<GroupVillaLeader client:load />
+		</div>
 
-		{/* Reactive Footer */}
+		<div id="corporate-section">
+			<CorporateForm client:load />
+		</div>
+
 		<FooterIsland client:load />
 	</main>
 </Layout>
