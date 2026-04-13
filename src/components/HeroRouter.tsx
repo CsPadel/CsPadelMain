@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import '../i18n/config';
 
 export const HeroRouter = () => {
   const { t } = useTranslation();

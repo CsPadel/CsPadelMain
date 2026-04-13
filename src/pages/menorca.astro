@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LanguageToggle from '../components/LanguageToggle';
+import RetreatLandingHero from '../components/RetreatLandingHero';
+import Agenda from '../components/Agenda';
+import FAQ from '../components/FAQ';
+import FooterIsland from '../components/FooterIsland';
+---
+
+<Layout title="CourtSide | Menorca Retreat">
+	<main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden pt-24">
+		<RetreatLandingHero destination="menorca" bgVideoSrc="/vid2.mp4" client:load />
+		
+		<Agenda destination="menorca" client:load />
+		
+		<FAQ destination="menorca" client:load />
+
+		<FooterIsland client:load />
+	</main>
+</Layout>

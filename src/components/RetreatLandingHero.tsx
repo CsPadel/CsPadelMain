@@ -1,17 +1,22 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Calendar, User, ArrowRight } from 'lucide-react';
+import { X, Calendar, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import '../i18n/config';
 
-export default function HeroIsland() {
+interface RetreatLandingHeroProps {
+  destination: 'menorca' | 'bali' | 'dubai';
+  bgVideoSrc?: string;
+  bgImageSrc?: string;
+}
+
+export default function RetreatLandingHero({ destination, bgVideoSrc, bgImageSrc }: RetreatLandingHeroProps) {
   const { t } = useTranslation();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const [flow, setFlow] = useState<'retreat' | 'selection' | 'checkout' | 'concierge'>('retreat');
-  const [selectedRetreat, setSelectedRetreat] = useState<string | null>(null);
+  const [flow, setFlow] = useState<'selection' | 'checkout' | 'concierge'>('selection');
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
 
-  const availableDates = (retreat: string | null) => {
+  const availableDates = (retreat: string) => {
     switch(retreat) {
       case 'menorca': return ['date1', 'date2'];
       case 'bali': return ['date1', 'date2'];
@@ -20,47 +25,9 @@ export default function HeroIsland() {
     }
   };
 
-  const videos = ['/bali.mp4', '/padelv.mp4', '/vid2.mp4', '/vid3.mp4'];
-  const [videoIndex, setVideoIndex] = useState(0);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-
-  useEffect(() => {
-    videos.forEach((_, idx) => {
-      const v = videoRefs.current[idx];
-      if (v) {
-        if (idx === videoIndex) {
-          v.currentTime = 0;
-          v.play().catch(e => console.error("Auto-play prevented", e));
-        } else {
-          // Allow previous video to play through the crossfade (700ms) before pausing
-          setTimeout(() => {
-            if (videoRefs.current[idx] && idx !== videoIndex) {
-              videoRefs.current[idx]!.pause();
-            }
-          }, 700);
-        }
-      }
-    });
-  }, [videoIndex]);
-
-  const handleNextVideo = (index: number) => {
-    if (index === videoIndex) {
-      setVideoIndex((prev) => (prev + 1) % videos.length);
-    }
-  };
-
-  const handleTimeUpdate = (index: number) => {
-    if (index === videoIndex) {
-      const v = videoRefs.current[index];
-      if (v && v.currentTime >= 2) {
-        handleNextVideo(index);
-      }
-    }
-  };
-
   const openSidebar = () => {
     setSidebarOpen(true);
-    setFlow('retreat');
+    setFlow('selection');
   };
 
   const closeSidebar = () => setSidebarOpen(false);
@@ -68,26 +35,28 @@ export default function HeroIsland() {
   return (
     <>
       <section className="relative w-screen h-screen overflow-hidden flex items-end pb-32 px-8 md:px-16" >
-        {/* Background Video */}
         <div className="absolute inset-0 w-full h-full z-0 bg-brand-dark">
-          {videos.map((src, idx) => (
+          {bgVideoSrc ? (
             <video 
-              key={src}
-              ref={(el) => { videoRefs.current[idx] = el; }}
-              src={src}
+              src={bgVideoSrc}
+              autoPlay
               muted 
+              loop
               playsInline
-              preload="auto"
-              onTimeUpdate={() => handleTimeUpdate(idx)}
-              onEnded={() => handleNextVideo(idx)}
-              className={`absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-700 ease-in-out ${videoIndex === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+              className={`absolute inset-0 w-full h-full object-cover scale-105 opacity-100`}
             />
-          ))}
-          {/* Overlay gradient for text readability */}
-          <div className="absolute inset-0 bg-brand-dark/40 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent z-20"></div>
+          ) : bgImageSrc ? (
+            <img 
+              src={bgImageSrc}
+              className={`absolute inset-0 w-full h-full object-cover scale-105 opacity-100`}
+              alt={destination}
+            />
+          ) : (
+            <div className="absolute inset-0 w-full h-full bg-brand-dark-2" />
+          )}
+          <div className="absolute inset-0 bg-brand-dark/50 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent z-20"></div>
         </div>
 
-        {/* Hero Content */}
         <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-12">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -95,9 +64,11 @@ export default function HeroIsland() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <img src="/logogold.webp" alt="CourtSide Padel" className="h-28 md:h-40 xl:h-52 mb-6 object-contain origin-bottom-left filter drop-shadow-2xl" />
-            <p className="mt-8 text-xl md:text-2xl font-light tracking-wide text-brand-light/80 max-w-xl">
-              {t('hero.subtitle')}
+            <h1 className="text-6xl md:text-8xl font-black mb-4 tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-brand-gold to-white">
+              {t(`${destination}Page.heroTitle`)}
+            </h1>
+            <p className="mt-8 text-xl md:text-3xl font-light tracking-wide text-brand-light/90 max-w-2xl">
+              {t(`${destination}Page.heroSubtitle`)}
             </p>
           </motion.div>
 
@@ -111,18 +82,17 @@ export default function HeroIsland() {
               className="group relative inline-flex items-center justify-center px-10 py-5 bg-brand-gold text-brand-dark font-semibold text-lg uppercase tracking-widest overflow-hidden transition-transform hover:scale-105 active:scale-95"
             >
               <span className="relative z-10 flex items-center gap-3">
-                {t('hero.bookBtn')} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {t(`${destination}Page.bookBtn`)} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-brand-light transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
               <span className="absolute inset-0 z-10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 text-brand-dark">
-                {t('hero.bookBtn')} <ArrowRight className="w-5 h-5 translate-x-1" />
+                {t(`${destination}Page.bookBtn`)} <ArrowRight className="w-5 h-5 translate-x-1" />
               </span>
             </button>
           </motion.div>
         </div>
       </section>
 
-      {/* Sidebar Overlay & Panel */}
       <AnimatePresence>
         {isSidebarOpen && (
           <>
@@ -141,35 +111,11 @@ export default function HeroIsland() {
               className="fixed top-0 right-0 h-full w-full max-w-md bg-brand-dark-2 z-50 p-8 md:p-12 overflow-y-auto border-l border-white/5"
             >
               <div className="flex justify-between items-center mb-16">
-                <span className="text-sm font-semibold tracking-widest text-brand-gold uppercase">{flow === 'retreat' ? t('sidebar.selectRetreatInfo') : t('sidebar.selectDateInfo')}</span>
+                <span className="text-sm font-semibold tracking-widest text-brand-gold uppercase">{t('sidebar.selectDateInfo')}</span>
                 <button onClick={closeSidebar} className="text-brand-light/50 hover:text-brand-light transition-colors p-2 -mr-2">
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
-              {flow === 'retreat' && (
-                <div className="flex flex-col gap-12 animate-in fade-in slide-in-from-right-4 duration-500">
-                  <div className="space-y-4">
-                    <h2 className="text-4xl font-bold tracking-tight">{t('sidebar.yourExperience')}</h2>
-                    <p className="text-brand-light/60 font-light text-lg">{t('sidebar.chooseRetreat')}</p>
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    {['menorca', 'bali', 'dubai'].map((retreat) => (
-                      <button
-                        key={retreat}
-                        onClick={() => {
-                          setSelectedRetreat(retreat);
-                          setSelectedDate(null);
-                          setFlow('selection');
-                        }}
-                        className="w-full py-5 border border-white/20 text-brand-light font-semibold text-lg uppercase tracking-wide hover:border-brand-gold hover:text-brand-gold transition-colors flex items-center justify-center"
-                      >
-                        {t(`sidebar.retreats.${retreat}`)}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
 
               {flow === 'selection' && (
                 <div className="flex flex-col gap-12 animate-in fade-in slide-in-from-right-4 duration-500">
@@ -178,24 +124,13 @@ export default function HeroIsland() {
                     <p className="text-brand-light/60 font-light text-lg">{t('sidebar.chooseHow')}</p>
                   </div>
 
-                  {/* Destination Selection Info */}
+                  {/* Destination Info Displayed Statically */}
                   <div className="border-b border-white/10 pb-8 space-y-4">
-                    <div className="flex justify-between items-center">
-                      <label className="text-xs uppercase tracking-widest text-brand-light/40 font-semibold">{t('sidebar.selectedRetreat')}</label>
-                      {selectedRetreat && (
-                        <a 
-                          href={`/${selectedRetreat}`} 
-                          className="text-xs flex items-center gap-1 uppercase tracking-widest text-brand-gold hover:text-brand-light transition-colors"
-                        >
-                          {t('sidebar.viewDetailsBtn')} <ArrowRight className="w-3 h-3" />
-                        </a>
-                      )}
-                    </div>
-                    <div className="flex items-center justify-between group cursor-pointer" onClick={() => setFlow('retreat')}>
+                    <label className="text-xs uppercase tracking-widest text-brand-light/40 font-semibold">{t('sidebar.selectedRetreat')}</label>
+                    <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 text-xl">
-                        <span className="uppercase tracking-widest text-lg">{selectedRetreat ? t(`sidebar.retreats.${selectedRetreat as string}`) : ''}</span>
+                        <span className="uppercase tracking-widest text-lg">{t(`sidebar.retreats.${destination}`)}</span>
                       </div>
-                      <span className="text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity">{t('sidebar.changeBtn')}</span>
                     </div>
                   </div>
 
@@ -205,14 +140,14 @@ export default function HeroIsland() {
                       <>
                         <label className="text-xs uppercase tracking-widest text-brand-light/40 font-semibold">{t('sidebar.availableDatesInfo')}</label>
                         <div className="flex flex-col gap-3">
-                          {availableDates(selectedRetreat).map((dateKey) => (
+                          {availableDates(destination).map((dateKey) => (
                             <button
                               key={dateKey}
                               onClick={() => setSelectedDate(dateKey)}
                               className="w-full py-4 border border-white/20 text-brand-light font-medium text-lg uppercase tracking-wide hover:border-brand-gold hover:text-brand-gold transition-colors flex items-center justify-center gap-3 bg-white/5"
                             >
                               <Calendar className="w-5 h-5 text-brand-gold" />
-                              {t(`sidebar.dates.${selectedRetreat}.${dateKey}`)}
+                              {t(`sidebar.dates.${destination}.${dateKey}`)}
                             </button>
                           ))}
                         </div>
@@ -223,7 +158,7 @@ export default function HeroIsland() {
                         <div className="flex items-center justify-between group cursor-pointer" onClick={() => setSelectedDate(null)}>
                           <div className="flex items-center gap-4 text-xl">
                             <Calendar className="w-6 h-6 text-brand-gold" />
-                            <span>{t(`sidebar.dates.${selectedRetreat}.${selectedDate}`)}</span>
+                            <span>{t(`sidebar.dates.${destination}.${selectedDate}`)}</span>
                           </div>
                           <span className="text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity">{t('sidebar.changeBtn')}</span>
                         </div>

@@ -20,7 +20,7 @@ export default function LanguageToggle() {
   if (!mounted) return null; // Avoid hydration mismatch visually if needed
 
   return (
-    <div className="fixed top-8 right-8 z-50 flex items-center bg-brand-dark/50 backdrop-blur-md border border-white/10 rounded-full px-1 py-1">
+    <div className="flex items-center bg-brand-dark/50 backdrop-blur-md border border-white/10 rounded-full px-1 py-1">
       <button
         onClick={() => currentLang !== 'es' && toggleLang()}
         className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest transition-colors ${

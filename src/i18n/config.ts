@@ -4,6 +4,44 @@ import { initReactI18next } from 'react-i18next';
 export const resources = {
   en: {
     translation: {
+      navbar: {
+        about: "About Us",
+        services: "Services",
+        destinations: "Destinations",
+        menorca: "Menorca",
+        bali: "Bali",
+        dubai: "Dubai"
+      },
+      aboutPage: {
+        heroTitle: "BEYOND THE COURT",
+        heroSubtitle: "Oliver and Alexy Watellet are on a mission to elevate the global padel experience, fusing world-class athletic performance with uncompromising luxury.",
+        teamTitle: "The Masterminds",
+        team: [
+          { name: "Oliver Watellet", role: "Co-Founder & Strategic Vision" },
+          { name: "Alexy Watellet", role: "Co-Founder & Athletic Director" },
+          { name: "Carlos M.", role: "Head Coach (Menorca)" },
+          { name: "Elena R.", role: "Lead Concierge" }
+        ]
+      },
+      servicesPage: {
+        heroTitle: "CURATED FOR EXCELLENCE",
+        heroSubtitle: "Whether you seek personal refinement, a private sanctuary for your inner circle, or a strategic venue for your board, our services adapt to your ambition.",
+        individual: {
+          title: "Personal Suites",
+          desc: "Perfect for the focused individual or couples. Connect, play, and unwind in private luxury while engaging with our world-class padel programs.",
+          action: "Explore Suites"
+        },
+        group: {
+          title: "Full Villa Exclusivity",
+          desc: "Uncompromised privacy for your trusted group of 8-20 guests. True luxury is having the entire estate to yourselves.",
+          action: "Reserve a Villa"
+        },
+        corporate: {
+          title: "C-Level Strategy",
+          desc: "Silence the noise. Executive retreats designed for absolute focus, high-stakes networking, and team building at the highest level.",
+          action: "Download Dossier"
+        }
+      },
       hero: {
         title: "COURTSIDE",
         subtitle: "Effortless performance. Connect, play, and unwind in our private suites.",
@@ -11,13 +49,87 @@ export const resources = {
       },
       sidebar: {
         selectDateInfo: "Select a Date",
+        selectRetreatInfo: "Select a Retreat",
         yourExperience: "Your Experience",
         chooseHow: "Choose how you wish to proceed with your booking.",
+        chooseRetreat: "Choose your destination retreat.",
+        selectedRetreat: "Destination",
+        retreats: {
+          menorca: "Menorca",
+          bali: "Bali",
+          dubai: "Dubai"
+        },
+        availableDatesInfo: "Available Dates",
+        dates: {
+          menorca: {
+            date1: "October 8 - 11, 2026",
+            date2: "October 21 - 25, 2026"
+          },
+          bali: {
+            date1: "July 8 - 12, 2026",
+            date2: "July 22 - 26, 2026"
+          },
+          dubai: {
+            date1: "November 19 - 22, 2026"
+          }
+        },
         desiredDate: "Desired Date",
         mockDate: "14 - 16 November, 2026",
         changeBtn: "Change",
+        viewDetailsBtn: "View Destination Details",
         directCheckoutBtn: "Proceed to Checkout",
         conciergeBtn: "Speak with my Concierge"
+      },
+      menorcaPage: {
+        heroTitle: "MENORCA",
+        heroSubtitle: "A Mediterranean Sanctuary. Pure focus, padel excellence, and absolute tranquility.",
+        bookBtn: "Secure Your Place",
+        agendaTitle: "The Itinerary",
+        faqTitle: "Frequently Asked Questions",
+        agenda: [
+          { 
+            dayStr: "Day 01", 
+            label: "VIP Arrival",
+            activities: [
+              { time: "14:00", title: "VIP Transfer & Check-in", desc: "Private transport from Mahón Airport. Welcome mocktails and settling into suites." },
+              { time: "16:00", title: "Wellness Assessment & Massage", desc: "Deep tissue sports massage to release travel tension and baseline fitness checks." },
+              { time: "19:00", title: "Welcome Dinner & Networking", desc: "Opening gala featuring Mediterranean gourmet dining and program briefing by the Head Coach." }
+            ]
+          },
+          { 
+            dayStr: "Day 02", 
+            label: "Foundation",
+            activities: [
+              { time: "08:00", title: "Technical Padel Clinic", desc: "On-court intensive focusing on stroke mechanics, positioning, and the 'bandeja'." },
+              { time: "12:00", title: "Infinity Pool Recovery", desc: "Contrast bathing, saunas, and organic nutrition stations by the private pool." },
+              { time: "16:00", title: "Match Strategy Session", desc: "Video analysis of the morning's performance breaking down tactical improvements." },
+              { time: "20:00", title: "Leisure Evening", desc: "Free evening. Recommendations for top-tier local restaurants managed by your Concierge." }
+            ]
+          },
+          { 
+            dayStr: "Day 03", 
+            label: "Pro-Am & Yacht",
+            activities: [
+              { time: "08:30", title: "Pro-Am Match Play", desc: "Intense, competitive tournament-style matches alongside professional players." },
+              { time: "13:00", title: "Charter Yacht Escape", desc: "Afternoon sailing to secluded coves. Premium catering and ocean relaxation." },
+              { time: "18:00", title: "Active Recovery", desc: "On-deck physiotherapy and stretching sessions with the sunset." }
+            ]
+          },
+          { 
+            dayStr: "Day 04", 
+            label: "Departure",
+            activities: [
+              { time: "09:00", title: "Exhibition Matches", desc: "Open play to finalize advanced tactics in a relaxed, competitive environment." },
+              { time: "13:00", title: "Farewell Banquet", desc: "Distribution of detailed performance dossiers and personalized luxury gifts." },
+              { time: "15:00", title: "Executive Check-out", desc: "Private goodbyes and seamless airport transfers." }
+            ]
+          }
+        ],
+        faq: [
+          { q: "What skill level is required?", a: "Our coaches tailor sessions to all levels, from beginners looking for foundation building to advanced players refining strategy." },
+          { q: "Is the flight included?", a: "Flights are not included in the standard package, however our private Concierge can arrange private charters or commercial flights upon request." },
+          { q: "What about dietary requirements?", a: "Our on-site private chef curates bespoke menus based on a detailed wellness questionnaire sent prior to your arrival." }
+        ]
       },
       checkout: {
         title: "Direct Checkout",
@@ -126,6 +238,44 @@ export const resources = {
   },
   es: {
     translation: {
+      navbar: {
+        about: "Nuestra Historia",
+        services: "Servicios",
+        destinations: "Destinos",
+        menorca: "Menorca",
+        bali: "Bali",
+        dubai: "Dubái"
+      },
+      aboutPage: {
+        heroTitle: "MÁS ALLÁ DE LA PISTA",
+        heroSubtitle: "Oliver y Alexy Watellet tienen la misión de elevar la experiencia global del pádel, fusionando el rendimiento atlético de clase mundial con el lujo absoluto.",
+        teamTitle: "Las Mentes Maestras",
+        team: [
+          { name: "Oliver Watellet", role: "Co-Fundador y Visión Estratégica" },
+          { name: "Alexy Watellet", role: "Co-Fundador y Director Atlético" },
+          { name: "Carlos M.", role: "Head Coach (Menorca)" },
+          { name: "Elena R.", role: "Lead Concierge" }
+        ]
+      },
+      servicesPage: {
+        heroTitle: "DISEÑADO PARA LA EXCELENCIA",
+        heroSubtitle: "Ya sea que busque perfeccionamiento personal, un santuario privado para su círculo, o una sede estratégica para su junta, nos adaptamos a su ambición.",
+        individual: {
+          title: "Suites Personales",
+          desc: "Ideal para individuos enfocados o parejas. Conecte, juegue y descanse en lujo privado mientras participa en nuestro programa de clase mundial.",
+          action: "Explorar Suites"
+        },
+        group: {
+          title: "Exclusividad en Villa",
+          desc: "Privacidad absoluta para su grupo de confianza (8-20 invitados). El verdadero lujo es tener toda la finca entera a su disposición.",
+          action: "Reservar la Villa"
+        },
+        corporate: {
+          title: "Estrategia C-Level",
+          desc: "Silencie el ruido. Retiros ejecutivos diseñados para el enfoque absoluto, networking de alto nivel y team building directivo.",
+          action: "Descargar Dossier"
+        }
+      },
       hero: {
         title: "COURTSIDE",
         subtitle: "Un esfuerzo sin desgaste. Conecta, juega y descansa en nuestras suites privadas.",
@@ -133,13 +283,87 @@ export const resources = {
       },
       sidebar: {
         selectDateInfo: "Selecciona tu fecha",
+        selectRetreatInfo: "Selecciona tu destino",
         yourExperience: "Tu Experiencia",
         chooseHow: "Elige cómo deseas proceder con tu reserva.",
+        chooseRetreat: "Elige tu retiro de destino.",
+        selectedRetreat: "Destino",
+        retreats: {
+          menorca: "Menorca",
+          bali: "Bali",
+          dubai: "Dubái"
+        },
+        availableDatesInfo: "Fechas Disponibles",
+        dates: {
+          menorca: {
+            date1: "Octubre 8 - 11, 2026",
+            date2: "Octubre 21 - 25, 2026"
+          },
+          bali: {
+            date1: "Julio 8 - 12, 2026",
+            date2: "Julio 22 - 26, 2026"
+          },
+          dubai: {
+            date1: "Noviembre 19 - 22, 2026"
+          }
+        },
         desiredDate: "Fecha Deseada",
         mockDate: "Noviembre 14 - 16, 2026",
         changeBtn: "Cambiar",
+        viewDetailsBtn: "Ver Detalles del Destino",
         directCheckoutBtn: "Pasar al pago directo",
         conciergeBtn: "Hablar con mi Concierge"
+      },
+      menorcaPage: {
+        heroTitle: "MENORCA",
+        heroSubtitle: "Un santuario mediterráneo. Enfoque puro, excelencia en pádel y tranquilidad absoluta.",
+        bookBtn: "Solicitar Reserva",
+        agendaTitle: "El Itinerario",
+        faqTitle: "Preguntas Frecuentes",
+        agenda: [
+          { 
+            dayStr: "Día 01", 
+            label: "Llegada VIP",
+            activities: [
+              { time: "14:00", title: "Llegada VIP & Aclimatación", desc: "Traslado privado del aeropuerto a la reserva. Check-in con zumos orgánicos." },
+              { time: "16:00", title: "Evaluación & Masaje de Bienvenida", desc: "Masajes deportivos de tejido profundo para liberar tensiones de viaje." },
+              { time: "19:00", title: "Cena de Bienvenida & Networking", desc: "Presentación del programa guiada por el Head Coach con degustación de alta gastronomía local." }
+            ]
+          },
+          { 
+            dayStr: "Día 02", 
+            label: "Fundamentos",
+            activities: [
+              { time: "08:00", title: "Clínica de Pádel (Técnica)", desc: "Entrenamiento en pista enfocado en mecánica de golpe, posicionamiento y la bandeja." },
+              { time: "12:00", title: "Recuperación en Piscina", desc: "Baños de contraste, sauna y mixología saludable junto a la piscina infinita privada." },
+              { time: "16:00", title: "Estrategia de Partido", desc: "Sesión táctica con análisis en video del juego de la mañana para optimizar decisiones." },
+              { time: "20:00", title: "Cena Libre", desc: "Noche libre. Recomendaciones de alta cocina gestionadas directamente por su Concierge." }
+            ]
+          },
+          { 
+            dayStr: "Día 03", 
+            label: "Pro-Am & Yate",
+            activities: [
+              { time: "08:30", title: "Torneo Pro-Am", desc: "Partidos competitivos intensos en formato torneo jugando con y contra profesionales." },
+              { time: "13:00", title: "Tarde de Yate & Relax", desc: "Navegación exclusiva por calas vírgenes de Menorca. Catering premium a bordo." },
+              { time: "18:00", title: "Recuperación Activa", desc: "Fisioterapia y estiramientos en la cubierta del yate acompañados de la brisa marina." }
+            ]
+          },
+          { 
+            dayStr: "Día 04", 
+            label: "Clausura",
+            activities: [
+              { time: "09:00", title: "Partidos de Exhibición", desc: "Juego libre y aplicación final de las tácticas avanzadas aprendidas durante el retiro." },
+              { time: "13:00", title: "Almuerzo de Clausura", desc: "Entrega de informes detallados de rendimiento deportivo y obsequios exclusivos de CourtSide." },
+              { time: "15:00", title: "Check-out Ejecutivo", desc: "Despedida privada y traslados VIP de regreso al aeropuerto organizados sin fricciones." }
+            ]
+          }
+        ],
+        faq: [
+          { q: "¿Qué nivel de habilidad se requiere?", a: "Nuestros entrenadores adaptan las sesiones para todos los niveles, desde principiantes que buscan construir una base sólida, hasta jugadores avanzados que desean refinar su estrategia." },
+          { q: "¿Están incluidos los vuelos o traslados en el paquete principal?", a: "Los vuelos a la isla no están incluidos de base, pero nuestro Concierge cuenta con acuerdos preferenciales y puede organizar vuelos privados o en aerolíneas comerciales bajo solicitud." },
+          { q: "¿Tenemos en cuenta los requisitos dietéticos especiales?", a: "Totalmente. Nuestro chef privado diseña menús a medida de alta gastronomía que responden a cualquier requerimiento, todo a partir del cuestionario de bienestar previo." }
+        ]
       },
       checkout: {
         title: "Checkout Directo",
@@ -252,8 +476,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "es", // default language
-    fallbackLng: "en",
+    lng: "en", // default language
+    fallbackLng: "es",
     interpolation: {
       escapeValue: false // react already safes from xss
     }

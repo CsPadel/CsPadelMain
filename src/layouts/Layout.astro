@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/Navbar';
 
 interface Props {
 	title: string;
@@ -20,6 +21,7 @@ const { title, description = "Premium Padel Experience. Book a suite or a comple
 		<meta name="description" content={description} />
 	</head>
 	<body class="bg-brand-dark text-brand-light font-inter antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
+		<Navbar client:load />
 		<slot />
 	</body>
 </html>
