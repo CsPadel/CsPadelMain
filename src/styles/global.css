@@ -1,18 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-inter: 'Inter', sans-serif;
-  
-  --color-brand-gold: #D1A054;
+  /* Typography — replace Inter with luxury pairing */
+  --font-inter: 'Jost', 'Helvetica Neue', sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+
+  /* Color system */
+  --color-brand-gold: #D9AD62;
+  --color-brand-gold-light: #F4C068;
   --color-brand-gold-dark: #b88645;
-  --color-brand-dark: #0a0a0a;
-  --color-brand-dark-2: #141414;
-  --color-brand-light: #fafafa;
+  --color-brand-dark: #01192C;
+  --color-brand-dark-2: #041E36;
+  --color-brand-light: #FFFFFF;
+  --color-text-body: #333333;
 }
 
 @layer base {
   html, body {
     @apply bg-brand-dark text-brand-light font-inter antialiased overflow-x-hidden;
   }
+
+  /* Display serif for all structural headings */
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+  }
+}
+
+/* ─── Nav link gold underline on hover ─────────────────── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #D9AD62;
+  transition: width 0.28s ease-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Primary CTA button — dark navy + gold border + shimmer ── */
+.btn-luxury {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background-color: #041E36;
+  border: 1px solid #D9AD62;
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+  will-change: transform;
+}
+.btn-luxury::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(217, 173, 98, 0.22) 50%,
+    transparent 65%
+  );
+  transform: translateX(-110%) skewX(-15deg);
+  transition: transform 0.55s ease-out;
+}
+.btn-luxury:hover::after {
+  transform: translateX(110%) skewX(-15deg);
+}
+.btn-luxury:hover {
+  box-shadow: 0 0 24px rgba(217, 173, 98, 0.18);
+}
+.btn-luxury:active {
+  transform: scale(0.98);
+}
+
+/* ─── Experience selector cards ────────────────────────── */
+.intent-card {
+  background: rgba(4, 30, 54, 0.72);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  backdrop-filter: blur(12px) saturate(1.4);
+  border: 1px solid rgba(217, 173, 98, 0.25);
+  min-height: 120px;
+  transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.intent-card:hover {
+  border-color: rgba(217, 173, 98, 0.7);
+  box-shadow: 0 8px 32px rgba(217, 173, 98, 0.15);
+}
+.intent-card .card-subtext {
+  color: #D9AD62;
+  opacity: 0.75;
+  transition: opacity 0.3s ease-out;
+}
+.intent-card:hover .card-subtext {
+  opacity: 1;
+}
+
+/* ─── Card descriptor italic copy ──────────────────────── */
+.card-descriptor {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  transition: color 0.3s ease-out;
+}
+.intent-card:hover .card-descriptor {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ─── Luxury signals strip ──────────────────────────────── */
+.luxury-strip {
+  background: #01192C;
+  border-top: 1px solid rgba(217, 173, 98, 0.2);
+  border-bottom: 1px solid rgba(217, 173, 98, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+}
+.luxury-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.luxury-number {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #D9AD62;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+.luxury-label {
+  font-family: 'Jost', 'Helvetica Neue', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+.luxury-divider {
+  color: rgba(217, 173, 98, 0.3);
+  font-size: 1.2rem;
+  font-weight: 300;
+  user-select: none;
+}
+@media (max-width: 640px) {
+  .luxury-strip {
+    gap: 1.5rem;
+    padding: 1.25rem 1rem;
+  }
+  .luxury-divider {
+    display: none;
+  }
+}
+
+/* ─── Section noise overlay for dark sections ──────────── */
+.noise-section {
+  position: relative;
+}
+.noise-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 1;
+}
+.noise-section > * {
+  position: relative;
+  z-index: 2;
 }

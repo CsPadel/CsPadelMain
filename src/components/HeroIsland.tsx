@@ -106,17 +106,12 @@ export default function HeroIsland() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <button 
+            <button
               onClick={openSidebar}
-              className="group relative inline-flex items-center justify-center px-10 py-5 bg-brand-gold text-brand-dark font-semibold text-lg uppercase tracking-widest overflow-hidden transition-transform hover:scale-105 active:scale-95"
+              className="btn-luxury group"
             >
-              <span className="relative z-10 flex items-center gap-3">
-                {t('hero.bookBtn')} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-brand-light transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
-              <span className="absolute inset-0 z-10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 text-brand-dark">
-                {t('hero.bookBtn')} <ArrowRight className="w-5 h-5 translate-x-1" />
-              </span>
+              {t('hero.bookBtn')}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </button>
           </motion.div>
         </div>
@@ -150,7 +145,8 @@ export default function HeroIsland() {
               {flow === 'retreat' && (
                 <div className="flex flex-col gap-12 animate-in fade-in slide-in-from-right-4 duration-500">
                   <div className="space-y-4">
-                    <h2 className="text-4xl font-bold tracking-tight">{t('sidebar.yourExperience')}</h2>
+                    <div className="w-8 h-px bg-brand-gold mb-6" />
+                    <h2 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>{t('sidebar.yourExperience')}</h2>
                     <p className="text-brand-light/60 font-light text-lg">{t('sidebar.chooseRetreat')}</p>
                   </div>
                   <div className="flex flex-col gap-4">
@@ -174,7 +170,8 @@ export default function HeroIsland() {
               {flow === 'selection' && (
                 <div className="flex flex-col gap-12 animate-in fade-in slide-in-from-right-4 duration-500">
                   <div className="space-y-4">
-                    <h2 className="text-4xl font-bold tracking-tight">{t('sidebar.yourExperience')}</h2>
+                    <div className="w-8 h-px bg-brand-gold mb-6" />
+                    <h2 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>{t('sidebar.yourExperience')}</h2>
                     <p className="text-brand-light/60 font-light text-lg">{t('sidebar.chooseHow')}</p>
                   </div>
 
@@ -239,9 +236,9 @@ export default function HeroIsland() {
                         exit={{ opacity: 0, height: 0 }}
                         className="flex flex-col gap-4 mt-8"
                       >
-                        <button 
+                        <button
                           onClick={() => setFlow('checkout')}
-                          className="w-full py-5 bg-brand-gold text-brand-dark font-semibold text-lg uppercase tracking-wide hover:bg-brand-light transition-colors flex items-center justify-center gap-2"
+                          className="btn-luxury w-full"
                         >
                           {t('sidebar.directCheckoutBtn')}
                         </button>
@@ -284,7 +281,7 @@ export default function HeroIsland() {
                       <label className="text-xs uppercase tracking-widest text-brand-light/40">{t('concierge.emailLabel')}</label>
                       <input type="email" className="w-full bg-transparent border-b border-white/20 pb-2 text-lg focus:outline-none focus:border-brand-gold transition-colors" placeholder={t('concierge.emailPlaceholder')} />
                     </div>
-                    <button className="w-full py-5 mt-4 bg-brand-gold text-brand-dark font-semibold text-lg uppercase tracking-wide hover:bg-brand-light transition-colors">
+                    <button className="btn-luxury w-full mt-4">
                       {t('concierge.submitBtn')}
                     </button>
                   </form>

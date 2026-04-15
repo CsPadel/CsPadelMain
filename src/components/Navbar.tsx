@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -9,12 +9,34 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [pathname, setPathname] = useState('');
+
+  useEffect(() => {
+    setPathname(window.location.pathname);
+    const onScroll = () => setIsScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const isActive = (href: string) => pathname === href;
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-dark/30 backdrop-blur-md border-b border-white/5">
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${
+          isScrolled
+            ? 'bg-brand-dark shadow-lg shadow-black/30'
+            : 'bg-transparent backdrop-blur-sm'
+        }`}
+        style={{
+          borderBottom: isScrolled
+            ? '1px solid rgba(217, 173, 98, 0.25)'
+            : '1px solid rgba(255,255,255,0.04)',
+        }}
+      >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-24">
-          
+
           {/* Logo */}
           <a href="/" className="flex-shrink-0 z-50">
             <img src="/logogold.webp" alt="CourtSide Padel" className="h-10 md:h-12 object-contain" />
@@ -22,34 +44,49 @@ export default function Navbar() {
 
           {/* Desktop Center Links */}
           <div className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
-            <a href="/about" className="text-sm tracking-widest uppercase font-medium text-brand-light/70 hover:text-brand-gold transition-colors">
+            <a
+              href="/about"
+              className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
+                isActive('/about') ? 'text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
+              }`}
+            >
               {t('navbar.about')}
             </a>
-            <a href="/services" className="text-sm tracking-widest uppercase font-medium text-brand-light/70 hover:text-brand-gold transition-colors">
+            <a
+              href="/services"
+              className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
+                isActive('/services') ? 'text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
+              }`}
+            >
               {t('navbar.services')}
             </a>
-            
-            <div 
+
+            <div
               className="relative group"
               onMouseEnter={() => setIsDestinationsOpen(true)}
               onMouseLeave={() => setIsDestinationsOpen(false)}
             >
-              <button className="flex items-center gap-2 text-sm tracking-widest uppercase font-medium text-brand-light/70 group-hover:text-brand-gold transition-colors cursor-pointer">
-                {t('navbar.destinations')} <ChevronDown size={16} />
+              <button className={`nav-link flex items-center gap-2 text-sm tracking-widest uppercase font-medium transition-colors cursor-pointer ${
+                isActive('/menorca') || isActive('/bali') || isActive('/dubai')
+                  ? 'text-brand-gold'
+                  : 'text-brand-light/70 group-hover:text-brand-gold'
+              }`}>
+                {t('navbar.destinations')} <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
               </button>
-              
+
               <AnimatePresence>
                 {isDestinationsOpen && (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.2, ease: 'easeOut' }}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-48"
                   >
-                    <div className="bg-brand-dark-2 border border-white/10 flex flex-col p-2 shadow-2xl">
-                      <a href="/menorca" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-white/5 transition-all">{t('navbar.menorca')}</a>
-                      <a href="/bali" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-white/5 transition-all">{t('navbar.bali')}</a>
-                      <a href="/dubai" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-white/5 transition-all">{t('navbar.dubai')}</a>
+                    <div className="bg-brand-dark border border-brand-gold/20 flex flex-col shadow-2xl shadow-black/50">
+                      <a href="/menorca" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.menorca')}</a>
+                      <a href="/bali" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.bali')}</a>
+                      <a href="/dubai" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.dubai')}</a>
                     </div>
                   </motion.div>
                 )}
@@ -63,7 +100,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Hamburger toggle */}
-          <button 
+          <button
             className="md:hidden z-50 text-brand-light"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -75,7 +112,7 @@ export default function Navbar() {
       {/* Mobile Full Screen Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: '-100%' }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '-100%' }}
@@ -83,18 +120,18 @@ export default function Navbar() {
             className="fixed inset-0 z-40 bg-brand-dark flex flex-col items-center justify-center pt-24 pb-12 px-6"
           >
             <div className="flex flex-col items-center gap-8 w-full max-w-sm">
-              <a href="/about" className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors">{t('navbar.about')}</a>
-              <a href="/services" className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors">{t('navbar.services')}</a>
-              
-              <div className="w-full h-px bg-white/10 my-4" />
-              
-              <span className="text-sm tracking-widest uppercase text-brand-gold">{t('navbar.destinations')}</span>
+              <a href="/about" className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.about')}</a>
+              <a href="/services" className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.services')}</a>
+
+              <div className="w-full h-px bg-brand-gold/20 my-4" />
+
+              <span className="text-xs tracking-[0.3em] uppercase text-brand-gold">{t('navbar.destinations')}</span>
               <a href="/menorca" className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
               <a href="/bali" className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
               <a href="/dubai" className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
-              
-              <div className="w-full h-px bg-white/10 my-4" />
-              
+
+              <div className="w-full h-px bg-brand-gold/20 my-4" />
+
               <div className="scale-125 mt-4">
                 <LanguageToggle />
               </div>

@@ -23,13 +23,15 @@ export default function CorporateForm() {
   };
 
   return (
-    <section className="bg-brand-dark-2 text-brand-light py-32 px-8 md:px-16 border-t border-white/5">
+    <section className="bg-brand-dark text-brand-light py-32 px-8 md:px-16 border-t border-brand-gold/20 noise-section">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-center">
         {/* Left: Copy */}
         <div className="md:w-1/2 space-y-8">
           <Briefcase className="w-10 h-10 text-brand-gold opacity-80" />
-          <h2 
-            className="text-5xl lg:text-7xl font-bold tracking-tighter leading-tight"
+          <div className="w-10 h-px bg-brand-gold mb-2" />
+          <h2
+            className="text-5xl lg:text-7xl font-bold tracking-tight leading-tight"
+            style={{ fontFamily: 'var(--font-display)' }}
             dangerouslySetInnerHTML={{ __html: t('corporate.title') }}
           />
           <p className="text-xl font-light text-brand-light/70 max-w-lg mb-12">
@@ -41,7 +43,7 @@ export default function CorporateForm() {
               muted 
               loop 
               playsInline
-              className="w-full max-w-lg aspect-video object-cover rounded-2xl filter grayscale opacity-70 border border-white/5 shadow-2xl shadow-brand-dark hover:grayscale-0 hover:opacity-100 hover:shadow-brand-gold/20 hover:border-brand-gold/30 transition-all duration-700 ease-in-out"
+              className="w-full max-w-lg aspect-video object-cover rounded-sm filter grayscale opacity-70 border border-white/10 shadow-2xl shadow-black/40 hover:grayscale-0 hover:opacity-100 hover:shadow-brand-gold/20 hover:border-brand-gold/40 transition-all duration-500 ease-out will-change-transform"
             >
               <source src="/networkv.mp4" type="video/mp4" />
             </video>
@@ -50,8 +52,8 @@ export default function CorporateForm() {
 
         {/* Right: B2B Automated Form */}
         <div className="md:w-1/2 w-full max-w-xl">
-          <motion.div 
-            className="p-12 border-l border-white/10 relative"
+          <motion.div
+            className="p-12 border-l border-brand-gold/30 relative"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -102,15 +104,13 @@ export default function CorporateForm() {
                 </div>
               </div>
 
-              <button 
+              <button
                 type="submit"
                 disabled={isDownloading}
-                className="w-full group relative inline-flex items-center justify-center px-10 py-5 bg-brand-light text-brand-dark font-semibold text-lg uppercase tracking-wide overflow-hidden transition-transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:hover:scale-100"
+                className="btn-luxury w-full group disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span className="relative z-10 flex items-center gap-3">
-                  {isDownloading ? t('corporate.generatingPdf') : t('corporate.getDossierBtn')} 
-                  {!isDownloading && <FileDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />}
-                </span>
+                {isDownloading ? t('corporate.generatingPdf') : t('corporate.getDossierBtn')}
+                {!isDownloading && <FileDown className="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-200" />}
               </button>
             </form>
           </motion.div>

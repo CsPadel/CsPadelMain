@@ -20,7 +20,7 @@ const { title, description = "Premium Padel Experience. Book a suite or a comple
 		<title>{title}</title>
 		<meta name="description" content={description} />
 	</head>
-	<body class="bg-brand-dark text-brand-light font-inter antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
+	<body class="bg-brand-dark text-brand-light font-inter antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark" style="font-feature-settings: 'kern' 1, 'liga' 1;">
 		<Navbar client:load />
 		<slot />
 	</body>

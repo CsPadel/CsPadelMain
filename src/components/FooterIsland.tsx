@@ -6,7 +6,7 @@ export default function FooterIsland() {
   const { t } = useTranslation();
 
   return (
-    <footer className="py-12 border-t border-white/5 text-center px-8">
+    <footer className="py-14 bg-brand-dark border-t-2 border-brand-gold/60 text-center px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-4">
           <img src="/logogold.webp" alt="CourtSide Logo" className="h-6 object-contain" />
