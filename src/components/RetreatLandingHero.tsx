@@ -77,17 +77,12 @@ export default function RetreatLandingHero({ destination, bgVideoSrc, bgImageSrc
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <button 
+            <button
               onClick={openSidebar}
-              className="group relative inline-flex items-center justify-center px-10 py-5 bg-brand-gold text-brand-dark font-semibold text-lg uppercase tracking-widest overflow-hidden transition-transform hover:scale-105 active:scale-95"
+              className="btn-luxury group"
             >
-              <span className="relative z-10 flex items-center gap-3">
-                {t(`${destination}Page.bookBtn`)} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-brand-light transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
-              <span className="absolute inset-0 z-10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 text-brand-dark">
-                {t(`${destination}Page.bookBtn`)} <ArrowRight className="w-5 h-5 translate-x-1" />
-              </span>
+              {t(`${destination}Page.bookBtn`)}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </button>
           </motion.div>
         </div>

@@ -19,7 +19,7 @@ export default function GroupVillaLeader() {
   };
 
   return (
-    <section className="relative w-full min-h-[80vh] flex flex-col md:flex-row items-stretch border-t border-white/5">
+    <section className="relative w-full min-h-[80vh] flex flex-col md:flex-row items-stretch border-t border-brand-gold/20 noise-section">
       {/* Visual / Image Side */}
       <div className="w-full md:w-1/2 relative min-h-[50vh]">
         <img 
@@ -29,7 +29,8 @@ export default function GroupVillaLeader() {
         />
         <div className="absolute inset-0 bg-brand-dark/40 mix-blend-multiply"></div>
         <div className="absolute bottom-12 left-12 md:left-24 z-10 max-w-sm">
-          <h3 className="text-4xl text-brand-light font-bold mb-4 tracking-tighter">{t('groupVilla.sideTitle')}</h3>
+          <div className="w-8 h-px bg-brand-gold mb-5" />
+          <h3 className="text-4xl text-brand-light font-bold mb-4 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>{t('groupVilla.sideTitle')}</h3>
           <p className="text-brand-light/70 font-light">{t('groupVilla.sideDesc')}</p>
         </div>
       </div>
@@ -40,7 +41,7 @@ export default function GroupVillaLeader() {
           {!isCheckout ? (
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <Users className="w-12 h-12 text-brand-gold mb-12" />
-              <h2 className="text-5xl font-bold mb-6 tracking-tighter">{t('groupVilla.formTitle')}</h2>
+              <h2 className="text-5xl font-bold mb-6 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>{t('groupVilla.formTitle')}</h2>
               <p className="text-brand-light/60 font-light text-lg mb-16">
                 {t('groupVilla.formDesc')}
               </p>
@@ -70,13 +71,12 @@ export default function GroupVillaLeader() {
                     <span className="text-brand-light/80 font-semibold">{t('groupVilla.priceHint')}</span>
                   </p>
 
-                  <button 
+                  <button
                     type="submit"
-                    className="w-full group relative inline-flex items-center justify-center px-10 py-5 border border-brand-gold text-brand-gold font-semibold text-lg uppercase tracking-widest overflow-hidden transition-colors hover:bg-brand-gold hover:text-brand-dark"
+                    className="btn-luxury w-full group"
                   >
-                    <span className="relative z-10 flex items-center gap-3">
-                      {t('groupVilla.submitBtn')} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </span>
+                    {t('groupVilla.submitBtn')}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                 </div>
               </form>

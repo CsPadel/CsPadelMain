@@ -17,11 +17,12 @@ export default function AboutView() {
         </div>
         
         <div className="relative z-20 max-w-5xl mx-auto">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-white to-brand-light"
+            className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-white to-brand-light"
+            style={{ fontFamily: 'var(--font-display)' }}
           >
             {t('aboutPage.heroTitle')}
           </motion.h1>
@@ -39,11 +40,12 @@ export default function AboutView() {
       {/* Team Roster */}
       <section className="py-32 px-8 md:px-16 bg-brand-dark">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-light mb-20 text-center tracking-wide text-brand-gold"
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
           >
             {t('aboutPage.teamTitle')}
           </motion.h2>
@@ -56,7 +58,7 @@ export default function AboutView() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group relative overflow-hidden bg-brand-dark-2 border border-white/5 aspect-[3/4] flex flex-col justify-end p-8 hover:border-brand-gold/30 transition-colors"
+                className="group relative overflow-hidden bg-brand-dark-2 border border-white/5 aspect-[3/4] flex flex-col justify-end p-8 hover:border-brand-gold/40 hover:scale-[1.02] transition-all duration-300 ease-out will-change-transform"
               >
                 {/* Image Placeholder Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent z-10"></div>
