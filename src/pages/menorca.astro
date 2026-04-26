@@ -5,53 +5,104 @@ import RoomsSelector from '../components/RoomsSelector';
 import MenorcaItinerary from '../components/MenorcaItinerary';
 import FooterIsland from '../components/FooterIsland';
 
+const SITE = "https://courtsidepadel.com";
 const seoTitle = "Menorca Padel Retreat 2026 | Luxury Padel Holiday Mediterranean | CourtSide";
 const seoDescription = "Experience the ultimate luxury padel retreat in Menorca. Private coaching, yacht excursions, gourmet dining & exclusive villas. Limited places — October 2026.";
-const seoKeywords = "Menorca padel retreat, luxury padel holiday Menorca, padel training Mediterranean, private padel villa Spain, CourtSide Menorca, padel vacation 2026, padel coaching retreat";
+const seoKeywords = "Menorca padel retreat, luxury padel holiday Menorca, padel training Mediterranean, private padel villa Spain, CourtSide Menorca, padel vacation 2026, padel coaching retreat, padel holiday Balearic Islands";
 
 const menorcaSchema = {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
   "name": "CourtSide Menorca Padel Retreat 2026",
   "description": seoDescription,
+  "url": `${SITE}/menorca`,
+  "image": `${SITE}/imagenes/EM-2.jpg`,
   "touristType": ["Sports Enthusiast", "Luxury Traveler"],
+  "duration": "P4D",
   "itinerary": {
     "@type": "ItemList",
     "numberOfItems": 4,
-    "name": "4-Day Menorca Padel Retreat Itinerary"
+    "name": "4-Day Menorca Padel Retreat Itinerary",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "VIP Arrival — Private transfer, wellness massage, welcome dinner" },
+      { "@type": "ListItem", "position": 2, "name": "Foundation — Technical padel clinic, pool recovery, strategy session" },
+      { "@type": "ListItem", "position": 3, "name": "Pro-Am & Yacht — Tournament matches, charter yacht, active recovery" },
+      { "@type": "ListItem", "position": 4, "name": "Departure — Exhibition matches, farewell banquet, executive check-out" }
+    ]
   },
   "provider": {
     "@type": "Organization",
     "name": "CourtSide Padel Retreats",
-    "url": "https://courtsidepadel.com"
+    "url": SITE,
+    "logo": `${SITE}/logogold.webp`,
+    "sameAs": []
   },
   "offers": [
     {
       "@type": "Offer",
-      "name": "Personal Suite",
+      "name": "Personal Suite — Menorca Padel Retreat",
+      "description": "Private suite for individuals or couples. Includes coaching, wellness, and all retreat activities.",
       "price": "120",
       "priceCurrency": "GBP",
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "120", "priceCurrency": "GBP", "unitText": "night" },
       "availability": "https://schema.org/LimitedAvailability",
       "validFrom": "2026-10-08",
-      "validThrough": "2026-10-11"
+      "validThrough": "2026-10-25",
+      "url": `${SITE}/menorca#book`
     },
     {
       "@type": "Offer",
-      "name": "Full Villa",
+      "name": "Full Villa — Exclusive Menorca Padel Retreat",
+      "description": "Entire villa exclusively for groups of 8–20 guests. Complete privacy with private chef and dedicated concierge team.",
       "price": "200",
       "priceCurrency": "GBP",
-      "availability": "https://schema.org/LimitedAvailability"
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "200", "priceCurrency": "GBP", "unitText": "night" },
+      "availability": "https://schema.org/LimitedAvailability",
+      "url": `${SITE}/menorca#book`
+    },
+    {
+      "@type": "Offer",
+      "name": "Executive Retreat — C-Suite Menorca Padel Programme",
+      "description": "C-suite padel retreat with private meeting rooms, strategy sessions, and absolute discretion.",
+      "price": "100",
+      "priceCurrency": "GBP",
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "100", "priceCurrency": "GBP", "unitText": "night" },
+      "availability": "https://schema.org/LimitedAvailability",
+      "url": `${SITE}/menorca#book`
     }
   ],
   "location": {
     "@type": "Place",
-    "name": "Menorca, Balearic Islands",
+    "name": "Menorca, Balearic Islands, Spain",
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.9496", "longitude": "4.1183" },
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Menorca",
-      "addressCountry": "ES"
+      "addressCountry": "ES",
+      "addressLocality": "Balearic Islands"
     }
-  }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "2"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Tomasz Campbell" },
+      "reviewBody": "Truly life-changing. The coaching sessions elevated my game, but the yacht day and gourmet dinners made it a complete luxury escape. Already booked for next year."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Ana Martínez" },
+      "reviewBody": "The attention to detail is unreal. From the airport transfer to the farewell dinner, every moment felt tailored. This is how a padel retreat should be."
+    }
+  ]
 };
 
 const faqSchema = {
@@ -76,13 +127,43 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Are dietary requirements catered for at the retreat?",
+      "name": "Are dietary requirements catered for at the Menorca retreat?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Our on-site private chef curates bespoke menus based on a detailed wellness questionnaire sent prior to your arrival."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How many guests are in each Menorca padel retreat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We cap each retreat to ensure exclusivity. Personal suites accommodate individuals and couples; Full Villa exclusivity is available for groups of 8–20 guests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When are the 2026 Menorca padel retreat dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We have two retreat dates available in October 2026: October 8–11 and October 21–25. Limited places — early booking is strongly advised."
+      }
     }
   ]
+
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CourtSide Padel Retreats",
+  "url": SITE,
+  "logo": `${SITE}/logogold.webp`,
+  "description": "Ultra-luxury padel retreats in the world's most exclusive destinations. CourtSide combines world-class padel coaching with five-star hospitality.",
+  "foundingDate": "2024",
+  "areaServed": ["Menorca", "Bali", "Dubai"],
+  "serviceType": "Luxury Padel Retreat",
+  "sameAs": []
 };
 ---
 
@@ -94,8 +175,8 @@ const faqSchema = {
   canonical="https://courtsidepadel.com/menorca"
   schema={menorcaSchema}
 >
-  <!-- Second schema block for FAQ -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
 
   <main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden pt-24">
 

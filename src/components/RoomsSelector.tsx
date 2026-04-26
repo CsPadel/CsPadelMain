@@ -88,10 +88,14 @@ export default function RoomsSelector() {
         </div>
 
         {/* Room type selector — pill tabs */}
-        <div className="flex justify-center gap-3 mb-10 flex-wrap">
+        <div role="tablist" aria-label="Accommodation types" className="flex justify-center gap-3 mb-10 flex-wrap">
           {rooms.map((r, idx) => (
             <button
               key={r.id}
+              role="tab"
+              aria-selected={selectedIdx === idx}
+              aria-controls={`room-panel-${r.id}`}
+              id={`room-tab-${r.id}`}
               onClick={() => handleSelect(idx)}
               className={`px-5 py-2.5 rounded-full text-sm font-medium tracking-wide transition-colors duration-150 ${
                 selectedIdx === idx
@@ -109,6 +113,9 @@ export default function RoomsSelector() {
           {rooms.map((r, rIdx) => (
             <div
               key={r.id}
+              role="tabpanel"
+              id={`room-panel-${r.id}`}
+              aria-labelledby={`room-tab-${r.id}`}
               aria-hidden={selectedIdx !== rIdx}
               className={`bg-white rounded-3xl overflow-hidden shadow-xl shadow-brand-dark/8 transition-opacity duration-200 ${
                 selectedIdx === rIdx ? 'opacity-100 relative' : 'opacity-0 absolute inset-0 pointer-events-none'
@@ -173,7 +180,7 @@ export default function RoomsSelector() {
                             ? 'w-5 h-1.5 bg-brand-gold'
                             : 'w-1.5 h-1.5 bg-white/50 hover:bg-white/80'
                         }`}
-                        aria-label={`Image ${iIdx + 1}`}
+                        aria-label={`${r.name} — photo ${iIdx + 1} of ${r.images.length}`}
                       />
                     ))}
                   </div>

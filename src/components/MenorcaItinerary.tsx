@@ -158,9 +158,9 @@ export default function MenorcaItinerary() {
                         ? 'border-brand-gold opacity-100 scale-110'
                         : 'border-white/20 opacity-45 hover:opacity-75'
                     }`}
-                    aria-label={act.title}
+                    aria-label={`Preview: ${act.title}`}
                   >
-                    <img src={act.image} alt="" className="w-full h-full object-cover" loading="lazy" />
+                    <img src={act.image} alt={`Thumbnail: ${act.title}`} className="w-full h-full object-cover" loading="lazy" />
                   </button>
                 ))}
               </div>
