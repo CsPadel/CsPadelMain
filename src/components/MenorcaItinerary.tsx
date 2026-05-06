@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Activity {
@@ -170,12 +170,35 @@ const days: Day[] = [
 export default function MenorcaItinerary() {
   const [activeDay, setActiveDay] = useState(0);
   const [activeActivity, setActiveActivity] = useState(0);
+  const [allLoaded, setAllLoaded] = useState(false);
 
   const current = days[activeDay];
   const acts = current.activities;
   const total = acts.length;
   const prev = (activeActivity - 1 + total) % total;
   const next = (activeActivity + 1) % total;
+
+  // Preload & fully decode all 3 images outside the DOM before showing them
+  useEffect(() => {
+    setAllLoaded(false);
+    let cancelled = false;
+
+    const preload = (src: string) => {
+      const img = new window.Image();
+      img.src = src;
+      return img.decode().catch(() => Promise.resolve()); // resolve even on error
+    };
+
+    Promise.all([
+      preload(acts[prev].image),
+      preload(acts[activeActivity].image),
+      preload(acts[next].image),
+    ]).then(() => {
+      if (!cancelled) setAllLoaded(true);
+    });
+
+    return () => { cancelled = true; };
+  }, [activeDay, activeActivity]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleDayChange = (idx: number) => {
     setActiveDay(idx);
@@ -223,82 +246,57 @@ export default function MenorcaItinerary() {
         {/* Three-image carousel */}
         <div className="flex items-center justify-center gap-4 md:gap-6 mb-10">
 
-          {/* Left image */}
-          <button
-            onClick={handlePrev}
-            aria-label="Previous activity"
-            className="flex-shrink-0 focus:outline-none"
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`left-${activeDay}-${prev}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="w-32 md:w-44 h-52 md:h-72 rounded-2xl overflow-hidden opacity-50 hover:opacity-65 transition-opacity duration-200"
-              >
+          {/* Left */}
+          <button onClick={handlePrev} aria-label="Previous activity" className="flex-shrink-0 focus:outline-none">
+            <div className="relative w-32 md:w-44 h-52 md:h-72 rounded-2xl overflow-hidden">
+              <div className={`skeleton-card absolute inset-0 transition-opacity duration-400 ${allLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`} />
+              {allLoaded && (
                 <img
+                  key={`left-${activeDay}-${prev}`}
                   src={acts[prev].image}
                   alt={acts[prev].title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  className="w-full h-full object-cover animate-[fadeIn_0.35s_ease-out_forwards]"
                   width={350}
                   height={450}
                 />
-              </motion.div>
-            </AnimatePresence>
+              )}
+            </div>
           </button>
 
-          {/* Center image */}
+          {/* Center */}
           <div className="flex-shrink-0">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`center-${activeDay}-${activeActivity}`}
-                initial={{ opacity: 0, scale: 0.97 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.97 }}
-                transition={{ duration: 0.22 }}
-                className="w-44 md:w-60 h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl shadow-black/40"
-              >
+            <div className="relative w-44 md:w-60 h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
+              <div className={`skeleton-card absolute inset-0 transition-opacity duration-400 ${allLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`} />
+              {allLoaded && (
                 <img
+                  key={`center-${activeDay}-${activeActivity}`}
                   src={acts[activeActivity].image}
                   alt={acts[activeActivity].title}
-                  className="w-full h-full object-cover"
-                  loading="eager"
+                  className="w-full h-full object-cover animate-[fadeIn_0.35s_ease-out_forwards]"
                   width={480}
                   height={640}
                 />
-              </motion.div>
-            </AnimatePresence>
+              )}
+            </div>
           </div>
 
-          {/* Right image */}
-          <button
-            onClick={handleNext}
-            aria-label="Next activity"
-            className="flex-shrink-0 focus:outline-none"
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`right-${activeDay}-${next}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="w-32 md:w-44 h-52 md:h-72 rounded-2xl overflow-hidden opacity-50 hover:opacity-65 transition-opacity duration-200"
-              >
+          {/* Right */}
+          <button onClick={handleNext} aria-label="Next activity" className="flex-shrink-0 focus:outline-none">
+            <div className="relative w-32 md:w-44 h-52 md:h-72 rounded-2xl overflow-hidden">
+              <div className={`skeleton-card absolute inset-0 transition-opacity duration-400 ${allLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`} />
+              {allLoaded && (
                 <img
+                  key={`right-${activeDay}-${next}`}
                   src={acts[next].image}
                   alt={acts[next].title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  className="w-full h-full object-cover animate-[fadeIn_0.35s_ease-out_forwards]"
                   width={350}
                   height={450}
                 />
-              </motion.div>
-            </AnimatePresence>
+              )}
+            </div>
           </button>
+
         </div>
 
         {/* Activity info + navigation */}
@@ -343,9 +341,9 @@ export default function MenorcaItinerary() {
 
         {/* Dot indicators */}
         <div className="flex justify-center gap-2 mt-8">
-          {acts.map((_, idx) => (
+          {acts.map((act, idx) => (
             <button
-              key={idx}
+              key={act.title}
               onClick={() => setActiveActivity(idx)}
               aria-label={`Activity ${idx + 1}`}
               className={`rounded-full transition-all duration-200 ${

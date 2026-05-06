@@ -177,6 +177,38 @@
   }
 }
 
+/* ─── Fade-in for images revealed after preload ─────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── Skeleton shimmer for image loading states ─────────── */
+@keyframes skeleton-sweep {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.skeleton-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 1rem;
+}
+.skeleton-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.09) 45%,
+    rgba(255, 255, 255, 0.13) 50%,
+    rgba(255, 255, 255, 0.09) 55%,
+    transparent 100%
+  );
+  animation: skeleton-sweep 1.6s ease-in-out infinite;
+}
+
 /* ─── Section noise overlay for dark sections ──────────── */
 .noise-section {
   position: relative;
