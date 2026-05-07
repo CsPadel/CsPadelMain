@@ -79,6 +79,7 @@ export default function RetreatLandingHero({ destination, bgVideoSrc, bgImageSrc
           >
             <button
               onClick={openSidebar}
+              data-book-btn
               className="btn-luxury group"
             >
               {t(`${destination}Page.bookBtn`)}
