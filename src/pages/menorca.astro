@@ -3,9 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import RetreatLandingHero from '../components/RetreatLandingHero';
 import RoomsSelector from '../components/RoomsSelector';
 import MenorcaItinerary from '../components/MenorcaItinerary';
-import LicenceToLive from '../components/LicenceToLive';
+import MenorcaWhatsIncluded from '../components/MenorcaWhatsIncluded';
+import MenorcaItineraryAccordion from '../components/MenorcaItineraryAccordion';
+import BespokeRetreats from '../components/BespokeRetreats';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import FooterIsland from '../components/FooterIsland';
+import FAQ from '../components/FAQ';
 
 const SITE = "https://courtsidepadel.com";
 const seoTitle = "Menorca Padel Retreat 2026 | Luxury Padel Holiday Mediterranean | CourtSide";
@@ -26,11 +29,11 @@ const menorcaSchema = {
     "numberOfItems": 5,
     "name": "5-Day Menorca Padel Retreat Itinerary",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Arrival & Warm-Up — Airport transfers, hotel check-in, light padel session, welcome dinner at Ses Forquilles" },
+      { "@type": "ListItem", "position": 1, "name": "Arrival & Welcome — Airport transfers, check-in, seaside lunch, warm-up padel session, welcome dinner" },
       { "@type": "ListItem", "position": 2, "name": "Padel & Boat Tour — Morning coaching at Padelin, lunch and boat tour from Sa Punta restaurant" },
       { "@type": "ListItem", "position": 3, "name": "Padel & Vineyard — Court sessions, vineyard tour and lunch at Binifadet winery" },
       { "@type": "ListItem", "position": 4, "name": "Tournament & Sunset — Mixed doubles round-robin tournament, awards lunch, sunset tapas at Cova d'en Xoroi" },
-      { "@type": "ListItem", "position": 5, "name": "Departure — Final breakfast, optional padel session, private airport transfers" }
+      { "@type": "ListItem", "position": 5, "name": "Final Session & Farewell — Final breakfast, optional padel session, private airport transfers" }
     ]
   },
   "provider": {
@@ -114,46 +117,93 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What skill level is required for the Menorca padel retreat?",
+      "name": "Do I need padel experience?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our coaches tailor sessions to all levels, from beginners looking for foundation building to advanced players refining strategy."
+        "text": "No. Our retreats welcome all levels — coaching is tailored from beginners building foundations to advanced players refining strategy."
       }
     },
     {
       "@type": "Question",
-      "name": "Is the flight included in the Menorca padel retreat package?",
+      "name": "Is everything included?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Flights are not included in the standard package, however our private Concierge can arrange private charters or commercial flights upon request."
+        "text": "Yes. Everything in the itinerary is included — accommodation, all meals, coaching, matchplay, local transport, and activities. Guests are welcome to skip any activity. Anything booked outside the itinerary is at the guest's own cost."
       }
     },
     {
       "@type": "Question",
-      "name": "Are dietary requirements catered for at the Menorca retreat?",
+      "name": "Are flights and airport transfers included?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our on-site private chef curates bespoke menus based on a detailed wellness questionnaire sent prior to your arrival."
+        "text": "Transfers to and from Mahón Airport are included. Flights are not — our concierge can advise on routes or arrange a private charter on request."
       }
     },
     {
       "@type": "Question",
-      "name": "How many guests are in each Menorca padel retreat?",
+      "name": "Can a non-playing partner come along?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We cap each retreat to ensure exclusivity. Personal suites accommodate individuals and couples; Full Villa exclusivity is available for groups of 8–20 guests."
+        "text": "Yes. Non-playing partners pay the same retreat price, and their programme can be customised around their preferences."
       }
     },
     {
       "@type": "Question",
-      "name": "When are the 2026 Menorca padel retreat dates?",
+      "name": "What about dietary requirements?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Menorca Padel Retreat runs 30 September – 4 October 2026 (4 nights, 5 days). Limited places — early booking is strongly advised."
+        "text": "Our on-site private chef builds bespoke menus around a wellness and dietary questionnaire sent before arrival."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many guests per retreat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each open retreat is capped to preserve exclusivity. Private retreats run for a minimum of 6 guests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I extend my stay before or after the retreat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we can arrange additional nights at Barceló Nura on request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book a private retreat on different dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We run fully bespoke private retreats on any week of the year, with a minimum of 6 guests and 2 months' lead time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the next Menorca retreat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30 September – 4 October 2026 (4 nights, 5 days). Places are limited — early booking is advised."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the deposit and when is the balance due?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 40% deposit secures your place. The remaining balance is due 6 weeks before the retreat start date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the cancellation policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cancellations made more than 10 weeks before the retreat start date are eligible for a full deposit refund. Within 10 weeks of the start date, the 40% deposit becomes non-refundable."
       }
     }
   ]
-
 };
 
 const organizationSchema = {
@@ -187,134 +237,25 @@ const organizationSchema = {
     <RetreatLandingHero destination="menorca" bgVideoSrc="/vid2.mp4" client:load />
 
     <!-- ========== WHAT'S INCLUDED ========== -->
-    <section id="includes" aria-label="What is included in the Menorca padel retreat" class="bg-brand-dark py-24 md:py-32 px-6 md:px-16">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-light text-center text-brand-light mb-4 tracking-wide">
-          What's included?
-        </h2>
-        <p class="text-brand-light/50 text-center text-lg mb-20 max-w-xl mx-auto">
-          Every detail curated so you can focus on performance and recovery.
-        </p>
-
-        <div class="flex flex-col gap-20">
-          <!-- Feature 1: Chef -->
-          <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-            <div class="w-full md:w-1/2 order-2 md:order-1">
-              <p class="text-xs uppercase tracking-widest text-brand-gold mb-4 font-semibold">Private Chef</p>
-              <h3 class="text-2xl md:text-3xl font-light text-brand-light mb-5 leading-snug">
-                Bespoke menus crafted around your wellness.
-              </h3>
-              <p class="text-brand-light/60 text-lg leading-relaxed">
-                Our on-site private chef curates bespoke menus based on a detailed wellness questionnaire sent prior to your arrival. Every meal is a performance fuel.
-              </p>
-            </div>
-            <div class="w-full md:w-1/2 order-1 md:order-2 overflow-hidden">
-              <img
-                src="/imagenes/bambu.jpg"
-                alt="Private chef preparing bespoke wellness meals at CourtSide Menorca retreat"
-                class="w-full h-72 md:h-96 object-cover"
-                loading="lazy"
-                decoding="async"
-                width="640"
-                height="480"
-              />
-            </div>
-          </div>
-
-          <!-- Feature 2: Padel Coaching -->
-          <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-            <div class="w-full md:w-1/2 overflow-hidden">
-              <img
-                src="/imagenes/JOPS-1071.JPG"
-                alt="Professional padel coaching session at CourtSide Menorca luxury retreat"
-                class="w-full h-72 md:h-96 object-cover"
-                loading="lazy"
-                decoding="async"
-                width="640"
-                height="480"
-              />
-            </div>
-            <div class="w-full md:w-1/2">
-              <p class="text-xs uppercase tracking-widest text-brand-gold mb-4 font-semibold">Expert Coaching</p>
-              <h3 class="text-2xl md:text-3xl font-light text-brand-light mb-5 leading-snug">
-                Sessions tailored to your exact level.
-              </h3>
-              <p class="text-brand-light/60 text-lg leading-relaxed">
-                Our coaches tailor sessions to all levels, from beginners looking for foundation building to advanced players refining strategy on the court.
-              </p>
-            </div>
-          </div>
-
-          <!-- Feature 3: Yacht -->
-          <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-            <div class="w-full md:w-1/2 order-2 md:order-1">
-              <p class="text-xs uppercase tracking-widest text-brand-gold mb-4 font-semibold">Yacht Escapes</p>
-              <h3 class="text-2xl md:text-3xl font-light text-brand-light mb-5 leading-snug">
-                Private sailing to secluded Mediterranean coves.
-              </h3>
-              <p class="text-brand-light/60 text-lg leading-relaxed">
-                Afternoon charter yacht excursions to Menorca's most untouched coastlines. Premium catering, ocean relaxation, and on-deck physiotherapy as the sun sets.
-              </p>
-            </div>
-            <div class="w-full md:w-1/2 order-1 md:order-2 overflow-hidden">
-              <img
-                src="/imagenes/Cala en porter.jpg"
-                alt="Charter yacht excursion to secluded coves in Menorca, included in CourtSide retreat"
-                class="w-full h-72 md:h-96 object-cover"
-                loading="lazy"
-                decoding="async"
-                width="640"
-                height="480"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <MenorcaWhatsIncluded client:load />
 
     <!-- ========== DISCOVER OUR ROOMS ========== -->
     <RoomsSelector client:load />
 
     <!-- ========== THE ITINERARY ========== -->
     <MenorcaItinerary client:load />
+    
+    <!-- ========== THE ITINERARY (ACCORDION OPTION) ========== -->
+    <MenorcaItineraryAccordion client:load />
 
-    <!-- ========== LICENCE TO LIVE ========== -->
-    <LicenceToLive client:load />
+    <!-- ========== BESPOKE RETREATS ========== -->
+    <BespokeRetreats client:load />
 
     <!-- ========== TESTIMONIALS ========== -->
     <TestimonialsCarousel client:load />
 
     <!-- ========== FAQ ========== -->
-    <section id="faq" aria-label="Frequently asked questions about Menorca padel retreat" class="bg-gray-50 py-24 md:py-32 px-6 md:px-16">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-light text-center text-gray-900 mb-16 tracking-wide">
-          Frequently Asked Questions
-        </h2>
-
-        <dl class="space-y-0 divide-y divide-gray-200">
-          <div class="py-8">
-            <dt class="text-xl font-light text-gray-900 mb-3">What skill level is required?</dt>
-            <dd class="text-gray-600 leading-relaxed">Our coaches tailor sessions to all levels, from beginners looking for foundation building to advanced players refining strategy.</dd>
-          </div>
-          <div class="py-8">
-            <dt class="text-xl font-light text-gray-900 mb-3">Is the flight included?</dt>
-            <dd class="text-gray-600 leading-relaxed">Flights are not included in the standard package, however our private Concierge can arrange private charters or commercial flights upon request.</dd>
-          </div>
-          <div class="py-8">
-            <dt class="text-xl font-light text-gray-900 mb-3">What about dietary requirements?</dt>
-            <dd class="text-gray-600 leading-relaxed">Our on-site private chef curates bespoke menus based on a detailed wellness questionnaire sent prior to your arrival.</dd>
-          </div>
-          <div class="py-8">
-            <dt class="text-xl font-light text-gray-900 mb-3">How many guests per retreat?</dt>
-            <dd class="text-gray-600 leading-relaxed">We cap each retreat to ensure exclusivity. Personal suites accommodate individuals and couples; Full Villa exclusivity is available for groups of 8–20 guests.</dd>
-          </div>
-          <div class="py-8">
-            <dt class="text-xl font-light text-gray-900 mb-3">When are the 2026 Menorca retreat dates?</dt>
-            <dd class="text-gray-600 leading-relaxed">The retreat runs 30 September – 4 October 2026 (4 nights, 5 days). Limited places — early booking is strongly advised.</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
+    <FAQ destination="menorca" theme="light" client:load />
 
     <!-- ========== BOOK NOW CTA ========== -->
     <section id="book" aria-label="Book your CourtSide Menorca padel retreat" class="relative py-28 md:py-40 px-6 md:px-16 overflow-hidden">
