@@ -1,60 +1,50 @@
 import React, { useState } from 'react';
-import { ArrowRight, Users, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
-
-interface Room {
-  id: string;
-  name: string;
-  tag: string;
-  tagColor: string;
-  priceFrom: string;
-  description: string;
-  amenities: string[];
-  images: string[];
-  capacity: string;
-}
-
-const rooms: Room[] = [
-  {
-    id: 'suite',
-    name: 'Personal Suite',
-    tag: 'Most Popular',
-    tagColor: 'bg-brand-gold text-brand-dark',
-    priceFrom: '£120 / night',
-    description:
-      'Your private sanctuary within the estate. Designed for absolute focus and recovery — a curated space where performance meets tranquility.',
-    amenities: ['King bed', 'En-suite bathroom', 'Pool access', 'Wellness kit', 'Concierge 24h'],
-    images: ['/imagenes/154A8505.JPG', '/imagenes/154A8605.JPG', '/imagenes/154A8631.JPG'],
-    capacity: '1 – 2 guests',
-  },
-  {
-    id: 'villa',
-    name: 'Full Villa',
-    tag: 'Ultimate Privacy',
-    tagColor: 'bg-white/10 text-white',
-    priceFrom: '£200 / night',
-    description:
-      'Lock the entire estate exclusively for your inner circle. True luxury is never shared. Every court, pool, and table is yours alone.',
-    amenities: ['Private courts', 'Full exclusivity', 'Private chef', 'Yacht access', 'Concierge team'],
-    images: ['/imagenes/binifadet.jpeg', '/imagenes/IMG_2448.JPG', '/imagenes/154A8644.JPG'],
-    capacity: '8 – 20 guests',
-  },
-  {
-    id: 'executive',
-    name: 'Executive Retreat',
-    tag: 'C-Suite',
-    tagColor: 'bg-white/10 text-white',
-    priceFrom: '£100 / night',
-    description:
-      'Strategic clarity is best found away from the office. High-performance environment with absolute discretion, curated for decision-makers.',
-    amenities: ['Private meeting room', 'Executive suite', 'Business concierge', 'Strategy sessions', 'Priority courts'],
-    capacity: '2 – 6 executives',
-    images: ['/imagenes/EM-22.jpg', '/imagenes/EM-4.jpg', '/imagenes/EM-38.jpg'],
-  },
-];
+import { ArrowRight, Users, Sparkles, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function RoomsSelector() {
+  const { t } = useTranslation();
   const [selectedIdx, setSelectedIdx] = useState(0);
   const [activeImage, setActiveImage] = useState(0);
+  const [expandedIncluded, setExpandedIncluded] = useState<Record<string, boolean>>({});
+
+  const rooms = [
+    {
+      id: 'open',
+      name: t('menorcaPage.rooms.openRetreat.name'),
+      tag: t('menorcaPage.rooms.openRetreat.tag'),
+      tagColor: 'bg-brand-gold text-brand-dark',
+      priceFrom: t('menorcaPage.rooms.openRetreat.priceFrom'),
+      priceShared: t('menorcaPage.rooms.openRetreat.priceShared'),
+      priceSingle: t('menorcaPage.rooms.openRetreat.priceSingle'),
+      description: t('menorcaPage.rooms.openRetreat.description'),
+      amenities: t('menorcaPage.rooms.openRetreat.amenities', { returnObjects: true }) as string[],
+      capacity: t('menorcaPage.rooms.openRetreat.capacity'),
+      images: ['/imagenes/154A8505.JPG', '/imagenes/154A8605.JPG', '/imagenes/154A8631.JPG'],
+    },
+    {
+      id: 'private',
+      name: t('menorcaPage.rooms.privateRetreat.name'),
+      tag: t('menorcaPage.rooms.privateRetreat.tag'),
+      tagColor: 'bg-brand-gold text-brand-dark',
+      priceFrom: t('menorcaPage.rooms.privateRetreat.priceFrom'),
+      description: t('menorcaPage.rooms.privateRetreat.description'),
+      amenities: t('menorcaPage.rooms.privateRetreat.amenities', { returnObjects: true }) as string[],
+      capacity: t('menorcaPage.rooms.privateRetreat.capacity'),
+      images: ['/imagenes/binifadet.jpeg', '/imagenes/IMG_2448.JPG', '/imagenes/154A8644.JPG'],
+    },
+    {
+      id: 'corporate',
+      name: t('menorcaPage.rooms.corporateRetreat.name'),
+      tag: t('menorcaPage.rooms.corporateRetreat.tag'),
+      tagColor: 'bg-white/10 text-white',
+      priceFrom: t('menorcaPage.rooms.corporateRetreat.priceFrom'),
+      description: t('menorcaPage.rooms.corporateRetreat.description'),
+      amenities: t('menorcaPage.rooms.corporateRetreat.amenities', { returnObjects: true }) as string[],
+      capacity: t('menorcaPage.rooms.corporateRetreat.capacity'),
+      images: ['/imagenes/EM-22.jpg', '/imagenes/EM-4.jpg', '/imagenes/EM-38.jpg'],
+    },
+  ];
 
   const room = rooms[selectedIdx];
 
@@ -64,31 +54,35 @@ export default function RoomsSelector() {
     setActiveImage(0);
   };
 
+  const toggleIncluded = (id: string) => {
+    setExpandedIncluded((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
   const prevImage = () => setActiveImage((p) => (p - 1 + room.images.length) % room.images.length);
   const nextImage = () => setActiveImage((p) => (p + 1) % room.images.length);
 
   return (
     <section
       id="rooms"
-      aria-label="Accommodation options at CourtSide Menorca"
+      aria-label={t('menorcaPage.rooms.sectionTag')}
       className="bg-[#f7f5f2] py-24 md:py-32 px-4 md:px-16"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
           <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">
-            Accommodation
+            {t('menorcaPage.rooms.sectionTag')}
           </p>
           <h2 className="text-4xl md:text-5xl font-light text-brand-dark tracking-wide">
-            Discover our rooms
+            {t('menorcaPage.rooms.title')}
           </h2>
           <p className="text-brand-dark/45 mt-4 text-lg max-w-md mx-auto">
-            Connect, play, and unwind in our private suites.
+            {t('menorcaPage.rooms.subtitle')}
           </p>
         </div>
 
         {/* Room type selector — pill tabs */}
-        <div role="tablist" aria-label="Accommodation types" className="flex justify-center gap-3 mb-10 flex-wrap">
+        <div role="tablist" aria-label={t('menorcaPage.rooms.title')} className="flex justify-center gap-3 mb-10 flex-wrap">
           {rooms.map((r, idx) => (
             <button
               key={r.id}
@@ -201,10 +195,21 @@ export default function RoomsSelector() {
                           </span>
                         </div>
                       </div>
-                      <div className="text-right flex-shrink-0">
-                        <p className="text-xs text-brand-dark/40 uppercase tracking-widest mb-1">From</p>
-                        <p className="text-xl font-semibold text-brand-dark">{r.priceFrom}</p>
-                      </div>
+                      {(r.priceShared || r.priceFrom) && (
+                        <div className="text-right flex-shrink-0">
+                          <p className="text-xs text-brand-dark/40 uppercase tracking-widest mb-1">
+                            {t('menorcaPage.rooms.priceLabel')}
+                          </p>
+                          {r.priceShared && r.priceSingle ? (
+                            <div className="flex flex-col items-end gap-1">
+                              <p className="text-sm font-semibold text-brand-dark">{r.priceSingle}</p>
+                              <p className="text-sm font-semibold text-brand-dark">{r.priceShared}</p>
+                            </div>
+                          ) : (
+                            <p className="text-xl font-semibold text-brand-dark">{r.priceFrom}</p>
+                          )}
+                        </div>
+                      )}
                     </div>
 
                     <div className="h-px bg-brand-dark/8 mb-6" />
@@ -214,18 +219,38 @@ export default function RoomsSelector() {
                     </p>
 
                     <div className="mb-8">
-                      <p className="text-xs uppercase tracking-[0.2em] text-brand-dark/35 mb-4 font-semibold">
-                        What's included
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {r.amenities.map((a) => (
-                          <span
-                            key={a}
-                            className="px-3 py-1.5 rounded-full bg-[#f7f5f2] text-brand-dark/70 text-xs font-medium border border-brand-dark/8"
-                          >
-                            {a}
-                          </span>
-                        ))}
+                      <button
+                        onClick={() => toggleIncluded(r.id)}
+                        className="w-full flex items-center justify-between py-2 group"
+                        aria-expanded={expandedIncluded[r.id]}
+                      >
+                        <p className="text-xs uppercase tracking-[0.2em] text-brand-dark/60 font-semibold m-0 group-hover:text-brand-dark transition-colors">
+                          {t('menorcaPage.rooms.whatsIncluded')}
+                        </p>
+                        <ChevronDown
+                          className={`w-4 h-4 text-brand-dark/50 transition-all duration-200 group-hover:text-brand-dark ${
+                            expandedIncluded[r.id] ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      
+                      <div
+                        className={`grid transition-all duration-300 ease-in-out ${
+                          expandedIncluded[r.id] ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'
+                        }`}
+                      >
+                        <div className="overflow-hidden">
+                          <div className="flex flex-wrap gap-2 pb-2">
+                            {r.amenities.map((a) => (
+                              <span
+                                key={a}
+                                className="px-3 py-1.5 rounded-full bg-[#f7f5f2] text-brand-dark/70 text-xs font-medium border border-brand-dark/8"
+                              >
+                                {a}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -235,7 +260,7 @@ export default function RoomsSelector() {
                     className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-brand-dark text-white font-semibold text-sm uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-colors duration-150 group"
                     aria-label={`Book ${r.name} at CourtSide Menorca`}
                   >
-                    Secure Your Place
+                    {t('menorcaPage.rooms.securePlace')}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-150" />
                   </a>
                 </div>

@@ -1,31 +1,18 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const testimonials = [
-  {
-    name: 'Tomasz Campbell',
-    role: 'Senior Director, London',
-    text: 'Truly life-changing. The coaching sessions elevated my game, but the yacht day and gourmet dinners made it a complete luxury escape. Already booked for next year.',
-    initials: 'T',
-    image: '/imagenes/IMG_2167.jpeg',
-  },
-  {
-    name: 'Ana Martínez',
-    role: 'CEO, Madrid',
-    text: 'The attention to detail is unreal. From the airport transfer to the farewell dinner, every moment felt tailored. This is how a padel retreat should be.',
-    initials: 'A',
-    image: '/imagenes/JOPS-721.JPG',
-  },
-  {
-    name: 'James Whitfield',
-    role: 'Managing Partner, Edinburgh',
-    text: 'I came for the padel and stayed for the experience. The vineyard lunch, the tournament day, the sunset at Cova d\'en Xoroi — every single day was extraordinary.',
-    initials: 'J',
-    image: '/imagenes/Cala en porter.jpg',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function TestimonialsCarousel() {
+  const { t } = useTranslation();
+  
+  // Fetch testimonials from translation config
+  const testimonials = t('testimonials.items', { returnObjects: true }) as Array<{
+    name: string;
+    role: string;
+    text: string;
+    initials: string;
+    image: string;
+  }>;
   const [active, setActive] = useState(0);
   const total = testimonials.length;
 
@@ -33,7 +20,7 @@ export default function TestimonialsCarousel() {
   const goNext = () => go((active + 1) % total);
   const goPrev = () => go((active - 1 + total) % total);
 
-  const t = testimonials[active];
+  const testimonial = testimonials[active];
 
   return (
     <section
@@ -45,10 +32,10 @@ export default function TestimonialsCarousel() {
 
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">Reviews</p>
-          <h2 className="text-4xl md:text-5xl font-light text-brand-light tracking-wide">Trust that is shared</h2>
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">{t('testimonials.label')}</p>
+          <h2 className="text-4xl md:text-5xl font-light text-brand-light tracking-wide">{t('testimonials.title')}</h2>
           <p className="text-brand-light/40 text-lg mt-4 max-w-md mx-auto">
-            Guests who arrived as players. Left as loyalists.
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
@@ -60,8 +47,8 @@ export default function TestimonialsCarousel() {
             <AnimatePresence mode="sync">
               <motion.img
                 key={`img-${active}`}
-                src={t.image}
-                alt={`${t.name} — CourtSide Menorca`}
+                src={testimonial.image}
+                alt={`${testimonial.name} — CourtSide Menorca`}
                 initial={{ opacity: 0, scale: 1.04 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -90,11 +77,11 @@ export default function TestimonialsCarousel() {
                 {/* Avatar */}
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-11 h-11 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-brand-gold font-bold text-base">{t.initials}</span>
+                    <span className="text-brand-gold font-bold text-base">{testimonial.initials}</span>
                   </div>
                   <div>
-                    <p className="text-brand-dark font-semibold text-sm">{t.name}</p>
-                    <p className="text-brand-dark/45 text-xs">{t.role}</p>
+                    <p className="text-brand-dark font-semibold text-sm">{testimonial.name}</p>
+                    <p className="text-brand-dark/45 text-xs">{testimonial.role}</p>
                   </div>
                   <div className="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
                     {[...Array(5)].map((_, i) => (
@@ -105,7 +92,7 @@ export default function TestimonialsCarousel() {
 
                 {/* Quote */}
                 <p className="text-brand-dark/70 text-sm md:text-base leading-relaxed italic">
-                  "{t.text}"
+                  "{testimonial.text}"
                 </p>
               </motion.div>
             </AnimatePresence>
