@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import '../i18n/config';
 
 interface Activity {
   time: string;
@@ -33,8 +34,8 @@ export default function MenorcaItinerary() {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">Programme</p>
-          <h2 className="text-5xl md:text-6xl font-light text-white tracking-wide">The Itinerary</h2>
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">{t('menorcaPage.itineraryEyebrow')}</p>
+          <h2 className="text-5xl md:text-6xl font-light text-white tracking-wide">{t('menorcaPage.itineraryTitle')}</h2>
         </div>
 
         {/* Day tabs */}
