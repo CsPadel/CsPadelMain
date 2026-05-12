@@ -86,6 +86,8 @@ export const resources = {
         heroMeta: "30 Sep – 4 Oct 2026 · Menorca · All-Inclusive",
         bookBtn: "View the experience",
         agendaTitle: "The Itinerary",
+        itineraryEyebrow: "Programme",
+        itineraryTitle: "The Itinerary",
         faqTitle: "Frequently Asked Questions",
         whatsIncluded: {
           title: "What's included?",
@@ -113,6 +115,8 @@ export const resources = {
             }
           ]
         },
+        // agenda: each activity has an `image` field — a standalone path string (e.g. "/imagenes/filename.jpg")
+        // Update any image by changing only its path here; no component code changes needed.
         agenda: [
           {
             dayStr: 'Day 01',
@@ -547,6 +551,8 @@ export const resources = {
         heroMeta: "30 Sep – 4 Oct 2026 · Menorca · Todo Incluido",
         bookBtn: "Ver la experiencia",
         agendaTitle: "El Itinerario",
+        itineraryEyebrow: "Programa",
+        itineraryTitle: "El Itinerario",
         faqTitle: "Preguntas Frecuentes",
         whatsIncluded: {
           title: "¿Qué incluye?",
@@ -574,6 +580,8 @@ export const resources = {
             }
           ]
         },
+        // agenda: each activity has an `image` field — a standalone path string (e.g. "/imagenes/filename.jpg")
+        // Update any image by changing only its path here; no component code changes needed.
         agenda: [
           {
             dayStr: 'Día 01',

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Users, Sparkles, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import '../i18n/config';
 
 export default function RoomsSelector() {
   const { t } = useTranslation();
