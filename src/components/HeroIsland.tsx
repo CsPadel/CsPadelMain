@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, User, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import '../i18n/config';
+import { getRetreatUrl } from '../constants/urls';
 
 export default function HeroIsland() {
   const { t } = useTranslation();
@@ -181,7 +182,7 @@ export default function HeroIsland() {
                       <label className="text-xs uppercase tracking-widest text-brand-light/40 font-semibold">{t('sidebar.selectedRetreat')}</label>
                       {selectedRetreat && (
                         <a 
-                          href={`/${selectedRetreat}`} 
+                          href={getRetreatUrl(selectedRetreat)} 
                           className="text-xs flex items-center gap-1 uppercase tracking-widest text-brand-gold hover:text-brand-light transition-colors"
                         >
                           {t('sidebar.viewDetailsBtn')} <ArrowRight className="w-3 h-3" />

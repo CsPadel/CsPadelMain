@@ -201,12 +201,11 @@ const IntentButton = ({
     >
       {/* Card title */}
       <span
-        className="font-light text-white/90 group-hover:text-white transition-colors duration-300 mb-2 text-balance w-full leading-tight"
+        className="font-light text-brand-dark group-hover:text-brand-dark transition-colors duration-300 mb-2 text-balance w-full leading-tight"
         style={{
           fontFamily: 'var(--font-display)',
           fontSize: '1.4rem',
           letterSpacing: '0.05em',
-          textShadow: '0 2px 12px rgba(1,25,44,0.4)',
         }}
       >
         {text}
