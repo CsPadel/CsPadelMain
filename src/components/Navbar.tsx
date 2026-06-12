@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import '../i18n/config';
 import LanguageToggle from './LanguageToggle';
+import { MENORCA_URL } from '../constants/urls';
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -84,7 +85,7 @@ export default function Navbar() {
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-48"
                   >
                     <div className="bg-brand-dark border border-brand-gold/20 flex flex-col shadow-2xl shadow-black/50">
-                      <a href="/menorca" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.menorca')}</a>
+                      <a href={MENORCA_URL} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.menorca')}</a>
                       <a href="/bali" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.bali')}</a>
                       <a href="/dubai" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.dubai')}</a>
                     </div>
@@ -126,7 +127,7 @@ export default function Navbar() {
               <div className="w-full h-px bg-brand-gold/20 my-4" />
 
               <span className="text-xs tracking-[0.3em] uppercase text-brand-gold">{t('navbar.destinations')}</span>
-              <a href="/menorca" className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
+              <a href={MENORCA_URL} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
               <a href="/bali" className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
               <a href="/dubai" className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
 
