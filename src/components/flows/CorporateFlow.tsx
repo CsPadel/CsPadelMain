@@ -61,7 +61,7 @@ export const CorporateFlow = ({ onClose }: { onClose: () => void }) => {
           <label className="text-xs uppercase tracking-widest text-white/50 font-semibold mb-2">{t('gateway.corporate.objectiveLabel')}</label>
           <select 
             required
-            className="appearance-none bg-transparent border border-white/20 p-5 pl-4 text-xl text-white focus:outline-none focus:border-accent-olive transition-colors cursor-pointer rounded-none"
+            className="appearance-none bg-transparent border border-white/20 p-5 pl-4 text-xl text-white focus:outline-none focus:border-accent-olive transition-colors cursor-pointer rounded-button"
             defaultValue=""
           >
             <option value="" disabled className="bg-brand-dark-2 text-white/50">{t('gateway.corporate.selectFocus')}</option>
@@ -79,7 +79,7 @@ export const CorporateFlow = ({ onClose }: { onClose: () => void }) => {
          <button 
           type="submit"
           disabled={downloading}
-          className="w-full bg-accent-olive hover:bg-accent-olive-dark text-white font-medium tracking-widest uppercase text-sm py-6 transition-colors flex items-center justify-center gap-3 disabled:opacity-70"
+          className="w-full bg-accent-olive hover:bg-accent-olive-dark text-white font-medium tracking-widest uppercase text-sm py-6 rounded-button transition-colors flex items-center justify-center gap-3 disabled:opacity-70"
          >
           {downloading ? (
             <>{t('gateway.corporate.processingFile')} <div className="w-4 h-4 rounded-full border-t border-white animate-spin" /></>

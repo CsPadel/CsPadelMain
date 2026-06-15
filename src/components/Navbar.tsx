@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 import '../i18n/config';
 import LanguageToggle from './LanguageToggle';
 import { MENORCA_URL } from '../constants/urls';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
+import { useLocalizedHref } from '../i18n/useLocale';
+import { stripLocalePrefix } from '../i18n/routing';
 
-export default function Navbar() {
-  const { t } = useTranslation();
+interface NavbarProps {
+  locale?: Locale;
+}
+
+export default function Navbar({ locale: localeProp }: NavbarProps) {
+  const { t } = usePageTranslation(localeProp);
+  const localizedHref = useLocalizedHref(localeProp);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +28,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const isActive = (href: string) => pathname === href;
+  const basePath = stripLocalePrefix(pathname);
+  const isActive = (href: string) => basePath === href;
+  const homeHref = localizedHref('/');
 
   return (
     <>
@@ -38,15 +48,13 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-24">
 
-          {/* Logo */}
-          <a href="/" className="flex-shrink-0 z-50">
+          <a href={homeHref} className="flex-shrink-0 z-50">
             <img src="/logogold.webp" alt="CourtSide Padel" className="h-10 md:h-12 object-contain" />
           </a>
 
-          {/* Desktop Center Links */}
           <div className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
             <a
-              href="/about"
+              href={localizedHref('/about')}
               className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
                 isActive('/about') ? 'text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
               }`}
@@ -54,7 +62,7 @@ export default function Navbar() {
               {t('navbar.about')}
             </a>
             <a
-              href="/services"
+              href={localizedHref('/services')}
               className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
                 isActive('/services') ? 'text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
               }`}
@@ -84,10 +92,10 @@ export default function Navbar() {
                     transition={{ duration: 0.2, ease: 'easeOut' }}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-48"
                   >
-                    <div className="bg-brand-dark border border-brand-gold/20 flex flex-col shadow-2xl shadow-black/50">
+                    <div className="bg-brand-dark border border-brand-gold/20 rounded-card flex flex-col shadow-2xl shadow-black/50">
                       <a href={MENORCA_URL} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.menorca')}</a>
-                      <a href="/bali" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.bali')}</a>
-                      <a href="/dubai" className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.dubai')}</a>
+                      <a href={localizedHref('/bali')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.bali')}</a>
+                      <a href={localizedHref('/dubai')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.dubai')}</a>
                     </div>
                   </motion.div>
                 )}
@@ -95,12 +103,10 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right Actions */}
           <div className="hidden md:flex items-center z-50">
             <LanguageToggle />
           </div>
 
-          {/* Mobile Hamburger toggle */}
           <button
             className="md:hidden z-50 text-brand-light"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -110,7 +116,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Full Screen Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -121,15 +126,15 @@ export default function Navbar() {
             className="fixed inset-0 z-40 bg-brand-dark flex flex-col items-center justify-center pt-24 pb-12 px-6"
           >
             <div className="flex flex-col items-center gap-8 w-full max-w-sm">
-              <a href="/about" className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.about')}</a>
-              <a href="/services" className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.services')}</a>
+              <a href={localizedHref('/about')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.about')}</a>
+              <a href={localizedHref('/services')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.services')}</a>
 
               <div className="w-full h-px bg-brand-gold/20 my-4" />
 
               <span className="text-xs tracking-[0.3em] uppercase text-brand-gold">{t('navbar.destinations')}</span>
               <a href={MENORCA_URL} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
-              <a href="/bali" className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
-              <a href="/dubai" className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
+              <a href={localizedHref('/bali')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
+              <a href={localizedHref('/dubai')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
 
               <div className="w-full h-px bg-brand-gold/20 my-4" />
 

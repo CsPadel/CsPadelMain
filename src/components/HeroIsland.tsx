@@ -1,12 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, User, ArrowRight } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 import '../i18n/config';
 import { getRetreatUrl } from '../constants/urls';
+import { HERO_ISLAND_VIDEOS } from '../constants/serviceMedia';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
 
-export default function HeroIsland() {
-  const { t } = useTranslation();
+interface HeroIslandProps {
+  locale?: Locale;
+}
+
+export default function HeroIsland({ locale: localeProp }: HeroIslandProps) {
+  const { t } = usePageTranslation(localeProp);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [flow, setFlow] = useState<'retreat' | 'selection' | 'checkout' | 'concierge'>('retreat');
   const [selectedRetreat, setSelectedRetreat] = useState<string | null>(null);
@@ -21,7 +27,7 @@ export default function HeroIsland() {
     }
   };
 
-  const videos = ['/bali.mp4', '/padelv.mp4', '/vid2.mp4', '/vid3.mp4'];
+  const videos = [...HERO_ISLAND_VIDEOS];
   const [videoIndex, setVideoIndex] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
@@ -96,8 +102,7 @@ export default function HeroIsland() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <img src="/logogold.webp" alt="CourtSide Padel" className="h-28 md:h-40 xl:h-52 mb-6 object-contain origin-bottom-left filter drop-shadow-2xl" />
-            <p className="mt-8 text-xl md:text-2xl font-light tracking-wide text-brand-light/80 max-w-xl">
+            <p className="text-xl md:text-2xl font-light tracking-wide text-brand-light/80 max-w-xl">
               {t('hero.subtitle')}
             </p>
           </motion.div>
@@ -159,7 +164,7 @@ export default function HeroIsland() {
                           setSelectedDate(null);
                           setFlow('selection');
                         }}
-                        className="w-full py-5 border border-white/20 text-brand-light font-semibold text-lg uppercase tracking-wide hover:border-brand-gold hover:text-brand-gold transition-colors flex items-center justify-center"
+                        className="w-full py-5 border border-white/20 rounded-button text-brand-light font-semibold text-lg uppercase tracking-wide hover:border-brand-gold hover:text-brand-gold transition-colors flex items-center justify-center"
                       >
                         {t(`sidebar.retreats.${retreat}`)}
                       </button>
@@ -207,7 +212,7 @@ export default function HeroIsland() {
                             <button
                               key={dateKey}
                               onClick={() => setSelectedDate(dateKey)}
-                              className="w-full py-4 border border-white/20 text-brand-light font-medium text-lg uppercase tracking-wide hover:border-brand-gold hover:text-brand-gold transition-colors flex items-center justify-center gap-3 bg-white/5"
+                              className="w-full py-4 border border-white/20 rounded-button text-brand-light font-medium text-lg uppercase tracking-wide hover:border-brand-gold hover:text-brand-gold transition-colors flex items-center justify-center gap-3 bg-white/5"
                             >
                               <Calendar className="w-5 h-5 text-brand-gold" />
                               {t(`sidebar.dates.${selectedRetreat}.${dateKey}`)}
@@ -245,7 +250,7 @@ export default function HeroIsland() {
                         </button>
                         <button 
                           onClick={() => setFlow('concierge')}
-                          className="w-full py-5 border border-white/20 text-brand-light font-semibold text-lg uppercase tracking-wide hover:border-brand-gold hover:text-brand-gold transition-colors flex items-center justify-center gap-2"
+                          className="w-full py-5 border border-white/20 rounded-button text-brand-light font-semibold text-lg uppercase tracking-wide hover:border-brand-gold hover:text-brand-gold transition-colors flex items-center justify-center gap-2"
                         >
                           {t('sidebar.conciergeBtn')}
                         </button>

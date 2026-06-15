@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServicesView from '../ServicesView';
+import FooterIsland from '../FooterIsland';
+import type { Locale } from '../../i18n/locales';
+import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const seo = getPageSeo('services', locale);
+const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
+const alternateUrls = getAlternateUrls(siteURL.href, 'services');
+---
+
+<Layout
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
+  lang={locale}
+  locale={locale}
+  canonical={alternateUrls[locale]}
+  alternateUrls={alternateUrls}
+>
+  <main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden pt-24">
+    <ServicesView client:load locale={locale} />
+    <FooterIsland client:load locale={locale} />
+  </main>
+</Layout>

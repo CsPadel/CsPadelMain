@@ -24,7 +24,7 @@ export const IndividualFlow = ({ onClose }: { onClose: () => void }) => {
         <div className="flex flex-col gap-6 mt-8">
           <button 
             onClick={() => setStep('payment-sim')}
-            className="group flex items-center justify-between bg-white/5 border border-white/10 hover:border-accent-olive hover:bg-accent-olive/10 transition-all duration-300 p-6 md:p-8"
+            className="group flex items-center justify-between bg-white/5 border border-white/10 rounded-button hover:border-accent-olive hover:bg-accent-olive/10 transition-all duration-300 p-6 md:p-8"
           >
             <span className="text-xl md:text-2xl font-light tracking-wide text-white/90">{t('gateway.individual.directPay')}</span>
             <ArrowRight className="text-accent-olive transform transition-transform group-hover:translate-x-2" size={28} />
@@ -32,7 +32,7 @@ export const IndividualFlow = ({ onClose }: { onClose: () => void }) => {
 
           <button 
             onClick={() => setStep('concierge-sim')}
-            className="group flex items-center justify-between border border-transparent hover:border-white/20 transition-all duration-300 p-6 md:p-8"
+            className="group flex items-center justify-between border border-transparent rounded-button hover:border-white/20 transition-all duration-300 p-6 md:p-8"
           >
             <span className="text-xl md:text-2xl font-light tracking-wide text-white/70 group-hover:text-white">{t('gateway.individual.talkConcierge')}</span>
             <MessageCircle className="text-white/50 transform transition-transform group-hover:scale-110" size={28} />
@@ -42,7 +42,7 @@ export const IndividualFlow = ({ onClose }: { onClose: () => void }) => {
 
       {step === 'payment-sim' && (
         <motion.div {...fadeAnim} className="mt-8">
-          <div className="bg-white/5 border border-white/10 p-8 text-center flex flex-col items-center justify-center min-h-[300px]">
+          <div className="bg-white/5 border border-white/10 rounded-card p-8 text-center flex flex-col items-center justify-center min-h-[300px]">
             <h3 className="text-xl font-semibold mb-2">{t('gateway.individual.simPayTitle')}</h3>
             <p className="text-white/50 text-sm mb-6 max-w-xs mx-auto">
               {t('gateway.individual.simPayDesc')}
@@ -68,7 +68,7 @@ export const IndividualFlow = ({ onClose }: { onClose: () => void }) => {
             placeholder={t('gateway.individual.phoneHolder')}
             className="bg-transparent border-b border-white/20 px-0 py-4 text-xl text-white placeholder-white/30 focus:outline-none focus:border-accent-olive transition-colors"
           />
-          <button className="mt-8 bg-accent-olive hover:bg-accent-olive-dark text-white font-medium tracking-widest uppercase text-sm py-5 px-8 transition-colors flex items-center justify-center gap-3">
+          <button className="mt-8 bg-accent-olive hover:bg-accent-olive-dark text-white font-medium tracking-widest uppercase text-sm py-5 px-8 rounded-button transition-colors flex items-center justify-center gap-3">
             {t('gateway.individual.reqCall')} <ArrowRight size={18} />
           </button>
           

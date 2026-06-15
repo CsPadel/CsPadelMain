@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { HeroRouter } from '../HeroRouter';
+import HeroIsland from '../HeroIsland';
+import GroupVillaLeader from '../GroupVillaLeader';
+import CorporateForm from '../CorporateForm';
+import FooterIsland from '../FooterIsland';
+import type { Locale } from '../../i18n/locales';
+import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const seo = getPageSeo('home', locale);
+const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
+const alternateUrls = getAlternateUrls(siteURL.href, 'home');
+---
+
+<Layout
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
+  lang={locale}
+  locale={locale}
+  canonical={alternateUrls[locale]}
+  alternateUrls={alternateUrls}
+>
+  <main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden pt-24">
+    <HeroRouter client:load locale={locale} />
+    <div id="individual-section">
+      <HeroIsland client:load locale={locale} />
+    </div>
+    <div id="group-section">
+      <GroupVillaLeader client:load locale={locale} />
+    </div>
+    <div id="corporate-section">
+      <CorporateForm client:load locale={locale} />
+    </div>
+    <FooterIsland client:load locale={locale} />
+  </main>
+</Layout>

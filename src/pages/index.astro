@@ -1,31 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import LanguageToggle from '../components/LanguageToggle';
-import { HeroRouter } from '../components/HeroRouter';
-import HeroIsland from '../components/HeroIsland';
-import GroupVillaLeader from '../components/GroupVillaLeader';
-import CorporateForm from '../components/CorporateForm';
-import FooterIsland from '../components/FooterIsland';
+import HomePage from '../components/pages/HomePage.astro';
 ---
 
-<Layout title="CourtSide | Premium Padel Experience">
-	<main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden pt-24">
-		{/* Unified Digital Concierge Gateway */}
-		<HeroRouter client:load />
-
-		{/* Landing Sections for Scroll Behavior */}
-		<div id="individual-section">
-			<HeroIsland client:load />
-		</div>
-
-		<div id="group-section">
-			<GroupVillaLeader client:load />
-		</div>
-
-		<div id="corporate-section">
-			<CorporateForm client:load />
-		</div>
-
-		<FooterIsland client:load />
-	</main>
-</Layout>
+<HomePage locale="en" />

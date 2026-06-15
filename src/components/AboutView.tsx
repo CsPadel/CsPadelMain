@@ -1,10 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import '../i18n/config';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
 
-export default function AboutView() {
-  const { t } = useTranslation();
+interface AboutViewProps {
+  locale?: Locale;
+}
+
+export default function AboutView({ locale: localeProp }: AboutViewProps) {
+  const { t } = usePageTranslation(localeProp);
   const team = t('aboutPage.team', { returnObjects: true }) as Array<{ name: string; role: string }>;
 
   return (
@@ -58,7 +63,7 @@ export default function AboutView() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group relative overflow-hidden bg-brand-dark-2 border border-white/5 aspect-[3/4] flex flex-col justify-end p-8 hover:border-brand-gold/40 hover:scale-[1.02] transition-all duration-300 ease-out will-change-transform"
+                className="group relative overflow-hidden bg-brand-dark-2 border border-white/5 rounded-card aspect-[3/4] flex flex-col justify-end p-8 hover:border-brand-gold/40 hover:scale-[1.02] transition-all duration-300 ease-out will-change-transform"
               >
                 {/* Image Placeholder Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent z-10"></div>
