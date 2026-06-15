@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FileDown, Briefcase } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 import '../i18n/config';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
+import { serviceMedia } from '../constants/serviceMedia';
 
-export default function CorporateForm() {
-  const { t } = useTranslation();
+interface CorporateFormProps {
+  locale?: Locale;
+}
+
+export default function CorporateForm({ locale: localeProp }: CorporateFormProps) {
+  const { t } = usePageTranslation(localeProp);
   const [email, setEmail] = useState('');
   const [category, setCategory] = useState<'leadership' | 'teamBuilding' | 'cSuite'>('cSuite');
   const [isDownloading, setIsDownloading] = useState(false);
@@ -45,7 +51,7 @@ export default function CorporateForm() {
               playsInline
               className="w-full max-w-lg aspect-video object-cover rounded-sm filter grayscale opacity-70 border border-white/10 shadow-2xl shadow-black/40 hover:grayscale-0 hover:opacity-100 hover:shadow-brand-gold/20 hover:border-brand-gold/40 transition-all duration-500 ease-out will-change-transform"
             >
-              <source src="/networkv.mp4" type="video/mp4" />
+              <source src={serviceMedia.corporate.src} type="video/mp4" />
             </video>
           </div>
         </div>
@@ -92,7 +98,7 @@ export default function CorporateForm() {
                       key={opt}
                       type="button"
                       onClick={() => setCategory(opt)}
-                      className={`py-4 text-sm tracking-wide transition-all border ${
+                      className={`py-4 text-sm tracking-wide transition-all border rounded-button ${
                         category === opt 
                           ? 'border-brand-gold bg-brand-gold/10 text-brand-gold font-semibold' 
                           : 'border-white/10 text-brand-light/60 hover:border-white/30 hover:text-brand-light'

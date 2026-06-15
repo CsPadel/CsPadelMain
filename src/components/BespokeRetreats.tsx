@@ -65,7 +65,7 @@ export default function BespokeRetreats() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-brand-dark-2 z-[110] p-8 md:p-12 border border-white/10 shadow-2xl overflow-y-auto max-h-[90vh]"
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-brand-dark-2 z-[110] p-8 md:p-12 border border-white/10 rounded-card shadow-2xl overflow-y-auto max-h-[90vh]"
             >
               <div className="flex justify-between items-center mb-8">
                 <h3 className="text-2xl font-light text-brand-light tracking-wide">{t('bespokeRetreats.modalTitle')}</h3>
@@ -103,7 +103,7 @@ export default function BespokeRetreats() {
                         <input type="text" className="w-full bg-transparent border-b border-white/20 pb-2 text-brand-light focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g. October" />
                       </div>
                     </div>
-                    <button type="submit" className="w-full py-4 mt-6 bg-brand-gold text-brand-dark font-bold uppercase tracking-widest text-sm hover:bg-brand-light transition-colors duration-300">
+                    <button type="submit" className="w-full py-4 mt-6 rounded-button bg-brand-gold text-brand-dark font-bold uppercase tracking-widest text-sm hover:bg-brand-light transition-colors duration-300">
                       {t('bespokeRetreats.submitBtn')}
                     </button>
                   </form>

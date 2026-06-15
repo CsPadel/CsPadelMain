@@ -1,12 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import AboutView from '../components/AboutView';
-import FooterIsland from '../components/FooterIsland';
+import AboutPage from '../components/pages/AboutPage.astro';
 ---
 
-<Layout title="CourtSide | About Us">
-	<main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden pt-24">
-		<AboutView client:load />
-		<FooterIsland client:load />
-	</main>
-</Layout>
+<AboutPage locale="en" />

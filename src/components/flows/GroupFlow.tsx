@@ -17,7 +17,7 @@ export const GroupFlow = ({ onClose }: { onClose: () => void }) => {
   if (submitted) {
     return (
       <motion.div {...fadeAnim} className="flex flex-col h-full text-brand-light items-center justify-center text-center">
-        <div className="bg-white/5 border border-white/10 p-12 w-full max-w-md">
+        <div className="bg-white/5 border border-white/10 rounded-card p-12 w-full max-w-md">
           <Users className="text-accent-olive mx-auto mb-6" size={48} strokeWidth={1} />
           <h3 className="text-2xl font-light mb-4">{t('gateway.group.securingFor', { count: companions })}</h3>
           <p className="text-white/50 text-sm mb-8 leading-relaxed">
@@ -68,7 +68,7 @@ export const GroupFlow = ({ onClose }: { onClose: () => void }) => {
       <div className="mt-auto pt-12">
          <button 
           onClick={() => setSubmitted(true)}
-          className="w-full bg-white text-brand-dark hover:bg-accent-olive hover:text-white font-medium tracking-widest uppercase text-sm py-6 transition-all duration-300 flex items-center justify-center gap-3"
+          className="w-full bg-white text-brand-dark hover:bg-accent-olive hover:text-white font-medium tracking-widest uppercase text-sm py-6 rounded-button transition-all duration-300 flex items-center justify-center gap-3"
          >
           {t('gateway.group.bookBtn')} <ArrowRight size={18} />
         </button>

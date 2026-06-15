@@ -1,9 +1,16 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import '../i18n/config';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
+import { useLocalizedHref } from '../i18n/useLocale';
 
-export default function FooterIsland() {
-  const { t } = useTranslation();
+interface FooterIslandProps {
+  locale?: Locale;
+}
+
+export default function FooterIsland({ locale: localeProp }: FooterIslandProps) {
+  const { t } = usePageTranslation(localeProp);
+  const localizedHref = useLocalizedHref(localeProp);
 
   return (
     <footer className="py-14 bg-brand-dark border-t-2 border-brand-gold/60 text-center px-8">
@@ -12,9 +19,10 @@ export default function FooterIsland() {
           <img src="/logogold.webp" alt="CourtSide Logo" className="h-6 object-contain" />
           <p className="text-brand-light/40 text-xs uppercase tracking-widest">{t('footer.rights')}</p>
         </div>
-        <div className="flex gap-8 text-brand-light/40 text-xs uppercase tracking-widest">
+        <div className="flex flex-wrap justify-center gap-8 text-brand-light/40 text-xs uppercase tracking-widest">
           <a href="#" className="hover:text-brand-gold transition-colors">{t('footer.privacy')}</a>
           <a href="#" className="hover:text-brand-gold transition-colors">{t('footer.terms')}</a>
+          <a href={localizedHref('/cookies')} className="hover:text-brand-gold transition-colors">{t('footer.cookies')}</a>
         </div>
       </div>
     </footer>

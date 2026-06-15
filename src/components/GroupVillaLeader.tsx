@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Users } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 import '../i18n/config';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
+import { serviceMedia } from '../constants/serviceMedia';
 
-export default function GroupVillaLeader() {
-  const { t } = useTranslation();
+interface GroupVillaLeaderProps {
+  locale?: Locale;
+}
+
+export default function GroupVillaLeader({ locale: localeProp }: GroupVillaLeaderProps) {
+  const { t } = usePageTranslation(localeProp);
   const [companions, setCompanions] = useState<number | ''>('');
   const [isCheckout, setIsCheckout] = useState(false);
 
@@ -23,7 +29,7 @@ export default function GroupVillaLeader() {
       {/* Visual / Image Side */}
       <div className="w-full md:w-1/2 relative min-h-[50vh]">
         <img 
-          src="/villa3.jpg" 
+          src={serviceMedia.group.src} 
           alt="Villa Privada Courtside" 
           className="absolute inset-0 w-full h-full object-cover filter grayscale opacity-60"
         />
@@ -84,7 +90,7 @@ export default function GroupVillaLeader() {
           ) : (
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="h-full flex flex-col justify-center">
               <h2 className="text-3xl font-bold mb-8 text-center tracking-tighter text-brand-dark">{t('groupVilla.finaliseTitle')}</h2>
-              <div className="bg-white/50 border border-brand-dark/10 p-16 flex flex-col items-center justify-center text-center space-y-4">
+              <div className="bg-white/50 border border-brand-dark/10 rounded-card p-16 flex flex-col items-center justify-center text-center space-y-4">
                  <p className="text-xs tracking-widest uppercase text-brand-gold">JotForm Checkout Embed</p>
                  <p className="text-brand-dark/50 font-light">
                    {t('groupVilla.simulatingCheckout', { count: companions })}
