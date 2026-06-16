@@ -5,6 +5,8 @@ import HeroIsland from '../HeroIsland';
 import GroupVillaLeader from '../GroupVillaLeader';
 import CorporateForm from '../CorporateForm';
 import FooterIsland from '../FooterIsland';
+import DestinationsPreview from '../DestinationsPreview';
+import TestimonialsCarousel from '../TestimonialsCarousel';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
 
@@ -27,8 +29,9 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'home');
   canonical={alternateUrls[locale]}
   alternateUrls={alternateUrls}
 >
-  <main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden pt-24">
+  <main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden">
     <HeroRouter client:load locale={locale} />
+    <DestinationsPreview client:load locale={locale} />
     <div id="individual-section">
       <HeroIsland client:load locale={locale} />
     </div>
@@ -38,6 +41,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'home');
     <div id="corporate-section">
       <CorporateForm client:load locale={locale} />
     </div>
+    <TestimonialsCarousel client:load />
     <FooterIsland client:load locale={locale} />
   </main>
 </Layout>

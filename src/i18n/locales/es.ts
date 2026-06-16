@@ -12,10 +12,10 @@ const es = {
         heroSubtitle: "Oliver y Alexy Watellet tienen la misión de elevar la experiencia global del pádel, fusionando el rendimiento atlético de clase mundial con el lujo absoluto.",
         teamTitle: "Las Mentes Maestras",
         team: [
-          { name: "Oliver Watellet", role: "Co-Fundador y Visión Estratégica" },
-          { name: "Alexy Watellet", role: "Co-Fundador y Director Atlético" },
-          { name: "Carlos M.", role: "Head Coach (Menorca)" },
-          { name: "Elena R.", role: "Lead Concierge" }
+          { name: "Oliver Watellet", role: "Co-Fundador y Visión Estratégica", photo: "/team/oliver.jpg" },
+          { name: "Alexy Watellet", role: "Co-Fundador y Director Atlético", photo: "/team/alexy.jpg" },
+          { name: "Carlos M.", role: "Head Coach (Menorca)", photo: "/team/carlos.jpg" },
+          { name: "Elena R.", role: "Lead Concierge", photo: "/team/elena.jpg" }
         ]
       },
       servicesPage: {
@@ -481,6 +481,75 @@ const es = {
         guestsLabel: "Número de Invitados (Mínimo 6)",
         submitBtn: "Solicitar Propuesta",
         successMsg: "Gracias. Nuestro equipo de concierge se pondrá en contacto pronto."
+      },
+      baliPage: {
+        heroTitle: "BALI",
+        heroTagline: "Lujo en la Jungla. Pádel de Élite.",
+        heroLocation: "Canggu · Bali",
+        heroDate: "Julio 2026 · 5 Días · Todo Incluido",
+        heroSubtitle: "Donde el ritmo de Bali se funde con el pádel de élite. Cinco días de entrenamiento, bienestar e inmersión cultural en pleno lujo tropical.",
+        sectionTag: "El Destino",
+        sectionTitle: "El Retiro en Bali",
+        bookBtn: "Reserva tu Plaza",
+        enquireBtn: "Habla con el Concierge",
+        whatsappMessage: "Hola, quiero información sobre el retiro de pádel en Bali.",
+        galleryLabel: "Galería",
+        galleryNote: "Fotografía próximamente",
+        stats: {
+          duration: { value: "5", label: "Días" },
+          group: { value: "8–16", label: "Huéspedes Máx." },
+          rating: { value: "5★", label: "Villas de Lujo" },
+          privacy: { value: "100%", label: "Privado" }
+        },
+        pillars: [
+          { tag: "Entrenamiento de Élite", title: "Sesiones al amanecer. Partidas al atardecer.", desc: "Entrenamiento dirigido y partidos competitivos en pistas privadas de pádel, adaptado a cada nivel." },
+          { tag: "Villas de Lujo", title: "Piscinas infinitas. Pabellones al aire libre.", desc: "Villas boutique en Canggu con personal propio, piscinas privadas y total privacidad en el trópico." },
+          { tag: "Bienestar Balinés", title: "Recuperación holística en el paraíso.", desc: "Tratamientos spa balineses, yoga al amanecer, meditación guiada y piscinas de inmersión fría." },
+          { tag: "Alma Cultural", title: "El Bali auténtico, curado para ti.", desc: "Rutas a templos al amanecer, ceremonias tradicionales, paseos por terrazas de arroz y clases de cocina privadas." }
+        ],
+        datesTitle: "Retiros Disponibles",
+        dates: [
+          { label: "8 – 12 de Julio, 2026", desc: "5 días · 4 noches · Retiro Abierto", spots: "Plazas Limitadas" },
+          { label: "22 – 26 de Julio, 2026", desc: "5 días · 4 noches · Retiro Abierto", spots: "Plazas Limitadas" }
+        ],
+        ctaTitle: "Tu suite en Bali te espera.",
+        ctaDesc: "Un grupo íntimo. Una villa privada. Cinco días extraordinarios.",
+        ctaBtn: "Reserva tu Plaza",
+        ctaSecondaryBtn: "Habla con el Concierge"
+      },
+      dubaiPage: {
+        heroTitle: "DUBÁI",
+        heroTagline: "Prestigio Urbano. Pistas del Desierto.",
+        heroLocation: "Dubái · EAU",
+        heroDate: "Noviembre 2026 · 4 Días · Todo Incluido",
+        heroSubtitle: "La ciudad más prestigiosa del mundo como telón de fondo. Pistas iluminadas, suites ático y networking curado en la capital del lujo.",
+        sectionTag: "El Destino",
+        sectionTitle: "El Retiro en Dubái",
+        bookBtn: "Reserva tu Plaza",
+        enquireBtn: "Habla con el Concierge",
+        whatsappMessage: "Hola, quiero información sobre el retiro de pádel en Dubái.",
+        galleryLabel: "Galería",
+        galleryNote: "Fotografía próximamente",
+        stats: {
+          duration: { value: "4", label: "Días" },
+          group: { value: "8–14", label: "Huéspedes Máx." },
+          rating: { value: "5★", label: "Propiedades" },
+          privacy: { value: "100%", label: "Privado" }
+        },
+        pillars: [
+          { tag: "Pistas Premium", title: "Pistas iluminadas con vistas al skyline.", desc: "Pistas de pádel de primera nivel frente al horizonte de Dubái. Sesiones matutinas y nocturnas en condiciones perfectas." },
+          { tag: "Suites Ático", title: "Iconos del lujo urbano.", desc: "Las mejores propiedades cinco estrellas de Dubái — del Downtown a Palm Jumeirah — para los huéspedes más exigentes." },
+          { tag: "Red de Élite", title: "La mejor compañía posible.", desc: "Listas de invitados curadas. Conversaciones a nivel directivo. Experiencias off-court diseñadas para la élite global." },
+          { tag: "Experiencias del Desierto", title: "Más allá de la pista.", desc: "Safaris privados, tours en helicóptero, restaurantes con estrella Michelin y experiencias en yate en el Golfo Arábigo." }
+        ],
+        datesTitle: "Retiros Disponibles",
+        dates: [
+          { label: "19 – 22 de Noviembre, 2026", desc: "4 días · 3 noches · Retiro Abierto", spots: "Plazas Limitadas" }
+        ],
+        ctaTitle: "Dubái. Tu pista está lista.",
+        ctaDesc: "Cuatro días. Una ciudad sin igual. La mejor compañía.",
+        ctaBtn: "Reserva tu Plaza",
+        ctaSecondaryBtn: "Habla con el Concierge"
       },
       testimonials: {
         label: "Reseñas",

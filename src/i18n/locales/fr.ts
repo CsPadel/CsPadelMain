@@ -12,10 +12,10 @@ const fr = {
         heroSubtitle: "Oliver et Alexy Watellet ont pour mission d'élever l'expérience padel à l'échelle mondiale, en fusionnant performance athlétique de premier plan et luxe sans compromis.",
         teamTitle: "Les Esprits Créateurs",
         team: [
-          { name: "Oliver Watellet", role: "Co-fondateur & Vision stratégique" },
-          { name: "Alexy Watellet", role: "Co-fondateur & Directeur sportif" },
-          { name: "Carlos M.", role: "Entraîneur principal (Menorca)" },
-          { name: "Elena R.", role: "Concierge en chef" }
+          { name: "Oliver Watellet", role: "Co-fondateur & Vision stratégique", photo: "/team/oliver.jpg" },
+          { name: "Alexy Watellet", role: "Co-fondateur & Directeur sportif", photo: "/team/alexy.jpg" },
+          { name: "Carlos M.", role: "Entraîneur principal (Menorca)", photo: "/team/carlos.jpg" },
+          { name: "Elena R.", role: "Concierge en chef", photo: "/team/elena.jpg" }
         ]
       },
       servicesPage: {
@@ -481,6 +481,75 @@ const fr = {
         guestsLabel: "Nombre de convives (min. 6)",
         submitBtn: "Demander une proposition",
         successMsg: "Merci. Notre équipe concierge vous contactera prochainement."
+      },
+      baliPage: {
+        heroTitle: "BALI",
+        heroTagline: "Luxe Tropical. Padel d'Élite.",
+        heroLocation: "Canggu · Bali",
+        heroDate: "Juillet 2026 · 5 Jours · Tout Compris",
+        heroSubtitle: "Là où le rythme de Bali rencontre le padel d'élite. Cinq jours de coaching, bien-être et immersion culturelle enveloppés dans un luxe tropical cinq étoiles.",
+        sectionTag: "La Destination",
+        sectionTitle: "La Retraite à Bali",
+        bookBtn: "Réserver votre Place",
+        enquireBtn: "Parler au Concierge",
+        whatsappMessage: "Bonjour, je souhaite des informations sur la retraite padel à Bali.",
+        galleryLabel: "Galerie",
+        galleryNote: "Photographies à venir",
+        stats: {
+          duration: { value: "5", label: "Jours" },
+          group: { value: "8–16", label: "Convives max." },
+          rating: { value: "5★", label: "Villas de luxe" },
+          privacy: { value: "100%", label: "Privé" }
+        },
+        pillars: [
+          { tag: "Coaching d'élite", title: "Sessions au lever du soleil. Matchplay au crépuscule.", desc: "Entraînement dirigé et matchplay compétitif sur des courts privés, adapté à tous les niveaux." },
+          { tag: "Villas de luxe", title: "Piscines à débordement. Pavillons en plein air.", desc: "Villas boutique sélectionnées à Canggu avec personnel dédié, piscines privées et isolement total en milieu tropical." },
+          { tag: "Bien-être balinais", title: "Récupération holistique au paradis.", desc: "Soins spa balinais, yoga au lever du soleil, méditation guidée et bains de glace — l'expérience de récupération ultime." },
+          { tag: "Âme culturelle", title: "Le vrai Bali, orchestré pour vous.", desc: "Treks aux temples au lever du soleil, cérémonies traditionnelles, balades en rizières et cours de cuisine privés." }
+        ],
+        datesTitle: "Retraites Disponibles",
+        dates: [
+          { label: "8 – 12 juillet 2026", desc: "5 jours · 4 nuits · Retraite ouverte", spots: "Places limitées" },
+          { label: "22 – 26 juillet 2026", desc: "5 jours · 4 nuits · Retraite ouverte", spots: "Places limitées" }
+        ],
+        ctaTitle: "Votre suite à Bali vous attend.",
+        ctaDesc: "Un groupe intime. Une villa privée. Cinq jours extraordinaires.",
+        ctaBtn: "Réserver votre Place",
+        ctaSecondaryBtn: "Parler au Concierge"
+      },
+      dubaiPage: {
+        heroTitle: "DUBAI",
+        heroTagline: "Prestige Urbain. Courts du Désert.",
+        heroLocation: "Dubaï · ÉAU",
+        heroDate: "Novembre 2026 · 4 Jours · Tout Compris",
+        heroSubtitle: "La ville la plus prestigieuse du monde comme toile de fond. Courts éclairés, suites penthouse et réseautage d'exception dans la capitale mondiale du luxe.",
+        sectionTag: "La Destination",
+        sectionTitle: "La Retraite à Dubaï",
+        bookBtn: "Réserver votre Place",
+        enquireBtn: "Parler au Concierge",
+        whatsappMessage: "Bonjour, je souhaite des informations sur la retraite padel à Dubaï.",
+        galleryLabel: "Galerie",
+        galleryNote: "Photographies à venir",
+        stats: {
+          duration: { value: "4", label: "Jours" },
+          group: { value: "8–14", label: "Convives max." },
+          rating: { value: "5★", label: "Propriétés" },
+          privacy: { value: "100%", label: "Privé" }
+        },
+        pillars: [
+          { tag: "Courts premium", title: "Courts éclairés avec vue sur les toits.", desc: "Des courts de padel d'exception face au skyline de Dubaï. Sessions matinales et nocturnes dans des conditions parfaites." },
+          { tag: "Suites penthouse", title: "Icônes du luxe urbain.", desc: "Les meilleures propriétés cinq étoiles de Dubaï — du centre-ville à Palm Jumeirah — pour les convives les plus exigeants." },
+          { tag: "Réseau d'élite", title: "La meilleure compagnie qui soit.", desc: "Listes d'invités curatées. Conversations au niveau du conseil. Expériences hors court conçues pour l'élite mondiale." },
+          { tag: "Expériences du désert", title: "Au-delà du court.", desc: "Safaris privés, survols en hélicoptère, gastronomie étoilée Michelin et expériences en yacht dans le Golfe Arabo-Persique." }
+        ],
+        datesTitle: "Retraites Disponibles",
+        dates: [
+          { label: "19 – 22 novembre 2026", desc: "4 jours · 3 nuits · Retraite ouverte", spots: "Places limitées" }
+        ],
+        ctaTitle: "Dubaï. Votre court est prêt.",
+        ctaDesc: "Quatre jours. Une ville hors du commun. La meilleure compagnie.",
+        ctaBtn: "Réserver votre Place",
+        ctaSecondaryBtn: "Parler au Concierge"
       },
       testimonials: {
         label: "Témoignages",

@@ -12,10 +12,10 @@ const en = {
         heroSubtitle: "Oliver and Alexy Watellet are on a mission to elevate the global padel experience, fusing world-class athletic performance with uncompromising luxury.",
         teamTitle: "The Masterminds",
         team: [
-          { name: "Oliver Watellet", role: "Co-Founder & Strategic Vision" },
-          { name: "Alexy Watellet", role: "Co-Founder & Athletic Director" },
-          { name: "Carlos M.", role: "Head Coach (Menorca)" },
-          { name: "Elena R.", role: "Lead Concierge" }
+          { name: "Oliver Watellet", role: "Co-Founder & Strategic Vision", photo: "/team/oliver.jpg" },
+          { name: "Alexy Watellet", role: "Co-Founder & Athletic Director", photo: "/team/alexy.jpg" },
+          { name: "Carlos M.", role: "Head Coach (Menorca)", photo: "/team/carlos.jpg" },
+          { name: "Elena R.", role: "Lead Concierge", photo: "/team/elena.jpg" }
         ]
       },
       servicesPage: {
@@ -481,6 +481,75 @@ const en = {
         guestsLabel: "Number of Guests (Min 6)",
         submitBtn: "Request Proposal",
         successMsg: "Thank you. Our concierge team will contact you shortly."
+      },
+      baliPage: {
+        heroTitle: "BALI",
+        heroTagline: "Jungle Luxury. Elite Padel.",
+        heroLocation: "Canggu · Bali",
+        heroDate: "July 2026 · 5 Days · All-Inclusive",
+        heroSubtitle: "Where the rhythm of Bali meets elite padel. Five days of coaching, wellness, and cultural immersion wrapped in five-star tropical luxury.",
+        sectionTag: "The Destination",
+        sectionTitle: "The Bali Retreat",
+        bookBtn: "Reserve Your Place",
+        enquireBtn: "Speak with Concierge",
+        whatsappMessage: "Hello, I'd like to enquire about the Bali padel retreat.",
+        galleryLabel: "Gallery",
+        galleryNote: "Photography coming soon",
+        stats: {
+          duration: { value: "5", label: "Days" },
+          group: { value: "8–16", label: "Guests Max" },
+          rating: { value: "5★", label: "Luxury Villas" },
+          privacy: { value: "100%", label: "Private" }
+        },
+        pillars: [
+          { tag: "Elite Coaching", title: "Sunrise sessions. Golden hour matchplay.", desc: "Coach-led training and competitive matchplay on private padel courts, tailored to every level from foundation to elite." },
+          { tag: "Luxury Villas", title: "Private infinity pools. Open-air pavilions.", desc: "Hand-selected boutique villas in Canggu with personal staff, private pools and total seclusion in the tropics." },
+          { tag: "Bali Wellness", title: "Holistic recovery and performance.", desc: "Balinese spa treatments, sunrise yoga, guided meditation and cold plunge pools — the full performance recovery." },
+          { tag: "Cultural Soul", title: "The real Bali, curated for you.", desc: "Sunrise temple treks, traditional ceremonies, rice terrace walks and private cooking classes with local chefs." }
+        ],
+        datesTitle: "Available Retreats",
+        dates: [
+          { label: "July 8 – 12, 2026", desc: "5 days · 4 nights · Open Retreat", spots: "Limited Places" },
+          { label: "July 22 – 26, 2026", desc: "5 days · 4 nights · Open Retreat", spots: "Limited Places" }
+        ],
+        ctaTitle: "Your Bali suite awaits.",
+        ctaDesc: "An intimate group. A private villa. Five extraordinary days.",
+        ctaBtn: "Reserve Your Place",
+        ctaSecondaryBtn: "Speak with Concierge"
+      },
+      dubaiPage: {
+        heroTitle: "DUBAI",
+        heroTagline: "Urban Prestige. Desert Courts.",
+        heroLocation: "Dubai · UAE",
+        heroDate: "November 2026 · 4 Days · All-Inclusive",
+        heroSubtitle: "The world's most prestigious city as your backdrop. Floodlit courts, penthouse suites, and curated networking in the desert capital of luxury.",
+        sectionTag: "The Destination",
+        sectionTitle: "The Dubai Retreat",
+        bookBtn: "Reserve Your Place",
+        enquireBtn: "Speak with Concierge",
+        whatsappMessage: "Hello, I'd like to enquire about the Dubai padel retreat.",
+        galleryLabel: "Gallery",
+        galleryNote: "Photography coming soon",
+        stats: {
+          duration: { value: "4", label: "Days" },
+          group: { value: "8–14", label: "Guests Max" },
+          rating: { value: "5★", label: "Properties" },
+          privacy: { value: "100%", label: "Private" }
+        },
+        pillars: [
+          { tag: "Premium Courts", title: "Floodlit courts with skyline views.", desc: "World-class padel courts against the Dubai skyline. Morning and evening sessions under perfect desert conditions." },
+          { tag: "Penthouse Suites", title: "Icons of urban luxury.", desc: "The finest five-star properties in Dubai — from Downtown to Palm Jumeirah — curated for the most discerning guests." },
+          { tag: "Elite Network", title: "The highest calibre of company.", desc: "Curated guest lists. Board-level conversations. Off-court experiences designed for the global elite." },
+          { tag: "Desert Experiences", title: "Beyond the court.", desc: "Private desert safaris, helicopter city tours, Michelin-starred dining and exclusive yacht experiences in the Arabian Gulf." }
+        ],
+        datesTitle: "Available Retreats",
+        dates: [
+          { label: "November 19 – 22, 2026", desc: "4 days · 3 nights · Open Retreat", spots: "Limited Places" }
+        ],
+        ctaTitle: "Dubai. Your court is ready.",
+        ctaDesc: "Four days. An unmatched city. The finest company.",
+        ctaBtn: "Reserve Your Place",
+        ctaSecondaryBtn: "Speak with Concierge"
       },
       testimonials: {
         label: "Reviews",

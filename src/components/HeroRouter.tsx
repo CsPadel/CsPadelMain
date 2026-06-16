@@ -62,97 +62,96 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
           }}
         />
 
-        {/* Main Content */}
-        <main
-          className="relative w-full h-full flex flex-col items-center md:items-start justify-center px-6 md:px-16 lg:px-24 text-center md:text-left pt-24 md:pt-32 lg:pt-40"
+        {/* Headline — anchored to top, below the fixed navbar */}
+        <div
+          className="absolute left-6 md:left-16 lg:left-24 right-6 md:right-16 lg:right-24 top-24 md:top-32 lg:top-36 text-left"
           style={{ zIndex: 10 }}
         >
-          {/* Headline block */}
-          <div className="mb-8 md:mb-12 flex flex-col items-center md:items-start w-full max-w-6xl">
-            <h2
-              className="text-brand-light max-w-4xl leading-snug md:leading-relaxed font-light mt-4 text-balance"
+          <h2
+            className="text-brand-light max-w-4xl leading-snug md:leading-relaxed font-light mt-4 text-balance"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontStyle: 'italic',
+              fontSize: 'clamp(2rem, 4.5vw, 4.5rem)',
+              borderLeft: '3px solid #D9AD62',
+              paddingLeft: '1.5rem',
+              textShadow: '0 2px 20px rgba(1,25,44,0.6)',
+            }}
+          >
+            {t('gateway.hero.intro')}
+          </h2>
+          <p
+            className="hidden md:block text-base md:text-xl font-light tracking-wide text-balance mt-4 md:mt-6"
+            style={{
+              color: 'rgba(255,255,255,0.9)',
+              maxWidth: '520px',
+              paddingLeft: '1.5rem',
+              textShadow: '0 2px 16px rgba(1,25,44,0.5)',
+            }}
+          >
+            {t('gateway.hero.subtitle')}
+          </p>
+        </div>
+
+        {/* Intent Router — anchored to bottom, always in viewport */}
+        <div
+          className="absolute bottom-0 left-0 right-0 flex flex-col items-center px-6 md:px-16 lg:px-24 pb-5 md:pb-7"
+          style={{ zIndex: 10 }}
+        >
+          {/* Editorial divider label */}
+          <div className="flex items-center justify-center gap-3 mb-4 md:mb-6 w-full">
+            <span
               style={{
-                fontFamily: 'var(--font-display)',
-                fontStyle: 'italic',
-                fontSize: 'clamp(2rem, 4.5vw, 4.5rem)',
-                borderLeft: '3px solid #D9AD62',
-                paddingLeft: '1.5rem',
-                textShadow: '0 2px 20px rgba(1,25,44,0.6)',
+                display: 'inline-block',
+                width: '40px',
+                height: '1px',
+                background: '#D9AD62',
+                flexShrink: 0,
+                opacity: 0.8,
               }}
+            />
+            <h3
+              className="text-xs md:text-sm uppercase font-semibold text-brand-gold whitespace-nowrap"
+              style={{ letterSpacing: '0.2em', opacity: 0.9 }}
             >
-              {t('gateway.hero.intro')}
-            </h2>
-            <p
-              className="hidden md:block text-base md:text-xl font-light tracking-wide text-balance mt-4 md:mt-6"
+              {t('gateway.hero.intent')}
+            </h3>
+            <span
               style={{
-                color: 'rgba(255,255,255,0.9)',
-                maxWidth: '520px',
-                paddingLeft: '1.5rem',
-                textShadow: '0 2px 16px rgba(1,25,44,0.5)',
+                display: 'inline-block',
+                width: '40px',
+                height: '1px',
+                background: '#D9AD62',
+                flexShrink: 0,
+                opacity: 0.8,
               }}
-            >
-              {t('gateway.hero.subtitle')}
-            </p>
+            />
           </div>
 
-          {/* Intent Router */}
-          <div className="mt-8 md:mt-12 w-full flex flex-col items-center">
-
-            {/* Editorial divider label */}
-            <div className="flex items-center justify-center gap-3 mb-6 md:mb-8 w-full">
-              <span
-                style={{
-                  display: 'inline-block',
-                  width: '40px',
-                  height: '1px',
-                  background: '#D9AD62',
-                  flexShrink: 0,
-                  opacity: 0.8,
-                }}
-              />
-              <h3
-                className="text-xs md:text-sm uppercase font-semibold text-brand-gold whitespace-nowrap"
-                style={{ letterSpacing: '0.2em', opacity: 0.9 }}
-              >
-                {t('gateway.hero.intent')}
-              </h3>
-              <span
-                style={{
-                  display: 'inline-block',
-                  width: '40px',
-                  height: '1px',
-                  background: '#D9AD62',
-                  flexShrink: 0,
-                  opacity: 0.8,
-                }}
-              />
-            </div>
-
-            <div className="flex flex-col lg:flex-row gap-3 md:gap-4 w-full max-w-4xl mx-auto justify-center items-stretch">
-              <IntentButton
-                onClick={() => scrollToSection('individual-section')}
-                media={serviceMedia.individual}
-                text={t('gateway.hero.individual')}
-                subtext={t('gateway.hero.individualSub')}
-                descriptor={t('gateway.hero.individualDescriptor')}
-              />
-              <IntentButton
-                onClick={() => scrollToSection('group-section')}
-                media={serviceMedia.group}
-                text={t('gateway.hero.group')}
-                subtext={t('gateway.hero.groupSub')}
-                descriptor={t('gateway.hero.groupDescriptor')}
-              />
-              <IntentButton
-                onClick={() => scrollToSection('corporate-section')}
-                media={serviceMedia.corporate}
-                text={t('gateway.hero.corporate')}
-                subtext={t('gateway.hero.corporateSub')}
-                descriptor={t('gateway.hero.corporateDescriptor')}
-              />
-            </div>
+          <div className="flex flex-col lg:flex-row gap-3 md:gap-4 w-full max-w-4xl mx-auto justify-center items-stretch">
+            <IntentButton
+              onClick={() => scrollToSection('individual-section')}
+              media={serviceMedia.individual}
+              text={t('gateway.hero.individual')}
+              subtext={t('gateway.hero.individualSub')}
+              descriptor={t('gateway.hero.individualDescriptor')}
+            />
+            <IntentButton
+              onClick={() => scrollToSection('group-section')}
+              media={serviceMedia.group}
+              text={t('gateway.hero.group')}
+              subtext={t('gateway.hero.groupSub')}
+              descriptor={t('gateway.hero.groupDescriptor')}
+            />
+            <IntentButton
+              onClick={() => scrollToSection('corporate-section')}
+              media={serviceMedia.corporate}
+              text={t('gateway.hero.corporate')}
+              subtext={t('gateway.hero.corporateSub')}
+              descriptor={t('gateway.hero.corporateDescriptor')}
+            />
           </div>
-        </main>
+        </div>
       </div>
 
       {/* Luxury Signals Strip — credentials bar below the hero */}
