@@ -64,21 +64,23 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
 
         {/* Headline — anchored to top, below the fixed navbar */}
         <div
-          className="absolute left-6 md:left-16 lg:left-24 right-6 md:right-16 lg:right-24 top-24 md:top-32 lg:top-36 text-left"
+          className="absolute left-4 right-4 md:left-16 md:right-16 lg:left-24 lg:right-24 top-24 md:top-32 lg:top-36 text-left"
           style={{ zIndex: 10 }}
         >
           <h2
-            className="text-brand-light max-w-4xl leading-snug md:leading-relaxed font-light mt-4 text-balance"
+            className="text-brand-light max-w-4xl md:max-w-none leading-snug md:leading-relaxed font-normal mt-4 pl-4 md:pl-6 text-4xl md:text-5xl md:whitespace-nowrap"
             style={{
               fontFamily: 'var(--font-display)',
               fontStyle: 'italic',
-              fontSize: 'clamp(2rem, 4.5vw, 4.5rem)',
               borderLeft: '3px solid #D9AD62',
-              paddingLeft: '1.5rem',
               textShadow: '0 2px 20px rgba(1,25,44,0.6)',
             }}
           >
-            {t('gateway.hero.intro')}
+            <span className="md:hidden">
+              <span className="block whitespace-nowrap">{t('gateway.hero.introLine1')}</span>
+              <span className="block whitespace-nowrap">{t('gateway.hero.introLine2')}</span>
+            </span>
+            <span className="hidden md:inline">{t('gateway.hero.intro')}</span>
           </h2>
           <p
             className="hidden md:block text-base md:text-xl font-light tracking-wide text-balance mt-4 md:mt-6"
@@ -164,7 +166,7 @@ const LuxuryStrip = ({ locale: localeProp }: { locale?: Locale }) => {
   const { t } = usePageTranslation(localeProp);
 
   return (
-  <div className="luxury-strip">
+  <div className="luxury-strip noise-section">
     <div className="luxury-item">
       <span className="luxury-number">3</span>
       <span className="luxury-label">{t('gateway.luxuryStrip.destinations')}</span>
