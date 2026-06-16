@@ -24,6 +24,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
   useEffect(() => {
     setPathname(window.location.pathname);
     const onScroll = () => setIsScrolled(window.scrollY > 40);
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -31,41 +32,51 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
   const basePath = stripLocalePrefix(pathname);
   const isActive = (href: string) => basePath === href;
   const homeHref = localizedHref('/');
+  const logoSrc = isScrolled ? '/imagenes/Logo Blue.svg' : '/imagenes/Logo Gold.svg';
+
+  const navLinkClass = (active: boolean) =>
+    `nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
+      active
+        ? 'text-brand-gold'
+        : isScrolled
+          ? 'text-brand-dark/70 hover:text-brand-gold'
+          : 'text-brand-light/70 hover:text-brand-gold'
+    }`;
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${
           isScrolled
-            ? 'bg-brand-dark shadow-lg shadow-black/30'
+            ? 'bg-brand-ivory/90 backdrop-blur-md shadow-lg shadow-brand-dark/10'
             : 'bg-transparent backdrop-blur-sm'
         }`}
         style={{
           borderBottom: isScrolled
-            ? '1px solid rgba(217, 173, 98, 0.25)'
+            ? '1px solid rgba(1, 25, 44, 0.08)'
             : '1px solid rgba(255,255,255,0.04)',
         }}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-24">
 
           <a href={homeHref} className="flex-shrink-0 z-50">
-            <img src="/logogold.webp" alt="CourtSide Padel" className="h-10 md:h-12 object-contain" />
+            <img
+              src={logoSrc}
+              alt="CourtSide Padel"
+              className="h-16 md:h-[4.5rem] object-contain transition-opacity duration-300"
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
             <a
               href={localizedHref('/about')}
-              className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
-                isActive('/about') ? 'text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
-              }`}
+              className={navLinkClass(isActive('/about'))}
             >
               {t('navbar.about')}
             </a>
             <a
               href={localizedHref('/services')}
-              className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
-                isActive('/services') ? 'text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
-              }`}
+              className={navLinkClass(isActive('/services'))}
             >
               {t('navbar.services')}
             </a>
@@ -75,11 +86,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
               onMouseEnter={() => setIsDestinationsOpen(true)}
               onMouseLeave={() => setIsDestinationsOpen(false)}
             >
-              <button className={`nav-link flex items-center gap-2 text-sm tracking-widest uppercase font-medium transition-colors cursor-pointer ${
-                isActive('/menorca') || isActive('/bali') || isActive('/dubai')
-                  ? 'text-brand-gold'
-                  : 'text-brand-light/70 group-hover:text-brand-gold'
-              }`}>
+              <button className={`${navLinkClass(isActive('/menorca') || isActive('/bali') || isActive('/dubai'))} flex items-center gap-2 cursor-pointer group-hover:text-brand-gold`}>
                 {t('navbar.destinations')} <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
               </button>
 
@@ -104,11 +111,11 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
           </div>
 
           <div className="hidden md:flex items-center z-50">
-            <LanguageToggle />
+            <LanguageToggle variant={isScrolled ? 'light' : 'dark'} />
           </div>
 
           <button
-            className="md:hidden z-50 text-brand-light"
+            className={`md:hidden z-50 transition-colors ${isScrolled ? 'text-brand-dark' : 'text-brand-light'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}

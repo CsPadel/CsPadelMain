@@ -27,15 +27,20 @@ export default function TestimonialsCarousel() {
     <section
       id="testimonials"
       aria-label="Guest reviews of CourtSide Menorca padel retreat"
-      className="bg-brand-dark py-24 md:py-32 px-6 md:px-16"
+      className="bg-brand-ivory noise-section-light py-24 md:py-32 px-6 md:px-16"
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-14">
           <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">{t('testimonials.label')}</p>
-          <h2 className="text-4xl md:text-5xl font-light text-brand-light tracking-wide">{t('testimonials.title')}</h2>
-          <p className="text-brand-light/40 text-lg mt-4 max-w-md mx-auto">
+          <h2
+            className="text-4xl md:text-5xl font-normal text-brand-dark tracking-wide"
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+          >
+            {t('testimonials.title')}
+          </h2>
+          <p className="text-brand-dark/50 text-lg mt-4 max-w-md mx-auto">
             {t('testimonials.subtitle')}
           </p>
         </div>
@@ -61,7 +66,7 @@ export default function TestimonialsCarousel() {
                 height={560}
               />
             </AnimatePresence>
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 to-transparent" />
           </div>
 
           {/* Review card — overlaps image on desktop */}
@@ -73,7 +78,7 @@ export default function TestimonialsCarousel() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.3, ease: 'easeOut' }}
-                className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl shadow-black/30"
+                className="bg-white rounded-2xl p-6 md:p-8 border border-brand-dark/8 shadow-xl shadow-brand-dark/10"
               >
                 {/* Avatar */}
                 <div className="flex items-center gap-3 mb-5">
@@ -105,7 +110,7 @@ export default function TestimonialsCarousel() {
           <button
             onClick={goPrev}
             aria-label="Previous review"
-            className="w-9 h-9 rounded-full border border-white/20 hover:border-brand-gold flex items-center justify-center text-white/40 hover:text-brand-gold transition-all duration-150 text-lg"
+            className="w-9 h-9 rounded-full border border-brand-dark/15 hover:border-brand-gold flex items-center justify-center text-brand-dark/40 hover:text-brand-gold transition-all duration-150 text-lg"
           >
             ‹
           </button>
@@ -117,7 +122,7 @@ export default function TestimonialsCarousel() {
                 onClick={() => go(idx)}
                 aria-label={`Review ${idx + 1}`}
                 className={`rounded-full transition-all duration-200 ${
-                  active === idx ? 'w-6 h-1.5 bg-brand-gold' : 'w-1.5 h-1.5 bg-white/20 hover:bg-white/40'
+                  active === idx ? 'w-6 h-1.5 bg-brand-gold' : 'w-1.5 h-1.5 bg-brand-dark/15 hover:bg-brand-dark/30'
                 }`}
               />
             ))}
@@ -126,7 +131,7 @@ export default function TestimonialsCarousel() {
           <button
             onClick={goNext}
             aria-label="Next review"
-            className="w-9 h-9 rounded-full border border-white/20 hover:border-brand-gold flex items-center justify-center text-white/40 hover:text-brand-gold transition-all duration-150 text-lg"
+            className="w-9 h-9 rounded-full border border-brand-dark/15 hover:border-brand-gold flex items-center justify-center text-brand-dark/40 hover:text-brand-gold transition-all duration-150 text-lg"
           >
             ›
           </button>

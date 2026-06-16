@@ -43,7 +43,7 @@ export default function DestinationsPreview({ locale }: Props) {
   const prefix = locale && locale !== 'en' ? `/${locale}` : '';
 
   return (
-    <section className="py-24 md:py-32 px-8 md:px-16" style={{ background: '#041E36' }}>
+    <section className="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory noise-section-light">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -59,7 +59,7 @@ export default function DestinationsPreview({ locale }: Props) {
               2026 Season
             </p>
             <h2
-              className="text-4xl md:text-5xl font-light text-brand-light"
+              className="text-4xl md:text-5xl font-normal text-brand-dark"
               style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
             >
               Our Destinations
@@ -67,7 +67,7 @@ export default function DestinationsPreview({ locale }: Props) {
           </div>
           <a
             href={`${prefix}/menorca`}
-            className="hidden md:flex items-center gap-2 text-xs uppercase tracking-widest text-brand-gold hover:text-white transition-colors duration-200"
+            className="hidden md:flex items-center gap-2 text-xs uppercase tracking-widest text-brand-gold hover:text-brand-dark transition-colors duration-200"
           >
             View all <ArrowRight className="w-3.5 h-3.5" />
           </a>

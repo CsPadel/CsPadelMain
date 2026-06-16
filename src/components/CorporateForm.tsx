@@ -36,8 +36,8 @@ export default function CorporateForm({ locale: localeProp }: CorporateFormProps
           <Briefcase className="w-10 h-10 text-brand-gold opacity-80" />
           <div className="w-10 h-px bg-brand-gold mb-2" />
           <h2
-            className="text-5xl lg:text-7xl font-bold tracking-tight leading-tight"
-            style={{ fontFamily: 'var(--font-display)' }}
+            className="text-4xl md:text-5xl font-normal leading-snug md:leading-relaxed text-brand-light"
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
             dangerouslySetInnerHTML={{ __html: t('corporate.title') }}
           />
           <p className="text-xl font-light text-brand-light/70 max-w-lg mb-12">

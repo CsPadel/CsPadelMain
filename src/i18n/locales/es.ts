@@ -12,8 +12,8 @@ const es = {
         heroSubtitle: "Oliver y Alexy Watellet tienen la misión de elevar la experiencia global del pádel, fusionando el rendimiento atlético de clase mundial con el lujo absoluto.",
         teamTitle: "Las Mentes Maestras",
         team: [
-          { name: "Oliver Watellet", role: "Co-Fundador y Visión Estratégica", photo: "/team/oliver.jpg" },
-          { name: "Alexy Watellet", role: "Co-Fundador y Director Atlético", photo: "/team/alexy.jpg" },
+          { name: "Oliver Watellet", role: "Co-Fundador y Visión Estratégica", photo: "/imagenes/about-us/oli.webp" },
+          { name: "Alexy Watellet", role: "Co-Fundador y Director Atlético", photo: "/imagenes/about-us/alex.webp" },
           { name: "Carlos M.", role: "Head Coach (Menorca)", photo: "/team/carlos.jpg" },
           { name: "Elena R.", role: "Lead Concierge", photo: "/team/elena.jpg" }
         ]
@@ -360,6 +360,8 @@ const es = {
       },
       gateway: {
         hero: {
+          introLine1: "Retiros de Pádel",
+          introLine2: "de Clase Mundial.",
           intro: "Retiros de Pádel de Clase Mundial.",
           subtitle: "Retiros de ultra-lujo. Bienestar, descanso y networking estratégico a través del pádel.",
           intent: "Diseña tu estancia. ¿Qué buscas hoy?",

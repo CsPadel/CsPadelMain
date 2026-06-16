@@ -36,7 +36,12 @@ export default function GroupVillaLeader({ locale: localeProp }: GroupVillaLeade
         <div className="absolute inset-0 bg-brand-dark/40 mix-blend-multiply"></div>
         <div className="absolute bottom-12 left-12 md:left-24 z-10 max-w-sm">
           <div className="w-8 h-px bg-brand-gold mb-5" />
-          <h3 className="text-4xl text-brand-light font-bold mb-4 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>{t('groupVilla.sideTitle')}</h3>
+          <h3
+            className="text-4xl md:text-5xl font-normal text-brand-light mb-4"
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+          >
+            {t('groupVilla.sideTitle')}
+          </h3>
           <p className="text-brand-light/70 font-light">{t('groupVilla.sideDesc')}</p>
         </div>
       </div>
@@ -47,7 +52,12 @@ export default function GroupVillaLeader({ locale: localeProp }: GroupVillaLeade
           {!isCheckout ? (
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <Users className="w-12 h-12 text-brand-gold mb-12" />
-              <h2 className="text-5xl font-bold mb-6 tracking-tight text-brand-dark" style={{ fontFamily: 'var(--font-display)' }}>{t('groupVilla.formTitle')}</h2>
+              <h2
+                className="text-4xl md:text-5xl font-normal mb-6 text-brand-dark"
+                style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+              >
+                {t('groupVilla.formTitle')}
+              </h2>
               <p className="text-brand-dark/70 font-light text-lg mb-16">
                 {t('groupVilla.formDesc')}
               </p>

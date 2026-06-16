@@ -128,16 +128,14 @@
   transform: scale(0.98);
 }
 
-/* ─── Experience selector cards — glass + media preview ─── */
+/* ─── Experience selector cards — ivory body + media preview ─── */
 .intent-card {
-  background: rgba(4, 30, 54, 0.82);
-  -webkit-backdrop-filter: blur(20px) saturate(1.15);
-  backdrop-filter: blur(20px) saturate(1.15);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: var(--color-brand-ivory);
+  border: 1px solid rgba(1, 25, 44, 0.08);
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(217, 173, 98, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    0 12px 40px rgba(1, 25, 44, 0.08),
+    0 0 0 1px rgba(217, 173, 98, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
   min-height: 0;
   border-radius: var(--radius-card);
   text-align: left;
@@ -148,13 +146,13 @@
     box-shadow 0.35s ease-out;
 }
 .intent-card:hover {
-  background: rgba(4, 30, 54, 0.92);
-  border-color: rgba(217, 173, 98, 0.65);
+  background: #FFFFFF;
+  border-color: rgba(217, 173, 98, 0.55);
   box-shadow:
-    0 20px 56px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(217, 173, 98, 0.35),
-    0 0 32px rgba(217, 173, 98, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    0 20px 56px rgba(1, 25, 44, 0.12),
+    0 0 0 1px rgba(217, 173, 98, 0.28),
+    0 0 24px rgba(217, 173, 98, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 .intent-card-media {
   position: relative;
@@ -180,8 +178,10 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    transparent 20%,
-    rgba(1, 25, 44, 0.55) 100%
+    transparent 0%,
+    transparent 62%,
+    rgba(247, 244, 239, 0.35) 82%,
+    rgba(247, 244, 239, 0.88) 100%
   );
   pointer-events: none;
 }
@@ -197,7 +197,7 @@
   font-size: 1.05rem;
   font-weight: 300;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: var(--color-brand-dark);
   line-height: 1.2;
   margin-bottom: 0.35rem;
   transition: color 0.3s ease-out;
@@ -215,14 +215,14 @@
   font-style: italic;
   font-weight: 300;
   font-size: 0.6875rem;
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(1, 25, 44, 0.68);
   margin-top: 0.35rem;
   letter-spacing: 0.02em;
   line-height: 1.4;
   transition: color 0.3s ease-out;
 }
 .intent-card:hover .card-descriptor {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(1, 25, 44, 0.88);
 }
 .intent-card-gold-line {
   display: none;
@@ -243,9 +243,9 @@
 
 /* ─── Luxury signals strip ──────────────────────────────── */
 .luxury-strip {
-  background: var(--color-brand-ivory);
-  border-top: 1px solid rgba(1, 25, 44, 0.06);
-  border-bottom: 1px solid rgba(1, 25, 44, 0.06);
+  background: var(--color-brand-dark-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,7 +263,7 @@
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 2rem;
   font-weight: 300;
-  color: #0a2840;
+  color: var(--color-brand-light);
   line-height: 1;
   letter-spacing: 0.02em;
 }
@@ -271,7 +271,7 @@
   font-family: 'Jost', 'Helvetica Neue', sans-serif;
   font-size: 0.6rem;
   letter-spacing: 0.2em;
-  color: rgba(1, 25, 44, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
 }
 .luxury-divider {
