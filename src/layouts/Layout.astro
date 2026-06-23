@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Navbar from '../components/Navbar';
 import CookieConsent from '../components/CookieConsent';
 import WhatsAppConciergeButton from '../components/WhatsAppConciergeButton';
+import PageLoader from '../components/PageLoader.astro';
 import type { Locale } from '../i18n/locales';
 import { ogLocales } from '../i18n/locales';
 import { GA_ADS_ID } from '../lib/gtag';
@@ -93,7 +94,7 @@ const hreflangEntries = Object.entries(alternateUrls).filter(
 
 		{/* ── Google Ads global site tag ── */}
 		{/* Replace AW-XXXXXXXXXX in src/lib/gtag.ts with your real Google Ads Conversion ID */}
-		<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ADS_ID}`}></script>
+		<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ADS_ID}`}></script>
 		<script is:inline define:vars={{ gaAdsId: GA_ADS_ID }}>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
@@ -106,12 +107,15 @@ const hreflangEntries = Object.entries(alternateUrls).filter(
 		)}
 	</head>
 	<body
-		class="bg-white text-brand-dark font-inter antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark"
+		class="bg-white text-brand-dark font-inter antialiased selection:bg-brand-gold selection:text-brand-dark"
 		style="font-feature-settings: 'kern' 1, 'liga' 1;"
 		data-locale={locale}
 	>
+		<PageLoader />
 		<Navbar client:load locale={locale} />
-		<slot />
+		<div id="page-content">
+			<slot />
+		</div>
 		<CookieConsent client:load locale={locale} />
 		<WhatsAppConciergeButton client:load locale={locale} />
 	</body>

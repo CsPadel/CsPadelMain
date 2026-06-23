@@ -15,42 +15,51 @@ export default function AboutView({ locale: localeProp }: AboutViewProps) {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[70vh] flex items-center pt-24 px-8 md:px-16 overflow-hidden">
-        <div className="absolute inset-0 bg-brand-dark-2 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-dark-2 to-brand-gold/5 z-10" />
-        </div>
+      <section className="relative w-full min-h-[75vh] flex flex-col items-center justify-center pt-24 pb-20 px-8 md:px-16 text-center overflow-hidden bg-brand-dark">
+        {/* Subtle radial glow */}
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 60%, rgba(217,173,98,0.07) 0%, transparent 70%)' }} />
 
-        <div className="relative z-20 max-w-5xl mx-auto">
+        <div className="relative z-10 max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center gap-4 mb-6"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+            className="flex items-center justify-center gap-5 mb-10"
           >
-            <div className="h-px w-10 bg-brand-gold opacity-70" />
-            <span className="text-xs uppercase tracking-widest text-brand-gold font-medium">CourtSide Padel</span>
+            <span className="block h-px w-8 bg-brand-gold/55" />
+            <span className="text-[10px] uppercase tracking-[0.42em] text-brand-gold font-semibold">CourtSide Padel</span>
+            <span className="block h-px w-8 bg-brand-gold/55" />
           </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 tracking-tight"
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontStyle: 'italic',
-              background: 'linear-gradient(135deg, #D9AD62 0%, #ffffff 55%, #F4C068 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
-            {t('aboutPage.heroTitle')}
-          </motion.h1>
+
+          <div className="overflow-hidden mb-8">
+            <motion.h1
+              initial={{ y: '110%' }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.05, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="text-white font-light tracking-tight"
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontStyle: 'italic',
+                fontSize: 'clamp(3rem, 9vw, 9rem)',
+                lineHeight: 0.9,
+              }}
+            >
+              {t('aboutPage.heroTitle')}
+            </motion.h1>
+          </div>
+
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.88 }}
+            className="w-10 h-px bg-brand-gold mb-8 mx-auto origin-center"
+          />
+
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl font-light leading-relaxed max-w-3xl"
-            style={{ color: 'rgba(255,255,255,0.65)' }}
+            transition={{ duration: 0.8, delay: 1.05 }}
+            className="text-white/52 text-base md:text-lg font-light max-w-2xl mx-auto leading-relaxed"
           >
             {t('aboutPage.heroSubtitle')}
           </motion.p>

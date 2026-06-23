@@ -29,7 +29,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'home');
   canonical={alternateUrls[locale]}
   alternateUrls={alternateUrls}
 >
-  <main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden">
+  <main class="w-full bg-white flex flex-col relative">
     <HeroRouter client:load locale={locale} />
     <DestinationsPreview client:load locale={locale} />
     <div id="individual-section">

@@ -19,37 +19,50 @@ export default function BespokeRetreats() {
 
   return (
     <>
-      <section id="bespoke" aria-label="Bespoke Private Retreats in Menorca" className="bg-white py-24 md:py-32">
-        <div className="max-w-4xl mx-auto px-6 md:px-16 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-4">Bespoke Private Retreats</p>
-          <h2 className="text-4xl md:text-5xl font-light text-brand-dark tracking-wide mb-8">
+      <motion.section
+        id="bespoke"
+        aria-label="Bespoke Private Retreats in Menorca"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+        className="bg-white py-24 md:py-32 border-t border-brand-dark/7"
+      >
+        <div className="max-w-3xl mx-auto px-6 md:px-16 text-center">
+          <div className="flex items-center justify-center gap-4 mb-5">
+            <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">Bespoke Private Retreats</p>
+            <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          </div>
+          <h2
+            className="text-4xl md:text-5xl font-light text-brand-dark mb-7"
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+          >
             {t('bespokeRetreats.title')}
           </h2>
-          <p className="text-brand-dark/70 text-lg md:text-xl leading-relaxed mb-10 max-w-3xl mx-auto">
+          <p className="text-brand-dark/52 text-base md:text-lg leading-relaxed mb-12 max-w-2xl mx-auto font-light">
             {t('bespokeRetreats.description')}
           </p>
-          
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+
+          <div className="flex flex-wrap justify-center gap-2.5 mb-14">
             {Array.isArray(features) && features.map((feature, idx) => (
-              <div key={idx} className="border border-brand-dark/15 rounded-full px-6 py-2.5 bg-brand-dark/5">
-                <p className="text-brand-dark/80 font-medium text-[15px]">
+              <div key={idx} className="border border-brand-dark/12 rounded-full px-5 py-2 bg-transparent hover:border-brand-gold/40 hover:bg-brand-gold/4 transition-colors duration-200">
+                <p className="text-brand-dark/65 font-light text-sm tracking-wide">
                   {feature}
                 </p>
               </div>
             ))}
           </div>
 
-          <div>
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-brand-dark text-brand-light font-bold uppercase tracking-widest text-sm hover:bg-brand-gold hover:text-brand-dark transition-colors duration-300"
-              aria-label={t('bespokeRetreats.cta')}
-            >
-              {t('bespokeRetreats.cta')}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="btn-luxury"
+            aria-label={t('bespokeRetreats.cta')}
+          >
+            {t('bespokeRetreats.cta')}
+          </button>
         </div>
-      </section>
+      </motion.section>
 
       <AnimatePresence>
         {isModalOpen && (

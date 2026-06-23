@@ -19,11 +19,34 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [pathname, setPathname] = useState('');
 
   useEffect(() => {
     setPathname(window.location.pathname);
-    const onScroll = () => setIsScrolled(window.scrollY > 40);
+    let lastScrollY = window.scrollY;
+
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      const atTop = currentY < 60;
+
+      setIsScrolled(!atTop);
+
+      if (atTop) {
+        // Always show at very top
+        setIsHidden(false);
+      } else if (currentY > lastScrollY + 4) {
+        // Scrolling down — hide navbar
+        setIsHidden(true);
+        setIsDestinationsOpen(false);
+      } else if (currentY < lastScrollY - 4) {
+        // Scrolling up — reveal navbar
+        setIsHidden(false);
+      }
+
+      lastScrollY = currentY;
+    };
+
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -55,6 +78,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
           borderBottom: isScrolled
             ? '1px solid rgba(1, 25, 44, 0.07)'
             : '1px solid rgba(255,255,255,0.04)',
+          transform: isHidden ? 'translateY(-100%)' : 'translateY(0)',
         }}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-24">

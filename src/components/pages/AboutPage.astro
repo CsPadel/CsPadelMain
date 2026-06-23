@@ -24,7 +24,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'about');
   canonical={alternateUrls[locale]}
   alternateUrls={alternateUrls}
 >
-  <main class="w-full min-h-screen bg-brand-dark flex flex-col relative overflow-x-hidden pt-24">
+  <main class="w-full bg-white flex flex-col relative">
     <AboutView client:load locale={locale} />
     <FooterIsland client:load locale={locale} />
   </main>

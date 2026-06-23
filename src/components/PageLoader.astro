@@ -1,0 +1,144 @@
+---
+// Page loader — pure CSS/HTML, renders before any JS hydration
+---
+
+<div id="cs-page-loader">
+  <div id="cs-glow"></div>
+  <div id="cs-inner">
+    <div id="cs-ornament">
+      <span class="cs-orn-line"></span>
+      <span class="cs-orn-diamond"></span>
+      <span class="cs-orn-line"></span>
+    </div>
+    <img
+      src="/imagenes/Logo White.svg"
+      alt="CourtSide Padel"
+      id="cs-logo"
+      width="200"
+      height="88"
+    />
+    <p id="cs-tagline">World-Class Padel Retreats</p>
+    <div id="cs-track">
+      <div id="cs-bar"></div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  #cs-page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #01192C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: cs-exit 0.65s cubic-bezier(0.22, 1, 0.36, 1) 1.55s both;
+  }
+
+  #cs-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 55% 45% at 50% 52%,
+      rgba(217, 173, 98, 0.07) 0%,
+      transparent 68%
+    );
+    pointer-events: none;
+  }
+
+  #cs-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    animation: cs-enter 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  }
+
+  #cs-ornament {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    opacity: 0.5;
+  }
+
+  .cs-orn-line {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #D9AD62;
+  }
+
+  .cs-orn-diamond {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #D9AD62;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  #cs-logo {
+    width: 188px;
+    height: auto;
+    filter: drop-shadow(0 0 28px rgba(217, 173, 98, 0.10));
+  }
+
+  #cs-tagline {
+    margin: 0;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 0.16em;
+    color: rgba(217, 173, 98, 0.5);
+  }
+
+  #cs-track {
+    width: 96px;
+    height: 1px;
+    background: rgba(217, 173, 98, 0.14);
+    overflow: hidden;
+    border-radius: 9999px;
+  }
+
+  #cs-bar {
+    height: 100%;
+    width: 0%;
+    background: #D9AD62;
+    border-radius: 9999px;
+    animation: cs-fill 1.15s cubic-bezier(0.4, 0, 0.2, 1) 0.25s both;
+  }
+
+  @keyframes cs-enter {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes cs-fill {
+    from { width: 0%; }
+    to   { width: 100%; }
+  }
+
+  @keyframes cs-exit {
+    from { opacity: 1; }
+    to   { opacity: 0; pointer-events: none; }
+  }
+</style>
+
+<script>
+  document.body.style.overflow = 'hidden';
+
+  const loader = document.getElementById('cs-page-loader');
+  if (loader) {
+    loader.addEventListener('animationend', (e) => {
+      if ((e as AnimationEvent).animationName === 'cs-exit') {
+        document.body.style.overflow = '';
+        loader.remove();
+      }
+    });
+  }
+</script>

@@ -211,12 +211,18 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
       </section>
 
       {/* ── Intro paragraph ──────────────────────────────────── */}
-      <section className="py-24 px-8 md:px-16 bg-white">
+      <motion.section
+        initial={{ opacity: 0, y: 22 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.7 }}
+        className="py-24 md:py-28 px-8 md:px-16 bg-white"
+      >
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="h-px w-10 bg-brand-gold opacity-50" />
-            <span className="text-[10px] uppercase tracking-widest text-brand-gold">{t(`${pk}.sectionTag`)}</span>
-            <div className="h-px w-10 bg-brand-gold opacity-50" />
+            <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <span className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">{t(`${pk}.sectionTag`)}</span>
+            <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           </div>
           <p
             className="text-2xl md:text-3xl font-light leading-relaxed"
@@ -225,7 +231,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
             {t(`${pk}.heroSubtitle`)}
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* ── Gallery ──────────────────────────────────────────── */}
       <section className="px-8 md:px-16 pb-24 bg-white">
@@ -274,27 +280,39 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
       {/* ── Experience pillars ───────────────────────────────── */}
       <section className="py-24 px-8 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div
+            initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-light mb-16 text-center text-brand-dark"
-            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-14"
           >
-            {t(`${pk}.sectionTitle`)}
-          </motion.h2>
+            <div className="flex items-center justify-center gap-4 mb-5">
+              <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+              <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+                The Experience
+              </p>
+              <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            </div>
+            <h2
+              className="text-4xl md:text-5xl font-light text-brand-dark"
+              style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+            >
+              {t(`${pk}.sectionTitle`)}
+            </h2>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {Array.isArray(pillars) && pillars.map((pillar, idx) => {
               const imgSrc = pillarImgs[idx];
               return (
                 <motion.div
                   key={pillar.tag}
-                  initial={{ opacity: 0, y: 24 }}
+                  initial={{ opacity: 0, y: 28 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.08 }}
-                  className="border border-white/5 rounded-card bg-brand-dark-2 hover:border-brand-gold/25 transition-colors duration-300 overflow-hidden"
+                  viewport={{ once: true, margin: '-60px' }}
+                  transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  className="border border-brand-dark/8 rounded-card bg-white hover:border-brand-gold/30 hover:shadow-lg hover:shadow-brand-dark/5 transition-all duration-400 overflow-hidden group"
                 >
                   {imgSrc && (
                     <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
@@ -302,27 +320,24 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
                         src={imgSrc}
                         alt={pillar.title}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                      />
-                      <div
-                        className="absolute inset-0"
-                        style={{
-                          background: 'linear-gradient(to bottom, transparent 40%, rgba(4,30,54,0.85) 100%)',
-                        }}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                       />
                     </div>
                   )}
-                  <div className="p-8">
-                    <span className="text-[10px] uppercase tracking-widest text-brand-gold mb-4 block font-medium">
-                      {pillar.tag}
-                    </span>
+                  <div className="p-7 md:p-8">
+                    <div className="flex items-center gap-2.5 mb-4">
+                      <span className="block h-px w-4 bg-brand-gold/50" />
+                      <span className="text-[9px] uppercase tracking-[0.28em] text-brand-gold font-semibold">
+                        {pillar.tag}
+                      </span>
+                    </div>
                     <h3
-                      className="text-xl md:text-2xl font-light mb-3 text-white"
-                      style={{ fontFamily: 'var(--font-display)' }}
+                      className="text-xl md:text-2xl font-light mb-3 text-brand-dark leading-snug"
+                      style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
                     >
                       {pillar.title}
                     </h3>
-                    <p className="font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                    <p className="font-light leading-relaxed text-brand-dark/52 text-sm md:text-base">
                       {pillar.desc}
                     </p>
                   </div>

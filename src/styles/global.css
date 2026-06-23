@@ -27,8 +27,14 @@
 }
 
 @layer base {
-  html, body {
-    @apply bg-brand-dark text-brand-light font-inter antialiased overflow-x-hidden;
+  /* overflow-x: clip avoids creating a scroll container (unlike hidden),
+     so window.scrollY keeps working and fixed elements behave correctly */
+  html {
+    overflow-x: clip;
+  }
+  body {
+    @apply bg-white text-brand-dark font-inter antialiased;
+    overflow-x: clip;
   }
 
   /* Display serif for all structural headings */
@@ -300,12 +306,23 @@
 }
 
 /* ─── Page entry fade-in ─────────────────────────────────── */
+/* NOTE: transform must NOT be applied to body — it breaks position:fixed
+   for Navbar and PageLoader (they become body-relative instead of viewport-relative).
+   Opacity is safe; it creates a stacking context but not a new containing block. */
 @keyframes page-enter {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 body {
-  animation: page-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: page-enter 0.45s ease-out both;
+}
+/* The slide-up effect goes on page content, not body */
+@keyframes content-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+#page-content {
+  animation: content-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
 }
 
 /* ─── Fade-in for images revealed after preload ─────────── */
