@@ -24,6 +24,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
   useEffect(() => {
     setPathname(window.location.pathname);
     const onScroll = () => setIsScrolled(window.scrollY > 40);
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -31,6 +32,16 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
   const basePath = stripLocalePrefix(pathname);
   const isActive = (href: string) => basePath === href;
   const homeHref = localizedHref('/');
+  const logoSrc = isScrolled ? '/imagenes/Logo Blue.svg' : '/imagenes/Logo Gold.svg';
+
+  const navLinkClass = (active: boolean) =>
+    `nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
+      active
+        ? 'text-brand-gold'
+        : isScrolled
+          ? 'text-brand-dark/70 hover:text-brand-gold'
+          : 'text-brand-light/70 hover:text-brand-gold'
+    }`;
 
   return (
     <>
@@ -49,7 +60,11 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-24">
 
           <a href={homeHref} className="flex-shrink-0 z-50">
-            <img src="/logogold.webp" alt="CourtSide Padel" className="h-10 md:h-12 object-contain" />
+            <img
+              src={logoSrc}
+              alt="CourtSide Padel"
+              className="h-16 md:h-[4.5rem] object-contain transition-opacity duration-300"
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
@@ -104,7 +119,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
           </div>
 
           <div className="hidden md:flex items-center z-50">
-            <LanguageToggle />
+            <LanguageToggle variant={isScrolled ? 'light' : 'dark'} />
           </div>
 
           <button

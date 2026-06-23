@@ -12,8 +12,8 @@ const fr = {
         heroSubtitle: "Oliver et Alexy Watellet ont pour mission d'élever l'expérience padel à l'échelle mondiale, en fusionnant performance athlétique de premier plan et luxe sans compromis.",
         teamTitle: "Les Esprits Créateurs",
         team: [
-          { name: "Oliver Watellet", role: "Co-fondateur & Vision stratégique", photo: "/team/oliver.jpg" },
-          { name: "Alexy Watellet", role: "Co-fondateur & Directeur sportif", photo: "/team/alexy.jpg" },
+          { name: "Oliver Watellet", role: "Co-fondateur & Vision stratégique", photo: "/imagenes/about-us/oli.webp" },
+          { name: "Alexy Watellet", role: "Co-fondateur & Directeur sportif", photo: "/imagenes/about-us/alex.webp" },
           { name: "Carlos M.", role: "Entraîneur principal (Menorca)", photo: "/team/carlos.jpg" },
           { name: "Elena R.", role: "Concierge en chef", photo: "/team/elena.jpg" }
         ]
@@ -360,6 +360,8 @@ const fr = {
       },
       gateway: {
         hero: {
+          introLine1: "Retraites d'exception,",
+          introLine2: "orchestrées avec soin.",
           intro: "Des retraites padel d'exception, orchestrées avec soin.",
           subtitle: "Retraites ultra-luxe. Bien-être, repos et réseautage stratégique autour du padel.",
           intent: "Composez votre séjour. Que recherchez-vous aujourd'hui ?",

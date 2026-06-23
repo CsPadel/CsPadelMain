@@ -4,7 +4,11 @@ import { locales, localeLabels } from '../i18n/useLocale';
 import { getLocaleFromDocument, localizedPath } from '../i18n/routing';
 import type { Locale } from '../i18n/locales';
 
-export default function LanguageToggle() {
+interface LanguageToggleProps {
+  variant?: 'dark' | 'light';
+}
+
+export default function LanguageToggle({ variant = 'dark' }: LanguageToggleProps) {
   const [mounted, setMounted] = useState(false);
   const [currentLang, setCurrentLang] = useState<Locale>('en');
 
@@ -20,6 +24,8 @@ export default function LanguageToggle() {
   };
 
   if (!mounted) return null;
+
+  const isLight = variant === 'light';
 
   return (
     <div className="flex items-center border border-brand-dark/10 rounded-full px-1 py-1 bg-white/10 backdrop-blur-sm">

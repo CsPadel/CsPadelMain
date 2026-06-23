@@ -82,7 +82,7 @@ export default function TestimonialsCarousel() {
                 height={560}
               />
             </AnimatePresence>
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 to-transparent" />
           </div>
 
           {/* Review card — overlaps image on desktop */}
@@ -94,7 +94,7 @@ export default function TestimonialsCarousel() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.3, ease: 'easeOut' }}
-                className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl shadow-black/30"
+                className="bg-white rounded-2xl p-6 md:p-8 border border-brand-dark/8 shadow-xl shadow-brand-dark/10"
               >
                 {/* Avatar */}
                 <div className="flex items-center gap-3 mb-5">

@@ -12,8 +12,8 @@ const en = {
         heroSubtitle: "Oliver and Alexy Watellet are on a mission to elevate the global padel experience, fusing world-class athletic performance with uncompromising luxury.",
         teamTitle: "The Masterminds",
         team: [
-          { name: "Oliver Watellet", role: "Co-Founder & Strategic Vision", photo: "/team/oliver.jpg" },
-          { name: "Alexy Watellet", role: "Co-Founder & Athletic Director", photo: "/team/alexy.jpg" },
+          { name: "Oliver Watellet", role: "Co-Founder & Strategic Vision", photo: "/imagenes/about-us/oli.webp" },
+          { name: "Alexy Watellet", role: "Co-Founder & Athletic Director", photo: "/imagenes/about-us/alex.webp" },
           { name: "Carlos M.", role: "Head Coach (Menorca)", photo: "/team/carlos.jpg" },
           { name: "Elena R.", role: "Lead Concierge", photo: "/team/elena.jpg" }
         ]
@@ -360,6 +360,8 @@ const en = {
       },
       gateway: {
         hero: {
+          introLine1: "Curating World-Class",
+          introLine2: "Padel Retreats.",
           intro: "Curating World-Class Padel Retreats.",
           subtitle: "Ultra-luxury retreats. Wellness, rest, and strategic networking through padel.",
           intent: "Design your stay. What are you looking for today?",
