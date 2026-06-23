@@ -58,13 +58,13 @@ export default function AboutView({ locale: localeProp }: AboutViewProps) {
       </section>
 
       {/* Team Roster */}
-      <section className="py-32 px-8 md:px-16 bg-brand-dark">
+      <section className="py-32 px-8 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-light mb-20 text-center tracking-wide text-brand-gold"
+            className="text-4xl md:text-5xl font-light mb-20 text-center tracking-wide text-brand-dark"
             style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
           >
             {t('aboutPage.teamTitle')}

@@ -5,6 +5,7 @@ import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
 import { getWhatsAppConciergeUrl } from '../constants/urls';
+import { trackWhatsAppClick } from '../lib/gtag';
 import FooterIsland from './FooterIsland';
 
 type Destination = 'bali' | 'dubai';
@@ -150,7 +151,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <a href={whatsappUrl} className="btn-luxury group">
+              <a href={whatsappUrl} onClick={trackWhatsAppClick} className="btn-luxury group">
                 {t(`${pk}.enquireBtn`)}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </a>
@@ -210,7 +211,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
       </section>
 
       {/* ── Intro paragraph ──────────────────────────────────── */}
-      <section className="py-24 px-8 md:px-16" style={{ background: '#041E36' }}>
+      <section className="py-24 px-8 md:px-16 bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-10 bg-brand-gold opacity-50" />
@@ -219,7 +220,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
           </div>
           <p
             className="text-2xl md:text-3xl font-light leading-relaxed"
-            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', color: 'rgba(255,255,255,0.75)' }}
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', color: 'rgba(1,25,44,0.72)' }}
           >
             {t(`${pk}.heroSubtitle`)}
           </p>
@@ -227,7 +228,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
       </section>
 
       {/* ── Gallery ──────────────────────────────────────────── */}
-      <section className="px-8 md:px-16 pb-24" style={{ background: '#041E36' }}>
+      <section className="px-8 md:px-16 pb-24 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {/* Wide — spans 2 cols */}
@@ -271,14 +272,14 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
       </section>
 
       {/* ── Experience pillars ───────────────────────────────── */}
-      <section className="py-24 px-8 md:px-16 bg-brand-dark noise-section">
+      <section className="py-24 px-8 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-light mb-16 text-center"
-            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', color: '#D9AD62' }}
+            className="text-4xl md:text-5xl font-light mb-16 text-center text-brand-dark"
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
           >
             {t(`${pk}.sectionTitle`)}
           </motion.h2>
@@ -352,12 +353,13 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
             {t(`${pk}.ctaDesc`)}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={whatsappUrl} className="btn-luxury group">
+            <a href={whatsappUrl} onClick={trackWhatsAppClick} className="btn-luxury group">
               {t(`${pk}.ctaBtn`)}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </a>
             <a
               href={whatsappUrl}
+              onClick={trackWhatsAppClick}
               className="inline-flex items-center justify-center gap-3 px-8 py-5 border border-white/20 rounded-button text-white font-medium text-sm uppercase tracking-widest hover:border-brand-gold hover:text-brand-gold transition-colors duration-250"
             >
               {t(`${pk}.ctaSecondaryBtn`)}

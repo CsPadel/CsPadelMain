@@ -27,21 +27,42 @@ export default function TestimonialsCarousel() {
     <section
       id="testimonials"
       aria-label="Guest reviews of CourtSide Menorca padel retreat"
-      className="bg-brand-dark py-24 md:py-32 px-6 md:px-16"
+      className="bg-white py-24 md:py-32 px-6 md:px-16"
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-14">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">{t('testimonials.label')}</p>
-          <h2 className="text-4xl md:text-5xl font-light text-brand-light tracking-wide">{t('testimonials.title')}</h2>
-          <p className="text-brand-light/40 text-lg mt-4 max-w-md mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          className="text-center mb-14"
+        >
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">{t('testimonials.label')}</p>
+            <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          </div>
+          <h2
+            className="text-4xl md:text-5xl font-light text-brand-dark"
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+          >
+            {t('testimonials.title')}
+          </h2>
+          <p className="text-brand-dark/45 text-base mt-4 max-w-sm mx-auto font-light leading-relaxed">
             {t('testimonials.subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         {/* Carousel */}
-        <div className="relative flex flex-col md:flex-row items-center md:items-end gap-0 max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.75, delay: 0.15, ease: 'easeOut' }}
+          className="relative flex flex-col md:flex-row items-center md:items-end gap-0 max-w-4xl mx-auto"
+        >
 
           {/* Image */}
           <div className="w-full md:w-[58%] flex-shrink-0 relative rounded-2xl overflow-hidden h-72 md:h-[440px]">
@@ -98,14 +119,14 @@ export default function TestimonialsCarousel() {
               </motion.div>
             </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
 
         {/* Navigation */}
         <div className="flex items-center justify-center gap-6 mt-10">
           <button
             onClick={goPrev}
             aria-label="Previous review"
-            className="w-9 h-9 rounded-full border border-white/20 hover:border-brand-gold flex items-center justify-center text-white/40 hover:text-brand-gold transition-all duration-150 text-lg"
+            className="w-9 h-9 rounded-full border border-brand-dark/20 hover:border-brand-gold flex items-center justify-center text-brand-dark/40 hover:text-brand-gold transition-all duration-150 text-lg"
           >
             ‹
           </button>
@@ -117,7 +138,7 @@ export default function TestimonialsCarousel() {
                 onClick={() => go(idx)}
                 aria-label={`Review ${idx + 1}`}
                 className={`rounded-full transition-all duration-200 ${
-                  active === idx ? 'w-6 h-1.5 bg-brand-gold' : 'w-1.5 h-1.5 bg-white/20 hover:bg-white/40'
+                  active === idx ? 'w-6 h-1.5 bg-brand-gold' : 'w-1.5 h-1.5 bg-brand-dark/20 hover:bg-brand-dark/40'
                 }`}
               />
             ))}
@@ -126,7 +147,7 @@ export default function TestimonialsCarousel() {
           <button
             onClick={goNext}
             aria-label="Next review"
-            className="w-9 h-9 rounded-full border border-white/20 hover:border-brand-gold flex items-center justify-center text-white/40 hover:text-brand-gold transition-all duration-150 text-lg"
+            className="w-9 h-9 rounded-full border border-brand-dark/20 hover:border-brand-gold flex items-center justify-center text-brand-dark/40 hover:text-brand-gold transition-all duration-150 text-lg"
           >
             ›
           </button>

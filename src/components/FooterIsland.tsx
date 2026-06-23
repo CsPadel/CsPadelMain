@@ -13,7 +13,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
   const localizedHref = useLocalizedHref(localeProp);
 
   return (
-    <footer className="py-14 bg-brand-dark border-t-2 border-brand-gold/60 text-center px-8">
+    <footer className="py-12 bg-brand-dark border-t border-brand-gold/30 text-center px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-4">
           <img src="/logogold.webp" alt="CourtSide Logo" className="h-6 object-contain" />

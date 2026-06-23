@@ -43,23 +43,26 @@ export default function DestinationsPreview({ locale }: Props) {
   const prefix = locale && locale !== 'en' ? `/${locale}` : '';
 
   return (
-    <section className="py-24 md:py-32 px-8 md:px-16" style={{ background: '#041E36' }}>
+    <section className="py-24 md:py-32 px-8 md:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center justify-between mb-14"
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          className="flex items-end justify-between mb-14"
         >
           <div>
-            <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">
-              2026 Season
-            </p>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+              <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+                2026 Season
+              </p>
+            </div>
             <h2
-              className="text-4xl md:text-5xl font-light text-brand-light"
+              className="text-4xl md:text-5xl font-light text-brand-dark"
               style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
             >
               Our Destinations
@@ -67,9 +70,9 @@ export default function DestinationsPreview({ locale }: Props) {
           </div>
           <a
             href={`${prefix}/menorca`}
-            className="hidden md:flex items-center gap-2 text-xs uppercase tracking-widest text-brand-gold hover:text-white transition-colors duration-200"
+            className="hidden md:flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-brand-dark/40 hover:text-brand-gold transition-colors duration-300 pb-1 border-b border-transparent hover:border-brand-gold/40"
           >
-            View all <ArrowRight className="w-3.5 h-3.5" />
+            View all <ArrowRight className="w-3 h-3" />
           </a>
         </motion.div>
 
@@ -79,10 +82,10 @@ export default function DestinationsPreview({ locale }: Props) {
           {/* Menorca — tall left card */}
           <motion.a
             href={`${prefix}/${destinations[0].id}`}
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-2 group relative rounded-card overflow-hidden flex flex-col justify-end"
             style={{ minHeight: '520px' }}
           >
@@ -108,10 +111,10 @@ export default function DestinationsPreview({ locale }: Props) {
               <motion.a
                 key={d.id}
                 href={`${prefix}/${d.id}`}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: (i + 1) * 0.1 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.8, delay: 0.12 + i * 0.13, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative rounded-card overflow-hidden flex flex-col justify-end flex-1"
                 style={{ minHeight: '248px' }}
               >

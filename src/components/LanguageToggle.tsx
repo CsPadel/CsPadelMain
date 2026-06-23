@@ -22,15 +22,15 @@ export default function LanguageToggle() {
   if (!mounted) return null;
 
   return (
-    <div className="flex items-center bg-brand-dark/50 backdrop-blur-md border border-white/10 rounded-full px-1 py-1">
+    <div className="flex items-center border border-brand-dark/10 rounded-full px-1 py-1 bg-white/10 backdrop-blur-sm">
       {locales.map((lang) => (
         <button
           key={lang}
           onClick={() => switchLang(lang)}
-          className={`px-3 py-1.5 rounded-full text-xs font-semibold tracking-widest transition-colors ${
+          className={`px-3 py-1.5 rounded-full text-xs font-semibold tracking-widest transition-all duration-200 ${
             currentLang === lang
-              ? 'bg-brand-gold text-brand-dark'
-              : 'text-brand-light/60 hover:text-brand-light'
+              ? 'bg-brand-gold text-brand-dark shadow-sm'
+              : 'text-brand-dark/50 hover:text-brand-dark'
           }`}
           aria-current={currentLang === lang ? 'true' : undefined}
         >

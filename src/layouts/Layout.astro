@@ -5,6 +5,7 @@ import CookieConsent from '../components/CookieConsent';
 import WhatsAppConciergeButton from '../components/WhatsAppConciergeButton';
 import type { Locale } from '../i18n/locales';
 import { ogLocales } from '../i18n/locales';
+import { GA_ADS_ID } from '../lib/gtag';
 
 interface Props {
 	title: string;
@@ -90,12 +91,22 @@ const hreflangEntries = Object.entries(alternateUrls).filter(
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+		{/* ── Google Ads global site tag ── */}
+		{/* Replace AW-XXXXXXXXXX in src/lib/gtag.ts with your real Google Ads Conversion ID */}
+		<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ADS_ID}`}></script>
+		<script is:inline define:vars={{ gaAdsId: GA_ADS_ID }}>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', gaAdsId);
+		</script>
+
 		{schema && (
 			<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
 		)}
 	</head>
 	<body
-		class="bg-brand-dark text-brand-light font-inter antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark"
+		class="bg-white text-brand-dark font-inter antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark"
 		style="font-feature-settings: 'kern' 1, 'liga' 1;"
 		data-locale={locale}
 	>

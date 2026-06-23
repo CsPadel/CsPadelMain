@@ -37,12 +37,12 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${
           isScrolled
-            ? 'bg-brand-dark shadow-lg shadow-black/30'
+            ? 'bg-white shadow-sm shadow-black/5'
             : 'bg-transparent backdrop-blur-sm'
         }`}
         style={{
           borderBottom: isScrolled
-            ? '1px solid rgba(217, 173, 98, 0.25)'
+            ? '1px solid rgba(1, 25, 44, 0.07)'
             : '1px solid rgba(255,255,255,0.04)',
         }}
       >
@@ -56,7 +56,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
             <a
               href={localizedHref('/about')}
               className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
-                isActive('/about') ? 'text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
+                isActive('/about') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 hover:text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
               }`}
             >
               {t('navbar.about')}
@@ -64,7 +64,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
             <a
               href={localizedHref('/services')}
               className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
-                isActive('/services') ? 'text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
+                isActive('/services') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 hover:text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
               }`}
             >
               {t('navbar.services')}
@@ -78,7 +78,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
               <button className={`nav-link flex items-center gap-2 text-sm tracking-widest uppercase font-medium transition-colors cursor-pointer ${
                 isActive('/menorca') || isActive('/bali') || isActive('/dubai')
                   ? 'text-brand-gold'
-                  : 'text-brand-light/70 group-hover:text-brand-gold'
+                  : isScrolled ? 'text-brand-dark/60 group-hover:text-brand-gold' : 'text-brand-light/70 group-hover:text-brand-gold'
               }`}>
                 {t('navbar.destinations')} <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
               </button>
@@ -108,7 +108,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
           </div>
 
           <button
-            className="md:hidden z-50 text-brand-light"
+            className={`md:hidden z-50 transition-colors ${isScrolled ? 'text-brand-dark' : 'text-brand-light'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}

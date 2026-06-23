@@ -25,29 +25,47 @@ export default function GroupVillaLeader({ locale: localeProp }: GroupVillaLeade
   };
 
   return (
-    <section className="relative w-full min-h-[80vh] flex flex-col md:flex-row items-stretch border-t border-brand-gold/20">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.7 }}
+      className="relative w-full min-h-[80vh] flex flex-col md:flex-row items-stretch border-t border-brand-dark/8"
+    >
       {/* Visual / Image Side */}
-      <div className="w-full md:w-1/2 relative min-h-[50vh]">
-        <img 
-          src={serviceMedia.group.src} 
-          alt="Villa Privada Courtside" 
-          className="absolute inset-0 w-full h-full object-cover filter grayscale opacity-60"
+      <motion.div
+        initial={{ opacity: 0, x: -24 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+        className="w-full md:w-1/2 relative min-h-[50vh]"
+      >
+        <img
+          src={serviceMedia.group.src}
+          alt="Villa Privada Courtside"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-brand-dark/40 mix-blend-multiply"></div>
-        <div className="absolute bottom-12 left-12 md:left-24 z-10 max-w-sm">
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(1,25,44,0.88) 0%, rgba(1,25,44,0.3) 60%, transparent 100%)' }} />
+        <div className="absolute bottom-12 left-12 md:left-16 z-10 max-w-sm">
           <div className="w-8 h-px bg-brand-gold mb-5" />
-          <h3 className="text-4xl text-brand-light font-bold mb-4 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>{t('groupVilla.sideTitle')}</h3>
-          <p className="text-brand-light/70 font-light">{t('groupVilla.sideDesc')}</p>
+          <h3 className="text-4xl text-brand-light font-light mb-3 tracking-tight" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}>{t('groupVilla.sideTitle')}</h3>
+          <p className="text-brand-light/60 font-light text-sm leading-relaxed">{t('groupVilla.sideDesc')}</p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Form Side (Cardless, just layout) */}
-      <div className="w-full md:w-1/2 bg-brand-ivory text-brand-dark flex items-center justify-center p-12 md:p-32 noise-section-light">
+      <motion.div
+        initial={{ opacity: 0, x: 24 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.85, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        className="w-full md:w-1/2 bg-white text-brand-dark flex items-center justify-center p-12 md:p-20 lg:p-28"
+      >
         <div className="w-full max-w-md">
           {!isCheckout ? (
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <Users className="w-12 h-12 text-brand-gold mb-12" />
-              <h2 className="text-5xl font-bold mb-6 tracking-tight text-brand-dark" style={{ fontFamily: 'var(--font-display)' }}>{t('groupVilla.formTitle')}</h2>
+              <h2 className="text-4xl md:text-5xl font-light mb-4 tracking-tight text-brand-dark" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}>{t('groupVilla.formTitle')}</h2>
               <p className="text-brand-dark/70 font-light text-lg mb-16">
                 {t('groupVilla.formDesc')}
               </p>
@@ -102,7 +120,7 @@ export default function GroupVillaLeader({ locale: localeProp }: GroupVillaLeade
             </motion.div>
           )}
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

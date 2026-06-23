@@ -63,19 +63,19 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 1.25rem 2.5rem;
-  background-color: #041E36;
+  padding: 1.1rem 2.25rem;
+  background-color: #01192C;
   border: 1px solid #D9AD62;
   color: #FFFFFF;
   font-family: var(--font-inter);
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   overflow: hidden;
   cursor: pointer;
   border-radius: var(--radius-button);
-  transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+  transition: color 0.25s ease-out, box-shadow 0.25s ease-out, background-color 0.25s ease-out;
   will-change: transform;
 }
 .btn-luxury::after {
@@ -243,51 +243,69 @@
 
 /* ─── Luxury signals strip ──────────────────────────────── */
 .luxury-strip {
-  background: var(--color-brand-ivory);
-  border-top: 1px solid rgba(1, 25, 44, 0.06);
-  border-bottom: 1px solid rgba(1, 25, 44, 0.06);
+  background: #ffffff;
+  border-top: 1px solid rgba(1, 25, 44, 0.07);
+  border-bottom: 1px solid rgba(1, 25, 44, 0.07);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  padding: 1.5rem 2rem;
+  gap: 3.5rem;
+  padding: 2rem 2rem;
   flex-wrap: wrap;
 }
 .luxury-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
+  cursor: default;
 }
 .luxury-number {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 300;
-  color: #0a2840;
+  color: #01192C;
   line-height: 1;
   letter-spacing: 0.02em;
+  transition: color 0.4s ease-out;
+}
+.luxury-item:hover .luxury-number {
+  color: #D9AD62;
 }
 .luxury-label {
   font-family: 'Jost', 'Helvetica Neue', sans-serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  color: rgba(1, 25, 44, 0.5);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  color: rgba(1, 25, 44, 0.42);
   text-transform: uppercase;
+  transition: color 0.3s ease-out;
+}
+.luxury-item:hover .luxury-label {
+  color: rgba(1, 25, 44, 0.65);
 }
 .luxury-divider {
-  color: rgba(217, 173, 98, 0.35);
-  font-size: 1.2rem;
+  color: rgba(217, 173, 98, 0.4);
+  font-size: 1rem;
   font-weight: 300;
   user-select: none;
 }
 @media (max-width: 640px) {
   .luxury-strip {
     gap: 1.5rem;
-    padding: 1.25rem 1rem;
+    padding: 1.5rem 1rem;
   }
   .luxury-divider {
     display: none;
   }
+}
+
+/* ─── Page entry fade-in ─────────────────────────────────── */
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+body {
+  animation: page-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* ─── Fade-in for images revealed after preload ─────────── */
