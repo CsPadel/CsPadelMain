@@ -89,8 +89,22 @@ const hreflangEntries = Object.entries(alternateUrls).filter(
 		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 		<meta name="theme-color" content="#01192C" />
 
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- Non-blocking font load — media trick loads stylesheet async, then swaps to all -->
+		<link
+		  rel="stylesheet"
+		  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+		  media="print"
+		  onload="this.media='all'"
+		/>
+		<noscript>
+		  <link
+		    rel="stylesheet"
+		    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+		  />
+		</noscript>
 
 		{/* ── Google Ads global site tag ── */}
 		{/* Replace AW-XXXXXXXXXX in src/lib/gtag.ts with your real Google Ads Conversion ID */}

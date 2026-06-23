@@ -40,10 +40,17 @@ export default function GroupVillaLeader({ locale: localeProp }: GroupVillaLeade
         transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
         className="w-full md:w-1/2 relative min-h-[50vh]"
       >
+        <div className="absolute inset-0 skeleton-card" aria-hidden="true" />
         <img
           src={serviceMedia.group.src}
           alt="Villa Privada Courtside"
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
+          onLoad={(e) => {
+            const skel = e.currentTarget.previousElementSibling as HTMLElement;
+            if (skel) skel.style.opacity = '0';
+          }}
         />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(1,25,44,0.88) 0%, rgba(1,25,44,0.3) 60%, transparent 100%)' }} />
         <div className="absolute bottom-12 left-12 md:left-16 z-10 max-w-sm">

@@ -91,11 +91,20 @@ export default function AboutView({ locale: localeProp }: AboutViewProps) {
               >
                 {/* Photo — swap src for the real image when available */}
                 {member.photo ? (
-                  <img
-                    src={member.photo}
-                    alt={member.name}
-                    className="absolute inset-0 w-full h-full object-cover object-top z-0 transition-transform duration-700 group-hover:scale-105"
-                  />
+                  <>
+                    <div className="absolute inset-0 skeleton-card z-[1]" aria-hidden="true" />
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover object-top z-0 transition-transform duration-700 group-hover:scale-105"
+                      onLoad={(e) => {
+                        const skel = e.currentTarget.previousElementSibling as HTMLElement;
+                        if (skel) skel.style.display = 'none';
+                      }}
+                    />
+                  </>
                 ) : (
                   <div className="absolute inset-0 z-0 flex items-center justify-center" style={{ background: 'linear-gradient(160deg, #041E36 0%, #0a2840 60%, #072035 100%)' }}>
                     <span

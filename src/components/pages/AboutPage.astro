@@ -26,6 +26,6 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'about');
 >
   <main class="w-full bg-white flex flex-col relative">
     <AboutView client:load locale={locale} />
-    <FooterIsland client:load locale={locale} />
+    <FooterIsland client:visible locale={locale} />
   </main>
 </Layout>

@@ -81,7 +81,10 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
       <section className="relative w-full h-screen overflow-hidden flex items-end">
         <div className="absolute inset-0">
           {media.type === 'video' ? (
-            <video autoPlay loop muted playsInline className="w-full h-full object-cover scale-105">
+            <video autoPlay loop muted playsInline
+              poster="/imagenes/cap roig.jpg"
+              preload="auto"
+              className="w-full h-full object-cover scale-105">
               <source src={media.src} type="video/mp4" />
             </video>
           ) : (
@@ -243,6 +246,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
                 src={imgs.wide}
                 alt=""
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -252,6 +256,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
                 src={imgs.tall}
                 alt=""
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -261,6 +266,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
                 src={imgs.sq1}
                 alt=""
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -270,6 +276,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
                 src={imgs.sq2}
                 alt=""
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -320,6 +327,7 @@ export default function DestinationLanding({ destination, locale: localeProp }: 
                         src={imgSrc}
                         alt={pillar.title}
                         loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                       />
                     </div>

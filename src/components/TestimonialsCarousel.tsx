@@ -98,9 +98,24 @@ export default function TestimonialsCarousel() {
               >
                 {/* Avatar */}
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-11 h-11 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-brand-gold font-bold text-base">{testimonial.initials}</span>
-                  </div>
+                  {testimonial.image ? (
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+                      <div className="absolute inset-0 skeleton-light rounded-full" aria-hidden="true" />
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        loading="lazy"
+                        decoding="async"
+                        width={56}
+                        height={56}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-11 h-11 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-brand-gold font-bold text-base">{testimonial.initials}</span>
+                    </div>
+                  )}
                   <div>
                     <p className="text-brand-dark font-semibold text-sm">{testimonial.name}</p>
                     <p className="text-brand-dark/45 text-xs">{testimonial.role}</p>

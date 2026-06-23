@@ -89,11 +89,17 @@ export default function DestinationsPreview({ locale }: Props) {
             className="lg:col-span-2 group relative rounded-card overflow-hidden flex flex-col justify-end"
             style={{ minHeight: '520px' }}
           >
+            <div className="absolute inset-0 skeleton-light" aria-hidden="true" />
             <img
               src={destinations[0].image}
               alt={destinations[0].name}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
+              decoding="async"
+              onLoad={(e) => {
+                const el = e.currentTarget.previousElementSibling as HTMLElement;
+                if (el) el.style.opacity = '0';
+              }}
             />
             <div
               className="absolute inset-0"
@@ -118,11 +124,17 @@ export default function DestinationsPreview({ locale }: Props) {
                 className="group relative rounded-card overflow-hidden flex flex-col justify-end flex-1"
                 style={{ minHeight: '248px' }}
               >
+                <div className="absolute inset-0 skeleton-light" aria-hidden="true" />
                 <img
                   src={d.image}
                   alt={d.name}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
+                  onLoad={(e) => {
+                    const el = e.currentTarget.previousElementSibling as HTMLElement;
+                    if (el) el.style.opacity = '0';
+                  }}
                 />
                 <div
                   className="absolute inset-0"

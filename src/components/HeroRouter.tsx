@@ -39,6 +39,8 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
         >
           <video
             autoPlay loop muted playsInline
+            poster="/imagenes/bambu.jpg"
+            preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src="/vid5.mp4" type="video/mp4" />
@@ -267,6 +269,7 @@ const IntentCard = ({
           alt=""
           aria-hidden="true"
           loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
         />
       ) : (

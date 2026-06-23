@@ -31,17 +31,17 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'home');
 >
   <main class="w-full bg-white flex flex-col relative">
     <HeroRouter client:load locale={locale} />
-    <DestinationsPreview client:load locale={locale} />
+    <DestinationsPreview client:visible locale={locale} />
     <div id="individual-section">
-      <HeroIsland client:load locale={locale} />
+      <HeroIsland client:idle locale={locale} />
     </div>
     <div id="group-section">
-      <GroupVillaLeader client:load locale={locale} />
+      <GroupVillaLeader client:idle locale={locale} />
     </div>
     <div id="corporate-section">
-      <CorporateForm client:load locale={locale} />
+      <CorporateForm client:idle locale={locale} />
     </div>
-    <TestimonialsCarousel client:load />
-    <FooterIsland client:load locale={locale} />
+    <TestimonialsCarousel client:visible />
+    <FooterIsland client:visible locale={locale} />
   </main>
 </Layout>
