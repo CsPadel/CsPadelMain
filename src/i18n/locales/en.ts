@@ -1,5 +1,6 @@
 const en = {
       navbar: {
+        ourStory: "Our Story",
         about: "About Us",
         services: "Services",
         destinations: "Destinations",
@@ -468,7 +469,7 @@ const en = {
       },
       bespokeRetreats: {
         title: "Want it on your dates?",
-        description: "Beyond our open retreats, we run bespoke private retreats at Menorca for closed groups, fully customisable around your dates, your group, and your priorities — from coaching intensity to dining preferences to off-court experiences.",
+        description: "Private retreats for closed groups, fully customisable around your dates and priorities. Any week of the year, in Menorca.",
         features: [
           "Minimum 6 guests",
           "Any week of the year",
@@ -554,30 +555,51 @@ const en = {
         ctaSecondaryBtn: "Speak with Concierge"
       },
       testimonials: {
-        label: "Reviews",
-        title: "What guests have to say",
-        subtitle: "Guests who arrived as players. Left a part of the Courtside community.",
+        label: "What Guests Say",
+        title: "Remembered long after.",
+        subtitle: "Guests who arrived as players. Left as part of the CourtSide community.",
         items: [
           {
-            name: "Tomasz Campbell",
-            role: "Senior Director, London",
-            text: "Truly life-changing. The coaching sessions elevated my game, but the yacht day and gourmet dinners made it a complete luxury escape. Already booked for next year.",
-            initials: "T",
+            name: "M.N.",
+            role: "Guest, 2024",
+            text: "Menorca had this perfect flow to it. Sunny padel sessions, slow afternoons, amazing dinners. Every moment felt intentional.",
+            initials: "M",
+            image: "/imagenes/Cala en porter.jpg"
+          },
+          {
+            name: "J.H.",
+            role: "Guest, 2024",
+            text: "Every moment felt intentional. I left feeling lighter, stronger, and genuinely grateful.",
+            initials: "J",
             image: "/imagenes/IMG_2167.jpeg"
           },
           {
-            name: "Ana Martínez",
-            role: "CEO, Madrid",
-            text: "The attention to detail is unreal. From the airport transfer to the farewell dinner, every moment felt tailored. This is how a padel retreat should be.",
-            initials: "A",
+            name: "L.F.",
+            role: "Guest, 2024",
+            text: "The padel setup in Menorca is top tier — professional courts, great coaches, and a relaxed atmosphere that makes you want to stay forever.",
+            initials: "L",
+            image: "/imagenes/EM-22.jpg"
+          },
+          {
+            name: "N.S.",
+            role: "Guest, 2024",
+            text: "Such care and attention to service, cleanliness, and hospitality is unparalleled anywhere else we stayed.",
+            initials: "N",
             image: "/imagenes/JOPS-721.JPG"
           },
           {
-            name: "James Whitfield",
-            role: "Managing Partner, Edinburgh",
-            text: "I came for the padel and stayed for the experience. The vineyard lunch, the tournament day, the sunset at Cova d'en Xoroi — every single day was extraordinary.",
-            initials: "J",
-            image: "/imagenes/Cala en porter.jpg"
+            name: "K.L.",
+            role: "Guest, 2024",
+            text: "Mornings with padel, yoga by the cliff, world-class food, and effortless service throughout. This is what luxury actually feels like.",
+            initials: "K",
+            image: "/imagenes/binifadet.jpeg"
+          },
+          {
+            name: "E.M.",
+            role: "Guest, 2024",
+            text: "Oliver brings such great energy to the court, balancing relaxed coaching with focused improvement. A rare combination.",
+            initials: "E",
+            image: "/imagenes/cap roig.jpg"
           }
         ]
       }

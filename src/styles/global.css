@@ -418,11 +418,51 @@ body {
   z-index: 2;
 }
 
+/* ─── Partners marquee ──────────────────────────────────── */
+@keyframes cs-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+.cs-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: cs-marquee 50s linear infinite;
+}
+.cs-marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3.5rem;
+  flex-shrink: 0;
+}
+.cs-partner-logo {
+  height: 88px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.82;
+  display: block;
+}
+.cs-partner-text {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(1, 25, 44, 0.55);
+  white-space: nowrap;
+}
+
 /* ─── Respect user reduced-motion preference ───────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  /* Marquee is a slow-moving element — keep it running */
+  .cs-marquee-track {
+    animation-duration: 50s !important;
+    animation-iteration-count: infinite !important;
   }
 }

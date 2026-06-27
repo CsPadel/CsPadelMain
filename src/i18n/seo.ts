@@ -1,7 +1,7 @@
 import type { Locale } from './locales';
 import { localizedPath } from './routing';
 
-export type PageId = 'home' | 'about' | 'services' | 'cookies';
+export type PageId = 'home' | 'about' | 'services' | 'cookies' | 'executiveRetreat' | 'ourStory';
 
 export interface PageSeo {
   title: string;
@@ -90,6 +90,40 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
       keywords: 'CourtSide cookies, politique de cookies, préférences de confidentialité',
     },
   },
+  executiveRetreat: {
+    en: {
+      title: 'Executive Retreat — CourtSide Padel',
+      description: 'Strategy in silence. C-Suite and board-level padel retreats designed for absolute focus, elite networking and leadership development in Menorca.',
+      keywords: 'executive padel retreat, C-suite retreat, corporate padel, leadership retreat Menorca, board retreat padel',
+    },
+    es: {
+      title: 'Retiro Ejecutivo — CourtSide Padel',
+      description: 'Estrategia en silencio. Retiros de pádel para C-Suite y consejos de administración diseñados para el máximo enfoque y networking de élite en Menorca.',
+      keywords: 'retiro ejecutivo pádel, retiro C-suite, pádel corporativo, retiro liderazgo Menorca',
+    },
+    fr: {
+      title: 'Retraite Exécutive — CourtSide Padel',
+      description: 'Stratégie dans le silence. Retraites padel pour C-Suite et conseils d\'administration conçues pour un focus absolu et un networking d\'élite à Minorque.',
+      keywords: 'retraite exécutive padel, retraite C-suite, padel corporate, retraite leadership Minorque',
+    },
+  },
+  ourStory: {
+    en: {
+      title: 'Our Story — CourtSide Padel',
+      description: 'Martin and Oli built CourtSide from a shared obsession with padel and a belief that a sports retreat could be genuinely extraordinary. This is their story.',
+      keywords: 'CourtSide story, padel founders, Martin Oli CourtSide, luxury padel retreat founders',
+    },
+    es: {
+      title: 'Nuestra Historia — CourtSide Padel',
+      description: 'Martin y Oli construyeron CourtSide a partir de una obsesión compartida por el pádel y la creencia de que un retiro deportivo podía ser verdaderamente extraordinario.',
+      keywords: 'historia CourtSide, fundadores pádel, Martin Oli CourtSide, fundadores retiro pádel lujo',
+    },
+    fr: {
+      title: 'Notre Histoire — CourtSide Padel',
+      description: 'Martin et Oli ont construit CourtSide à partir d\'une obsession partagée pour le padel et la conviction qu\'une retraite sportive pouvait être véritablement extraordinaire.',
+      keywords: 'histoire CourtSide, fondateurs padel, Martin Oli CourtSide, fondateurs retraite padel luxe',
+    },
+  },
 };
 
 const pagePaths: Record<PageId, string> = {
@@ -97,6 +131,8 @@ const pagePaths: Record<PageId, string> = {
   about: '/about',
   services: '/services',
   cookies: '/cookies',
+  executiveRetreat: '/executive-retreat',
+  ourStory: '/our-story',
 };
 
 export function getPageSeo(page: PageId, locale: Locale): PageSeo {

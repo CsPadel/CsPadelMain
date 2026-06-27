@@ -1,10 +1,8 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
-import { serviceMedia } from '../constants/serviceMedia';
 
 interface HeroRouterProps {
   locale?: Locale;
@@ -109,6 +107,7 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
                 className="text-white font-light tracking-tight"
                 style={{
                   fontFamily: 'var(--font-display)',
+                  fontStyle: 'italic',
                   fontSize: 'clamp(3rem, 8vw, 8.5rem)',
                   lineHeight: 0.9,
                 }}
@@ -144,7 +143,7 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
             className="mt-10"
           >
             <button
-              onClick={() => scrollToSection('design-your-stay')}
+              onClick={() => scrollToSection('experiences')}
               className="btn-luxury"
             >
               Discover Experiences
@@ -170,170 +169,12 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
         </motion.div>
       </div>
 
-      {/* ── Design Your Stay — Large Editorial Cards ─────────────── */}
-      <section
-        id="design-your-stay"
-        className="bg-white py-24 md:py-32 px-6 md:px-12 lg:px-16"
-      >
-        <div className="max-w-7xl mx-auto">
-
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 22 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="text-center mb-16 md:mb-20"
-          >
-            <div className="flex items-center justify-center gap-4 mb-5">
-              <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-              <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-                {t('gateway.hero.intent')}
-              </p>
-              <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-            </div>
-            <h2
-              className="text-4xl md:text-5xl font-light text-brand-dark"
-              style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
-            >
-              Design Your Stay
-            </h2>
-          </motion.div>
-
-          {/* 3 large portrait editorial cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            <IntentCard
-              index={0}
-              onClick={() => scrollToSection('individual-section')}
-              media={serviceMedia.individual}
-              label={t('gateway.hero.individual')}
-              eyebrow={t('gateway.hero.individualSub')}
-              descriptor={t('gateway.hero.individualDescriptor')}
-            />
-            <IntentCard
-              index={1}
-              onClick={() => scrollToSection('group-section')}
-              media={serviceMedia.group}
-              label={t('gateway.hero.group')}
-              eyebrow={t('gateway.hero.groupSub')}
-              descriptor={t('gateway.hero.groupDescriptor')}
-            />
-            <IntentCard
-              index={2}
-              onClick={() => scrollToSection('corporate-section')}
-              media={serviceMedia.corporate}
-              label={t('gateway.hero.corporate')}
-              eyebrow={t('gateway.hero.corporateSub')}
-              descriptor={t('gateway.hero.corporateDescriptor')}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ── Luxury Signals Strip ────────────────────────────────── */}
+      <div id="experiences" aria-hidden="true" />
       <LuxuryStrip locale={localeProp} />
     </>
   );
 };
-
-/* ─── Large editorial portrait intent card ─────────────────── */
-const IntentCard = ({
-  index,
-  onClick,
-  media,
-  label,
-  eyebrow,
-  descriptor,
-}: {
-  index: number;
-  onClick: () => void;
-  media: (typeof serviceMedia)[keyof typeof serviceMedia];
-  label: string;
-  eyebrow: string;
-  descriptor: string;
-}) => (
-  <motion.button
-    onClick={onClick}
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: '-60px' }}
-    transition={{ duration: 0.75, delay: index * 0.13, ease: [0.22, 1, 0.36, 1] }}
-    className="group relative overflow-hidden rounded-card text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold hover:-translate-y-2 transition-transform duration-300 ease-out will-change-transform"
-    style={{ minHeight: '560px', display: 'flex', flexDirection: 'column' }}
-  >
-    {/* Full-bleed media background */}
-    <div className="absolute inset-0">
-      {media.type === 'image' ? (
-        <img
-          src={media.src}
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-        />
-      ) : (
-        <video
-          autoPlay muted loop playsInline
-          aria-hidden="true"
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-        >
-          <source src={media.src} type="video/mp4" />
-        </video>
-      )}
-    </div>
-
-    {/* Deep gradient overlay — reveals on hover */}
-    <div
-      className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-95"
-      style={{
-        background:
-          'linear-gradient(to top, rgba(1,25,44,0.95) 0%, rgba(1,25,44,0.38) 50%, rgba(1,25,44,0.06) 100%)',
-      }}
-    />
-
-    {/* Gold top line — slides in on hover */}
-    <div className="absolute top-0 left-0 right-0 h-[2px] bg-brand-gold origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
-
-    {/* Card index — top right */}
-    <span
-      className="absolute top-6 right-7 text-white/20 font-light select-none transition-opacity duration-300 group-hover:text-white/35"
-      style={{ fontFamily: 'var(--font-display)', fontSize: '0.85rem' }}
-    >
-      0{index + 1}
-    </span>
-
-    {/* Bottom editorial content */}
-    <div className="relative mt-auto p-7 md:p-8 z-10">
-      <p className="text-[9px] uppercase tracking-[0.28em] text-brand-gold font-semibold mb-3.5">
-        {eyebrow}
-      </p>
-      <h3
-        className="text-white font-light leading-tight mb-3"
-        style={{
-          fontFamily: 'var(--font-display)',
-          fontStyle: 'italic',
-          fontSize: 'clamp(1.65rem, 2.5vw, 2.25rem)',
-        }}
-      >
-        {label}
-      </h3>
-      <p className="text-sm font-light leading-relaxed mb-5 max-w-[260px]" style={{ color: 'rgba(255,255,255,0.42)' }}>
-        {descriptor}
-      </p>
-
-      {/* Explore CTA row */}
-      <div className="flex items-center gap-2.5">
-        <span className="text-[9px] uppercase tracking-[0.22em] font-semibold text-white/40 group-hover:text-brand-gold transition-colors duration-300">
-          Explore
-        </span>
-        <ArrowRight
-          className="w-3.5 h-3.5 text-white/40 group-hover:text-brand-gold group-hover:translate-x-1 transition-all duration-300"
-        />
-      </div>
-    </div>
-  </motion.button>
-);
 
 /* ─── Luxury credentials strip ─────────────────────────────── */
 const LuxuryStrip = ({ locale: localeProp }: { locale?: Locale }) => {

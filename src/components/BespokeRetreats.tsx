@@ -26,7 +26,7 @@ export default function BespokeRetreats() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.7, ease: 'easeOut' }}
-        className="bg-white py-24 md:py-32 border-t border-brand-dark/7"
+        className="bg-brand-dark py-24 md:py-32 border-t border-white/7"
       >
         <div className="max-w-3xl mx-auto px-6 md:px-16 text-center">
           <div className="flex items-center justify-center gap-4 mb-5">
@@ -35,19 +35,19 @@ export default function BespokeRetreats() {
             <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           </div>
           <h2
-            className="text-4xl md:text-5xl font-light text-brand-dark mb-7"
+            className="text-4xl md:text-5xl font-light text-white mb-7"
             style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
           >
             {t('bespokeRetreats.title')}
           </h2>
-          <p className="text-brand-dark/52 text-base md:text-lg leading-relaxed mb-12 max-w-2xl mx-auto font-light">
+          <p className="text-white/55 text-base md:text-lg leading-relaxed mb-12 max-w-2xl mx-auto font-light">
             {t('bespokeRetreats.description')}
           </p>
 
           <div className="flex flex-wrap justify-center gap-2.5 mb-14">
             {Array.isArray(features) && features.map((feature, idx) => (
-              <div key={idx} className="border border-brand-dark/12 rounded-full px-5 py-2 bg-transparent hover:border-brand-gold/40 hover:bg-brand-gold/4 transition-colors duration-200">
-                <p className="text-brand-dark/65 font-light text-sm tracking-wide">
+              <div key={idx} className="border border-white/15 rounded-full px-5 py-2 bg-transparent hover:border-brand-gold/40 hover:bg-brand-gold/8 transition-colors duration-200">
+                <p className="text-white/60 font-light text-sm tracking-wide">
                   {feature}
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function BespokeRetreats() {
                         <input type="text" className="w-full bg-transparent border-b border-white/20 pb-2 text-brand-light focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g. October" />
                       </div>
                     </div>
-                    <button type="submit" className="w-full py-4 mt-6 rounded-button bg-brand-gold text-brand-dark font-bold uppercase tracking-widest text-sm hover:bg-brand-light transition-colors duration-300">
+                    <button type="submit" className="btn-luxury w-full mt-6 justify-center">
                       {t('bespokeRetreats.submitBtn')}
                     </button>
                   </form>

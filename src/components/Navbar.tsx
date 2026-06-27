@@ -91,7 +91,15 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
             />
           </a>
 
-          <div className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
+          <div className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+            <a
+              href={localizedHref('/our-story')}
+              className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
+                isActive('/our-story') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 hover:text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
+              }`}
+            >
+              {t('navbar.ourStory')}
+            </a>
             <a
               href={localizedHref('/about')}
               className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
@@ -165,6 +173,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
             className="fixed inset-0 z-40 bg-brand-dark flex flex-col items-center justify-center pt-24 pb-12 px-6"
           >
             <div className="flex flex-col items-center gap-8 w-full max-w-sm">
+              <a href={localizedHref('/our-story')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.ourStory')}</a>
               <a href={localizedHref('/about')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.about')}</a>
               <a href={localizedHref('/services')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.services')}</a>
 

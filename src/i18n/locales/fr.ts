@@ -1,5 +1,6 @@
 const fr = {
       navbar: {
+        ourStory: "Notre Histoire",
         about: "À Propos",
         services: "Services",
         destinations: "Destinations",
@@ -468,7 +469,7 @@ const fr = {
       },
       bespokeRetreats: {
         title: "Vous souhaitez vos propres dates ?",
-        description: "Au-delà de nos retraites ouvertes, nous organisons des retraites privées sur mesure à Menorca pour groupes fermés, entièrement personnalisables selon vos dates, votre groupe et vos priorités — de l'intensité du coaching aux préférences gastronomiques en passant par les expériences hors court.",
+        description: "Retraites privées pour groupes fermés, entièrement personnalisables selon vos dates et priorités. Toutes les semaines de l'année, à Minorque.",
         features: [
           "Minimum 6 convives",
           "Toutes les semaines de l'année",
@@ -554,30 +555,51 @@ const fr = {
         ctaSecondaryBtn: "Parler au Concierge"
       },
       testimonials: {
-        label: "Témoignages",
-        title: "Ce que nos convives en disent",
-        subtitle: "Des convives arrivés en joueurs. Repartis membres de la communauté Courtside.",
+        label: "Ce Qu'ils Disent",
+        title: "Longtemps après le retour.",
+        subtitle: "Des convives arrivés en joueurs. Repartis membres de la communauté CourtSide.",
         items: [
           {
-            name: "Tomasz Campbell",
-            role: "Directeur senior, Londres",
-            text: "Une expérience qui m'a véritablement transformé. Les sessions de coaching ont élevé mon jeu, tandis que la journée en yacht et les dîners gastronomiques en ont fait une évasion de luxe absolue. Déjà réservé pour l'année prochaine.",
-            initials: "T",
+            name: "M.N.",
+            role: "Convive, 2024",
+            text: "Minorque avait ce flow parfait. Des sessions de padel ensoleillées, des après-midis lents, des dîners incroyables. Chaque moment semblait intentionnel.",
+            initials: "M",
+            image: "/imagenes/Cala en porter.jpg"
+          },
+          {
+            name: "J.H.",
+            role: "Convive, 2024",
+            text: "Chaque moment semblait intentionnel. Je suis reparti plus léger, plus fort et sincèrement reconnaissant.",
+            initials: "J",
             image: "/imagenes/IMG_2167.jpeg"
           },
           {
-            name: "Ana Martínez",
-            role: "PDG, Madrid",
-            text: "L'attention portée aux moindres détails est remarquable. Du transfert aéroport au dîner d'adieu, chaque instant semblait pensé pour nous. Voilà comment une retraite padel devrait se vivre.",
-            initials: "A",
+            name: "L.F.",
+            role: "Convive, 2024",
+            text: "L'installation padel à Minorque est au plus haut niveau — courts professionnels, excellents coachs, atmosphère détendue qui donne envie de rester pour toujours.",
+            initials: "L",
+            image: "/imagenes/EM-22.jpg"
+          },
+          {
+            name: "N.S.",
+            role: "Convive, 2024",
+            text: "Une telle attention au service, à la propreté et à l'hospitalité n'a aucun équivalent dans tous les endroits où nous avons séjourné.",
+            initials: "N",
             image: "/imagenes/JOPS-721.JPG"
           },
           {
-            name: "James Whitfield",
-            role: "Associé directeur, Édimbourg",
-            text: "Je suis venu pour le padel et je suis resté pour l'expérience. Le déjeuner au vignoble, la journée de tournoi, le coucher de soleil au Cova d'en Xoroi — chaque journée a été extraordinaire.",
-            initials: "J",
-            image: "/imagenes/Cala en porter.jpg"
+            name: "K.L.",
+            role: "Convive, 2024",
+            text: "Matinées padel, yoga sur la falaise, gastronomie d'exception et service impeccable tout au long du séjour. C'est ce que le luxe signifie vraiment.",
+            initials: "K",
+            image: "/imagenes/binifadet.jpeg"
+          },
+          {
+            name: "E.M.",
+            role: "Convive, 2024",
+            text: "Oliver apporte une énergie formidable sur le court, alliant coaching détendu et progression ciblée. Une combinaison rare et précieuse.",
+            initials: "E",
+            image: "/imagenes/cap roig.jpg"
           }
         ]
       }

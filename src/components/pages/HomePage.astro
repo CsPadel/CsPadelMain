@@ -1,12 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { HeroRouter } from '../HeroRouter';
-import HeroIsland from '../HeroIsland';
-import GroupVillaLeader from '../GroupVillaLeader';
-import CorporateForm from '../CorporateForm';
-import FooterIsland from '../FooterIsland';
-import DestinationsPreview from '../DestinationsPreview';
+import RetreatTypesSection from '../RetreatTypesSection';
+import BespokeRetreats from '../BespokeRetreats';
 import TestimonialsCarousel from '../TestimonialsCarousel';
+import PartnersSection from '../PartnersSection';
+import FooterIsland from '../FooterIsland';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
 
@@ -31,17 +30,10 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'home');
 >
   <main class="w-full bg-white flex flex-col relative">
     <HeroRouter client:load locale={locale} />
-    <DestinationsPreview client:visible locale={locale} />
-    <div id="individual-section">
-      <HeroIsland client:idle locale={locale} />
-    </div>
-    <div id="group-section">
-      <GroupVillaLeader client:idle locale={locale} />
-    </div>
-    <div id="corporate-section">
-      <CorporateForm client:idle locale={locale} />
-    </div>
+    <RetreatTypesSection client:visible locale={locale} />
+    <BespokeRetreats client:visible />
     <TestimonialsCarousel client:visible />
+    <PartnersSection client:load />
     <FooterIsland client:visible locale={locale} />
   </main>
 </Layout>

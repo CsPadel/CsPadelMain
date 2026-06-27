@@ -1,6 +1,7 @@
 const es = {
       navbar: {
-        about: "Nuestra Historia",
+        ourStory: "Nuestra Historia",
+        about: "Sobre Nosotros",
         services: "Servicios",
         destinations: "Destinos",
         menorca: "Menorca",
@@ -468,7 +469,7 @@ const es = {
       },
       bespokeRetreats: {
         title: "¿Lo quieres en tus fechas?",
-        description: "Más allá de nuestros retiros abiertos, organizamos retiros privados a medida en Menorca para grupos cerrados, totalmente personalizables en torno a tus fechas, tu grupo y tus prioridades: desde la intensidad del entrenamiento hasta las preferencias gastronómicas y las experiencias fuera de la pista.",
+        description: "Retiros privados para grupos cerrados, totalmente personalizables en tus fechas y prioridades. Cualquier semana del año, en Menorca.",
         features: [
           "Mínimo 6 invitados",
           "Cualquier semana del año",
@@ -554,30 +555,51 @@ const es = {
         ctaSecondaryBtn: "Habla con el Concierge"
       },
       testimonials: {
-        label: "Reseñas",
-        title: "Lo que dicen nuestros invitados",
-        subtitle: "Invitados que llegaron como jugadores. Se fueron como parte de la comunidad Courtside.",
+        label: "Lo Que Dicen",
+        title: "Recordado mucho después.",
+        subtitle: "Invitados que llegaron como jugadores. Se fueron como parte de la comunidad CourtSide.",
         items: [
           {
-            name: "Tomasz Campbell",
-            role: "Director Senior, Londres",
-            text: "Realmente me cambió la vida. Las sesiones de entrenamiento elevaron mi juego, pero el día en yate y las cenas gourmet lo convirtieron en un escape de lujo total. Ya he reservado para el próximo año.",
-            initials: "T",
+            name: "M.N.",
+            role: "Invitado, 2024",
+            text: "Menorca tuvo ese flujo perfecto. Sesiones de pádel soleadas, tardes lentas, cenas increíbles. Cada momento se sintió intencional.",
+            initials: "M",
+            image: "/imagenes/Cala en porter.jpg"
+          },
+          {
+            name: "J.H.",
+            role: "Invitado, 2024",
+            text: "Cada momento se sintió intencional. Me fui sintiéndome más ligero, más fuerte y genuinamente agradecido.",
+            initials: "J",
             image: "/imagenes/IMG_2167.jpeg"
           },
           {
-            name: "Ana Martínez",
-            role: "CEO, Madrid",
-            text: "La atención al detalle es irreal. Desde el traslado al aeropuerto hasta la cena de despedida, cada momento se sintió hecho a medida. Así es como debe ser un retiro de pádel.",
-            initials: "A",
+            name: "L.F.",
+            role: "Invitado, 2024",
+            text: "La instalación de pádel en Menorca es de primer nivel: pistas profesionales, grandes entrenadores y un ambiente relajado que hace que quieras quedarte para siempre.",
+            initials: "L",
+            image: "/imagenes/EM-22.jpg"
+          },
+          {
+            name: "N.S.",
+            role: "Invitado, 2024",
+            text: "La atención y el cuidado en el servicio, la limpieza y la hospitalidad no tienen parangón en ningún otro lugar donde hayamos estado.",
+            initials: "N",
             image: "/imagenes/JOPS-721.JPG"
           },
           {
-            name: "James Whitfield",
-            role: "Socio Director, Edimburgo",
-            text: "Vine por el pádel y me quedé por la experiencia. El almuerzo en el viñedo, el día del torneo, el atardecer en Cova d'en Xoroi — cada uno de los días fue extraordinario.",
-            initials: "J",
-            image: "/imagenes/Cala en porter.jpg"
+            name: "K.L.",
+            role: "Invitado, 2024",
+            text: "Mañanas con pádel, yoga en el acantilado, comida de primer nivel y un servicio impecable durante todo el retiro. Así se siente el verdadero lujo.",
+            initials: "K",
+            image: "/imagenes/binifadet.jpeg"
+          },
+          {
+            name: "E.M.",
+            role: "Invitado, 2024",
+            text: "Oliver aporta una energía increíble a la pista, combinando un entrenamiento relajado con una mejora enfocada. Una combinación poco común.",
+            initials: "E",
+            image: "/imagenes/cap roig.jpg"
           }
         ]
       }

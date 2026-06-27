@@ -13,15 +13,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     build: {
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'vendor-motion': ['framer-motion'],
-            'vendor-react': ['react', 'react-dom'],
-            'vendor-i18n': ['i18next', 'react-i18next'],
-          },
-        },
-      },
       cssMinify: true,
     },
   },
