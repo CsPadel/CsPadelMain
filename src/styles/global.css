@@ -246,64 +246,6 @@
   transition: color 0.3s ease-out;
 }
 
-/* ─── Luxury signals strip ──────────────────────────────── */
-.luxury-strip {
-  background: #ffffff;
-  border-top: 1px solid rgba(1, 25, 44, 0.07);
-  border-bottom: 1px solid rgba(1, 25, 44, 0.07);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3.5rem;
-  padding: 2rem 2rem;
-  flex-wrap: wrap;
-}
-.luxury-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem;
-  cursor: default;
-}
-.luxury-number {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2.1rem;
-  font-weight: 300;
-  color: #01192C;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  transition: color 0.4s ease-out;
-}
-.luxury-item:hover .luxury-number {
-  color: #D9AD62;
-}
-.luxury-label {
-  font-family: 'Jost', 'Helvetica Neue', sans-serif;
-  font-size: 0.58rem;
-  letter-spacing: 0.22em;
-  color: rgba(1, 25, 44, 0.42);
-  text-transform: uppercase;
-  transition: color 0.3s ease-out;
-}
-.luxury-item:hover .luxury-label {
-  color: rgba(1, 25, 44, 0.65);
-}
-.luxury-divider {
-  color: rgba(217, 173, 98, 0.4);
-  font-size: 1rem;
-  font-weight: 300;
-  user-select: none;
-}
-@media (max-width: 640px) {
-  .luxury-strip {
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
-  }
-  .luxury-divider {
-    display: none;
-  }
-}
-
 /* ─── Page entry fade-in ─────────────────────────────────── */
 /* NOTE: transform must NOT be applied to body — it breaks position:fixed
    for Navbar and PageLoader (they become body-relative instead of viewport-relative).

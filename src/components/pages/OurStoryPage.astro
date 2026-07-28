@@ -2,21 +2,24 @@
 import Layout from '../../layouts/Layout.astro';
 import FooterIsland from '../FooterIsland';
 import FoundersSection from '../FoundersSection';
+import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
-import { getAlternateUrls } from '../../i18n/seo';
+import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
 
 interface Props {
   locale: Locale;
 }
 
 const { locale } = Astro.props;
+const seo = getPageSeo('ourStory', locale);
 const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
 const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
 ---
 
 <Layout
-  title="Our Story — CourtSide Padel"
-  description="Alex and Oli built CourtSide from a shared obsession with padel and a belief that a sports retreat could be genuinely extraordinary. This is their story."
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
   lang={locale}
   locale={locale}
   canonical={alternateUrls[locale]}
@@ -57,12 +60,12 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
           class="text-white/55 text-lg md:text-xl font-light max-w-md leading-relaxed"
           style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.65s both;"
         >
-          Two brothers. One obsession. And a belief that a padel retreat could be something truly extraordinary.
+          Twin brothers. Different paths. Padel changed everything.
         </p>
       </div>
     </section>
 
-    {/* ── Origin story ── */}
+    {/* ── How It Began ── */}
     <section class="py-24 md:py-32 px-8 md:px-16 bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
 
@@ -83,19 +86,22 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
 
         <div class="space-y-7 text-brand-dark/58 text-base md:text-lg font-light leading-relaxed cs-fadein" style="animation-delay: 0.15s;">
           <p>
-            Alex and Oli met through padel. What started as a shared love of the sport became a shared frustration: there was no retreat that combined serious padel with the standard of experience they expected in everything else they did.
+            We're twin brothers, born in New York and raised in London. As kids, we did everything together, training, competing, travelling, always chasing the next opportunity sport could give us. At 15, that changed. Alexi left for the south of France to chase professional tennis. Oliver stayed in London, drawn to football instead. Racket sports had always been part of who we were, but for a few years, life pulled us in different directions.
           </p>
           <p>
-            The luxury retreats felt generic. The padel-specific trips felt amateur. Neither had the soul, the curation, or the attention to detail that makes something truly unforgettable.
+            Travelling in Menorca in 2019, we picked up padel for the first time and were hooked immediately, not just by the game, but everything around it: walking off court for a drink, meeting new people, jumping in the pool after a match. Competitive, but social. That combination is what CourtSide is built on.
           </p>
           <p>
-            So they built it themselves — in Menorca, an island they both loved, designed around a single question: <em class="text-brand-dark/80 not-italic">"Would we want this?"</em>
+            The idea came together gradually. We'd both grown up travelling, exposed early to new places and cultures, a love that never left us. As padel grew into one of the fastest-growing sports in the world, it clicked: pair a beautiful destination with world-class padel, bring people together, and build something around the feeling we first found in Menorca.
+          </p>
+          <p>
+            Menorca wasn't a random choice. It's the island where we fell in love with the sport, and one we've returned to for eight years running. It was the obvious place to build the first CourtSide retreat.
           </p>
         </div>
       </div>
     </section>
 
-    {/* ── Founders header ── */}
+    {/* ── Meet the Founders ── */}
     <div class="bg-brand-ivory px-8 md:px-16 pt-20 md:pt-28 pb-0 cs-fadein">
       <div class="max-w-7xl mx-auto">
         <div class="flex items-center gap-4 mb-4">
@@ -113,10 +119,9 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
       </div>
     </div>
 
-    {/* ── Founders (animated React island) ── */}
     <FoundersSection client:visible />
 
-    {/* ── Philosophy quote ── */}
+    {/* ── What We Believe ── */}
     <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-dark">
       <div class="max-w-4xl mx-auto text-center cs-fadein">
         <div class="flex items-center justify-center gap-4 mb-10">
@@ -130,7 +135,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
           class="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight mb-10"
           style="font-family: var(--font-display); font-style: italic;"
         >
-          "Padel is the excuse.<br/>The experience is the reason."
+          "Padel brings us on court.<br/>The experience makes it unforgettable."
         </blockquote>
         <p class="text-white/40 text-base font-light leading-relaxed max-w-xl mx-auto">
           The best retreats don't feel like events. They feel like the week you keep talking about three years later.
@@ -145,20 +150,12 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
           class="text-4xl md:text-5xl font-light text-brand-dark mb-5"
           style="font-family: var(--font-display); font-style: italic;"
         >
-          Ready to experience it?
+          Ready to build your own story?
         </h2>
         <p class="text-brand-dark/45 text-base font-light leading-relaxed mb-10 max-w-sm mx-auto">
-          The next Menorca retreat is filling fast.
+          Every CourtSide retreat starts with a conversation.
         </p>
-        <a
-          href="/menorca"
-          class="btn-luxury inline-flex items-center gap-3"
-        >
-          View the Menorca Retreat
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
+        <EnquiryCta client:visible locale={locale} />
       </div>
     </section>
 

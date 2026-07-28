@@ -43,7 +43,7 @@ export default function PartnersSection() {
           className="text-2xl md:text-3xl font-light text-brand-dark"
           style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
         >
-          Curated by the best.
+          In partnership with the best.
         </h3>
       </motion.div>
 

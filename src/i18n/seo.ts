@@ -1,7 +1,7 @@
 import type { Locale } from './locales';
 import { localizedPath } from './routing';
 
-export type PageId = 'home' | 'about' | 'services' | 'cookies' | 'executiveRetreat' | 'ourStory';
+export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory';
 
 export interface PageSeo {
   title: string;
@@ -33,44 +33,24 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
         'retraite padel, séjour padel luxe, padel Minorque, expérience padel, villa padel privée, CourtSide padel',
     },
   },
-  about: {
+  experience: {
     en: {
-      title: 'CourtSide | About Us',
+      title: 'The Experience — CourtSide Padel',
       description:
-        'Meet the team behind CourtSide Padel — elevating the global padel experience through world-class performance and uncompromising luxury.',
-      keywords: 'CourtSide about, padel founders, Oliver Watellet, Alexy Watellet, luxury padel retreats',
+        'Beyond the court. Real padel expertise, run end-to-end by our own team, plus boat days, vineyards and cliffside sunsets around every retreat.',
+      keywords: 'padel retreat experience, luxury padel coaching, off-court experiences Menorca, CourtSide padel experience',
     },
     es: {
-      title: 'CourtSide | Nuestra Historia',
+      title: 'La Experiencia — CourtSide Padel',
       description:
-        'Conozca al equipo detrás de CourtSide Padel — elevando la experiencia global del pádel con rendimiento de clase mundial y lujo sin concesiones.',
-      keywords: 'CourtSide historia, fundadores pádel, Oliver Watellet, Alexy Watellet, retiros de pádel de lujo',
+        'Más allá de la pista. Verdadera experiencia en pádel, gestionada de principio a fin por nuestro equipo, con salidas en barco, viñedos y atardeceres en cada retiro.',
+      keywords: 'experiencia retiro pádel, coaching pádel de lujo, experiencias fuera de pista Menorca, experiencia CourtSide pádel',
     },
     fr: {
-      title: 'CourtSide | Notre Histoire',
+      title: 'L\'Expérience — CourtSide Padel',
       description:
-        'Découvrez l\'équipe derrière CourtSide Padel — élever l\'expérience padel mondiale par la performance d\'exception et un luxe sans compromis.',
-      keywords: 'CourtSide histoire, fondateurs padel, Oliver Watellet, Alexy Watellet, retraites padel luxe',
-    },
-  },
-  services: {
-    en: {
-      title: 'CourtSide | Our Services',
-      description:
-        'Personal suites, full villa exclusivity, and C-level executive retreats. CourtSide services tailored to your ambition.',
-      keywords: 'padel services, private padel suite, villa padel booking, executive padel retreat, corporate padel',
-    },
-    es: {
-      title: 'CourtSide | Nuestros Servicios',
-      description:
-        'Suites personales, exclusividad en villa completa y retiros ejecutivos C-Level. Servicios CourtSide adaptados a su ambición.',
-      keywords: 'servicios pádel, suite padel privada, reserva villa pádel, retiro ejecutivo pádel, pádel corporativo',
-    },
-    fr: {
-      title: 'CourtSide | Nos Services',
-      description:
-        'Suites personnelles, villa entière en exclusivité et retraites exécutives C-Level. Des services CourtSide adaptés à vos ambitions.',
-      keywords: 'services padel, suite padel privée, réservation villa padel, retraite exécutive padel, padel corporate',
+        'Au-delà du terrain. Une véritable expertise padel, orchestrée de bout en bout par notre équipe, avec sorties en bateau, vignobles et couchers de soleil à chaque retraite.',
+      keywords: 'expérience retraite padel, coaching padel luxe, expériences hors terrain Minorque, expérience CourtSide padel',
     },
   },
   cookies: {
@@ -110,26 +90,25 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
   ourStory: {
     en: {
       title: 'Our Story — CourtSide Padel',
-      description: 'Martin and Oli built CourtSide from a shared obsession with padel and a belief that a sports retreat could be genuinely extraordinary. This is their story.',
-      keywords: 'CourtSide story, padel founders, Martin Oli CourtSide, luxury padel retreat founders',
+      description: 'Twin brothers Alexi and Oliver Watelet picked up padel in Menorca in 2019 and never looked back. This is how CourtSide began.',
+      keywords: 'CourtSide story, padel founders, Alexi Oliver Watelet, luxury padel retreat founders',
     },
     es: {
       title: 'Nuestra Historia — CourtSide Padel',
-      description: 'Martin y Oli construyeron CourtSide a partir de una obsesión compartida por el pádel y la creencia de que un retiro deportivo podía ser verdaderamente extraordinario.',
-      keywords: 'historia CourtSide, fundadores pádel, Martin Oli CourtSide, fundadores retiro pádel lujo',
+      description: 'Los hermanos gemelos Alexi y Oliver Watelet descubrieron el pádel en Menorca en 2019 y nunca miraron atrás. Así nació CourtSide.',
+      keywords: 'historia CourtSide, fundadores pádel, Alexi Oliver Watelet, fundadores retiro pádel lujo',
     },
     fr: {
       title: 'Notre Histoire — CourtSide Padel',
-      description: 'Martin et Oli ont construit CourtSide à partir d\'une obsession partagée pour le padel et la conviction qu\'une retraite sportive pouvait être véritablement extraordinaire.',
-      keywords: 'histoire CourtSide, fondateurs padel, Martin Oli CourtSide, fondateurs retraite padel luxe',
+      description: 'Les frères jumeaux Alexi et Oliver Watelet ont découvert le padel à Minorque en 2019 et ne s\'en sont jamais remis. Voici comment CourtSide est né.',
+      keywords: 'histoire CourtSide, fondateurs padel, Alexi Oliver Watelet, fondateurs retraite padel luxe',
     },
   },
 };
 
 const pagePaths: Record<PageId, string> = {
   home: '/',
-  about: '/about',
-  services: '/services',
+  experience: '/the-experience',
   cookies: '/cookies',
   executiveRetreat: '/executive-retreat',
   ourStory: '/our-story',
@@ -155,8 +134,9 @@ export function getSitemapEntries(siteUrl: string): Array<{ loc: string; lastmod
   const lastmod = '2026-06-15';
   const pages: Array<{ page: PageId; changefreq: string; priority: string }> = [
     { page: 'home', changefreq: 'weekly', priority: '1.0' },
-    { page: 'about', changefreq: 'monthly', priority: '0.7' },
-    { page: 'services', changefreq: 'monthly', priority: '0.8' },
+    { page: 'experience', changefreq: 'monthly', priority: '0.8' },
+    { page: 'ourStory', changefreq: 'monthly', priority: '0.7' },
+    { page: 'executiveRetreat', changefreq: 'monthly', priority: '0.7' },
     { page: 'cookies', changefreq: 'yearly', priority: '0.3' },
   ];
 

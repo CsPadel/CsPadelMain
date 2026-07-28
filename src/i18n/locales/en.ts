@@ -1,42 +1,39 @@
 const en = {
       navbar: {
         ourStory: "Our Story",
-        about: "About Us",
-        services: "Services",
+        experience: "The Experience",
         destinations: "Destinations",
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubai"
       },
-      aboutPage: {
-        heroTitle: "BEYOND THE COURT",
-        heroSubtitle: "Oliver and Alexy Watellet are on a mission to elevate the global padel experience, fusing world-class athletic performance with uncompromising luxury.",
-        teamTitle: "The Masterminds",
-        team: [
-          { name: "Oliver Watellet", role: "Co-Founder & Strategic Vision", photo: "/imagenes/about-us/oli.webp" },
-          { name: "Alexy Watellet", role: "Co-Founder & Athletic Director", photo: "/imagenes/about-us/alex.webp" },
-          { name: "Carlos M.", role: "Head Coach (Menorca)", photo: "/team/carlos.jpg" },
-          { name: "Elena R.", role: "Lead Concierge", photo: "/team/elena.jpg" }
-        ]
-      },
-      servicesPage: {
-        heroTitle: "CURATED FOR EXCELLENCE",
-        heroSubtitle: "Whether you seek personal refinement, a private sanctuary for your inner circle, or a strategic venue for your board, our services adapt to your ambition.",
-        individual: {
-          title: "Personal Suites",
-          desc: "Perfect for the focused individual or couples. Connect, play, and unwind in private luxury while engaging with our world-class padel programs.",
-          action: "Explore Suites"
-        },
-        group: {
-          title: "Full Villa Exclusivity",
-          desc: "Uncompromised privacy for your trusted group of 8-20 guests. True luxury is having the entire estate to yourselves.",
-          action: "Reserve a Villa"
-        },
-        corporate: {
-          title: "C-Level Strategy",
-          desc: "Silence the noise. Executive retreats designed for absolute focus, high-stakes networking, and team building at the highest level.",
-          action: "Download Dossier"
-        }
+      experiencePage: {
+        heroEyebrow: "The Experience",
+        heroTitle: "Beyond the Court.",
+        heroSubtitle: "It's not just about the padel. It's about where you play, who you play with, and everything that happens around the game.",
+        apartTitle: "What sets us apart.",
+        apart: [
+          {
+            title: "Real Padel Expertise",
+            desc: "Over ten years playing and coaching at a high level, including competitive players on our own team. We know the game, not just the industry around it."
+          },
+          {
+            title: "Run End-to-End, By Us",
+            desc: "Coaching, hospitality, logistics and dining, all handled directly by our own team. Nothing outsourced, nothing generic."
+          },
+          {
+            title: "Personal, Whatever the Format",
+            desc: "Mixed abilities welcome on every retreat, with coaching tailored player by player. For private and executive groups, the entire itinerary is built around you."
+          }
+        ],
+        offCourtEyebrow: "Off the Court",
+        offCourtTitle: "It doesn't stop at the final point.",
+        offCourtText: "Boat tours along hidden coastlines. Wine and cheese tastings at local vineyards. Cliffside sunsets. Mountain and beach hikes. Handpicked dining that reflects each destination, not a resort buffet. The court is where it starts. It's not where it ends.",
+        quoteEyebrow: "In Their Words",
+        quote: "We've always been passionate about padel, travel, and the experience of discovering new places and meeting new people. We realised how easily the game creates connection, no matter your level or background. Through shared experiences on and off the court, we want to bring people together in beautiful locations and create moments that go beyond just playing padel.",
+        quoteAuthor: "Alexi & Oliver Watelet, Co-Founders",
+        ctaTitle: "Ready to experience it?",
+        ctaText: "Every CourtSide retreat starts with a conversation."
       },
       hero: {
         title: "COURTSIDE",
@@ -376,12 +373,6 @@ const en = {
           groupDescriptor: "Exclusive grounds for your circle.",
           corporateDescriptor: "Strategy. On and off the court."
         },
-        luxuryStrip: {
-          destinations: "Exclusive Destinations",
-          privateAccess: "Private Access",
-          curatedProperties: "Curated Properties",
-          conciergeService: "Concierge Service"
-        },
         individual: {
           title: "Your personal suite.",
           desc: "Connect, rest, and play at the highest level in a space reserved for your tranquility.",
@@ -437,9 +428,9 @@ const en = {
         reject: "Reject non-essential"
       },
       whatsappConcierge: {
-        label: "24/7 Concierge",
-        ariaLabel: "Chat with our concierge on WhatsApp",
-        prefillMessage: "Hello, I'd like to speak with the CourtSide concierge."
+        label: "Chat with Us",
+        ariaLabel: "Chat with the CourtSide team on WhatsApp",
+        prefillMessage: "Hello, I'd like to speak with the CourtSide team."
       },
       cookiePolicy: {
         title: "Cookie Policy",
@@ -468,22 +459,16 @@ const en = {
         ]
       },
       bespokeRetreats: {
-        title: "Want it on your dates?",
-        description: "Private retreats for closed groups, fully customisable around your dates and priorities. Any week of the year, in Menorca.",
+        eyebrow: "Bespoke Private Retreats",
+        title: "Have Your Own Dates in Mind?",
+        description: "Already have your group and your dates? Tell us your plans and we'll build the retreat around them — any week of the year, in Menorca.",
         features: [
           "Minimum 6 guests",
           "Any week of the year",
-          "Fully tailored"
+          "Fully tailored",
+          "Two months' notice"
         ],
-        cta: "Enquire about a bespoke private retreat →",
-        modalTitle: "Bespoke Enquiry",
-        modalDesc: "Leave your details and a specialist will reach out to tailor your private retreat.",
-        nameLabel: "Full Name",
-        emailLabel: "Email Address",
-        datesLabel: "Desired Dates (Optional)",
-        guestsLabel: "Number of Guests (Min 6)",
-        submitBtn: "Request Proposal",
-        successMsg: "Thank you. Our concierge team will contact you shortly."
+        cta: "Plan Your Retreat"
       },
       baliPage: {
         heroTitle: "BALI",
@@ -555,53 +540,147 @@ const en = {
         ctaSecondaryBtn: "Speak with Concierge"
       },
       testimonials: {
-        label: "What Guests Say",
+        label: "What Guests Have To Say",
         title: "Remembered long after.",
-        subtitle: "Guests who arrived as players. Left as part of the CourtSide community.",
+        subtitle: "Guests arrive as players. They leave part of the CourtSide community.",
+        // ⚠️ PLACEHOLDER CONTENT — names, dates and photos below are illustrative
+        // only. They must be replaced with real, consented guest testimonials
+        // (real name, real retreat date, real photo) before this site goes live.
+        // Dates are set within 2025–2026 so they stay consistent with "Est. 2025".
         items: [
           {
-            name: "M.N.",
-            role: "Guest, 2024",
+            name: "Charlotte Reeve",
+            role: "Guest · Menorca, October 2025",
             text: "Menorca had this perfect flow to it. Sunny padel sessions, slow afternoons, amazing dinners. Every moment felt intentional.",
-            initials: "M",
+            initials: "C",
             image: "/imagenes/Cala en porter.jpg"
           },
           {
-            name: "J.H.",
-            role: "Guest, 2024",
-            text: "Every moment felt intentional. I left feeling lighter, stronger, and genuinely grateful.",
-            initials: "J",
+            name: "Tom Bradshaw",
+            role: "Guest · Menorca, October 2025",
+            text: "I came for the padel and left with eleven new friends. I went home lighter, stronger, and genuinely grateful.",
+            initials: "T",
             image: "/imagenes/IMG_2167.jpeg"
           },
           {
-            name: "L.F.",
-            role: "Guest, 2024",
+            name: "Sofia Almeida",
+            role: "Guest · Menorca, May 2026",
             text: "The padel setup in Menorca is top tier — professional courts, great coaches, and a relaxed atmosphere that makes you want to stay forever.",
-            initials: "L",
+            initials: "S",
             image: "/imagenes/EM-22.jpg"
           },
           {
-            name: "N.S.",
-            role: "Guest, 2024",
+            name: "James Whitfield",
+            role: "Guest · Menorca, May 2026",
             text: "Such care and attention to service, cleanliness, and hospitality is unparalleled anywhere else we stayed.",
-            initials: "N",
+            initials: "J",
             image: "/imagenes/JOPS-721.JPG"
           },
           {
-            name: "K.L.",
-            role: "Guest, 2024",
+            name: "Nina Bergström",
+            role: "Guest · Menorca, May 2026",
             text: "Mornings with padel, yoga by the cliff, world-class food, and effortless service throughout. This is what luxury actually feels like.",
-            initials: "K",
+            initials: "N",
             image: "/imagenes/binifadet.jpeg"
           },
           {
-            name: "E.M.",
-            role: "Guest, 2024",
+            name: "Marcus Ellery",
+            role: "Guest · Menorca, October 2025",
             text: "Oliver brings such great energy to the court, balancing relaxed coaching with focused improvement. A rare combination.",
-            initials: "E",
+            initials: "M",
             image: "/imagenes/cap roig.jpg"
           }
         ]
+      },
+      enquiryForm: {
+        triggerLabel: "Enquire About a Retreat",
+        eyebrow: "Retreat Enquiry",
+        title: "Let's build your retreat.",
+        close: "Close enquiry form",
+        back: "Back",
+        next: "Continue",
+        submit: "Send enquiry",
+        sending: "Sending…",
+        emailSubject: "CourtSide retreat enquiry",
+        steps: {
+          destination: {
+            question: "Where would you like to play?",
+            help: "Pick a destination, or tell us you're still deciding.",
+            options: {
+              menorca: "Menorca",
+              bali: "Bali",
+              dubai: "Dubai",
+              undecided: "Still deciding"
+            }
+          },
+          dates: {
+            question: "When are you thinking of travelling?",
+            help: "Private retreats run any week of the year, with two months' notice.",
+            monthLabel: "Month",
+            yearLabel: "Year",
+            months: {
+              january: "January",
+              february: "February",
+              march: "March",
+              april: "April",
+              may: "May",
+              june: "June",
+              july: "July",
+              august: "August",
+              september: "September",
+              october: "October",
+              november: "November",
+              december: "December",
+              flexible: "Flexible"
+            }
+          },
+          group: {
+            question: "How many of you will be travelling?",
+            help: "Including any non-playing partners joining the group.",
+            label: "Group size",
+            placeholder: "e.g. 8",
+            note: "Private retreats run for a minimum of 6 guests. Travelling solo or as a pair? Our open retreats are the perfect fit."
+          },
+          priorities: {
+            question: "What matters most to you?",
+            help: "Choose as many as you like — it helps us shape the week around your group.",
+            options: {
+              coaching: "Coaching and improvement",
+              matchplay: "Competitive matchplay",
+              wellness: "Wellness and recovery",
+              dining: "Food and wine",
+              boatAndSea: "Boat days and the sea",
+              culture: "Local culture and exploring",
+              celebration: "A birthday or celebration",
+              corporate: "A company or leadership offsite"
+            },
+            notesLabel: "Anything else we should know?",
+            notesPlaceholder: "The occasion, playing levels, must-haves…"
+          },
+          contact: {
+            question: "How can we reach you?",
+            help: "One of the founders will come back to you personally, usually within 24 hours.",
+            firstName: "First name",
+            lastName: "Last name",
+            email: "Email",
+            phone: "Phone",
+            phoneOptional: "Optional",
+            consent: "I agree to CourtSide Padel using these details to respond to my enquiry."
+          }
+        },
+        errors: {
+          destination: "Please choose a destination to continue.",
+          dates: "Please choose a month and a year.",
+          group: "Please tell us how many guests are travelling.",
+          name: "Please enter your first and last name.",
+          email: "Please enter a valid email address.",
+          consent: "Please accept the use of your details so we can reply.",
+          submit: "Something went wrong sending your enquiry. Please email executive@courtsidepadel.com and we'll pick it up straight away."
+        },
+        success: {
+          title: "Thank you.",
+          body: "Your enquiry is with us. One of the founders will be in touch personally to start shaping your retreat."
+        }
       }
     } as const;
 

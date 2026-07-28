@@ -1,11 +1,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import '../i18n/config';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
 
-export default function TestimonialsCarousel() {
-  const { t } = useTranslation();
-  
+interface TestimonialsCarouselProps {
+  locale?: Locale;
+}
+
+export default function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
+  const { t } = usePageTranslation(locale);
+
   // Fetch testimonials from translation config
   const testimonials = t('testimonials.items', { returnObjects: true }) as Array<{
     name: string;

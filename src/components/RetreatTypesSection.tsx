@@ -13,6 +13,8 @@ const retreats = [
     tag: 'Solo or Friends',
     name: 'Open Retreat',
     desc: 'Join a curated group of like-minded players for five immersive days of padel, fine dining and Mediterranean life.',
+    // TODO: replace with real guests playing padel or dining together, smiling.
+    // Warm light, sunset, happy mood.
     image: '/imagenes/154A8505.JPG',
     href: null as string | null,
     hrefExternal: MENORCA_URL + '#rooms',
@@ -23,6 +25,8 @@ const retreats = [
     tag: 'Ultimate Privacy',
     name: 'Private Retreat',
     desc: 'Reserve the entire estate exclusively for your group. Complete privacy, custom schedule, and total immersion.',
+    // TODO: replace with the villa or an empty court at night, no people.
+    // Should feel quiet and private.
     image: '/imagenes/binifadet.jpeg',
     href: null as string | null,
     hrefExternal: MENORCA_URL + '#rooms',
@@ -33,6 +37,8 @@ const retreats = [
     tag: 'C-Suite & Boards',
     name: 'Executive Retreat',
     desc: 'Strategy in silence. High-performance leadership and networking in the most exclusive padel setting.',
+    // TODO: replace with 2–3 people in smart casual clothes, on court or on a
+    // quiet terrace. Calm, serious mood — not a party mood.
     image: '/imagenes/EM-22.jpg',
     href: '/executive-retreat',
     hrefExternal: null,
@@ -61,7 +67,7 @@ export default function RetreatTypesSection({ locale }: Props) {
           <div className="flex items-center gap-4 mb-5">
             <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
             <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              How You Retreat
+              Choose Your Retreat
             </p>
           </div>
           <h2
@@ -100,33 +106,34 @@ export default function RetreatTypesSection({ locale }: Props) {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
                 />
 
-                {/* Gradient overlay */}
+                {/* Gradient overlay — weighted towards the bottom so the copy
+                    stays legible whatever the photograph behind it */}
                 <div
                   className="absolute inset-0 transition-opacity duration-400"
                   style={{
                     background:
-                      'linear-gradient(to bottom, rgba(1,25,44,0.10) 0%, rgba(1,25,44,0.40) 40%, rgba(1,25,44,0.95) 100%)',
+                      'linear-gradient(to bottom, rgba(1,25,44,0.10) 0%, rgba(1,25,44,0.55) 45%, rgba(1,25,44,0.99) 100%)',
                   }}
                 />
 
                 {/* Content */}
                 <div className="relative z-10 p-7 md:p-8">
-                  <span className="text-[9px] uppercase tracking-[0.32em] text-brand-gold font-semibold mb-3 block">
+                  <span className="text-[10px] uppercase tracking-[0.28em] text-brand-gold font-semibold mb-3 block">
                     {retreat.tag}
                   </span>
                   <h3
-                    className="text-2xl md:text-3xl font-light text-white mb-3 leading-snug"
+                    className="text-3xl md:text-4xl font-normal text-white mb-4 leading-snug"
                     style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
                   >
                     {retreat.name}
                   </h3>
-                  <p className="text-white/55 text-sm font-light leading-relaxed mb-6 max-w-[30ch]">
+                  <p className="text-white/85 text-base font-normal leading-relaxed mb-6 max-w-[34ch]">
                     {retreat.desc}
                   </p>
 
-                  <div className="flex items-center gap-2 text-[11px] uppercase tracking-widest font-semibold text-white/40 group-hover:text-brand-gold transition-colors duration-300">
+                  <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-white/70 group-hover:text-brand-gold transition-colors duration-300">
                     Explore
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
 

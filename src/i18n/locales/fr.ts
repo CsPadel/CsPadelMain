@@ -1,42 +1,39 @@
 const fr = {
       navbar: {
         ourStory: "Notre Histoire",
-        about: "À Propos",
-        services: "Services",
+        experience: "L'Expérience",
         destinations: "Destinations",
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubai"
       },
-      aboutPage: {
-        heroTitle: "AU-DELÀ DU COURT",
-        heroSubtitle: "Oliver et Alexy Watellet ont pour mission d'élever l'expérience padel à l'échelle mondiale, en fusionnant performance athlétique de premier plan et luxe sans compromis.",
-        teamTitle: "Les Esprits Créateurs",
-        team: [
-          { name: "Oliver Watellet", role: "Co-fondateur & Vision stratégique", photo: "/imagenes/about-us/oli.webp" },
-          { name: "Alexy Watellet", role: "Co-fondateur & Directeur sportif", photo: "/imagenes/about-us/alex.webp" },
-          { name: "Carlos M.", role: "Entraîneur principal (Menorca)", photo: "/team/carlos.jpg" },
-          { name: "Elena R.", role: "Concierge en chef", photo: "/team/elena.jpg" }
-        ]
-      },
-      servicesPage: {
-        heroTitle: "SÉLECTIONNÉ POUR L'EXCELLENCE",
-        heroSubtitle: "Que vous recherchiez un raffinement personnel, un sanctuaire privé pour votre cercle intime ou un lieu stratégique pour votre conseil d'administration, nos services s'adaptent à vos ambitions.",
-        individual: {
-          title: "Suites Privées",
-          desc: "Idéal pour la personne exigeante ou les couples. Connectez-vous, jouez et détendez-vous dans un luxe privé tout en profitant de nos programmes padel de classe mondiale.",
-          action: "Découvrir les Suites"
-        },
-        group: {
-          title: "Exclusivité Villa Intégrale",
-          desc: "Intimité absolue pour votre cercle de confiance de 8 à 20 convives. Le véritable luxe, c'est de disposer de l'ensemble du domaine rien que pour vous.",
-          action: "Réserver une Villa"
-        },
-        corporate: {
-          title: "Stratégie Dirigeants",
-          desc: "Éloignez-vous du tumulte. Retraites exécutives conçues pour une concentration absolue, un réseautage de haut vol et un team building au plus haut niveau.",
-          action: "Télécharger le Dossier"
-        }
+      experiencePage: {
+        heroEyebrow: "L'Expérience",
+        heroTitle: "Au-delà du court.",
+        heroSubtitle: "Il ne s'agit pas seulement de padel. Il s'agit de l'endroit où vous jouez, des personnes avec qui vous jouez, et de tout ce qui se passe autour du jeu.",
+        apartTitle: "Ce qui nous distingue.",
+        apart: [
+          {
+            title: "Une Véritable Expertise Padel",
+            desc: "Plus de dix ans à jouer et à entraîner au plus haut niveau, avec des joueurs de compétition au sein de notre propre équipe. Nous connaissons le jeu, pas seulement l'industrie qui l'entoure."
+          },
+          {
+            title: "De Bout en Bout, Par Nous",
+            desc: "Entraînement, hospitalité, logistique et gastronomie, tout est géré directement par notre équipe. Rien de sous-traité, rien de générique."
+          },
+          {
+            title: "Personnel, Quel Que Soit le Format",
+            desc: "Tous les niveaux sont les bienvenus sur chaque retraite, avec un coaching adapté joueur par joueur. Pour les groupes privés et exécutifs, l'itinéraire entier est construit autour de vous."
+          }
+        ],
+        offCourtEyebrow: "En Dehors du Court",
+        offCourtTitle: "Cela ne s'arrête pas au dernier point.",
+        offCourtText: "Sorties en bateau le long de criques cachées. Dégustations de vins et de fromages dans les vignobles locaux. Couchers de soleil sur les falaises. Randonnées en montagne et en bord de mer. Une restauration choisie une à une qui reflète chaque destination, pas un buffet d'hôtel. Le court est le point de départ. Ce n'est pas le point d'arrivée.",
+        quoteEyebrow: "Dans Leurs Mots",
+        quote: "Nous avons toujours été passionnés par le padel, les voyages et l'expérience de découvrir de nouveaux endroits et de rencontrer de nouvelles personnes. Nous avons réalisé à quel point ce jeu crée facilement du lien, quel que soit votre niveau ou votre parcours. À travers des expériences partagées sur et en dehors du court, nous voulons réunir les gens dans de beaux endroits et créer des moments qui vont bien au-delà du simple fait de jouer au padel.",
+        quoteAuthor: "Alexi & Oliver Watelet, Co-fondateurs",
+        ctaTitle: "Prêt à le vivre ?",
+        ctaText: "Chaque retraite CourtSide commence par une conversation."
       },
       hero: {
         title: "COURTSIDE",
@@ -376,12 +373,6 @@ const fr = {
           groupDescriptor: "Un domaine exclusif pour votre cercle.",
           corporateDescriptor: "Stratégie. Sur et en dehors du court."
         },
-        luxuryStrip: {
-          destinations: "Destinations exclusives",
-          privateAccess: "Accès privé",
-          curatedProperties: "Propriétés sélectionnées",
-          conciergeService: "Service concierge"
-        },
         individual: {
           title: "Votre suite personnelle.",
           desc: "Connectez-vous, reposez-vous et jouez au plus haut niveau dans un espace réservé à votre sérénité.",
@@ -437,9 +428,9 @@ const fr = {
         reject: "Refuser les non essentiels"
       },
       whatsappConcierge: {
-        label: "Concierge 24/7",
-        ariaLabel: "Discutez avec notre concierge sur WhatsApp",
-        prefillMessage: "Bonjour, je souhaiterais parler avec le concierge CourtSide."
+        label: "Écrivez-nous",
+        ariaLabel: "Discutez avec l'équipe CourtSide sur WhatsApp",
+        prefillMessage: "Bonjour, je souhaiterais parler avec l'équipe CourtSide."
       },
       cookiePolicy: {
         title: "Politique de cookies",
@@ -468,22 +459,16 @@ const fr = {
         ]
       },
       bespokeRetreats: {
-        title: "Vous souhaitez vos propres dates ?",
-        description: "Retraites privées pour groupes fermés, entièrement personnalisables selon vos dates et priorités. Toutes les semaines de l'année, à Minorque.",
+        eyebrow: "Retraites Privées Sur Mesure",
+        title: "Vous Avez Déjà Vos Propres Dates ?",
+        description: "Vous avez déjà votre groupe et vos dates ? Dites-nous vos projets et nous construirons la retraite autour d'eux — toutes les semaines de l'année, à Minorque.",
         features: [
           "Minimum 6 convives",
           "Toutes les semaines de l'année",
-          "Entièrement personnalisé"
+          "Entièrement personnalisé",
+          "Deux mois de préavis"
         ],
-        cta: "Demander une retraite privée sur mesure →",
-        modalTitle: "Demande sur mesure",
-        modalDesc: "Laissez vos coordonnées ; un spécialiste vous contactera pour personnaliser votre retraite privée.",
-        nameLabel: "Nom complet",
-        emailLabel: "Adresse e-mail",
-        datesLabel: "Dates souhaitées (facultatif)",
-        guestsLabel: "Nombre de convives (min. 6)",
-        submitBtn: "Demander une proposition",
-        successMsg: "Merci. Notre équipe concierge vous contactera prochainement."
+        cta: "Planifiez Votre Retraite"
       },
       baliPage: {
         heroTitle: "BALI",
@@ -555,53 +540,148 @@ const fr = {
         ctaSecondaryBtn: "Parler au Concierge"
       },
       testimonials: {
-        label: "Ce Qu'ils Disent",
+        label: "Ce Que Disent Nos Convives",
         title: "Longtemps après le retour.",
-        subtitle: "Des convives arrivés en joueurs. Repartis membres de la communauté CourtSide.",
+        subtitle: "Les convives arrivent en joueurs. Ils repartent membres de la communauté CourtSide.",
+        // ⚠️ CONTENU PROVISOIRE — les noms, dates et photos ci-dessous sont
+        // illustratifs. Ils doivent être remplacés par de vrais témoignages
+        // consentis (vrai nom, vraie date, vraie photo) avant la mise en ligne.
+        // Les dates se situent entre 2025 et 2026 pour rester cohérentes
+        // avec « Est. 2025 ».
         items: [
           {
-            name: "M.N.",
-            role: "Convive, 2024",
+            name: "Charlotte Reeve",
+            role: "Convive · Minorque, octobre 2025",
             text: "Minorque avait ce flow parfait. Des sessions de padel ensoleillées, des après-midis lents, des dîners incroyables. Chaque moment semblait intentionnel.",
-            initials: "M",
+            initials: "C",
             image: "/imagenes/Cala en porter.jpg"
           },
           {
-            name: "J.H.",
-            role: "Convive, 2024",
-            text: "Chaque moment semblait intentionnel. Je suis reparti plus léger, plus fort et sincèrement reconnaissant.",
-            initials: "J",
+            name: "Tom Bradshaw",
+            role: "Convive · Minorque, octobre 2025",
+            text: "Je suis venu pour le padel et je suis reparti avec onze nouveaux amis. Je suis rentré plus léger, plus fort et sincèrement reconnaissant.",
+            initials: "T",
             image: "/imagenes/IMG_2167.jpeg"
           },
           {
-            name: "L.F.",
-            role: "Convive, 2024",
+            name: "Sofia Almeida",
+            role: "Convive · Minorque, mai 2026",
             text: "L'installation padel à Minorque est au plus haut niveau — courts professionnels, excellents coachs, atmosphère détendue qui donne envie de rester pour toujours.",
-            initials: "L",
+            initials: "S",
             image: "/imagenes/EM-22.jpg"
           },
           {
-            name: "N.S.",
-            role: "Convive, 2024",
+            name: "James Whitfield",
+            role: "Convive · Minorque, mai 2026",
             text: "Une telle attention au service, à la propreté et à l'hospitalité n'a aucun équivalent dans tous les endroits où nous avons séjourné.",
-            initials: "N",
+            initials: "J",
             image: "/imagenes/JOPS-721.JPG"
           },
           {
-            name: "K.L.",
-            role: "Convive, 2024",
+            name: "Nina Bergström",
+            role: "Convive · Minorque, mai 2026",
             text: "Matinées padel, yoga sur la falaise, gastronomie d'exception et service impeccable tout au long du séjour. C'est ce que le luxe signifie vraiment.",
-            initials: "K",
+            initials: "N",
             image: "/imagenes/binifadet.jpeg"
           },
           {
-            name: "E.M.",
-            role: "Convive, 2024",
+            name: "Marcus Ellery",
+            role: "Convive · Minorque, octobre 2025",
             text: "Oliver apporte une énergie formidable sur le court, alliant coaching détendu et progression ciblée. Une combinaison rare et précieuse.",
-            initials: "E",
+            initials: "M",
             image: "/imagenes/cap roig.jpg"
           }
         ]
+      },
+      enquiryForm: {
+        triggerLabel: "Demander une Retraite",
+        eyebrow: "Demande de Retraite",
+        title: "Construisons votre retraite.",
+        close: "Fermer le formulaire de demande",
+        back: "Retour",
+        next: "Continuer",
+        submit: "Envoyer la demande",
+        sending: "Envoi…",
+        emailSubject: "Demande de retraite CourtSide",
+        steps: {
+          destination: {
+            question: "Où souhaiteriez-vous jouer ?",
+            help: "Choisissez une destination, ou dites-nous que vous hésitez encore.",
+            options: {
+              menorca: "Minorque",
+              bali: "Bali",
+              dubai: "Dubai",
+              undecided: "Je n'ai pas encore décidé"
+            }
+          },
+          dates: {
+            question: "Quand envisagez-vous de voyager ?",
+            help: "Les retraites privées se déroulent toutes les semaines de l'année, avec deux mois de préavis.",
+            monthLabel: "Mois",
+            yearLabel: "Année",
+            months: {
+              january: "Janvier",
+              february: "Février",
+              march: "Mars",
+              april: "Avril",
+              may: "Mai",
+              june: "Juin",
+              july: "Juillet",
+              august: "Août",
+              september: "Septembre",
+              october: "Octobre",
+              november: "Novembre",
+              december: "Décembre",
+              flexible: "Flexible"
+            }
+          },
+          group: {
+            question: "Combien serez-vous à voyager ?",
+            help: "Y compris les accompagnants qui ne joueront pas.",
+            label: "Taille du groupe",
+            placeholder: "p. ex. 8",
+            note: "Les retraites privées se déroulent à partir de 6 convives. Vous voyagez seul ou à deux ? Nos retraites ouvertes sont faites pour vous."
+          },
+          priorities: {
+            question: "Qu'est-ce qui compte le plus pour vous ?",
+            help: "Choisissez autant d'options que vous le souhaitez — cela nous aide à construire la semaine autour de votre groupe.",
+            options: {
+              coaching: "Coaching et progression",
+              matchplay: "Matchs de compétition",
+              wellness: "Bien-être et récupération",
+              dining: "Gastronomie et vin",
+              boatAndSea: "Journées en bateau et mer",
+              culture: "Culture locale et découverte",
+              celebration: "Un anniversaire ou une célébration",
+              corporate: "Un séminaire d'entreprise ou de direction"
+            },
+            notesLabel: "Autre chose à nous signaler ?",
+            notesPlaceholder: "L'occasion, les niveaux de jeu, vos incontournables…"
+          },
+          contact: {
+            question: "Comment pouvons-nous vous joindre ?",
+            help: "L'un des fondateurs vous répondra personnellement, généralement sous 24 heures.",
+            firstName: "Prénom",
+            lastName: "Nom",
+            email: "E-mail",
+            phone: "Téléphone",
+            phoneOptional: "Facultatif",
+            consent: "J'accepte que CourtSide Padel utilise ces informations pour répondre à ma demande."
+          }
+        },
+        errors: {
+          destination: "Veuillez choisir une destination pour continuer.",
+          dates: "Veuillez choisir un mois et une année.",
+          group: "Veuillez nous indiquer combien de convives voyagent.",
+          name: "Veuillez saisir votre prénom et votre nom.",
+          email: "Veuillez saisir une adresse e-mail valide.",
+          consent: "Veuillez accepter l'utilisation de vos informations pour que nous puissions vous répondre.",
+          submit: "Un problème est survenu lors de l'envoi de votre demande. Écrivez-nous à executive@courtsidepadel.com et nous la traiterons immédiatement."
+        },
+        success: {
+          title: "Merci.",
+          body: "Nous avons bien reçu votre demande. L'un des fondateurs vous contactera personnellement pour commencer à façonner votre retraite."
+        }
       }
     } as const;
 

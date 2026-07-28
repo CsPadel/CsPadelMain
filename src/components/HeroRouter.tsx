@@ -76,7 +76,7 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
           >
             <span className="block h-px w-8 bg-brand-gold/55" aria-hidden="true" />
             <span className="text-[10px] uppercase tracking-[0.42em] text-brand-gold font-semibold">
-              CourtSide Padel · Est. 2026
+              CourtSide Padel · Est. 2025
             </span>
             <span className="block h-px w-8 bg-brand-gold/55" aria-hidden="true" />
           </motion.div>
@@ -96,7 +96,7 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
                   lineHeight: 0.9,
                 }}
               >
-                World-Class
+                Curated
               </motion.div>
             </div>
             <div className="overflow-hidden mb-9 md:mb-11">
@@ -112,7 +112,7 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
                   lineHeight: 0.9,
                 }}
               >
-                Padel Retreats.
+                Padel Retreats
               </motion.div>
             </div>
           </div>
@@ -169,44 +169,8 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
         </motion.div>
       </div>
 
-      {/* ── Luxury Signals Strip ────────────────────────────────── */}
+      {/* Anchor for the hero "Discover Experiences" CTA */}
       <div id="experiences" aria-hidden="true" />
-      <LuxuryStrip locale={localeProp} />
     </>
-  );
-};
-
-/* ─── Luxury credentials strip ─────────────────────────────── */
-const LuxuryStrip = ({ locale: localeProp }: { locale?: Locale }) => {
-  const { t } = usePageTranslation(localeProp);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.65, ease: 'easeOut' }}
-      className="luxury-strip"
-    >
-      <div className="luxury-item">
-        <span className="luxury-number">3</span>
-        <span className="luxury-label">{t('gateway.luxuryStrip.destinations')}</span>
-      </div>
-      <span className="luxury-divider" aria-hidden="true">—</span>
-      <div className="luxury-item">
-        <span className="luxury-number">100%</span>
-        <span className="luxury-label">{t('gateway.luxuryStrip.privateAccess')}</span>
-      </div>
-      <span className="luxury-divider" aria-hidden="true">—</span>
-      <div className="luxury-item">
-        <span className="luxury-number">5★</span>
-        <span className="luxury-label">{t('gateway.luxuryStrip.curatedProperties')}</span>
-      </div>
-      <span className="luxury-divider" aria-hidden="true">—</span>
-      <div className="luxury-item">
-        <span className="luxury-number">24/7</span>
-        <span className="luxury-label">{t('gateway.luxuryStrip.conciergeService')}</span>
-      </div>
-    </motion.div>
   );
 };

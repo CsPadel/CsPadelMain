@@ -1,42 +1,39 @@
 const es = {
       navbar: {
         ourStory: "Nuestra Historia",
-        about: "Sobre Nosotros",
-        services: "Servicios",
+        experience: "La Experiencia",
         destinations: "Destinos",
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubái"
       },
-      aboutPage: {
-        heroTitle: "MÁS ALLÁ DE LA PISTA",
-        heroSubtitle: "Oliver y Alexy Watellet tienen la misión de elevar la experiencia global del pádel, fusionando el rendimiento atlético de clase mundial con el lujo absoluto.",
-        teamTitle: "Las Mentes Maestras",
-        team: [
-          { name: "Oliver Watellet", role: "Co-Fundador y Visión Estratégica", photo: "/imagenes/about-us/oli.webp" },
-          { name: "Alexy Watellet", role: "Co-Fundador y Director Atlético", photo: "/imagenes/about-us/alex.webp" },
-          { name: "Carlos M.", role: "Head Coach (Menorca)", photo: "/team/carlos.jpg" },
-          { name: "Elena R.", role: "Lead Concierge", photo: "/team/elena.jpg" }
-        ]
-      },
-      servicesPage: {
-        heroTitle: "DISEÑADO PARA LA EXCELENCIA",
-        heroSubtitle: "Ya sea que busque perfeccionamiento personal, un santuario privado para su círculo, o una sede estratégica para su junta, nos adaptamos a su ambición.",
-        individual: {
-          title: "Suites Personales",
-          desc: "Ideal para individuos enfocados o parejas. Conecte, juegue y descanse en lujo privado mientras participa en nuestro programa de clase mundial.",
-          action: "Explorar Suites"
-        },
-        group: {
-          title: "Exclusividad en Villa",
-          desc: "Privacidad absoluta para su grupo de confianza (8-20 invitados). El verdadero lujo es tener toda la finca entera a su disposición.",
-          action: "Reservar la Villa"
-        },
-        corporate: {
-          title: "Estrategia C-Level",
-          desc: "Silencie el ruido. Retiros ejecutivos diseñados para el enfoque absoluto, networking de alto nivel y team building directivo.",
-          action: "Descargar Dossier"
-        }
+      experiencePage: {
+        heroEyebrow: "La Experiencia",
+        heroTitle: "Más allá de la pista.",
+        heroSubtitle: "No se trata solo del pádel. Se trata de dónde juegas, con quién juegas y de todo lo que ocurre alrededor del juego.",
+        apartTitle: "Lo que nos distingue.",
+        apart: [
+          {
+            title: "Verdadera Experiencia en Pádel",
+            desc: "Más de diez años jugando y entrenando a alto nivel, incluidos jugadores de competición en nuestro propio equipo. Conocemos el juego, no solo la industria que lo rodea."
+          },
+          {
+            title: "De Principio a Fin, Por Nosotros",
+            desc: "Entrenamiento, hospitalidad, logística y gastronomía, todo gestionado directamente por nuestro equipo. Nada subcontratado, nada genérico."
+          },
+          {
+            title: "Personal, Sea Cual Sea el Formato",
+            desc: "Todos los niveles son bienvenidos en cada retiro, con un entrenamiento adaptado jugador por jugador. Para grupos privados y ejecutivos, el itinerario completo se construye a tu medida."
+          }
+        ],
+        offCourtEyebrow: "Fuera de la Pista",
+        offCourtTitle: "No termina en el último punto.",
+        offCourtText: "Salidas en barco por calas escondidas. Catas de vino y queso en bodegas locales. Atardeceres sobre los acantilados. Rutas por la montaña y la playa. Restaurantes escogidos uno a uno que reflejan cada destino, no un bufé de hotel. La pista es donde empieza. No es donde termina.",
+        quoteEyebrow: "En Sus Palabras",
+        quote: "Siempre nos ha apasionado el pádel, viajar y la experiencia de descubrir lugares nuevos y conocer gente nueva. Nos dimos cuenta de la facilidad con la que este juego crea conexión, sea cual sea tu nivel o tu procedencia. A través de experiencias compartidas dentro y fuera de la pista, queremos reunir a la gente en lugares hermosos y crear momentos que van mucho más allá de jugar al pádel.",
+        quoteAuthor: "Alexi y Oliver Watelet, Co-Fundadores",
+        ctaTitle: "¿Listo para vivirlo?",
+        ctaText: "Cada retiro CourtSide empieza con una conversación."
       },
       hero: {
         title: "COURTSIDE",
@@ -376,12 +373,6 @@ const es = {
           groupDescriptor: "Un espacio exclusivo para tu círculo.",
           corporateDescriptor: "Estrategia. Dentro y fuera de la pista."
         },
-        luxuryStrip: {
-          destinations: "Destinos Exclusivos",
-          privateAccess: "Acceso Privado",
-          curatedProperties: "Propiedades Seleccionadas",
-          conciergeService: "Servicio de Concierge"
-        },
         individual: {
           title: "Tu suite personal.",
           desc: "Conecta, descansa y juega al más alto nivel en un espacio reservado para tu tranquilidad.",
@@ -437,9 +428,9 @@ const es = {
         reject: "Rechazar no esenciales"
       },
       whatsappConcierge: {
-        label: "Concierge 24/7",
-        ariaLabel: "Chatea con nuestro concierge por WhatsApp",
-        prefillMessage: "Hola, me gustaría hablar con el concierge de CourtSide."
+        label: "Escríbenos",
+        ariaLabel: "Chatea con el equipo de CourtSide por WhatsApp",
+        prefillMessage: "Hola, me gustaría hablar con el equipo de CourtSide."
       },
       cookiePolicy: {
         title: "Política de cookies",
@@ -468,22 +459,16 @@ const es = {
         ]
       },
       bespokeRetreats: {
-        title: "¿Lo quieres en tus fechas?",
-        description: "Retiros privados para grupos cerrados, totalmente personalizables en tus fechas y prioridades. Cualquier semana del año, en Menorca.",
+        eyebrow: "Retiros Privados a Medida",
+        title: "¿Ya Tienes Tus Propias Fechas?",
+        description: "¿Ya tienes tu grupo y tus fechas? Cuéntanos tus planes y construiremos el retiro a su alrededor — cualquier semana del año, en Menorca.",
         features: [
           "Mínimo 6 invitados",
           "Cualquier semana del año",
-          "Totalmente a medida"
+          "Totalmente a medida",
+          "Dos meses de antelación"
         ],
-        cta: "Solicita un retiro privado a medida →",
-        modalTitle: "Consulta a Medida",
-        modalDesc: "Déjanos tus datos y un especialista se pondrá en contacto para diseñar tu retiro privado.",
-        nameLabel: "Nombre Completo",
-        emailLabel: "Correo Electrónico",
-        datesLabel: "Fechas Deseadas (Opcional)",
-        guestsLabel: "Número de Invitados (Mínimo 6)",
-        submitBtn: "Solicitar Propuesta",
-        successMsg: "Gracias. Nuestro equipo de concierge se pondrá en contacto pronto."
+        cta: "Planifica Tu Retiro"
       },
       baliPage: {
         heroTitle: "BALI",
@@ -555,53 +540,148 @@ const es = {
         ctaSecondaryBtn: "Habla con el Concierge"
       },
       testimonials: {
-        label: "Lo Que Dicen",
+        label: "Lo Que Dicen Nuestros Invitados",
         title: "Recordado mucho después.",
-        subtitle: "Invitados que llegaron como jugadores. Se fueron como parte de la comunidad CourtSide.",
+        subtitle: "Los invitados llegan como jugadores. Se van formando parte de la comunidad CourtSide.",
+        // ⚠️ CONTENIDO DE MARCADOR DE POSICIÓN — los nombres, fechas y fotos de
+        // abajo son ilustrativos. Deben sustituirse por testimonios reales y
+        // con consentimiento (nombre real, fecha real, foto real) antes de
+        // publicar el sitio. Las fechas se sitúan entre 2025 y 2026 para
+        // mantener la coherencia con "Est. 2025".
         items: [
           {
-            name: "M.N.",
-            role: "Invitado, 2024",
+            name: "Charlotte Reeve",
+            role: "Invitada · Menorca, octubre 2025",
             text: "Menorca tuvo ese flujo perfecto. Sesiones de pádel soleadas, tardes lentas, cenas increíbles. Cada momento se sintió intencional.",
-            initials: "M",
+            initials: "C",
             image: "/imagenes/Cala en porter.jpg"
           },
           {
-            name: "J.H.",
-            role: "Invitado, 2024",
-            text: "Cada momento se sintió intencional. Me fui sintiéndome más ligero, más fuerte y genuinamente agradecido.",
-            initials: "J",
+            name: "Tom Bradshaw",
+            role: "Invitado · Menorca, octubre 2025",
+            text: "Vine por el pádel y me fui con once amigos nuevos. Volví a casa más ligero, más fuerte y genuinamente agradecido.",
+            initials: "T",
             image: "/imagenes/IMG_2167.jpeg"
           },
           {
-            name: "L.F.",
-            role: "Invitado, 2024",
+            name: "Sofia Almeida",
+            role: "Invitada · Menorca, mayo 2026",
             text: "La instalación de pádel en Menorca es de primer nivel: pistas profesionales, grandes entrenadores y un ambiente relajado que hace que quieras quedarte para siempre.",
-            initials: "L",
+            initials: "S",
             image: "/imagenes/EM-22.jpg"
           },
           {
-            name: "N.S.",
-            role: "Invitado, 2024",
+            name: "James Whitfield",
+            role: "Invitado · Menorca, mayo 2026",
             text: "La atención y el cuidado en el servicio, la limpieza y la hospitalidad no tienen parangón en ningún otro lugar donde hayamos estado.",
-            initials: "N",
+            initials: "J",
             image: "/imagenes/JOPS-721.JPG"
           },
           {
-            name: "K.L.",
-            role: "Invitado, 2024",
+            name: "Nina Bergström",
+            role: "Invitada · Menorca, mayo 2026",
             text: "Mañanas con pádel, yoga en el acantilado, comida de primer nivel y un servicio impecable durante todo el retiro. Así se siente el verdadero lujo.",
-            initials: "K",
+            initials: "N",
             image: "/imagenes/binifadet.jpeg"
           },
           {
-            name: "E.M.",
-            role: "Invitado, 2024",
+            name: "Marcus Ellery",
+            role: "Invitado · Menorca, octubre 2025",
             text: "Oliver aporta una energía increíble a la pista, combinando un entrenamiento relajado con una mejora enfocada. Una combinación poco común.",
-            initials: "E",
+            initials: "M",
             image: "/imagenes/cap roig.jpg"
           }
         ]
+      },
+      enquiryForm: {
+        triggerLabel: "Consultar Sobre un Retiro",
+        eyebrow: "Consulta de Retiro",
+        title: "Construyamos tu retiro.",
+        close: "Cerrar formulario de consulta",
+        back: "Atrás",
+        next: "Continuar",
+        submit: "Enviar consulta",
+        sending: "Enviando…",
+        emailSubject: "Consulta de retiro CourtSide",
+        steps: {
+          destination: {
+            question: "¿Dónde te gustaría jugar?",
+            help: "Elige un destino, o dinos que aún lo estás decidiendo.",
+            options: {
+              menorca: "Menorca",
+              bali: "Bali",
+              dubai: "Dubái",
+              undecided: "Aún lo estoy decidiendo"
+            }
+          },
+          dates: {
+            question: "¿Cuándo estás pensando en viajar?",
+            help: "Los retiros privados se organizan cualquier semana del año, con dos meses de antelación.",
+            monthLabel: "Mes",
+            yearLabel: "Año",
+            months: {
+              january: "Enero",
+              february: "Febrero",
+              march: "Marzo",
+              april: "Abril",
+              may: "Mayo",
+              june: "Junio",
+              july: "Julio",
+              august: "Agosto",
+              september: "Septiembre",
+              october: "Octubre",
+              november: "Noviembre",
+              december: "Diciembre",
+              flexible: "Flexible"
+            }
+          },
+          group: {
+            question: "¿Cuántos vais a viajar?",
+            help: "Incluyendo a los acompañantes que no vayan a jugar.",
+            label: "Tamaño del grupo",
+            placeholder: "p. ej. 8",
+            note: "Los retiros privados se organizan con un mínimo de 6 invitados. ¿Viajas solo o en pareja? Nuestros retiros abiertos son la opción perfecta."
+          },
+          priorities: {
+            question: "¿Qué es lo que más te importa?",
+            help: "Elige tantas opciones como quieras — nos ayuda a diseñar la semana en torno a tu grupo.",
+            options: {
+              coaching: "Entrenamiento y mejora",
+              matchplay: "Partidos competitivos",
+              wellness: "Bienestar y recuperación",
+              dining: "Gastronomía y vino",
+              boatAndSea: "Días de barco y mar",
+              culture: "Cultura local y explorar",
+              celebration: "Un cumpleaños o celebración",
+              corporate: "Un offsite de empresa o de liderazgo"
+            },
+            notesLabel: "¿Algo más que debamos saber?",
+            notesPlaceholder: "La ocasión, los niveles de juego, imprescindibles…"
+          },
+          contact: {
+            question: "¿Cómo podemos contactarte?",
+            help: "Uno de los fundadores te responderá personalmente, normalmente en menos de 24 horas.",
+            firstName: "Nombre",
+            lastName: "Apellidos",
+            email: "Correo electrónico",
+            phone: "Teléfono",
+            phoneOptional: "Opcional",
+            consent: "Acepto que CourtSide Padel use estos datos para responder a mi consulta."
+          }
+        },
+        errors: {
+          destination: "Elige un destino para continuar.",
+          dates: "Elige un mes y un año.",
+          group: "Dinos cuántos invitados vais a viajar.",
+          name: "Introduce tu nombre y apellidos.",
+          email: "Introduce una dirección de correo válida.",
+          consent: "Acepta el uso de tus datos para que podamos responderte.",
+          submit: "Algo ha fallado al enviar tu consulta. Escríbenos a executive@courtsidepadel.com y la atenderemos de inmediato."
+        },
+        success: {
+          title: "Gracias.",
+          body: "Hemos recibido tu consulta. Uno de los fundadores se pondrá en contacto personalmente para empezar a dar forma a tu retiro."
+        }
       }
     } as const;
 

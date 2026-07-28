@@ -101,20 +101,12 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
               {t('navbar.ourStory')}
             </a>
             <a
-              href={localizedHref('/about')}
+              href={localizedHref('/the-experience')}
               className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
-                isActive('/about') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 hover:text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
+                isActive('/the-experience') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 hover:text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
               }`}
             >
-              {t('navbar.about')}
-            </a>
-            <a
-              href={localizedHref('/services')}
-              className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
-                isActive('/services') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 hover:text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
-              }`}
-            >
-              {t('navbar.services')}
+              {t('navbar.experience')}
             </a>
 
             <div
@@ -174,8 +166,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
           >
             <div className="flex flex-col items-center gap-8 w-full max-w-sm">
               <a href={localizedHref('/our-story')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.ourStory')}</a>
-              <a href={localizedHref('/about')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.about')}</a>
-              <a href={localizedHref('/services')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.services')}</a>
+              <a href={localizedHref('/the-experience')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.experience')}</a>
 
               <div className="w-full h-px bg-brand-gold/20 my-4" />
 

@@ -67,8 +67,8 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               className="text-white/32 text-base font-light leading-relaxed mb-8 max-w-xs"
               style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
             >
-              "Padel is the excuse.<br />
-              The experience is the reason."
+              "Padel brings us on court.<br />
+              The experience makes it unforgettable."
             </p>
 
             {/* Social */}
@@ -144,13 +144,8 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
                 </a>
               </li>
               <li>
-                <a href={localizedHref('/about')} className={linkClass}>
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href={localizedHref('/services')} className={linkClass}>
-                  Services
+                <a href={localizedHref('/the-experience')} className={linkClass}>
+                  {t('navbar.experience')}
                 </a>
               </li>
               <li>
@@ -203,7 +198,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               className="inline-flex items-center gap-2 mt-8 group"
             >
               <span className="text-[9px] uppercase tracking-[0.32em] font-semibold text-white/30 group-hover:text-brand-gold transition-colors duration-200">
-                Speak with a concierge
+                Message the Team
               </span>
               <svg
                 className="w-3 h-3 text-white/25 group-hover:text-brand-gold group-hover:translate-x-0.5 transition-all duration-200"
