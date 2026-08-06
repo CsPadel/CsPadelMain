@@ -5,12 +5,12 @@ import type { Locale } from '../../i18n/locales';
 
 interface Props {
   locale: Locale;
-  destination: 'bali' | 'dubai';
+  destination: 'bali' | 'dubai' | 'mykonos';
 }
 
 const { locale, destination } = Astro.props;
 
-const meta: Record<'bali' | 'dubai', Record<Locale, { title: string; description: string; keywords: string }>> = {
+const meta: Record<'bali' | 'dubai' | 'mykonos', Record<Locale, { title: string; description: string; keywords: string }>> = {
   bali: {
     en: {
       title: 'CourtSide | Bali Padel Retreat',
@@ -43,6 +43,23 @@ const meta: Record<'bali' | 'dubai', Record<Locale, { title: string; description
       title: 'CourtSide | Retraite Padel à Dubaï',
       description: 'Quatre jours de padel de premier plan, suites penthouse et réseautage d\'élite à Dubaï. La retraite CourtSide Dubaï — Novembre 2026.',
       keywords: 'retraite padel Dubaï, padel luxe Dubaï, CourtSide Dubaï',
+    },
+  },
+  mykonos: {
+    en: {
+      title: 'CourtSide | Mykonos Padel Retreat',
+      description: 'Five days of elite padel, Aegean wellness and clifftop villa luxury in Mykonos. The CourtSide Mykonos retreat — coming 2027.',
+      keywords: 'Mykonos padel retreat, luxury padel Greece, Cyclades padel, CourtSide Mykonos, padel holiday Greek islands',
+    },
+    es: {
+      title: 'CourtSide | Retiro de Pádel en Mykonos',
+      description: 'Cinco días de pádel de élite, bienestar del Egeo y lujo en villa sobre el acantilado en Mykonos. El retiro CourtSide Mykonos — próximamente en 2027.',
+      keywords: 'retiro pádel Mykonos, pádel lujo Grecia, Cícladas pádel, CourtSide Mykonos',
+    },
+    fr: {
+      title: 'CourtSide | Retraite Padel à Mykonos',
+      description: 'Cinq jours de padel d\'élite, bien-être égéen et luxe en villa de falaise à Mykonos. La retraite CourtSide Mykonos — bientôt en 2027.',
+      keywords: 'retraite padel Mykonos, padel luxe Grèce, Cyclades padel, CourtSide Mykonos',
     },
   },
 };

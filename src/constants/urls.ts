@@ -11,6 +11,7 @@ const RETREAT_URLS: Record<string, string> = {
   menorca: MENORCA_URL,
   bali: '/bali',
   dubai: '/dubai',
+  mykonos: '/mykonos',
 };
 
 export function getRetreatUrl(retreat: string): string {

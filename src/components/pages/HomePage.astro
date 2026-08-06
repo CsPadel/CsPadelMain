@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { HeroRouter } from '../HeroRouter';
 import RetreatTypesSection from '../RetreatTypesSection';
+import DestinationsPreview from '../DestinationsPreview';
+import UpcomingRetreatsPreview from '../UpcomingRetreatsPreview';
 import BespokeRetreats from '../BespokeRetreats';
 import TestimonialsCarousel from '../TestimonialsCarousel';
 import PartnersSection from '../PartnersSection';
@@ -31,6 +33,8 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'home');
   <main class="w-full bg-white flex flex-col relative">
     <HeroRouter client:load locale={locale} />
     <RetreatTypesSection client:visible locale={locale} />
+    <DestinationsPreview client:visible />
+    <UpcomingRetreatsPreview client:visible locale={locale} />
     <BespokeRetreats client:visible locale={locale} />
     <TestimonialsCarousel client:visible locale={locale} />
     <PartnersSection client:load />

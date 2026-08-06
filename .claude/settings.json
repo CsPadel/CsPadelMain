@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep -l \"baliPage\\\\|dubaiPage\")",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "Bash(chromium-cli --help)",
+      "Bash(lsof -ti:4321 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)",
+      "Bash(powershell -Command \"Stop-Process -Id 51168 -Force\")",
+      "Bash(curl -sf http://localhost:4321)"
+    ]
+  }
+}

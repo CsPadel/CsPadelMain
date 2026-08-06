@@ -8,7 +8,7 @@ import { getWhatsAppConciergeUrl } from '../constants/urls';
 import { trackWhatsAppClick } from '../lib/gtag';
 import FooterIsland from './FooterIsland';
 
-type Destination = 'bali' | 'dubai';
+type Destination = 'bali' | 'dubai' | 'mykonos';
 
 interface DestinationLandingProps {
   readonly destination: Destination;
@@ -18,6 +18,8 @@ interface DestinationLandingProps {
 const heroMedia: Record<Destination, { type: 'video' | 'image'; src: string }> = {
   bali: { type: 'video', src: '/bali.mp4' },
   dubai: { type: 'video', src: '/vid5.mp4' },
+  // Mykonos: swap for AI-generated/real footage → /mykonos/mykonos-hero.mp4 or .jpg
+  mykonos: { type: 'image', src: 'https://images.unsplash.com/photo-1706189431324-c062a5060a2b?w=1920&h=1080&fit=crop&crop=center&q=85' },
 };
 
 // ─── Gallery images ──────────────────────────────────────────────────────────
@@ -39,6 +41,17 @@ const gallery: Record<Destination, { wide: string; tall: string; sq1: string; sq
     tall: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&h=780&fit=crop&crop=top&q=85',
     sq1:  'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=800&h=600&fit=crop&crop=center&q=85',
     sq2:  'https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&h=600&fit=crop&crop=center&q=85',
+  },
+  // Mykonos: swap for AI-generated images placed in /public/mykonos/
+  //   wide  → /mykonos/mykonos-hero-wide.jpg
+  //   tall  → /mykonos/mykonos-street.jpg
+  //   sq1   → /mykonos/mykonos-blue-dome.jpg
+  //   sq2   → /mykonos/mykonos-beach-club.jpg
+  mykonos: {
+    wide: 'https://images.unsplash.com/photo-1718891085463-28546b1789ab?w=1400&h=550&fit=crop&crop=center&q=85',
+    tall: 'https://images.unsplash.com/photo-1655535586022-a9e8ed3e2fe4?w=600&h=780&fit=crop&crop=center&q=85',
+    sq1:  'https://images.unsplash.com/photo-1596933144889-c15043a9ddde?w=800&h=600&fit=crop&crop=center&q=85',
+    sq2:  'https://images.unsplash.com/photo-1634372209936-96b8cc884324?w=800&h=600&fit=crop&crop=center&q=85',
   },
 };
 
@@ -62,11 +75,18 @@ const pillarImages: Record<Destination, string[]> = {
     'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&h=506&fit=crop&crop=center&q=85',
     'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&h=506&fit=crop&crop=center&q=85',
   ],
+  // Mykonos pillars: swap for AI-generated → /mykonos/mykonos-pillar-coaching.jpg | mykonos-pillar-villa.jpg | mykonos-pillar-wellness.jpg | mykonos-pillar-culture.jpg
+  mykonos: [
+    'https://images.unsplash.com/photo-1597744733354-0499ea376fe9?w=900&h=506&fit=crop&crop=center&q=85',
+    'https://images.unsplash.com/photo-1600418691323-528448f24489?w=900&h=506&fit=crop&crop=center&q=85',
+    'https://images.unsplash.com/photo-1602584386319-fa8eb4361c2c?w=900&h=506&fit=crop&crop=center&q=85',
+    'https://images.unsplash.com/photo-1718891085463-28546b1789ab?w=900&h=506&fit=crop&crop=center&q=85',
+  ],
 };
 
 export default function DestinationLanding({ destination, locale: localeProp }: DestinationLandingProps) {
   const { t } = usePageTranslation(localeProp);
-  const pk = destination === 'bali' ? 'baliPage' : 'dubaiPage';
+  const pk = `${destination}Page`;
   const media = heroMedia[destination];
   const imgs = gallery[destination];
 

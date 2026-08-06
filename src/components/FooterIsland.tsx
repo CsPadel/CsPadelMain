@@ -115,6 +115,12 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
                   Menorca
                 </a>
               </li>
+            </ul>
+
+            <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold mb-6 mt-10">
+              Upcoming Retreats
+            </p>
+            <ul className="space-y-4">
               <li>
                 <a href={localizedHref('/bali')} className={linkClass}>
                   Bali
@@ -123,6 +129,11 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               <li>
                 <a href={localizedHref('/dubai')} className={linkClass}>
                   Dubai
+                </a>
+              </li>
+              <li>
+                <a href={localizedHref('/mykonos')} className={linkClass}>
+                  Mykonos
                 </a>
               </li>
             </ul>

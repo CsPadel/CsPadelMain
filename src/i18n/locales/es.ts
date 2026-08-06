@@ -3,9 +3,11 @@ const es = {
         ourStory: "Nuestra Historia",
         experience: "La Experiencia",
         destinations: "Destinos",
+        upcomingRetreats: "Próximos Retiros",
         menorca: "Menorca",
         bali: "Bali",
-        dubai: "Dubái"
+        dubai: "Dubái",
+        mykonos: "Mykonos"
       },
       experiencePage: {
         heroEyebrow: "La Experiencia",
@@ -536,6 +538,40 @@ const es = {
         ],
         ctaTitle: "Dubái. Tu pista está lista.",
         ctaDesc: "Cuatro días. Una ciudad sin igual. La mejor compañía.",
+        ctaBtn: "Reserva tu Plaza",
+        ctaSecondaryBtn: "Habla con el Concierge"
+      },
+      mykonosPage: {
+        heroTitle: "MYKONOS",
+        heroTagline: "Elegancia del Egeo. Pádel de Élite.",
+        heroLocation: "Mykonos · Grecia",
+        heroDate: "Temporada 2027 · 5 Días · Todo Incluido",
+        heroSubtitle: "Pueblos encalados, un Egeo interminable y pádel de élite a la hora dorada. Cinco días de entrenamiento y lujo bañado por el sol en una de las islas más icónicas de Europa.",
+        sectionTag: "El Destino",
+        sectionTitle: "El Retiro en Mykonos",
+        bookBtn: "Reserva tu Plaza",
+        enquireBtn: "Habla con el Concierge",
+        whatsappMessage: "Hola, quiero información sobre el retiro de pádel en Mykonos.",
+        galleryLabel: "Galería",
+        galleryNote: "Fotografía próximamente",
+        stats: {
+          duration: { value: "5", label: "Días" },
+          group: { value: "8–16", label: "Huéspedes Máx." },
+          rating: { value: "5★", label: "Villas Cicládicas" },
+          privacy: { value: "100%", label: "Privado" }
+        },
+        pillars: [
+          { tag: "Entrenamiento de Élite", title: "Sesiones matinales. Partidas a la hora dorada.", desc: "Entrenamiento dirigido y partidos competitivos con el Egeo de fondo, adaptado a cada nivel." },
+          { tag: "Villas Cicládicas", title: "Muros encalados. Vistas infinitas al mar.", desc: "Villas selectas sobre el acantilado con piscina privada, vistas al Egeo y total privacidad frente al mar." },
+          { tag: "Bienestar del Egeo", title: "Recuperación, al estilo isleño.", desc: "Baños en el mar, yoga al atardecer, rituales de spa mediterráneo y largas comidas pensadas para la recuperación total." },
+          { tag: "Alma Isleña", title: "El Mykonos auténtico, curado para ti.", desc: "Salidas privadas en barco a calas escondidas, atardeceres en Little Venice, el casco antiguo de Chora y noches de beach club en las Cícladas." }
+        ],
+        datesTitle: "Retiros Disponibles",
+        dates: [
+          { label: "Temporada 2027", desc: "5 días · 4 noches · Retiro Abierto", spots: "Fechas por confirmar" }
+        ],
+        ctaTitle: "Mykonos. Tu pista sobre el Egeo.",
+        ctaDesc: "Un grupo íntimo. Una villa privada. Cinco días frente al mar.",
         ctaBtn: "Reserva tu Plaza",
         ctaSecondaryBtn: "Habla con el Concierge"
       },

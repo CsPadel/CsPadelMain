@@ -3,9 +3,11 @@ const en = {
         ourStory: "Our Story",
         experience: "The Experience",
         destinations: "Destinations",
+        upcomingRetreats: "Upcoming Retreats",
         menorca: "Menorca",
         bali: "Bali",
-        dubai: "Dubai"
+        dubai: "Dubai",
+        mykonos: "Mykonos"
       },
       experiencePage: {
         heroEyebrow: "The Experience",
@@ -536,6 +538,40 @@ const en = {
         ],
         ctaTitle: "Dubai. Your court is ready.",
         ctaDesc: "Four days. An unmatched city. The finest company.",
+        ctaBtn: "Reserve Your Place",
+        ctaSecondaryBtn: "Speak with Concierge"
+      },
+      mykonosPage: {
+        heroTitle: "MYKONOS",
+        heroTagline: "Aegean Elegance. Elite Padel.",
+        heroLocation: "Mykonos · Greece",
+        heroDate: "2027 Season · 5 Days · All-Inclusive",
+        heroSubtitle: "Whitewashed villages, endless Aegean blue, and elite padel at golden hour. Five days of coaching and sun-soaked luxury on one of Europe's most storied islands.",
+        sectionTag: "The Destination",
+        sectionTitle: "The Mykonos Retreat",
+        bookBtn: "Reserve Your Place",
+        enquireBtn: "Speak with Concierge",
+        whatsappMessage: "Hello, I'd like to enquire about the Mykonos padel retreat.",
+        galleryLabel: "Gallery",
+        galleryNote: "Photography coming soon",
+        stats: {
+          duration: { value: "5", label: "Days" },
+          group: { value: "8–16", label: "Guests Max" },
+          rating: { value: "5★", label: "Cycladic Villas" },
+          privacy: { value: "100%", label: "Private" }
+        },
+        pillars: [
+          { tag: "Elite Coaching", title: "Morning sessions. Golden hour matchplay.", desc: "Coach-led training and competitive matchplay against an Aegean backdrop, tailored to every level from foundation to elite." },
+          { tag: "Cycladic Villas", title: "Whitewashed walls. Endless sea views.", desc: "Hand-selected clifftop villas with private pools, sweeping Aegean views and total seclusion above the water." },
+          { tag: "Aegean Wellness", title: "Recovery, island style.", desc: "Sea swims, sunset yoga, Mediterranean spa rituals and long lunches built for full performance recovery." },
+          { tag: "Island Culture", title: "The real Mykonos, curated for you.", desc: "Private boat days to hidden coves, sunset in Little Venice, Chora's old town, and beach club evenings among the Cyclades." }
+        ],
+        datesTitle: "Available Retreats",
+        dates: [
+          { label: "2027 Season", desc: "5 days · 4 nights · Open Retreat", spots: "Dates TBA" }
+        ],
+        ctaTitle: "Mykonos. Your court on the Aegean.",
+        ctaDesc: "An intimate group. A private villa. Five days above the sea.",
         ctaBtn: "Reserve Your Place",
         ctaSecondaryBtn: "Speak with Concierge"
       },

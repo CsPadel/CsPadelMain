@@ -1,7 +1,7 @@
 import type { Locale } from './locales';
 import { localizedPath } from './routing';
 
-export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory';
+export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory' | 'upcomingRetreats';
 
 export interface PageSeo {
   title: string;
@@ -104,6 +104,23 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
       keywords: 'histoire CourtSide, fondateurs padel, Alexi Oliver Watelet, fondateurs retraite padel luxe',
     },
   },
+  upcomingRetreats: {
+    en: {
+      title: 'Upcoming Retreats — CourtSide Padel',
+      description: 'New CourtSide destinations in development — Bali, Dubai and Mykonos. Elite padel retreats coming to the 2027 calendar. Register your interest.',
+      keywords: 'upcoming padel retreats, CourtSide Bali, CourtSide Dubai, CourtSide Mykonos, new padel destinations',
+    },
+    es: {
+      title: 'Próximos Retiros — CourtSide Padel',
+      description: 'Nuevos destinos CourtSide en desarrollo — Bali, Dubái y Mykonos. Retiros de pádel de élite para el calendario 2027. Regístrate para más información.',
+      keywords: 'próximos retiros pádel, CourtSide Bali, CourtSide Dubái, CourtSide Mykonos, nuevos destinos pádel',
+    },
+    fr: {
+      title: 'Prochaines Retraites — CourtSide Padel',
+      description: 'Nouvelles destinations CourtSide en développement — Bali, Dubaï et Mykonos. Retraites padel d\'élite pour le calendrier 2027. Inscrivez votre intérêt.',
+      keywords: 'prochaines retraites padel, CourtSide Bali, CourtSide Dubaï, CourtSide Mykonos, nouvelles destinations padel',
+    },
+  },
 };
 
 const pagePaths: Record<PageId, string> = {
@@ -112,6 +129,7 @@ const pagePaths: Record<PageId, string> = {
   cookies: '/cookies',
   executiveRetreat: '/executive-retreat',
   ourStory: '/our-story',
+  upcomingRetreats: '/upcoming-retreats',
 };
 
 export function getPageSeo(page: PageId, locale: Locale): PageSeo {
@@ -137,6 +155,7 @@ export function getSitemapEntries(siteUrl: string): Array<{ loc: string; lastmod
     { page: 'experience', changefreq: 'monthly', priority: '0.8' },
     { page: 'ourStory', changefreq: 'monthly', priority: '0.7' },
     { page: 'executiveRetreat', changefreq: 'monthly', priority: '0.7' },
+    { page: 'upcomingRetreats', changefreq: 'weekly', priority: '0.8' },
     { page: 'cookies', changefreq: 'yearly', priority: '0.3' },
   ];
 

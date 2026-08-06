@@ -3,9 +3,11 @@ const fr = {
         ourStory: "Notre Histoire",
         experience: "L'Expérience",
         destinations: "Destinations",
+        upcomingRetreats: "Prochaines Retraites",
         menorca: "Menorca",
         bali: "Bali",
-        dubai: "Dubai"
+        dubai: "Dubai",
+        mykonos: "Mykonos"
       },
       experiencePage: {
         heroEyebrow: "L'Expérience",
@@ -536,6 +538,40 @@ const fr = {
         ],
         ctaTitle: "Dubaï. Votre court est prêt.",
         ctaDesc: "Quatre jours. Une ville hors du commun. La meilleure compagnie.",
+        ctaBtn: "Réserver votre Place",
+        ctaSecondaryBtn: "Parler au Concierge"
+      },
+      mykonosPage: {
+        heroTitle: "MYKONOS",
+        heroTagline: "Élégance Égéenne. Padel d'Élite.",
+        heroLocation: "Mykonos · Grèce",
+        heroDate: "Saison 2027 · 5 Jours · Tout Compris",
+        heroSubtitle: "Villages blanchis à la chaux, un Égée sans fin, et padel d'élite à l'heure dorée. Cinq jours de coaching et de luxe baigné de soleil sur l'une des îles les plus emblématiques d'Europe.",
+        sectionTag: "La Destination",
+        sectionTitle: "La Retraite à Mykonos",
+        bookBtn: "Réserver votre Place",
+        enquireBtn: "Parler au Concierge",
+        whatsappMessage: "Bonjour, je souhaite des informations sur la retraite padel à Mykonos.",
+        galleryLabel: "Galerie",
+        galleryNote: "Photographies à venir",
+        stats: {
+          duration: { value: "5", label: "Jours" },
+          group: { value: "8–16", label: "Convives max." },
+          rating: { value: "5★", label: "Villas cycladiques" },
+          privacy: { value: "100%", label: "Privé" }
+        },
+        pillars: [
+          { tag: "Coaching d'élite", title: "Sessions matinales. Matchplay à l'heure dorée.", desc: "Entraînement dirigé et matchplay compétitif avec l'Égée en toile de fond, adapté à tous les niveaux." },
+          { tag: "Villas cycladiques", title: "Murs blanchis à la chaux. Vue infinie sur la mer.", desc: "Villas sélectionnées à flanc de falaise avec piscine privée, vue sur l'Égée et isolement total face à la mer." },
+          { tag: "Bien-être égéen", title: "Récupération, à l'insulaire.", desc: "Baignades en mer, yoga au coucher du soleil, rituels spa méditerranéens et longs déjeuners pensés pour la récupération totale." },
+          { tag: "Âme insulaire", title: "Le vrai Mykonos, orchestré pour vous.", desc: "Sorties privées en bateau vers des criques cachées, coucher de soleil à Little Venice, la vieille ville de Chora et soirées beach club dans les Cyclades." }
+        ],
+        datesTitle: "Retraites Disponibles",
+        dates: [
+          { label: "Saison 2027", desc: "5 jours · 4 nuits · Retraite ouverte", spots: "Dates à confirmer" }
+        ],
+        ctaTitle: "Mykonos. Votre court au-dessus de l'Égée.",
+        ctaDesc: "Un groupe intime. Une villa privée. Cinq jours face à la mer.",
         ctaBtn: "Réserver votre Place",
         ctaSecondaryBtn: "Parler au Concierge"
       },
