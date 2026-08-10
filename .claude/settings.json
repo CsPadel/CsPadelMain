@@ -8,7 +8,8 @@
       "Bash(lsof -ti:4321 -sTCP:LISTEN)",
       "Bash(xargs -r kill)",
       "Bash(powershell -Command \"Stop-Process -Id 51168 -Force\")",
-      "Bash(curl -sf http://localhost:4321)"
+      "Bash(curl -sf http://localhost:4321)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:4321/upcoming-retreats)"
     ]
   }
 }

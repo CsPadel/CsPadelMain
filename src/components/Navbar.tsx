@@ -17,7 +17,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
   const { t } = usePageTranslation(localeProp);
   const localizedHref = useLocalizedHref(localeProp);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUpcomingOpen, setIsUpcomingOpen] = useState(false);
+  const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [pathname, setPathname] = useState('');
@@ -38,7 +38,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
       } else if (currentY > lastScrollY + 4) {
         // Scrolling down — hide navbar
         setIsHidden(true);
-        setIsUpcomingOpen(false);
+        setIsDestinationsOpen(false);
       } else if (currentY < lastScrollY - 4) {
         // Scrolling up — reveal navbar
         setIsHidden(false);
@@ -109,30 +109,19 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
               {t('navbar.experience')}
             </a>
 
-            <a
-              href={MENORCA_URL}
-              className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
-                isActive('/menorca') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 hover:text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
-              }`}
-            >
-              {t('navbar.destinations')}
-            </a>
-
             <div
               className="relative group"
-              onMouseEnter={() => setIsUpcomingOpen(true)}
-              onMouseLeave={() => setIsUpcomingOpen(false)}
+              onMouseEnter={() => setIsDestinationsOpen(true)}
+              onMouseLeave={() => setIsDestinationsOpen(false)}
             >
               <button className={`nav-link flex items-center gap-2 text-sm tracking-widest uppercase font-medium transition-colors cursor-pointer ${
-                isActive('/bali') || isActive('/dubai') || isActive('/mykonos') || isActive('/upcoming-retreats')
-                  ? 'text-brand-gold'
-                  : isScrolled ? 'text-brand-dark/60 group-hover:text-brand-gold' : 'text-brand-light/70 group-hover:text-brand-gold'
+                isActive('/menorca') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 group-hover:text-brand-gold' : 'text-brand-light/70 group-hover:text-brand-gold'
               }`}>
-                {t('navbar.upcomingRetreats')} <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
+                {t('navbar.destinations')} <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
               </button>
 
               <AnimatePresence>
-                {isUpcomingOpen && (
+                {isDestinationsOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -141,14 +130,23 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-48"
                   >
                     <div className="bg-brand-dark border border-brand-gold/20 rounded-card flex flex-col shadow-2xl shadow-black/50">
-                      <a href={localizedHref('/bali')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.bali')}</a>
-                      <a href={localizedHref('/dubai')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.dubai')}</a>
-                      <a href={localizedHref('/mykonos')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.mykonos')}</a>
+                      <a href={MENORCA_URL} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.menorca')}</a>
+                      <a href={localizedHref('/upcoming-retreats#bali')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.bali')}</a>
+                      <a href={localizedHref('/upcoming-retreats#dubai')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.dubai')}</a>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
+
+            <a
+              href={localizedHref('/upcoming-retreats')}
+              className={`nav-link text-sm tracking-widest uppercase font-medium transition-colors ${
+                isActive('/upcoming-retreats') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 hover:text-brand-gold' : 'text-brand-light/70 hover:text-brand-gold'
+              }`}
+            >
+              {t('navbar.upcomingRetreats')}
+            </a>
           </div>
 
           <div className="hidden md:flex items-center z-50">
@@ -181,13 +179,12 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
 
               <span className="text-xs tracking-[0.3em] uppercase text-brand-gold">{t('navbar.destinations')}</span>
               <a href={MENORCA_URL} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
+              <a href={localizedHref('/upcoming-retreats#bali')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
+              <a href={localizedHref('/upcoming-retreats#dubai')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
 
               <div className="w-full h-px bg-brand-gold/20 my-4" />
 
-              <span className="text-xs tracking-[0.3em] uppercase text-brand-gold">{t('navbar.upcomingRetreats')}</span>
-              <a href={localizedHref('/bali')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
-              <a href={localizedHref('/dubai')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
-              <a href={localizedHref('/mykonos')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.mykonos')}</a>
+              <a href={localizedHref('/upcoming-retreats')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.upcomingRetreats')}</a>
 
               <div className="w-full h-px bg-brand-gold/20 my-4" />
 

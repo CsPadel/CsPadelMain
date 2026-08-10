@@ -107,17 +107,17 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
   upcomingRetreats: {
     en: {
       title: 'Upcoming Retreats — CourtSide Padel',
-      description: 'New CourtSide destinations in development — Bali, Dubai and Mykonos. Elite padel retreats coming to the 2027 calendar. Register your interest.',
+      description: 'Three new CourtSide destinations arriving over the next 12–18 months — Bali, Dubai and Mykonos. Elite padel retreats. Register your interest.',
       keywords: 'upcoming padel retreats, CourtSide Bali, CourtSide Dubai, CourtSide Mykonos, new padel destinations',
     },
     es: {
       title: 'Próximos Retiros — CourtSide Padel',
-      description: 'Nuevos destinos CourtSide en desarrollo — Bali, Dubái y Mykonos. Retiros de pádel de élite para el calendario 2027. Regístrate para más información.',
+      description: 'Tres nuevos destinos CourtSide llegan en los próximos 12 a 18 meses — Bali, Dubái y Mykonos. Retiros de pádel de élite. Regístrate para más información.',
       keywords: 'próximos retiros pádel, CourtSide Bali, CourtSide Dubái, CourtSide Mykonos, nuevos destinos pádel',
     },
     fr: {
       title: 'Prochaines Retraites — CourtSide Padel',
-      description: 'Nouvelles destinations CourtSide en développement — Bali, Dubaï et Mykonos. Retraites padel d\'élite pour le calendrier 2027. Inscrivez votre intérêt.',
+      description: 'Trois nouvelles destinations CourtSide arrivent dans les 12 à 18 prochains mois — Bali, Dubaï et Mykonos. Retraites padel d\'élite. Inscrivez votre intérêt.',
       keywords: 'prochaines retraites padel, CourtSide Bali, CourtSide Dubaï, CourtSide Mykonos, nouvelles destinations padel',
     },
   },

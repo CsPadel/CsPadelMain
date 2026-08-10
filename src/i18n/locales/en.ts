@@ -475,7 +475,7 @@ const en = {
       baliPage: {
         heroTitle: "BALI",
         heroTagline: "Jungle Luxury. Elite Padel.",
-        heroLocation: "Canggu · Bali",
+        heroLocation: "Uluwatu · Bali",
         heroDate: "July 2026 · 5 Days · All-Inclusive",
         heroSubtitle: "Where the rhythm of Bali meets elite padel. Five days of coaching, wellness, and cultural immersion wrapped in five-star tropical luxury.",
         sectionTag: "The Destination",
@@ -493,7 +493,7 @@ const en = {
         },
         pillars: [
           { tag: "Elite Coaching", title: "Sunrise sessions. Golden hour matchplay.", desc: "Coach-led training and competitive matchplay on private padel courts, tailored to every level from foundation to elite." },
-          { tag: "Luxury Villas", title: "Private infinity pools. Open-air pavilions.", desc: "Hand-selected boutique villas in Canggu with personal staff, private pools and total seclusion in the tropics." },
+          { tag: "Luxury Villas", title: "Private infinity pools. Open-air pavilions.", desc: "Hand-selected boutique villas above the Uluwatu cliffs with personal staff, private pools and total seclusion in the tropics." },
           { tag: "Bali Wellness", title: "Holistic recovery and performance.", desc: "Balinese spa treatments, sunrise yoga, guided meditation and cold plunge pools — the full performance recovery." },
           { tag: "Cultural Soul", title: "The real Bali, curated for you.", desc: "Sunrise temple treks, traditional ceremonies, rice terrace walks and private cooking classes with local chefs." }
         ],
@@ -510,7 +510,7 @@ const en = {
       dubaiPage: {
         heroTitle: "DUBAI",
         heroTagline: "Urban Prestige. Desert Courts.",
-        heroLocation: "Dubai · UAE",
+        heroLocation: "Coming Soon",
         heroDate: "November 2026 · 4 Days · All-Inclusive",
         heroSubtitle: "The world's most prestigious city as your backdrop. Floodlit courts, penthouse suites, and curated networking in the desert capital of luxury.",
         sectionTag: "The Destination",
@@ -574,6 +574,21 @@ const en = {
         ctaDesc: "An intimate group. A private villa. Five days above the sea.",
         ctaBtn: "Reserve Your Place",
         ctaSecondaryBtn: "Speak with Concierge"
+      },
+      upcomingRetreatsPage: {
+        eyebrow: "Next 12–18 Months",
+        heroTitle: "Upcoming Retreats.",
+        heroSubtitle: "Three new destinations are joining the CourtSide calendar over the next twelve to eighteen months — each one built on the same idea as Menorca: elite padel, exceptional company, and everything around the game curated to match.",
+        heroHint: "Discover",
+        indexLabel: "The Destinations",
+        highlightsLabel: "The Highlights",
+        comingSoon: "Coming Soon",
+        enquireBtn: "Register Interest",
+        nextLabel: "Next",
+        ctaEyebrow: "Be First to Know",
+        ctaTitle: "Your seat, before the calendar opens.",
+        ctaDesc: "Bali, Dubai and Mykonos are opening soon. Register your interest and our concierge team will reach out the moment a retreat opens for booking.",
+        ctaBtn: "Register Your Interest"
       },
       testimonials: {
         label: "What Guests Have To Say",

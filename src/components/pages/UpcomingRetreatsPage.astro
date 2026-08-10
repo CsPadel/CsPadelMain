@@ -1,10 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import UpcomingRetreatsLanding from '../UpcomingRetreatsLanding';
 import FooterIsland from '../FooterIsland';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
-import { getWhatsAppConciergeUrl } from '../../constants/urls';
-import { localizedPath } from '../../i18n/routing';
 
 interface Props {
   locale: Locale;
@@ -14,40 +13,6 @@ const { locale } = Astro.props;
 const seo = getPageSeo('upcomingRetreats', locale);
 const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
 const alternateUrls = getAlternateUrls(siteURL.href, 'upcomingRetreats');
-const waUrl = getWhatsAppConciergeUrl("Hello, I'd like to register my interest in an upcoming CourtSide retreat.");
-
-const retreats = [
-  {
-    id: 'bali',
-    name: 'Bali',
-    tagline: 'Jungle Luxury. Elite Padel.',
-    location: 'Canggu · Indonesia',
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&h=800&fit=crop&crop=center&q=85',
-    description:
-      "Five days on private courts inside a boutique villa compound in Canggu — dawn training sessions, sunrise temple treks, rice-terrace walks and a chef-led kitchen every night. The immersive, barefoot-luxury experience Bali does best, with elite padel woven through it.",
-    highlights: ['Private courts & coaching', 'Boutique villas with infinity pools', 'Balinese wellness & culture'],
-  },
-  {
-    id: 'dubai',
-    name: 'Dubai',
-    tagline: 'Urban Prestige. Desert Courts.',
-    location: 'Downtown · UAE',
-    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&h=800&fit=crop&crop=center&q=85',
-    description:
-      "Floodlit courts against the Dubai skyline, penthouse living from Downtown to Palm Jumeirah, and off-court experiences built for a global network — private desert safaris, Michelin-starred tables and yacht evenings on the Gulf.",
-    highlights: ['Floodlit skyline courts', 'Five-star penthouse suites', 'Elite network & desert excursions'],
-  },
-  {
-    id: 'mykonos',
-    name: 'Mykonos',
-    tagline: 'Aegean Elegance. Elite Padel.',
-    location: 'Cyclades · Greece',
-    image: 'https://images.unsplash.com/photo-1706189431324-c062a5060a2b?w=1200&h=800&fit=crop&crop=center&q=85',
-    description:
-      "Clifftop villas above the Aegean, morning padel at golden hour, and long lunches that drift into sunset at Little Venice. Private boat days to hidden coves and beach-club evenings across the Cyclades — the real Mykonos, curated for you.",
-    highlights: ['Clifftop villas, private pools', 'Boat days & Little Venice sunsets', 'Aegean wellness & recovery'],
-  },
-];
 ---
 
 <Layout
@@ -60,111 +25,7 @@ const retreats = [
   alternateUrls={alternateUrls}
 >
   <main class="w-full bg-white flex flex-col relative">
-
-    {/* ── Hero ── */}
-    <section class="relative w-full min-h-[70vh] flex items-end pb-20 md:pb-28 px-8 md:px-16 overflow-hidden">
-      <img
-        src="https://images.unsplash.com/photo-1706189431324-c062a5060a2b?w=1920&h=1080&fit=crop&crop=center&q=85"
-        alt="Upcoming CourtSide Padel retreats"
-        class="absolute inset-0 w-full h-full object-cover"
-        fetchpriority="high"
-        decoding="async"
-      />
-      <div
-        class="absolute inset-0"
-        style="background: linear-gradient(to bottom, rgba(1,25,44,0.25) 0%, rgba(1,25,44,0.55) 50%, rgba(1,25,44,0.97) 100%);"
-      />
-      <div class="relative z-10 max-w-7xl mx-auto w-full">
-        <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold mb-5">
-          In Development · Dates TBA
-        </p>
-        <h1
-          class="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-none mb-6"
-          style="font-family: var(--font-display); font-style: italic;"
-        >
-          Upcoming Retreats.
-        </h1>
-        <p class="text-white/55 text-lg md:text-xl font-light max-w-xl leading-relaxed">
-          New destinations for the CourtSide calendar, each one built around the same idea as Menorca — elite padel, exceptional company, and everything around the game curated to match. Menorca has confirmed dates; these are next.
-        </p>
-      </div>
-    </section>
-
-    {/* ── Destinations ── */}
-    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
-      <div class="max-w-7xl mx-auto flex flex-col gap-20 md:gap-28">
-        {retreats.map((r, i) => (
-          <div class={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center ${i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}>
-            <div class="relative rounded-card overflow-hidden aspect-[4/3]">
-              <img
-                src={r.image}
-                alt={r.name}
-                loading="lazy"
-                decoding="async"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div>
-              <div class="flex items-center gap-2 mb-4">
-                <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-                <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-                  {r.location}
-                </p>
-              </div>
-              <h2
-                class="text-4xl md:text-5xl font-light text-brand-dark leading-none mb-3"
-                style="font-family: var(--font-display); font-style: italic;"
-              >
-                {r.name}
-              </h2>
-              <p class="text-brand-dark/40 text-sm md:text-base font-light mb-6">{r.tagline}</p>
-              <p class="text-brand-dark/55 text-lg font-light leading-relaxed mb-8">
-                {r.description}
-              </p>
-              <ul class="flex flex-col gap-3 mb-9">
-                {r.highlights.map((h) => (
-                  <li class="flex items-center gap-3 text-brand-dark/60 font-light text-sm md:text-base">
-                    <span class="block w-1 h-1 rounded-full bg-brand-gold flex-shrink-0" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={localizedPath(`/${r.id}`, locale)}
-                class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-semibold text-brand-dark hover:text-brand-gold transition-colors duration-250 border-b border-brand-dark/15 hover:border-brand-gold pb-1"
-              >
-                Explore {r.name}
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    {/* ── CTA ── */}
-    <section
-      class="py-32 px-8 md:px-16 text-center noise-section"
-      style="background: linear-gradient(135deg, #041E36 0%, #01192C 100%);"
-    >
-      <div class="max-w-2xl mx-auto">
-        <div class="w-10 h-px bg-brand-gold mx-auto mb-10 opacity-50" />
-        <h2
-          class="text-4xl md:text-5xl font-light mb-5 text-white"
-          style="font-family: var(--font-display); font-style: italic;"
-        >
-          Be first to know.
-        </h2>
-        <p class="font-light text-lg mb-12" style="color: rgba(255,255,255,0.50);">
-          Dates for Bali, Dubai and Mykonos are still being finalised. Register your interest and our concierge team will reach out the moment a retreat opens for booking.
-        </p>
-        <a href={waUrl} target="_blank" rel="noopener noreferrer" class="btn-luxury group inline-flex items-center gap-3">
-          Register Your Interest
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-      </div>
-    </section>
-
+    <UpcomingRetreatsLanding client:load locale={locale} />
     <FooterIsland client:visible locale={locale} />
   </main>
 </Layout>

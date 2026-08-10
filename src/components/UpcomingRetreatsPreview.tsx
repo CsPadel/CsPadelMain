@@ -12,17 +12,17 @@ const retreats = [
     id: 'bali',
     name: 'BALI',
     tagline: 'Jungle Luxury. Elite Padel.',
-    location: 'Canggu · Indonesia',
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&h=600&fit=crop&crop=center&q=85',
-    href: '/bali',
+    location: 'Uluwatu · Bali',
+    image: 'https://images.unsplash.com/photo-1664918706173-6349ca225dd0?w=900&h=600&fit=crop&crop=center&q=85',
+    href: '/upcoming-retreats#bali',
   },
   {
     id: 'dubai',
     name: 'DUBAI',
     tagline: 'Urban Prestige. Desert Courts.',
-    location: 'Downtown · UAE',
+    location: 'Coming Soon',
     image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&h=600&fit=crop&crop=center&q=85',
-    href: '/dubai',
+    href: '/upcoming-retreats#dubai',
   },
   {
     id: 'mykonos',
@@ -30,7 +30,7 @@ const retreats = [
     tagline: 'Aegean Elegance. Elite Padel.',
     location: 'Cyclades · Greece',
     image: 'https://images.unsplash.com/photo-1706189431324-c062a5060a2b?w=900&h=600&fit=crop&crop=center&q=85',
-    href: '/mykonos',
+    href: '/upcoming-retreats#mykonos',
   },
 ];
 

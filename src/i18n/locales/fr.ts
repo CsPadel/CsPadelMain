@@ -475,7 +475,7 @@ const fr = {
       baliPage: {
         heroTitle: "BALI",
         heroTagline: "Luxe Tropical. Padel d'Élite.",
-        heroLocation: "Canggu · Bali",
+        heroLocation: "Uluwatu · Bali",
         heroDate: "Juillet 2026 · 5 Jours · Tout Compris",
         heroSubtitle: "Là où le rythme de Bali rencontre le padel d'élite. Cinq jours de coaching, bien-être et immersion culturelle enveloppés dans un luxe tropical cinq étoiles.",
         sectionTag: "La Destination",
@@ -493,7 +493,7 @@ const fr = {
         },
         pillars: [
           { tag: "Coaching d'élite", title: "Sessions au lever du soleil. Matchplay au crépuscule.", desc: "Entraînement dirigé et matchplay compétitif sur des courts privés, adapté à tous les niveaux." },
-          { tag: "Villas de luxe", title: "Piscines à débordement. Pavillons en plein air.", desc: "Villas boutique sélectionnées à Canggu avec personnel dédié, piscines privées et isolement total en milieu tropical." },
+          { tag: "Villas de luxe", title: "Piscines à débordement. Pavillons en plein air.", desc: "Villas boutique sélectionnées au-dessus des falaises d'Uluwatu avec personnel dédié, piscines privées et isolement total en milieu tropical." },
           { tag: "Bien-être balinais", title: "Récupération holistique au paradis.", desc: "Soins spa balinais, yoga au lever du soleil, méditation guidée et bains de glace — l'expérience de récupération ultime." },
           { tag: "Âme culturelle", title: "Le vrai Bali, orchestré pour vous.", desc: "Treks aux temples au lever du soleil, cérémonies traditionnelles, balades en rizières et cours de cuisine privés." }
         ],
@@ -510,7 +510,7 @@ const fr = {
       dubaiPage: {
         heroTitle: "DUBAI",
         heroTagline: "Prestige Urbain. Courts du Désert.",
-        heroLocation: "Dubaï · ÉAU",
+        heroLocation: "Bientôt Disponible",
         heroDate: "Novembre 2026 · 4 Jours · Tout Compris",
         heroSubtitle: "La ville la plus prestigieuse du monde comme toile de fond. Courts éclairés, suites penthouse et réseautage d'exception dans la capitale mondiale du luxe.",
         sectionTag: "La Destination",
@@ -574,6 +574,21 @@ const fr = {
         ctaDesc: "Un groupe intime. Une villa privée. Cinq jours face à la mer.",
         ctaBtn: "Réserver votre Place",
         ctaSecondaryBtn: "Parler au Concierge"
+      },
+      upcomingRetreatsPage: {
+        eyebrow: "Dans les 12 à 18 Prochains Mois",
+        heroTitle: "Prochaines Retraites.",
+        heroSubtitle: "Trois nouvelles destinations rejoignent le calendrier CourtSide au cours des douze à dix-huit prochains mois — chacune bâtie sur la même idée que Minorque : padel d'élite, compagnie exceptionnelle, et tout ce qui entoure le jeu, pensé avec le même soin.",
+        heroHint: "Découvrir",
+        indexLabel: "Les Destinations",
+        highlightsLabel: "Les Points Forts",
+        comingSoon: "Bientôt Disponible",
+        enquireBtn: "Inscrivez votre Intérêt",
+        nextLabel: "Suivant",
+        ctaEyebrow: "Soyez le Premier Informé",
+        ctaTitle: "Votre place, avant l'ouverture du calendrier.",
+        ctaDesc: "Bali, Dubaï et Mykonos ouvrent bientôt. Inscrivez votre intérêt et notre équipe concierge vous contactera dès qu'une retraite ouvrira ses réservations.",
+        ctaBtn: "Inscrivez votre Intérêt"
       },
       testimonials: {
         label: "Ce Que Disent Nos Convives",

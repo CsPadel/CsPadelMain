@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowLeft, ArrowRight, Check } from 'lucide-react';
 import '../i18n/config';
@@ -117,7 +118,13 @@ export function EnquiryFormModal({
   const [answers, setAnswers] = useState<Answers>(emptyAnswers);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'failed'>('idle');
+  const [mounted, setMounted] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
+
+  /* Portal target only exists client-side; avoids SSR mismatch. */
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const step: Step = STEPS[stepIndex];
 
@@ -283,7 +290,9 @@ export function EnquiryFormModal({
 
   const isLastStep = stepIndex === STEPS.length - 1;
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {open && (
         <>
@@ -601,7 +610,8 @@ export function EnquiryFormModal({
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
 
