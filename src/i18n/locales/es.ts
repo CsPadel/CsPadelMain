@@ -594,53 +594,41 @@ const es = {
         label: "Lo Que Dicen Nuestros Invitados",
         title: "Recordado mucho después.",
         subtitle: "Los invitados llegan como jugadores. Se van formando parte de la comunidad CourtSide.",
-        // ⚠️ CONTENIDO DE MARCADOR DE POSICIÓN — los nombres, fechas y fotos de
-        // abajo son ilustrativos. Deben sustituirse por testimonios reales y
-        // con consentimiento (nombre real, fecha real, foto real) antes de
-        // publicar el sitio. Las fechas se sitúan entre 2025 y 2026 para
-        // mantener la coherencia con "Est. 2025".
+        // Testimonios reales de invitados. Las fotos siguen pendientes (TODO:
+        // sustituir cada `image` por la foto real facilitada — enlace de
+        // Drive indicado junto a cada invitado).
         items: [
           {
-            name: "Charlotte Reeve",
-            role: "Invitada · Menorca, octubre 2025",
-            text: "Menorca tuvo ese flujo perfecto. Sesiones de pádel soleadas, tardes lentas, cenas increíbles. Cada momento se sintió intencional.",
-            initials: "C",
+            name: "Dylan Sweidan",
+            role: "Invitado · Menorca",
+            text: "Menorca fue el escenario perfecto para un retiro de pádel. El equilibrio entre el tiempo en pista, la buena comida, explorar la isla y relajarse junto al mar hizo que se sintiera como mucho más que un simple viaje de entrenamiento.",
+            initials: "D",
+            // TODO: sustituir por la foto real de Dylan — Drive: 1d3xlTjyPBc-E1Jnv7kntO0gTKv12hpTx
             image: "/imagenes/Cala en porter.jpg"
           },
           {
-            name: "Tom Bradshaw",
-            role: "Invitado · Menorca, octubre 2025",
-            text: "Vine por el pádel y me fui con once amigos nuevos. Volví a casa más ligero, más fuerte y genuinamente agradecido.",
-            initials: "T",
+            name: "Katja Bonnavion",
+            role: "Invitada · Menorca",
+            text: "Pasé unos 5 días increíbles. El hotel, los restaurantes y las actividades fueron excelentes, y el coaching se adaptó al nivel de cada uno, lo que hizo que cada sesión fuera disfrutable.",
+            initials: "K",
+            // TODO: sustituir por la foto real de Katja — Drive: 1AYHscrzI7F3tUpKpdxqnLt5d3-nYtydL
             image: "/imagenes/IMG_2167.jpeg"
           },
           {
-            name: "Sofia Almeida",
-            role: "Invitada · Menorca, mayo 2026",
-            text: "La instalación de pádel en Menorca es de primer nivel: pistas profesionales, grandes entrenadores y un ambiente relajado que hace que quieras quedarte para siempre.",
-            initials: "S",
+            name: "Anatole Levy",
+            role: "Invitado · Menorca",
+            text: "Lo que más destacó fue lo completa que fue la experiencia. Jugamos mucho al pádel, pero también conocimos lo mejor de Menorca, comimos en lugares fantásticos y conocimos a gente estupenda. Volvería a reservar sin dudarlo.",
+            initials: "A",
+            // TODO: sustituir por la foto real de Anatole — Drive: 181LQXwpuMtm3wNqRVkxbeNHyiDvDRmAx
             image: "/imagenes/EM-22.jpg"
           },
           {
-            name: "James Whitfield",
-            role: "Invitado · Menorca, mayo 2026",
-            text: "La atención y el cuidado en el servicio, la limpieza y la hospitalidad no tienen parangón en ningún otro lugar donde hayamos estado.",
-            initials: "J",
+            name: "Sergi Pons",
+            role: "Invitado · Menorca",
+            text: "Si buscas mejorar tu pádel, lo recomiendo sin duda. El coaching fue de gran calidad, las sesiones eran dinámicas y salí sintiéndome mucho más seguro en la pista.",
+            initials: "S",
+            // TODO: sustituir por la foto real de Sergi — Drive: 18TxN_ijBSmZ5D3zskZDdZRH1s4NtEgzG
             image: "/imagenes/JOPS-721.JPG"
-          },
-          {
-            name: "Nina Bergström",
-            role: "Invitada · Menorca, mayo 2026",
-            text: "Mañanas con pádel, yoga en el acantilado, comida de primer nivel y un servicio impecable durante todo el retiro. Así se siente el verdadero lujo.",
-            initials: "N",
-            image: "/imagenes/binifadet.jpeg"
-          },
-          {
-            name: "Marcus Ellery",
-            role: "Invitado · Menorca, octubre 2025",
-            text: "Oliver aporta una energía increíble a la pista, combinando un entrenamiento relajado con una mejora enfocada. Una combinación poco común.",
-            initials: "M",
-            image: "/imagenes/cap roig.jpg"
           }
         ]
       },

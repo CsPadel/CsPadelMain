@@ -122,18 +122,13 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             </p>
             <ul className="space-y-4">
               <li>
-                <a href={localizedHref('/upcoming-retreats#bali')} className={linkClass}>
+                <a href={localizedHref('/bali')} className={linkClass}>
                   Bali
                 </a>
               </li>
               <li>
-                <a href={localizedHref('/upcoming-retreats#dubai')} className={linkClass}>
+                <a href={localizedHref('/dubai')} className={linkClass}>
                   Dubai
-                </a>
-              </li>
-              <li>
-                <a href={localizedHref('/upcoming-retreats#mykonos')} className={linkClass}>
-                  Mykonos
                 </a>
               </li>
             </ul>
@@ -161,7 +156,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               </li>
               <li>
                 <a href={localizedHref('/executive-retreat')} className={linkClass}>
-                  Executive Retreat
+                  Corporate & Executive
                 </a>
               </li>
             </ul>

@@ -1,0 +1,218 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FooterIsland from '../FooterIsland';
+import EnquiryCta from '../EnquiryForm';
+import type { Locale } from '../../i18n/locales';
+import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const seo = getPageSeo('bali', locale);
+const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
+const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
+---
+
+<Layout
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
+  lang={locale}
+  locale={locale}
+  canonical={alternateUrls[locale]}
+  alternateUrls={alternateUrls}
+>
+  <main class="w-full bg-white flex flex-col relative">
+
+    {/* ── Hero ── */}
+    <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
+      {/* TODO: replace with the infinity pool at dusk/sunset shot — Drive: 1K2esp3QrOMLBOL9O7aRthfdJhymdftA6 */}
+      <div class="absolute inset-0 noise-section" aria-hidden="true" />
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(to bottom, rgba(1,25,44,0.15) 0%, rgba(1,25,44,0.45) 50%, rgba(1,25,44,0.98) 100%);"
+      />
+      <div class="relative z-10 max-w-7xl mx-auto w-full">
+        <h1
+          class="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-none mb-6"
+          style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s both;"
+        >
+          An Escape to Bali.
+        </h1>
+        <p
+          class="text-white/55 text-lg md:text-xl font-light max-w-xl leading-relaxed"
+          style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s both;"
+        >
+          A private cliff-top estate on the Bukit Peninsula, home to the only WPT-recognised padel courts on the island. A Mandarin Oriental Home.
+        </p>
+      </div>
+    </section>
+
+    {/* ── Two Ways to Stay ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-16 md:mb-20 cs-fadein">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+              Where You Stay
+            </p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            Two ways to experience Bali.
+          </h2>
+        </div>
+
+        {/* The Estate */}
+        <div class="mb-20 md:mb-24 cs-fadein">
+          <h3
+            class="text-2xl md:text-3xl font-light text-brand-dark mb-5"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            The Estate
+          </h3>
+          <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed max-w-3xl mb-8">
+            The entire 8-suite cliff-top estate, exclusively yours. Private chef, butler, and concierge, an infinity pool overlooking the Indian Ocean, and a private spa pavilion. On-site experiences included: spa treatments, yoga, cooking classes, personal training, and more. This is the full, in-house Bali retreat, built for groups who want everything on one property.
+          </p>
+          {/* TODO: replace with the 3-image Estate set (aerial/pool, living pavilion, suite w/ outdoor bath) —
+              Drive: 10hGnoEzN0AziIonbCq3awaYfMgtPf2-q, 1sKOpwfWOdhEzPcii0POL2ZSdt5KCY-zY, 1eqnbS4LpGXNrBfxwELdhzkOy8qOzhMrd */}
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+            {[0, 1, 2].map((i) => (
+              <div class="cs-placeholder noise-section rounded-card aspect-[4/5]" aria-hidden="true" />
+            ))}
+          </div>
+        </div>
+
+        {/* The Studios */}
+        <div class="cs-fadein">
+          <h3
+            class="text-2xl md:text-3xl font-light text-brand-dark mb-5"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            The Studios
+          </h3>
+          <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed max-w-3xl mb-8">
+            Modern, comfortable rooms just steps from the padel courts, ideal for solo travellers, couples, or anyone who'd rather spend the week out exploring Bali than in. Air-conditioned, with ensuite bathrooms and a kitchenette. On-site extras like spa and cooking classes aren't included here, but can be arranged through local partners on request.
+          </p>
+          {/* TODO: replace with 1-2 Studios interior shots (smaller than Estate) —
+              Drive: 1idxuanG4duD3sOgcftADqtdHbzMsbGa4, 1Axin_3bXX8YNBaaqg_2ey98ZT25tpkd- */}
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-2xl">
+            {[0, 1].map((i) => (
+              <div class="cs-placeholder noise-section rounded-card aspect-[4/3]" aria-hidden="true" />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ── The Padel ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div class="cs-fadein">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+              The Courts
+            </p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            The only WPT-recognised courts in Bali.
+          </h2>
+          <p class="text-brand-dark/55 text-lg font-light leading-relaxed">
+            Two courts, custom-built by Padel Galis, the official court provider of the World Padel Tour. Set within the estate, overlooking the Indian Ocean. It's the only facility of its kind on the island.
+          </p>
+        </div>
+        {/* TODO: replace with the real court photo showing Padel Galis branding, ocean/glass wall in frame —
+            Drive: 116iQiaRfzFpYkod0fe3FsaBj6QL07IFT (also: 1vhlgBD76_tC9Yss5tMBVUeHOsrjdkfc0, 197RQAYeuDodSPRM8hrNDeFCEzrp4as5u, 1SZ6fkV22AFde23stkwuzeooWdjjaGCVO) */}
+        <div class="cs-fadein cs-placeholder noise-section rounded-card aspect-[4/3]" aria-hidden="true" />
+      </div>
+    </section>
+
+    {/* ── Beyond the Court ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-10 cs-fadein">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+              Off the Court
+            </p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            Bali, beyond the estate.
+          </h2>
+          <p class="text-brand-dark/55 text-lg font-light leading-relaxed max-w-2xl">
+            Surfing, diving, paragliding, temple visits, cycling, sound healing, and more, all arranged through a local activity coordinator who knows the island inside out. Whatever you're into, it's within reach.
+          </p>
+        </div>
+        {/* TODO: replace with a wide coastline/Uluwatu lifestyle shot (not the estate again) —
+            Drive: 1oJFbYpjmsi6SeOE12c1GaO4F95A-si_A, 1-ufL7Xw37lUnViSMgNio7e2asYkSLURR */}
+        <div class="cs-fadein cs-placeholder noise-section rounded-card w-full" style="aspect-ratio: 21/9;" aria-hidden="true" />
+      </div>
+    </section>
+
+    {/* ── Closing ── */}
+    <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
+      {/* TODO: replace with the private chef/culinary team photo (candid, pasta-making) —
+          Drive: 1PwkFZ9ACmJymhIcxbNa0zUL-1dwDbIYp (also: 1RYVqasBIQXFeAqeUVMoECxmvMoDNJFPS, 1JEl9GxrcF5s9tPGTirjGDnDiETIkm1-J) */}
+      <div class="absolute inset-0 noise-section opacity-70" aria-hidden="true" />
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <h2
+          class="text-4xl md:text-5xl font-light text-white mb-5"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          Ready to Experience Uluwatu?
+        </h2>
+        <p class="text-white/50 text-base font-light leading-relaxed mb-10 max-w-sm mx-auto">
+          Dates and pricing are confirmed once we know your group and plans. Full itinerary available on request.
+        </p>
+        <EnquiryCta client:visible locale={locale} label="Enquire About Bali" destination="bali" />
+      </div>
+    </section>
+
+    <FooterIsland client:visible locale={locale} />
+  </main>
+</Layout>
+
+<style is:global>
+  .cs-placeholder {
+    background: linear-gradient(135deg, #041E36 0%, #01192C 100%);
+  }
+  .cs-fadein {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .cs-fadein.cs-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cs-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '-40px' }
+  );
+
+  document.querySelectorAll('.cs-fadein').forEach((el) => observer.observe(el));
+</script>

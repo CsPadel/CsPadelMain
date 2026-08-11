@@ -35,7 +35,7 @@ const retreats = [
   {
     id: 'executive',
     tag: 'C-Suite & Boards',
-    name: 'Executive Retreat',
+    name: 'Corporate & Executive',
     desc: 'Strategy in silence. High-performance leadership and networking in the most exclusive padel setting.',
     // TODO: replace with 2–3 people in smart casual clothes, on court or on a
     // quiet terrace. Calm, serious mood — not a party mood.
@@ -67,14 +67,14 @@ export default function RetreatTypesSection({ locale }: Props) {
           <div className="flex items-center gap-4 mb-5">
             <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
             <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              Choose Your Retreat
+              Retreat Formats
             </p>
           </div>
           <h2
             className="text-4xl md:text-5xl lg:text-6xl font-light text-brand-dark leading-none"
             style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
           >
-            Choose your format.
+            Choose Your Retreat.
           </h2>
         </motion.div>
 
@@ -122,12 +122,15 @@ export default function RetreatTypesSection({ locale }: Props) {
                     {retreat.tag}
                   </span>
                   <h3
-                    className="text-3xl md:text-4xl font-normal text-white mb-4 leading-snug"
-                    style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+                    className="text-3xl md:text-4xl font-semibold text-white mb-4 leading-snug"
+                    style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', textShadow: '0 2px 12px rgba(0,0,0,0.45)' }}
                   >
                     {retreat.name}
                   </h3>
-                  <p className="text-white/85 text-base font-normal leading-relaxed mb-6 max-w-[34ch]">
+                  <p
+                    className="text-white text-[15px] md:text-base font-medium leading-relaxed mb-6 max-w-[34ch]"
+                    style={{ textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}
+                  >
                     {retreat.desc}
                   </p>
 

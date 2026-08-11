@@ -594,53 +594,41 @@ const fr = {
         label: "Ce Que Disent Nos Convives",
         title: "Longtemps après le retour.",
         subtitle: "Les convives arrivent en joueurs. Ils repartent membres de la communauté CourtSide.",
-        // ⚠️ CONTENU PROVISOIRE — les noms, dates et photos ci-dessous sont
-        // illustratifs. Ils doivent être remplacés par de vrais témoignages
-        // consentis (vrai nom, vraie date, vraie photo) avant la mise en ligne.
-        // Les dates se situent entre 2025 et 2026 pour rester cohérentes
-        // avec « Est. 2025 ».
+        // Vrais témoignages de convives. Les photos restent en attente (TODO :
+        // remplacer chaque `image` par la vraie photo fournie — lien Drive
+        // indiqué pour chaque convive).
         items: [
           {
-            name: "Charlotte Reeve",
-            role: "Convive · Minorque, octobre 2025",
-            text: "Minorque avait ce flow parfait. Des sessions de padel ensoleillées, des après-midis lents, des dîners incroyables. Chaque moment semblait intentionnel.",
-            initials: "C",
+            name: "Dylan Sweidan",
+            role: "Convive · Minorque",
+            text: "Minorque était le cadre parfait pour une retraite padel. L'équilibre entre le temps sur le court, la bonne cuisine, la découverte de l'île et la détente au bord de mer en a fait bien plus qu'un simple stage de coaching.",
+            initials: "D",
+            // TODO : remplacer par la vraie photo de Dylan — Drive : 1d3xlTjyPBc-E1Jnv7kntO0gTKv12hpTx
             image: "/imagenes/Cala en porter.jpg"
           },
           {
-            name: "Tom Bradshaw",
-            role: "Convive · Minorque, octobre 2025",
-            text: "Je suis venu pour le padel et je suis reparti avec onze nouveaux amis. Je suis rentré plus léger, plus fort et sincèrement reconnaissant.",
-            initials: "T",
+            name: "Katja Bonnavion",
+            role: "Convive · Minorque",
+            text: "J'ai passé 5 jours incroyables. L'hôtel, les restaurants et les activités étaient excellents, et le coaching était adapté au niveau de chacun, ce qui rendait chaque session agréable.",
+            initials: "K",
+            // TODO : remplacer par la vraie photo de Katja — Drive : 1AYHscrzI7F3tUpKpdxqnLt5d3-nYtydL
             image: "/imagenes/IMG_2167.jpeg"
           },
           {
-            name: "Sofia Almeida",
-            role: "Convive · Minorque, mai 2026",
-            text: "L'installation padel à Minorque est au plus haut niveau — courts professionnels, excellents coachs, atmosphère détendue qui donne envie de rester pour toujours.",
-            initials: "S",
+            name: "Anatole Levy",
+            role: "Convive · Minorque",
+            text: "Ce qui a le plus marqué, c'est à quel point l'expérience était complète. Nous avons beaucoup joué au padel, mais nous avons aussi découvert le meilleur de Minorque, mangé dans des endroits fantastiques et rencontré des gens formidables. Je réserverais à nouveau sans hésiter.",
+            initials: "A",
+            // TODO : remplacer par la vraie photo d'Anatole — Drive : 181LQXwpuMtm3wNqRVkxbeNHyiDvDRmAx
             image: "/imagenes/EM-22.jpg"
           },
           {
-            name: "James Whitfield",
-            role: "Convive · Minorque, mai 2026",
-            text: "Une telle attention au service, à la propreté et à l'hospitalité n'a aucun équivalent dans tous les endroits où nous avons séjourné.",
-            initials: "J",
+            name: "Sergi Pons",
+            role: "Convive · Minorque",
+            text: "Si vous cherchez à progresser au padel, je le recommande vivement. Le coaching était de grande qualité, les sessions engageantes, et je suis reparti bien plus confiant sur le court.",
+            initials: "S",
+            // TODO : remplacer par la vraie photo de Sergi — Drive : 18TxN_ijBSmZ5D3zskZDdZRH1s4NtEgzG
             image: "/imagenes/JOPS-721.JPG"
-          },
-          {
-            name: "Nina Bergström",
-            role: "Convive · Minorque, mai 2026",
-            text: "Matinées padel, yoga sur la falaise, gastronomie d'exception et service impeccable tout au long du séjour. C'est ce que le luxe signifie vraiment.",
-            initials: "N",
-            image: "/imagenes/binifadet.jpeg"
-          },
-          {
-            name: "Marcus Ellery",
-            role: "Convive · Minorque, octobre 2025",
-            text: "Oliver apporte une énergie formidable sur le court, alliant coaching détendu et progression ciblée. Une combinaison rare et précieuse.",
-            initials: "M",
-            image: "/imagenes/cap roig.jpg"
           }
         ]
       },

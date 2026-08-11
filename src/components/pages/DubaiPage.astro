@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FooterIsland from '../FooterIsland';
+import EnquiryCta from '../EnquiryForm';
+import type { Locale } from '../../i18n/locales';
+import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const seo = getPageSeo('dubai', locale);
+const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
+const alternateUrls = getAlternateUrls(siteURL.href, 'dubai');
+---
+
+<Layout
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
+  lang={locale}
+  locale={locale}
+  canonical={alternateUrls[locale]}
+  alternateUrls={alternateUrls}
+>
+  <main class="w-full bg-brand-dark flex flex-col relative">
+    <section class="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-8 overflow-hidden">
+      <div class="absolute inset-0 noise-section" aria-hidden="true" />
+
+      <div class="relative z-10 max-w-lg mx-auto flex flex-col items-center">
+        <img
+          src="/imagenes/Logo Gold.svg"
+          alt="CourtSide Padel"
+          class="h-14 md:h-16 object-contain mb-12"
+          style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s both;"
+        />
+
+        <h1
+          class="text-4xl md:text-6xl font-light text-white leading-none mb-6"
+          style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.4s both;"
+        >
+          Dubai.<br />Coming Soon.
+        </h1>
+
+        <p
+          class="text-white/50 text-base md:text-lg font-light leading-relaxed mb-12 max-w-sm"
+          style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.6s both;"
+        >
+          We're building something special for Dubai. Get in touch if you'd like to be the first to know when it's ready.
+        </p>
+
+        <div style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.8s both;">
+          <EnquiryCta client:visible locale={locale} label="Get in Touch" destination="dubai" />
+        </div>
+      </div>
+    </section>
+
+    <FooterIsland client:visible locale={locale} />
+  </main>
+</Layout>

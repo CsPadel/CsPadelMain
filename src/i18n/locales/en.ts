@@ -594,52 +594,40 @@ const en = {
         label: "What Guests Have To Say",
         title: "Remembered long after.",
         subtitle: "Guests arrive as players. They leave part of the CourtSide community.",
-        // ⚠️ PLACEHOLDER CONTENT — names, dates and photos below are illustrative
-        // only. They must be replaced with real, consented guest testimonials
-        // (real name, real retreat date, real photo) before this site goes live.
-        // Dates are set within 2025–2026 so they stay consistent with "Est. 2025".
+        // Real guest testimonials. Photos are still pending (TODO: swap each
+        // `image` for the real photo supplied — Drive links noted per guest).
         items: [
           {
-            name: "Charlotte Reeve",
-            role: "Guest · Menorca, October 2025",
-            text: "Menorca had this perfect flow to it. Sunny padel sessions, slow afternoons, amazing dinners. Every moment felt intentional.",
-            initials: "C",
+            name: "Dylan Sweidan",
+            role: "Guest · Menorca",
+            text: "Menorca was the perfect setting for a padel retreat. The balance between time on court, great food, exploring the island and relaxing by the sea made it feel like so much more than just a coaching trip.",
+            initials: "D",
+            // TODO: replace with Dylan's real photo — Drive: 1d3xlTjyPBc-E1Jnv7kntO0gTKv12hpTx
             image: "/imagenes/Cala en porter.jpg"
           },
           {
-            name: "Tom Bradshaw",
-            role: "Guest · Menorca, October 2025",
-            text: "I came for the padel and left with eleven new friends. I went home lighter, stronger, and genuinely grateful.",
-            initials: "T",
+            name: "Katja Bonnavion",
+            role: "Guest · Menorca",
+            text: "I had an amazing 5 days. The hotel, restaurants and activities were all brilliant, and the coaching was adapted to everyone's level, which made every session enjoyable.",
+            initials: "K",
+            // TODO: replace with Katja's real photo — Drive: 1AYHscrzI7F3tUpKpdxqnLt5d3-nYtydL
             image: "/imagenes/IMG_2167.jpeg"
           },
           {
-            name: "Sofia Almeida",
-            role: "Guest · Menorca, May 2026",
-            text: "The padel setup in Menorca is top tier — professional courts, great coaches, and a relaxed atmosphere that makes you want to stay forever.",
-            initials: "S",
+            name: "Anatole Levy",
+            role: "Guest · Menorca",
+            text: "What stood out most was how well-rounded the experience was. We played plenty of padel, but also got to experience the best of Menorca, eat at some fantastic places and meet genuinely great people. I'd book again without hesitation.",
+            initials: "A",
+            // TODO: replace with Anatole's real photo — Drive: 181LQXwpuMtm3wNqRVkxbeNHyiDvDRmAx
             image: "/imagenes/EM-22.jpg"
           },
           {
-            name: "James Whitfield",
-            role: "Guest · Menorca, May 2026",
-            text: "Such care and attention to service, cleanliness, and hospitality is unparalleled anywhere else we stayed.",
-            initials: "J",
+            name: "Sergi Pons",
+            role: "Guest · Menorca",
+            text: "If you're looking to improve your padel, I'd definitely recommend it. The coaching was high quality, the sessions were engaging, and I left feeling much more confident on court.",
+            initials: "S",
+            // TODO: replace with Sergi's real photo — Drive: 18TxN_ijBSmZ5D3zskZDdZRH1s4NtEgzG
             image: "/imagenes/JOPS-721.JPG"
-          },
-          {
-            name: "Nina Bergström",
-            role: "Guest · Menorca, May 2026",
-            text: "Mornings with padel, yoga by the cliff, world-class food, and effortless service throughout. This is what luxury actually feels like.",
-            initials: "N",
-            image: "/imagenes/binifadet.jpeg"
-          },
-          {
-            name: "Marcus Ellery",
-            role: "Guest · Menorca, October 2025",
-            text: "Oliver brings such great energy to the court, balancing relaxed coaching with focused improvement. A rare combination.",
-            initials: "M",
-            image: "/imagenes/cap roig.jpg"
           }
         ]
       },

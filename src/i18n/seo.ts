@@ -1,7 +1,7 @@
 import type { Locale } from './locales';
 import { localizedPath } from './routing';
 
-export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory' | 'upcomingRetreats';
+export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory' | 'upcomingRetreats' | 'bali' | 'dubai';
 
 export interface PageSeo {
   title: string;
@@ -72,19 +72,19 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
   },
   executiveRetreat: {
     en: {
-      title: 'Executive Retreat — CourtSide Padel',
-      description: 'Strategy in silence. C-Suite and board-level padel retreats designed for absolute focus, elite networking and leadership development in Menorca.',
-      keywords: 'executive padel retreat, C-suite retreat, corporate padel, leadership retreat Menorca, board retreat padel',
+      title: 'Corporate & Executive — CourtSide Padel',
+      description: 'From leadership offsites and team building to rewards trips and board retreats, we build closed, bespoke padel retreats for companies of every kind.',
+      keywords: 'corporate padel retreat, executive padel retreat, C-suite retreat, leadership offsite Menorca, board retreat padel',
     },
     es: {
-      title: 'Retiro Ejecutivo — CourtSide Padel',
-      description: 'Estrategia en silencio. Retiros de pádel para C-Suite y consejos de administración diseñados para el máximo enfoque y networking de élite en Menorca.',
-      keywords: 'retiro ejecutivo pádel, retiro C-suite, pádel corporativo, retiro liderazgo Menorca',
+      title: 'Corporativo y Ejecutivo — CourtSide Padel',
+      description: 'Desde offsites de liderazgo y team building hasta viajes de incentivo y retiros de consejo, creamos retiros de pádel cerrados y a medida para empresas de todo tipo.',
+      keywords: 'retiro pádel corporativo, retiro ejecutivo pádel, retiro C-suite, offsite liderazgo Menorca',
     },
     fr: {
-      title: 'Retraite Exécutive — CourtSide Padel',
-      description: 'Stratégie dans le silence. Retraites padel pour C-Suite et conseils d\'administration conçues pour un focus absolu et un networking d\'élite à Minorque.',
-      keywords: 'retraite exécutive padel, retraite C-suite, padel corporate, retraite leadership Minorque',
+      title: 'Corporate & Exécutif — CourtSide Padel',
+      description: 'Des séminaires de leadership et du team building aux voyages de récompense et retraites de conseil, nous créons des retraites padel fermées et sur mesure pour tout type d\'entreprise.',
+      keywords: 'retraite padel corporate, retraite padel exécutive, retraite C-suite, séminaire leadership Minorque',
     },
   },
   ourStory: {
@@ -121,6 +121,40 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
       keywords: 'prochaines retraites padel, CourtSide Bali, CourtSide Dubaï, CourtSide Mykonos, nouvelles destinations padel',
     },
   },
+  bali: {
+    en: {
+      title: 'Bali — CourtSide Padel',
+      description: 'A private cliff-top estate on the Bukit Peninsula, home to the only WPT-recognised padel courts in Bali. A Mandarin Oriental Home.',
+      keywords: 'Bali padel retreat, Uluwatu padel, Padel Galis courts Bali, luxury Bali estate padel',
+    },
+    es: {
+      title: 'Bali — CourtSide Padel',
+      description: 'Una finca privada en los acantilados de la península de Bukit, sede de las únicas pistas de pádel reconocidas por el WPT en Bali. Una Mandarin Oriental Home.',
+      keywords: 'retiro pádel Bali, pádel Uluwatu, pistas Padel Galis Bali, finca de lujo pádel Bali',
+    },
+    fr: {
+      title: 'Bali — CourtSide Padel',
+      description: 'Un domaine privé en falaise sur la péninsule de Bukit, abritant les seuls courts de padel reconnus par le WPT à Bali. Une Mandarin Oriental Home.',
+      keywords: 'retraite padel Bali, padel Uluwatu, courts Padel Galis Bali, domaine de luxe padel Bali',
+    },
+  },
+  dubai: {
+    en: {
+      title: 'Dubai — Coming Soon — CourtSide Padel',
+      description: "We're building something special for Dubai. Get in touch if you'd like to be the first to know when it's ready.",
+      keywords: 'Dubai padel retreat, CourtSide Dubai, upcoming padel destinations',
+    },
+    es: {
+      title: 'Dubái — Próximamente — CourtSide Padel',
+      description: 'Estamos preparando algo especial para Dubái. Contáctanos si quieres ser el primero en saberlo cuando esté listo.',
+      keywords: 'retiro pádel Dubái, CourtSide Dubái, próximos destinos pádel',
+    },
+    fr: {
+      title: 'Dubaï — Bientôt Disponible — CourtSide Padel',
+      description: 'Nous préparons quelque chose de spécial pour Dubaï. Contactez-nous pour être informé en premier.',
+      keywords: 'retraite padel Dubaï, CourtSide Dubaï, prochaines destinations padel',
+    },
+  },
 };
 
 const pagePaths: Record<PageId, string> = {
@@ -130,6 +164,8 @@ const pagePaths: Record<PageId, string> = {
   executiveRetreat: '/executive-retreat',
   ourStory: '/our-story',
   upcomingRetreats: '/upcoming-retreats',
+  bali: '/bali',
+  dubai: '/dubai',
 };
 
 export function getPageSeo(page: PageId, locale: Locale): PageSeo {
@@ -156,6 +192,8 @@ export function getSitemapEntries(siteUrl: string): Array<{ loc: string; lastmod
     { page: 'ourStory', changefreq: 'monthly', priority: '0.7' },
     { page: 'executiveRetreat', changefreq: 'monthly', priority: '0.7' },
     { page: 'upcomingRetreats', changefreq: 'weekly', priority: '0.8' },
+    { page: 'bali', changefreq: 'monthly', priority: '0.7' },
+    { page: 'dubai', changefreq: 'monthly', priority: '0.5' },
     { page: 'cookies', changefreq: 'yearly', priority: '0.3' },
   ];
 

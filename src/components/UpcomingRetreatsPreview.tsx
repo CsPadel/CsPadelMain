@@ -11,26 +11,19 @@ const retreats = [
   {
     id: 'bali',
     name: 'BALI',
-    tagline: 'Jungle Luxury. Elite Padel.',
+    tagline: 'A private cliff-top estate. Elite padel.',
     location: 'Uluwatu · Bali',
-    image: 'https://images.unsplash.com/photo-1664918706173-6349ca225dd0?w=900&h=600&fit=crop&crop=center&q=85',
-    href: '/upcoming-retreats#bali',
+    // TODO: replace placeholder with real Bali estate/court photography once available
+    image: null as string | null,
+    href: '/bali',
   },
   {
     id: 'dubai',
     name: 'DUBAI',
-    tagline: 'Urban Prestige. Desert Courts.',
+    tagline: 'Coming soon.',
     location: 'Coming Soon',
-    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&h=600&fit=crop&crop=center&q=85',
-    href: '/upcoming-retreats#dubai',
-  },
-  {
-    id: 'mykonos',
-    name: 'MYKONOS',
-    tagline: 'Aegean Elegance. Elite Padel.',
-    location: 'Cyclades · Greece',
-    image: 'https://images.unsplash.com/photo-1706189431324-c062a5060a2b?w=900&h=600&fit=crop&crop=center&q=85',
-    href: '/upcoming-retreats#mykonos',
+    image: null as string | null,
+    href: '/dubai',
   },
 ];
 
@@ -75,7 +68,7 @@ export default function UpcomingRetreatsPreview({ locale }: Props) {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {retreats.map((r, i) => (
             <motion.a
               key={r.id}
@@ -87,18 +80,21 @@ export default function UpcomingRetreatsPreview({ locale }: Props) {
               className="group relative rounded-card overflow-hidden flex flex-col justify-end"
               style={{ minHeight: '420px' }}
             >
-              <div className="absolute inset-0 skeleton-light" aria-hidden="true" />
-              <img
-                src={r.image}
-                alt={r.name}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-                onLoad={(e) => {
-                  const el = e.currentTarget.previousElementSibling as HTMLElement;
-                  if (el) el.style.opacity = '0';
-                }}
-              />
+              {r.image ? (
+                <img
+                  src={r.image}
+                  alt={r.name}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <div
+                  className="absolute inset-0 noise-section"
+                  style={{ background: 'linear-gradient(135deg, #041E36 0%, #01192C 100%)' }}
+                  aria-hidden="true"
+                />
+              )}
               <div
                 className="absolute inset-0"
                 style={{
@@ -125,18 +121,7 @@ export default function UpcomingRetreatsPreview({ locale }: Props) {
                   {r.tagline}
                 </p>
 
-                <span
-                  className="inline-block text-[10px] uppercase tracking-widest px-3 py-1 rounded-full border"
-                  style={{
-                    color: '#D9AD62',
-                    borderColor: 'rgba(217,173,98,0.35)',
-                    background: 'rgba(217,173,98,0.08)',
-                  }}
-                >
-                  Dates TBA
-                </span>
-
-                <div className="flex items-center gap-2 mt-4 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+                <div className="flex items-center gap-2 mt-2 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
                   <span className="text-[11px] uppercase tracking-widest text-brand-gold font-medium">
                     Explore
                   </span>

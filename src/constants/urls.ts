@@ -9,9 +9,9 @@ export function getWhatsAppConciergeUrl(message?: string): string {
 
 const RETREAT_URLS: Record<string, string> = {
   menorca: MENORCA_URL,
-  bali: '/upcoming-retreats#bali',
-  dubai: '/upcoming-retreats#dubai',
-  mykonos: '/upcoming-retreats#mykonos',
+  bali: '/bali',
+  dubai: '/dubai',
+  mykonos: '/upcoming-retreats',
 };
 
 export function getRetreatUrl(retreat: string): string {

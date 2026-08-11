@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import UpcomingRetreatsLanding from '../UpcomingRetreatsLanding';
 import FooterIsland from '../FooterIsland';
+import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { localizedPath } from '../../i18n/routing';
+import { MENORCA_URL } from '../../constants/urls';
 
 interface Props {
   locale: Locale;
@@ -13,6 +15,30 @@ const { locale } = Astro.props;
 const seo = getPageSeo('upcomingRetreats', locale);
 const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
 const alternateUrls = getAlternateUrls(siteURL.href, 'upcomingRetreats');
+const baliHref = localizedPath('/bali', locale);
+
+const destinations = [
+  {
+    id: 'menorca',
+    name: 'Menorca',
+    location: 'Balearic Islands · Spain',
+    image: '/imagenes/cap roig.jpg',
+    dates: ['October 2026', 'April 2027', 'May 2027', 'June 2027', 'September 2027', 'October 2027'],
+    href: MENORCA_URL,
+    cta: 'Explore Menorca',
+    hasImage: true,
+  },
+  {
+    id: 'bali',
+    name: 'Bali',
+    location: 'Uluwatu · Bali',
+    image: '',
+    dates: ['March 2027', 'July 2027', 'August 2027'],
+    href: baliHref,
+    cta: 'Explore Bali',
+    hasImage: false,
+  },
+];
 ---
 
 <Layout
@@ -25,7 +51,114 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'upcomingRetreats');
   alternateUrls={alternateUrls}
 >
   <main class="w-full bg-white flex flex-col relative">
-    <UpcomingRetreatsLanding client:load locale={locale} />
+
+    {/* ── Hero ── */}
+    <section class="relative w-full pt-40 md:pt-48 pb-20 md:pb-24 px-8 md:px-16 bg-brand-dark text-center overflow-hidden">
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+            Next 12–18 Months
+          </p>
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+        </div>
+        <h1
+          class="text-5xl md:text-7xl font-light text-white leading-none mb-6"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          Upcoming Retreats.
+        </h1>
+        <p class="text-white/55 text-base md:text-lg font-light leading-relaxed max-w-xl mx-auto">
+          Elite padel, exceptional company, and everything around the game curated to match — across every CourtSide destination.
+        </p>
+      </div>
+    </section>
+
+    {/* ── Destinations ── */}
+    {destinations.map((dest, i) => (
+      <section
+        class="py-24 md:py-32 px-8 md:px-16"
+        style={{ background: i % 2 === 0 ? '#ffffff' : 'var(--color-brand-ivory)' }}
+      >
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          {/* Image */}
+          <div class="relative rounded-card overflow-hidden aspect-[4/3]">
+            {dest.hasImage ? (
+              <img
+                src={dest.image}
+                alt={dest.name}
+                loading="lazy"
+                decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              // TODO: replace with real Bali estate/padel court photography once available
+              <div class="absolute inset-0 cs-placeholder noise-section" aria-hidden="true" />
+            )}
+          </div>
+
+          {/* Copy */}
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+                {dest.location}
+              </p>
+            </div>
+            <h2
+              class="text-4xl md:text-5xl font-light text-brand-dark leading-none mb-8"
+              style="font-family: var(--font-display); font-style: italic;"
+            >
+              {dest.name}
+            </h2>
+
+            <div class="flex flex-wrap gap-2.5 mb-6">
+              {dest.dates.map((date) => (
+                <span class="text-sm font-light tracking-wide text-brand-dark/70 px-4 py-2 rounded-full border border-brand-dark/12">
+                  {date}
+                </span>
+              ))}
+            </div>
+
+            <p class="text-brand-dark/45 text-sm font-light mb-10">
+              Bespoke dates available upon request.
+            </p>
+
+            <a
+              href={dest.href}
+              class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-semibold text-brand-dark hover:text-brand-gold transition-colors duration-250 border-b border-brand-dark/15 hover:border-brand-gold pb-1"
+            >
+              {dest.cta}
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg>
+            </a>
+          </div>
+
+        </div>
+      </section>
+    ))}
+
+    {/* ── CTA ── */}
+    <section class="py-32 px-8 md:px-16 text-center noise-section bg-brand-dark">
+      <div class="max-w-2xl mx-auto relative z-10">
+        <h2
+          class="text-4xl md:text-5xl font-light mb-5 text-white"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          Have your own dates in mind?
+        </h2>
+        <p class="font-light text-lg mb-12" style="color: rgba(255,255,255,0.50);">
+          Tell us your plans and we'll build the retreat around them.
+        </p>
+        <EnquiryCta client:visible locale={locale} label="Plan Your Retreat" />
+      </div>
+    </section>
+
     <FooterIsland client:visible locale={locale} />
   </main>
 </Layout>
+
+<style is:global>
+  .cs-placeholder {
+    background: linear-gradient(135deg, #041E36 0%, #01192C 100%);
+  }
+</style>
