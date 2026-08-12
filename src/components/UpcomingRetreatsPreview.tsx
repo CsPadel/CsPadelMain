@@ -21,7 +21,7 @@ const retreats = [
     name: 'DUBAI',
     tagline: 'Coming soon.',
     location: 'Coming Soon',
-    image: null as string | null,
+    image: '/imagenes/cms/dubai-skyline.jpg' as string | null,
     href: '/dubai',
   },
 ];
