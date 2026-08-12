@@ -26,17 +26,15 @@ const destinations = [
     dates: ['October 2026', 'April 2027', 'May 2027', 'June 2027', 'September 2027', 'October 2027'],
     href: MENORCA_URL,
     cta: 'Explore Menorca',
-    hasImage: true,
   },
   {
     id: 'bali',
     name: 'Bali',
     location: 'Uluwatu · Bali',
-    image: '',
+    image: '/imagenes/cms/bali-estate-aerial.jpg',
     dates: ['March 2027', 'July 2027', 'August 2027'],
     href: baliHref,
     cta: 'Explore Bali',
-    hasImage: false,
   },
 ];
 ---
@@ -84,18 +82,13 @@ const destinations = [
 
           {/* Image */}
           <div class="relative rounded-card overflow-hidden aspect-[4/3]">
-            {dest.hasImage ? (
-              <img
-                src={dest.image}
-                alt={dest.name}
-                loading="lazy"
-                decoding="async"
-                class="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : (
-              // TODO: replace with real Bali estate/padel court photography once available
-              <div class="absolute inset-0 cs-placeholder noise-section" aria-hidden="true" />
-            )}
+            <img
+              src={dest.image}
+              alt={dest.name}
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
 
           {/* Copy */}
@@ -156,9 +149,3 @@ const destinations = [
     <FooterIsland client:visible locale={locale} />
   </main>
 </Layout>
-
-<style is:global>
-  .cs-placeholder {
-    background: linear-gradient(135deg, #041E36 0%, #01192C 100%);
-  }
-</style>

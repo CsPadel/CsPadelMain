@@ -13,8 +13,7 @@ const retreats = [
     name: 'BALI',
     tagline: 'A private cliff-top estate. Elite padel.',
     location: 'Uluwatu · Bali',
-    // TODO: replace placeholder with real Bali estate/court photography once available
-    image: null as string | null,
+    image: '/imagenes/cms/bali-estate-aerial.jpg' as string | null,
     href: '/bali',
   },
   {

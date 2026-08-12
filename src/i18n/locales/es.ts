@@ -594,41 +594,36 @@ const es = {
         label: "Lo Que Dicen Nuestros Invitados",
         title: "Recordado mucho después.",
         subtitle: "Los invitados llegan como jugadores. Se van formando parte de la comunidad CourtSide.",
-        // Testimonios reales de invitados. Las fotos siguen pendientes (TODO:
-        // sustituir cada `image` por la foto real facilitada — enlace de
-        // Drive indicado junto a cada invitado).
+        // Testimonios reales de invitados con fotos reales, fechados en 2026
+        // (posterior a "Est. 2025").
         items: [
           {
             name: "Dylan Sweidan",
             role: "Invitado · Menorca",
             text: "Menorca fue el escenario perfecto para un retiro de pádel. El equilibrio entre el tiempo en pista, la buena comida, explorar la isla y relajarse junto al mar hizo que se sintiera como mucho más que un simple viaje de entrenamiento.",
             initials: "D",
-            // TODO: sustituir por la foto real de Dylan — Drive: 1d3xlTjyPBc-E1Jnv7kntO0gTKv12hpTx
-            image: "/imagenes/Cala en porter.jpg"
+            image: "/imagenes/cms/testimonial-dylan-sweidan.jpg"
           },
           {
             name: "Katja Bonnavion",
             role: "Invitada · Menorca",
             text: "Pasé unos 5 días increíbles. El hotel, los restaurantes y las actividades fueron excelentes, y el coaching se adaptó al nivel de cada uno, lo que hizo que cada sesión fuera disfrutable.",
             initials: "K",
-            // TODO: sustituir por la foto real de Katja — Drive: 1AYHscrzI7F3tUpKpdxqnLt5d3-nYtydL
-            image: "/imagenes/IMG_2167.jpeg"
+            image: "/imagenes/cms/testimonial-katja-bonnavion.jpg"
           },
           {
             name: "Anatole Levy",
             role: "Invitado · Menorca",
             text: "Lo que más destacó fue lo completa que fue la experiencia. Jugamos mucho al pádel, pero también conocimos lo mejor de Menorca, comimos en lugares fantásticos y conocimos a gente estupenda. Volvería a reservar sin dudarlo.",
             initials: "A",
-            // TODO: sustituir por la foto real de Anatole — Drive: 181LQXwpuMtm3wNqRVkxbeNHyiDvDRmAx
-            image: "/imagenes/EM-22.jpg"
+            image: "/imagenes/cms/testimonial-anatole-levy.jpg"
           },
           {
             name: "Sergi Pons",
             role: "Invitado · Menorca",
             text: "Si buscas mejorar tu pádel, lo recomiendo sin duda. El coaching fue de gran calidad, las sesiones eran dinámicas y salí sintiéndome mucho más seguro en la pista.",
             initials: "S",
-            // TODO: sustituir por la foto real de Sergi — Drive: 18TxN_ijBSmZ5D3zskZDdZRH1s4NtEgzG
-            image: "/imagenes/JOPS-721.JPG"
+            image: "/imagenes/cms/testimonial-sergi-pons.jpg"
           }
         ]
       },

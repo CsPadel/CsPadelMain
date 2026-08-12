@@ -30,11 +30,8 @@ export default function ExperienceView({ locale }: ExperienceViewProps) {
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center pt-24 pb-24 px-8 md:px-16 text-center overflow-hidden bg-brand-dark">
-        {/* TODO: replace with a real off-court photo — terrace or poolside
-            social moment, golden hour, court visible in the background.
-            No stock, no AI. */}
         <img
-          src="/imagenes/EM-6.jpg"
+          src="/imagenes/cms/experience-hero.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover opacity-30"

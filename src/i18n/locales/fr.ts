@@ -594,41 +594,36 @@ const fr = {
         label: "Ce Que Disent Nos Convives",
         title: "Longtemps après le retour.",
         subtitle: "Les convives arrivent en joueurs. Ils repartent membres de la communauté CourtSide.",
-        // Vrais témoignages de convives. Les photos restent en attente (TODO :
-        // remplacer chaque `image` par la vraie photo fournie — lien Drive
-        // indiqué pour chaque convive).
+        // Vrais témoignages de convives avec de vraies photos, datés de 2026
+        // (postérieur à « Est. 2025 »).
         items: [
           {
             name: "Dylan Sweidan",
             role: "Convive · Minorque",
             text: "Minorque était le cadre parfait pour une retraite padel. L'équilibre entre le temps sur le court, la bonne cuisine, la découverte de l'île et la détente au bord de mer en a fait bien plus qu'un simple stage de coaching.",
             initials: "D",
-            // TODO : remplacer par la vraie photo de Dylan — Drive : 1d3xlTjyPBc-E1Jnv7kntO0gTKv12hpTx
-            image: "/imagenes/Cala en porter.jpg"
+            image: "/imagenes/cms/testimonial-dylan-sweidan.jpg"
           },
           {
             name: "Katja Bonnavion",
             role: "Convive · Minorque",
             text: "J'ai passé 5 jours incroyables. L'hôtel, les restaurants et les activités étaient excellents, et le coaching était adapté au niveau de chacun, ce qui rendait chaque session agréable.",
             initials: "K",
-            // TODO : remplacer par la vraie photo de Katja — Drive : 1AYHscrzI7F3tUpKpdxqnLt5d3-nYtydL
-            image: "/imagenes/IMG_2167.jpeg"
+            image: "/imagenes/cms/testimonial-katja-bonnavion.jpg"
           },
           {
             name: "Anatole Levy",
             role: "Convive · Minorque",
             text: "Ce qui a le plus marqué, c'est à quel point l'expérience était complète. Nous avons beaucoup joué au padel, mais nous avons aussi découvert le meilleur de Minorque, mangé dans des endroits fantastiques et rencontré des gens formidables. Je réserverais à nouveau sans hésiter.",
             initials: "A",
-            // TODO : remplacer par la vraie photo d'Anatole — Drive : 181LQXwpuMtm3wNqRVkxbeNHyiDvDRmAx
-            image: "/imagenes/EM-22.jpg"
+            image: "/imagenes/cms/testimonial-anatole-levy.jpg"
           },
           {
             name: "Sergi Pons",
             role: "Convive · Minorque",
             text: "Si vous cherchez à progresser au padel, je le recommande vivement. Le coaching était de grande qualité, les sessions engageantes, et je suis reparti bien plus confiant sur le court.",
             initials: "S",
-            // TODO : remplacer par la vraie photo de Sergi — Drive : 18TxN_ijBSmZ5D3zskZDdZRH1s4NtEgzG
-            image: "/imagenes/JOPS-721.JPG"
+            image: "/imagenes/cms/testimonial-sergi-pons.jpg"
           }
         ]
       },

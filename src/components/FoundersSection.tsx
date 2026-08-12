@@ -4,15 +4,13 @@ const founders = [
   {
     name: 'Alexi Watelet',
     role: 'Co-Founder',
-    photo: '/imagenes/about-us/alex.webp',
-    // TODO: Replace with real photo of Alexi → /imagenes/about-us/alexi-real.webp
+    photo: '/imagenes/cms/alexi-watelet.jpg',
     layout: 'text-left' as const,
   },
   {
     name: 'Oliver Watelet',
     role: 'Co-Founder',
-    photo: '/imagenes/about-us/oli.webp',
-    // TODO: Replace with real photo of Oliver → /imagenes/about-us/oliver-real.webp
+    photo: '/imagenes/cms/oliver-watelet.jpg',
     layout: 'text-right' as const,
   },
 ];

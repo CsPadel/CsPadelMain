@@ -594,40 +594,35 @@ const en = {
         label: "What Guests Have To Say",
         title: "Remembered long after.",
         subtitle: "Guests arrive as players. They leave part of the CourtSide community.",
-        // Real guest testimonials. Photos are still pending (TODO: swap each
-        // `image` for the real photo supplied — Drive links noted per guest).
+        // Real guest testimonials with real photos, dated 2026 (after "Est. 2025").
         items: [
           {
             name: "Dylan Sweidan",
             role: "Guest · Menorca",
             text: "Menorca was the perfect setting for a padel retreat. The balance between time on court, great food, exploring the island and relaxing by the sea made it feel like so much more than just a coaching trip.",
             initials: "D",
-            // TODO: replace with Dylan's real photo — Drive: 1d3xlTjyPBc-E1Jnv7kntO0gTKv12hpTx
-            image: "/imagenes/Cala en porter.jpg"
+            image: "/imagenes/cms/testimonial-dylan-sweidan.jpg"
           },
           {
             name: "Katja Bonnavion",
             role: "Guest · Menorca",
             text: "I had an amazing 5 days. The hotel, restaurants and activities were all brilliant, and the coaching was adapted to everyone's level, which made every session enjoyable.",
             initials: "K",
-            // TODO: replace with Katja's real photo — Drive: 1AYHscrzI7F3tUpKpdxqnLt5d3-nYtydL
-            image: "/imagenes/IMG_2167.jpeg"
+            image: "/imagenes/cms/testimonial-katja-bonnavion.jpg"
           },
           {
             name: "Anatole Levy",
             role: "Guest · Menorca",
             text: "What stood out most was how well-rounded the experience was. We played plenty of padel, but also got to experience the best of Menorca, eat at some fantastic places and meet genuinely great people. I'd book again without hesitation.",
             initials: "A",
-            // TODO: replace with Anatole's real photo — Drive: 181LQXwpuMtm3wNqRVkxbeNHyiDvDRmAx
-            image: "/imagenes/EM-22.jpg"
+            image: "/imagenes/cms/testimonial-anatole-levy.jpg"
           },
           {
             name: "Sergi Pons",
             role: "Guest · Menorca",
             text: "If you're looking to improve your padel, I'd definitely recommend it. The coaching was high quality, the sessions were engaging, and I left feeling much more confident on court.",
             initials: "S",
-            // TODO: replace with Sergi's real photo — Drive: 18TxN_ijBSmZ5D3zskZDdZRH1s4NtEgzG
-            image: "/imagenes/JOPS-721.JPG"
+            image: "/imagenes/cms/testimonial-sergi-pons.jpg"
           }
         ]
       },

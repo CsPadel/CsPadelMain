@@ -28,7 +28,13 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
 
     {/* ── Hero ── */}
     <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
-      {/* TODO: replace with the infinity pool at dusk/sunset shot — Drive: 1K2esp3QrOMLBOL9O7aRthfdJhymdftA6 */}
+      <img
+        src="/imagenes/cms/bali-hero-pool.jpg"
+        alt="Infinity pool at dusk — CourtSide Bali estate"
+        class="absolute inset-0 w-full h-full object-cover"
+        fetchpriority="high"
+        decoding="async"
+      />
       <div class="absolute inset-0 noise-section" aria-hidden="true" />
       <div
         class="absolute inset-0"
@@ -79,11 +85,15 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
           <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed max-w-3xl mb-8">
             The entire 8-suite cliff-top estate, exclusively yours. Private chef, butler, and concierge, an infinity pool overlooking the Indian Ocean, and a private spa pavilion. On-site experiences included: spa treatments, yoga, cooking classes, personal training, and more. This is the full, in-house Bali retreat, built for groups who want everything on one property.
           </p>
-          {/* TODO: replace with the 3-image Estate set (aerial/pool, living pavilion, suite w/ outdoor bath) —
-              Drive: 10hGnoEzN0AziIonbCq3awaYfMgtPf2-q, 1sKOpwfWOdhEzPcii0POL2ZSdt5KCY-zY, 1eqnbS4LpGXNrBfxwELdhzkOy8qOzhMrd */}
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-            {[0, 1, 2].map((i) => (
-              <div class="cs-placeholder noise-section rounded-card aspect-[4/5]" aria-hidden="true" />
+            {[
+              { src: '/imagenes/cms/bali-estate-aerial.jpg', alt: 'Aerial view of the Bali estate and infinity pool' },
+              { src: '/imagenes/cms/bali-estate-pavilion.jpg', alt: 'Open-air living pavilion at the Bali estate' },
+              { src: '/imagenes/cms/bali-estate-suite.jpg', alt: 'Bali estate suite with outdoor bath' },
+            ].map((img) => (
+              <div class="relative rounded-card overflow-hidden aspect-[4/5]">
+                <img src={img.src} alt={img.alt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+              </div>
             ))}
           </div>
         </div>
@@ -99,11 +109,14 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
           <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed max-w-3xl mb-8">
             Modern, comfortable rooms just steps from the padel courts, ideal for solo travellers, couples, or anyone who'd rather spend the week out exploring Bali than in. Air-conditioned, with ensuite bathrooms and a kitchenette. On-site extras like spa and cooking classes aren't included here, but can be arranged through local partners on request.
           </p>
-          {/* TODO: replace with 1-2 Studios interior shots (smaller than Estate) —
-              Drive: 1idxuanG4duD3sOgcftADqtdHbzMsbGa4, 1Axin_3bXX8YNBaaqg_2ey98ZT25tpkd- */}
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-2xl">
-            {[0, 1].map((i) => (
-              <div class="cs-placeholder noise-section rounded-card aspect-[4/3]" aria-hidden="true" />
+            {[
+              { src: '/imagenes/cms/bali-studios-1.jpg', alt: 'The Studios — interior room' },
+              { src: '/imagenes/cms/bali-studios-2.jpg', alt: 'The Studios — interior room' },
+            ].map((img) => (
+              <div class="relative rounded-card overflow-hidden aspect-[4/3]">
+                <img src={img.src} alt={img.alt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+              </div>
             ))}
           </div>
         </div>
@@ -130,9 +143,15 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
             Two courts, custom-built by Padel Galis, the official court provider of the World Padel Tour. Set within the estate, overlooking the Indian Ocean. It's the only facility of its kind on the island.
           </p>
         </div>
-        {/* TODO: replace with the real court photo showing Padel Galis branding, ocean/glass wall in frame —
-            Drive: 116iQiaRfzFpYkod0fe3FsaBj6QL07IFT (also: 1vhlgBD76_tC9Yss5tMBVUeHOsrjdkfc0, 197RQAYeuDodSPRM8hrNDeFCEzrp4as5u, 1SZ6fkV22AFde23stkwuzeooWdjjaGCVO) */}
-        <div class="cs-fadein cs-placeholder noise-section rounded-card aspect-[4/3]" aria-hidden="true" />
+        <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/3]">
+          <img
+            src="/imagenes/cms/bali-courts-galis.jpg"
+            alt="Padel Galis courts at the Bali estate, overlooking the Indian Ocean"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
       </div>
     </section>
 
@@ -156,17 +175,32 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
             Surfing, diving, paragliding, temple visits, cycling, sound healing, and more, all arranged through a local activity coordinator who knows the island inside out. Whatever you're into, it's within reach.
           </p>
         </div>
-        {/* TODO: replace with a wide coastline/Uluwatu lifestyle shot (not the estate again) —
-            Drive: 1oJFbYpjmsi6SeOE12c1GaO4F95A-si_A, 1-ufL7Xw37lUnViSMgNio7e2asYkSLURR */}
-        <div class="cs-fadein cs-placeholder noise-section rounded-card w-full" style="aspect-ratio: 21/9;" aria-hidden="true" />
+        <div class="cs-fadein relative rounded-card overflow-hidden w-full" style="aspect-ratio: 21/9;">
+          <img
+            src="/imagenes/cms/bali-beyond.jpg"
+            alt="The Uluwatu coastline, beyond the Bali estate"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
       </div>
     </section>
 
     {/* ── Closing ── */}
     <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
-      {/* TODO: replace with the private chef/culinary team photo (candid, pasta-making) —
-          Drive: 1PwkFZ9ACmJymhIcxbNa0zUL-1dwDbIYp (also: 1RYVqasBIQXFeAqeUVMoECxmvMoDNJFPS, 1JEl9GxrcF5s9tPGTirjGDnDiETIkm1-J) */}
-      <div class="absolute inset-0 noise-section opacity-70" aria-hidden="true" />
+      <img
+        src="/imagenes/cms/bali-closing-chef.jpg"
+        alt="The private chef and culinary team at the Bali estate"
+        loading="lazy"
+        decoding="async"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(to bottom, rgba(1,25,44,0.55) 0%, rgba(1,25,44,0.7) 50%, rgba(1,25,44,0.95) 100%);"
+        aria-hidden="true"
+      />
       <div class="relative z-10 max-w-2xl mx-auto">
         <h2
           class="text-4xl md:text-5xl font-light text-white mb-5"

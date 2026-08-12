@@ -27,9 +27,13 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'executiveRetreat');
 
     {/* ── Hero (no eyebrow, no button) ── */}
     <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
-      {/* TODO: replace with the small-group mid-rally photo (3-5 people, smart-casual, documentary feel) —
-          Drive: 12dvu9UR4_y6Z2XuEkGWVoesFiQpS8Euw */}
-      <div class="absolute inset-0 cs-placeholder noise-section" aria-hidden="true" />
+      <img
+        src="/imagenes/cms/corporate-hero.png"
+        alt="Small group mid-rally — Corporate & Executive padel retreat"
+        class="absolute inset-0 w-full h-full object-cover"
+        fetchpriority="high"
+        decoding="async"
+      />
       <div
         class="absolute inset-0"
         style="background: linear-gradient(to bottom, rgba(1,25,44,0.15) 0%, rgba(1,25,44,0.45) 50%, rgba(1,25,44,0.98) 100%);"
@@ -79,9 +83,15 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'executiveRetreat');
             The Executive Retreat is a fully closed, bespoke experience for leadership teams, boards, and company groups of every kind. Your group has our full team for the duration of the retreat. A fully private buyout, whether an entire estate or a private villa, can be arranged depending on the destination.
           </p>
         </div>
-        {/* TODO: replace with an empty court or empty private dining terrace, no people in frame —
-            Drive: 1vhlgBD76_tC9Yss5tMBVUeHOsrjdkfc0 */}
-        <div class="cs-fadein cs-placeholder noise-section rounded-card aspect-[4/3]" aria-hidden="true" />
+        <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/3]">
+          <img
+            src="/imagenes/cms/corporate-format-empty-court.jpg"
+            alt="Empty padel court, private and quiet"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
       </div>
     </section>
 

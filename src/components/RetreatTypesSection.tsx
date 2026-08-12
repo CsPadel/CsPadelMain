@@ -13,9 +13,7 @@ const retreats = [
     tag: 'Solo or Friends',
     name: 'Open Retreat',
     desc: 'Join a curated group of like-minded players for five immersive days of padel, fine dining and Mediterranean life.',
-    // TODO: replace with real guests playing padel or dining together, smiling.
-    // Warm light, sunset, happy mood.
-    image: '/imagenes/154A8505.JPG',
+    image: '/imagenes/cms/open-retreat.jpg',
     href: null as string | null,
     hrefExternal: MENORCA_URL + '#rooms',
     isExternal: true,
@@ -25,9 +23,7 @@ const retreats = [
     tag: 'Ultimate Privacy',
     name: 'Private Retreat',
     desc: 'Reserve the entire estate exclusively for your group. Complete privacy, custom schedule, and total immersion.',
-    // TODO: replace with the villa or an empty court at night, no people.
-    // Should feel quiet and private.
-    image: '/imagenes/binifadet.jpeg',
+    image: '/imagenes/cms/private-retreat.jpg',
     href: null as string | null,
     hrefExternal: MENORCA_URL + '#rooms',
     isExternal: true,
