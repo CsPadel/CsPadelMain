@@ -13,7 +13,7 @@ const retreats = [
     tag: 'Solo or Friends',
     name: 'Open Retreat',
     desc: 'Join a curated group of like-minded players for five immersive days of padel, fine dining and Mediterranean life.',
-    image: '/imagenes/cms/open-retreat.jpg',
+    image: '/imagenes/EM-22.jpg',
     href: null as string | null,
     hrefExternal: MENORCA_URL + '#rooms',
     isExternal: true,
@@ -33,9 +33,7 @@ const retreats = [
     tag: 'C-Suite & Boards',
     name: 'Corporate & Executive',
     desc: 'Strategy in silence. High-performance leadership and networking in the most exclusive padel setting.',
-    // TODO: replace with 2–3 people in smart casual clothes, on court or on a
-    // quiet terrace. Calm, serious mood — not a party mood.
-    image: '/imagenes/EM-22.jpg',
+    image: '/imagenes/cms/open-retreat.jpg',
     href: '/executive-retreat',
     hrefExternal: null,
     isExternal: false,

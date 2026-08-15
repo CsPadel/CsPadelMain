@@ -254,8 +254,11 @@ export function EnquiryFormModal({
 
     try {
       const res = await fetch(ENQUIRY_ENDPOINT, {
+        // text/plain keeps this a "simple" request. Google Apps Script web apps
+        // never answer the CORS preflight an application/json POST would
+        // trigger; the body is still JSON and is parsed as such server-side.
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(`Enquiry endpoint responded ${res.status}`);

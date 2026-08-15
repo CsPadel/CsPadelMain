@@ -13,6 +13,8 @@ interface FooterIslandProps {
 const linkClass =
   'text-white/40 hover:text-white text-sm font-light tracking-wide transition-colors duration-200';
 
+const spanClass = 'text-white/40 text-sm font-light tracking-wide';
+
 const colVariants = {
   hidden: { opacity: 0, y: 20 },
   show:   { opacity: 1, y: 0  },
@@ -115,23 +117,20 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
                   Menorca
                 </a>
               </li>
+              <li>
+                <span className={spanClass}>Bali</span>
+              </li>
+              <li>
+                <span className={spanClass}>Dubai</span>
+              </li>
             </ul>
 
-            <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold mb-6 mt-10">
-              Upcoming Retreats
-            </p>
-            <ul className="space-y-4">
-              <li>
-                <a href={localizedHref('/bali')} className={linkClass}>
-                  Bali
-                </a>
-              </li>
-              <li>
-                <a href={localizedHref('/dubai')} className={linkClass}>
-                  Dubai
-                </a>
-              </li>
-            </ul>
+            <a
+              href={localizedHref('/upcoming-retreats')}
+              className="inline-block text-[9px] uppercase tracking-[0.38em] text-brand-gold hover:text-brand-gold/70 font-semibold mt-10 transition-colors duration-200"
+            >
+              {t('navbar.upcomingRetreats')}
+            </a>
           </motion.div>
 
           {/* ── Company ── */}
