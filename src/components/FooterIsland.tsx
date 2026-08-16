@@ -184,12 +184,12 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               </li>
               <li>
                 <a
-                  href="mailto:executive@courtsidepadel.com"
+                  href="mailto:awatelet@cspadel.com"
                   className="flex items-start gap-3 group"
                 >
                   <Mail className="w-4 h-4 text-brand-gold/50 group-hover:text-brand-gold mt-0.5 flex-shrink-0 transition-colors duration-200" />
                   <span className={`${linkClass} break-all`}>
-                    executive@courtsidepadel.com
+                    awatelet@cspadel.com
                   </span>
                 </a>
               </li>

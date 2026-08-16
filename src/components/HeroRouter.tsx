@@ -125,11 +125,22 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
             className="w-10 h-px bg-brand-gold mb-8 origin-center"
           />
 
-          {/* Subtitle */}
+          {/* Slogan */}
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.18 }}
+            className="text-white/85 text-lg md:text-2xl font-light max-w-[340px] md:max-w-[520px] leading-snug mb-4"
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+          >
+            {t('gateway.hero.slogan')}
+          </motion.p>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
             className="text-white/50 text-sm md:text-base font-light max-w-[280px] md:max-w-[340px] leading-relaxed tracking-[0.04em]"
           >
             {t('gateway.hero.subtitle')}
