@@ -13,8 +13,6 @@ interface FooterIslandProps {
 const linkClass =
   'text-white/40 hover:text-white text-sm font-light tracking-wide transition-colors duration-200';
 
-const spanClass = 'text-white/40 text-sm font-light tracking-wide';
-
 const colVariants = {
   hidden: { opacity: 0, y: 20 },
   show:   { opacity: 1, y: 0  },
@@ -114,10 +112,14 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
                 </a>
               </li>
               <li>
-                <span className={spanClass}>{t('navbar.bali')}</span>
+                <a href={localizedHref('/bali')} className={linkClass}>
+                  {t('navbar.bali')}
+                </a>
               </li>
               <li>
-                <span className={spanClass}>{t('navbar.dubai')}</span>
+                <a href={localizedHref('/dubai')} className={linkClass}>
+                  {t('navbar.dubai')}
+                </a>
               </li>
             </ul>
 
