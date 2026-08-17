@@ -5,6 +5,7 @@ import FoundersSection from '../FoundersSection';
 import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { getTranslations } from '../../i18n/getTranslations';
 
 interface Props {
   locale: Locale;
@@ -14,6 +15,7 @@ const { locale } = Astro.props;
 const seo = getPageSeo('ourStory', locale);
 const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
 const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
+const c = getTranslations(locale).ourStoryPage;
 ---
 
 <Layout
@@ -31,7 +33,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
     <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden">
       <img
         src="/imagenes/cms/our-story-hero.jpg"
-        alt="CourtSide Padel — Our Story"
+        alt={c.heroAlt}
         class="absolute inset-0 w-full h-full object-cover"
         style="object-position: center 0%;"
         fetchpriority="high"
@@ -48,20 +50,20 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
         >
           <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-            The Founders
+            {c.heroEyebrow}
           </p>
         </div>
         <h1
           class="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-none mb-6"
           style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.45s both;"
         >
-          Our Story.
+          {c.heroTitle}
         </h1>
         <p
           class="text-white/55 text-lg md:text-xl font-light max-w-md leading-relaxed"
           style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.65s both;"
         >
-          Twin brothers. Different paths. Padel changed everything.
+          {c.heroSubtitle}
         </p>
       </div>
     </section>
@@ -74,30 +76,18 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
           <div class="flex items-center gap-4 mb-6">
             <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
             <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              How It Began
+              {c.beganEyebrow}
             </p>
           </div>
           <h2
             class="text-4xl md:text-5xl font-light text-brand-dark leading-tight"
             style="font-family: var(--font-display); font-style: italic;"
-          >
-            Born from a<br/>shared obsession.
-          </h2>
+            set:html={c.beganTitle}
+          />
         </div>
 
         <div class="space-y-7 text-brand-dark/58 text-base md:text-lg font-light leading-relaxed cs-fadein" style="animation-delay: 0.15s;">
-          <p>
-            We're twin brothers, born in New York and raised in London. As kids, we did everything together, training, competing, travelling, always chasing the next opportunity sport could give us. At 15, that changed. Alexi left for the south of France to chase professional tennis. Oliver stayed in London, drawn to football instead. Racket sports had always been part of who we were, but for a few years, life pulled us in different directions.
-          </p>
-          <p>
-            Travelling in Menorca in 2019, we picked up padel for the first time and were hooked immediately, not just by the game, but everything around it: walking off court for a drink, meeting new people, jumping in the pool after a match. Competitive, but social. That combination is what CourtSide is built on.
-          </p>
-          <p>
-            The idea came together gradually. We'd both grown up travelling, exposed early to new places and cultures, a love that never left us. As padel grew into one of the fastest-growing sports in the world, it clicked: pair a beautiful destination with world-class padel, bring people together, and build something around the feeling we first found in Menorca.
-          </p>
-          <p>
-            Menorca wasn't a random choice. It's the island where we fell in love with the sport, and one we've returned to for eight years running. It was the obvious place to build the first CourtSide retreat.
-          </p>
+          {c.beganParagraphs.map((paragraph) => <p>{paragraph}</p>)}
         </div>
       </div>
     </section>
@@ -108,19 +98,19 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
         <div class="flex items-center gap-4 mb-4">
           <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-            The People Behind It
+            {c.foundersEyebrow}
           </p>
         </div>
         <h2
           class="text-3xl md:text-4xl font-light text-brand-dark"
           style="font-family: var(--font-display); font-style: italic;"
         >
-          Meet the founders.
+          {c.foundersTitle}
         </h2>
       </div>
     </div>
 
-    <FoundersSection client:visible />
+    <FoundersSection client:visible locale={locale} />
 
     {/* ── What We Believe ── */}
     <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-dark">
@@ -128,18 +118,17 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
         <div class="flex items-center justify-center gap-4 mb-10">
           <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-            What We Believe
+            {c.believeEyebrow}
           </p>
           <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
         </div>
         <blockquote
           class="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight mb-10"
           style="font-family: var(--font-display); font-style: italic;"
-        >
-          "Padel brings us on court.<br/>The experience makes it unforgettable."
-        </blockquote>
+          set:html={`&ldquo;${c.believeQuote}&rdquo;`}
+        />
         <p class="text-white/40 text-base font-light leading-relaxed max-w-xl mx-auto">
-          The best retreats don't feel like events. They feel like the week you keep talking about three years later.
+          {c.believeText}
         </p>
       </div>
     </section>
@@ -151,10 +140,10 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
           class="text-4xl md:text-5xl font-light text-brand-dark mb-5"
           style="font-family: var(--font-display); font-style: italic;"
         >
-          Ready to build your own story?
+          {c.ctaTitle}
         </h2>
         <p class="text-brand-dark/45 text-base font-light leading-relaxed mb-10 max-w-sm mx-auto">
-          Every CourtSide retreat starts with a conversation.
+          {c.ctaText}
         </p>
         <EnquiryCta client:visible locale={locale} />
       </div>

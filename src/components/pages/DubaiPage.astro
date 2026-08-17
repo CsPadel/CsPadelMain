@@ -4,6 +4,7 @@ import FooterIsland from '../FooterIsland';
 import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { getTranslations } from '../../i18n/getTranslations';
 
 interface Props {
   locale: Locale;
@@ -13,6 +14,7 @@ const { locale } = Astro.props;
 const seo = getPageSeo('dubai', locale);
 const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
 const alternateUrls = getAlternateUrls(siteURL.href, 'dubai');
+const c = getTranslations(locale).dubaiPage.landing;
 ---
 
 <Layout
@@ -28,7 +30,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'dubai');
     <section class="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-8 overflow-hidden">
       <img
         src="/imagenes/cms/dubai-skyline.jpg"
-        alt="Dubai skyline at golden hour"
+        alt={c.heroAlt}
         class="absolute inset-0 w-full h-full object-cover"
         fetchpriority="high"
         decoding="async"
@@ -50,19 +52,18 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'dubai');
         <h1
           class="text-4xl md:text-6xl font-light text-white leading-none mb-6"
           style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.4s both;"
-        >
-          Dubai.<br />Coming Soon.
-        </h1>
+          set:html={c.title}
+        />
 
         <p
           class="text-white/50 text-base md:text-lg font-light leading-relaxed mb-12 max-w-sm"
           style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.6s both;"
         >
-          We're building something special for Dubai. Get in touch if you'd like to be the first to know when it's ready.
+          {c.text}
         </p>
 
         <div style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.8s both;">
-          <EnquiryCta client:visible locale={locale} label="Get in Touch" destination="dubai" />
+          <EnquiryCta client:visible locale={locale} label={c.ctaBtn} destination="dubai" />
         </div>
       </div>
     </section>

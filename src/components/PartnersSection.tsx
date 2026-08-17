@@ -1,4 +1,11 @@
 import { motion } from 'framer-motion';
+import '../i18n/config';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
+
+interface Props {
+  locale?: Locale;
+}
 
 const partners = [
   { name: 'Barceló Hotel Group',    logo: '/paterns/Frame-1984077457-1.png', width: 210 },
@@ -16,13 +23,14 @@ const partners = [
   { name: 'Padel Pro',              logo: '/paterns/padel-pro-Logo.png',     width: 140 },
 ];
 
-export default function PartnersSection() {
+export default function PartnersSection({ locale }: Props) {
+  const { t } = usePageTranslation(locale);
   const track = [...partners, ...partners];
 
   return (
     <section
       className="py-20 md:py-28 bg-brand-ivory border-t border-brand-dark/6 overflow-hidden"
-      aria-label="Our partners"
+      aria-label={t('homePage.partners.ariaLabel')}
     >
       {/* Header */}
       <motion.div
@@ -35,7 +43,7 @@ export default function PartnersSection() {
         <div className="flex items-center justify-center gap-4 mb-4">
           <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-            Our Partners
+            {t('homePage.partners.eyebrow')}
           </p>
           <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
         </div>
@@ -43,7 +51,7 @@ export default function PartnersSection() {
           className="text-2xl md:text-3xl font-light text-brand-dark"
           style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
         >
-          In partnership with the best.
+          {t('homePage.partners.title')}
         </h3>
       </motion.div>
 

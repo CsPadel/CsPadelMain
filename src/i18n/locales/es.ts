@@ -363,6 +363,10 @@ const es = {
           introLine1: "Retiros de Pádel",
           introLine2: "de Clase Mundial.",
           intro: "Retiros de Pádel de Clase Mundial.",
+          headlineLine1: "Retiros de Pádel",
+          headlineLine2: "Exclusivos",
+          discoverBtn: "Descubre las Experiencias",
+          scroll: "Desliza",
           slogan: "Más allá de la pista. Hacia una experiencia.",
           subtitle: "Bienestar, descanso y networking a través del pádel.",
           intent: "Diseña tu estancia. ¿Qué buscas hoy?",
@@ -417,7 +421,18 @@ const es = {
           backHome: "Volver al Inicio"
         }
       },
+      pageLoader: {
+        tagline: "Retiros de Pádel de Lujo"
+      },
       footer: {
+        ariaLabel: "Pie de página",
+        quote: "El pádel nos lleva a la pista.<br/>La experiencia lo hace inolvidable.",
+        companyLabel: "Compañía",
+        corporate: "Corporativo y Ejecutivo",
+        contactLabel: "Contacto",
+        whatsappConcierge: "Concierge por WhatsApp",
+        messageTeam: "Escribe al Equipo",
+        whatsappMessage: "Hola, me gustaría informarme sobre un retiro de CourtSide Padel.",
         rights: "© 2026 CourtSide Padel. Todos los derechos reservados.",
         privacy: "Privacidad",
         terms: "Términos",
@@ -506,7 +521,36 @@ const es = {
         ctaTitle: "Tu suite en Bali te espera.",
         ctaDesc: "Un grupo íntimo. Una villa privada. Cinco días extraordinarios.",
         ctaBtn: "Reserva tu Plaza",
-        ctaSecondaryBtn: "Habla con el Concierge"
+        ctaSecondaryBtn: "Habla con el Concierge",
+        landing: {
+          heroAlt: "Piscina infinita al atardecer — finca CourtSide en Bali",
+          heroTitle: "Una Escapada a Bali.",
+          heroSubtitle: "Una finca privada sobre el acantilado en la península de Bukit, hogar de las únicas pistas de pádel reconocidas por la WPT en la isla. A Mandarin Oriental Home.",
+          stayEyebrow: "Dónde te Alojas",
+          stayTitle: "Dos formas de vivir Bali.",
+          estateTitle: "La Finca",
+          estateText: "La finca entera sobre el acantilado, con 8 suites, en exclusiva para ti. Chef privado, mayordomo y concierge, una piscina infinita con vistas al Océano Índico y un pabellón de spa privado. Experiencias incluidas en la propiedad: tratamientos de spa, yoga, clases de cocina, entrenamiento personal y más. Este es el retiro de Bali completo, pensado para grupos que lo quieren todo en una sola propiedad.",
+          estateImageAlts: [
+            "Vista aérea de la finca de Bali y su piscina infinita",
+            "Pabellón de estar al aire libre en la finca de Bali",
+            "Suite de la finca de Bali con bañera exterior"
+          ],
+          studiosTitle: "Los Estudios",
+          studiosText: "Habitaciones modernas y cómodas a pocos pasos de las pistas de pádel, ideales para quienes viajan solos, en pareja o para quien prefiera pasar la semana explorando Bali. Con aire acondicionado, baño privado y cocina office. Los extras de la propiedad, como el spa o las clases de cocina, no están incluidos aquí, pero pueden organizarse con socios locales bajo petición.",
+          studiosImageAlt: "Los Estudios — habitación interior",
+          courtsEyebrow: "Las Pistas",
+          courtsTitle: "Las únicas pistas reconocidas por la WPT en Bali.",
+          courtsText: "Dos pistas construidas a medida por Padel Galis, proveedor oficial del World Padel Tour. Situadas dentro de la finca, con vistas al Océano Índico. Es la única instalación de este tipo en la isla.",
+          courtsImageAlt: "Pistas de Padel Galis en la finca de Bali, con vistas al Océano Índico",
+          beyondEyebrow: "Fuera de la Pista",
+          beyondTitle: "Bali, más allá de la finca.",
+          beyondText: "Surf, buceo, parapente, visitas a templos, ciclismo, sound healing y mucho más, todo organizado por un coordinador local de actividades que conoce la isla al detalle. Sea lo que sea lo tuyo, está a tu alcance.",
+          beyondImageAlt: "La costa de Uluwatu, más allá de la finca de Bali",
+          closingImageAlt: "El chef privado y el equipo de cocina de la finca de Bali",
+          ctaTitle: "¿Listo para Vivir Uluwatu?",
+          ctaText: "Las fechas y los precios se confirman en cuanto conocemos tu grupo y tus planes. Itinerario completo disponible bajo petición.",
+          ctaBtn: "Consulta sobre Bali"
+        }
       },
       dubaiPage: {
         heroTitle: "DUBÁI",
@@ -540,7 +584,13 @@ const es = {
         ctaTitle: "Dubái. Tu pista está lista.",
         ctaDesc: "Cuatro días. Una ciudad sin igual. La mejor compañía.",
         ctaBtn: "Reserva tu Plaza",
-        ctaSecondaryBtn: "Habla con el Concierge"
+        ctaSecondaryBtn: "Habla con el Concierge",
+        landing: {
+          heroAlt: "El skyline de Dubái a la hora dorada",
+          title: "Dubái.<br/>Próximamente.",
+          text: "Estamos preparando algo especial para Dubái. Escríbenos si quieres ser de los primeros en saberlo cuando esté listo.",
+          ctaBtn: "Contacta con Nosotros"
+        }
       },
       mykonosPage: {
         heroTitle: "MYKONOS",
@@ -579,17 +629,131 @@ const es = {
       upcomingRetreatsPage: {
         eyebrow: "Próximos 12–18 Meses",
         heroTitle: "Próximos Retiros.",
-        heroSubtitle: "Tres nuevos destinos se incorporan al calendario CourtSide durante los próximos doce a dieciocho meses — cada uno construido sobre la misma idea que Menorca: pádel de élite, compañía excepcional y todo lo que rodea al juego, cuidado al detalle.",
-        heroHint: "Descubrir",
-        indexLabel: "Los Destinos",
-        highlightsLabel: "Lo Más Destacado",
-        comingSoon: "Próximamente",
-        enquireBtn: "Regístrate",
-        nextLabel: "Siguiente",
-        ctaEyebrow: "Sé el Primero en Saberlo",
-        ctaTitle: "Tu plaza, antes de que se abra el calendario.",
-        ctaDesc: "Bali, Dubái y Mykonos abren próximamente. Regístrate y nuestro equipo de concierge te contactará en cuanto un retiro abra sus reservas.",
-        ctaBtn: "Regístrate"
+        heroSubtitle: "Pádel de élite, compañía excepcional y todo lo que rodea al juego cuidado al detalle — en cada destino CourtSide.",
+        bespokeNote: "Fechas a medida disponibles bajo petición.",
+        destinations: {
+          menorca: {
+            name: "Menorca",
+            location: "Islas Baleares · España",
+            dates: ["Octubre 2026", "Abril 2027", "Mayo 2027", "Junio 2027", "Septiembre 2027", "Octubre 2027"],
+            cta: "Descubre Menorca"
+          },
+          bali: {
+            name: "Bali",
+            location: "Uluwatu · Bali",
+            dates: ["Marzo 2027", "Julio 2027", "Agosto 2027"],
+            cta: "Descubre Bali"
+          }
+        },
+        ctaTitle: "¿Tienes tus propias fechas en mente?",
+        ctaText: "Cuéntanos tus planes y construiremos el retiro a tu medida.",
+        ctaBtn: "Planifica tu Retiro"
+      },
+      homePage: {
+        retreatTypes: {
+          ariaLabel: "Tipos de retiro",
+          eyebrow: "Formatos de Retiro",
+          title: "Elige tu Retiro.",
+          explore: "Descubrir",
+          viewDetails: "ver detalles",
+          items: {
+            open: {
+              tag: "Solo o con Amigos",
+              name: "Retiro Abierto",
+              desc: "Únete a un grupo selecto de jugadores afines para cinco días inmersivos de pádel, alta gastronomía y vida mediterránea."
+            },
+            private: {
+              tag: "Privacidad Absoluta",
+              name: "Retiro Privado",
+              desc: "Reserva la finca entera en exclusiva para tu grupo. Privacidad total, horario a medida e inmersión completa."
+            },
+            executive: {
+              tag: "Alta Dirección",
+              name: "Corporativo y Ejecutivo",
+              desc: "Estrategia en silencio. Liderazgo de alto rendimiento y networking en el entorno de pádel más exclusivo."
+            }
+          }
+        },
+        destinations: {
+          eyebrow: "Confirmado 2026",
+          title: "Nuestro Destino",
+          location: "Islas Baleares · España",
+          tagline: "Santuario Mediterráneo",
+          dates: "30 Sep – 4 Oct, 2026",
+          spots: "Pocas Plazas Disponibles",
+          explore: "Descubrir"
+        },
+        upcoming: {
+          eyebrow: "Fechas por Confirmar",
+          title: "Próximos Retiros",
+          subtitle: "Nuevos destinos en desarrollo para nuestro calendario de 2027. Regístrate y sé el primero en saberlo.",
+          viewAll: "Ver todos",
+          explore: "Descubrir",
+          items: {
+            bali: { tagline: "Una finca privada sobre el acantilado. Pádel de élite.", location: "Uluwatu · Bali" },
+            dubai: { tagline: "Próximamente.", location: "Próximamente" }
+          }
+        },
+        partners: {
+          ariaLabel: "Nuestros socios",
+          eyebrow: "Nuestros Socios",
+          title: "En alianza con los mejores."
+        }
+      },
+      ourStoryPage: {
+        heroAlt: "CourtSide Padel — Nuestra Historia",
+        heroEyebrow: "Los Fundadores",
+        heroTitle: "Nuestra Historia.",
+        heroSubtitle: "Hermanos gemelos. Caminos distintos. El pádel lo cambió todo.",
+        beganEyebrow: "Cómo Empezó",
+        beganTitle: "Nacido de una<br/>obsesión compartida.",
+        beganParagraphs: [
+          "Somos hermanos gemelos, nacidos en Nueva York y criados en Londres. De niños lo hacíamos todo juntos: entrenar, competir, viajar, siempre persiguiendo la siguiente oportunidad que el deporte podía darnos. A los 15 años eso cambió. Alexi se marchó al sur de Francia para intentar ser tenista profesional. Oliver se quedó en Londres, atraído por el fútbol. Los deportes de raqueta siempre habían formado parte de quienes éramos, pero durante unos años la vida nos llevó por caminos distintos.",
+          "Viajando por Menorca en 2019 cogimos una pala por primera vez y nos enganchamos al instante, no solo por el juego, sino por todo lo que lo rodea: salir de la pista a tomar algo, conocer gente nueva, tirarse a la piscina después de un partido. Competitivo, pero social. Sobre esa combinación está construido CourtSide.",
+          "La idea fue tomando forma poco a poco. Los dos habíamos crecido viajando, expuestos desde pequeños a nuevos lugares y culturas, un amor que nunca nos abandonó. A medida que el pádel se convertía en uno de los deportes que más rápido crecen del mundo, encajó todo: unir un destino precioso con pádel de primer nivel, reunir a la gente y construir algo alrededor de la sensación que encontramos por primera vez en Menorca.",
+          "Menorca no fue una elección al azar. Es la isla donde nos enamoramos de este deporte, y a la que hemos vuelto ocho años seguidos. Era el lugar obvio para construir el primer retiro CourtSide."
+        ],
+        foundersEyebrow: "Las Personas Detrás",
+        foundersTitle: "Conoce a los fundadores.",
+        founderRole: "Cofundador",
+        founderAlt: "Cofundador, CourtSide Padel",
+        foundersQuote: "Alexi creció persiguiendo el tenis. Oliver creció persiguiendo el fútbol. El pádel nos dio exactamente la misma obsesión, solo que con otro juego.",
+        believeEyebrow: "En Qué Creemos",
+        believeQuote: "El pádel nos lleva a la pista.<br/>La experiencia lo hace inolvidable.",
+        believeText: "Los mejores retiros no se sienten como eventos. Se sienten como esa semana de la que sigues hablando tres años después.",
+        ctaTitle: "¿Listo para escribir tu propia historia?",
+        ctaText: "Cada retiro CourtSide empieza con una conversación."
+      },
+      executivePage: {
+        heroAlt: "Grupo reducido en pleno punto — retiro de pádel Corporativo y Ejecutivo",
+        heroTitle: "Retiros Corporativos y Ejecutivos.",
+        heroSubtitle: "Desde offsites de liderazgo y team building hasta viajes de incentivo y retiros de consejo, diseñamos retiros de pádel cerrados y a medida para empresas de todo tipo.",
+        quote: "El pádel es social por naturaleza. Es competitivo, pero nunca demasiado serio: se juega en dobles, en una pista pequeña que mantiene a todos lo bastante cerca para hablar entre puntos. De algún modo consigue que la gente se comunique y trabaje en equipo sin apenas proponérselo.",
+        formatEyebrow: "El Formato",
+        formatTitle: "Un retiro cerrado.<br/>Tu agenda.",
+        formatText: "El Retiro Ejecutivo es una experiencia totalmente cerrada y a medida para equipos directivos, consejos y grupos de empresa de cualquier tipo. Tu grupo dispone de todo nuestro equipo durante el retiro. Puede organizarse una privatización total, ya sea de una finca entera o de una villa privada, según el destino.",
+        formatImageAlt: "Pista de pádel vacía, privada y tranquila",
+        pillars: [
+          {
+            number: "01",
+            title: "Exclusividad Total",
+            desc: "Una privatización completa, ya sea de una finca entera o de una villa privada, puede organizarse bajo petición según el destino."
+          },
+          {
+            number: "02",
+            title: "Programa a Medida",
+            desc: "Desde la intensidad del entrenamiento hasta sesiones de trabajo, días de spa y cenas privadas, cada elemento se construye a partir de tu brief."
+          },
+          {
+            number: "03",
+            title: "Discreción Absoluta",
+            desc: "Acuerdos de confidencialidad, coordinación de traslados privados y total confidencialidad por parte de nuestro equipo, en cada retiro que organizamos."
+          }
+        ],
+        ctaEyebrow: "Empieza la Conversación",
+        ctaTitle: "Todo retiro corporativo<br/>empieza con un brief.",
+        ctaText: "Cuéntanos tus objetivos, el tamaño del grupo y las fechas preferidas. Construiremos el programa a tu medida.",
+        ctaBtn: "Consulta sobre un Retiro Corporativo"
       },
       testimonials: {
         label: "Lo Que Dicen Nuestros Invitados",

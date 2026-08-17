@@ -96,7 +96,7 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
                   lineHeight: 0.9,
                 }}
               >
-                Curated
+                {t('gateway.hero.headlineLine1')}
               </motion.div>
             </div>
             <div className="overflow-hidden mb-9 md:mb-11">
@@ -112,7 +112,7 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
                   lineHeight: 0.9,
                 }}
               >
-                Padel Retreats
+                {t('gateway.hero.headlineLine2')}
               </motion.div>
             </div>
           </div>
@@ -157,7 +157,7 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
               onClick={() => scrollToSection('experiences')}
               className="btn-luxury"
             >
-              Discover Experiences
+              {t('gateway.hero.discoverBtn')}
             </button>
           </motion.div>
         </motion.div>
@@ -170,7 +170,7 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
           className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none"
         >
           <span className="text-[8px] uppercase tracking-[0.38em] text-white/22 font-medium">
-            Scroll
+            {t('gateway.hero.scroll')}
           </span>
           <motion.div
             animate={{ y: [0, 7, 0] }}

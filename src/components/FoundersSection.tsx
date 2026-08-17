@@ -1,23 +1,24 @@
 import { motion } from 'framer-motion';
+import '../i18n/config';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
+
+interface Props {
+  locale?: Locale;
+}
 
 const founders = [
   {
     name: 'Alexi Watelet',
-    role: 'Co-Founder',
     photo: '/imagenes/cms/alexi-watelet.jpg',
     layout: 'text-left' as const,
   },
   {
     name: 'Oliver Watelet',
-    role: 'Co-Founder',
     photo: '/imagenes/cms/oliver-watelet.jpg',
     layout: 'text-right' as const,
   },
 ];
-
-/** Shared line that sits beneath both founder portraits. */
-const sharedLine =
-  'Alexi grew up chasing tennis. Oliver grew up chasing football. Padel gave us the exact same obsession, just for a different game.';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -29,7 +30,9 @@ const stagger = {
   show:   { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
 };
 
-export default function FoundersSection() {
+export default function FoundersSection({ locale }: Readonly<Props>) {
+  const { t } = usePageTranslation(locale);
+
   return (
     <div>
       {/* ── Portraits ── */}
@@ -57,7 +60,7 @@ export default function FoundersSection() {
               >
                 <img
                   src={founder.photo}
-                  alt={`${founder.name} — Co-Founder, CourtSide Padel`}
+                  alt={`${founder.name} — ${t('ourStoryPage.founderAlt')}`}
                   loading="lazy"
                   decoding="async"
                   className="absolute inset-0 w-full h-full object-cover object-top"
@@ -76,7 +79,7 @@ export default function FoundersSection() {
                   {founder.name}
                 </h3>
                 <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-                  {founder.role}
+                  {t('ourStoryPage.founderRole')}
                 </p>
               </figcaption>
             </motion.figure>
@@ -98,7 +101,7 @@ export default function FoundersSection() {
             className="text-2xl md:text-3xl lg:text-4xl font-light text-brand-dark leading-snug"
             style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
           >
-            &ldquo;{sharedLine}&rdquo;
+            &ldquo;{t('ourStoryPage.foundersQuote')}&rdquo;
           </p>
         </motion.blockquote>
       </div>

@@ -363,6 +363,10 @@ const en = {
           introLine1: "Curating World-Class",
           introLine2: "Padel Retreats.",
           intro: "Curating World-Class Padel Retreats.",
+          headlineLine1: "Curated",
+          headlineLine2: "Padel Retreats",
+          discoverBtn: "Discover Experiences",
+          scroll: "Scroll",
           slogan: "Beyond the court. Into an experience.",
           subtitle: "Wellness, rest, and networking through padel.",
           intent: "Design your stay. What are you looking for today?",
@@ -417,7 +421,18 @@ const en = {
           backHome: "Back to Home"
         }
       },
+      pageLoader: {
+        tagline: "Luxury Padel Retreats"
+      },
       footer: {
+        ariaLabel: "Site footer",
+        quote: "Padel brings us on court.<br/>The experience makes it unforgettable.",
+        companyLabel: "Company",
+        corporate: "Corporate & Executive",
+        contactLabel: "Get in Touch",
+        whatsappConcierge: "WhatsApp Concierge",
+        messageTeam: "Message the Team",
+        whatsappMessage: "Hello, I'd like to enquire about a CourtSide Padel retreat.",
         rights: "© 2026 CourtSide Padel. All rights reserved.",
         privacy: "Privacy Policy",
         terms: "Terms of Service",
@@ -506,7 +521,36 @@ const en = {
         ctaTitle: "Your Bali suite awaits.",
         ctaDesc: "An intimate group. A private villa. Five extraordinary days.",
         ctaBtn: "Reserve Your Place",
-        ctaSecondaryBtn: "Speak with Concierge"
+        ctaSecondaryBtn: "Speak with Concierge",
+        landing: {
+          heroAlt: "Infinity pool at dusk — CourtSide Bali estate",
+          heroTitle: "An Escape to Bali.",
+          heroSubtitle: "A private cliff-top estate on the Bukit Peninsula, home to the only WPT-recognised padel courts on the island. A Mandarin Oriental Home.",
+          stayEyebrow: "Where You Stay",
+          stayTitle: "Two ways to experience Bali.",
+          estateTitle: "The Estate",
+          estateText: "The entire 8-suite cliff-top estate, exclusively yours. Private chef, butler, and concierge, an infinity pool overlooking the Indian Ocean, and a private spa pavilion. On-site experiences included: spa treatments, yoga, cooking classes, personal training, and more. This is the full, in-house Bali retreat, built for groups who want everything on one property.",
+          estateImageAlts: [
+            "Aerial view of the Bali estate and infinity pool",
+            "Open-air living pavilion at the Bali estate",
+            "Bali estate suite with outdoor bath"
+          ],
+          studiosTitle: "The Studios",
+          studiosText: "Modern, comfortable rooms just steps from the padel courts, ideal for solo travellers, couples, or anyone who'd rather spend the week out exploring Bali than in. Air-conditioned, with ensuite bathrooms and a kitchenette. On-site extras like spa and cooking classes aren't included here, but can be arranged through local partners on request.",
+          studiosImageAlt: "The Studios — interior room",
+          courtsEyebrow: "The Courts",
+          courtsTitle: "The only WPT-recognised courts in Bali.",
+          courtsText: "Two courts, custom-built by Padel Galis, the official court provider of the World Padel Tour. Set within the estate, overlooking the Indian Ocean. It's the only facility of its kind on the island.",
+          courtsImageAlt: "Padel Galis courts at the Bali estate, overlooking the Indian Ocean",
+          beyondEyebrow: "Off the Court",
+          beyondTitle: "Bali, beyond the estate.",
+          beyondText: "Surfing, diving, paragliding, temple visits, cycling, sound healing, and more, all arranged through a local activity coordinator who knows the island inside out. Whatever you're into, it's within reach.",
+          beyondImageAlt: "The Uluwatu coastline, beyond the Bali estate",
+          closingImageAlt: "The private chef and culinary team at the Bali estate",
+          ctaTitle: "Ready to Experience Uluwatu?",
+          ctaText: "Dates and pricing are confirmed once we know your group and plans. Full itinerary available on request.",
+          ctaBtn: "Enquire About Bali"
+        }
       },
       dubaiPage: {
         heroTitle: "DUBAI",
@@ -540,7 +584,13 @@ const en = {
         ctaTitle: "Dubai. Your court is ready.",
         ctaDesc: "Four days. An unmatched city. The finest company.",
         ctaBtn: "Reserve Your Place",
-        ctaSecondaryBtn: "Speak with Concierge"
+        ctaSecondaryBtn: "Speak with Concierge",
+        landing: {
+          heroAlt: "Dubai skyline at golden hour",
+          title: "Dubai.<br/>Coming Soon.",
+          text: "We're building something special for Dubai. Get in touch if you'd like to be the first to know when it's ready.",
+          ctaBtn: "Get in Touch"
+        }
       },
       mykonosPage: {
         heroTitle: "MYKONOS",
@@ -579,17 +629,131 @@ const en = {
       upcomingRetreatsPage: {
         eyebrow: "Next 12–18 Months",
         heroTitle: "Upcoming Retreats.",
-        heroSubtitle: "Three new destinations are joining the CourtSide calendar over the next twelve to eighteen months — each one built on the same idea as Menorca: elite padel, exceptional company, and everything around the game curated to match.",
-        heroHint: "Discover",
-        indexLabel: "The Destinations",
-        highlightsLabel: "The Highlights",
-        comingSoon: "Coming Soon",
-        enquireBtn: "Register Interest",
-        nextLabel: "Next",
-        ctaEyebrow: "Be First to Know",
-        ctaTitle: "Your seat, before the calendar opens.",
-        ctaDesc: "Bali, Dubai and Mykonos are opening soon. Register your interest and our concierge team will reach out the moment a retreat opens for booking.",
-        ctaBtn: "Register Your Interest"
+        heroSubtitle: "Elite padel, exceptional company, and everything around the game curated to match — across every CourtSide destination.",
+        bespokeNote: "Bespoke dates available upon request.",
+        destinations: {
+          menorca: {
+            name: "Menorca",
+            location: "Balearic Islands · Spain",
+            dates: ["October 2026", "April 2027", "May 2027", "June 2027", "September 2027", "October 2027"],
+            cta: "Explore Menorca"
+          },
+          bali: {
+            name: "Bali",
+            location: "Uluwatu · Bali",
+            dates: ["March 2027", "July 2027", "August 2027"],
+            cta: "Explore Bali"
+          }
+        },
+        ctaTitle: "Have your own dates in mind?",
+        ctaText: "Tell us your plans and we'll build the retreat around them.",
+        ctaBtn: "Plan Your Retreat"
+      },
+      homePage: {
+        retreatTypes: {
+          ariaLabel: "Retreat types",
+          eyebrow: "Retreat Formats",
+          title: "Choose Your Retreat.",
+          explore: "Explore",
+          viewDetails: "view details",
+          items: {
+            open: {
+              tag: "Solo or Friends",
+              name: "Open Retreat",
+              desc: "Join a curated group of like-minded players for five immersive days of padel, fine dining and Mediterranean life."
+            },
+            private: {
+              tag: "Ultimate Privacy",
+              name: "Private Retreat",
+              desc: "Reserve the entire estate exclusively for your group. Complete privacy, custom schedule, and total immersion."
+            },
+            executive: {
+              tag: "C-Suite & Boards",
+              name: "Corporate & Executive",
+              desc: "Strategy in silence. High-performance leadership and networking in the most exclusive padel setting."
+            }
+          }
+        },
+        destinations: {
+          eyebrow: "Confirmed 2026",
+          title: "Our Destination",
+          location: "Balearic Islands · Spain",
+          tagline: "Mediterranean Sanctuary",
+          dates: "Sep 30 – Oct 4, 2026",
+          spots: "Few Spaces Left",
+          explore: "Explore"
+        },
+        upcoming: {
+          eyebrow: "Dates TBA",
+          title: "Upcoming Retreats",
+          subtitle: "New destinations in development for our 2027 calendar. Register your interest to hear first.",
+          viewAll: "View all",
+          explore: "Explore",
+          items: {
+            bali: { tagline: "A private cliff-top estate. Elite padel.", location: "Uluwatu · Bali" },
+            dubai: { tagline: "Coming soon.", location: "Coming Soon" }
+          }
+        },
+        partners: {
+          ariaLabel: "Our partners",
+          eyebrow: "Our Partners",
+          title: "In partnership with the best."
+        }
+      },
+      ourStoryPage: {
+        heroAlt: "CourtSide Padel — Our Story",
+        heroEyebrow: "The Founders",
+        heroTitle: "Our Story.",
+        heroSubtitle: "Twin brothers. Different paths. Padel changed everything.",
+        beganEyebrow: "How It Began",
+        beganTitle: "Born from a<br/>shared obsession.",
+        beganParagraphs: [
+          "We're twin brothers, born in New York and raised in London. As kids, we did everything together, training, competing, travelling, always chasing the next opportunity sport could give us. At 15, that changed. Alexi left for the south of France to chase professional tennis. Oliver stayed in London, drawn to football instead. Racket sports had always been part of who we were, but for a few years, life pulled us in different directions.",
+          "Travelling in Menorca in 2019, we picked up padel for the first time and were hooked immediately, not just by the game, but everything around it: walking off court for a drink, meeting new people, jumping in the pool after a match. Competitive, but social. That combination is what CourtSide is built on.",
+          "The idea came together gradually. We'd both grown up travelling, exposed early to new places and cultures, a love that never left us. As padel grew into one of the fastest-growing sports in the world, it clicked: pair a beautiful destination with world-class padel, bring people together, and build something around the feeling we first found in Menorca.",
+          "Menorca wasn't a random choice. It's the island where we fell in love with the sport, and one we've returned to for eight years running. It was the obvious place to build the first CourtSide retreat."
+        ],
+        foundersEyebrow: "The People Behind It",
+        foundersTitle: "Meet the founders.",
+        founderRole: "Co-Founder",
+        founderAlt: "Co-Founder, CourtSide Padel",
+        foundersQuote: "Alexi grew up chasing tennis. Oliver grew up chasing football. Padel gave us the exact same obsession, just for a different game.",
+        believeEyebrow: "What We Believe",
+        believeQuote: "Padel brings us on court.<br/>The experience makes it unforgettable.",
+        believeText: "The best retreats don't feel like events. They feel like the week you keep talking about three years later.",
+        ctaTitle: "Ready to build your own story?",
+        ctaText: "Every CourtSide retreat starts with a conversation."
+      },
+      executivePage: {
+        heroAlt: "Small group mid-rally — Corporate & Executive padel retreat",
+        heroTitle: "Corporate & Executive Retreats.",
+        heroSubtitle: "From leadership offsites and team building to rewards trips and board retreats, we build closed, bespoke padel retreats for companies of every kind.",
+        quote: "Padel is social by nature. It's competitive, but never too serious, played in doubles on a small court that keeps everyone close enough to talk between points. Somehow it gets people communicating and working as a team without really trying.",
+        formatEyebrow: "The Format",
+        formatTitle: "A closed retreat.<br/>Your agenda.",
+        formatText: "The Executive Retreat is a fully closed, bespoke experience for leadership teams, boards, and company groups of every kind. Your group has our full team for the duration of the retreat. A fully private buyout, whether an entire estate or a private villa, can be arranged depending on the destination.",
+        formatImageAlt: "Empty padel court, private and quiet",
+        pillars: [
+          {
+            number: "01",
+            title: "Full Exclusivity",
+            desc: "A fully private buyout, whether that's an entire estate or a private villa, can be arranged on request depending on the destination."
+          },
+          {
+            number: "02",
+            title: "Bespoke Programme",
+            desc: "From coaching intensity to boardroom sessions, spa days, and private dining, every element is built around your brief."
+          },
+          {
+            number: "03",
+            title: "Total Discretion",
+            desc: "NDAs, private transfer coordination, and complete confidentiality from our team, on every retreat we run."
+          }
+        ],
+        ctaEyebrow: "Start the Conversation",
+        ctaTitle: "Every corporate retreat<br/>begins with a brief.",
+        ctaText: "Tell us your objectives, group size and preferred dates. We'll build the programme around you.",
+        ctaBtn: "Enquire About a Corporate Retreat"
       },
       testimonials: {
         label: "What Guests Have To Say",

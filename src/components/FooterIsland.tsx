@@ -28,12 +28,10 @@ const stagger = {
 export default function FooterIsland({ locale: localeProp }: FooterIslandProps) {
   const { t }         = usePageTranslation(localeProp);
   const localizedHref = useLocalizedHref(localeProp);
-  const waUrl         = getWhatsAppConciergeUrl(
-    "Hello, I'd like to enquire about a CourtSide Padel retreat."
-  );
+  const waUrl         = getWhatsAppConciergeUrl(t('footer.whatsappMessage'));
 
   return (
-    <footer className="bg-brand-dark" aria-label="Site footer">
+    <footer className="bg-brand-dark" aria-label={t('footer.ariaLabel')}>
 
       {/* Gold accent line */}
       <div
@@ -68,10 +66,8 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             <p
               className="text-white/32 text-base font-light leading-relaxed mb-8 max-w-xs"
               style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
-            >
-              "Padel brings us on court.<br />
-              The experience makes it unforgettable."
-            </p>
+              dangerouslySetInnerHTML={{ __html: `&ldquo;${t('footer.quote')}&rdquo;` }}
+            />
 
             {/* Social */}
             <div className="flex items-center gap-3 mt-auto">
@@ -109,19 +105,19 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             className="col-span-1 md:col-span-2 md:col-start-6"
           >
             <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold mb-6">
-              Destinations
+              {t('navbar.destinations')}
             </p>
             <ul className="space-y-4">
               <li>
                 <a href={MENORCA_URL} className={linkClass}>
-                  Menorca
+                  {t('navbar.menorca')}
                 </a>
               </li>
               <li>
-                <span className={spanClass}>Bali</span>
+                <span className={spanClass}>{t('navbar.bali')}</span>
               </li>
               <li>
-                <span className={spanClass}>Dubai</span>
+                <span className={spanClass}>{t('navbar.dubai')}</span>
               </li>
             </ul>
 
@@ -140,12 +136,12 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             className="col-span-1 md:col-span-2"
           >
             <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold mb-6">
-              Company
+              {t('footer.companyLabel')}
             </p>
             <ul className="space-y-4">
               <li>
                 <a href={localizedHref('/our-story')} className={linkClass}>
-                  Our Story
+                  {t('navbar.ourStory')}
                 </a>
               </li>
               <li>
@@ -155,7 +151,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               </li>
               <li>
                 <a href={localizedHref('/executive-retreat')} className={linkClass}>
-                  Corporate & Executive
+                  {t('footer.corporate')}
                 </a>
               </li>
             </ul>
@@ -168,7 +164,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             className="col-span-2 md:col-span-3"
           >
             <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold mb-6">
-              Get in Touch
+              {t('footer.contactLabel')}
             </p>
             <ul className="space-y-5">
               <li>
@@ -179,7 +175,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
                   className="flex items-start gap-3 group"
                 >
                   <MessageCircle className="w-4 h-4 text-brand-gold/50 group-hover:text-brand-gold mt-0.5 flex-shrink-0 transition-colors duration-200" />
-                  <span className={linkClass}>WhatsApp Concierge</span>
+                  <span className={linkClass}>{t('footer.whatsappConcierge')}</span>
                 </a>
               </li>
               <li>
@@ -203,7 +199,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               className="inline-flex items-center gap-2 mt-8 group"
             >
               <span className="text-[9px] uppercase tracking-[0.32em] font-semibold text-white/30 group-hover:text-brand-gold transition-colors duration-200">
-                Message the Team
+                {t('footer.messageTeam')}
               </span>
               <svg
                 className="w-3 h-3 text-white/25 group-hover:text-brand-gold group-hover:translate-x-0.5 transition-all duration-200"

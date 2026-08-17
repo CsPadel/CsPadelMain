@@ -1,5 +1,14 @@
 ---
 // Page loader — pure CSS/HTML, renders before any JS hydration
+import type { Locale } from '../i18n/locales';
+import { getTranslations } from '../i18n/getTranslations';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const c = getTranslations(locale).pageLoader;
 ---
 
 <div id="cs-page-loader">
@@ -11,7 +20,7 @@
       width="160"
       height="72"
     />
-    <p id="cs-tagline">Luxury Padel Retreats</p>
+    <p id="cs-tagline">{c.tagline}</p>
     <div id="cs-track">
       <div id="cs-bar"></div>
     </div>

@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import FooterIsland from '../FooterIsland';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { getTranslations } from '../../i18n/getTranslations';
 
 interface Props {
   locale: Locale;
@@ -12,6 +13,7 @@ const { locale } = Astro.props;
 const seo = getPageSeo('executiveRetreat', locale);
 const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
 const alternateUrls = getAlternateUrls(siteURL.href, 'executiveRetreat');
+const c = getTranslations(locale).executivePage;
 ---
 
 <Layout
@@ -29,7 +31,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'executiveRetreat');
     <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
       <img
         src="/imagenes/cms/corporate-hero.png"
-        alt="Small group mid-rally — Corporate & Executive padel retreat"
+        alt={c.heroAlt}
         class="absolute inset-0 w-full h-full object-cover"
         fetchpriority="high"
         decoding="async"
@@ -43,10 +45,10 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'executiveRetreat');
           class="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-none mb-6"
           style="font-family: var(--font-display); font-style: italic;"
         >
-          Corporate & Executive Retreats.
+          {c.heroTitle}
         </h1>
         <p class="text-white/55 text-lg md:text-xl font-light max-w-xl leading-relaxed">
-          From leadership offsites and team building to rewards trips and board retreats, we build closed, bespoke padel retreats for companies of every kind.
+          {c.heroSubtitle}
         </p>
       </div>
     </section>
@@ -58,7 +60,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'executiveRetreat');
           class="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight"
           style="font-family: var(--font-display); font-style: italic;"
         >
-          "Padel is social by nature. It's competitive, but never too serious, played in doubles on a small court that keeps everyone close enough to talk between points. Somehow it gets people communicating and working as a team without really trying."
+          &ldquo;{c.quote}&rdquo;
         </blockquote>
       </div>
     </section>
@@ -70,23 +72,22 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'executiveRetreat');
           <div class="flex items-center gap-4 mb-6">
             <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
             <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              The Format
+              {c.formatEyebrow}
             </p>
           </div>
           <h2
             class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
             style="font-family: var(--font-display); font-style: italic;"
-          >
-            A closed retreat.<br/>Your agenda.
-          </h2>
+            set:html={c.formatTitle}
+          />
           <p class="text-brand-dark/55 text-lg font-light leading-relaxed">
-            The Executive Retreat is a fully closed, bespoke experience for leadership teams, boards, and company groups of every kind. Your group has our full team for the duration of the retreat. A fully private buyout, whether an entire estate or a private villa, can be arranged depending on the destination.
+            {c.formatText}
           </p>
         </div>
         <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/3]">
           <img
             src="/imagenes/cms/corporate-format-empty-court.jpg"
-            alt="Empty padel court, private and quiet"
+            alt={c.formatImageAlt}
             loading="lazy"
             decoding="async"
             class="absolute inset-0 w-full h-full object-cover"
@@ -99,23 +100,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'executiveRetreat');
     <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          {[
-            {
-              number: '01',
-              title: 'Full Exclusivity',
-              desc: "A fully private buyout, whether that's an entire estate or a private villa, can be arranged on request depending on the destination.",
-            },
-            {
-              number: '02',
-              title: 'Bespoke Programme',
-              desc: 'From coaching intensity to boardroom sessions, spa days, and private dining, every element is built around your brief.',
-            },
-            {
-              number: '03',
-              title: 'Total Discretion',
-              desc: 'NDAs, private transfer coordination, and complete confidentiality from our team, on every retreat we run.',
-            },
-          ].map((pillar) => (
+          {c.pillars.map((pillar) => (
             <div class="group cs-fadein">
               <p class="text-[10px] uppercase tracking-[0.3em] text-brand-gold font-semibold mb-4">{pillar.number}</p>
               <h3
@@ -138,24 +123,23 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'executiveRetreat');
         <div class="flex items-center justify-center gap-4 mb-5">
           <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-            Start the Conversation
+            {c.ctaEyebrow}
           </p>
           <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
         </div>
         <h2
           class="text-4xl md:text-5xl font-light text-brand-dark mb-6"
           style="font-family: var(--font-display); font-style: italic;"
-        >
-          Every corporate retreat<br/>begins with a brief.
-        </h2>
+          set:html={c.ctaTitle}
+        />
         <p class="text-brand-dark/50 text-lg font-light leading-relaxed mb-10 max-w-xl mx-auto">
-          Tell us your objectives, group size and preferred dates. We'll build the programme around you.
+          {c.ctaText}
         </p>
         <a
           href="mailto:executive@courtsidepadel.com"
           class="btn-luxury inline-flex items-center gap-3"
         >
-          Enquire About a Corporate Retreat
+          {c.ctaBtn}
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
         </a>
       </div>

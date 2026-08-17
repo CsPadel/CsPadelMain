@@ -363,6 +363,10 @@ const fr = {
           introLine1: "Retraites d'exception,",
           introLine2: "orchestrées avec soin.",
           intro: "Des retraites padel d'exception, orchestrées avec soin.",
+          headlineLine1: "Retraites de Padel",
+          headlineLine2: "d'Exception",
+          discoverBtn: "Découvrir les Expériences",
+          scroll: "Faites défiler",
           slogan: "Au-delà du court. Vers une expérience.",
           subtitle: "Bien-être, repos et réseautage autour du padel.",
           intent: "Composez votre séjour. Que recherchez-vous aujourd'hui ?",
@@ -417,7 +421,18 @@ const fr = {
           backHome: "Retour à l'accueil"
         }
       },
+      pageLoader: {
+        tagline: "Retraites de Padel de Luxe"
+      },
       footer: {
+        ariaLabel: "Pied de page",
+        quote: "Le padel nous réunit sur le court.<br/>L'expérience le rend inoubliable.",
+        companyLabel: "Société",
+        corporate: "Entreprises et Dirigeants",
+        contactLabel: "Nous Contacter",
+        whatsappConcierge: "Concierge WhatsApp",
+        messageTeam: "Écrire à l'Équipe",
+        whatsappMessage: "Bonjour, je souhaiterais me renseigner sur une retraite CourtSide Padel.",
         rights: "© 2026 CourtSide Padel. Tous droits réservés.",
         privacy: "Politique de confidentialité",
         terms: "Conditions d'utilisation",
@@ -506,7 +521,36 @@ const fr = {
         ctaTitle: "Votre suite à Bali vous attend.",
         ctaDesc: "Un groupe intime. Une villa privée. Cinq jours extraordinaires.",
         ctaBtn: "Réserver votre Place",
-        ctaSecondaryBtn: "Parler au Concierge"
+        ctaSecondaryBtn: "Parler au Concierge",
+        landing: {
+          heroAlt: "Piscine à débordement au crépuscule — domaine CourtSide à Bali",
+          heroTitle: "Une Escapade à Bali.",
+          heroSubtitle: "Un domaine privé perché sur les falaises de la péninsule de Bukit, abritant les seuls courts de padel reconnus par le WPT sur l'île. A Mandarin Oriental Home.",
+          stayEyebrow: "Où Vous Séjournez",
+          stayTitle: "Deux façons de vivre Bali.",
+          estateTitle: "Le Domaine",
+          estateText: "L'intégralité du domaine en bord de falaise et ses 8 suites, rien que pour vous. Chef privé, majordome et concierge, une piscine à débordement face à l'océan Indien et un pavillon spa privé. Expériences incluses sur place : soins spa, yoga, cours de cuisine, coaching sportif et bien plus. C'est la retraite balinaise complète, pensée pour les groupes qui veulent tout réunir sur une seule propriété.",
+          estateImageAlts: [
+            "Vue aérienne du domaine de Bali et de sa piscine à débordement",
+            "Pavillon de vie ouvert du domaine de Bali",
+            "Suite du domaine de Bali avec baignoire extérieure"
+          ],
+          studiosTitle: "Les Studios",
+          studiosText: "Des chambres modernes et confortables à quelques pas des courts de padel, idéales pour les voyageurs solos, les couples ou celles et ceux qui préfèrent passer la semaine à explorer Bali. Climatisées, avec salle de bain privative et kitchenette. Les extras du domaine, comme le spa ou les cours de cuisine, ne sont pas inclus ici, mais peuvent être organisés via nos partenaires locaux sur demande.",
+          studiosImageAlt: "Les Studios — chambre intérieure",
+          courtsEyebrow: "Les Courts",
+          courtsTitle: "Les seuls courts reconnus par le WPT à Bali.",
+          courtsText: "Deux courts construits sur mesure par Padel Galis, fournisseur officiel du World Padel Tour. Installés au cœur du domaine, face à l'océan Indien. C'est la seule installation de ce type sur l'île.",
+          courtsImageAlt: "Courts Padel Galis du domaine de Bali, face à l'océan Indien",
+          beyondEyebrow: "Hors du Court",
+          beyondTitle: "Bali, au-delà du domaine.",
+          beyondText: "Surf, plongée, parapente, visites de temples, vélo, sound healing et bien plus, le tout organisé par un coordinateur d'activités local qui connaît l'île sur le bout des doigts. Quelle que soit votre envie, elle est à portée de main.",
+          beyondImageAlt: "Le littoral d'Uluwatu, au-delà du domaine de Bali",
+          closingImageAlt: "Le chef privé et l'équipe culinaire du domaine de Bali",
+          ctaTitle: "Prêt à Découvrir Uluwatu ?",
+          ctaText: "Les dates et les tarifs sont confirmés une fois que nous connaissons votre groupe et vos projets. Itinéraire complet disponible sur demande.",
+          ctaBtn: "Se Renseigner sur Bali"
+        }
       },
       dubaiPage: {
         heroTitle: "DUBAI",
@@ -540,7 +584,13 @@ const fr = {
         ctaTitle: "Dubaï. Votre court est prêt.",
         ctaDesc: "Quatre jours. Une ville hors du commun. La meilleure compagnie.",
         ctaBtn: "Réserver votre Place",
-        ctaSecondaryBtn: "Parler au Concierge"
+        ctaSecondaryBtn: "Parler au Concierge",
+        landing: {
+          heroAlt: "Les gratte-ciels de Dubaï à l'heure dorée",
+          title: "Dubaï.<br/>Bientôt Disponible.",
+          text: "Nous préparons quelque chose de spécial pour Dubaï. Écrivez-nous si vous souhaitez être parmi les premiers informés dès que ce sera prêt.",
+          ctaBtn: "Nous Contacter"
+        }
       },
       mykonosPage: {
         heroTitle: "MYKONOS",
@@ -579,17 +629,131 @@ const fr = {
       upcomingRetreatsPage: {
         eyebrow: "Dans les 12 à 18 Prochains Mois",
         heroTitle: "Prochaines Retraites.",
-        heroSubtitle: "Trois nouvelles destinations rejoignent le calendrier CourtSide au cours des douze à dix-huit prochains mois — chacune bâtie sur la même idée que Minorque : padel d'élite, compagnie exceptionnelle, et tout ce qui entoure le jeu, pensé avec le même soin.",
-        heroHint: "Découvrir",
-        indexLabel: "Les Destinations",
-        highlightsLabel: "Les Points Forts",
-        comingSoon: "Bientôt Disponible",
-        enquireBtn: "Inscrivez votre Intérêt",
-        nextLabel: "Suivant",
-        ctaEyebrow: "Soyez le Premier Informé",
-        ctaTitle: "Votre place, avant l'ouverture du calendrier.",
-        ctaDesc: "Bali, Dubaï et Mykonos ouvrent bientôt. Inscrivez votre intérêt et notre équipe concierge vous contactera dès qu'une retraite ouvrira ses réservations.",
-        ctaBtn: "Inscrivez votre Intérêt"
+        heroSubtitle: "Padel d'élite, compagnie exceptionnelle et tout ce qui entoure le jeu pensé avec le même soin — dans chaque destination CourtSide.",
+        bespokeNote: "Dates sur mesure disponibles sur demande.",
+        destinations: {
+          menorca: {
+            name: "Minorque",
+            location: "Îles Baléares · Espagne",
+            dates: ["Octobre 2026", "Avril 2027", "Mai 2027", "Juin 2027", "Septembre 2027", "Octobre 2027"],
+            cta: "Découvrir Minorque"
+          },
+          bali: {
+            name: "Bali",
+            location: "Uluwatu · Bali",
+            dates: ["Mars 2027", "Juillet 2027", "Août 2027"],
+            cta: "Découvrir Bali"
+          }
+        },
+        ctaTitle: "Vous avez déjà vos propres dates en tête ?",
+        ctaText: "Dites-nous vos projets et nous construirons la retraite autour d'eux.",
+        ctaBtn: "Planifier votre Retraite"
+      },
+      homePage: {
+        retreatTypes: {
+          ariaLabel: "Types de retraite",
+          eyebrow: "Formats de Retraite",
+          title: "Choisissez votre Retraite.",
+          explore: "Découvrir",
+          viewDetails: "voir les détails",
+          items: {
+            open: {
+              tag: "Seul ou entre Amis",
+              name: "Retraite Ouverte",
+              desc: "Rejoignez un groupe choisi de joueurs partageant la même passion pour cinq jours immersifs de padel, de haute gastronomie et de vie méditerranéenne."
+            },
+            private: {
+              tag: "Confidentialité Absolue",
+              name: "Retraite Privée",
+              desc: "Réservez l'intégralité du domaine en exclusivité pour votre groupe. Intimité totale, programme sur mesure et immersion complète."
+            },
+            executive: {
+              tag: "Directions & Conseils",
+              name: "Entreprises et Dirigeants",
+              desc: "La stratégie en silence. Leadership de haut niveau et networking dans le cadre de padel le plus exclusif."
+            }
+          }
+        },
+        destinations: {
+          eyebrow: "Confirmé 2026",
+          title: "Notre Destination",
+          location: "Îles Baléares · Espagne",
+          tagline: "Sanctuaire Méditerranéen",
+          dates: "30 sep – 4 oct 2026",
+          spots: "Il Reste Peu de Places",
+          explore: "Découvrir"
+        },
+        upcoming: {
+          eyebrow: "Dates à Confirmer",
+          title: "Prochaines Retraites",
+          subtitle: "De nouvelles destinations en préparation pour notre calendrier 2027. Inscrivez votre intérêt pour être informé en premier.",
+          viewAll: "Voir tout",
+          explore: "Découvrir",
+          items: {
+            bali: { tagline: "Un domaine privé en bord de falaise. Padel d'élite.", location: "Uluwatu · Bali" },
+            dubai: { tagline: "Bientôt disponible.", location: "Bientôt Disponible" }
+          }
+        },
+        partners: {
+          ariaLabel: "Nos partenaires",
+          eyebrow: "Nos Partenaires",
+          title: "En partenariat avec les meilleurs."
+        }
+      },
+      ourStoryPage: {
+        heroAlt: "CourtSide Padel — Notre Histoire",
+        heroEyebrow: "Les Fondateurs",
+        heroTitle: "Notre Histoire.",
+        heroSubtitle: "Frères jumeaux. Des chemins différents. Le padel a tout changé.",
+        beganEyebrow: "Comment Tout a Commencé",
+        beganTitle: "Né d'une<br/>obsession partagée.",
+        beganParagraphs: [
+          "Nous sommes frères jumeaux, nés à New York et élevés à Londres. Enfants, nous faisions tout ensemble : nous entraîner, concourir, voyager, toujours à la poursuite de la prochaine opportunité que le sport pouvait nous offrir. À 15 ans, tout a changé. Alexi est parti dans le sud de la France pour tenter le tennis professionnel. Oliver est resté à Londres, attiré par le football. Les sports de raquette avaient toujours fait partie de nous, mais pendant quelques années, la vie nous a menés sur des chemins différents.",
+          "En voyage à Minorque en 2019, nous avons découvert le padel pour la première fois et avons été conquis immédiatement, pas seulement par le jeu, mais par tout ce qui l'entoure : quitter le court pour boire un verre, rencontrer de nouvelles personnes, plonger dans la piscine après un match. Compétitif, mais convivial. C'est sur cette combinaison que CourtSide est bâti.",
+          "L'idée s'est construite progressivement. Nous avions tous les deux grandi en voyageant, exposés très tôt à de nouveaux lieux et à de nouvelles cultures, un goût qui ne nous a jamais quittés. Alors que le padel devenait l'un des sports connaissant la plus forte croissance au monde, tout s'est éclairé : associer une destination magnifique à un padel de très haut niveau, réunir les gens, et bâtir quelque chose autour de la sensation découverte à Minorque.",
+          "Minorque n'était pas un choix au hasard. C'est l'île où nous sommes tombés amoureux de ce sport, et où nous revenons depuis huit ans. C'était l'endroit évident pour construire la première retraite CourtSide."
+        ],
+        foundersEyebrow: "Celles et Ceux Derrière le Projet",
+        foundersTitle: "Rencontrez les fondateurs.",
+        founderRole: "Cofondateur",
+        founderAlt: "Cofondateur, CourtSide Padel",
+        foundersQuote: "Alexi a grandi en poursuivant le tennis. Oliver a grandi en poursuivant le football. Le padel nous a donné exactement la même obsession, simplement pour un autre jeu.",
+        believeEyebrow: "Ce en Quoi Nous Croyons",
+        believeQuote: "Le padel nous réunit sur le court.<br/>L'expérience le rend inoubliable.",
+        believeText: "Les meilleures retraites ne ressemblent pas à des événements. Elles ressemblent à cette semaine dont on parle encore trois ans plus tard.",
+        ctaTitle: "Prêt à écrire votre propre histoire ?",
+        ctaText: "Chaque retraite CourtSide commence par une conversation."
+      },
+      executivePage: {
+        heroAlt: "Petit groupe en plein échange — retraite de padel Entreprises et Dirigeants",
+        heroTitle: "Retraites Entreprises et Dirigeants.",
+        heroSubtitle: "Des séminaires de direction et du team building aux voyages de récompense et aux retraites de conseil d'administration, nous concevons des retraites de padel privatisées et sur mesure pour tous types d'entreprises.",
+        quote: "Le padel est social par nature. Il est compétitif, mais jamais trop sérieux : il se joue en double, sur un petit court qui garde tout le monde assez proche pour discuter entre les points. D'une façon ou d'une autre, il pousse les gens à communiquer et à travailler en équipe sans vraiment y penser.",
+        formatEyebrow: "Le Format",
+        formatTitle: "Une retraite privatisée.<br/>Votre programme.",
+        formatText: "La Retraite Dirigeants est une expérience entièrement privatisée et sur mesure, conçue pour les équipes de direction, les conseils d'administration et les groupes d'entreprise de tout type. Votre groupe dispose de toute notre équipe pendant la durée de la retraite. Une privatisation complète, qu'il s'agisse d'un domaine entier ou d'une villa privée, peut être organisée selon la destination.",
+        formatImageAlt: "Court de padel vide, privé et calme",
+        pillars: [
+          {
+            number: "01",
+            title: "Exclusivité Totale",
+            desc: "Une privatisation complète, qu'il s'agisse d'un domaine entier ou d'une villa privée, peut être organisée sur demande selon la destination."
+          },
+          {
+            number: "02",
+            title: "Programme Sur Mesure",
+            desc: "De l'intensité du coaching aux sessions de travail, journées spa et dîners privés, chaque élément est construit à partir de votre brief."
+          },
+          {
+            number: "03",
+            title: "Discrétion Absolue",
+            desc: "Accords de confidentialité, coordination des transferts privés et confidentialité totale de notre équipe, sur chaque retraite que nous organisons."
+          }
+        ],
+        ctaEyebrow: "Engagez la Conversation",
+        ctaTitle: "Chaque retraite d'entreprise<br/>commence par un brief.",
+        ctaText: "Dites-nous vos objectifs, la taille du groupe et vos dates préférées. Nous construirons le programme autour de vous.",
+        ctaBtn: "Se Renseigner sur une Retraite d'Entreprise"
       },
       testimonials: {
         label: "Ce Que Disent Nos Convives",

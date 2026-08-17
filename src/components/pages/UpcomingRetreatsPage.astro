@@ -5,6 +5,7 @@ import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
 import { localizedPath } from '../../i18n/routing';
+import { getTranslations } from '../../i18n/getTranslations';
 import { MENORCA_URL } from '../../constants/urls';
 
 interface Props {
@@ -16,25 +17,20 @@ const seo = getPageSeo('upcomingRetreats', locale);
 const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
 const alternateUrls = getAlternateUrls(siteURL.href, 'upcomingRetreats');
 const baliHref = localizedPath('/bali', locale);
+const c = getTranslations(locale).upcomingRetreatsPage;
 
 const destinations = [
   {
     id: 'menorca',
-    name: 'Menorca',
-    location: 'Balearic Islands · Spain',
+    ...c.destinations.menorca,
     image: '/imagenes/cap roig.jpg',
-    dates: ['October 2026', 'April 2027', 'May 2027', 'June 2027', 'September 2027', 'October 2027'],
     href: MENORCA_URL,
-    cta: 'Explore Menorca',
   },
   {
     id: 'bali',
-    name: 'Bali',
-    location: 'Uluwatu · Bali',
+    ...c.destinations.bali,
     image: '/imagenes/cms/bali-estate-aerial.jpg',
-    dates: ['March 2027', 'July 2027', 'August 2027'],
     href: baliHref,
-    cta: 'Explore Bali',
   },
 ];
 ---
@@ -56,7 +52,7 @@ const destinations = [
         <div class="flex items-center justify-center gap-4 mb-6">
           <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-            Next 12–18 Months
+            {c.eyebrow}
           </p>
           <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
         </div>
@@ -64,10 +60,10 @@ const destinations = [
           class="text-5xl md:text-7xl font-light text-white leading-none mb-6"
           style="font-family: var(--font-display); font-style: italic;"
         >
-          Upcoming Retreats.
+          {c.heroTitle}
         </h1>
         <p class="text-white/55 text-base md:text-lg font-light leading-relaxed max-w-xl mx-auto">
-          Elite padel, exceptional company, and everything around the game curated to match — across every CourtSide destination.
+          {c.heroSubtitle}
         </p>
       </div>
     </section>
@@ -114,7 +110,7 @@ const destinations = [
             </div>
 
             <p class="text-brand-dark/45 text-sm font-light mb-10">
-              Bespoke dates available upon request.
+              {c.bespokeNote}
             </p>
 
             <a
@@ -137,12 +133,12 @@ const destinations = [
           class="text-4xl md:text-5xl font-light mb-5 text-white"
           style="font-family: var(--font-display); font-style: italic;"
         >
-          Have your own dates in mind?
+          {c.ctaTitle}
         </h2>
         <p class="font-light text-lg mb-12" style="color: rgba(255,255,255,0.50);">
-          Tell us your plans and we'll build the retreat around them.
+          {c.ctaText}
         </p>
-        <EnquiryCta client:visible locale={locale} label="Plan Your Retreat" />
+        <EnquiryCta client:visible locale={locale} label={c.ctaBtn} />
       </div>
     </section>
 

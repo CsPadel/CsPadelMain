@@ -96,7 +96,7 @@ export default function ExperienceView({ locale }: ExperienceViewProps) {
           transition={{ delay: 2.2, duration: 1 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
         >
-          <span className="text-[8px] uppercase tracking-[0.38em] text-white/22">Scroll</span>
+          <span className="text-[8px] uppercase tracking-[0.38em] text-white/22">{t('gateway.hero.scroll')}</span>
           <motion.div
             animate={{ y: [0, 7, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}

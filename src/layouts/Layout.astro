@@ -125,7 +125,7 @@ const hreflangEntries = Object.entries(alternateUrls).filter(
 		style="font-feature-settings: 'kern' 1, 'liga' 1;"
 		data-locale={locale}
 	>
-		<PageLoader />
+		<PageLoader locale={locale} />
 		<Navbar client:load locale={locale} />
 		<div id="page-content">
 			<slot />

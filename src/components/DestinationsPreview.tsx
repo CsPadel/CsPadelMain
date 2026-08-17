@@ -1,8 +1,17 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, MapPin, Calendar } from 'lucide-react';
+import '../i18n/config';
+import type { Locale } from '../i18n/locales';
+import { usePageTranslation } from '../i18n/usePageTranslation';
 import { MENORCA_URL } from '../constants/urls';
 
-export default function DestinationsPreview() {
+interface Props {
+  locale?: Locale;
+}
+
+export default function DestinationsPreview({ locale }: Props) {
+  const { t } = usePageTranslation(locale);
+
   return (
     <section className="py-24 md:py-32 px-8 md:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -18,14 +27,14 @@ export default function DestinationsPreview() {
           <div className="flex items-center gap-4 mb-4">
             <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
             <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              Confirmed 2026
+              {t('homePage.destinations.eyebrow')}
             </p>
           </div>
           <h2
             className="text-4xl md:text-5xl font-light text-brand-dark"
             style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
           >
-            Our Destination
+            {t('homePage.destinations.title')}
           </h2>
         </motion.div>
 
@@ -62,7 +71,7 @@ export default function DestinationsPreview() {
             <div className="flex items-center gap-1.5 mb-3">
               <MapPin className="w-3.5 h-3.5 text-brand-gold flex-shrink-0" />
               <span className="text-[10px] uppercase tracking-widest text-brand-gold font-medium">
-                Balearic Islands · Spain
+                {t('homePage.destinations.location')}
               </span>
             </div>
 
@@ -77,14 +86,14 @@ export default function DestinationsPreview() {
               className="font-light mb-6 text-base md:text-lg"
               style={{ color: 'rgba(255,255,255,0.55)' }}
             >
-              Mediterranean Sanctuary
+              {t('homePage.destinations.tagline')}
             </p>
 
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-2">
                 <Calendar className="w-3.5 h-3.5 text-brand-gold" />
                 <span className="text-[11px] uppercase tracking-widest text-white/60">
-                  Sep 30 – Oct 4, 2026
+                  {t('homePage.destinations.dates')}
                 </span>
               </div>
               <span
@@ -95,13 +104,13 @@ export default function DestinationsPreview() {
                   background: 'rgba(217,173,98,0.08)',
                 }}
               >
-                6 places left
+                {t('homePage.destinations.spots')}
               </span>
             </div>
 
             <div className="flex items-center gap-2 mt-6 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
               <span className="text-[11px] uppercase tracking-widest text-brand-gold font-medium">
-                Explore
+                {t('homePage.destinations.explore')}
               </span>
               <ArrowRight className="w-3.5 h-3.5 text-brand-gold" />
             </div>

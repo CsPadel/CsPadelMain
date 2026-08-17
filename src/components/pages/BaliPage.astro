@@ -4,6 +4,7 @@ import FooterIsland from '../FooterIsland';
 import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { getTranslations } from '../../i18n/getTranslations';
 
 interface Props {
   locale: Locale;
@@ -13,6 +14,17 @@ const { locale } = Astro.props;
 const seo = getPageSeo('bali', locale);
 const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
 const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
+const c = getTranslations(locale).baliPage.landing;
+
+const estateImages = [
+  '/imagenes/cms/bali-estate-aerial.jpg',
+  '/imagenes/cms/bali-estate-pavilion.jpg',
+  '/imagenes/cms/bali-estate-suite.jpg',
+];
+const studioImages = [
+  '/imagenes/cms/bali-studios-1.jpg',
+  '/imagenes/cms/bali-studios-2.jpg',
+];
 ---
 
 <Layout
@@ -30,7 +42,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
     <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
       <img
         src="/imagenes/cms/bali-hero-pool.jpg"
-        alt="Infinity pool at dusk — CourtSide Bali estate"
+        alt={c.heroAlt}
         class="absolute inset-0 w-full h-full object-cover"
         fetchpriority="high"
         decoding="async"
@@ -45,13 +57,13 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
           class="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-none mb-6"
           style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s both;"
         >
-          An Escape to Bali.
+          {c.heroTitle}
         </h1>
         <p
           class="text-white/55 text-lg md:text-xl font-light max-w-xl leading-relaxed"
           style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s both;"
         >
-          A private cliff-top estate on the Bukit Peninsula, home to the only WPT-recognised padel courts on the island. A Mandarin Oriental Home.
+          {c.heroSubtitle}
         </p>
       </div>
     </section>
@@ -63,14 +75,14 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
           <div class="flex items-center gap-4 mb-6">
             <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
             <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              Where You Stay
+              {c.stayEyebrow}
             </p>
           </div>
           <h2
             class="text-4xl md:text-5xl font-light text-brand-dark leading-tight"
             style="font-family: var(--font-display); font-style: italic;"
           >
-            Two ways to experience Bali.
+            {c.stayTitle}
           </h2>
         </div>
 
@@ -80,19 +92,15 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
             class="text-2xl md:text-3xl font-light text-brand-dark mb-5"
             style="font-family: var(--font-display); font-style: italic;"
           >
-            The Estate
+            {c.estateTitle}
           </h3>
           <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed max-w-3xl mb-8">
-            The entire 8-suite cliff-top estate, exclusively yours. Private chef, butler, and concierge, an infinity pool overlooking the Indian Ocean, and a private spa pavilion. On-site experiences included: spa treatments, yoga, cooking classes, personal training, and more. This is the full, in-house Bali retreat, built for groups who want everything on one property.
+            {c.estateText}
           </p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-            {[
-              { src: '/imagenes/cms/bali-estate-aerial.jpg', alt: 'Aerial view of the Bali estate and infinity pool' },
-              { src: '/imagenes/cms/bali-estate-pavilion.jpg', alt: 'Open-air living pavilion at the Bali estate' },
-              { src: '/imagenes/cms/bali-estate-suite.jpg', alt: 'Bali estate suite with outdoor bath' },
-            ].map((img) => (
+            {estateImages.map((src, i) => (
               <div class="relative rounded-card overflow-hidden aspect-[4/5]">
-                <img src={img.src} alt={img.alt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+                <img src={src} alt={c.estateImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
               </div>
             ))}
           </div>
@@ -104,18 +112,15 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
             class="text-2xl md:text-3xl font-light text-brand-dark mb-5"
             style="font-family: var(--font-display); font-style: italic;"
           >
-            The Studios
+            {c.studiosTitle}
           </h3>
           <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed max-w-3xl mb-8">
-            Modern, comfortable rooms just steps from the padel courts, ideal for solo travellers, couples, or anyone who'd rather spend the week out exploring Bali than in. Air-conditioned, with ensuite bathrooms and a kitchenette. On-site extras like spa and cooking classes aren't included here, but can be arranged through local partners on request.
+            {c.studiosText}
           </p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-2xl">
-            {[
-              { src: '/imagenes/cms/bali-studios-1.jpg', alt: 'The Studios — interior room' },
-              { src: '/imagenes/cms/bali-studios-2.jpg', alt: 'The Studios — interior room' },
-            ].map((img) => (
+            {studioImages.map((src) => (
               <div class="relative rounded-card overflow-hidden aspect-[4/3]">
-                <img src={img.src} alt={img.alt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+                <img src={src} alt={c.studiosImageAlt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
               </div>
             ))}
           </div>
@@ -130,23 +135,23 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
           <div class="flex items-center gap-4 mb-6">
             <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
             <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              The Courts
+              {c.courtsEyebrow}
             </p>
           </div>
           <h2
             class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
             style="font-family: var(--font-display); font-style: italic;"
           >
-            The only WPT-recognised courts in Bali.
+            {c.courtsTitle}
           </h2>
           <p class="text-brand-dark/55 text-lg font-light leading-relaxed">
-            Two courts, custom-built by Padel Galis, the official court provider of the World Padel Tour. Set within the estate, overlooking the Indian Ocean. It's the only facility of its kind on the island.
+            {c.courtsText}
           </p>
         </div>
         <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/3]">
           <img
             src="/imagenes/cms/bali-courts-galis.jpg"
-            alt="Padel Galis courts at the Bali estate, overlooking the Indian Ocean"
+            alt={c.courtsImageAlt}
             loading="lazy"
             decoding="async"
             class="absolute inset-0 w-full h-full object-cover"
@@ -162,23 +167,23 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
           <div class="flex items-center gap-4 mb-6">
             <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
             <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              Off the Court
+              {c.beyondEyebrow}
             </p>
           </div>
           <h2
             class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
             style="font-family: var(--font-display); font-style: italic;"
           >
-            Bali, beyond the estate.
+            {c.beyondTitle}
           </h2>
           <p class="text-brand-dark/55 text-lg font-light leading-relaxed max-w-2xl">
-            Surfing, diving, paragliding, temple visits, cycling, sound healing, and more, all arranged through a local activity coordinator who knows the island inside out. Whatever you're into, it's within reach.
+            {c.beyondText}
           </p>
         </div>
         <div class="cs-fadein relative rounded-card overflow-hidden w-full" style="aspect-ratio: 21/9;">
           <img
             src="/imagenes/cms/bali-beyond.jpg"
-            alt="The Uluwatu coastline, beyond the Bali estate"
+            alt={c.beyondImageAlt}
             loading="lazy"
             decoding="async"
             class="absolute inset-0 w-full h-full object-cover"
@@ -191,7 +196,7 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
     <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
       <img
         src="/imagenes/cms/bali-closing-chef.jpg"
-        alt="The private chef and culinary team at the Bali estate"
+        alt={c.closingImageAlt}
         loading="lazy"
         decoding="async"
         class="absolute inset-0 w-full h-full object-cover"
@@ -206,12 +211,12 @@ const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
           class="text-4xl md:text-5xl font-light text-white mb-5"
           style="font-family: var(--font-display); font-style: italic;"
         >
-          Ready to Experience Uluwatu?
+          {c.ctaTitle}
         </h2>
         <p class="text-white/50 text-base font-light leading-relaxed mb-10 max-w-sm mx-auto">
-          Dates and pricing are confirmed once we know your group and plans. Full itinerary available on request.
+          {c.ctaText}
         </p>
-        <EnquiryCta client:visible locale={locale} label="Enquire About Bali" destination="bali" />
+        <EnquiryCta client:visible locale={locale} label={c.ctaBtn} destination="bali" />
       </div>
     </section>
 
