@@ -115,7 +115,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
               onMouseLeave={() => setIsDestinationsOpen(false)}
             >
               <button className={`nav-link flex items-center gap-2 text-sm tracking-widest uppercase font-medium transition-colors cursor-pointer ${
-                isActive('/menorca') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 group-hover:text-brand-gold' : 'text-brand-light/70 group-hover:text-brand-gold'
+                isActive('/menorca') || isActive('/east-sussex') ? 'text-brand-gold' : isScrolled ? 'text-brand-dark/60 group-hover:text-brand-gold' : 'text-brand-light/70 group-hover:text-brand-gold'
               }`}>
                 {t('navbar.destinations')} <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
               </button>
@@ -127,10 +127,11 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-48"
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-52"
                   >
                     <div className="bg-brand-dark border border-brand-gold/20 rounded-card flex flex-col shadow-2xl shadow-black/50">
                       <a href={MENORCA_URL} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.menorca')}</a>
+                      <a href={localizedHref('/east-sussex')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all whitespace-nowrap">{t('navbar.eastSussex')}</a>
                       <a href={localizedHref('/bali')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.bali')}</a>
                       <a href={localizedHref('/dubai')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.dubai')}</a>
                     </div>
@@ -179,6 +180,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
 
               <span className="text-xs tracking-[0.3em] uppercase text-brand-gold">{t('navbar.destinations')}</span>
               <a href={MENORCA_URL} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
+              <a href={localizedHref('/east-sussex')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.eastSussex')}</a>
               <a href={localizedHref('/bali')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
               <a href={localizedHref('/dubai')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
 

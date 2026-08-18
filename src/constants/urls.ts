@@ -9,6 +9,7 @@ export function getWhatsAppConciergeUrl(message?: string): string {
 
 const RETREAT_URLS: Record<string, string> = {
   menorca: MENORCA_URL,
+  eastSussex: '/east-sussex',
   bali: '/bali',
   dubai: '/dubai',
   mykonos: '/upcoming-retreats',

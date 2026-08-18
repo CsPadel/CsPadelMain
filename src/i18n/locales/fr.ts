@@ -7,7 +7,8 @@ const fr = {
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubai",
-        mykonos: "Mykonos"
+        mykonos: "Mykonos",
+        eastSussex: "East Sussex"
       },
       experiencePage: {
         heroEyebrow: "L'Expérience",
@@ -550,6 +551,41 @@ const fr = {
           ctaTitle: "Prêt à Découvrir Uluwatu ?",
           ctaText: "Les dates et les tarifs sont confirmés une fois que nous connaissons votre groupe et vos projets. Itinéraire complet disponible sur demande.",
           ctaBtn: "Se Renseigner sur Bali"
+        }
+      },
+      eastSussexPage: {
+        landing: {
+          heroAlt: "La maison principale de Crafted at Powdermills, vue depuis l'autre rive du lac privé à l'heure dorée",
+          heroTitle: "La Campagne Anglaise, à 70 Minutes de Londres.",
+          heroSubtitle: "Crafted at Powdermills est un hôtel de campagne boutique au bord d'un lac privé, avec son propre club de padel.",
+          roomsEyebrow: "Où Vous Séjournez",
+          roomsTitle: "Chambres et Cottages",
+          roomsText: "Les chambres vont des doubles Cosy aux Suites complètes, et trois cottages privés — Ash Cottage, Oak Cottage et The Lake House — accueillent de six à dix personnes, chacun avec sa propre cuisine et son salon. The Lake House dispose en plus de sa terrasse donnant sur le lac et d'un jardin privé. Les chiens sont les bienvenus partout.",
+          roomsImageAlts: [
+            "Une Suite à Crafted at Powdermills, avec coin salon et canapé",
+            "L'extérieur du cottage The Lake House, au bord du lac"
+          ],
+          padelEyebrow: "Le Padel",
+          padelTitle: "Un club établi, pas un court monté pour l'occasion.",
+          padelText: "Crafted Padel Club gère déjà deux courts, avec du coaching, des cours et une vraie communauté autour ; ce n'est pas quelque chose d'ajouté pour une retraite. Les clients et les membres peuvent réserver des parties, et des cours débutants et avancés ont lieu chaque semaine. C'est un endroit où les gens viennent déjà jouer.",
+          padelImageAlts: [
+            "Les deux courts de padel du Crafted Padel Club, dans l'East Sussex",
+            "Une séance de coaching sur le court au Crafted Padel Club"
+          ],
+          bookEyebrow: "Comment Ça Marche",
+          bookTitle: "Réservez à Votre Façon",
+          bookText1: "Crafted at Powdermills accueille déjà des événements d'entreprise de grande ampleur, avec des espaces ayant réuni plus de 200 personnes pour des journées d'entreprise et des célébrations. Qu'il s'agisse d'un petit séminaire de direction ou d'une retraite d'entreprise complète, le lieu comme le club de padel s'adaptent à votre échelle.",
+          bookText2: "Des retraites ouvertes et des privatisations de groupe peuvent également être organisées ici, construites autour de vos dates plutôt que de dates fixes. Restez une nuit ou une semaine. Nous construisons le programme, en travaillant directement avec l'équipe de Crafted.",
+          bookImageAlt: "Un salon privé de réception à Crafted at Powdermills, dressé pour un dîner de groupe en table longue",
+          beyondEyebrow: "Au-delà du Court",
+          beyondTitle: "Il y a bien plus que le padel ici.",
+          beyondText: "Un bain nordique chauffé au bois et un sauna au bord du lac, un bain froid, la nage en eau libre, des paddles et des kayaks sur le lac, des ateliers de poterie et d'artisanat au Craft Barn, une salle de sport complète avec son programme de cours, et un restaurant et un pub qui valent à eux seuls le détour. L'essentiel de ce qui rend cette retraite mémorable se passe en dehors du court.",
+          beyondImageAlt: "Le sauna au bord du lac à Crafted at Powdermills, avec vue sur l'eau",
+          closingImageAlt: "Le restaurant de Crafted at Powdermills",
+          ctaEyebrow: "Entamons la Conversation",
+          ctaTitle: "Prêt à Découvrir l'East Sussex ?",
+          ctaText: "Les dates et les tarifs sont confirmés une fois que nous connaissons votre groupe et vos projets.",
+          ctaBtn: "Se Renseigner sur l'East Sussex"
         }
       },
       dubaiPage: {

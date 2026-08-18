@@ -7,7 +7,8 @@ const es = {
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubái",
-        mykonos: "Mykonos"
+        mykonos: "Mykonos",
+        eastSussex: "East Sussex"
       },
       experiencePage: {
         heroEyebrow: "La Experiencia",
@@ -550,6 +551,41 @@ const es = {
           ctaTitle: "¿Listo para Vivir Uluwatu?",
           ctaText: "Las fechas y los precios se confirman en cuanto conocemos tu grupo y tus planes. Itinerario completo disponible bajo petición.",
           ctaBtn: "Consulta sobre Bali"
+        }
+      },
+      eastSussexPage: {
+        landing: {
+          heroAlt: "La casa principal de Crafted at Powdermills, vista desde el otro lado del lago privado a la hora dorada",
+          heroTitle: "La Campiña Inglesa, a 70 Minutos de Londres.",
+          heroSubtitle: "Crafted at Powdermills es un hotel boutique de campo junto a un lago privado, con su propio club de pádel.",
+          roomsEyebrow: "Dónde te Alojas",
+          roomsTitle: "Habitaciones y Cottages",
+          roomsText: "Las habitaciones van desde las dobles Cosy hasta las Suites completas, y tres cottages privados —Ash Cottage, Oak Cottage y The Lake House— alojan entre seis y diez personas, cada uno con su propia cocina y salón. The Lake House cuenta además con su propia terraza sobre el lago y un jardín privado. Admiten perros en toda la propiedad.",
+          roomsImageAlts: [
+            "Una Suite en Crafted at Powdermills, con zona de estar y sofá",
+            "El exterior del cottage The Lake House, a la orilla del lago"
+          ],
+          padelEyebrow: "El Pádel",
+          padelTitle: "Un club consolidado, no una pista montada para la ocasión.",
+          padelText: "Crafted Padel Club ya gestiona dos pistas, con entrenamiento, clases y una comunidad real alrededor; no es algo añadido para un retiro. Huéspedes y socios pueden reservar partidos, y cada semana hay clases para principiantes y avanzados. Es un sitio al que la gente ya viene a jugar.",
+          padelImageAlts: [
+            "Las dos pistas de pádel de Crafted Padel Club, en East Sussex",
+            "Una sesión de entrenamiento en pista en Crafted Padel Club"
+          ],
+          bookEyebrow: "Cómo Funciona",
+          bookTitle: "Resérvalo a tu Manera",
+          bookText1: "Crafted at Powdermills ya acoge eventos corporativos de gran formato, con espacios que han reunido a más de 200 personas en jornadas de empresa y celebraciones. Ya sea un pequeño offsite de liderazgo o un retiro de empresa completo, tanto el recinto como el club de pádel se adaptan a la escala que necesites.",
+          bookText2: "También pueden organizarse aquí retiros abiertos y buyouts privados de grupo, construidos en torno a tus fechas y no a unas fijas. Quédate una noche o una semana. Nosotros creamos el programa, trabajando directamente con el equipo de Crafted.",
+          bookImageAlt: "Un salón privado de eventos y cenas en Crafted at Powdermills, preparado para una cena de grupo en mesa larga",
+          beyondEyebrow: "Más Allá de la Pista",
+          beyondTitle: "Aquí hay mucho más que pádel.",
+          beyondText: "Un jacuzzi de leña y sauna junto al lago, baño frío, natación en aguas abiertas, paddleboards y kayaks en el lago, talleres de cerámica y artesanía en el Craft Barn, un gimnasio completo con programa de clases, y un restaurante y un pub por los que merece la pena quedarse. Casi todo lo que hace memorable este retiro ocurre fuera de la pista.",
+          beyondImageAlt: "La sauna junto al lago en Crafted at Powdermills, con vistas al agua",
+          closingImageAlt: "El restaurante de Crafted at Powdermills",
+          ctaEyebrow: "Empecemos a Hablar",
+          ctaTitle: "¿Listo para Vivir East Sussex?",
+          ctaText: "Las fechas y los precios se confirman en cuanto conocemos tu grupo y tus planes.",
+          ctaBtn: "Consulta sobre East Sussex"
         }
       },
       dubaiPage: {

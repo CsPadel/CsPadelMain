@@ -1,7 +1,7 @@
 import type { Locale } from './locales';
 import { localizedPath } from './routing';
 
-export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory' | 'upcomingRetreats' | 'bali' | 'dubai';
+export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory' | 'upcomingRetreats' | 'bali' | 'dubai' | 'eastSussex';
 
 export interface PageSeo {
   title: string;
@@ -138,6 +138,23 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
       keywords: 'retraite padel Bali, padel Uluwatu, courts Padel Galis Bali, domaine de luxe padel Bali',
     },
   },
+  eastSussex: {
+    en: {
+      title: 'East Sussex — CourtSide Padel',
+      description: 'Crafted at Powdermills, a boutique country hotel on a private lake 70 minutes from London, with its own established padel club. Two courts, coaching and classes.',
+      keywords: 'East Sussex padel retreat, Crafted at Powdermills, Crafted Padel Club, UK padel retreat, corporate padel offsite England',
+    },
+    es: {
+      title: 'East Sussex — CourtSide Padel',
+      description: 'Crafted at Powdermills, un hotel boutique de campo junto a un lago privado a 70 minutos de Londres, con su propio club de pádel. Dos pistas, entrenamiento y clases.',
+      keywords: 'retiro pádel East Sussex, Crafted at Powdermills, Crafted Padel Club, retiro pádel Reino Unido, offsite corporativo pádel Inglaterra',
+    },
+    fr: {
+      title: 'East Sussex — CourtSide Padel',
+      description: 'Crafted at Powdermills, un hôtel de campagne boutique au bord d\'un lac privé à 70 minutes de Londres, avec son propre club de padel. Deux courts, coaching et cours.',
+      keywords: 'retraite padel East Sussex, Crafted at Powdermills, Crafted Padel Club, retraite padel Royaume-Uni, séminaire padel Angleterre',
+    },
+  },
   dubai: {
     en: {
       title: 'Dubai — Coming Soon — CourtSide Padel',
@@ -166,6 +183,7 @@ const pagePaths: Record<PageId, string> = {
   upcomingRetreats: '/upcoming-retreats',
   bali: '/bali',
   dubai: '/dubai',
+  eastSussex: '/east-sussex',
 };
 
 export function getPageSeo(page: PageId, locale: Locale): PageSeo {
@@ -193,6 +211,7 @@ export function getSitemapEntries(siteUrl: string): Array<{ loc: string; lastmod
     { page: 'executiveRetreat', changefreq: 'monthly', priority: '0.7' },
     { page: 'upcomingRetreats', changefreq: 'weekly', priority: '0.8' },
     { page: 'bali', changefreq: 'monthly', priority: '0.7' },
+    { page: 'eastSussex', changefreq: 'monthly', priority: '0.7' },
     { page: 'dubai', changefreq: 'monthly', priority: '0.5' },
     { page: 'cookies', changefreq: 'yearly', priority: '0.3' },
   ];

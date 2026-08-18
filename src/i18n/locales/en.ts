@@ -7,7 +7,8 @@ const en = {
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubai",
-        mykonos: "Mykonos"
+        mykonos: "Mykonos",
+        eastSussex: "East Sussex"
       },
       experiencePage: {
         heroEyebrow: "The Experience",
@@ -550,6 +551,41 @@ const en = {
           ctaTitle: "Ready to Experience Uluwatu?",
           ctaText: "Dates and pricing are confirmed once we know your group and plans. Full itinerary available on request.",
           ctaBtn: "Enquire About Bali"
+        }
+      },
+      eastSussexPage: {
+        landing: {
+          heroAlt: "The main house at Crafted at Powdermills, seen across the private lake at golden hour",
+          heroTitle: "The English Countryside, 70 Minutes from London.",
+          heroSubtitle: "Crafted at Powdermills is a boutique country hotel on a private lake, with its own dedicated padel club.",
+          roomsEyebrow: "Where You Stay",
+          roomsTitle: "Rooms & Cottages",
+          roomsText: "Rooms range from Cosy doubles to full Suites, and three private cottages, Ash Cottage, Oak Cottage, and The Lake House, sleep between six and ten, each with their own kitchen and living space. The Lake House also has its own deck onto the lake and a private garden. Dog-friendly throughout.",
+          roomsImageAlts: [
+            "A Suite at Crafted at Powdermills, with sitting area and lounge seating",
+            "The Lake House cottage exterior, on the edge of the lake"
+          ],
+          padelEyebrow: "The Padel",
+          padelTitle: "An established club, not a court built for the occasion.",
+          padelText: "Crafted Padel Club already runs two courts, with coaching, classes, and a real community around it, not something added for a retreat. Guests and members can book games, and beginner and advanced classes run weekly. This is a place people already come to play.",
+          padelImageAlts: [
+            "The two padel courts at Crafted Padel Club, East Sussex",
+            "A coaching session on court at Crafted Padel Club"
+          ],
+          bookEyebrow: "How It Works",
+          bookTitle: "Book It Your Way",
+          bookText1: "Crafted at Powdermills already hosts large-scale corporate events, with spaces that have held over 200 people for company days and celebrations. Whether it's a small leadership offsite or a full company retreat, the venue and the padel club both scale to fit.",
+          bookText2: "Open retreats and private group buyouts can also be arranged here, built around your dates rather than fixed ones. Stay one night or stay a week. We build the programme, working directly with the team at Crafted.",
+          bookImageAlt: "A private dining and events room at Crafted at Powdermills, set for a long-table group dinner",
+          beyondEyebrow: "Beyond the Court",
+          beyondTitle: "There's a lot more than padel here.",
+          beyondText: "A wood-fired hot tub and sauna by the lake, cold plunge, wild swimming, paddleboards and kayaks on the lake, pottery and craft workshops in the Craft Barn, a full gym and studio programme, and a restaurant and pub both worth staying in for. Most of what makes this retreat memorable happens off the court.",
+          beyondImageAlt: "The lakeside sauna at Crafted at Powdermills, looking out over the water",
+          closingImageAlt: "The restaurant at Crafted at Powdermills",
+          ctaEyebrow: "Start the Conversation",
+          ctaTitle: "Ready to Experience East Sussex?",
+          ctaText: "Dates and pricing are confirmed once we know your group and plans.",
+          ctaBtn: "Enquire About East Sussex"
         }
       },
       dubaiPage: {

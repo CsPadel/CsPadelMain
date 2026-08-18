@@ -1,0 +1,274 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FooterIsland from '../FooterIsland';
+import EnquiryCta from '../EnquiryForm';
+import type { Locale } from '../../i18n/locales';
+import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { getTranslations } from '../../i18n/getTranslations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const seo = getPageSeo('eastSussex', locale);
+const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
+const alternateUrls = getAlternateUrls(siteURL.href, 'eastSussex');
+const c = getTranslations(locale).eastSussexPage.landing;
+
+const roomsImages = [
+  '/imagenes/cms/east-sussex-suite-interior.jpg',
+  '/imagenes/cms/east-sussex-lake-house-cottage.jpg',
+];
+---
+
+<Layout
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
+  lang={locale}
+  locale={locale}
+  canonical={alternateUrls[locale]}
+  alternateUrls={alternateUrls}
+>
+  <main class="w-full bg-white flex flex-col relative">
+
+    {/* ── Hero ── */}
+    <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
+      <img
+        src="/imagenes/cms/east-sussex-hero-house-lake.jpg"
+        alt={c.heroAlt}
+        class="absolute inset-0 w-full h-full object-cover"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="absolute inset-0 noise-section" aria-hidden="true" />
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(to bottom, rgba(1,25,44,0.15) 0%, rgba(1,25,44,0.45) 50%, rgba(1,25,44,0.98) 100%);"
+      />
+      <div class="relative z-10 max-w-7xl mx-auto w-full">
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl font-light text-white leading-none mb-6 max-w-4xl"
+          style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s both;"
+        >
+          {c.heroTitle}
+        </h1>
+        <p
+          class="text-white/55 text-lg md:text-xl font-light max-w-xl leading-relaxed"
+          style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s both;"
+        >
+          {c.heroSubtitle}
+        </p>
+      </div>
+    </section>
+
+    {/* ── Rooms & Cottages ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 md:mb-16 cs-fadein">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+              {c.roomsEyebrow}
+            </p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            {c.roomsTitle}
+          </h2>
+          <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed max-w-3xl">
+            {c.roomsText}
+          </p>
+        </div>
+
+        <div class="cs-fadein grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          {roomsImages.map((src, i) => (
+            <div class="relative rounded-card overflow-hidden aspect-[4/3]">
+              <img src={src} alt={c.roomsImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ── The Padel ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center mb-4 md:mb-5">
+          <div class="cs-fadein">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+              <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+                {c.padelEyebrow}
+              </p>
+            </div>
+            <h2
+              class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+              style="font-family: var(--font-display); font-style: italic;"
+            >
+              {c.padelTitle}
+            </h2>
+            <p class="text-brand-dark/55 text-lg font-light leading-relaxed">
+              {c.padelText}
+            </p>
+          </div>
+          <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/3]">
+            <img
+              src="/imagenes/cms/east-sussex-padel-courts.jpg"
+              alt={c.padelImageAlts[0]}
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="cs-fadein relative rounded-card overflow-hidden w-full" style="aspect-ratio: 21/9;">
+          <img
+            src="/imagenes/cms/east-sussex-padel-coaching.jpg"
+            alt={c.padelImageAlts[1]}
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* ── Book It Your Way ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div class="cs-fadein order-2 md:order-1 relative rounded-card overflow-hidden aspect-[4/3]">
+          <img
+            src="/imagenes/cms/east-sussex-events-room.jpg"
+            alt={c.bookImageAlt}
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+        <div class="cs-fadein order-1 md:order-2">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+              {c.bookEyebrow}
+            </p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            {c.bookTitle}
+          </h2>
+          <p class="text-brand-dark/55 text-lg font-light leading-relaxed mb-6">
+            {c.bookText1}
+          </p>
+          <p class="text-brand-dark/55 text-lg font-light leading-relaxed">
+            {c.bookText2}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* ── Beyond the Court ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-10 cs-fadein">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+              {c.beyondEyebrow}
+            </p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            {c.beyondTitle}
+          </h2>
+          <p class="text-brand-dark/55 text-lg font-light leading-relaxed max-w-2xl">
+            {c.beyondText}
+          </p>
+        </div>
+        <div class="cs-fadein relative rounded-card overflow-hidden w-full" style="aspect-ratio: 21/9;">
+          <img
+            src="/imagenes/cms/east-sussex-lakeside-sauna.jpg"
+            alt={c.beyondImageAlt}
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* ── Closing ── */}
+    <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
+      <img
+        src="/imagenes/cms/east-sussex-restaurant.jpg"
+        alt={c.closingImageAlt}
+        loading="lazy"
+        decoding="async"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(to bottom, rgba(1,25,44,0.55) 0%, rgba(1,25,44,0.7) 50%, rgba(1,25,44,0.95) 100%);"
+        aria-hidden="true"
+      />
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+            {c.ctaEyebrow}
+          </p>
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+        </div>
+        <h2
+          class="text-4xl md:text-5xl font-light text-white mb-5"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          {c.ctaTitle}
+        </h2>
+        <p class="text-white/50 text-base font-light leading-relaxed mb-10 max-w-sm mx-auto">
+          {c.ctaText}
+        </p>
+        <EnquiryCta client:visible locale={locale} label={c.ctaBtn} />
+      </div>
+    </section>
+
+    <FooterIsland client:visible locale={locale} />
+  </main>
+</Layout>
+
+<style is:global>
+  .cs-fadein {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .cs-fadein.cs-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cs-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '-40px' }
+  );
+
+  document.querySelectorAll('.cs-fadein').forEach((el) => observer.observe(el));
+</script>
