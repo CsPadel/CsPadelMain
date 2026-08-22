@@ -8,7 +8,7 @@ const en = {
         bali: "Bali",
         dubai: "Dubai",
         mykonos: "Mykonos",
-        eastSussex: "East Sussex"
+        eastSussex: "UK (East Sussex)"
       },
       experiencePage: {
         heroEyebrow: "The Experience",
