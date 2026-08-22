@@ -26,8 +26,9 @@ export const BALI_GALLERY: BaliGalleryItem[] = [
   { slug: '07-tropical-baseline', title: 'Tropical Baseline', location: 'The Estate, Uluwatu' },
   { slug: '08-full-swing', title: 'Full Swing', location: 'Courtside Padel' },
   { slug: '09-one-on-one-coaching', title: 'One-on-One Coaching', location: 'With Oli & Alex' },
-  // Source photo (154A5599) shows a single coach, so the caption is singular.
-  { slug: '10-meet-oli-alex', title: 'Meet Your Coach', location: 'Uluwatu, Bali' },
+  // 154A5599 is the one true landscape source: it needs a centred crop to keep
+  // both coaches in frame, not the content-aware crop the other shots use.
+  { slug: '10-meet-oli-alex', title: 'Meet Oli & Alex', location: 'Your Coaches' },
   { slug: '11-garden-path', title: 'The Garden Path', location: 'The Estate, Uluwatu' },
   { slug: '12-open-air-gym', title: 'Open-Air Gym', location: 'The Estate, Uluwatu' },
   { slug: '13-breakfast-on-the-cliff', title: 'Breakfast on the Cliff', location: 'Uluwatu, Bali' },

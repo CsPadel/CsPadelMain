@@ -194,30 +194,6 @@ export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
         @media (min-width: 768px) {
           .cs-strip-wrap { --cs-gutter: max(4rem, calc((100% - 80rem) / 2 + 4rem)); }
         }
-
-        /* Cards ease in and out of view at the two gutter lines instead of being
-           cut off, so the strip reads as continuous. The opaque band starts
-           exactly where the first card sits, leaving it untouched at rest. */
-        .cs-strip {
-          -webkit-mask-image: linear-gradient(
-            to right,
-            transparent 0,
-            rgba(0, 0, 0, 0.35) calc(var(--cs-gutter) * 0.45),
-            #000 var(--cs-gutter),
-            #000 calc(100% - var(--cs-gutter)),
-            rgba(0, 0, 0, 0.35) calc(100% - var(--cs-gutter) * 0.45),
-            transparent 100%
-          );
-          mask-image: linear-gradient(
-            to right,
-            transparent 0,
-            rgba(0, 0, 0, 0.35) calc(var(--cs-gutter) * 0.45),
-            #000 var(--cs-gutter),
-            #000 calc(100% - var(--cs-gutter)),
-            rgba(0, 0, 0, 0.35) calc(100% - var(--cs-gutter) * 0.45),
-            transparent 100%
-          );
-        }
       `}</style>
     </section>
   );
