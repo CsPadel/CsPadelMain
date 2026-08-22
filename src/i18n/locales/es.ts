@@ -550,7 +550,14 @@ const es = {
           closingImageAlt: "El chef privado y el equipo de cocina de la finca de Bali",
           ctaTitle: "¿Listo para Vivir Uluwatu?",
           ctaText: "Las fechas y los precios se confirman en cuanto conocemos tu grupo y tus planes. Itinerario completo disponible bajo petición.",
-          ctaBtn: "Consulta sobre Bali"
+          ctaBtn: "Consulta sobre Bali",
+          gallery: {
+            eyebrow: "La Galería",
+            title: "Últimas inspiraciones",
+            dragHint: "Clic y arrastra",
+            prev: "Imágenes anteriores",
+            next: "Imágenes siguientes"
+          }
         }
       },
       eastSussexPage: {

@@ -550,7 +550,14 @@ const en = {
           closingImageAlt: "The private chef and culinary team at the Bali estate",
           ctaTitle: "Ready to Experience Uluwatu?",
           ctaText: "Dates and pricing are confirmed once we know your group and plans. Full itinerary available on request.",
-          ctaBtn: "Enquire About Bali"
+          ctaBtn: "Enquire About Bali",
+          gallery: {
+            eyebrow: "The Gallery",
+            title: "Latest inspirations",
+            dragHint: "Click & drag",
+            prev: "Previous images",
+            next: "Next images"
+          }
         }
       },
       eastSussexPage: {

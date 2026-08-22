@@ -550,7 +550,14 @@ const fr = {
           closingImageAlt: "Le chef privé et l'équipe culinaire du domaine de Bali",
           ctaTitle: "Prêt à Découvrir Uluwatu ?",
           ctaText: "Les dates et les tarifs sont confirmés une fois que nous connaissons votre groupe et vos projets. Itinéraire complet disponible sur demande.",
-          ctaBtn: "Se Renseigner sur Bali"
+          ctaBtn: "Se Renseigner sur Bali",
+          gallery: {
+            eyebrow: "La Galerie",
+            title: "Dernières inspirations",
+            dragHint: "Cliquez & glissez",
+            prev: "Images précédentes",
+            next: "Images suivantes"
+          }
         }
       },
       eastSussexPage: {
