@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import '../i18n/config';
 
 const pillars = [
-  { image: '/imagenes/JOPS-1071.JPG',         alt: 'Elite padel coaching session at CourtSide Menorca' },
+  { image: '/imagenes/JOPS-1071.JPG',         alt: 'Elite padel coaching session at Courtside Menorca' },
   { image: '/imagenes/IMG_2914.JPG',           alt: 'Luxury stay at Barcelo Nura Menorca' },
   { image: '/imagenes/bambu.jpg',              alt: 'Fine dining and curated culinary journey' },
   { image: '/imagenes/Cala en porter.jpg',     alt: 'Private boat tour and bespoke experiences' },

@@ -34,7 +34,7 @@ export default function CookiePolicyView({ locale: localeProp }: CookiePolicyVie
           >
             <span className="block h-px w-8 bg-brand-gold/55" />
             <span className="text-[10px] uppercase tracking-[0.42em] text-brand-gold font-semibold">
-              CourtSide Padel
+              Courtside Padel
             </span>
             <span className="block h-px w-8 bg-brand-gold/55" />
           </motion.div>

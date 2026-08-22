@@ -62,12 +62,12 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
           }}
         />
 
-        {/* Centered editorial content — parallax fade on scroll */}
+        {/* Centered editorial content – parallax fade on scroll */}
         <motion.div
           style={{ opacity: contentOpacity, y: contentY }}
           className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-6"
         >
-          {/* Eyebrow — gold line + label + gold line */}
+          {/* Eyebrow – gold line + label + gold line */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,12 +76,12 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
           >
             <span className="block h-px w-8 bg-brand-gold/55" aria-hidden="true" />
             <span className="text-[10px] uppercase tracking-[0.42em] text-brand-gold font-semibold">
-              CourtSide Padel · Est. 2025
+              Courtside Padel · Est. 2025
             </span>
             <span className="block h-px w-8 bg-brand-gold/55" aria-hidden="true" />
           </motion.div>
 
-          {/* Headline — two-line stagger slide-up reveal from overflow-hidden */}
+          {/* Headline – two-line stagger slide-up reveal from overflow-hidden */}
           <div role="heading" aria-level={1}>
             <div className="overflow-hidden mb-1 md:mb-2">
               <motion.div

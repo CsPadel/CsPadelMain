@@ -86,7 +86,7 @@ export default function RetreatTypesSection({ locale }: Props) {
                 transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative overflow-hidden rounded-card flex flex-col justify-end focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
                 style={{ minHeight: '500px' }}
-                aria-label={`${name} — ${t('homePage.retreatTypes.viewDetails')}`}
+                aria-label={`${name} – ${t('homePage.retreatTypes.viewDetails')}`}
               >
                 {/* Background image */}
                 <img
@@ -97,7 +97,7 @@ export default function RetreatTypesSection({ locale }: Props) {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
                 />
 
-                {/* Gradient overlay — weighted towards the bottom so the copy
+                {/* Gradient overlay – weighted towards the bottom so the copy
                     stays legible whatever the photograph behind it */}
                 <div
                   className="absolute inset-0 transition-opacity duration-400"

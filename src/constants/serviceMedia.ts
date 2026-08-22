@@ -1,4 +1,4 @@
-/** Visual assets for the three home service sections — shared with Services page */
+/** Visual assets for the three home service sections – shared with Services page */
 export const HERO_ISLAND_VIDEOS = [
   '/bali.mp4',
   '/padelv.mp4',

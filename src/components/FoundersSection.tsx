@@ -60,7 +60,7 @@ export default function FoundersSection({ locale }: Readonly<Props>) {
               >
                 <img
                   src={founder.photo}
-                  alt={`${founder.name} — ${t('ourStoryPage.founderAlt')}`}
+                  alt={`${founder.name} – ${t('ourStoryPage.founderAlt')}`}
                   loading="lazy"
                   decoding="async"
                   className="absolute inset-0 w-full h-full object-cover object-top"

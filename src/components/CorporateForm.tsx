@@ -23,7 +23,7 @@ const cards: {
     image: '/imagenes/JOPS-1071.JPG',
     tag: 'Leadership Development',
     title: 'Sharpen minds. Elevate performance.',
-    desc: 'Strategic coaching sessions designed to forge decisive leaders under pressure — on court and in the boardroom.',
+    desc: 'Strategic coaching sessions designed to forge decisive leaders under pressure – on court and in the boardroom.',
   },
   {
     id: 'teamBuilding',
@@ -186,7 +186,7 @@ export default function CorporateForm({ locale: localeProp }: CorporateFormProps
               >
                 Dossier on its way.
               </p>
-              <p className="text-brand-dark/45 text-sm">Check your inbox — the executive file has been dispatched.</p>
+              <p className="text-brand-dark/45 text-sm">Check your inbox – the executive file has been dispatched.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">

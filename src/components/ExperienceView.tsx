@@ -169,11 +169,11 @@ export default function ExperienceView({ locale }: ExperienceViewProps) {
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
             className="relative min-h-[420px] md:min-h-[580px] overflow-hidden"
           >
-            {/* TODO: replace with a real off-court moment — boat day, vineyard
+            {/* TODO: replace with a real off-court moment – boat day, vineyard
                 tasting or cliffside sunset. */}
             <img
               src="/imagenes/EM-43.jpg"
-              alt="Off the court on a CourtSide retreat"
+              alt="Off the court on a Courtside retreat"
               loading="lazy"
               decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center"

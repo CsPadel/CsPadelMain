@@ -82,7 +82,7 @@ export default function RoomsSelector() {
           </p>
         </div>
 
-        {/* Room type selector — pill tabs */}
+        {/* Room type selector – pill tabs */}
         <div role="tablist" aria-label={t('menorcaPage.rooms.title')} className="flex justify-center gap-3 mb-10 flex-wrap">
           {rooms.map((r, idx) => (
             <button
@@ -103,7 +103,7 @@ export default function RoomsSelector() {
           ))}
         </div>
 
-        {/* Main card — all rooms rendered, toggle visibility to avoid remount */}
+        {/* Main card – all rooms rendered, toggle visibility to avoid remount */}
         <div className="relative">
           {rooms.map((r, rIdx) => (
             <div
@@ -117,13 +117,13 @@ export default function RoomsSelector() {
               }`}
             >
               <div className="flex flex-col lg:flex-row">
-                {/* Image panel — all images stacked, CSS crossfade */}
+                {/* Image panel – all images stacked, CSS crossfade */}
                 <div className="relative w-full lg:w-[55%] aspect-[4/3] lg:aspect-auto lg:min-h-[520px] overflow-hidden bg-brand-dark/10">
                   {r.images.map((img, iIdx) => (
                     <img
                       key={img}
                       src={img}
-                      alt={`${r.name} — CourtSide Menorca`}
+                      alt={`${r.name} – Courtside Menorca`}
                       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-200 will-change-[opacity] ${
                         selectedIdx === rIdx && activeImage === iIdx ? 'opacity-100' : 'opacity-0'
                       }`}
@@ -175,7 +175,7 @@ export default function RoomsSelector() {
                             ? 'w-5 h-1.5 bg-brand-gold'
                             : 'w-1.5 h-1.5 bg-white/50 hover:bg-white/80'
                         }`}
-                        aria-label={`${r.name} — photo ${iIdx + 1} of ${r.images.length}`}
+                        aria-label={`${r.name} – photo ${iIdx + 1} of ${r.images.length}`}
                       />
                     ))}
                   </div>
@@ -259,7 +259,7 @@ export default function RoomsSelector() {
                   <a
                     href="#book"
                     className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-brand-dark text-white font-semibold text-sm uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-colors duration-150 group"
-                    aria-label={`Book ${r.name} at CourtSide Menorca`}
+                    aria-label={`Book ${r.name} at Courtside Menorca`}
                   >
                     {t('menorcaPage.rooms.securePlace')}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-150" />

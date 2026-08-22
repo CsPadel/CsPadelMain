@@ -220,7 +220,7 @@ export function EnquiryFormModal({
     const lines = [
       `${t('enquiryForm.steps.contact.firstName')}: ${payload.firstName} ${payload.lastName}`,
       `${t('enquiryForm.steps.contact.email')}: ${payload.email}`,
-      `${t('enquiryForm.steps.contact.phone')}: ${payload.phone || '—'}`,
+      `${t('enquiryForm.steps.contact.phone')}: ${payload.phone || '–'}`,
       '',
       `${t('enquiryForm.steps.destination.question')} ${t(`enquiryForm.steps.destination.options.${payload.destination}`)}`,
       `${t('enquiryForm.steps.dates.question')} ${t(`enquiryForm.steps.dates.months.${payload.month}`)} ${payload.year}`,
@@ -228,7 +228,7 @@ export function EnquiryFormModal({
       `${t('enquiryForm.steps.priorities.question')} ${
         payload.priorities
           .map((p) => t(`enquiryForm.steps.priorities.options.${p}`))
-          .join(', ') || '—'
+          .join(', ') || '–'
       }`,
       '',
       payload.notes,

@@ -31,7 +31,7 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
   return (
     <section
       id="testimonials"
-      aria-label="Guest reviews of CourtSide Menorca padel retreat"
+      aria-label="Guest reviews of Courtside Menorca padel retreat"
       className="bg-white py-24 md:py-32 px-6 md:px-16"
     >
       <div className="max-w-7xl mx-auto">
@@ -75,7 +75,7 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
               <motion.img
                 key={`img-${active}`}
                 src={testimonial.image}
-                alt={`${testimonial.name} — CourtSide Menorca`}
+                alt={`${testimonial.name} – Courtside Menorca`}
                 initial={{ opacity: 0, scale: 1.04 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -90,7 +90,7 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 to-transparent" />
           </div>
 
-          {/* Review card — overlaps image on desktop */}
+          {/* Review card – overlaps image on desktop */}
           <div className="w-full md:w-[50%] md:-ml-16 z-10 md:mb-10">
             <AnimatePresence mode="wait">
               <motion.div

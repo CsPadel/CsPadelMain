@@ -38,7 +38,7 @@ export default function DestinationsPreview({ locale }: Props) {
           </h2>
         </motion.div>
 
-        {/* Menorca — single spotlight card */}
+        {/* Menorca – single spotlight card */}
         <motion.a
           href={MENORCA_URL}
           initial={{ opacity: 0, y: 32 }}

@@ -36,7 +36,7 @@ const en = {
         quote: "We've always been passionate about padel, travel, and the experience of discovering new places and meeting new people. We realised how easily the game creates connection, no matter your level or background. Through shared experiences on and off the court, we want to bring people together in beautiful locations and create moments that go beyond just playing padel.",
         quoteAuthor: "Alexi & Oliver Watelet, Co-Founders",
         ctaTitle: "Ready to experience it?",
-        ctaText: "Every CourtSide retreat starts with a conversation."
+        ctaText: "Every Courtside retreat starts with a conversation."
       },
       hero: {
         title: "COURTSIDE",
@@ -94,7 +94,7 @@ const en = {
             {
               tag: "Elite Coaching",
               title: "Coaching and matchplay tailored to all levels.",
-              desc: "Led by former professionals at one of Menorca's premier padel venues — home club of one of the world's top players."
+              desc: "Led by former professionals at one of Menorca's premier padel venues – home club of one of the world's top players."
             },
             {
               tag: "Luxury Stay",
@@ -113,7 +113,7 @@ const en = {
             }
           ]
         },
-        // agenda: each activity has an `image` field — a standalone path string (e.g. "/imagenes/filename.jpg")
+        // agenda: each activity has an `image` field – a standalone path string (e.g. "/imagenes/filename.jpg")
         // Update any image by changing only its path here; no component code changes needed.
         agenda: [
           {
@@ -154,7 +154,7 @@ const en = {
             activities: [
               {
                 time: '08:30 – 09:15',
-                title: 'Breakfast — Barceló Nura',
+                title: 'Breakfast – Barceló Nura',
                 desc: 'Group breakfast with reserved seating at the hotel. Fuel up before a full morning on court.',
                 image: '/imagenes/bambu.jpg',
               },
@@ -166,13 +166,13 @@ const en = {
               },
               {
                 time: '13:45 – 17:30',
-                title: 'Lunch & Boat Tour — Sa Punta',
+                title: 'Lunch & Boat Tour – Sa Punta',
                 desc: 'Lunch at Sa Punta restaurant followed by a charter boat tour from Es Castell.',
                 image: '/imagenes/Cala en porter.jpg',
               },
               {
                 time: '20:00',
-                title: 'Dinner — Hotel / Free Evening',
+                title: 'Dinner – Hotel / Free Evening',
                 desc: 'Hotel meal included. Concierge available to assist with restaurant recommendations.',
                 image: '/imagenes/2313 copy.jpg',
               },
@@ -185,7 +185,7 @@ const en = {
             activities: [
               {
                 time: '08:30 – 09:15',
-                title: 'Breakfast — Barceló Nura',
+                title: 'Breakfast – Barceló Nura',
                 desc: 'Group breakfast with reserved seating. Skill-grouped sessions briefed at the table.',
                 image: '/imagenes/bambu.jpg',
               },
@@ -197,13 +197,13 @@ const en = {
               },
               {
                 time: '13:30 – 16:30',
-                title: 'Vineyard Tour & Lunch — Binifadet',
+                title: 'Vineyard Tour & Lunch – Binifadet',
                 desc: 'Tour and lunch at Binifadet winery. Wine & cheese tasting included.',
                 image: '/imagenes/binifadet.jpeg',
               },
               {
                 time: '20:00',
-                title: 'Dinner — La Calita',
+                title: 'Dinner – La Calita',
                 desc: 'Dinner at La Calita restaurant. Hotel meal included.',
                 image: '/imagenes/2313 copy.jpg',
               },
@@ -216,13 +216,13 @@ const en = {
             activities: [
               {
                 time: '07:30 – 08:15',
-                title: 'Early Breakfast — Barceló Nura',
+                title: 'Early Breakfast – Barceló Nura',
                 desc: 'Tournament day starts early. Hydration packs ready and group seating reserved.',
                 image: '/imagenes/bambu.jpg',
               },
               {
                 time: '09:00 – 13:00',
-                title: 'Padel Tournament — Padelin',
+                title: 'Padel Tournament – Padelin',
                 desc: 'Mixed doubles round-robin tournament at Padelin. Trophy and prizes confirmed with venue.',
                 image: '/imagenes/JOPS-1071.JPG',
               },
@@ -234,7 +234,7 @@ const en = {
               },
               {
                 time: '17:00 – 19:00',
-                title: "Sunset & Tapas — Cova d'en Xoroi",
+                title: "Sunset & Tapas – Cova d'en Xoroi",
                 desc: "Live music, tapas and cocktails at the iconic Cova d'en Xoroi. Sunset at ~19:30.",
                 image: '/imagenes/cap roig.jpg',
               },
@@ -247,13 +247,13 @@ const en = {
             activities: [
               {
                 time: '08:30 – 09:15',
-                title: 'Final Breakfast — Barceló Nura',
+                title: 'Final Breakfast – Barceló Nura',
                 desc: 'Last group breakfast together. Luggage out by 11:00.',
                 image: '/imagenes/bambu.jpg',
               },
               {
                 time: '10:30 – 13:00',
-                title: 'Optional Padel Session — Padelin',
+                title: 'Optional Padel Session – Padelin',
                 desc: 'Casual open-court session for those whose flights allow. Entirely optional.',
                 image: '/imagenes/EM-81.jpg',
               },
@@ -267,15 +267,15 @@ const en = {
           }
         ],
         faq: [
-          { q: "Do I need padel experience?", a: "No. Our retreats welcome all levels — coaching is tailored from beginners building foundations to advanced players refining strategy." },
-          { q: "Is everything included?", a: "Yes. Everything in the itinerary is included — accommodation, all meals, coaching, matchplay, local transport, and activities. Guests are welcome to skip any activity. Anything booked outside the itinerary is at the guest's own cost." },
-          { q: "Are flights and airport transfers included?", a: "Transfers to and from Mahón Airport are included. Flights are not — our concierge can advise on routes or arrange a private charter on request." },
+          { q: "Do I need padel experience?", a: "No. Our retreats welcome all levels – coaching is tailored from beginners building foundations to advanced players refining strategy." },
+          { q: "Is everything included?", a: "Yes. Everything in the itinerary is included – accommodation, all meals, coaching, matchplay, local transport, and activities. Guests are welcome to skip any activity. Anything booked outside the itinerary is at the guest's own cost." },
+          { q: "Are flights and airport transfers included?", a: "Transfers to and from Mahón Airport are included. Flights are not – our concierge can advise on routes or arrange a private charter on request." },
           { q: "Can a non-playing partner come along?", a: "Yes. Non-playing partners pay the same retreat price, and their programme can be customised around their preferences." },
           { q: "What about dietary requirements?", a: "Our on-site private chef builds bespoke menus around a wellness and dietary questionnaire sent before arrival." },
           { q: "How many guests per retreat?", a: "Each open retreat is capped to preserve exclusivity. Private retreats run for a minimum of 6 guests." },
-          { q: "Can I extend my stay before or after the retreat?", a: "Yes — we can arrange additional nights at Barceló Nura on request." },
+          { q: "Can I extend my stay before or after the retreat?", a: "Yes – we can arrange additional nights at Barceló Nura on request." },
           { q: "Can I book a private retreat on different dates?", a: "Yes. We run fully bespoke private retreats on any week of the year, with a minimum of 6 guests and 2 months' lead time." },
-          { q: "When is the next Menorca retreat?", a: "30 September – 4 October 2026 (4 nights, 5 days). Places are limited — early booking is advised." },
+          { q: "When is the next Menorca retreat?", a: "30 September – 4 October 2026 (4 nights, 5 days). Places are limited – early booking is advised." },
           { q: "What's the deposit and when is the balance due?", a: "A 40% deposit secures your place. The remaining balance is due 6 weeks before the retreat start date." },
           { q: "What's the cancellation policy?", a: "Cancellations made more than 10 weeks before the retreat start date are eligible for a full deposit refund. Within 10 weeks of the start date, the 40% deposit becomes non-refundable." }
         ],
@@ -433,8 +433,8 @@ const en = {
         contactLabel: "Get in Touch",
         whatsappConcierge: "WhatsApp Concierge",
         messageTeam: "Message the Team",
-        whatsappMessage: "Hello, I'd like to enquire about a CourtSide Padel retreat.",
-        rights: "© 2026 CourtSide Padel. All rights reserved.",
+        whatsappMessage: "Hello, I'd like to enquire about a Courtside Padel retreat.",
+        rights: "© 2026 Courtside Padel. All rights reserved.",
         privacy: "Privacy Policy",
         terms: "Terms of Service",
         cookies: "Cookie Policy"
@@ -448,12 +448,12 @@ const en = {
       },
       whatsappConcierge: {
         label: "Chat with Us",
-        ariaLabel: "Chat with the CourtSide team on WhatsApp",
-        prefillMessage: "Hello, I'd like to speak with the CourtSide team."
+        ariaLabel: "Chat with the Courtside team on WhatsApp",
+        prefillMessage: "Hello, I'd like to speak with the Courtside team."
       },
       cookiePolicy: {
         title: "Cookie Policy",
-        intro: "This policy explains how CourtSide Padel uses cookies and similar technologies on courtsidepadel.com.",
+        intro: "This policy explains how Courtside Padel uses cookies and similar technologies on courtsidepadel.com.",
         sections: [
           {
             title: "What are cookies?",
@@ -469,7 +469,7 @@ const en = {
           },
           {
             title: "Managing your preferences",
-            body: "You can accept or reject non-essential cookies via the banner shown on your first visit. To change your choice later, clear your browser data for this site or contact us at hello@courtsidepadel.com."
+            body: "You can accept or reject non-essential cookies via the banner shown on your first visit. To change your choice later, clear your browser data for this site or contact us at awatelet@cspadel.com."
           },
           {
             title: "Updates",
@@ -480,7 +480,7 @@ const en = {
       bespokeRetreats: {
         eyebrow: "Bespoke Private Retreats",
         title: "Have Your Own Dates in Mind?",
-        description: "Already have your group and your dates? Tell us your plans and we'll build the retreat around them — any week of the year, in Menorca.",
+        description: "Already have your group and your dates? Tell us your plans and we'll build the retreat around them – any week of the year, in Menorca.",
         features: [
           "Minimum 6 guests",
           "Any week of the year",
@@ -511,7 +511,7 @@ const en = {
         pillars: [
           { tag: "Elite Coaching", title: "Sunrise sessions. Golden hour matchplay.", desc: "Coach-led training and competitive matchplay on private padel courts, tailored to every level from foundation to elite." },
           { tag: "Luxury Villas", title: "Private infinity pools. Open-air pavilions.", desc: "Hand-selected boutique villas above the Uluwatu cliffs with personal staff, private pools and total seclusion in the tropics." },
-          { tag: "Bali Wellness", title: "Holistic recovery and performance.", desc: "Balinese spa treatments, sunrise yoga, guided meditation and cold plunge pools — the full performance recovery." },
+          { tag: "Bali Wellness", title: "Holistic recovery and performance.", desc: "Balinese spa treatments, sunrise yoga, guided meditation and cold plunge pools – the full performance recovery." },
           { tag: "Cultural Soul", title: "The real Bali, curated for you.", desc: "Sunrise temple treks, traditional ceremonies, rice terrace walks and private cooking classes with local chefs." }
         ],
         datesTitle: "Available Retreats",
@@ -524,7 +524,7 @@ const en = {
         ctaBtn: "Reserve Your Place",
         ctaSecondaryBtn: "Speak with Concierge",
         landing: {
-          heroAlt: "Infinity pool at dusk — CourtSide Bali estate",
+          heroAlt: "Infinity pool at dusk – Courtside Bali estate",
           heroTitle: "An Escape to Bali.",
           heroSubtitle: "A private cliff-top estate on the Bukit Peninsula, home to the only WPT-recognised padel courts on the island. A Mandarin Oriental Home.",
           stayEyebrow: "Where You Stay",
@@ -538,7 +538,7 @@ const en = {
           ],
           studiosTitle: "The Studios",
           studiosText: "Modern, comfortable rooms just steps from the padel courts, ideal for solo travellers, couples, or anyone who'd rather spend the week out exploring Bali than in. Air-conditioned, with ensuite bathrooms and a kitchenette. On-site extras like spa and cooking classes aren't included here, but can be arranged through local partners on request.",
-          studiosImageAlt: "The Studios — interior room",
+          studiosImageAlt: "The Studios – interior room",
           courtsEyebrow: "The Courts",
           courtsTitle: "The only WPT-recognised courts in Bali.",
           courtsText: "Two courts, custom-built by Padel Galis, the official court provider of the World Padel Tour. Set within the estate, overlooking the Indian Ocean. It's the only facility of its kind on the island.",
@@ -609,7 +609,7 @@ const en = {
         },
         pillars: [
           { tag: "Premium Courts", title: "Floodlit courts with skyline views.", desc: "World-class padel courts against the Dubai skyline. Morning and evening sessions under perfect desert conditions." },
-          { tag: "Penthouse Suites", title: "Icons of urban luxury.", desc: "The finest five-star properties in Dubai — from Downtown to Palm Jumeirah — curated for the most discerning guests." },
+          { tag: "Penthouse Suites", title: "Icons of urban luxury.", desc: "The finest five-star properties in Dubai – from Downtown to Palm Jumeirah – curated for the most discerning guests." },
           { tag: "Elite Network", title: "The highest calibre of company.", desc: "Curated guest lists. Board-level conversations. Off-court experiences designed for the global elite." },
           { tag: "Desert Experiences", title: "Beyond the court.", desc: "Private desert safaris, helicopter city tours, Michelin-starred dining and exclusive yacht experiences in the Arabian Gulf." }
         ],
@@ -665,7 +665,7 @@ const en = {
       upcomingRetreatsPage: {
         eyebrow: "Next 12–18 Months",
         heroTitle: "Upcoming Retreats.",
-        heroSubtitle: "Elite padel, exceptional company, and everything around the game curated to match — across every CourtSide destination.",
+        heroSubtitle: "Elite padel, exceptional company, and everything around the game curated to match – across every Courtside destination.",
         bespokeNote: "Bespoke dates available upon request.",
         destinations: {
           menorca: {
@@ -737,7 +737,7 @@ const en = {
         }
       },
       ourStoryPage: {
-        heroAlt: "CourtSide Padel — Our Story",
+        heroAlt: "Courtside Padel – Our Story",
         heroEyebrow: "The Founders",
         heroTitle: "Our Story.",
         heroSubtitle: "Twin brothers. Different paths. Padel changed everything.",
@@ -745,23 +745,23 @@ const en = {
         beganTitle: "Born from a<br/>shared obsession.",
         beganParagraphs: [
           "We're twin brothers, born in New York and raised in London. As kids, we did everything together, training, competing, travelling, always chasing the next opportunity sport could give us. At 15, that changed. Alexi left for the south of France to chase professional tennis. Oliver stayed in London, drawn to football instead. Racket sports had always been part of who we were, but for a few years, life pulled us in different directions.",
-          "Travelling in Menorca in 2019, we picked up padel for the first time and were hooked immediately, not just by the game, but everything around it: walking off court for a drink, meeting new people, jumping in the pool after a match. Competitive, but social. That combination is what CourtSide is built on.",
+          "Travelling in Menorca in 2019, we picked up padel for the first time and were hooked immediately, not just by the game, but everything around it: walking off court for a drink, meeting new people, jumping in the pool after a match. Competitive, but social. That combination is what Courtside is built on.",
           "The idea came together gradually. We'd both grown up travelling, exposed early to new places and cultures, a love that never left us. As padel grew into one of the fastest-growing sports in the world, it clicked: pair a beautiful destination with world-class padel, bring people together, and build something around the feeling we first found in Menorca.",
-          "Menorca wasn't a random choice. It's the island where we fell in love with the sport, and one we've returned to for eight years running. It was the obvious place to build the first CourtSide retreat."
+          "Menorca wasn't a random choice. It's the island where we fell in love with the sport, and one we've returned to for eight years running. It was the obvious place to build the first Courtside retreat."
         ],
         foundersEyebrow: "The People Behind It",
         foundersTitle: "Meet the founders.",
         founderRole: "Co-Founder",
-        founderAlt: "Co-Founder, CourtSide Padel",
+        founderAlt: "Co-Founder, Courtside Padel",
         foundersQuote: "Alexi grew up chasing tennis. Oliver grew up chasing football. Padel gave us the exact same obsession, just for a different game.",
         believeEyebrow: "What We Believe",
         believeQuote: "Padel brings us on court.<br/>The experience makes it unforgettable.",
         believeText: "The best retreats don't feel like events. They feel like the week you keep talking about three years later.",
         ctaTitle: "Ready to build your own story?",
-        ctaText: "Every CourtSide retreat starts with a conversation."
+        ctaText: "Every Courtside retreat starts with a conversation."
       },
       executivePage: {
-        heroAlt: "Small group mid-rally — Corporate & Executive padel retreat",
+        heroAlt: "Small group mid-rally – Corporate & Executive padel retreat",
         heroTitle: "Corporate & Executive Retreats.",
         heroSubtitle: "From leadership offsites and team building to rewards trips and board retreats, we build closed, bespoke padel retreats for companies of every kind.",
         quote: "Padel is social by nature. It's competitive, but never too serious, played in doubles on a small court that keeps everyone close enough to talk between points. Somehow it gets people communicating and working as a team without really trying.",
@@ -794,7 +794,7 @@ const en = {
       testimonials: {
         label: "What Guests Have To Say",
         title: "Remembered long after.",
-        subtitle: "Guests arrive as players. They leave part of the CourtSide community.",
+        subtitle: "Guests arrive as players. They leave part of the Courtside community.",
         // Real guest testimonials with real photos, dated 2026 (after "Est. 2025").
         items: [
           {
@@ -836,7 +836,7 @@ const en = {
         next: "Continue",
         submit: "Send enquiry",
         sending: "Sending…",
-        emailSubject: "CourtSide retreat enquiry",
+        emailSubject: "Courtside retreat enquiry",
         steps: {
           destination: {
             question: "Where would you like to play?",
@@ -878,7 +878,7 @@ const en = {
           },
           priorities: {
             question: "What matters most to you?",
-            help: "Choose as many as you like — it helps us shape the week around your group.",
+            help: "Choose as many as you like – it helps us shape the week around your group.",
             options: {
               coaching: "Coaching and improvement",
               matchplay: "Competitive matchplay",
@@ -900,7 +900,7 @@ const en = {
             email: "Email",
             phone: "Phone",
             phoneOptional: "Optional",
-            consent: "I agree to CourtSide Padel using these details to respond to my enquiry."
+            consent: "I agree to Courtside Padel using these details to respond to my enquiry."
           }
         },
         errors: {
@@ -910,7 +910,7 @@ const en = {
           name: "Please enter your first and last name.",
           email: "Please enter a valid email address.",
           consent: "Please accept the use of your details so we can reply.",
-          submit: "Something went wrong sending your enquiry. Please email executive@courtsidepadel.com and we'll pick it up straight away."
+          submit: "Something went wrong sending your enquiry. Please email awatelet@cspadel.com and we'll pick it up straight away."
         },
         success: {
           title: "Thank you.",

@@ -10,5 +10,8 @@
  */
 export const ENQUIRY_ENDPOINT: string = import.meta.env.PUBLIC_ENQUIRY_ENDPOINT ?? '';
 
+/** Mailbox that receives retreat and corporate enquiries. */
+export const ENQUIRY_EMAIL = 'awatelet@cspadel.com';
+
 /** Mailbox used by the fallback while no endpoint is configured. */
-export const ENQUIRY_FALLBACK_EMAIL = 'executive@courtsidepadel.com';
+export const ENQUIRY_FALLBACK_EMAIL = ENQUIRY_EMAIL;

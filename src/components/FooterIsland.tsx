@@ -56,7 +56,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
           >
             <img
               src="/logogold.webp"
-              alt="CourtSide Padel"
+              alt="Courtside Padel"
               className="h-9 object-contain object-left mb-8"
               loading="lazy"
             />
@@ -72,7 +72,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               {/* Instagram */}
               <a
                 href="#"
-                aria-label="CourtSide Padel on Instagram"
+                aria-label="Courtside Padel on Instagram"
                 className="w-9 h-9 rounded-full border border-white/12 flex items-center justify-center text-white/35 hover:border-brand-gold/55 hover:text-brand-gold transition-colors duration-200"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -84,7 +84,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               {/* LinkedIn */}
               <a
                 href="#"
-                aria-label="CourtSide Padel on LinkedIn"
+                aria-label="Courtside Padel on LinkedIn"
                 className="w-9 h-9 rounded-full border border-white/12 flex items-center justify-center text-white/35 hover:border-brand-gold/55 hover:text-brand-gold transition-colors duration-200"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

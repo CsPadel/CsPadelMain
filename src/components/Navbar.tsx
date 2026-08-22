@@ -36,11 +36,11 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
         // Always show at very top
         setIsHidden(false);
       } else if (currentY > lastScrollY + 4) {
-        // Scrolling down — hide navbar
+        // Scrolling down – hide navbar
         setIsHidden(true);
         setIsDestinationsOpen(false);
       } else if (currentY < lastScrollY - 4) {
-        // Scrolling up — reveal navbar
+        // Scrolling up – reveal navbar
         setIsHidden(false);
       }
 
@@ -86,7 +86,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
           <a href={homeHref} className="flex-shrink-0 z-50">
             <img
               src={logoSrc}
-              alt="CourtSide Padel"
+              alt="Courtside Padel"
               className="h-16 md:h-[4.5rem] object-contain transition-opacity duration-300"
             />
           </a>

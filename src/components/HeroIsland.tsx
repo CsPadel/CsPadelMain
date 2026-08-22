@@ -175,7 +175,7 @@ export default function HeroIsland({ locale: localeProp }: HeroIslandProps) {
                 </button>
               </div>
 
-              {/* Panel Body — scrollable */}
+              {/* Panel Body – scrollable */}
               <div className="flex-1 overflow-y-auto">
 
                 {/* ── Step 1: Choose destination ── */}
@@ -290,7 +290,7 @@ export default function HeroIsland({ locale: localeProp }: HeroIslandProps) {
                       </div>
                     </div>
 
-                    {/* CTA buttons — appear when date selected */}
+                    {/* CTA buttons – appear when date selected */}
                     <AnimatePresence>
                       {selectedDate && (
                         <motion.div
@@ -402,7 +402,7 @@ export default function HeroIsland({ locale: localeProp }: HeroIslandProps) {
               {/* Panel Footer */}
               <div className="flex-shrink-0 px-8 py-4 border-t border-white/8">
                 <p className="text-[8px] uppercase tracking-[0.28em] text-white/22 text-center">
-                  CourtSide Padel · Confidential &amp; Secure
+                  Courtside Padel · Confidential &amp; Secure
                 </p>
               </div>
             </motion.div>

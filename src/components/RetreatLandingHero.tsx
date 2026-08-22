@@ -68,12 +68,12 @@ export default function RetreatLandingHero({ destination, bgVideoSrc, bgImageSrc
         >
           <span className="block h-px w-8 bg-brand-gold/55" aria-hidden="true" />
           <span className="text-[10px] uppercase tracking-[0.42em] text-brand-gold font-semibold">
-            CourtSide Padel
+            Courtside Padel
           </span>
           <span className="block h-px w-8 bg-brand-gold/55" aria-hidden="true" />
         </motion.div>
 
-        {/* Title — slide-up reveal */}
+        {/* Title – slide-up reveal */}
         <div className="overflow-hidden mb-8">
           <motion.h1
             initial={{ y: '110%' }}
