@@ -8,13 +8,7 @@
  * Source photography lives in `imgparaslide/` and `new images/`, resized to a
  * 1000x1333 (3:4) card before landing in `public/imagenes/bali-gallery/`.
  */
-export interface BaliGalleryItem {
-  /** File under /imagenes/bali-gallery/, without extension. */
-  slug: string;
-  /** Not rendered; forms the alt text together with `location`. */
-  title: string;
-  location: string;
-}
+import type { PhotoStripItem } from '../components/PhotoStrip';
 
 /**
  * Array order is the display order. Padel, estate, wellness and food alternate
@@ -24,7 +18,7 @@ export interface BaliGalleryItem {
  * The number in each slug is the source batch it arrived in, not its position
  * here, so the strip can be reordered without renaming any files.
  */
-export const BALI_GALLERY: BaliGalleryItem[] = [
+export const BALI_GALLERY: PhotoStripItem[] = [
   { slug: '01-cliff-edge', title: 'The Cliff Edge', location: 'Uluwatu, Bali' },
   { slug: '05-centre-court', title: 'Centre Court', location: 'Uluwatu, Bali' },
   // 2957 puts the four-poster on the right of the frame, so this one is cropped

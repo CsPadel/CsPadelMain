@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import FooterIsland from '../FooterIsland';
 import EnquiryCta from '../EnquiryForm';
+import PhotoStrip from '../PhotoStrip';
+import { EAST_SUSSEX_GALLERY } from '../../constants/eastSussexGallery';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
 import { getTranslations } from '../../i18n/getTranslations';
@@ -204,6 +206,15 @@ const roomsImages = [
         </div>
       </div>
     </section>
+
+    {/* ── Gallery ── */}
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={EAST_SUSSEX_GALLERY}
+      imageDir="east-sussex-gallery"
+      tPrefix="eastSussexPage.landing.gallery"
+    />
 
     {/* ── Closing ── */}
     <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">

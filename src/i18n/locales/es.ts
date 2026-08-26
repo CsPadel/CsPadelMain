@@ -592,7 +592,14 @@ const es = {
           ctaEyebrow: "Empecemos a Hablar",
           ctaTitle: "¿Listo para Vivir East Sussex?",
           ctaText: "Las fechas y los precios se confirman en cuanto conocemos tu grupo y tus planes.",
-          ctaBtn: "Consulta sobre East Sussex"
+          ctaBtn: "Consulta sobre East Sussex",
+          gallery: {
+            eyebrow: "La Galería",
+            title: "Un Sabor de East Sussex",
+            dragHint: "Clic y arrastra",
+            prev: "Imágenes anteriores",
+            next: "Imágenes siguientes"
+          }
         }
       },
       dubaiPage: {

@@ -4,16 +4,31 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
-import { BALI_GALLERY } from '../constants/baliGallery';
 
-interface BaliGalleryProps {
+export interface PhotoStripItem {
+  /** File under `imageDir`, without extension. */
+  slug: string;
+  /** Not rendered; forms the alt text together with `location`. */
+  title: string;
+  location: string;
+}
+
+interface PhotoStripProps {
   locale?: Locale;
+  items: readonly PhotoStripItem[];
+  /** Folder under /imagenes/ holding the cards, e.g. "bali-gallery". */
+  imageDir: string;
+  /**
+   * Translation key holding the section chrome — expects `.eyebrow`, `.title`,
+   * `.dragHint`, `.prev` and `.next` beneath it.
+   */
+  tPrefix: string;
 }
 
 /** How far the arrows move the strip: one card plus its gap. */
 const SCROLL_STEP = 320;
 
-export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
+export default function PhotoStrip({ locale, items, imageDir, tPrefix }: Readonly<PhotoStripProps>) {
   const { t } = usePageTranslation(locale);
   const scroller = useRef<HTMLDivElement>(null);
   const [atStart, setAtStart] = useState(true);
@@ -84,7 +99,7 @@ export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
         <div className="flex items-center gap-4 mb-6">
           <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-            {t('baliPage.landing.gallery.eyebrow')}
+            {t(`${tPrefix}.eyebrow`)}
           </p>
         </div>
 
@@ -93,7 +108,7 @@ export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
             className="text-4xl md:text-5xl font-light text-brand-dark leading-none flex-shrink-0"
             style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
           >
-            {t('baliPage.landing.gallery.title')}
+            {t(`${tPrefix}.title`)}
           </h2>
 
           <span className="hidden md:block flex-1 h-px bg-brand-dark/12 mb-3" aria-hidden="true" />
@@ -103,7 +118,7 @@ export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
               type="button"
               onClick={() => scrollBy(-1)}
               disabled={atStart}
-              aria-label={t('baliPage.landing.gallery.prev')}
+              aria-label={t(`${tPrefix}.prev`)}
               className="w-11 h-11 rounded-full border border-brand-dark/15 flex items-center justify-center text-brand-dark/50 transition-all duration-200 enabled:hover:border-brand-gold enabled:hover:text-brand-gold disabled:opacity-25 disabled:cursor-not-allowed cursor-pointer"
             >
               <ArrowLeft size={16} />
@@ -112,7 +127,7 @@ export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
               type="button"
               onClick={() => scrollBy(1)}
               disabled={atEnd}
-              aria-label={t('baliPage.landing.gallery.next')}
+              aria-label={t(`${tPrefix}.next`)}
               className="w-11 h-11 rounded-full border border-brand-dark/15 flex items-center justify-center text-brand-dark/50 transition-all duration-200 enabled:hover:border-brand-gold enabled:hover:text-brand-gold disabled:opacity-25 disabled:cursor-not-allowed cursor-pointer"
             >
               <ArrowRight size={16} />
@@ -132,7 +147,7 @@ export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
           className="cs-strip flex gap-4 md:gap-5 overflow-x-auto pb-2 pl-8 pr-8 scroll-pl-8 md:pl-[var(--cs-gutter)] md:pr-[var(--cs-gutter)] md:scroll-pl-[var(--cs-gutter)] cursor-grab active:cursor-grabbing select-none"
           style={{ scrollSnapType: 'x mandatory' }}
         >
-          {BALI_GALLERY.map((item, i) => (
+          {items.map((item, i) => (
             <motion.div
               key={item.slug}
               initial={{ opacity: 0, y: 26 }}
@@ -143,7 +158,7 @@ export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
               style={{ scrollSnapAlign: 'start' }}
             >
               <img
-                src={`/imagenes/bali-gallery/${item.slug}.jpg`}
+                src={`/imagenes/${imageDir}/${item.slug}.jpg`}
                 alt={`${item.title} – ${item.location}`}
                 loading={i < 3 ? 'eager' : 'lazy'}
                 decoding="async"
@@ -166,7 +181,7 @@ export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
           }`}
         >
           <span className="px-3 py-1.5 rounded-full bg-white/85 backdrop-blur-sm text-[9px] uppercase tracking-[0.28em] text-brand-dark/55 shadow-sm">
-            {t('baliPage.landing.gallery.dragHint')}
+            {t(`${tPrefix}.dragHint`)}
           </span>
         </div>
       </div>

@@ -592,7 +592,14 @@ const en = {
           ctaEyebrow: "Start the Conversation",
           ctaTitle: "Ready to Experience East Sussex?",
           ctaText: "Dates and pricing are confirmed once we know your group and plans.",
-          ctaBtn: "Enquire About East Sussex"
+          ctaBtn: "Enquire About East Sussex",
+          gallery: {
+            eyebrow: "The Gallery",
+            title: "A Taste of East Sussex",
+            dragHint: "Click & drag",
+            prev: "Previous images",
+            next: "Next images"
+          }
         }
       },
       dubaiPage: {
