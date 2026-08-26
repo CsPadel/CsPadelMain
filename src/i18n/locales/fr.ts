@@ -553,7 +553,7 @@ const fr = {
           ctaBtn: "Se Renseigner sur Bali",
           gallery: {
             eyebrow: "La Galerie",
-            title: "Dernières inspirations",
+            title: "Un Avant-Goût de Bali",
             dragHint: "Cliquez & glissez",
             prev: "Images précédentes",
             next: "Images suivantes"

@@ -133,39 +133,26 @@ export default function BaliGallery({ locale }: Readonly<BaliGalleryProps>) {
           style={{ scrollSnapType: 'x mandatory' }}
         >
           {BALI_GALLERY.map((item, i) => (
-            <motion.figure
+            <motion.div
               key={item.slug}
               initial={{ opacity: 0, y: 26 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: Math.min(i, 4) * 0.08 }}
-              className="flex-shrink-0 w-[240px] md:w-[300px]"
+              className="flex-shrink-0 w-[240px] md:w-[300px] relative rounded-card overflow-hidden aspect-[3/4] bg-brand-ivory"
               style={{ scrollSnapAlign: 'start' }}
             >
-              <div className="relative rounded-card overflow-hidden aspect-[3/4] bg-brand-ivory">
-                <img
-                  src={`/imagenes/bali-gallery/${item.slug}.jpg`}
-                  alt={`${item.title} – ${item.location}`}
-                  loading={i < 3 ? 'eager' : 'lazy'}
-                  decoding="async"
-                  width={1000}
-                  height={1333}
-                  draggable={false}
-                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                />
-              </div>
-              <figcaption className="pt-5">
-                <p
-                  className="text-lg md:text-xl font-light text-brand-dark leading-snug"
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  {item.title}
-                </p>
-                <p className="mt-1.5 text-[10px] uppercase tracking-[0.1em] text-brand-dark/35">
-                  {item.location}
-                </p>
-              </figcaption>
-            </motion.figure>
+              <img
+                src={`/imagenes/bali-gallery/${item.slug}.jpg`}
+                alt={`${item.title} – ${item.location}`}
+                loading={i < 3 ? 'eager' : 'lazy'}
+                decoding="async"
+                width={1000}
+                height={1333}
+                draggable={false}
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+              />
+            </motion.div>
           ))}
 
           {/* Trailing spacer so the last card can clear the viewport edge */}

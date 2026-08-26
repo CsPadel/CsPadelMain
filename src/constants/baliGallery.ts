@@ -1,38 +1,46 @@
 /**
  * Photo strip shown at the foot of the Bali page.
  *
- * Titles and locations stay in English across all three locales — they read as
- * editorial captions rather than body copy, which is the tone the layout is
- * built around. Localise `baliPage.landing.gallery` (eyebrow, title, controls)
- * in the locale files; the captions below are deliberately shared.
+ * The strip renders images only — `title` and `location` are no longer drawn on
+ * screen, but they are kept because they build each image's alt text, so they
+ * still need to describe the photo accurately.
  *
- * Source photography lives in `imgparaslide/` and is resized to a 1000x1333
- * (3:4) card before landing in `public/imagenes/bali-gallery/`.
+ * Source photography lives in `imgparaslide/` and `new images/`, resized to a
+ * 1000x1333 (3:4) card before landing in `public/imagenes/bali-gallery/`.
  */
 export interface BaliGalleryItem {
   /** File under /imagenes/bali-gallery/, without extension. */
   slug: string;
+  /** Not rendered; forms the alt text together with `location`. */
   title: string;
   location: string;
 }
 
+/**
+ * Array order is the display order. Padel, estate, wellness and food alternate
+ * on purpose so no two neighbours are the same kind of shot — the run finishes
+ * on the dusk and after-dark frames.
+ *
+ * The number in each slug is the source batch it arrived in, not its position
+ * here, so the strip can be reordered without renaming any files.
+ */
 export const BALI_GALLERY: BaliGalleryItem[] = [
-  { slug: '01-infinity-edge', title: 'The Infinity Edge', location: 'Uluwatu, Bali' },
-  { slug: '02-poolside-recovery', title: 'Poolside Recovery', location: 'The Estate, Uluwatu' },
-  { slug: '03-cliffside-villa', title: 'Cliffside Villa', location: 'Uluwatu, Bali' },
-  { slug: '04-straight-to-the-sea', title: 'Straight to the Sea', location: 'The Estate, Uluwatu' },
+  { slug: '01-cliff-edge', title: 'The Cliff Edge', location: 'Uluwatu, Bali' },
   { slug: '05-centre-court', title: 'Centre Court', location: 'Uluwatu, Bali' },
-  { slug: '06-golden-hour-rally', title: 'Golden Hour Rally', location: 'Sunset Session' },
-  { slug: '07-tropical-baseline', title: 'Tropical Baseline', location: 'The Estate, Uluwatu' },
-  { slug: '08-full-swing', title: 'Full Swing', location: 'Courtside Padel' },
+  // 2957 puts the four-poster on the right of the frame, so this one is cropped
+  // east rather than centre — a centred crop loses the bed entirely.
+  { slug: '04-the-suite', title: 'The Suite', location: 'The Estate, Uluwatu' },
   { slug: '09-one-on-one-coaching', title: 'One-on-One Coaching', location: 'With Oli & Alex' },
-  // 154A5599 is the one true landscape source: it needs a centred crop to keep
-  // both coaches in frame, not the content-aware crop the other shots use.
-  { slug: '10-meet-oli-alex', title: 'Meet Oli & Alex', location: 'Your Coaches' },
-  { slug: '11-garden-path', title: 'The Garden Path', location: 'The Estate, Uluwatu' },
+  { slug: '03-under-the-frangipani', title: 'Under the Frangipani', location: 'Uluwatu, Bali' },
+  { slug: '08-court-from-above', title: 'Court From Above', location: 'Uluwatu, Bali' },
+  { slug: '13-chefs-table', title: "The Chef's Table", location: 'The Estate, Uluwatu' },
+  { slug: '06-golden-hour-rally', title: 'Golden Hour Rally', location: 'Sunset Session' },
+  { slug: '11-lily-pond', title: 'The Lily Pond', location: 'The Estate, Uluwatu' },
+  { slug: '07-tropical-baseline', title: 'Tropical Baseline', location: 'The Estate, Uluwatu' },
+  { slug: '14-spa-pavilion', title: 'Spa Pavilion', location: 'The Estate, Uluwatu' },
+  { slug: '10-courtside-social', title: 'Courtside Social', location: 'Padel Club, Bali' },
+  { slug: '02-infinity-edge', title: 'The Infinity Edge', location: 'The Estate, Uluwatu' },
   { slug: '12-open-air-gym', title: 'Open-Air Gym', location: 'The Estate, Uluwatu' },
-  { slug: '13-breakfast-on-the-cliff', title: 'Breakfast on the Cliff', location: 'Uluwatu, Bali' },
-  { slug: '14-under-the-frangipani', title: 'Under the Frangipani', location: 'Uluwatu, Bali' },
   { slug: '15-last-light', title: 'Last Light', location: 'Sunset, Uluwatu' },
-  { slug: '16-estate-after-dark', title: 'The Estate After Dark', location: 'Uluwatu, Bali' },
+  { slug: '16-after-dark', title: 'After Dark', location: 'The Estate, Uluwatu' },
 ];

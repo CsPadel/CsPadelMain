@@ -553,7 +553,7 @@ const es = {
           ctaBtn: "Consulta sobre Bali",
           gallery: {
             eyebrow: "La Galería",
-            title: "Últimas inspiraciones",
+            title: "Un Sabor de Bali",
             dragHint: "Clic y arrastra",
             prev: "Imágenes anteriores",
             next: "Imágenes siguientes"
