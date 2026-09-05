@@ -48,3 +48,7 @@ skills-lock.json
 *.png
 !public/**
 !src/**
+
+# Audit scratch output
+audit/_*.csv
+audit/_*.md
