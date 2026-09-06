@@ -1,0 +1,2141 @@
+[
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "An Escape to Bali.",
+    "pages": [
+      "/bali"
+    ],
+    "keys": [
+      "baliPage.landing.heroTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "Beyond the Court.",
+    "pages": [
+      "/the-experience"
+    ],
+    "keys": [
+      "experiencePage.heroTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "Cookie Policy",
+    "pages": [
+      "/cookies"
+    ],
+    "keys": [
+      "footer.cookies",
+      "cookiePolicy.title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "Corporate & Executive Retreats.",
+    "pages": [
+      "/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.heroTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "Dubai. Coming Soon.",
+    "pages": [
+      "/dubai"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "Our Story.",
+    "pages": [
+      "/our-story"
+    ],
+    "keys": [
+      "ourStoryPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "Privacy Policy",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": [
+      "footer.privacy"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "Terms & Conditions",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "The English Countryside, 70 Minutes from London.",
+    "pages": [
+      "/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.heroTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h1",
+    "text": "Upcoming Retreats.",
+    "pages": [
+      "/upcoming-retreats"
+    ],
+    "keys": [
+      "upcomingRetreatsPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "1. Agreement",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "1. Who we are",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "10. Changes to this policy",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "10. Governing law",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "11. Contact",
+    "pages": [
+      "/legal/privacy-policy",
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "2. The retreat",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "2. What personal data we collect",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "3. Booking and payment",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "3. How we use your data",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "4. Cancellation policy",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "4. Who we share your data with",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "5. Changes to your booking",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "5. International transfers",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "6. Health, fitness and liability",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "6. How long we keep your data",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "7. Travel insurance",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "7. Your rights",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "8. Code of conduct",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "8. Cookies",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "9. Privacy",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "9. Security",
+    "pages": [
+      "/legal/privacy-policy"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "A closed retreat. Your agenda.",
+    "pages": [
+      "/executive-retreat"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "A Taste of Bali",
+    "pages": [
+      "/bali"
+    ],
+    "keys": [
+      "baliPage.landing.gallery.title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "A Taste of East Sussex",
+    "pages": [
+      "/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.gallery.title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "An established club, not a court built for the occasion.",
+    "pages": [
+      "/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.padelTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Analytics cookies",
+    "pages": [
+      "/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[2].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Bali",
+    "pages": [
+      "/upcoming-retreats"
+    ],
+    "keys": [
+      "navbar.bali",
+      "sidebar.retreats.bali",
+      "upcomingRetreatsPage.destinations.bali.name",
+      "enquiryForm.steps.destination.options.bali"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Bali, beyond the estate.",
+    "pages": [
+      "/bali"
+    ],
+    "keys": [
+      "baliPage.landing.beyondTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Book It Your Way",
+    "pages": [
+      "/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.bookTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Born from a shared obsession.",
+    "pages": [
+      "/our-story"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Choose Your Retreat.",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "homePage.retreatTypes.title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Essential cookies",
+    "pages": [
+      "/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[1].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Every corporate retreat begins with a brief.",
+    "pages": [
+      "/executive-retreat"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Have your own dates in mind?",
+    "pages": [
+      "/upcoming-retreats"
+    ],
+    "keys": [
+      "upcomingRetreatsPage.ctaTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Have Your Own Dates in Mind?",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "bespokeRetreats.title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "It doesn't stop at the final point.",
+    "pages": [
+      "/the-experience"
+    ],
+    "keys": [
+      "experiencePage.offCourtTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Managing your preferences",
+    "pages": [
+      "/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[3].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Meet the founders.",
+    "pages": [
+      "/our-story"
+    ],
+    "keys": [
+      "ourStoryPage.foundersTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Menorca",
+    "pages": [
+      "/upcoming-retreats"
+    ],
+    "keys": [
+      "navbar.menorca",
+      "sidebar.retreats.menorca",
+      "upcomingRetreatsPage.destinations.menorca.name",
+      "enquiryForm.steps.destination.options.menorca"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Our Destination",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "homePage.destinations.title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Ready to build your own story?",
+    "pages": [
+      "/our-story"
+    ],
+    "keys": [
+      "ourStoryPage.ctaTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Ready to Experience East Sussex?",
+    "pages": [
+      "/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.ctaTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Ready to experience it?",
+    "pages": [
+      "/the-experience"
+    ],
+    "keys": [
+      "experiencePage.ctaTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Ready to Experience Uluwatu?",
+    "pages": [
+      "/bali"
+    ],
+    "keys": [
+      "baliPage.landing.ctaTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Remembered long after.",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "testimonials.title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Rooms & Cottages",
+    "pages": [
+      "/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.roomsTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "The only WPT-recognised courts in Bali.",
+    "pages": [
+      "/bali"
+    ],
+    "keys": [
+      "baliPage.landing.courtsTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "There's a lot more than padel here.",
+    "pages": [
+      "/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.beyondTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Two ways to experience Bali.",
+    "pages": [
+      "/bali"
+    ],
+    "keys": [
+      "baliPage.landing.stayTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Upcoming Retreats",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "navbar.upcomingRetreats",
+      "homePage.upcoming.title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "Updates",
+    "pages": [
+      "/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[4].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "What are cookies?",
+    "pages": [
+      "/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[0].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h2",
+    "text": "What sets us apart.",
+    "pages": [
+      "/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apartTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "3.1 Deposit",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "3.2 Balance payment",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "3.3 Late bookings",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "3.4 Prices",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "4.1 Cancellation by you",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "4.2 Cancellation by us",
+    "pages": [
+      "/legal/terms-and-conditions"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Alexi Watelet",
+    "pages": [
+      "/our-story"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "BALI",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "baliPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Bespoke Programme",
+    "pages": [
+      "/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.pillars[1].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Corporate & Executive",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "footer.corporate",
+      "homePage.retreatTypes.items.executive.name"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "DUBAI",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "dubaiPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Full Exclusivity",
+    "pages": [
+      "/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.pillars[0].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "In partnership with the best.",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "homePage.partners.title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "MENORCA",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "menorcaPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Oliver Watelet",
+    "pages": [
+      "/our-story"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Open Retreat",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "menorcaPage.rooms.openRetreat.name",
+      "homePage.retreatTypes.items.open.name"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Personal, Whatever the Format",
+    "pages": [
+      "/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apart[2].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Private Retreat",
+    "pages": [
+      "/"
+    ],
+    "keys": [
+      "menorcaPage.rooms.privateRetreat.name",
+      "homePage.retreatTypes.items.private.name"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Real Padel Expertise",
+    "pages": [
+      "/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apart[0].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Run End-to-End, By Us",
+    "pages": [
+      "/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apart[1].title"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "The Estate",
+    "pages": [
+      "/bali"
+    ],
+    "keys": [
+      "baliPage.landing.estateTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "The Studios",
+    "pages": [
+      "/bali"
+    ],
+    "keys": [
+      "baliPage.landing.studiosTitle"
+    ]
+  },
+  {
+    "locale": "en",
+    "tag": "h3",
+    "text": "Total Discretion",
+    "pages": [
+      "/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.pillars[2].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h1",
+    "text": "Dubái. Próximamente.",
+    "pages": [
+      "/es/dubai"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "es",
+    "tag": "h1",
+    "text": "La Campiña Inglesa, a 70 Minutos de Londres.",
+    "pages": [
+      "/es/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.heroTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h1",
+    "text": "Más allá de la pista.",
+    "pages": [
+      "/es/the-experience"
+    ],
+    "keys": [
+      "experiencePage.heroTitle",
+      "dubaiPage.pillars[3].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h1",
+    "text": "Nuestra Historia.",
+    "pages": [
+      "/es/our-story"
+    ],
+    "keys": [
+      "ourStoryPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h1",
+    "text": "Política de cookies",
+    "pages": [
+      "/es/cookies"
+    ],
+    "keys": [
+      "footer.cookies",
+      "cookiePolicy.title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h1",
+    "text": "Próximos Retiros.",
+    "pages": [
+      "/es/upcoming-retreats"
+    ],
+    "keys": [
+      "upcomingRetreatsPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h1",
+    "text": "Retiros Corporativos y Ejecutivos.",
+    "pages": [
+      "/es/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.heroTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h1",
+    "text": "Una Escapada a Bali.",
+    "pages": [
+      "/es/bali"
+    ],
+    "keys": [
+      "baliPage.landing.heroTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "¿Listo para escribir tu propia historia?",
+    "pages": [
+      "/es/our-story"
+    ],
+    "keys": [
+      "ourStoryPage.ctaTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "¿Listo para Vivir East Sussex?",
+    "pages": [
+      "/es/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.ctaTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "¿Listo para Vivir Uluwatu?",
+    "pages": [
+      "/es/bali"
+    ],
+    "keys": [
+      "baliPage.landing.ctaTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "¿Listo para vivirlo?",
+    "pages": [
+      "/es/the-experience"
+    ],
+    "keys": [
+      "experiencePage.ctaTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "¿Qué son las cookies?",
+    "pages": [
+      "/es/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[0].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "¿Tienes tus propias fechas en mente?",
+    "pages": [
+      "/es/upcoming-retreats"
+    ],
+    "keys": [
+      "upcomingRetreatsPage.ctaTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "¿Ya Tienes Tus Propias Fechas?",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "bespokeRetreats.title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Actualizaciones",
+    "pages": [
+      "/es/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[4].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Aquí hay mucho más que pádel.",
+    "pages": [
+      "/es/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.beyondTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Bali",
+    "pages": [
+      "/es/upcoming-retreats"
+    ],
+    "keys": [
+      "navbar.bali",
+      "sidebar.retreats.bali",
+      "upcomingRetreatsPage.destinations.bali.name",
+      "enquiryForm.steps.destination.options.bali"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Bali, más allá de la finca.",
+    "pages": [
+      "/es/bali"
+    ],
+    "keys": [
+      "baliPage.landing.beyondTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Conoce a los fundadores.",
+    "pages": [
+      "/es/our-story"
+    ],
+    "keys": [
+      "ourStoryPage.foundersTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Cookies analíticas",
+    "pages": [
+      "/es/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[2].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Cookies esenciales",
+    "pages": [
+      "/es/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[1].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Dos formas de vivir Bali.",
+    "pages": [
+      "/es/bali"
+    ],
+    "keys": [
+      "baliPage.landing.stayTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Elige tu Retiro.",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "homePage.retreatTypes.title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Gestionar tus preferencias",
+    "pages": [
+      "/es/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[3].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Habitaciones y Cottages",
+    "pages": [
+      "/es/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.roomsTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Las únicas pistas reconocidas por la WPT en Bali.",
+    "pages": [
+      "/es/bali"
+    ],
+    "keys": [
+      "baliPage.landing.courtsTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Lo que nos distingue.",
+    "pages": [
+      "/es/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apartTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Menorca",
+    "pages": [
+      "/es/upcoming-retreats"
+    ],
+    "keys": [
+      "navbar.menorca",
+      "sidebar.retreats.menorca",
+      "upcomingRetreatsPage.destinations.menorca.name",
+      "enquiryForm.steps.destination.options.menorca"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Nacido de una obsesión compartida.",
+    "pages": [
+      "/es/our-story"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "No termina en el último punto.",
+    "pages": [
+      "/es/the-experience"
+    ],
+    "keys": [
+      "experiencePage.offCourtTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Nuestro Destino",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "homePage.destinations.title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Próximos Retiros",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "navbar.upcomingRetreats",
+      "homePage.upcoming.title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Recordado mucho después.",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "testimonials.title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Resérvalo a tu Manera",
+    "pages": [
+      "/es/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.bookTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Todo retiro corporativo empieza con un brief.",
+    "pages": [
+      "/es/executive-retreat"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Un club consolidado, no una pista montada para la ocasión.",
+    "pages": [
+      "/es/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.padelTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Un retiro cerrado. Tu agenda.",
+    "pages": [
+      "/es/executive-retreat"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Un Sabor de Bali",
+    "pages": [
+      "/es/bali"
+    ],
+    "keys": [
+      "baliPage.landing.gallery.title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h2",
+    "text": "Un Sabor de East Sussex",
+    "pages": [
+      "/es/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.gallery.title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Alexi Watelet",
+    "pages": [
+      "/es/our-story"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "BALI",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "baliPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Corporativo y Ejecutivo",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "footer.corporate",
+      "homePage.retreatTypes.items.executive.name"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "De Principio a Fin, Por Nosotros",
+    "pages": [
+      "/es/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apart[1].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Discreción Absoluta",
+    "pages": [
+      "/es/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.pillars[2].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "DUBAI",
+    "pages": [
+      "/es/"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "En alianza con los mejores.",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "homePage.partners.title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Exclusividad Total",
+    "pages": [
+      "/es/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.pillars[0].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "La Finca",
+    "pages": [
+      "/es/bali"
+    ],
+    "keys": [
+      "baliPage.landing.estateTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Los Estudios",
+    "pages": [
+      "/es/bali"
+    ],
+    "keys": [
+      "baliPage.landing.studiosTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "MENORCA",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "menorcaPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Oliver Watelet",
+    "pages": [
+      "/es/our-story"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Personal, Sea Cual Sea el Formato",
+    "pages": [
+      "/es/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apart[2].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Programa a Medida",
+    "pages": [
+      "/es/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.pillars[1].title"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Retiro Abierto",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "homePage.retreatTypes.items.open.name"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Retiro Privado",
+    "pages": [
+      "/es/"
+    ],
+    "keys": [
+      "menorcaPage.rooms.privateRetreat.name",
+      "homePage.retreatTypes.items.private.name"
+    ]
+  },
+  {
+    "locale": "es",
+    "tag": "h3",
+    "text": "Verdadera Experiencia en Pádel",
+    "pages": [
+      "/es/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apart[0].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h1",
+    "text": "Au-delà du court.",
+    "pages": [
+      "/fr/the-experience"
+    ],
+    "keys": [
+      "experiencePage.heroTitle",
+      "dubaiPage.pillars[3].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h1",
+    "text": "Dubaï. Bientôt Disponible.",
+    "pages": [
+      "/fr/dubai"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "fr",
+    "tag": "h1",
+    "text": "La Campagne Anglaise, à 70 Minutes de Londres.",
+    "pages": [
+      "/fr/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.heroTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h1",
+    "text": "Notre Histoire.",
+    "pages": [
+      "/fr/our-story"
+    ],
+    "keys": [
+      "ourStoryPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h1",
+    "text": "Politique de cookies",
+    "pages": [
+      "/fr/cookies"
+    ],
+    "keys": [
+      "footer.cookies",
+      "cookiePolicy.title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h1",
+    "text": "Prochaines Retraites.",
+    "pages": [
+      "/fr/upcoming-retreats"
+    ],
+    "keys": [
+      "upcomingRetreatsPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h1",
+    "text": "Retraites Entreprises et Dirigeants.",
+    "pages": [
+      "/fr/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.heroTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h1",
+    "text": "Une Escapade à Bali.",
+    "pages": [
+      "/fr/bali"
+    ],
+    "keys": [
+      "baliPage.landing.heroTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Bali",
+    "pages": [
+      "/fr/upcoming-retreats"
+    ],
+    "keys": [
+      "navbar.bali",
+      "sidebar.retreats.bali",
+      "upcomingRetreatsPage.destinations.bali.name",
+      "enquiryForm.steps.destination.options.bali"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Bali, au-delà du domaine.",
+    "pages": [
+      "/fr/bali"
+    ],
+    "keys": [
+      "baliPage.landing.beyondTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Ce qui nous distingue.",
+    "pages": [
+      "/fr/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apartTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Cela ne s'arrête pas au dernier point.",
+    "pages": [
+      "/fr/the-experience"
+    ],
+    "keys": [
+      "experiencePage.offCourtTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Chambres et Cottages",
+    "pages": [
+      "/fr/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.roomsTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Chaque retraite d'entreprise commence par un brief.",
+    "pages": [
+      "/fr/executive-retreat"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Choisissez votre Retraite.",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "homePage.retreatTypes.title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Cookies analytiques",
+    "pages": [
+      "/fr/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[2].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Cookies essentiels",
+    "pages": [
+      "/fr/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[1].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Deux façons de vivre Bali.",
+    "pages": [
+      "/fr/bali"
+    ],
+    "keys": [
+      "baliPage.landing.stayTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Gérer vos préférences",
+    "pages": [
+      "/fr/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[3].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Il y a bien plus que le padel ici.",
+    "pages": [
+      "/fr/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.beyondTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Les seuls courts reconnus par le WPT à Bali.",
+    "pages": [
+      "/fr/bali"
+    ],
+    "keys": [
+      "baliPage.landing.courtsTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Longtemps après le retour.",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "testimonials.title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Minorque",
+    "pages": [
+      "/fr/upcoming-retreats"
+    ],
+    "keys": [
+      "upcomingRetreatsPage.destinations.menorca.name",
+      "enquiryForm.steps.destination.options.menorca"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Mises à jour",
+    "pages": [
+      "/fr/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[4].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Né d'une obsession partagée.",
+    "pages": [
+      "/fr/our-story"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Notre Destination",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "homePage.destinations.title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Prêt à Découvrir l'East Sussex ?",
+    "pages": [
+      "/fr/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.ctaTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Prêt à Découvrir Uluwatu ?",
+    "pages": [
+      "/fr/bali"
+    ],
+    "keys": [
+      "baliPage.landing.ctaTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Prêt à écrire votre propre histoire ?",
+    "pages": [
+      "/fr/our-story"
+    ],
+    "keys": [
+      "ourStoryPage.ctaTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Prêt à le vivre ?",
+    "pages": [
+      "/fr/the-experience"
+    ],
+    "keys": [
+      "experiencePage.ctaTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Prochaines Retraites",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "navbar.upcomingRetreats",
+      "homePage.upcoming.title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Que sont les cookies ?",
+    "pages": [
+      "/fr/cookies"
+    ],
+    "keys": [
+      "cookiePolicy.sections[0].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Rencontrez les fondateurs.",
+    "pages": [
+      "/fr/our-story"
+    ],
+    "keys": [
+      "ourStoryPage.foundersTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Réservez à Votre Façon",
+    "pages": [
+      "/fr/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.bookTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Un Avant-Goût de Bali",
+    "pages": [
+      "/fr/bali"
+    ],
+    "keys": [
+      "baliPage.landing.gallery.title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Un Avant-Goût de l'East Sussex",
+    "pages": [
+      "/fr/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.gallery.title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Un club établi, pas un court monté pour l'occasion.",
+    "pages": [
+      "/fr/east-sussex"
+    ],
+    "keys": [
+      "eastSussexPage.landing.padelTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Une retraite privatisée. Votre programme.",
+    "pages": [
+      "/fr/executive-retreat"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Vous Avez Déjà Vos Propres Dates ?",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "bespokeRetreats.title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h2",
+    "text": "Vous avez déjà vos propres dates en tête ?",
+    "pages": [
+      "/fr/upcoming-retreats"
+    ],
+    "keys": [
+      "upcomingRetreatsPage.ctaTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Alexi Watelet",
+    "pages": [
+      "/fr/our-story"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "BALI",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "baliPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "De Bout en Bout, Par Nous",
+    "pages": [
+      "/fr/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apart[1].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Discrétion Absolue",
+    "pages": [
+      "/fr/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.pillars[2].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "DUBAI",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "dubaiPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "En partenariat avec les meilleurs.",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "homePage.partners.title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Entreprises et Dirigeants",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "footer.corporate",
+      "homePage.retreatTypes.items.executive.name"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Exclusivité Totale",
+    "pages": [
+      "/fr/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.pillars[0].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Le Domaine",
+    "pages": [
+      "/fr/bali"
+    ],
+    "keys": [
+      "baliPage.landing.estateTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Les Studios",
+    "pages": [
+      "/fr/bali"
+    ],
+    "keys": [
+      "baliPage.landing.studiosTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "MENORCA",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "menorcaPage.heroTitle"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Oliver Watelet",
+    "pages": [
+      "/fr/our-story"
+    ],
+    "keys": []
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Personnel, Quel Que Soit le Format",
+    "pages": [
+      "/fr/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apart[2].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Programme Sur Mesure",
+    "pages": [
+      "/fr/executive-retreat"
+    ],
+    "keys": [
+      "executivePage.pillars[1].title"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Retraite Ouverte",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "menorcaPage.rooms.openRetreat.name",
+      "homePage.retreatTypes.items.open.name"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Retraite Privée",
+    "pages": [
+      "/fr/"
+    ],
+    "keys": [
+      "menorcaPage.rooms.privateRetreat.name",
+      "homePage.retreatTypes.items.private.name"
+    ]
+  },
+  {
+    "locale": "fr",
+    "tag": "h3",
+    "text": "Une Véritable Expertise Padel",
+    "pages": [
+      "/fr/the-experience"
+    ],
+    "keys": [
+      "experiencePage.apart[0].title"
+    ]
+  }
+]
