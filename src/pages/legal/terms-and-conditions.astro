@@ -1,0 +1,135 @@
+---
+/**
+ * Ported from the Menorca microsite (src/pages/legal/terms-and-conditions.astro).
+ * The wording is the founders' existing approved text — not rewritten here.
+ *
+ * Two clauses describe the Menorca 2026 retreat specifically (its dates,
+ * venues, airport and balance-payment deadline). They are rendered inside a
+ * review notice rather than as live terms, because presenting them as the
+ * terms of a site that also sells Bali, Dubai and East Sussex would be
+ * factually wrong and commercially binding. Replacing them is a decision for
+ * the founders and their legal adviser, not a drafting job for this branch.
+ */
+import Layout from '../../layouts/Layout.astro';
+import FooterIsland from '../../components/FooterIsland';
+import LegalPendingNotice from '../../components/LegalPendingNotice.astro';
+import { sitePath } from '../../constants/site';
+
+const title = 'Terms & Conditions | Courtside Padel Retreats';
+const description =
+  'Booking terms and conditions for Courtside Padel Retreats, including payment, cancellation, and liability.';
+const canonical = sitePath('/legal/terms-and-conditions');
+---
+
+<Layout title={title} description={description} canonical={canonical} lang="en" locale="en">
+  <main id="main-content" class="bg-white min-h-screen pt-32 pb-24">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+
+      <p class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-4">Legal</p>
+      <h1 class="text-4xl md:text-5xl font-light text-brand-dark tracking-wide mb-4">Terms &amp; Conditions</h1>
+      <p class="text-brand-dark/50 text-sm mb-12">Last updated: May 2026</p>
+
+      <div class="prose prose-lg max-w-none text-brand-dark/80 space-y-10">
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">1. Agreement</h2>
+          <p>By making a booking enquiry or completing a booking with Courtside Padel Retreats ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>"), you agree to these Terms &amp; Conditions. Please read them carefully before booking.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">2. The retreat</h2>
+          <LegalPendingNotice reason="The source clause below defines 'the retreat' as Menorca 2026 only — its dates, venues and airport. This site sells Menorca, Bali, Dubai and East Sussex, so it cannot stand as written. It needs replacing with either per-retreat terms or a general clause that points at each retreat's own published inclusions.">
+            <div class="mt-4 space-y-3 text-red-900/80">
+              <p>The Courtside Menorca Padel Retreat 2026 runs from <strong>30 September – 4 October 2026</strong> (4 nights, 5 days) in Menorca, Spain. Places are strictly limited.</p>
+              <p>The retreat includes:</p>
+              <ul class="list-disc pl-6 space-y-1">
+                <li>4 nights accommodation at Barceló Nura (or equivalent 5-star property)</li>
+                <li>All meals specified in the itinerary (breakfast daily, plus group lunches and dinners)</li>
+                <li>Professional padel coaching sessions at Padelin</li>
+                <li>Organised activities (boat tour, vineyard visit, tournament)</li>
+                <li>Private airport transfers to/from Mahón Airport (MAH)</li>
+              </ul>
+              <p>International flights are <strong>not included</strong>.</p>
+            </div>
+          </LegalPendingNotice>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">3. Booking and payment</h2>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">3.1 Deposit</h3>
+          <p>A deposit of <strong>40% of the total booking value</strong> is required to secure your place. Your place is only confirmed upon receipt of the deposit.</p>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">3.2 Balance payment</h3>
+          <p>The remaining balance is due <strong>8 weeks (56 days) before the retreat start date</strong>.</p>
+          <LegalPendingNotice reason="The source clause additionally fixed a single hard date — 'i.e. by 5 August 2026 for the 2026 retreat' — which only applies to Menorca 2026. It has been left out here rather than restated for every destination. Confirm whether the 8-week rule alone is sufficient." />
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">3.3 Late bookings</h3>
+          <p>Bookings made within 8 weeks of departure require full payment at the time of booking.</p>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">3.4 Prices</h3>
+          <p>All prices are in <strong>GBP (£)</strong> and include VAT where applicable. Prices are per person unless stated otherwise.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">4. Cancellation policy</h2>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">4.1 Cancellation by you</h3>
+          <table class="w-full text-sm border-collapse mt-3">
+            <thead>
+              <tr class="border-b border-brand-dark/20">
+                <th class="text-left py-2 pr-4 font-semibold text-brand-dark">Notice period before departure</th>
+                <th class="text-left py-2 font-semibold text-brand-dark">Refund</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-dark/10">
+              <tr><td class="py-2 pr-4">More than 8 weeks (56+ days)</td><td class="py-2">Full deposit refund</td></tr>
+              <tr><td class="py-2 pr-4">6–8 weeks (42–55 days)</td><td class="py-2">50% of total booking value refunded</td></tr>
+              <tr><td class="py-2 pr-4">Less than 6 weeks (fewer than 42 days)</td><td class="py-2">No refund</td></tr>
+            </tbody>
+          </table>
+          <p class="mt-3">All cancellations must be made in writing to <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>. The date of cancellation is the date we receive your written notice.</p>
+          <p class="mt-3">We strongly recommend purchasing <strong>comprehensive travel insurance</strong> including cancellation cover.</p>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">4.2 Cancellation by us</h3>
+          <p>If we are required to cancel the retreat for reasons beyond our control (force majeure, minimum numbers not met, etc.), we will offer you either a full refund or a transfer to an alternative date.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">5. Changes to your booking</h2>
+          <p>If you wish to transfer your place to another person, please notify us as soon as possible. We will accommodate transfers where operationally feasible. An administration fee may apply.</p>
+          <p class="mt-3">We reserve the right to make minor changes to the itinerary (e.g. substituting activities of equivalent value) where necessary due to weather, venue availability, or other circumstances.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">6. Health, fitness and liability</h2>
+          <p>Padel is a physical sport. By booking, you confirm that you are in good health and physically capable of participating in the retreat activities. You participate in all physical activities at your own risk.</p>
+          <p class="mt-3">We accept no liability for personal injury, illness, loss, or damage unless caused directly by our negligence. Our liability in any event is limited to the total price paid for your place.</p>
+          <p class="mt-3">We are not liable for delays, disruptions, or cancellations caused by circumstances beyond our reasonable control, including but not limited to severe weather, natural disasters, civil unrest, or pandemic restrictions.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">7. Travel insurance</h2>
+          <p>Travel insurance covering cancellation, medical expenses, and personal liability is <strong>mandatory</strong> for all guests. You must be able to provide proof of valid insurance upon request.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">8. Code of conduct</h2>
+          <p>We expect all guests to treat fellow guests, staff, and third-party providers with respect. We reserve the right to remove from the retreat any guest whose behaviour is disruptive or endangers others, with no refund.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">9. Privacy</h2>
+          <p>Your personal data is processed in accordance with our <a href="/legal/privacy-policy" class="text-brand-gold underline underline-offset-2">Privacy Policy</a>.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">10. Governing law</h2>
+          <p>These Terms &amp; Conditions are governed by the laws of <strong>England and Wales</strong>. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">11. Contact</h2>
+          <p>For booking enquiries or questions about these terms:<br />
+          <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a></p>
+        </section>
+
+      </div>
+    </div>
+    <FooterIsland client:visible locale="en" />
+  </main>
+</Layout>

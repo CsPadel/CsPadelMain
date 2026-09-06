@@ -1,0 +1,139 @@
+---
+/**
+ * Ported verbatim from the Menorca microsite (src/pages/legal/privacy-policy.astro).
+ * The wording is the founders' existing approved text — not rewritten here.
+ * Only the host reference and section 5 differ; section 5 is marked for review
+ * because it describes a single Spanish retreat and this site sells four
+ * destinations across three jurisdictions.
+ */
+import Layout from '../../layouts/Layout.astro';
+import FooterIsland from '../../components/FooterIsland';
+import LegalPendingNotice from '../../components/LegalPendingNotice.astro';
+import { sitePath, SITE_HOST } from '../../constants/site';
+
+const title = 'Privacy Policy | Courtside Padel Retreats';
+const description =
+  'How Courtside Padel Retreats collects, uses and protects your personal data in accordance with UK GDPR and EU GDPR.';
+const canonical = sitePath('/legal/privacy-policy');
+---
+
+<Layout title={title} description={description} canonical={canonical} lang="en" locale="en">
+  <main id="main-content" class="bg-white min-h-screen pt-32 pb-24">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+
+      <p class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-4">Legal</p>
+      <h1 class="text-4xl md:text-5xl font-light text-brand-dark tracking-wide mb-4">Privacy Policy</h1>
+      <p class="text-brand-dark/50 text-sm mb-12">Last updated: May 2026</p>
+
+      <div class="prose prose-lg max-w-none text-brand-dark/80 space-y-10">
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">1. Who we are</h2>
+          <p>Courtside Padel Retreats ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>") operates the website <strong>{SITE_HOST}</strong> and organises luxury padel retreats.</p>
+          <p class="mt-3"><strong>Data Controller:</strong><br />
+          Crtside Events Ltd (trading as Courtside Padel Retreats)<br />
+          Company No. 16289087<br />
+          24 Hendham Road, SW17 7DQ<br />
+          Email: <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a></p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">2. What personal data we collect</h2>
+          <p>We may collect the following categories of personal data:</p>
+          <ul class="list-disc pl-6 space-y-2 mt-3">
+            <li><strong>Contact details:</strong> name, email address, phone number</li>
+            <li><strong>Booking information:</strong> group size, preferred dates, accommodation type, special dietary or accessibility requirements</li>
+            <li><strong>Payment details:</strong> processed securely via our payment provider — we do not store full card numbers</li>
+            <li><strong>Communications:</strong> enquiries, emails, or messages sent to us</li>
+            <li><strong>Technical data:</strong> IP address, browser type, and pages visited, collected via server logs</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">3. How we use your data</h2>
+          <table class="w-full text-sm border-collapse mt-3">
+            <thead>
+              <tr class="border-b border-brand-dark/20">
+                <th class="text-left py-2 pr-4 font-semibold text-brand-dark">Purpose</th>
+                <th class="text-left py-2 font-semibold text-brand-dark">Legal basis (UK/EU GDPR)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-dark/10">
+              <tr><td class="py-2 pr-4">Respond to enquiries and manage bookings</td><td class="py-2">Contract / Legitimate interest</td></tr>
+              <tr><td class="py-2 pr-4">Process payments and issue confirmations</td><td class="py-2">Contract</td></tr>
+              <tr><td class="py-2 pr-4">Send retreat-related updates (itinerary changes, reminders)</td><td class="py-2">Contract</td></tr>
+              <tr><td class="py-2 pr-4">Marketing communications (only with your consent)</td><td class="py-2">Consent</td></tr>
+              <tr><td class="py-2 pr-4">Comply with legal obligations</td><td class="py-2">Legal obligation</td></tr>
+              <tr><td class="py-2 pr-4">Improve our website and services</td><td class="py-2">Legitimate interest</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">4. Who we share your data with</h2>
+          <p>We share your data only where necessary:</p>
+          <ul class="list-disc pl-6 space-y-2 mt-3">
+            <li><strong>Service providers:</strong> accommodation partners, transport providers, and activity operators involved in delivering your retreat</li>
+            <li><strong>Payment processor:</strong> Stripe — subject to their own privacy policy</li>
+            <li><strong>Legal or regulatory authorities:</strong> where required by law</li>
+          </ul>
+          <p class="mt-3">We do not sell your personal data to third parties.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">5. International transfers</h2>
+          <LegalPendingNotice reason="The source text names a single retreat in Spain. This site sells retreats in Spain (EU), Indonesia, the UAE and the United Kingdom — three of which sit outside the UK and EEA. The clause below understates the transfers actually taking place and needs replacing with wording your legal adviser approves." />
+          <p>Our retreat takes place in Spain (EU). Where data is transferred outside the UK or EEA, we ensure appropriate safeguards are in place (Standard Contractual Clauses or adequacy decisions).</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">6. How long we keep your data</h2>
+          <ul class="list-disc pl-6 space-y-2 mt-3">
+            <li><strong>Booking records:</strong> 7 years (UK tax / legal requirement)</li>
+            <li><strong>Enquiries that did not become bookings:</strong> 12 months</li>
+            <li><strong>Marketing consent:</strong> until you withdraw consent</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">7. Your rights</h2>
+          <p>Under UK GDPR and EU GDPR you have the right to:</p>
+          <ul class="list-disc pl-6 space-y-2 mt-3">
+            <li><strong>Access</strong> the personal data we hold about you</li>
+            <li><strong>Rectify</strong> inaccurate data</li>
+            <li><strong>Erase</strong> your data ("<em>right to be forgotten</em>"), subject to legal retention requirements</li>
+            <li><strong>Restrict</strong> processing in certain circumstances</li>
+            <li><strong>Object</strong> to processing based on legitimate interest</li>
+            <li><strong>Data portability</strong> — receive your data in a structured, machine-readable format</li>
+            <li><strong>Withdraw consent</strong> at any time where processing is based on consent</li>
+          </ul>
+          <p class="mt-3">To exercise any of these rights, contact us at <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>. We will respond within one calendar month.</p>
+          <p class="mt-3">You also have the right to lodge a complaint with the <strong>UK Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk" class="text-brand-gold underline underline-offset-2" target="_blank" rel="noopener noreferrer">ico.org.uk</a> or the relevant supervisory authority in your EU member state.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">8. Cookies</h2>
+          <p>This website uses essential cookies and, with your consent, analytics and advertising cookies to measure site usage and campaign performance. For full details see our <a href="/cookies" class="text-brand-gold underline underline-offset-2">Cookie Policy</a>.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">9. Security</h2>
+          <p>We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure. Our website is served over HTTPS.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">10. Changes to this policy</h2>
+          <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page will reflect any changes. Continued use of our website after changes are published constitutes acceptance of the revised policy.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">11. Contact</h2>
+          <p>For any privacy-related queries, contact us at:<br />
+          <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a></p>
+        </section>
+
+      </div>
+    </div>
+    <FooterIsland client:visible locale="en" />
+  </main>
+</Layout>
