@@ -1,7 +1,7 @@
 # Enquiry flow verification
 
 - Base: `http://[::1]:4321`
-- Run: 2026-09-06T00:23:34.756Z
+- Run: 2026-09-06T01:08:17.077Z
 - Checks: 73, failed: 0
 - The submit POST is intercepted and never delivered to the live endpoint.
 
