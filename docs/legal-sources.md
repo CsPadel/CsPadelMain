@@ -90,11 +90,14 @@ Primary text: [EUR-Lex CELEX:32016R0679](https://eur-lex.europa.eu/legal-content
 | ODR platform discontinued 20 July 2025 by Regulation (EU) 2024/3228 | [European Consumer Centre Spain](https://portal-cec.consumo.gob.es/en/comunicacion/noticias/2025/european-platform-online-dispute-resolution-will-cease-be-operational-20) · [European Parliament Legislative Observatory](https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1800145) |
 | Traders must remove ODR links; a stale link can be a misleading commercial practice in some member states | [CMS legal update](https://cms.law/en/gbr/legal-updates/the-odr-platform-is-closing-what-businesses-need-to-know) · [National Law Review](https://natlawreview.com/article/no-one-wants-dispute-consumers-end-european-online-dispute-resolution-platform-odr) |
 | ADR information duty under Directive 2013/11/EU survives the closure | [Kluwer Mediation Blog](https://legalblogs.wolterskluwer.com/mediation-blog/end-of-an-era-from-clicks-to-complaints-what-the-eu-odr-platforms-closure-means-for-businesses-and-consumers/) |
-| Replacement directory of approved ADR bodies (442+ entities, EU/EEA) | [Commission list of ADR bodies](https://consumer-redress.ec.europa.eu/dispute-resolution-bodies_en) |
+| Replacement directory of approved ADR bodies (442+ entities, EU/EEA) | [Commission list of ADR bodies](https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en) |
 
-**Action item this created.** The Menorca microsite's cookie policy still links
-to `ec.europa.eu/consumers/odr`. The phase 1 audit caught it as a redirect to a
-site-relocation notice. It should be removed, not repointed.
+**Action item this created — now done.** The Menorca microsite linked to the
+dead platform at `ec.europa.eu/consumers/odr`, in `legal-notice.astro` (not the
+cookie policy, as an earlier draft of this file said). The phase 1 audit caught
+it as a redirect to a site-relocation notice. It has been replaced with the
+post-closure wording and the live ADR directory on the
+`legal/eu-package-travel` branch of the microsite repo.
 
 ---
 
