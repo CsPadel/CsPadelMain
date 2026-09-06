@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://courtsidepadel.com/sitemap.xml
+Sitemap: https://www.cspadel.com/sitemap.xml
 
 # Disallow admin / private routes if any
 Disallow: /api/
