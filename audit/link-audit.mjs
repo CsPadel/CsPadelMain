@@ -123,8 +123,16 @@ function csvCell(v) {
 const SEVERITY_ORDER = { P0: 0, P1: 1, P2: 2, P3: 3, OK: 4, INFO: 5 };
 
 function classify(row) {
+  if (row.inPageAnchor) {
+    return { severity: 'OK', issue: '' };
+  }
   if (row.samePage) {
-    return { severity: 'P0', issue: 'Dead link — resolves to the page it sits on' };
+    return {
+      severity: 'P0',
+      issue: row.href && row.href.length > 1
+        ? `Dead link — no element matches ${row.href}`
+        : 'Dead link — resolves to the page it sits on',
+    };
   }
   if (row.scheme === 'http' && row.error) {
     return { severity: 'P0', issue: `Unreachable — ${row.error}` };
@@ -207,6 +215,14 @@ async function collectAnchors(page) {
       target: a.getAttribute('target') ?? '',
       rel: a.getAttribute('rel') ?? '',
       visible: !!(a.offsetWidth || a.offsetHeight || a.getClientRects().length),
+      // An in-page anchor is only dead if nothing on the page answers to it.
+      // Without this a one-page site's whole navigation reads as broken.
+      fragmentTargetExists: (() => {
+        const raw = a.getAttribute('href') ?? '';
+        if (!raw.startsWith('#') || raw.length < 2) return null;
+        const id = decodeURIComponent(raw.slice(1));
+        return !!(document.getElementById(id) || document.getElementsByName(id).length);
+      })(),
     }));
   }, IN_DEV_TOOLBAR);
 }
@@ -398,7 +414,11 @@ async function run() {
         };
 
         const isEmptyHref = ['', '#', '/#'].includes(a.href.trim());
-        row.samePage = isEmptyHref || (scheme === 'http' && normalise(a.resolved) === normalise(landedUrl) && a.href.trim().startsWith('#'));
+        // A fragment that resolves to a real element is working navigation,
+        // not a dead link; only an empty or unmatched fragment is a defect.
+        const isBrokenFragment = a.fragmentTargetExists === false;
+        row.samePage = isEmptyHref || isBrokenFragment;
+        row.inPageAnchor = a.fragmentTargetExists === true;
 
         if (scheme === 'http' && !row.samePage) {
           const host = (() => { try { return new URL(a.resolved).host; } catch { return ''; } })();
@@ -471,7 +491,7 @@ function writeReports(rows, pageMeta) {
   const cols = [
     'severity', 'issue', 'viewport', 'kind', 'sourcePage', 'text', 'href',
     'resolved', 'finalUrl', 'status', 'error', 'samePage', 'redirected',
-    'crossHost', 'target', 'rel', 'visible',
+    'crossHost', 'inPageAnchor', 'target', 'rel', 'visible',
   ];
   const csv = [cols.join(',')]
     .concat(rows.map((r) => cols.map((c) => csvCell(r[c])).join(',')))
