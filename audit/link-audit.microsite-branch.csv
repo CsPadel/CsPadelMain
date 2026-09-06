@@ -1,0 +1,490 @@
+severity,issue,viewport,kind,sourcePage,text,href,resolved,finalUrl,status,error,samePage,redirected,crossHost,inPageAnchor,target,rel,visible
+OK,,desktop,anchor,http://localhost:4329/,Skip to main content,#main-content,http://localhost:4329/#main-content,http://localhost:4329/#main-content,200,,false,false,false,true,,,true
+OK,,desktop,anchor,http://localhost:4329/,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Menorca YOU ARE VIEWING,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,INCLUDES,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,ITINERARY,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,BOOK,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+INFO,Intentional redirector (messaging deep link),desktop,anchor,http://localhost:4329/,CONSULTAR AHORA,https://wa.me/447786694723,https://wa.me/447786694723,/send/?phone=447786694723&amp,200,,false,true,true,false,_blank,noopener noreferrer,true
+INFO,Intentional redirector (messaging deep link),desktop,anchor,http://localhost:4329/,SOLICITA UN RETIRO PRIVADO A MEDIDA →,https://wa.me/447786694723,https://wa.me/447786694723,/send/?phone=447786694723&amp,200,,false,true,true,false,_blank,noopener noreferrer,true
+INFO,Intentional redirector (messaging deep link),desktop,anchor,http://localhost:4329/,CONSULTAR AHORA,https://wa.me/447786694723,https://wa.me/447786694723,/send/?phone=447786694723&amp,200,,false,true,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Menorca,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Corporate & Executive,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,PRIVACY POLICY,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,COOKIE POLICY,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,TERMS & CONDITIONS,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,LEGAL NOTICE,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/,Cookie Policy,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Destinations,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,ES,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,EN,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,FR,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,VIEW THE EXPERIENCE,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Previous image,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Next image,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Photo 1,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Photo 2,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Photo 3,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Photo 4,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Photo 5,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Asegurar mi Plaza,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Día 01 LLEGADA & BIENVENIDA,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Día 02 PÁDEL & PASEO EN BARCO,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Día 03 PÁDEL & VIÑEDO,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Día 04 TORNEO & ATARDECER,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Día 05 SESIÓN FINAL & DESPEDIDA,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,‹,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Review 1,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Review 2,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Review 3,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,›,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,¿Necesito experiencia en pádel?,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,¿Está todo incluido?,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,¿Están incluidos los vuelos y traslados al aeropuerto?,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,VER TODAS LAS PREGUNTAS,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,Asegurar mi Plaza →,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,REJECT NON-ESSENTIAL,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/,GOT IT,(javascript),,,0,,false,false,false,,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Skip to main content,#main-content,http://localhost:4329/legal/terms-and-conditions#main-content,http://localhost:4329/legal/terms-and-conditions#main-content,200,,false,false,false,true,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Menorca YOU ARE VIEWING,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,INCLUDES,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,ITINERARY,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,BOOK,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/terms-and-conditions,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/terms-and-conditions,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,list of ADR bodies,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Privacy Policy,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/terms-and-conditions,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Menorca,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Corporate & Executive,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,PRIVACY POLICY,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,COOKIE POLICY,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,TERMS & CONDITIONS,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,LEGAL NOTICE,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/terms-and-conditions,Cookie Policy,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/terms-and-conditions,Destinations,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/terms-and-conditions,REJECT NON-ESSENTIAL,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/terms-and-conditions,GOT IT,(javascript),,,0,,false,false,false,,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Skip to main content,#main-content,http://localhost:4329/legal/privacy-policy#main-content,http://localhost:4329/legal/privacy-policy#main-content,200,,false,false,false,true,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Menorca YOU ARE VIEWING,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,INCLUDES,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,ITINERARY,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,BOOK,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/privacy-policy,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/privacy-policy,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,European Data Protection Board,https://www.edpb.europa.eu/about-edpb/our-members_en,https://www.edpb.europa.eu/about-edpb/our-members_en,https://www.edpb.europa.eu/about-edpb/our-members_en,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Information Commissioner's Office,https://ico.org.uk,https://ico.org.uk/,https://ico.org.uk/,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Cookie Policy,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/privacy-policy,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Menorca,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Corporate & Executive,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,PRIVACY POLICY,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,COOKIE POLICY,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,TERMS & CONDITIONS,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,LEGAL NOTICE,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/privacy-policy,Cookie Policy,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/privacy-policy,Destinations,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/privacy-policy,REJECT NON-ESSENTIAL,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/privacy-policy,GOT IT,(javascript),,,0,,false,false,false,,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Skip to main content,#main-content,http://localhost:4329/legal/legal-notice#main-content,http://localhost:4329/legal/legal-notice#main-content,200,,false,false,false,true,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Menorca YOU ARE VIEWING,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,INCLUDES,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,ITINERARY,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,BOOK,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/legal-notice,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,menorca.cspadel.com,https://menorca.cspadel.com,https://menorca.cspadel.com/,https://menorca.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,list of ADR bodies,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,200,,false,false,true,false,_blank,noopener noreferrer,true
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/legal-notice,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/legal-notice,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Menorca,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Corporate & Executive,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,PRIVACY POLICY,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,COOKIE POLICY,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,TERMS & CONDITIONS,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,LEGAL NOTICE,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/legal-notice,Cookie Policy,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/legal-notice,Destinations,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/legal-notice,REJECT NON-ESSENTIAL,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/legal-notice,GOT IT,(javascript),,,0,,false,false,false,,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Skip to main content,#main-content,http://localhost:4329/legal/cookie-policy#main-content,http://localhost:4329/legal/cookie-policy#main-content,200,,false,false,false,true,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Menorca YOU ARE VIEWING,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,INCLUDES,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,ITINERARY,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,BOOK,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Google Consent Mode v2,https://developers.google.com/tag-platform/security/guides/consent,https://developers.google.com/tag-platform/security/guides/consent,https://developers.google.com/tag-platform/security/guides/consent,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Google Privacy Policy,https://policies.google.com/privacy,https://policies.google.com/privacy,https://policies.google.com/privacy,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,tools.google.com/dlpage/gaoptout,https://tools.google.com/dlpage/gaoptout,https://tools.google.com/dlpage/gaoptout,https://tools.google.com/dlpage/gaoptout,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Google Chrome,https://support.google.com/chrome/answer/95647,https://support.google.com/chrome/answer/95647,https://support.google.com/chrome/answer/95647,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Mozilla Firefox,https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer,https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer,https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Apple Safari,https://support.apple.com/en-gb/guide/safari/sfri11471/mac,https://support.apple.com/en-gb/guide/safari/sfri11471/mac,https://support.apple.com/en-gb/guide/safari/sfri11471/mac,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Microsoft Edge,https://support.microsoft.com/en-us/edge/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use,https://support.microsoft.com/en-us/edge/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use,https://support.microsoft.com/en-us/edge/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,youronlinechoices.eu,https://youronlinechoices.eu/,https://youronlinechoices.eu/,https://youronlinechoices.eu/,200,,false,false,true,false,_blank,noopener noreferrer,true
+P0,HTTP 429,desktop,anchor,http://localhost:4329/legal/cookie-policy,aboutads.info,https://www.aboutads.info/choices,https://www.aboutads.info/choices,https://optout.aboutads.info/,429,,false,true,true,false,_blank,noopener noreferrer,true
+INFO,mailto: link (not fetched),desktop,anchor,http://localhost:4329/legal/cookie-policy,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Privacy Policy,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,All Courtside retreats,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Menorca,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,UK (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Our Story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,The Experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Corporate & Executive,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Upcoming Retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Includes,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Itinerary,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Book,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,PRIVACY POLICY,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,COOKIE POLICY,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,TERMS & CONDITIONS,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,LEGAL NOTICE,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,desktop,anchor,http://localhost:4329/legal/cookie-policy,Cookie Policy,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/cookie-policy,Destinations,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/cookie-policy,REJECT NON-ESSENTIAL,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),desktop,js-cta,http://localhost:4329/legal/cookie-policy,GOT IT,(javascript),,,0,,false,false,false,,,,true
+OK,,mobile,anchor,http://localhost:4329/,Skip to main content,#main-content,http://localhost:4329/#main-content,http://localhost:4329/#main-content,200,,false,false,false,true,,,true
+OK,,mobile,anchor,http://localhost:4329/,Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/,INCLUS,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,ITINÉRAIRE,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,RÉSERVER,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+INFO,Intentional redirector (messaging deep link),mobile,anchor,http://localhost:4329/,CONSULTAR AHORA,https://wa.me/447786694723,https://wa.me/447786694723,/send/?phone=447786694723&amp,200,,false,true,true,false,_blank,noopener noreferrer,true
+INFO,Intentional redirector (messaging deep link),mobile,anchor,http://localhost:4329/,SOLICITA UN RETIRO PRIVADO A MEDIDA →,https://wa.me/447786694723,https://wa.me/447786694723,/send/?phone=447786694723&amp,200,,false,true,true,false,_blank,noopener noreferrer,true
+INFO,Intentional redirector (messaging deep link),mobile,anchor,http://localhost:4329/,CONSULTAR AHORA,https://wa.me/447786694723,https://wa.me/447786694723,/send/?phone=447786694723&amp,200,,false,true,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Toutes les retraites Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Minorque,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Royaume-Uni (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Dubaï,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Entreprises et dirigeants,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,POLITIQUE DE CONFIDENTIALITÉ,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,POLITIQUE DE COOKIES,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,CONDITIONS GÉNÉRALES,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,MENTIONS LÉGALES,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/,Politique de Cookies,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,ES,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,EN,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,FR,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,VOIR L'EXPÉRIENCE,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Previous image,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Next image,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Photo 1,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Photo 2,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Photo 3,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Photo 4,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Photo 5,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Asegurar mi Plaza,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Día 01 LLEGADA & BIENVENIDA,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Día 02 PÁDEL & PASEO EN BARCO,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Día 03 PÁDEL & VIÑEDO,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Día 04 TORNEO & ATARDECER,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Día 05 SESIÓN FINAL & DESPEDIDA,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,‹,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Review 1,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Review 2,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Review 3,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,›,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,¿Necesito experiencia en pádel?,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,¿Está todo incluido?,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,¿Están incluidos los vuelos y traslados al aeropuerto?,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,VER TODAS LAS PREGUNTAS,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,Asegurar mi Plaza →,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,REFUSER LES NON ESSENTIELS,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/,COMPRIS,(javascript),,,0,,false,false,false,,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Skip to main content,#main-content,http://localhost:4329/legal/terms-and-conditions#main-content,http://localhost:4329/legal/terms-and-conditions#main-content,200,,false,false,false,true,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,INCLUS,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,ITINÉRAIRE,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,RÉSERVER,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/terms-and-conditions,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/terms-and-conditions,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,list of ADR bodies,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Privacy Policy,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/terms-and-conditions,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Toutes les retraites Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Minorque,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Royaume-Uni (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Dubaï,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Entreprises et dirigeants,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,POLITIQUE DE CONFIDENTIALITÉ,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,POLITIQUE DE COOKIES,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,CONDITIONS GÉNÉRALES,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,MENTIONS LÉGALES,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/terms-and-conditions,Politique de Cookies,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/legal/terms-and-conditions,REFUSER LES NON ESSENTIELS,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/legal/terms-and-conditions,COMPRIS,(javascript),,,0,,false,false,false,,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Skip to main content,#main-content,http://localhost:4329/legal/privacy-policy#main-content,http://localhost:4329/legal/privacy-policy#main-content,200,,false,false,false,true,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,INCLUS,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,ITINÉRAIRE,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,RÉSERVER,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/privacy-policy,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/privacy-policy,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,European Data Protection Board,https://www.edpb.europa.eu/about-edpb/our-members_en,https://www.edpb.europa.eu/about-edpb/our-members_en,https://www.edpb.europa.eu/about-edpb/our-members_en,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Information Commissioner's Office,https://ico.org.uk,https://ico.org.uk/,https://ico.org.uk/,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Cookie Policy,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/privacy-policy,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Toutes les retraites Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Minorque,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Royaume-Uni (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Dubaï,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Entreprises et dirigeants,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,POLITIQUE DE CONFIDENTIALITÉ,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,POLITIQUE DE COOKIES,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,CONDITIONS GÉNÉRALES,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,MENTIONS LÉGALES,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/privacy-policy,Politique de Cookies,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/legal/privacy-policy,REFUSER LES NON ESSENTIELS,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/legal/privacy-policy,COMPRIS,(javascript),,,0,,false,false,false,,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Skip to main content,#main-content,http://localhost:4329/legal/legal-notice#main-content,http://localhost:4329/legal/legal-notice#main-content,200,,false,false,false,true,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,INCLUS,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,ITINÉRAIRE,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,RÉSERVER,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/legal-notice,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,menorca.cspadel.com,https://menorca.cspadel.com,https://menorca.cspadel.com/,https://menorca.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,list of ADR bodies,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en,200,,false,false,true,false,_blank,noopener noreferrer,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/legal-notice,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/legal-notice,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Toutes les retraites Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Minorque,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Royaume-Uni (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Dubaï,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Entreprises et dirigeants,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,POLITIQUE DE CONFIDENTIALITÉ,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,POLITIQUE DE COOKIES,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,CONDITIONS GÉNÉRALES,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,MENTIONS LÉGALES,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/legal-notice,Politique de Cookies,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/legal/legal-notice,REFUSER LES NON ESSENTIELS,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/legal/legal-notice,COMPRIS,(javascript),,,0,,false,false,false,,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Skip to main content,#main-content,http://localhost:4329/legal/cookie-policy#main-content,http://localhost:4329/legal/cookie-policy#main-content,200,,false,false,false,true,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,(no text),/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,false
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,INCLUS,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,ITINÉRAIRE,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,RÉSERVER,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Google Consent Mode v2,https://developers.google.com/tag-platform/security/guides/consent,https://developers.google.com/tag-platform/security/guides/consent,https://developers.google.com/tag-platform/security/guides/consent,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Google Privacy Policy,https://policies.google.com/privacy,https://policies.google.com/privacy,https://policies.google.com/privacy,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,tools.google.com/dlpage/gaoptout,https://tools.google.com/dlpage/gaoptout,https://tools.google.com/dlpage/gaoptout,https://tools.google.com/dlpage/gaoptout,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Google Chrome,https://support.google.com/chrome/answer/95647,https://support.google.com/chrome/answer/95647,https://support.google.com/chrome/answer/95647,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Mozilla Firefox,https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer,https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer,https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Apple Safari,https://support.apple.com/en-gb/guide/safari/sfri11471/mac,https://support.apple.com/en-gb/guide/safari/sfri11471/mac,https://support.apple.com/en-gb/guide/safari/sfri11471/mac,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Microsoft Edge,https://support.microsoft.com/en-us/edge/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use,https://support.microsoft.com/en-us/edge/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use,https://support.microsoft.com/en-us/edge/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use,200,,false,false,true,false,_blank,noopener noreferrer,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,youronlinechoices.eu,https://youronlinechoices.eu/,https://youronlinechoices.eu/,https://youronlinechoices.eu/,200,,false,false,true,false,_blank,noopener noreferrer,true
+P0,HTTP 429,mobile,anchor,http://localhost:4329/legal/cookie-policy,aboutads.info,https://www.aboutads.info/choices,https://www.aboutads.info/choices,https://optout.aboutads.info/,429,,false,true,true,false,_blank,noopener noreferrer,true
+INFO,mailto: link (not fetched),mobile,anchor,http://localhost:4329/legal/cookie-policy,awatelet@cspadel.com,mailto:awatelet@cspadel.com,mailto:awatelet@cspadel.com,,0,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Privacy Policy,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,(no text),https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Toutes les retraites Courtside,https://www.cspadel.com,https://www.cspadel.com/,https://www.cspadel.com/,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Minorque,/,http://localhost:4329/,http://localhost:4329/,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Royaume-Uni (East Sussex),https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,https://www.cspadel.com/east-sussex,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,https://www.cspadel.com/bali,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Dubaï,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,https://www.cspadel.com/dubai,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Notre histoire,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,https://www.cspadel.com/our-story,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,L'expérience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,https://www.cspadel.com/the-experience,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Entreprises et dirigeants,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,https://www.cspadel.com/executive-retreat,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Prochaines retraites,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,https://www.cspadel.com/upcoming-retreats,200,,false,false,true,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Inclus,/#includes,http://localhost:4329/#includes,http://localhost:4329/#includes,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Itinéraire,/#itinerary,http://localhost:4329/#itinerary,http://localhost:4329/#itinerary,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Réserver,/#rooms,http://localhost:4329/#rooms,http://localhost:4329/#rooms,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,FAQ,/#faq,http://localhost:4329/#faq,http://localhost:4329/#faq,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,POLITIQUE DE CONFIDENTIALITÉ,/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,http://localhost:4329/legal/privacy-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,POLITIQUE DE COOKIES,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,CONDITIONS GÉNÉRALES,/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,http://localhost:4329/legal/terms-and-conditions,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,MENTIONS LÉGALES,/legal/legal-notice,http://localhost:4329/legal/legal-notice,http://localhost:4329/legal/legal-notice,200,,false,false,false,false,,,true
+OK,,mobile,anchor,http://localhost:4329/legal/cookie-policy,Politique de Cookies,/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,http://localhost:4329/legal/cookie-policy,200,,false,false,false,false,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/legal/cookie-policy,REFUSER LES NON ESSENTIELS,(javascript),,,0,,false,false,false,,,,true
+INFO,JS-driven CTA — verify behaviour manually (opens modal / drawer),mobile,js-cta,http://localhost:4329/legal/cookie-policy,COMPRIS,(javascript),,,0,,false,false,false,,,,true

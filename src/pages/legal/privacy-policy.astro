@@ -1,10 +1,15 @@
 ---
 /**
- * Ported verbatim from the Menorca microsite (src/pages/legal/privacy-policy.astro).
- * The wording is the founders' existing approved text — not rewritten here.
- * Only the host reference and section 5 differ; section 5 is marked for review
- * because it describes a single Spanish retreat and this site sells four
- * destinations across three jurisdictions.
+ * Privacy Policy — scoped for the UK and the whole EU/EEA.
+ *
+ * Rewritten from the Menorca microsite version, which assumed a single Spanish
+ * retreat. This site sells across Spain, Indonesia, the UAE and the UK, so the
+ * transfer clause, the supervisory-authority wording and the retention table
+ * all had to widen.
+ *
+ * Items that need an appointment or a contract rather than wording — the
+ * Article 27 EU representative above all — are marked with
+ * LegalPendingNotice rather than asserted.
  */
 import Layout from '../../layouts/Layout.astro';
 import FooterIsland from '../../components/FooterIsland';
@@ -13,7 +18,7 @@ import { sitePath, SITE_HOST } from '../../constants/site';
 
 const title = 'Privacy Policy | Courtside Padel Retreats';
 const description =
-  'How Courtside Padel Retreats collects, uses and protects your personal data in accordance with UK GDPR and EU GDPR.';
+  'How Courtside Padel Retreats collects, uses and protects your personal data under the UK GDPR and the EU GDPR.';
 const canonical = sitePath('/legal/privacy-policy');
 ---
 
@@ -23,30 +28,41 @@ const canonical = sitePath('/legal/privacy-policy');
 
       <p class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-4">Legal</p>
       <h1 class="text-4xl md:text-5xl font-light text-brand-dark tracking-wide mb-4">Privacy Policy</h1>
-      <p class="text-brand-dark/50 text-sm mb-12">Last updated: May 2026</p>
+      <p class="text-brand-dark/50 text-sm mb-12">Last updated: September 2026</p>
 
       <div class="prose prose-lg max-w-none text-brand-dark/80 space-y-10">
+
+        <section>
+          <p class="text-brand-dark/70">This policy applies to everyone who contacts us or books a retreat, wherever you live. It is written to satisfy both the <strong>UK GDPR</strong> and the <strong>EU GDPR</strong> (Regulation (EU) 2016/679). Where the two differ, we apply whichever gives you more protection.</p>
+          <p class="mt-3 text-brand-dark/70">This policy is published in English. Translations may be provided for convenience; the English version governs.</p>
+        </section>
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">1. Who we are</h2>
           <p>Courtside Padel Retreats ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>") operates the website <strong>{SITE_HOST}</strong> and organises luxury padel retreats.</p>
           <p class="mt-3"><strong>Data Controller:</strong><br />
           Crtside Events Ltd (trading as Courtside Padel Retreats)<br />
-          Company No. 16289087<br />
-          24 Hendham Road, SW17 7DQ<br />
+          Registered in England and Wales, Company No. 16289087<br />
+          24 Hendham Road, London SW17 7DQ, United Kingdom<br />
           Email: <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a></p>
+
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-6">1.1 Our representative in the EU</h3>
+          <LegalPendingNotice reason="Article 27 of the EU GDPR requires a controller established outside the EU that offers goods or services to people in the EU to designate a written representative in a member state where those people are. Crtside Events Ltd is a UK company marketing retreats to EU residents, so the obligation is engaged. Article 27(2) exempts processing that is occasional, does not involve large-scale processing of special category data, and is unlikely to result in a risk to rights and freedoms — all three must hold. Taking bookings year-round is not obviously 'occasional', and the health, dietary and accessibility data collected for every guest is special category data, so the exemption looks unlikely to be available here. Worth a considered assessment rather than an assumption either way. If a representative is appointed, their name and address belong in this section." />
         </section>
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">2. What personal data we collect</h2>
           <p>We may collect the following categories of personal data:</p>
           <ul class="list-disc pl-6 space-y-2 mt-3">
-            <li><strong>Contact details:</strong> name, email address, phone number</li>
-            <li><strong>Booking information:</strong> group size, preferred dates, accommodation type, special dietary or accessibility requirements</li>
-            <li><strong>Payment details:</strong> processed securely via our payment provider — we do not store full card numbers</li>
+            <li><strong>Contact details:</strong> name, email address, phone number, country of residence</li>
+            <li><strong>Booking information:</strong> group size, preferred dates, accommodation type, and the travel details needed to deliver your retreat</li>
+            <li><strong>Special category data:</strong> dietary requirements, allergies, accessibility needs and any health information you choose to share so we can run activities safely</li>
+            <li><strong>Payment details:</strong> processed by our payment provider — we do not store full card numbers</li>
             <li><strong>Communications:</strong> enquiries, emails, or messages sent to us</li>
-            <li><strong>Technical data:</strong> IP address, browser type, and pages visited, collected via server logs</li>
+            <li><strong>Technical data:</strong> IP address, browser type, and pages visited, collected via server logs and, with your consent, analytics cookies</li>
           </ul>
+          <p class="mt-3">Providing contact and booking data is necessary to enter into a contract with us; without it we cannot arrange your retreat. Everything else is optional, though withholding dietary or medical information may limit what we can safely provide.</p>
+          <p class="mt-3">Where you give us personal data about other people in your group, you confirm you may do so and that you have shared this policy with them.</p>
         </section>
 
         <section>
@@ -55,80 +71,109 @@ const canonical = sitePath('/legal/privacy-policy');
             <thead>
               <tr class="border-b border-brand-dark/20">
                 <th class="text-left py-2 pr-4 font-semibold text-brand-dark">Purpose</th>
-                <th class="text-left py-2 font-semibold text-brand-dark">Legal basis (UK/EU GDPR)</th>
+                <th class="text-left py-2 font-semibold text-brand-dark">Legal basis</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-brand-dark/10">
-              <tr><td class="py-2 pr-4">Respond to enquiries and manage bookings</td><td class="py-2">Contract / Legitimate interest</td></tr>
-              <tr><td class="py-2 pr-4">Process payments and issue confirmations</td><td class="py-2">Contract</td></tr>
-              <tr><td class="py-2 pr-4">Send retreat-related updates (itinerary changes, reminders)</td><td class="py-2">Contract</td></tr>
-              <tr><td class="py-2 pr-4">Marketing communications (only with your consent)</td><td class="py-2">Consent</td></tr>
-              <tr><td class="py-2 pr-4">Comply with legal obligations</td><td class="py-2">Legal obligation</td></tr>
-              <tr><td class="py-2 pr-4">Improve our website and services</td><td class="py-2">Legitimate interest</td></tr>
+              <tr><td class="py-2 pr-4">Respond to enquiries</td><td class="py-2">Steps prior to a contract (Art. 6(1)(b)) / legitimate interest (Art. 6(1)(f))</td></tr>
+              <tr><td class="py-2 pr-4">Manage bookings and deliver the retreat</td><td class="py-2">Contract (Art. 6(1)(b))</td></tr>
+              <tr><td class="py-2 pr-4">Process payments and issue confirmations</td><td class="py-2">Contract (Art. 6(1)(b))</td></tr>
+              <tr><td class="py-2 pr-4">Dietary, accessibility and health requirements</td><td class="py-2">Your explicit consent (Art. 9(2)(a)); vital interests in an emergency (Art. 9(2)(c))</td></tr>
+              <tr><td class="py-2 pr-4">Marketing emails</td><td class="py-2">Consent (Art. 6(1)(a)), or soft opt-in to existing customers, withdrawable at any time</td></tr>
+              <tr><td class="py-2 pr-4">Analytics and advertising measurement</td><td class="py-2">Consent (Art. 6(1)(a)), via the cookie banner</td></tr>
+              <tr><td class="py-2 pr-4">Accounting, tax and legal compliance</td><td class="py-2">Legal obligation (Art. 6(1)(c))</td></tr>
+              <tr><td class="py-2 pr-4">Security and improving our website</td><td class="py-2">Legitimate interest (Art. 6(1)(f))</td></tr>
             </tbody>
           </table>
+          <p class="mt-3">We do not make decisions about you by automated means alone, and we do not profile you in any way that produces legal or similarly significant effects.</p>
         </section>
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">4. Who we share your data with</h2>
-          <p>We share your data only where necessary:</p>
+          <p>We share your data only where necessary to deliver your retreat or to meet a legal obligation:</p>
           <ul class="list-disc pl-6 space-y-2 mt-3">
-            <li><strong>Service providers:</strong> accommodation partners, transport providers, and activity operators involved in delivering your retreat</li>
-            <li><strong>Payment processor:</strong> Stripe — subject to their own privacy policy</li>
-            <li><strong>Legal or regulatory authorities:</strong> where required by law</li>
+            <li><strong>Travel service providers:</strong> hotels and villas, transfer and transport operators, coaches, restaurants and activity operators at your destination</li>
+            <li><strong>Local coordinators:</strong> partners who arrange activities on the ground at some destinations</li>
+            <li><strong>Payment processor:</strong> subject to their own privacy policy</li>
+            <li><strong>Professional advisers:</strong> accountants, insurers and lawyers, where relevant</li>
+            <li><strong>Authorities:</strong> where required by law</li>
           </ul>
-          <p class="mt-3">We do not sell your personal data to third parties.</p>
+          <p class="mt-3">Providers acting on our instructions are bound by written processing terms. Providers who decide how to use your data themselves — a hotel operating its own guest records, for example — act as separate controllers under their own policies.</p>
+          <p class="mt-3">We do not sell your personal data, and we do not share it for third-party advertising.</p>
         </section>
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">5. International transfers</h2>
-          <LegalPendingNotice reason="The source text names a single retreat in Spain. This site sells retreats in Spain (EU), Indonesia, the UAE and the United Kingdom — three of which sit outside the UK and EEA. The clause below understates the transfers actually taking place and needs replacing with wording your legal adviser approves." />
-          <p>Our retreat takes place in Spain (EU). Where data is transferred outside the UK or EEA, we ensure appropriate safeguards are in place (Standard Contractual Clauses or adequacy decisions).</p>
+          <p>We are established in the United Kingdom and we run retreats in several countries, so delivering your booking necessarily involves transferring your data internationally. Where you are in the EEA, that includes transfers out of the EEA.</p>
+          <table class="w-full text-sm border-collapse mt-4">
+            <thead>
+              <tr class="border-b border-brand-dark/20">
+                <th class="text-left py-2 pr-4 font-semibold text-brand-dark">Destination</th>
+                <th class="text-left py-2 font-semibold text-brand-dark">Basis for the transfer</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-dark/10">
+              <tr><td class="py-2 pr-4">United Kingdom</td><td class="py-2">European Commission adequacy decision for the UK</td></tr>
+              <tr><td class="py-2 pr-4">Spain (Menorca) and other EEA countries</td><td class="py-2">Within the EEA; UK adequacy regulations for EEA transfers</td></tr>
+              <tr><td class="py-2 pr-4">Indonesia (Bali)</td><td class="py-2">Standard Contractual Clauses / UK International Data Transfer Agreement, plus a transfer risk assessment</td></tr>
+              <tr><td class="py-2 pr-4">United Arab Emirates (Dubai)</td><td class="py-2">Standard Contractual Clauses / UK International Data Transfer Agreement, plus a transfer risk assessment</td></tr>
+            </tbody>
+          </table>
+          <p class="mt-3">For destinations with no adequacy decision, we transfer only the minimum a provider needs to deliver your booking — typically a name, arrival details and any dietary or accessibility requirement. Where a transfer is strictly necessary to perform your contract, we may also rely on Article 49(1)(b).</p>
+          <p class="mt-3">You can ask us for a copy of the safeguards that apply to any transfer by emailing <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>.</p>
         </section>
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">6. How long we keep your data</h2>
           <ul class="list-disc pl-6 space-y-2 mt-3">
-            <li><strong>Booking records:</strong> 7 years (UK tax / legal requirement)</li>
+            <li><strong>Booking and payment records:</strong> 7 years after the end of the tax year of the booking, to meet UK accounting and tax requirements</li>
             <li><strong>Enquiries that did not become bookings:</strong> 12 months</li>
-            <li><strong>Marketing consent:</strong> until you withdraw consent</li>
+            <li><strong>Health, dietary and accessibility information:</strong> deleted within 3 months of the retreat ending, unless needed for an ongoing claim</li>
+            <li><strong>Marketing consent records:</strong> until you withdraw consent, plus 2 years as proof that consent was given</li>
+            <li><strong>Records relevant to a claim:</strong> until the claim is resolved and any limitation period has expired</li>
           </ul>
         </section>
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">7. Your rights</h2>
-          <p>Under UK GDPR and EU GDPR you have the right to:</p>
+          <p>Wherever you live in the UK or the EEA, you have the right to:</p>
           <ul class="list-disc pl-6 space-y-2 mt-3">
             <li><strong>Access</strong> the personal data we hold about you</li>
-            <li><strong>Rectify</strong> inaccurate data</li>
-            <li><strong>Erase</strong> your data ("<em>right to be forgotten</em>"), subject to legal retention requirements</li>
+            <li><strong>Rectify</strong> inaccurate or incomplete data</li>
+            <li><strong>Erase</strong> your data, subject to legal retention requirements</li>
             <li><strong>Restrict</strong> processing in certain circumstances</li>
-            <li><strong>Object</strong> to processing based on legitimate interest</li>
-            <li><strong>Data portability</strong> — receive your data in a structured, machine-readable format</li>
-            <li><strong>Withdraw consent</strong> at any time where processing is based on consent</li>
+            <li><strong>Object</strong> to processing based on legitimate interest, and to direct marketing at any time, absolutely and free of charge</li>
+            <li><strong>Data portability</strong> — receive data you gave us in a structured, machine-readable format</li>
+            <li><strong>Withdraw consent</strong> at any time, without affecting processing already carried out</li>
           </ul>
-          <p class="mt-3">To exercise any of these rights, contact us at <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>. We will respond within one calendar month.</p>
-          <p class="mt-3">You also have the right to lodge a complaint with the <strong>UK Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk" class="text-brand-gold underline underline-offset-2" target="_blank" rel="noopener noreferrer">ico.org.uk</a> or the relevant supervisory authority in your EU member state.</p>
+          <p class="mt-3">Write to <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>. We respond within one month, extendable by two further months for complex requests, and we will tell you if we need the extension. Exercising these rights is free unless a request is manifestly unfounded or excessive.</p>
+          <p class="mt-3"><strong>Complaints.</strong> If you are in the EEA, you may complain to the supervisory authority in the member state where you live, where you work, or where the problem happened — a list is published by the <a href="https://www.edpb.europa.eu/about-edpb/our-members_en" class="text-brand-gold underline underline-offset-2" target="_blank" rel="noopener noreferrer">European Data Protection Board</a>. If you are in the UK, you may complain to the <a href="https://ico.org.uk" class="text-brand-gold underline underline-offset-2" target="_blank" rel="noopener noreferrer">Information Commissioner's Office</a>. You can always come to us first, but you do not have to.</p>
         </section>
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">8. Cookies</h2>
-          <p>This website uses essential cookies and, with your consent, analytics and advertising cookies to measure site usage and campaign performance. For full details see our <a href="/cookies" class="text-brand-gold underline underline-offset-2">Cookie Policy</a>.</p>
+          <p>We use essential cookies to make the site work and, only with your consent, analytics and advertising cookies. You can change or withdraw your choice at any time from our <a href="/cookies" class="text-brand-gold underline underline-offset-2">Cookie Policy</a> page, where the full list is set out.</p>
         </section>
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">9. Security</h2>
-          <p>We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure. Our website is served over HTTPS.</p>
+          <p>We apply technical and organisational measures appropriate to the risk, including encryption in transit, access controls limiting guest data to those who need it, and vetting of the providers we share data with. This site is served over HTTPS.</p>
+          <p class="mt-3">If a breach is likely to result in a high risk to your rights and freedoms, we will tell you without undue delay, and we will notify the competent supervisory authority within 72 hours where required.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">10. Changes to this policy</h2>
-          <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page will reflect any changes. Continued use of our website after changes are published constitutes acceptance of the revised policy.</p>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">10. Children</h2>
+          <p>Our retreats are sold to adults. We do not knowingly collect data from anyone under 16 except where a guardian provides it as part of a family booking. If you believe we hold a child's data without a proper basis, contact us and we will delete it.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">11. Contact</h2>
-          <p>For any privacy-related queries, contact us at:<br />
+          <h2 class="text-2xl font-light text-brand-dark mb-4">11. Changes to this policy</h2>
+          <p>We may update this policy. The "Last updated" date above reflects the current version, and we will tell you directly about changes that materially affect your rights.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">12. Contact</h2>
+          <p>For any privacy question, or to exercise any right above:<br />
           <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a></p>
         </section>
 
