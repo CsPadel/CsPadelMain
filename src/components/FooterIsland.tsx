@@ -231,11 +231,13 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             {t('footer.rights')}
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-white/22 text-xs font-light tracking-wide hover:text-white/50 transition-colors">
+            {/* Legal pages are published in English only, so they are not
+                passed through localizedHref. */}
+            <a href="/legal/privacy-policy" className="text-white/22 text-xs font-light tracking-wide hover:text-white/50 transition-colors">
               {t('footer.privacy')}
             </a>
             <span className="text-white/12" aria-hidden="true">·</span>
-            <a href="#" className="text-white/22 text-xs font-light tracking-wide hover:text-white/50 transition-colors">
+            <a href="/legal/terms-and-conditions" className="text-white/22 text-xs font-light tracking-wide hover:text-white/50 transition-colors">
               {t('footer.terms')}
             </a>
             <span className="text-white/12" aria-hidden="true">·</span>
