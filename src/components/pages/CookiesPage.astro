@@ -4,6 +4,7 @@ import CookiePolicyView from '../CookiePolicyView';
 import FooterIsland from '../FooterIsland';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { SITE_URL } from '../../constants/site';
 
 interface Props {
   locale: Locale;
@@ -11,7 +12,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const seo = getPageSeo('cookies', locale);
-const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
+const siteURL = Astro.site ?? new URL(SITE_URL);
 const alternateUrls = getAlternateUrls(siteURL.href, 'cookies');
 ---
 

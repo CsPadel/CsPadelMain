@@ -2,9 +2,10 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
+import { SITE_URL } from './src/constants/site.ts';
 
 export default defineConfig({
-  site: 'https://courtsidepadel.com',
+  site: SITE_URL,
   integrations: [react()],
   // "About Us" became "The Experience". Keep the old URLs alive so existing
   // links and search results don't 404.

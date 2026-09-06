@@ -6,6 +6,7 @@ import PhotoStrip from '../PhotoStrip';
 import { EAST_SUSSEX_GALLERY } from '../../constants/eastSussexGallery';
 import type { Locale } from '../../i18n/locales';
 import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { SITE_URL } from '../../constants/site';
 import { getTranslations } from '../../i18n/getTranslations';
 
 interface Props {
@@ -14,7 +15,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const seo = getPageSeo('eastSussex', locale);
-const siteURL = Astro.site ?? new URL('https://courtsidepadel.com');
+const siteURL = Astro.site ?? new URL(SITE_URL);
 const alternateUrls = getAlternateUrls(siteURL.href, 'eastSussex');
 const c = getTranslations(locale).eastSussexPage.landing;
 
