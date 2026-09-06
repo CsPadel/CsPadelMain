@@ -1,61 +1,57 @@
-# Link & CTA audit — local (astro dev)
+# Link & CTA audit — local (astro dev) — after phase 2
 
 - Base: `http://[::1]:4321`
-- Run: 2026-09-05T23:57:32.949Z
+- Run: 2026-09-06T00:29:05.853Z
 - Viewports: 1440x900, 390x844
-- Pages crawled: 27
-- Links checked: 1545
+- Pages crawled: 29
+- Links checked: 1671
 
 | Severity | Count |
 | --- | ---: |
-| P0 | 216 |
-| OK | 1107 |
-| INFO | 615 |
+| P0 | 116 |
+| OK | 1307 |
+| INFO | 663 |
 
 ## Findings, worst first
 
 | Sev | Issue | Link text | href | Final URL | Viewports | Pages |
 | --- | --- | --- | --- | --- | --- | ---: |
-| P0 | Dead link — resolves to the page it sits on | Courtside Padel on Instagram | `#` | — | desktop, mobile | 27 |
-| P0 | Dead link — resolves to the page it sits on | Courtside Padel on LinkedIn | `#` | — | desktop, mobile | 27 |
-| P0 | Dead link — resolves to the page it sits on | Privacy Policy | `#` | — | desktop, mobile | 9 |
-| P0 | Dead link — resolves to the page it sits on | Terms of Service | `#` | — | desktop, mobile | 9 |
-| P0 | Dead link — resolves to the page it sits on | Privacidad | `#` | — | desktop, mobile | 9 |
-| P0 | Dead link — resolves to the page it sits on | Términos | `#` | — | desktop, mobile | 9 |
-| P0 | Dead link — resolves to the page it sits on | Politique de confidentialité | `#` | — | desktop, mobile | 9 |
-| P0 | Dead link — resolves to the page it sits on | Conditions d'utilisation | `#` | — | desktop, mobile | 9 |
+| P0 | Dead link — resolves to the page it sits on | Courtside Padel on Instagram | `#` | — | desktop, mobile | 29 |
+| P0 | Dead link — resolves to the page it sits on | Courtside Padel on LinkedIn | `#` | — | desktop, mobile | 29 |
 
 ## Page-level SEO
 
 | Page | Status | Canonical | Canonical host resolves to this site? | H1 count |
 | --- | ---: | --- | --- | ---: |
-| http://[::1]:4321/ | 200 | https://courtsidepadel.com/ | **no — courtsidepadel.com** | **0** |
-| http://[::1]:4321/es/ | 200 | https://courtsidepadel.com/es/ | **no — courtsidepadel.com** | **0** |
-| http://[::1]:4321/fr/ | 200 | https://courtsidepadel.com/fr/ | **no — courtsidepadel.com** | **0** |
-| http://[::1]:4321/our-story | 200 | https://courtsidepadel.com/our-story | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/the-experience | 200 | https://courtsidepadel.com/the-experience | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/east-sussex | 200 | https://courtsidepadel.com/east-sussex | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/bali | 200 | https://courtsidepadel.com/bali | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/dubai | 200 | https://courtsidepadel.com/dubai | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/upcoming-retreats | 200 | https://courtsidepadel.com/upcoming-retreats | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/executive-retreat | 200 | https://courtsidepadel.com/executive-retreat | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/cookies | 200 | https://courtsidepadel.com/cookies | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/es/our-story | 200 | https://courtsidepadel.com/es/our-story | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/es/the-experience | 200 | https://courtsidepadel.com/es/the-experience | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/es/east-sussex | 200 | https://courtsidepadel.com/es/east-sussex | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/es/bali | 200 | https://courtsidepadel.com/es/bali | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/es/dubai | 200 | https://courtsidepadel.com/es/dubai | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/es/upcoming-retreats | 200 | https://courtsidepadel.com/es/upcoming-retreats | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/es/executive-retreat | 200 | https://courtsidepadel.com/es/executive-retreat | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/es/cookies | 200 | https://courtsidepadel.com/es/cookies | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/fr/our-story | 200 | https://courtsidepadel.com/fr/our-story | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/fr/the-experience | 200 | https://courtsidepadel.com/fr/the-experience | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/fr/east-sussex | 200 | https://courtsidepadel.com/fr/east-sussex | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/fr/bali | 200 | https://courtsidepadel.com/fr/bali | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/fr/dubai | 200 | https://courtsidepadel.com/fr/dubai | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/fr/upcoming-retreats | 200 | https://courtsidepadel.com/fr/upcoming-retreats | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/fr/executive-retreat | 200 | https://courtsidepadel.com/fr/executive-retreat | **no — courtsidepadel.com** | 1 |
-| http://[::1]:4321/fr/cookies | 200 | https://courtsidepadel.com/fr/cookies | **no — courtsidepadel.com** | 1 |
+| http://[::1]:4321/ | 200 | https://www.cspadel.com/ | **no — www.cspadel.com** | **0** |
+| http://[::1]:4321/es/ | 200 | https://www.cspadel.com/es/ | **no — www.cspadel.com** | **0** |
+| http://[::1]:4321/fr/ | 200 | https://www.cspadel.com/fr/ | **no — www.cspadel.com** | **0** |
+| http://[::1]:4321/our-story | 200 | https://www.cspadel.com/our-story | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/the-experience | 200 | https://www.cspadel.com/the-experience | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/east-sussex | 200 | https://www.cspadel.com/east-sussex | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/bali | 200 | https://www.cspadel.com/bali | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/dubai | 200 | https://www.cspadel.com/dubai | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/upcoming-retreats | 200 | https://www.cspadel.com/upcoming-retreats | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/executive-retreat | 200 | https://www.cspadel.com/executive-retreat | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/legal/privacy-policy | 200 | https://www.cspadel.com/legal/privacy-policy | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/legal/terms-and-conditions | 200 | https://www.cspadel.com/legal/terms-and-conditions | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/cookies | 200 | https://www.cspadel.com/cookies | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/es/our-story | 200 | https://www.cspadel.com/es/our-story | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/es/the-experience | 200 | https://www.cspadel.com/es/the-experience | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/es/east-sussex | 200 | https://www.cspadel.com/es/east-sussex | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/es/bali | 200 | https://www.cspadel.com/es/bali | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/es/dubai | 200 | https://www.cspadel.com/es/dubai | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/es/upcoming-retreats | 200 | https://www.cspadel.com/es/upcoming-retreats | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/es/executive-retreat | 200 | https://www.cspadel.com/es/executive-retreat | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/es/cookies | 200 | https://www.cspadel.com/es/cookies | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/fr/our-story | 200 | https://www.cspadel.com/fr/our-story | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/fr/the-experience | 200 | https://www.cspadel.com/fr/the-experience | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/fr/east-sussex | 200 | https://www.cspadel.com/fr/east-sussex | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/fr/bali | 200 | https://www.cspadel.com/fr/bali | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/fr/dubai | 200 | https://www.cspadel.com/fr/dubai | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/fr/upcoming-retreats | 200 | https://www.cspadel.com/fr/upcoming-retreats | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/fr/executive-retreat | 200 | https://www.cspadel.com/fr/executive-retreat | **no — www.cspadel.com** | 1 |
+| http://[::1]:4321/fr/cookies | 200 | https://www.cspadel.com/fr/cookies | **no — www.cspadel.com** | 1 |
 
 ## JS-driven CTAs
 
@@ -63,10 +59,10 @@ These trigger no navigation, so no link checker sees them. Each needs a manual p
 
 | CTA text | Pages |
 | --- | ---: |
-| DESTINATIONS | 18 |
-| EN | 27 |
-| ES | 27 |
-| FR | 27 |
+| DESTINATIONS | 20 |
+| EN | 29 |
+| ES | 29 |
+| FR | 29 |
 | DISCOVER EXPERIENCES | 1 |
 | PLAN YOUR RETREAT | 2 |
 | ‹ | 3 |
@@ -75,8 +71,8 @@ These trigger no navigation, so no link checker sees them. Each needs a manual p
 | Review 3 | 3 |
 | Review 4 | 3 |
 | › | 3 |
-| REJECT NON-ESSENTIAL | 9 |
-| ACCEPT ALL | 9 |
+| REJECT NON-ESSENTIAL | 11 |
+| ACCEPT ALL | 11 |
 | DESTINOS | 9 |
 | DESCUBRE LAS EXPERIENCIAS | 1 |
 | PLANIFICA TU RETIRO | 2 |
