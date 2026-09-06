@@ -1,23 +1,29 @@
 ---
 /**
- * Ported from the Menorca microsite (src/pages/legal/terms-and-conditions.astro).
- * The wording is the founders' existing approved text — not rewritten here.
+ * Booking Terms & Conditions — scoped for the UK and the whole EU/EEA.
  *
- * Two clauses describe the Menorca 2026 retreat specifically (its dates,
- * venues, airport and balance-payment deadline). They are rendered inside a
- * review notice rather than as live terms, because presenting them as the
- * terms of a site that also sells Bali, Dubai and East Sussex would be
- * factually wrong and commercially binding. Replacing them is a decision for
- * the founders and their legal adviser, not a drafting job for this branch.
+ * Rewritten from the Menorca microsite version, which described one Spanish
+ * retreat in 2026 and carried none of the package travel provisions.
+ *
+ * A retreat here combines accommodation, transfers and activities sold at an
+ * inclusive price, which makes it a "package" and Courtside its organiser
+ * under Directive (EU) 2015/2302 and the UK Package Travel and Linked Travel
+ * Arrangements Regulations 2018. Those rules give travellers rights that a
+ * contract cannot sign away, so they are written in here rather than left out.
+ *
+ * Two obligations cannot be met by wording and are marked with
+ * LegalPendingNotice: insolvency protection, which requires a bond, trust
+ * account or insurance policy, and the standard information form, which must
+ * be handed over before a booking is taken.
  */
 import Layout from '../../layouts/Layout.astro';
 import FooterIsland from '../../components/FooterIsland';
 import LegalPendingNotice from '../../components/LegalPendingNotice.astro';
 import { sitePath } from '../../constants/site';
 
-const title = 'Terms & Conditions | Courtside Padel Retreats';
+const title = 'Booking Terms & Conditions | Courtside Padel Retreats';
 const description =
-  'Booking terms and conditions for Courtside Padel Retreats, including payment, cancellation, and liability.';
+  'Booking terms for Courtside Padel Retreats: payment, changes, cancellation, package travel rights and liability, for travellers in the UK and the EU.';
 const canonical = sitePath('/legal/terms-and-conditions');
 ---
 
@@ -26,105 +32,159 @@ const canonical = sitePath('/legal/terms-and-conditions');
     <div class="max-w-3xl mx-auto px-6 md:px-8">
 
       <p class="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-4">Legal</p>
-      <h1 class="text-4xl md:text-5xl font-light text-brand-dark tracking-wide mb-4">Terms &amp; Conditions</h1>
-      <p class="text-brand-dark/50 text-sm mb-12">Last updated: May 2026</p>
+      <h1 class="text-4xl md:text-5xl font-light text-brand-dark tracking-wide mb-4">Booking Terms &amp; Conditions</h1>
+      <p class="text-brand-dark/50 text-sm mb-12">Last updated: September 2026</p>
 
       <div class="prose prose-lg max-w-none text-brand-dark/80 space-y-10">
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">1. Agreement</h2>
-          <p>By making a booking enquiry or completing a booking with Courtside Padel Retreats ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>"), you agree to these Terms &amp; Conditions. Please read them carefully before booking.</p>
+          <p class="text-brand-dark/70">These terms apply to every retreat we sell, wherever you live. They are written to meet the <strong>Package Travel Directive (EU) 2015/2302</strong> and the <strong>UK Package Travel and Linked Travel Arrangements Regulations 2018</strong>.</p>
+          <p class="mt-3 text-brand-dark/70">Nothing here removes or limits a right the law gives you. Where a clause conflicts with a mandatory consumer protection that applies to you, that protection wins and the rest of these terms continue to apply.</p>
+          <p class="mt-3 text-brand-dark/70">Published in English. Translations may be provided for convenience; the English version governs.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">2. The retreat</h2>
-          <LegalPendingNotice reason="The source clause below defines 'the retreat' as Menorca 2026 only — its dates, venues and airport. This site sells Menorca, Bali, Dubai and East Sussex, so it cannot stand as written. It needs replacing with either per-retreat terms or a general clause that points at each retreat's own published inclusions.">
-            <div class="mt-4 space-y-3 text-red-900/80">
-              <p>The Courtside Menorca Padel Retreat 2026 runs from <strong>30 September – 4 October 2026</strong> (4 nights, 5 days) in Menorca, Spain. Places are strictly limited.</p>
-              <p>The retreat includes:</p>
-              <ul class="list-disc pl-6 space-y-1">
-                <li>4 nights accommodation at Barceló Nura (or equivalent 5-star property)</li>
-                <li>All meals specified in the itinerary (breakfast daily, plus group lunches and dinners)</li>
-                <li>Professional padel coaching sessions at Padelin</li>
-                <li>Organised activities (boat tour, vineyard visit, tournament)</li>
-                <li>Private airport transfers to/from Mahón Airport (MAH)</li>
-              </ul>
-              <p>International flights are <strong>not included</strong>.</p>
-            </div>
-          </LegalPendingNotice>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">1. Who you are contracting with</h2>
+          <p>Your contract is with <strong>Crtside Events Ltd</strong>, trading as Courtside Padel Retreats, registered in England and Wales, Company No. 16289087, 24 Hendham Road, London SW17 7DQ, United Kingdom.</p>
+          <p class="mt-3">By booking, you confirm you are 18 or over and that you may accept these terms on behalf of everyone in your party. You are responsible for passing our information on to them.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">2. What you are buying</h2>
+          <p>Each retreat combines at least two different travel services — accommodation, ground transport, coaching and organised activities — sold together at an inclusive price. That makes it a <strong>package</strong>, and it makes us the <strong>organiser</strong>. You therefore have all the rights the package travel rules give travellers, summarised in the sections below.</p>
+          <p class="mt-3">What each retreat includes differs by destination and is set out on that retreat's page and in the written confirmation we send you. The confirmation, together with these terms, is your contract. Where the two differ, the confirmation governs.</p>
+          <p class="mt-3"><strong>International flights are not included</strong> in any retreat unless your confirmation says so in writing. Airport transfers at the destination are included where the retreat page states it. Our concierge can advise on routes or arrange a private charter separately, at additional cost.</p>
+          <p class="mt-3">Places on every retreat are limited, and dates are confirmed at the point of booking rather than on the website.</p>
+
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-6">2.1 Information given before you book</h3>
+          <LegalPendingNotice reason="Both the Directive and the UK Regulations require the traveller to receive a standard information form, in a prescribed format, before the contract is concluded — and separately, prescribed pre-contractual details about the package. Failure to provide the form is an offence under the UK Regulations, and it can extend the traveller's rights. This is a document to produce and wire into the enquiry and confirmation flow, not a clause to write. It should be attached to the booking confirmation email and, ideally, linked from the enquiry form." />
         </section>
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">3. Booking and payment</h2>
           <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">3.1 Deposit</h3>
-          <p>A deposit of <strong>40% of the total booking value</strong> is required to secure your place. Your place is only confirmed upon receipt of the deposit.</p>
-          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">3.2 Balance payment</h3>
-          <p>The remaining balance is due <strong>8 weeks (56 days) before the retreat start date</strong>.</p>
-          <LegalPendingNotice reason="The source clause additionally fixed a single hard date — 'i.e. by 5 August 2026 for the 2026 retreat' — which only applies to Menorca 2026. It has been left out here rather than restated for every destination. Confirm whether the 8-week rule alone is sufficient." />
+          <p>A deposit of <strong>40% of the total booking value</strong> secures your place. Your booking is confirmed only when we have received the deposit and sent you a written confirmation.</p>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">3.2 Balance</h3>
+          <p>The balance is due <strong>8 weeks (56 days) before the retreat start date</strong>. We will tell you the exact date in your confirmation. If the balance is not paid by then we may treat the booking as cancelled by you and apply the charges in section 6.</p>
           <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">3.3 Late bookings</h3>
-          <p>Bookings made within 8 weeks of departure require full payment at the time of booking.</p>
+          <p>Bookings made within 8 weeks of the start date require payment in full at the time of booking.</p>
           <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">3.4 Prices</h3>
-          <p>All prices are in <strong>GBP (£)</strong> and include VAT where applicable. Prices are per person unless stated otherwise.</p>
+          <p>Prices are quoted in <strong>pounds sterling (GBP)</strong>, per person, and include applicable taxes unless stated otherwise. If you pay in another currency, your bank's conversion rate and charges apply and are outside our control.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">4. Cancellation policy</h2>
-          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">4.1 Cancellation by you</h3>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">4. Price changes after booking</h2>
+          <p>The price in your confirmation is fixed, with one narrow exception. We may increase it only where the increase is a direct consequence of:</p>
+          <ul class="list-disc pl-6 space-y-2 mt-3">
+            <li>the price of carrying passengers, resulting from the cost of fuel or other power sources;</li>
+            <li>taxes or fees charged by a third party not directly involved in performing the package, including tourist taxes and landing or embarkation fees; or</li>
+            <li>the exchange rates relevant to your package.</li>
+          </ul>
+          <p class="mt-3">Any increase must be notified to you clearly, with the calculation and the reason, on a durable medium <strong>at least 20 days before the start of the package</strong>. No increase is possible after that.</p>
+          <p class="mt-3"><strong>If the increase exceeds 8% of the total price</strong>, you may accept it, accept a substitute package we offer, or terminate the contract without paying a termination fee and receive a full refund.</p>
+          <p class="mt-3">The same rules work in your favour: if those costs fall, you are entitled to a <strong>price reduction</strong>, and we may deduct our actual administrative expenses from the amount refunded. Ask us and we will show you the evidence for either direction.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">5. Changing your booking</h2>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">5.1 Transferring your place to someone else</h3>
+          <p>You have a statutory right to transfer your booking to another person who meets the conditions of the contract. Tell us on a durable medium <strong>at least 7 days before the start of the package</strong>. You and the person taking your place are jointly liable for the balance and for any reasonable additional costs the transfer causes; we will show you the evidence for those costs.</p>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">5.2 Other changes</h3>
+          <p>We will try to accommodate changes to dates, room types or group size where it is operationally possible, and we will tell you the cost before you commit. Some suppliers treat a change as a cancellation and rebooking, in which case section 6 applies.</p>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">5.3 Minor changes by us</h3>
+          <p>We may make insignificant changes to the itinerary — substituting an activity of equivalent quality, adjusting timings for weather or venue availability. We will tell you clearly and on a durable medium. Significant changes are covered in section 7.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">6. Cancelling your booking</h2>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">6.1 Cancellation by you</h3>
+          <p>You may cancel at any time before the start of the package. Tell us in writing at <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>; the effective date is the date we receive your notice. The following termination fees apply, reflecting expected cost savings and income from reselling your place:</p>
           <table class="w-full text-sm border-collapse mt-3">
             <thead>
               <tr class="border-b border-brand-dark/20">
-                <th class="text-left py-2 pr-4 font-semibold text-brand-dark">Notice period before departure</th>
-                <th class="text-left py-2 font-semibold text-brand-dark">Refund</th>
+                <th class="text-left py-2 pr-4 font-semibold text-brand-dark">Notice before the start date</th>
+                <th class="text-left py-2 font-semibold text-brand-dark">Termination fee</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-brand-dark/10">
-              <tr><td class="py-2 pr-4">More than 8 weeks (56+ days)</td><td class="py-2">Full deposit refund</td></tr>
-              <tr><td class="py-2 pr-4">6–8 weeks (42–55 days)</td><td class="py-2">50% of total booking value refunded</td></tr>
-              <tr><td class="py-2 pr-4">Less than 6 weeks (fewer than 42 days)</td><td class="py-2">No refund</td></tr>
+              <tr><td class="py-2 pr-4">More than 8 weeks (56+ days)</td><td class="py-2">Deposit refunded in full</td></tr>
+              <tr><td class="py-2 pr-4">6–8 weeks (42–55 days)</td><td class="py-2">50% of the total booking value</td></tr>
+              <tr><td class="py-2 pr-4">Less than 6 weeks (fewer than 42 days)</td><td class="py-2">100% of the total booking value</td></tr>
             </tbody>
           </table>
-          <p class="mt-3">All cancellations must be made in writing to <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>. The date of cancellation is the date we receive your written notice.</p>
-          <p class="mt-3">We strongly recommend purchasing <strong>comprehensive travel insurance</strong> including cancellation cover.</p>
-          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">4.2 Cancellation by us</h3>
-          <p>If we are required to cancel the retreat for reasons beyond our control (force majeure, minimum numbers not met, etc.), we will offer you either a full refund or a transfer to an alternative date.</p>
+          <p class="mt-3">If you consider a fee higher than our actual saving and resale income justifies, ask us and we will provide a justification and adjust it where you are right.</p>
+
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">6.2 Cancelling free of charge</h3>
+          <p>You may terminate <strong>without paying any termination fee</strong>, and receive a full refund of everything you have paid, where unavoidable and extraordinary circumstances occurring at or near the destination significantly affect the performance of the package or the carriage of passengers to it. You are not entitled to additional compensation in that situation.</p>
+
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">6.3 No general cooling-off period</h3>
+          <p>Retreats are leisure and accommodation services provided on specific dates, so the 14-day right of withdrawal for distance contracts does not apply. Your statutory rights in sections 5.1, 6.2 and 7 are unaffected. Where you booked away from our business premises, any additional local withdrawal right you have continues to apply.</p>
+
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">6.4 Refund timing</h3>
+          <p>Any refund due under these terms is paid <strong>without undue delay and in any event within 14 days</strong> of the termination.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">5. Changes to your booking</h2>
-          <p>If you wish to transfer your place to another person, please notify us as soon as possible. We will accommodate transfers where operationally feasible. An administration fee may apply.</p>
-          <p class="mt-3">We reserve the right to make minor changes to the itinerary (e.g. substituting activities of equivalent value) where necessary due to weather, venue availability, or other circumstances.</p>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">7. Changes and cancellation by us</h2>
+          <p>If we need to change a main characteristic of your retreat significantly, or cannot meet a special requirement we accepted, we will tell you without delay and give you a reasonable period to choose between accepting the change, taking a substitute package where we can offer one, or terminating without a fee and receiving a full refund.</p>
+          <p class="mt-3">We may cancel and refund you in full, with no additional compensation, if:</p>
+          <ul class="list-disc pl-6 space-y-2 mt-3">
+            <li>fewer people book than the minimum stated for that retreat, and we tell you no later than 20 days before the start for trips of more than 6 days, 7 days for trips of 2–6 days, or 48 hours for trips shorter than 2 days; or</li>
+            <li>we are prevented from performing the contract by unavoidable and extraordinary circumstances, and we notify you without undue delay before the start.</li>
+          </ul>
+          <p class="mt-3">In any other case where we cancel, you are entitled to a full refund and, unless the cancellation falls into one of the two situations above, to appropriate compensation.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">6. Health, fitness and liability</h2>
-          <p>Padel is a physical sport. By booking, you confirm that you are in good health and physically capable of participating in the retreat activities. You participate in all physical activities at your own risk.</p>
-          <p class="mt-3">We accept no liability for personal injury, illness, loss, or damage unless caused directly by our negligence. Our liability in any event is limited to the total price paid for your place.</p>
-          <p class="mt-3">We are not liable for delays, disruptions, or cancellations caused by circumstances beyond our reasonable control, including but not limited to severe weather, natural disasters, civil unrest, or pandemic restrictions.</p>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">8. If something goes wrong on the retreat</h2>
+          <p>We are responsible for the performance of all travel services included in your package, whether we deliver them ourselves or a partner does.</p>
+          <p class="mt-3">Tell us about any problem <strong>without undue delay while you are there</strong>, so we can put it right on the spot. We will remedy any lack of conformity unless that is impossible or would cost disproportionately much. If we do not remedy it within a reasonable period, you may do so yourself and claim the necessary expenses.</p>
+          <p class="mt-3">You are entitled to an appropriate <strong>price reduction</strong> for any period during which services were not as contracted, and to <strong>compensation</strong> for any damage you suffer, without undue delay. Compensation is not payable where the lack of conformity is your fault, is the fault of an unconnected third party and was unforeseeable or unavoidable, or is due to unavoidable and extraordinary circumstances.</p>
+          <p class="mt-3">If a significant proportion of the services cannot be provided, we will offer suitable alternatives at no extra cost. If an alternative is of lower quality, we will give you an appropriate price reduction. You may reject an alternative that is not comparable or where the reduction is inadequate.</p>
+          <p class="mt-3">Where return travel is included and is prevented by unavoidable and extraordinary circumstances, we will bear the cost of necessary accommodation, of a comparable standard where possible, for up to <strong>3 nights</strong>. That limit does not apply to travellers with reduced mobility and their companions, pregnant women, unaccompanied minors, or those needing specific medical assistance, where we were told of the need in advance.</p>
+          <p class="mt-3"><strong>Assistance.</strong> If you are in difficulty we will help without undue delay — information on health services, local authorities and consular assistance, and help arranging distance communications and alternative arrangements. We may charge a reasonable fee for that assistance if the difficulty is caused intentionally or negligently by you.</p>
+          <p class="mt-3">Where an international convention limits the compensation payable by a service provider — for carriage, for example — the same limits apply to us. Otherwise, and except for death, personal injury, or damage caused intentionally or negligently, our liability is limited to <strong>three times the total price of your package</strong>.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">7. Travel insurance</h2>
-          <p>Travel insurance covering cancellation, medical expenses, and personal liability is <strong>mandatory</strong> for all guests. You must be able to provide proof of valid insurance upon request.</p>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">9. Insolvency protection</h2>
+          <LegalPendingNotice reason="A package organiser must hold security for refunds and, where carriage is included, repatriation, in the event of its insolvency — and that protection must be effective in every country where it sells. This requires a bond, a trust account or an insurance policy, together with a statement here naming the provider and how to contact them. It is a purchase and a registration, not a clause, and it is the single most important outstanding item: selling packages without it is an offence in the UK and in every EU member state. If flights are ever sold as part of a package to UK travellers, ATOL licensing is a separate requirement on top of this." />
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">8. Code of conduct</h2>
-          <p>We expect all guests to treat fellow guests, staff, and third-party providers with respect. We reserve the right to remove from the retreat any guest whose behaviour is disruptive or endangers others, with no refund.</p>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">10. Your responsibilities</h2>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">10.1 Health and fitness</h3>
+          <p>Padel is a physical sport. By booking you confirm you are in good health and able to take part in the activities you have chosen. Tell us in advance about any medical condition, injury, allergy or accessibility need so we can plan around it. You take part in physical activities at your own risk, which does not affect our responsibilities in section 8.</p>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">10.2 Travel insurance</h3>
+          <p>Comprehensive travel insurance covering cancellation, curtailment, medical expenses, repatriation and personal liability is <strong>mandatory</strong> for every guest. Because flights are not included, we strongly recommend cover that includes travel disruption. You must be able to show proof on request.</p>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">10.3 Travel documents</h3>
+          <p>You are responsible for holding a valid passport, any visa required for the destination, and any vaccination or entry requirement. Requirements depend on your nationality; we will point you to the right official source but cannot advise on your individual position. We are not liable for costs arising from missing or invalid documents.</p>
+          <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">10.4 Conduct</h3>
+          <p>We expect guests to treat other guests, our team and our partners with respect. Where behaviour is seriously disruptive or puts others at risk, we may end that guest's participation without refund, and neither we nor our suppliers are liable for the costs that follow.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">9. Privacy</h2>
-          <p>Your personal data is processed in accordance with our <a href="/legal/privacy-policy" class="text-brand-gold underline underline-offset-2">Privacy Policy</a>.</p>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">11. Complaints and disputes</h2>
+          <p>Raise any problem with us during the retreat first — that is when we can fix it. If something remains unresolved, write to <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>. We acknowledge within 5 working days and aim to resolve within 28 days.</p>
+          <p class="mt-3">The European Commission's online dispute resolution platform closed in July 2025 and is no longer available. If you are an EU consumer, you may still be able to use an approved alternative dispute resolution body in your own country; your national consumer authority or European Consumer Centre can point you to one.</p>
+          <LegalPendingNotice reason="If Courtside is a member of an ADR scheme or a trade association such as ABTA or AITO, name it here with contact details, and say whether its decisions bind you. If it is not a member, this clause is complete as written — but confirm either way, because some member states require the trader to state whether it is committed to an ADR body." />
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">10. Governing law</h2>
-          <p>These Terms &amp; Conditions are governed by the laws of <strong>England and Wales</strong>. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">12. Privacy</h2>
+          <p>Personal data is handled as described in our <a href="/legal/privacy-policy" class="text-brand-gold underline underline-offset-2">Privacy Policy</a>.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-light text-brand-dark mb-4">11. Contact</h2>
-          <p>For booking enquiries or questions about these terms:<br />
+          <h2 class="text-2xl font-light text-brand-dark mb-4">13. Governing law and where you can bring a claim</h2>
+          <p>These terms are governed by the law of <strong>England and Wales</strong>.</p>
+          <p class="mt-3">If you are a consumer habitually resident in an EEA country, this choice <strong>does not deprive you</strong> of the protection of the mandatory consumer law of your own country, and you may bring proceedings in the courts where you live. If you are resident in the UK, the courts of England and Wales have jurisdiction, save that you may bring proceedings in Scotland or Northern Ireland if you live there.</p>
+          <p class="mt-3">If any provision of these terms is found unenforceable, the rest continues in force.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-light text-brand-dark mb-4">14. Contact</h2>
+          <p>For bookings or questions about these terms:<br />
           <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a></p>
         </section>
 
