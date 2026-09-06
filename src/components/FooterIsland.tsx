@@ -4,7 +4,7 @@ import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
 import { useLocalizedHref } from '../i18n/useLocale';
-import { MENORCA_URL, getWhatsAppConciergeUrl } from '../constants/urls';
+import { MENORCA_URL, SOCIAL_URLS, getWhatsAppConciergeUrl } from '../constants/urls';
 
 interface FooterIslandProps {
   readonly locale?: Locale;
@@ -71,7 +71,9 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             <div className="flex items-center gap-3 mt-auto">
               {/* Instagram */}
               <a
-                href="#"
+                href={SOCIAL_URLS.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Courtside Padel on Instagram"
                 className="w-9 h-9 rounded-full border border-white/12 flex items-center justify-center text-white/35 hover:border-brand-gold/55 hover:text-brand-gold transition-colors duration-200"
               >
@@ -83,7 +85,9 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
               </a>
               {/* LinkedIn */}
               <a
-                href="#"
+                href={SOCIAL_URLS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Courtside Padel on LinkedIn"
                 className="w-9 h-9 rounded-full border border-white/12 flex items-center justify-center text-white/35 hover:border-brand-gold/55 hover:text-brand-gold transition-colors duration-200"
               >
