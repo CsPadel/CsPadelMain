@@ -1,21 +1,31 @@
 ---
 /**
- * Marks a clause that was ported from the Menorca microsite and is scoped to
- * that one retreat, so it cannot stand unchanged on a multi-destination site.
+ * Marks an obligation that wording alone cannot satisfy — one that needs a
+ * purchase, an appointment or a document before these pages are complete.
  *
- * Deliberately loud: these pages must not reach production until Alexi and
- * Oliver have replaced the marked clauses with wording their legal adviser has
- * approved. Nobody on the delivery side should be able to miss it.
+ * The red box is for the team, not for customers, so it renders only outside
+ * production. In production the section shows `publicNote` if one is given, or
+ * nothing at all.
+ *
+ * `publicNote` must be something that is true today. It is not a place to
+ * imply a protection or a document that does not yet exist — the point of the
+ * red box is that it does not.
  */
 interface Props {
   readonly reason: string;
+  readonly publicNote?: string;
 }
 
-const { reason } = Astro.props;
+const { reason, publicNote } = Astro.props;
+const isProduction = import.meta.env.PROD;
 ---
 
-<div class="my-6 rounded border-2 border-dashed border-red-500/60 bg-red-50 px-5 py-4 text-sm text-red-900">
-  <p class="font-semibold uppercase tracking-[0.2em] text-xs mb-2">Pending founder / legal review</p>
-  <p>{reason}</p>
-  <slot />
-</div>
+{isProduction ? (
+  publicNote && <p>{publicNote}</p>
+) : (
+  <div class="my-6 rounded border-2 border-dashed border-red-500/60 bg-red-50 px-5 py-4 text-sm text-red-900">
+    <p class="font-semibold uppercase tracking-[0.2em] text-xs mb-2">Pending founder / legal review</p>
+    <p>{reason}</p>
+    <slot />
+  </div>
+)}
