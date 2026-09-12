@@ -857,6 +857,7 @@ const en = {
             help: "Pick a destination, or tell us you're still deciding.",
             options: {
               menorca: "Menorca",
+              eastSussex: "UK (East Sussex)",
               bali: "Bali",
               dubai: "Dubai",
               undecided: "Still deciding"
