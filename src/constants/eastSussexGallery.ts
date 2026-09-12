@@ -10,9 +10,13 @@ import type { PhotoStripItem } from '../components/PhotoStrip';
  * keep the alt text describing what is actually in frame, never implying the
  * photo was taken at Powdermills.
  *
- * Pexels License: free for commercial use, no attribution required.
- * Per-file sources are listed in
+ * Sourced from Pexels and Unsplash; both licences allow commercial use with
+ * no attribution required. Per-file sources are listed in
  * `public/imagenes/east-sussex-gallery/CREDITS.txt`.
+ *
+ * Judge any replacement in the 3:4 crop this strip renders at, never on a
+ * landscape thumbnail — see `docs/east-sussex-photography.md` for what has
+ * already been searched and what it produced.
  *
  * Array order is the display order: padel, landscape, interior, water and
  * wellness alternate so no two neighbours are the same kind of shot.
@@ -30,8 +34,8 @@ export const EAST_SUSSEX_GALLERY: PhotoStripItem[] = [
   { slug: '10-on-the-water', title: 'A kayaker crossing calm open water', location: 'Lakeside' },
   { slug: '11-craft-barn', title: 'Hands shaping clay on a potter’s wheel', location: 'Craft workshop' },
   { slug: '12-lakeside-sauna', title: 'A barrel sauna looking out over water', location: 'Outdoor wellness' },
-  { slug: '13-the-pub', title: 'A pint on a table by a pub window', location: 'Country pub' },
+  { slug: '13-the-pub', title: 'A glass of wine and a pint beside an open fire', location: 'Country pub' },
   { slug: '14-wild-swimming', title: 'Swimmers in open water at sunset', location: 'Wild swimming' },
-  { slug: '15-dog-friendly', title: 'A dog running across an open field', location: 'Dog-friendly grounds' },
+  { slug: '15-dog-friendly', title: 'A dog running back with a ball in low evening light', location: 'Dog-friendly grounds' },
   { slug: '16-last-light', title: 'A wooden jetty reaching into a lake at sunset', location: 'Lakeside' },
 ];

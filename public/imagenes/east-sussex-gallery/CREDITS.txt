@@ -1,9 +1,10 @@
 East Sussex photo strip — image sources
 =======================================
 
-All images are stock photography from Pexels (https://www.pexels.com).
-Pexels License: free for commercial use, no attribution required.
-See https://www.pexels.com/license/
+All images are stock photography from Pexels (https://www.pexels.com) or
+Unsplash (https://unsplash.com). Both licences allow commercial use with
+no attribution required.
+See https://www.pexels.com/license/ and https://unsplash.com/license
 
 These are NOT photographs of Crafted at Powdermills. They are
 representative English-countryside stock and should be swapped for real
@@ -21,7 +22,7 @@ venue photography when it is available.
 10-on-the-water.jpg  https://images.pexels.com/photos/11504426/pexels-photo-11504426.jpeg
 11-craft-barn.jpg  https://images.pexels.com/photos/12940583/pexels-photo-12940583.jpeg
 12-lakeside-sauna.jpg  https://images.pexels.com/photos/13286770/pexels-photo-13286770.jpeg
-13-the-pub.jpg  https://images.pexels.com/photos/1095124/pexels-photo-1095124.jpeg
+13-the-pub.jpg  https://unsplash.com/photos/photo-1597076845776-0024e8e607a4
 14-wild-swimming.jpg  https://images.pexels.com/photos/1787321/pexels-photo-1787321.jpeg
-15-dog-friendly.jpg  https://images.pexels.com/photos/10731835/pexels-photo-10731835.jpeg
+15-dog-friendly.jpg  https://unsplash.com/photos/photo-1778131646258-48d927cc8ff2
 16-last-light.jpg  https://images.pexels.com/photos/122748/pexels-photo-122748.jpeg
