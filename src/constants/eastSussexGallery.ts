@@ -23,7 +23,7 @@ export const EAST_SUSSEX_GALLERY: PhotoStripItem[] = [
   { slug: '03-main-house', title: 'A Georgian country house behind a lawn', location: 'English country house' },
   { slug: '04-mist-on-water', title: 'Morning mist over a still lake', location: 'Lakeside' },
   { slug: '05-match-point', title: 'A player reaching for a shot on court', location: 'Padel' },
-  { slug: '06-four-poster', title: 'A four-poster bed in a country hotel room', location: 'Guest room' },
+  { slug: '06-four-poster', title: 'A canopied four-poster bed dressed in white linen', location: 'Guest room' },
   { slug: '07-wood-fired-soak', title: 'A wood-fired hot tub steaming at dusk', location: 'Outdoor wellness' },
   { slug: '08-ready-to-play', title: 'A padel racket and ball resting on court', location: 'Padel' },
   { slug: '09-ancient-woodland', title: 'An ancient beech tree in old woodland', location: 'Woodland' },
