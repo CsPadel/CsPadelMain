@@ -11,7 +11,8 @@ import { ENQUIRY_ENDPOINT, ENQUIRY_FALLBACK_EMAIL } from '../constants/forms';
    Values are stable English keys so the submitted payload reads the
    same whatever language the visitor used. Labels come from i18n.   */
 
-const DESTINATIONS = ['menorca', 'bali', 'dubai', 'undecided'] as const;
+// Order mirrors the navbar's destinations menu, so the two never disagree.
+const DESTINATIONS = ['menorca', 'eastSussex', 'bali', 'dubai', 'undecided'] as const;
 
 const MONTHS = [
   'january', 'february', 'march', 'april', 'may', 'june',
