@@ -22,7 +22,7 @@ import type { PhotoStripItem } from '../components/PhotoStrip';
  * wellness alternate so no two neighbours are the same kind of shot.
  */
 export const EAST_SUSSEX_GALLERY: PhotoStripItem[] = [
-  { slug: '01-sussex-weald', title: 'Rolling green farmland under a wide sky', location: 'English countryside' },
+  { slug: '01-sussex-weald', title: 'An oak on the field edge at first light', location: 'English countryside' },
   { slug: '02-centre-court', title: 'Covered padel courts', location: 'Padel club' },
   { slug: '03-main-house', title: 'A Georgian country house behind a lawn', location: 'English country house' },
   { slug: '04-mist-on-water', title: 'Morning mist over a still lake', location: 'Lakeside' },

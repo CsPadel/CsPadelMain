@@ -56,6 +56,30 @@ const SOURCES = {
       `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1333&fit=crop`,
   },
   /**
+   * Flickr, restricted to CC0 and Public Domain Mark (licence ids 9 and 10).
+   * Those need no attribution, same as Pexels and Unsplash.
+   *
+   * Deliberately excludes CC BY (4) and CC BY-SA (5): both require a visible
+   * credit, and BY-SA's share-alike bites on a crop. CC BY-ND (6) is excluded
+   * outright — the strip crops to 3:4, which is a derivative.
+   *
+   * Flickr encodes size in the filename suffix: _n 320, _w 400, _c 800,
+   * _b 1024, _h 1600, _k 2048. A 3:4 crop at 1000x1333 needs _h or _k, so
+   * anything smaller has to be discarded after download.
+   */
+  flickr: {
+    url: (q) => `https://www.flickr.com/search/?text=${encodeURIComponent(q)}&license=9%2C10`,
+    extract: (page) =>
+      page.$$eval('img', (imgs) =>
+        imgs
+          .map((i) => i.getAttribute('src') || '')
+          .filter((s) => s.includes('live.staticflickr.com'))
+          .map((s) => (s.startsWith('//') ? `https:${s}` : s)),
+      ),
+    thumb: (u) => u.replace(/_[a-z]?\.jpg$/, '_c.jpg'),
+    full: (u) => u.replace(/_[a-z]?\.jpg$/, '_k.jpg'),
+  },
+  /**
    * Kept for completeness, but it did not earn its place: a search for
    * "english manor house garden" returned German châteaux and haunted-castle
    * illustrations, and "outdoor hot tub wooden" returned coffee cups, a cat
