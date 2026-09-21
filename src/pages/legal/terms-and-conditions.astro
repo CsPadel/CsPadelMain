@@ -18,6 +18,7 @@
  */
 import Layout from '../../layouts/Layout.astro';
 import FooterIsland from '../../components/FooterIsland';
+import { getWhatsAppConciergeUrl } from '../../constants/urls';
 import LegalPendingNotice from '../../components/LegalPendingNotice.astro';
 import { sitePath } from '../../constants/site';
 
@@ -25,6 +26,9 @@ const title = 'Booking Terms & Conditions | Courtside Padel Retreats';
 const description =
   'Booking terms for Courtside Padel Retreats: payment, changes, cancellation, package travel rights and liability, for travellers in the UK and the EU.';
 const canonical = sitePath('/legal/terms-and-conditions');
+const waUrl = getWhatsAppConciergeUrl(
+  'Hello, I have a question about the Courtside Padel booking terms.'
+);
 ---
 
 <Layout title={title} description={description} canonical={canonical} lang="en" locale="en">
@@ -103,7 +107,7 @@ const canonical = sitePath('/legal/terms-and-conditions');
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">6. Cancelling your booking</h2>
           <h3 class="text-lg font-medium text-brand-dark mb-2 mt-4">6.1 Cancellation by you</h3>
-          <p>You may cancel at any time before the start of the package. Tell us in writing at <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>; the effective date is the date we receive your notice. The following termination fees apply, reflecting expected cost savings and income from reselling your place:</p>
+          <p>You may cancel at any time before the start of the package. Tell us in writing at <span class="text-brand-gold">awatelet@cspadel.com</span>; the effective date is the date we receive your notice. The following termination fees apply, reflecting expected cost savings and income from reselling your place:</p>
           <table class="w-full text-sm border-collapse mt-3">
             <thead>
               <tr class="border-b border-brand-dark/20">
@@ -174,7 +178,7 @@ const canonical = sitePath('/legal/terms-and-conditions');
 
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">11. Complaints and disputes</h2>
-          <p>Raise any problem with us during the retreat first — that is when we can fix it. If something remains unresolved, write to <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a>. We acknowledge within 5 working days and aim to resolve within 28 days.</p>
+          <p>Raise any problem with us during the retreat first — that is when we can fix it. If something remains unresolved, write to <span class="text-brand-gold">awatelet@cspadel.com</span>. We acknowledge within 5 working days and aim to resolve within 28 days.</p>
           <p class="mt-3">The European Commission's online dispute resolution platform was discontinued on <strong>20 July 2025</strong> by Regulation (EU) 2024/3228 and no longer exists. If you are a consumer in the EEA, you can find an approved alternative dispute resolution body through the Commission's <a href="https://consumer-redress.ec.europa.eu/list-alternative-dispute-resolution-adr-bodies_en" class="text-brand-gold underline underline-offset-2" target="_blank" rel="noopener noreferrer">list of ADR bodies</a>, or through the European Consumer Centre in your country.</p>
           <LegalPendingNotice reason="If Courtside belongs to an ADR scheme or a trade association such as ABTA or AITO, name it here with contact details and say whether its decisions bind you. Directive 2013/11/EU requires traders to state whether they are committed to an ADR body, and that obligation survived the ODR platform's closure." />
         </section>
@@ -194,7 +198,7 @@ const canonical = sitePath('/legal/terms-and-conditions');
         <section>
           <h2 class="text-2xl font-light text-brand-dark mb-4">14. Contact</h2>
           <p>For bookings or questions about these terms:<br />
-          <a href="mailto:awatelet@cspadel.com" class="text-brand-gold underline underline-offset-2">awatelet@cspadel.com</a></p>
+          <span class="text-brand-gold">awatelet@cspadel.com</span>, or message us on <a href={waUrl} target="_blank" rel="noopener noreferrer" class="text-brand-gold underline underline-offset-2">WhatsApp</a>.</p>
         </section>
 
       </div>

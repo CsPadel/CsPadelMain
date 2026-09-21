@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
-import { Mail, MessageCircle } from 'lucide-react';
+import { useState } from 'react';
+import { MessageCircle, PenLine } from 'lucide-react';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
 import { useLocalizedHref } from '../i18n/useLocale';
 import { MENORCA_URL, SOCIAL_URLS, getWhatsAppConciergeUrl } from '../constants/urls';
+import { EnquiryFormModal } from './EnquiryForm';
 
 interface FooterIslandProps {
   readonly locale?: Locale;
@@ -27,6 +29,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
   const { t }         = usePageTranslation(localeProp);
   const localizedHref = useLocalizedHref(localeProp);
   const waUrl         = getWhatsAppConciergeUrl(t('footer.whatsappMessage'));
+  const [enquiryOpen, setEnquiryOpen] = useState(false);
 
   return (
     <footer className="bg-brand-dark" aria-label={t('footer.ariaLabel')}>
@@ -190,15 +193,14 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:awatelet@cspadel.com"
-                  className="flex items-start gap-3 group"
+                <button
+                  type="button"
+                  onClick={() => setEnquiryOpen(true)}
+                  className="flex items-start gap-3 group text-left"
                 >
-                  <Mail className="w-4 h-4 text-brand-gold/50 group-hover:text-brand-gold mt-0.5 flex-shrink-0 transition-colors duration-200" />
-                  <span className={`${linkClass} break-all`}>
-                    awatelet@cspadel.com
-                  </span>
-                </a>
+                  <PenLine className="w-4 h-4 text-brand-gold/50 group-hover:text-brand-gold mt-0.5 flex-shrink-0 transition-colors duration-200" />
+                  <span className={linkClass}>{t('footer.sendEnquiry')}</span>
+                </button>
               </li>
             </ul>
 
@@ -252,6 +254,12 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
         </motion.div>
 
       </div>
+
+      <EnquiryFormModal
+        open={enquiryOpen}
+        onClose={() => setEnquiryOpen(false)}
+        locale={localeProp}
+      />
     </footer>
   );
 }

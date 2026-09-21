@@ -432,6 +432,7 @@ const es = {
         corporate: "Corporativo y Ejecutivo",
         contactLabel: "Contacto",
         whatsappConcierge: "Concierge por WhatsApp",
+        sendEnquiry: "Enviar una Consulta",
         messageTeam: "Escribe al Equipo",
         whatsappMessage: "Hola, me gustaría informarme sobre un retiro de Courtside Padel.",
         rights: "© 2026 Courtside Padel. Todos los derechos reservados.",
@@ -469,7 +470,7 @@ const es = {
           },
           {
             title: "Gestionar tus preferencias",
-            body: "Puedes aceptar o rechazar las cookies no esenciales mediante el banner que aparece en tu primera visita. Para cambiar tu elección más adelante, borra los datos del navegador para este sitio o contáctanos en awatelet@cspadel.com."
+            body: "Puedes aceptar o rechazar las cookies no esenciales mediante el banner que aparece en tu primera visita. Para cambiar tu elección más adelante, borra los datos del navegador para este sitio o escríbenos por WhatsApp y lo cambiamos por ti."
           },
           {
             title: "Actualizaciones",
@@ -926,7 +927,8 @@ const es = {
           name: "Introduce tu nombre y apellidos.",
           email: "Introduce una dirección de correo válida.",
           consent: "Acepta el uso de tus datos para que podamos responderte.",
-          submit: "Algo ha fallado al enviar tu consulta. Escríbenos a awatelet@cspadel.com y la atenderemos de inmediato."
+          submit: "No hemos podido enviar tu consulta desde aquí. Mándanosla por WhatsApp — ya te la hemos rellenado.",
+          submitWhatsapp: "Enviar por WhatsApp"
         },
         success: {
           title: "Gracias.",

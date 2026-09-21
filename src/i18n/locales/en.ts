@@ -432,6 +432,7 @@ const en = {
         corporate: "Corporate & Executive",
         contactLabel: "Get in Touch",
         whatsappConcierge: "WhatsApp Concierge",
+        sendEnquiry: "Send an Enquiry",
         messageTeam: "Message the Team",
         whatsappMessage: "Hello, I'd like to enquire about a Courtside Padel retreat.",
         rights: "© 2026 Courtside Padel. All rights reserved.",
@@ -469,7 +470,7 @@ const en = {
           },
           {
             title: "Managing your preferences",
-            body: "You can accept or reject non-essential cookies via the banner shown on your first visit. To change your choice later, clear your browser data for this site or contact us at awatelet@cspadel.com."
+            body: "You can accept or reject non-essential cookies via the banner shown on your first visit. To change your choice later, clear your browser data for this site or message us on WhatsApp and we will change it for you."
           },
           {
             title: "Updates",
@@ -925,7 +926,8 @@ const en = {
           name: "Please enter your first and last name.",
           email: "Please enter a valid email address.",
           consent: "Please accept the use of your details so we can reply.",
-          submit: "Something went wrong sending your enquiry. Please email awatelet@cspadel.com and we'll pick it up straight away."
+          submit: "We couldn't send your enquiry from here. Send it to us on WhatsApp instead — we've already filled it in for you.",
+          submitWhatsapp: "Send on WhatsApp"
         },
         success: {
           title: "Thank you.",

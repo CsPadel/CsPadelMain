@@ -432,6 +432,7 @@ const fr = {
         corporate: "Entreprises et Dirigeants",
         contactLabel: "Nous Contacter",
         whatsappConcierge: "Concierge WhatsApp",
+        sendEnquiry: "Envoyer une Demande",
         messageTeam: "Écrire à l'Équipe",
         whatsappMessage: "Bonjour, je souhaiterais me renseigner sur une retraite Courtside Padel.",
         rights: "© 2026 Courtside Padel. Tous droits réservés.",
@@ -469,7 +470,7 @@ const fr = {
           },
           {
             title: "Gérer vos préférences",
-            body: "Vous pouvez accepter ou refuser les cookies non essentiels via la bannière affichée lors de votre première visite. Pour modifier votre choix ultérieurement, effacez les données de votre navigateur pour ce site ou contactez-nous à awatelet@cspadel.com."
+            body: "Vous pouvez accepter ou refuser les cookies non essentiels via la bannière affichée lors de votre première visite. Pour modifier votre choix ultérieurement, effacez les données de votre navigateur pour ce site ou écrivez-nous sur WhatsApp et nous le modifierons pour vous."
           },
           {
             title: "Mises à jour",
@@ -926,7 +927,8 @@ const fr = {
           name: "Veuillez saisir votre prénom et votre nom.",
           email: "Veuillez saisir une adresse e-mail valide.",
           consent: "Veuillez accepter l'utilisation de vos informations pour que nous puissions vous répondre.",
-          submit: "Un problème est survenu lors de l'envoi de votre demande. Écrivez-nous à awatelet@cspadel.com et nous la traiterons immédiatement."
+          submit: "Nous n'avons pas pu envoyer votre demande depuis cette page. Envoyez-la nous sur WhatsApp — nous l'avons déjà remplie pour vous.",
+          submitWhatsapp: "Envoyer sur WhatsApp"
         },
         success: {
           title: "Merci.",

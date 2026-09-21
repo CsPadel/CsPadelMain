@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowLeft, ArrowRight, Check } from 'lucide-react';
+import { X, ArrowLeft, ArrowRight, Check, MessageCircle } from 'lucide-react';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
-import { ENQUIRY_ENDPOINT, ENQUIRY_FALLBACK_EMAIL } from '../constants/forms';
+import { ENQUIRY_ENDPOINT } from '../constants/forms';
+import { getWhatsAppConciergeUrl } from '../constants/urls';
 
 /* ─── Option values ───────────────────────────────────────────
    Values are stable English keys so the submitted payload reads the
@@ -119,6 +120,7 @@ export function EnquiryFormModal({
   const [answers, setAnswers] = useState<Answers>(emptyAnswers);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'failed'>('idle');
+  const [waHref, setWaHref] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
@@ -216,8 +218,9 @@ export function EnquiryFormModal({
     source: typeof window !== 'undefined' ? window.location.pathname : '',
   });
 
-  /** Opens the visitor's mail client with the enquiry pre-written. */
-  const sendByEmail = (payload: ReturnType<typeof buildPayload>) => {
+  /** Formats the enquiry for WhatsApp, so a submission that cannot be POSTed
+      still reaches us through a channel that always opens. */
+  const buildWhatsAppHref = (payload: ReturnType<typeof buildPayload>) => {
     const lines = [
       `${t('enquiryForm.steps.contact.firstName')}: ${payload.firstName} ${payload.lastName}`,
       `${t('enquiryForm.steps.contact.email')}: ${payload.email}`,
@@ -235,12 +238,9 @@ export function EnquiryFormModal({
       payload.notes,
     ];
 
-    const href =
-      `mailto:${ENQUIRY_FALLBACK_EMAIL}` +
-      `?subject=${encodeURIComponent(t('enquiryForm.emailSubject'))}` +
-      `&body=${encodeURIComponent(lines.join('\n'))}`;
-
-    window.location.href = href;
+    return getWhatsAppConciergeUrl(
+      [t('enquiryForm.emailSubject'), '', ...lines].join('\n')
+    );
   };
 
   const handleSubmit = async () => {
@@ -248,8 +248,8 @@ export function EnquiryFormModal({
     setStatus('sending');
 
     if (!ENQUIRY_ENDPOINT) {
-      sendByEmail(payload);
-      setStatus('sent');
+      setWaHref(buildWhatsAppHref(payload));
+      setStatus('failed');
       return;
     }
 
@@ -265,6 +265,7 @@ export function EnquiryFormModal({
       if (!res.ok) throw new Error(`Enquiry endpoint responded ${res.status}`);
       setStatus('sent');
     } catch {
+      setWaHref(buildWhatsAppHref(payload));
       setStatus('failed');
     }
   };
@@ -568,9 +569,22 @@ export function EnquiryFormModal({
               )}
 
               {status === 'failed' && (
-                <p role="alert" className="text-brand-gold text-xs font-light mt-6">
-                  {t('enquiryForm.errors.submit')}
-                </p>
+                <div role="alert" className="mt-6 rounded-card border border-brand-gold/30 bg-brand-gold/5 p-5">
+                  <p className="text-brand-gold text-xs font-light leading-relaxed mb-4">
+                    {t('enquiryForm.errors.submit')}
+                  </p>
+                  {waHref && (
+                    <a
+                      href={waHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-luxury group inline-flex items-center gap-2"
+                    >
+                      <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                      {t('enquiryForm.errors.submitWhatsapp')}
+                    </a>
+                  )}
+                </div>
               )}
             </div>
 
