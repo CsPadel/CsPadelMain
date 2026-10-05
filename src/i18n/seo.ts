@@ -1,7 +1,7 @@
 import type { Locale } from './locales';
 import { localizedPath } from './routing';
 
-export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory' | 'upcomingRetreats' | 'bali' | 'dubai' | 'eastSussex';
+export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory' | 'upcomingRetreats' | 'bali' | 'dubai' | 'eastSussex' | 'menorca';
 
 export interface PageSeo {
   title: string;
@@ -155,6 +155,23 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
       keywords: 'retraite padel East Sussex, Crafted at Powdermills, Crafted Padel Club, retraite padel Royaume-Uni, séminaire padel Angleterre',
     },
   },
+  menorca: {
+    en: {
+      title: 'Menorca – Courtside Padel',
+      description: 'Five days of padel, island lifestyle and tranquility in Menorca, based at the five-star Barceló Nura. Elite coaching, boat tours, vineyard visits and fine dining, all-inclusive.',
+      keywords: 'Menorca padel retreat, luxury padel holiday Menorca, Barceló Nura padel, padel Balearic Islands, Courtside Menorca',
+    },
+    es: {
+      title: 'Menorca – Courtside Padel',
+      description: 'Cinco días de pádel, estilo de vida isleño y tranquilidad en Menorca, con base en el Barceló Nura de cinco estrellas. Entrenamiento de élite, paseos en barco, visitas a viñedos y alta gastronomía, todo incluido.',
+      keywords: 'retiro pádel Menorca, vacaciones de pádel de lujo Menorca, pádel Barceló Nura, pádel Islas Baleares, Courtside Menorca',
+    },
+    fr: {
+      title: 'Menorca – Courtside Padel',
+      description: 'Cinq jours de padel, d\'art de vivre insulaire et de sérénité à Minorque, au cœur du Barceló Nura 5 étoiles. Coaching d\'élite, croisières, visites de vignobles et gastronomie raffinée, tout compris.',
+      keywords: 'retraite padel Minorque, vacances padel de luxe Minorque, padel Barceló Nura, padel îles Baléares, Courtside Minorque',
+    },
+  },
   dubai: {
     en: {
       title: 'Dubai – Coming Soon – Courtside Padel',
@@ -184,6 +201,7 @@ const pagePaths: Record<PageId, string> = {
   bali: '/bali',
   dubai: '/dubai',
   eastSussex: '/east-sussex',
+  menorca: '/menorca',
 };
 
 export function getPageSeo(page: PageId, locale: Locale): PageSeo {
@@ -211,6 +229,7 @@ export function getSitemapEntries(siteUrl: string): Array<{ loc: string; lastmod
     { page: 'executiveRetreat', changefreq: 'monthly', priority: '0.7' },
     { page: 'upcomingRetreats', changefreq: 'weekly', priority: '0.8' },
     { page: 'bali', changefreq: 'monthly', priority: '0.7' },
+    { page: 'menorca', changefreq: 'monthly', priority: '0.7' },
     { page: 'eastSussex', changefreq: 'monthly', priority: '0.7' },
     { page: 'dubai', changefreq: 'monthly', priority: '0.5' },
     { page: 'cookies', changefreq: 'yearly', priority: '0.3' },

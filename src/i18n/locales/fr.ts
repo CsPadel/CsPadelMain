@@ -77,6 +77,54 @@ const fr = {
         conciergeBtn: "Parler à mon concierge"
       },
       menorcaPage: {
+        landing: {
+          heroAlt: "La piscine et les terrasses du Barceló Nura, à Minorque, sous un ciel méditerranéen dégagé",
+          heroTitle: "Un Sanctuaire Méditerranéen.",
+          heroSubtitle: "Cinq jours de padel, d'art de vivre insulaire et de sérénité à Minorque, au cœur du Barceló Nura 5 étoiles. Tout compris, de l'arrivée aux adieux.",
+          includedEyebrow: "Ce Qui Est Inclus",
+          includedTitle: "Tout est pris en charge.",
+          includedText: "De votre arrivée à votre départ, chaque détail de votre retraite est pris en charge : coaching, gastronomie, transport et activités, le tout inclus.",
+          included: ["Hébergement au Barceló Nura", "Tous les repas", "Coaching d'élite et matchplay", "Transport local", "Activités et expériences sur l'île", "Transferts privés depuis et vers l'aéroport"],
+          includedNote: "Les vols ne sont pas inclus. Notre concierge peut vous conseiller sur les trajets ou organiser un vol privé sur demande.",
+          roomsEyebrow: "Où Vous Séjournez",
+          roomsTitle: "Le confort cinq étoiles du Barceló Nura.",
+          roomsText: "Chambres lumineuses avec terrasses privées ou piscines semi-privées, spa complet et cuisine méditerranéenne. Les transferts privés depuis et vers l'aéroport de Mahón sont inclus.",
+          roomsImageAlts: [
+            "Une chambre avec vue sur la mer au Barceló Nura, avec terrasse au-dessus de la piscine",
+            "Le spa et la piscine intérieure du Barceló Nura"
+          ],
+          padelEyebrow: "Le Padel",
+          padelTitle: "Coaching et matchplay pour tous les niveaux.",
+          padelText: "Les séances sont animées par d'anciens professionnels dans l'un des établissements padel les plus prestigieux de Minorque, club d'attache de l'un des meilleurs joueurs mondiaux. Exercices dirigés par le coach, séances par niveau et matchplay compétitif, des débutants qui construisent leurs bases aux joueurs avancés qui affinent leur stratégie. La semaine culmine avec un tournoi de doubles mixtes en poule unique.",
+          padelImageAlt: "Clients et coachs réunis sur le court d'un club de padel à Minorque",
+          journeyEyebrow: "Le Voyage",
+          journeyTitle: "Cinq jours, au bon rythme.",
+          journeyText: "Des matinées sur le court, des après-midis sur l'île, des soirées autour d'une table. Un rythme qui laisse la place au simple plaisir.",
+          journey: [
+            { day: "Jour 01", title: "Arrivée & Accueil", text: "Transferts privés depuis l'aéroport, déjeuner en bord de mer, une séance d'échauffement tout en douceur et dîner de bienvenue à Mahón." },
+            { day: "Jour 02", title: "Padel & Croisière", text: "Coaching et matchplay le matin, puis déjeuner et croisière en bateau affrété le long de la côte." },
+            { day: "Jour 03", title: "Padel & Vignoble", text: "Séances par niveau, suivies d'une visite et d'un déjeuner dans un domaine viticole local, avec dégustation de vins et fromages." },
+            { day: "Jour 04", title: "Tournoi & Coucher de soleil", text: "Un tournoi de doubles mixtes en poule unique, remise des prix pendant le déjeuner et tapas au coucher du soleil à la mythique Cova d'en Xoroi." },
+            { day: "Jour 05", title: "Dernière session & Adieux", text: "Un dernier petit-déjeuner ensemble, une séance optionnelle de court libre et des transferts privés vers l'aéroport." }
+          ],
+          journeyImageAlt: "Une table dressée pour le déjeuner au-dessus de l'eau, sur la côte de Minorque",
+          beyondEyebrow: "Au-delà du Court",
+          beyondTitle: "Minorque, à son propre rythme.",
+          beyondText: "Croisières privées le long de la côte, visites de vignobles avec dégustations de vins et fromages, tapas au coucher du soleil sur les falaises, soins au spa et restaurants locaux sélectionnés avec soin. Le court est le point de départ. L'île est ce dont on se souvient.",
+          beyondImageAlt: "La terrasse du Barceló Nura à l'heure dorée, avec vue sur la mer",
+          closingImageAlt: "Une table dressée pour le dîner près d'une fenêtre donnant sur la mer",
+          ctaEyebrow: "Entamons la Conversation",
+          ctaTitle: "Prêt pour Minorque ?",
+          ctaText: "Notre retraite ouverte à Minorque est complète. Dites-nous que vous souhaitez être prévenu en premier à son retour, ou organisez une retraite privée pour votre propre groupe, n'importe quelle semaine de l'année.",
+          ctaBtn: "Se Renseigner sur Minorque",
+          gallery: {
+            eyebrow: "La Galerie",
+            title: "Un Avant-Goût de Minorque",
+            dragHint: "Cliquez & glissez",
+            prev: "Images précédentes",
+            next: "Images suivantes"
+          }
+        },
         heroTitle: "MENORCA",
         heroSubtitle: "Un sanctuaire méditerranéen. Cinq jours. Padel, art de vivre, sérénité.",
         heroMeta: "30 sept. – 4 oct. 2026 · Menorca · Tout compris",
@@ -730,8 +778,8 @@ const fr = {
           title: "Notre Destination",
           location: "Îles Baléares · Espagne",
           tagline: "Sanctuaire Méditerranéen",
-          dates: "30 sep – 4 oct 2026",
-          spots: "Il Reste Peu de Places",
+          dates: "5 Jours · Tout Compris",
+          spots: "Complet",
           explore: "Découvrir"
         },
         upcoming: {

@@ -1,5 +1,3 @@
-export const MENORCA_URL = 'https://menorca.cspadel.com/';
-
 export const SOCIAL_URLS = {
   instagram: 'https://www.instagram.com/padelcourtside/',
   linkedin: 'https://www.linkedin.com/company/https-cspadel.com-/',
@@ -13,7 +11,7 @@ export function getWhatsAppConciergeUrl(message?: string): string {
 }
 
 const RETREAT_URLS: Record<string, string> = {
-  menorca: MENORCA_URL,
+  menorca: '/menorca',
   eastSussex: '/east-sussex',
   bali: '/bali',
   dubai: '/dubai',

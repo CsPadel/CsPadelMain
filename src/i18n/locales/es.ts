@@ -77,6 +77,54 @@ const es = {
         conciergeBtn: "Hablar con mi Concierge"
       },
       menorcaPage: {
+        landing: {
+          heroAlt: "La piscina y las terrazas del Barceló Nura, en Menorca, bajo un cielo mediterráneo despejado",
+          heroTitle: "Un Santuario Mediterráneo.",
+          heroSubtitle: "Cinco días de pádel, estilo de vida isleño y tranquilidad en Menorca, con base en el Barceló Nura de cinco estrellas. Todo incluido, de la llegada a la despedida.",
+          includedEyebrow: "Qué Incluye",
+          includedTitle: "Todo, resuelto.",
+          includedText: "Desde la llegada hasta la salida, cada detalle de tu retiro está cubierto: entrenamiento, gastronomía, transporte y actividades; todo incluido.",
+          included: ["Alojamiento en el Barceló Nura", "Todas las comidas", "Entrenamiento de élite y partidos", "Transporte local", "Actividades y experiencias en la isla", "Traslados privados al aeropuerto"],
+          includedNote: "Los vuelos no están incluidos. Nuestro concierge puede asesorarte sobre rutas o gestionar un chárter privado bajo petición.",
+          roomsEyebrow: "Dónde te Alojas",
+          roomsTitle: "Confort cinco estrellas en el Barceló Nura.",
+          roomsText: "Habitaciones luminosas con terrazas privadas o piscinas semiprivadas, spa de servicio completo y cocina mediterránea. Los traslados privados desde y hacia el aeropuerto de Mahón están incluidos.",
+          roomsImageAlts: [
+            "Una habitación con vistas al mar en el Barceló Nura, con terraza sobre la piscina",
+            "El spa y la piscina interior del Barceló Nura"
+          ],
+          padelEyebrow: "El Pádel",
+          padelTitle: "Entrenamiento y partidos para todos los niveles.",
+          padelText: "Las sesiones las dirigen exprofesionales en uno de los mejores clubes de pádel de Menorca, hogar de una de las mejores jugadoras del mundo. Ejercicios guiados por el entrenador, sesiones por nivel y partidos competitivos, desde principiantes que sientan las bases hasta jugadores avanzados que afinan su estrategia. La semana culmina en un torneo mixto de dobles todos contra todos.",
+          padelImageAlt: "Huéspedes y entrenadores reunidos en la pista de un club de pádel en Menorca",
+          journeyEyebrow: "El Viaje",
+          journeyTitle: "Cinco días, con el ritmo justo.",
+          journeyText: "Mañanas en la pista, tardes por la isla, noches alrededor de una mesa. Un ritmo que deja espacio para simplemente disfrutar.",
+          journey: [
+            { day: "Día 01", title: "Llegada y Bienvenida", text: "Traslados privados desde el aeropuerto, comida junto al mar, una sesión de calentamiento relajada y cena de bienvenida en Mahón." },
+            { day: "Día 02", title: "Pádel y Paseo en Barco", text: "Entrenamiento y partidos por la mañana, seguidos de comida y un paseo en barco chárter por la costa." },
+            { day: "Día 03", title: "Pádel y Viñedo", text: "Sesiones por nivel, seguidas de visita y comida en una bodega local, con cata de vinos y quesos." },
+            { day: "Día 04", title: "Torneo y Atardecer", text: "Un torneo mixto de dobles todos contra todos, entrega de premios durante la comida y tapas al atardecer en la mítica Cova d'en Xoroi." },
+            { day: "Día 05", title: "Sesión Final y Despedida", text: "Un último desayuno juntos, una sesión opcional de pista libre y traslados privados al aeropuerto." }
+          ],
+          journeyImageAlt: "Una mesa preparada para comer sobre el agua en la costa de Menorca",
+          beyondEyebrow: "Más Allá de la Pista",
+          beyondTitle: "Menorca, a su propio ritmo.",
+          beyondText: "Paseos en barco privados por la costa, visitas a viñedos con cata de vinos y quesos, tapas al atardecer en los acantilados, tratamientos de spa y restaurantes locales elegidos a mano. La pista es donde empieza. La isla es lo que recuerdas.",
+          beyondImageAlt: "La terraza del Barceló Nura a la hora dorada, con vistas al mar",
+          closingImageAlt: "Una mesa preparada para cenar junto a una ventana con vistas al mar",
+          ctaEyebrow: "Empecemos a Hablar",
+          ctaTitle: "¿Listo para Menorca?",
+          ctaText: "Nuestro retiro abierto en Menorca está agotado. Cuéntanos que quieres ser el primero en enterarte cuando vuelva, o planifica un retiro privado para tu propio grupo, cualquier semana del año.",
+          ctaBtn: "Consulta sobre Menorca",
+          gallery: {
+            eyebrow: "La Galería",
+            title: "Un Sabor de Menorca",
+            dragHint: "Clic y arrastra",
+            prev: "Imágenes anteriores",
+            next: "Imágenes siguientes"
+          }
+        },
         heroTitle: "MENORCA",
         heroSubtitle: "Un santuario mediterráneo. Cinco días. Pádel, estilo de vida, tranquilidad.",
         heroMeta: "30 Sep – 4 Oct 2026 · Menorca · Todo Incluido",
@@ -730,8 +778,8 @@ const es = {
           title: "Nuestro Destino",
           location: "Islas Baleares · España",
           tagline: "Santuario Mediterráneo",
-          dates: "30 Sep – 4 Oct, 2026",
-          spots: "Pocas Plazas Disponibles",
+          dates: "5 Días · Todo Incluido",
+          spots: "Agotado",
           explore: "Descubrir"
         },
         upcoming: {

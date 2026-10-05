@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
-import { MENORCA_URL } from '../constants/urls';
 
 interface Props {
   locale?: Locale;
@@ -13,23 +12,17 @@ const retreats = [
   {
     id: 'open',
     image: '/imagenes/EM-22.jpg',
-    href: null as string | null,
-    hrefExternal: MENORCA_URL + '#rooms',
-    isExternal: true,
+    href: '/menorca',
   },
   {
     id: 'private',
     image: '/imagenes/cms/private-retreat.jpg',
-    href: null as string | null,
-    hrefExternal: MENORCA_URL + '#rooms',
-    isExternal: true,
+    href: '/menorca',
   },
   {
     id: 'executive',
     image: '/imagenes/cms/open-retreat.jpg',
     href: '/executive-retreat',
-    hrefExternal: null,
-    isExternal: false,
   },
 ];
 
@@ -69,9 +62,7 @@ export default function RetreatTypesSection({ locale }: Props) {
         {/* Cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           {retreats.map((retreat, i) => {
-            const href = retreat.isExternal
-              ? retreat.hrefExternal!
-              : `${prefix}${retreat.href}`;
+            const href = `${prefix}${retreat.href}`;
             const tag = t(`homePage.retreatTypes.items.${retreat.id}.tag`);
             const name = t(`homePage.retreatTypes.items.${retreat.id}.name`);
             const desc = t(`homePage.retreatTypes.items.${retreat.id}.desc`);
