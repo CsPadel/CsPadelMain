@@ -5,7 +5,7 @@ import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
 import { useLocalizedHref } from '../i18n/useLocale';
-import { MENORCA_URL, SOCIAL_URLS, getWhatsAppConciergeUrl } from '../constants/urls';
+import { SOCIAL_URLS, getWhatsAppConciergeUrl } from '../constants/urls';
 import { EnquiryFormModal } from './EnquiryForm';
 
 interface FooterIslandProps {
@@ -114,7 +114,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             </p>
             <ul className="space-y-4">
               <li>
-                <a href={MENORCA_URL} className={linkClass}>
+                <a href={localizedHref('/menorca')} className={linkClass}>
                   {t('navbar.menorca')}
                 </a>
               </li>

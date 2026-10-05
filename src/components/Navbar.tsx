@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import '../i18n/config';
 import LanguageToggle from './LanguageToggle';
-import { MENORCA_URL } from '../constants/urls';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
 import { useLocalizedHref } from '../i18n/useLocale';
@@ -130,7 +129,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-52"
                   >
                     <div className="bg-brand-dark border border-brand-gold/20 rounded-card flex flex-col shadow-2xl shadow-black/50">
-                      <a href={MENORCA_URL} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.menorca')}</a>
+                      <a href={localizedHref('/menorca')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.menorca')}</a>
                       <a href={localizedHref('/east-sussex')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all whitespace-nowrap">{t('navbar.eastSussex')}</a>
                       <a href={localizedHref('/bali')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.bali')}</a>
                       <a href={localizedHref('/dubai')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.dubai')}</a>
@@ -179,7 +178,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
               <div className="w-full h-px bg-brand-gold/20 my-4" />
 
               <span className="text-xs tracking-[0.3em] uppercase text-brand-gold">{t('navbar.destinations')}</span>
-              <a href={MENORCA_URL} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
+              <a href={localizedHref('/menorca')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
               <a href={localizedHref('/east-sussex')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.eastSussex')}</a>
               <a href={localizedHref('/bali')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
               <a href={localizedHref('/dubai')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>

@@ -3,7 +3,7 @@ import { ArrowRight, MapPin, Calendar } from 'lucide-react';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
-import { MENORCA_URL } from '../constants/urls';
+import { useLocalizedHref } from '../i18n/useLocale';
 
 interface Props {
   locale?: Locale;
@@ -11,6 +11,7 @@ interface Props {
 
 export default function DestinationsPreview({ locale }: Props) {
   const { t } = usePageTranslation(locale);
+  const localizedHref = useLocalizedHref(locale);
 
   return (
     <section className="py-24 md:py-32 px-8 md:px-16 bg-white">
@@ -40,7 +41,7 @@ export default function DestinationsPreview({ locale }: Props) {
 
         {/* Menorca – single spotlight card */}
         <motion.a
-          href={MENORCA_URL}
+          href={localizedHref('/menorca')}
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}

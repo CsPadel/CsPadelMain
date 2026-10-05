@@ -77,6 +77,54 @@ const en = {
         conciergeBtn: "Speak with my Concierge"
       },
       menorcaPage: {
+        landing: {
+          heroAlt: "The pool and terraces at Barceló Nura, Menorca, under a clear Mediterranean sky",
+          heroTitle: "A Mediterranean Sanctuary.",
+          heroSubtitle: "Five days of padel, island lifestyle and tranquility on Menorca, based at the five-star Barceló Nura. All-inclusive, from arrival to farewell.",
+          includedEyebrow: "What's Included",
+          includedTitle: "Everything, taken care of.",
+          includedText: "From arrival to departure, every detail of your retreat is handled: coaching, dining, transport and activities, all included.",
+          included: ["Accommodation at Barceló Nura", "All meals", "Elite coaching and matchplay", "Local transport", "Activities and island experiences", "Private airport transfers"],
+          includedNote: "Flights are not included. Our concierge can advise on routes or arrange a private charter on request.",
+          roomsEyebrow: "Where You Stay",
+          roomsTitle: "Five-star comfort at Barceló Nura.",
+          roomsText: "Light-filled rooms with private terraces or semi-private pools, a full-service spa, and Mediterranean cuisine. Private transfers to and from Mahón Airport are included.",
+          roomsImageAlts: [
+            "A sea-view room at Barceló Nura, with a terrace above the pool",
+            "The indoor spa and pool at Barceló Nura"
+          ],
+          padelEyebrow: "The Padel",
+          padelTitle: "Coaching and matchplay for every level.",
+          padelText: "Sessions are led by former professionals at one of Menorca's premier padel venues, home club of one of the world's top players. Coach-led drills, skill-grouped sessions and competitive matchplay, from beginners building foundations to advanced players refining strategy. The week builds to a mixed doubles round-robin tournament.",
+          padelImageAlt: "Guests and coaches gathered on court at a padel club in Menorca",
+          journeyEyebrow: "The Journey",
+          journeyTitle: "Five days, beautifully paced.",
+          journeyText: "Mornings on court, afternoons on the island, evenings around a table. A rhythm that leaves room to simply enjoy it.",
+          journey: [
+            { day: "Day 01", title: "Arrival & Welcome", text: "Private airport transfers, a seaside lunch, an easy warm-up session and a welcome dinner in Mahón." },
+            { day: "Day 02", title: "Padel & Boat Tour", text: "Coaching and matchplay in the morning, then lunch and a charter boat tour along the coast." },
+            { day: "Day 03", title: "Padel & Vineyard", text: "Skill-grouped sessions, followed by a tour and lunch at a local winery, with wine and cheese tasting." },
+            { day: "Day 04", title: "Tournament & Sunset", text: "A mixed doubles round-robin, awards over lunch, and sunset tapas at the iconic Cova d'en Xoroi." },
+            { day: "Day 05", title: "Final Session & Farewell", text: "One last breakfast together, an optional open-court session and private transfers to the airport." }
+          ],
+          journeyImageAlt: "A lunch table set above the water on Menorca's coast",
+          beyondEyebrow: "Beyond the Court",
+          beyondTitle: "Menorca, at its own pace.",
+          beyondText: "Private boat tours along the coast, vineyard visits with wine and cheese tastings, sunset tapas on the cliffs, spa treatments and hand-picked local restaurants. The court is where it starts. The island is what you remember.",
+          beyondImageAlt: "The rooftop terrace at Barceló Nura at golden hour, looking out to sea",
+          closingImageAlt: "A table set for dinner by a window overlooking the sea",
+          ctaEyebrow: "Start the Conversation",
+          ctaTitle: "Ready for Menorca?",
+          ctaText: "Our open Menorca retreat has sold out. Tell us you'd like to hear first when it returns, or plan a private retreat for your own group, any week of the year.",
+          ctaBtn: "Enquire About Menorca",
+          gallery: {
+            eyebrow: "The Gallery",
+            title: "A Taste of Menorca",
+            dragHint: "Click & drag",
+            prev: "Previous images",
+            next: "Next images"
+          }
+        },
         heroTitle: "MENORCA",
         heroSubtitle: "A Mediterranean Sanctuary. Five days. Padel, lifestyle, tranquility.",
         heroMeta: "30 Sep – 4 Oct 2026 · Menorca · All-Inclusive",
@@ -730,8 +778,8 @@ const en = {
           title: "Our Destination",
           location: "Balearic Islands · Spain",
           tagline: "Mediterranean Sanctuary",
-          dates: "Sep 30 – Oct 4, 2026",
-          spots: "Few Spaces Left",
+          dates: "5 Days · All-Inclusive",
+          spots: "Sold Out",
           explore: "Explore"
         },
         upcoming: {
