@@ -97,17 +97,15 @@ const fr = {
           padelTitle: "Coaching et matchplay pour tous les niveaux.",
           padelText: "Les séances sont animées par d'anciens professionnels dans l'un des établissements padel les plus prestigieux de Minorque, club d'attache de l'un des meilleurs joueurs mondiaux. Exercices dirigés par le coach, séances par niveau et matchplay compétitif, des débutants qui construisent leurs bases aux joueurs avancés qui affinent leur stratégie. La semaine culmine avec un tournoi de doubles mixtes en poule unique.",
           padelImageAlt: "Clients et coachs réunis sur le court d'un club de padel à Minorque",
-          journeyEyebrow: "Le Voyage",
-          journeyTitle: "Cinq jours, au bon rythme.",
-          journeyText: "Des matinées sur le court, des après-midis sur l'île, des soirées autour d'une table. Un rythme qui laisse la place au simple plaisir.",
+          itineraryEyebrow: "Programme",
+          itineraryTitle: "Itinéraire",
           journey: [
-            { day: "Jour 01", title: "Arrivée & Accueil", text: "Transferts privés depuis l'aéroport, déjeuner en bord de mer, une séance d'échauffement tout en douceur et dîner de bienvenue à Mahón." },
-            { day: "Jour 02", title: "Padel & Croisière", text: "Coaching et matchplay le matin, puis déjeuner et croisière en bateau affrété le long de la côte." },
-            { day: "Jour 03", title: "Padel & Vignoble", text: "Séances par niveau, suivies d'une visite et d'un déjeuner dans un domaine viticole local, avec dégustation de vins et fromages." },
-            { day: "Jour 04", title: "Tournoi & Coucher de soleil", text: "Un tournoi de doubles mixtes en poule unique, remise des prix pendant le déjeuner et tapas au coucher du soleil à la mythique Cova d'en Xoroi." },
-            { day: "Jour 05", title: "Dernière session & Adieux", text: "Un dernier petit-déjeuner ensemble, une séance optionnelle de court libre et des transferts privés vers l'aéroport." }
+            { day: "Jour 01", title: "Arrivée & Accueil", activities: [{ time: "Matin", title: "Arrivée & Check-In" }, { time: "17:00 – 18:30", title: "Session de Padel d'Échauffement" }, { time: "20:00", title: "Dîner de Bienvenue en Groupe" }] },
+            { day: "Jour 02", title: "Padel & Croisière", activities: [{ time: "08:30 – 09:15", title: "Petit-Déjeuner — Barceló Nura" }, { time: "10:00 – 12:00", title: "Coaching Padel & Matchs" }, { time: "13:45 – 17:30", title: "Déjeuner & Tour en Bateau" }, { time: "20:00", title: "Dîner — Hôtel / Soirée Libre" }] },
+            { day: "Jour 03", title: "Padel & Vignoble", activities: [{ time: "08:30 – 09:15", title: "Petit-Déjeuner — Barceló Nura" }, { time: "10:00 – 12:00", title: "Coaching Padel & Matchs" }, { time: "13:30 – 16:30", title: "Visite du Vignoble & Déjeuner" }, { time: "20:00", title: "Dîner de Groupe" }] },
+            { day: "Jour 04", title: "Tournoi & Coucher de soleil", activities: [{ time: "07:30 – 08:15", title: "Petit-Déjeuner Matinal — Barceló Nura" }, { time: "09:00 – 13:00", title: "Tournoi de Padel" }, { time: "13:00 – 14:30", title: "Déjeuner du Tournoi & Remise des Prix" }, { time: "17:00 – 19:00", title: "Coucher de Soleil & Tapas — Cova d'en Xoroi" }] },
+            { day: "Jour 05", title: "Dernière session & Adieux", activities: [{ time: "08:30 – 09:15", title: "Dernier Petit-Déjeuner — Barceló Nura" }, { time: "10:30 – 13:00", title: "Session de Padel Optionnelle — Padelin" }, { time: "Dès 11:00", title: "Check-Out & Transferts vers l'Aéroport" }] }
           ],
-          journeyImageAlt: "Une table dressée pour le déjeuner au-dessus de l'eau, sur la côte de Minorque",
           beyondEyebrow: "Au-delà du Court",
           beyondTitle: "Minorque, à son propre rythme.",
           beyondText: "Croisières privées le long de la côte, visites de vignobles avec dégustations de vins et fromages, tapas au coucher du soleil sur les falaises, soins au spa et restaurants locaux sélectionnés avec soin. Le court est le point de départ. L'île est ce dont on se souvient.",
@@ -115,7 +113,7 @@ const fr = {
           closingImageAlt: "Une table dressée pour le dîner près d'une fenêtre donnant sur la mer",
           ctaEyebrow: "Entamons la Conversation",
           ctaTitle: "Prêt pour Minorque ?",
-          ctaText: "Notre retraite ouverte à Minorque est complète. Dites-nous que vous souhaitez être prévenu en premier à son retour, ou organisez une retraite privée pour votre propre groupe, n'importe quelle semaine de l'année.",
+          ctaText: "Un acompte de 150 £ garantit votre place pour la retraite 2027. Contactez-nous pour réserver la vôtre, ou organisez une retraite privée pour votre propre groupe, n'importe quelle semaine de l'année.",
           ctaBtn: "Se Renseigner sur Minorque",
           gallery: {
             eyebrow: "La Galerie",
@@ -774,12 +772,12 @@ const fr = {
           }
         },
         destinations: {
-          eyebrow: "Confirmé 2026",
+          eyebrow: "Réservations 2027",
           title: "Notre Destination",
           location: "Îles Baléares · Espagne",
           tagline: "Sanctuaire Méditerranéen",
           dates: "5 Jours · Tout Compris",
-          spots: "Complet",
+          spots: "Acompte 150 £",
           explore: "Découvrir"
         },
         upcoming: {

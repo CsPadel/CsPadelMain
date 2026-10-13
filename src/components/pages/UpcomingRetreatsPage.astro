@@ -18,7 +18,8 @@ const siteURL = Astro.site ?? new URL(SITE_URL);
 const alternateUrls = getAlternateUrls(siteURL.href, 'upcomingRetreats');
 const menorcaHref = localizedPath('/menorca', locale);
 const baliHref = localizedPath('/bali', locale);
-const c = getTranslations(locale).upcomingRetreatsPage;
+const translations = getTranslations(locale);
+const c = translations.upcomingRetreatsPage;
 
 const destinations = [
   {
@@ -128,8 +129,15 @@ const destinations = [
     ))}
 
     {/* ── CTA ── */}
-    <section class="py-32 px-8 md:px-16 text-center noise-section bg-brand-dark">
+    <section id="bespoke" class="py-32 px-8 md:px-16 text-center noise-section bg-brand-dark scroll-mt-20">
       <div class="max-w-2xl mx-auto relative z-10">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+            {translations.bespokeRetreats.eyebrow}
+          </p>
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+        </div>
         <h2
           class="text-4xl md:text-5xl font-light mb-5 text-white"
           style="font-family: var(--font-display); font-style: italic;"

@@ -1,28 +1,26 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import '../i18n/config';
 
 interface Activity {
   time: string;
   title: string;
-  desc: string;
   image: string;
+  imagePosition?: string;
 }
 
 interface Day {
   dayStr: string;
-  date: string;
   label: string;
   activities: Activity[];
 }
 
-// Days data is now fetched from i18n config
+interface Props {
+  eyebrow: string;
+  title: string;
+  days: Day[];
+}
 
-export default function MenorcaItinerary() {
-  const { t } = useTranslation();
-  const days = t('menorcaPage.agenda', { returnObjects: true }) as Day[];
-
+export default function MenorcaItinerary({ eyebrow, title, days }: Readonly<Props>) {
   const [activeDay, setActiveDay] = useState(0);
 
   const current = days[activeDay];
@@ -34,8 +32,8 @@ export default function MenorcaItinerary() {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">{t('menorcaPage.itineraryEyebrow')}</p>
-          <h2 className="text-5xl md:text-6xl font-light text-white tracking-wide">{t('menorcaPage.itineraryTitle')}</h2>
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">{eyebrow}</p>
+          <h2 className="text-5xl md:text-6xl font-light text-white tracking-wide">{title}</h2>
         </div>
 
         {/* Day tabs */}
@@ -48,7 +46,7 @@ export default function MenorcaItinerary() {
             >
               <span className="block text-[10px] font-mono text-brand-gold mb-1 tracking-widest">{day.dayStr}</span>
               <span className={`block text-[11px] md:text-xs uppercase tracking-[0.18em] font-medium transition-colors duration-150 ${
-                activeDay === idx ? 'text-white' : 'text-white/25 group-hover:text-white/50'
+                activeDay === idx ? 'text-white' : 'text-white/50 group-hover:text-white/70'
               }`}>
                 {day.label}
               </span>
@@ -65,7 +63,7 @@ export default function MenorcaItinerary() {
 
         {/* Grid of Activities */}
         <AnimatePresence mode="wait">
-          <motion.div 
+          <motion.div
             key={`grid-${activeDay}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -86,7 +84,11 @@ export default function MenorcaItinerary() {
                     src={act.image}
                     alt={act.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    style={{ objectPosition: act.imagePosition ?? 'center' }}
                     loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
                   <div className="absolute bottom-4 left-4">
@@ -96,12 +98,9 @@ export default function MenorcaItinerary() {
                   </div>
                 </div>
                 <div className="p-6 md:p-8 flex-1 flex flex-col justify-start">
-                  <h3 className="text-white text-2xl font-light mb-3 leading-snug">
+                  <h3 className="text-white text-2xl font-light leading-snug">
                     {act.title}
                   </h3>
-                  <p className="text-white/60 text-sm leading-relaxed">
-                    {act.desc}
-                  </p>
                 </div>
               </motion.div>
             ))}

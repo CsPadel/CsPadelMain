@@ -12,12 +12,12 @@ const retreats = [
   {
     id: 'open',
     image: '/imagenes/EM-22.jpg',
-    href: '/menorca',
+    href: '/upcoming-retreats',
   },
   {
     id: 'private',
     image: '/imagenes/cms/private-retreat.jpg',
-    href: '/menorca',
+    href: '/upcoming-retreats#bespoke',
   },
   {
     id: 'executive',

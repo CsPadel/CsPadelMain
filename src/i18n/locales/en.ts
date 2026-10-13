@@ -97,17 +97,15 @@ const en = {
           padelTitle: "Coaching and matchplay for every level.",
           padelText: "Sessions are led by former professionals at one of Menorca's premier padel venues, home club of one of the world's top players. Coach-led drills, skill-grouped sessions and competitive matchplay, from beginners building foundations to advanced players refining strategy. The week builds to a mixed doubles round-robin tournament.",
           padelImageAlt: "Guests and coaches gathered on court at a padel club in Menorca",
-          journeyEyebrow: "The Journey",
-          journeyTitle: "Five days, beautifully paced.",
-          journeyText: "Mornings on court, afternoons on the island, evenings around a table. A rhythm that leaves room to simply enjoy it.",
+          itineraryEyebrow: "Programme",
+          itineraryTitle: "The Sample Itinerary",
           journey: [
-            { day: "Day 01", title: "Arrival & Welcome", text: "Private airport transfers, a seaside lunch, an easy warm-up session and a welcome dinner in Mahón." },
-            { day: "Day 02", title: "Padel & Boat Tour", text: "Coaching and matchplay in the morning, then lunch and a charter boat tour along the coast." },
-            { day: "Day 03", title: "Padel & Vineyard", text: "Skill-grouped sessions, followed by a tour and lunch at a local winery, with wine and cheese tasting." },
-            { day: "Day 04", title: "Tournament & Sunset", text: "A mixed doubles round-robin, awards over lunch, and sunset tapas at the iconic Cova d'en Xoroi." },
-            { day: "Day 05", title: "Final Session & Farewell", text: "One last breakfast together, an optional open-court session and private transfers to the airport." }
+            { day: "Day 01", title: "Arrival & Welcome", activities: [{ time: "Morning", title: "Arrival & Check-In" }, { time: "17:00 – 18:30", title: "Warm-Up Padel Session" }, { time: "20:00", title: "Group Welcome Dinner" }] },
+            { day: "Day 02", title: "Padel & Boat Tour", activities: [{ time: "08:30 – 09:15", title: "Breakfast — Barceló Nura" }, { time: "10:00 – 12:00", title: "Padel Coaching & Matchplay" }, { time: "13:45 – 17:30", title: "Lunch & Boat Tour" }, { time: "20:00", title: "Dinner — Hotel / Free Evening" }] },
+            { day: "Day 03", title: "Padel & Vineyard", activities: [{ time: "08:30 – 09:15", title: "Breakfast — Barceló Nura" }, { time: "10:00 – 12:00", title: "Padel Coaching & Matches" }, { time: "13:30 – 16:30", title: "Vineyard Tour & Lunch" }, { time: "20:00", title: "Group Dinner" }] },
+            { day: "Day 04", title: "Tournament & Sunset", activities: [{ time: "07:30 – 08:15", title: "Early Breakfast — Barceló Nura" }, { time: "09:00 – 13:00", title: "Padel Tournament" }, { time: "13:00 – 14:30", title: "Tournament Lunch & Awards" }, { time: "17:00 – 19:00", title: "Sunset & Tapas — Cova d'en Xoroi" }] },
+            { day: "Day 05", title: "Final Session & Farewell", activities: [{ time: "08:30 – 09:15", title: "Final Breakfast — Barceló Nura" }, { time: "10:30 – 13:00", title: "Optional Padel Session — Padelin" }, { time: "From 11:00", title: "Check-Out & Transfers to Airport" }] }
           ],
-          journeyImageAlt: "A lunch table set above the water on Menorca's coast",
           beyondEyebrow: "Beyond the Court",
           beyondTitle: "Menorca, at its own pace.",
           beyondText: "Private boat tours along the coast, vineyard visits with wine and cheese tastings, sunset tapas on the cliffs, spa treatments and hand-picked local restaurants. The court is where it starts. The island is what you remember.",
@@ -115,7 +113,7 @@ const en = {
           closingImageAlt: "A table set for dinner by a window overlooking the sea",
           ctaEyebrow: "Start the Conversation",
           ctaTitle: "Ready for Menorca?",
-          ctaText: "Our open Menorca retreat has sold out. Tell us you'd like to hear first when it returns, or plan a private retreat for your own group, any week of the year.",
+          ctaText: "A £150 deposit secures your place on the 2027 retreat. Get in touch to reserve yours, or plan a private retreat for your own group, any week of the year.",
           ctaBtn: "Enquire About Menorca",
           gallery: {
             eyebrow: "The Gallery",
@@ -774,12 +772,12 @@ const en = {
           }
         },
         destinations: {
-          eyebrow: "Confirmed 2026",
+          eyebrow: "Booking 2027",
           title: "Our Destination",
           location: "Balearic Islands · Spain",
           tagline: "Mediterranean Sanctuary",
           dates: "5 Days · All-Inclusive",
-          spots: "Sold Out",
+          spots: "£150 Deposit",
           explore: "Explore"
         },
         upcoming: {
