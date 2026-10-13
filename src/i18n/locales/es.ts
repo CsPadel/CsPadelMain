@@ -97,17 +97,15 @@ const es = {
           padelTitle: "Entrenamiento y partidos para todos los niveles.",
           padelText: "Las sesiones las dirigen exprofesionales en uno de los mejores clubes de pádel de Menorca, hogar de una de las mejores jugadoras del mundo. Ejercicios guiados por el entrenador, sesiones por nivel y partidos competitivos, desde principiantes que sientan las bases hasta jugadores avanzados que afinan su estrategia. La semana culmina en un torneo mixto de dobles todos contra todos.",
           padelImageAlt: "Huéspedes y entrenadores reunidos en la pista de un club de pádel en Menorca",
-          journeyEyebrow: "El Viaje",
-          journeyTitle: "Cinco días, con el ritmo justo.",
-          journeyText: "Mañanas en la pista, tardes por la isla, noches alrededor de una mesa. Un ritmo que deja espacio para simplemente disfrutar.",
+          itineraryEyebrow: "Programa",
+          itineraryTitle: "Itinerario",
           journey: [
-            { day: "Día 01", title: "Llegada y Bienvenida", text: "Traslados privados desde el aeropuerto, comida junto al mar, una sesión de calentamiento relajada y cena de bienvenida en Mahón." },
-            { day: "Día 02", title: "Pádel y Paseo en Barco", text: "Entrenamiento y partidos por la mañana, seguidos de comida y un paseo en barco chárter por la costa." },
-            { day: "Día 03", title: "Pádel y Viñedo", text: "Sesiones por nivel, seguidas de visita y comida en una bodega local, con cata de vinos y quesos." },
-            { day: "Día 04", title: "Torneo y Atardecer", text: "Un torneo mixto de dobles todos contra todos, entrega de premios durante la comida y tapas al atardecer en la mítica Cova d'en Xoroi." },
-            { day: "Día 05", title: "Sesión Final y Despedida", text: "Un último desayuno juntos, una sesión opcional de pista libre y traslados privados al aeropuerto." }
+            { day: "Día 01", title: "Llegada y Bienvenida", activities: [{ time: "Mañana", title: "Llegada & Check-In" }, { time: "17:00 – 18:30", title: "Sesión de Pádel (Calentamiento)" }, { time: "20:00", title: "Cena de Bienvenida en Grupo" }] },
+            { day: "Día 02", title: "Pádel y Paseo en Barco", activities: [{ time: "08:30 – 09:15", title: "Desayuno — Barceló Nura" }, { time: "10:00 – 12:00", title: "Pádel (Entrenamiento y Partidos)" }, { time: "13:45 – 17:30", title: "Almuerzo y Paseo en Barco" }, { time: "20:00", title: "Cena — Hotel / Tarde Libre" }] },
+            { day: "Día 03", title: "Pádel y Viñedo", activities: [{ time: "08:30 – 09:15", title: "Desayuno — Barceló Nura" }, { time: "10:00 – 12:00", title: "Pádel (Técnica y Partidos)" }, { time: "13:30 – 16:30", title: "Visita a Viñedo y Almuerzo" }, { time: "20:00", title: "Cena de Grupo" }] },
+            { day: "Día 04", title: "Torneo y Atardecer", activities: [{ time: "07:30 – 08:15", title: "Desayuno Temprano — Barceló Nura" }, { time: "09:00 – 13:00", title: "Torneo de Pádel" }, { time: "13:00 – 14:30", title: "Almuerzo & Entrega de Premios" }, { time: "17:00 – 19:00", title: "Atardecer & Tapas — Cova d'en Xoroi" }] },
+            { day: "Día 05", title: "Sesión Final y Despedida", activities: [{ time: "08:30 – 09:15", title: "Desayuno Final — Barceló Nura" }, { time: "10:30 – 13:00", title: "Sesión de Pádel Opcional — Padelin" }, { time: "Desde 11:00", title: "Check-Out & Traslados al Aeropuerto" }] }
           ],
-          journeyImageAlt: "Una mesa preparada para comer sobre el agua en la costa de Menorca",
           beyondEyebrow: "Más Allá de la Pista",
           beyondTitle: "Menorca, a su propio ritmo.",
           beyondText: "Paseos en barco privados por la costa, visitas a viñedos con cata de vinos y quesos, tapas al atardecer en los acantilados, tratamientos de spa y restaurantes locales elegidos a mano. La pista es donde empieza. La isla es lo que recuerdas.",
@@ -115,7 +113,7 @@ const es = {
           closingImageAlt: "Una mesa preparada para cenar junto a una ventana con vistas al mar",
           ctaEyebrow: "Empecemos a Hablar",
           ctaTitle: "¿Listo para Menorca?",
-          ctaText: "Nuestro retiro abierto en Menorca está agotado. Cuéntanos que quieres ser el primero en enterarte cuando vuelva, o planifica un retiro privado para tu propio grupo, cualquier semana del año.",
+          ctaText: "Un depósito de £150 asegura tu plaza en el retiro de 2027. Escríbenos para reservar la tuya, o planifica un retiro privado para tu propio grupo, cualquier semana del año.",
           ctaBtn: "Consulta sobre Menorca",
           gallery: {
             eyebrow: "La Galería",
@@ -774,12 +772,12 @@ const es = {
           }
         },
         destinations: {
-          eyebrow: "Confirmado 2026",
+          eyebrow: "Reservas 2027",
           title: "Nuestro Destino",
           location: "Islas Baleares · España",
           tagline: "Santuario Mediterráneo",
           dates: "5 Días · Todo Incluido",
-          spots: "Agotado",
+          spots: "Depósito £150",
           explore: "Descubrir"
         },
         upcoming: {
