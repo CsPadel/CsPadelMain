@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
@@ -11,6 +11,29 @@ interface HeroRouterProps {
 export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
   const { t } = usePageTranslation(localeProp);
   const heroRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // iOS refuses autoplay in Low Power Mode and similar states, and only a tap
+  // can start the video then. Retry on the first gesture so it still plays.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+
+    const events = ['touchend', 'click', 'keydown'] as const;
+    function stop() {
+      events.forEach((e) => window.removeEventListener(e, resume));
+    }
+    function resume() {
+      video?.play().then(stop).catch(() => {});
+    }
+
+    video.play().catch(() => {
+      events.forEach((e) => window.addEventListener(e, resume, { passive: true }));
+    });
+
+    return stop;
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -36,10 +59,12 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
           className="absolute inset-0 origin-center will-change-transform"
         >
           <video
+            ref={videoRef}
             autoPlay loop muted playsInline
+            disablePictureInPicture
             poster="/imagenes/bambu.jpg"
             preload="auto"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="hero-video absolute inset-0 w-full h-full object-cover"
           >
             <source src="/new-hero-vid.mp4" type="video/mp4" />
           </video>

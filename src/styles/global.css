@@ -396,6 +396,15 @@ body {
   white-space: nowrap;
 }
 
+/* iOS draws a native play button over muted autoplay videos it blocks (Low
+   Power Mode). Hide it so the poster stays clean until the video starts. */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 /* ─── Respect user reduced-motion preference ───────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
