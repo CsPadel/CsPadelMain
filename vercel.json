@@ -1,0 +1,8 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/about", "destination": "/the-experience", "permanent": true },
+    { "source": "/es/about", "destination": "/es/the-experience", "permanent": true },
+    { "source": "/fr/about", "destination": "/fr/the-experience", "permanent": true }
+  ]
+}

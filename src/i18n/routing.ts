@@ -26,7 +26,7 @@ export function localizedPath(pathname: string, locale: Locale): string {
   }
 
   if (basePath === '/') {
-    return `/${locale}/${query}${hash}`;
+    return `/${locale}${query}${hash}`;
   }
 
   return `/${locale}${basePath}${query}${hash}`;

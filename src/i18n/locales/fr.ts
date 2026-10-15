@@ -79,6 +79,7 @@ const fr = {
       menorcaPage: {
         landing: {
           heroAlt: "La piscine et les terrasses du Barceló Nura, à Minorque, sous un ciel méditerranéen dégagé",
+          heroEyebrow: "Retraite Padel à Minorque",
           heroTitle: "Un Sanctuaire Méditerranéen.",
           heroSubtitle: "Cinq jours de padel, d'art de vivre insulaire et de sérénité à Minorque, au cœur du Barceló Nura 5 étoiles. Tout compris, de l'arrivée aux adieux.",
           includedEyebrow: "Ce Qui Est Inclus",
@@ -572,6 +573,7 @@ const fr = {
         ctaSecondaryBtn: "Parler au Concierge",
         landing: {
           heroAlt: "Piscine à débordement au crépuscule – domaine Courtside à Bali",
+          heroEyebrow: "Retraite Padel à Bali",
           heroTitle: "Une Escapade à Bali.",
           heroSubtitle: "Un domaine privé perché sur les falaises de la péninsule de Bukit, abritant les seuls courts de padel reconnus par le WPT sur l'île. A Mandarin Oriental Home.",
           stayEyebrow: "Où Vous Séjournez",
@@ -610,6 +612,7 @@ const fr = {
       eastSussexPage: {
         landing: {
           heroAlt: "La maison principale de Crafted at Powdermills, vue depuis l'autre rive du lac privé à l'heure dorée",
+          heroEyebrow: "Retraite Padel dans l'East Sussex",
           heroTitle: "La Campagne Anglaise, à 70 Minutes de Londres.",
           heroSubtitle: "Crafted at Powdermills est un hôtel de campagne boutique au bord d'un lac privé, avec son propre club de padel.",
           roomsEyebrow: "Où Vous Séjournez",

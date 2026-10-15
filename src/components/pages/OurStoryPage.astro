@@ -4,7 +4,7 @@ import FooterIsland from '../FooterIsland';
 import FoundersSection from '../FoundersSection';
 import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
-import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { getPageSeo, getAlternateUrls, getPageOgImage } from '../../i18n/seo';
 import { SITE_URL } from '../../constants/site';
 import { getTranslations } from '../../i18n/getTranslations';
 
@@ -23,6 +23,7 @@ const c = getTranslations(locale).ourStoryPage;
   title={seo.title}
   description={seo.description}
   keywords={seo.keywords}
+  ogImage={getPageOgImage('ourStory')}
   lang={locale}
   locale={locale}
   canonical={alternateUrls[locale]}
