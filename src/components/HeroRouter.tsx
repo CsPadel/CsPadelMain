@@ -62,11 +62,14 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
             ref={videoRef}
             autoPlay loop muted playsInline
             disablePictureInPicture
-            poster="/imagenes/bambu.jpg"
+            poster="/hero-poster.jpg"
             preload="auto"
             className="hero-video absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/new-hero-vid.mp4" type="video/mp4" />
+            {/* Portrait screens only ever show the centre of the frame, so they get
+                a 9:16 crop. Browsers that ignore `media` take the first source. */}
+            <source src="/hero-video.mp4" type="video/mp4" media="(min-aspect-ratio: 1/1)" />
+            <source src="/hero-video-mobile.mp4" type="video/mp4" />
           </video>
         </motion.div>
 
