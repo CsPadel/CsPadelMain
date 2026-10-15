@@ -686,6 +686,18 @@ const en = {
         ctaBtn: "Reserve Your Place",
         ctaSecondaryBtn: "Speak with Concierge",
         landing: {
+          heroEyebrow: "Dubai Padel Retreat",
+          expectEyebrow: "What to Expect",
+          expectTitle: "The Courtside format, coming to Dubai.",
+          expectText: "We're designing a padel retreat in Dubai built the same way as every Courtside retreat: run end to end by our own team, with everything handled from arrival to departure.",
+          pillars: [
+            { title: "Coaching for every level", text: "Coach-led sessions and competitive matchplay, tailored player by player, whether you're new to the game or refining it." },
+            { title: "Five-star stays", text: "Hand-picked accommodation, so the time off court is as good as the time on it." },
+            { title: "Beyond the court", text: "Curated dining and experiences that show you the city, not a resort buffet." },
+          ],
+          interestTitle: "Be the first to know.",
+          interestText: "Dates and details are being finalised. Register your interest, or tell us about your group, and we'll share the Dubai programme with you first.",
+          interestBtn: "Register Your Interest",
           heroAlt: "Dubai skyline at golden hour",
           title: "Dubai.<br/>Coming Soon.",
           text: "We're building something special for Dubai. Get in touch if you'd like to be the first to know when it's ready.",

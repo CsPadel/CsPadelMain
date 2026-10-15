@@ -686,6 +686,18 @@ const fr = {
         ctaBtn: "Réserver votre Place",
         ctaSecondaryBtn: "Parler au Concierge",
         landing: {
+          heroEyebrow: "Retraite Padel à Dubaï",
+          expectEyebrow: "À Quoi S'attendre",
+          expectTitle: "Le format Courtside arrive à Dubaï.",
+          expectText: "Nous concevons une retraite padel à Dubaï construite comme toutes les retraites Courtside : gérée de bout en bout par notre équipe, avec tout pris en charge de l'arrivée au départ.",
+          pillars: [
+            { title: "Coaching pour tous les niveaux", text: "Séances encadrées par des coachs et matchplay compétitif, adaptés à chaque joueur, que vous découvriez le padel ou que vous l'affiniez." },
+            { title: "Séjours cinq étoiles", text: "Un hébergement choisi avec soin, pour que le temps hors du court soit aussi réussi que sur le court." },
+            { title: "Au-delà du court", text: "Une gastronomie et des expériences sélectionnées qui vous font découvrir la ville, pas un buffet de resort." },
+          ],
+          interestTitle: "Soyez le premier informé.",
+          interestText: "Les dates et les détails sont en cours de finalisation. Inscrivez-vous ou parlez-nous de votre groupe, et nous vous enverrons le programme de Dubaï en premier.",
+          interestBtn: "Être Informé",
           heroAlt: "Les gratte-ciels de Dubaï à l'heure dorée",
           title: "Dubaï.<br/>Bientôt Disponible.",
           text: "Nous préparons quelque chose de spécial pour Dubaï. Écrivez-nous si vous souhaitez être parmi les premiers informés dès que ce sera prêt.",

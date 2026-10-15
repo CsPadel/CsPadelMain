@@ -169,19 +169,19 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
   },
   dubai: {
     en: {
-      title: 'Dubai – Coming Soon – Courtside Padel',
-      description: "We're building something special for Dubai. Get in touch if you'd like to be the first to know when it's ready.",
-      keywords: 'Dubai padel retreat, Courtside Dubai, upcoming padel destinations',
+      title: 'Dubai Padel Retreat – Coming Soon | Courtside Padel',
+      description: 'A Courtside padel retreat in Dubai is coming soon: elite coaching, five-star stays and curated experiences. Register your interest to hear first.',
+      keywords: 'Dubai padel retreat, padel holiday Dubai, padel coaching Dubai, Courtside Dubai',
     },
     es: {
-      title: 'Dubái – Próximamente – Courtside Padel',
-      description: 'Estamos preparando algo especial para Dubái. Contáctanos si quieres ser el primero en saberlo cuando esté listo.',
-      keywords: 'retiro pádel Dubái, Courtside Dubái, próximos destinos pádel',
+      title: 'Retiro de Pádel en Dubái – Próximamente | Courtside Padel',
+      description: 'Pronto, un retiro de pádel Courtside en Dubái: entrenamiento de élite, hoteles cinco estrellas y experiencias únicas. Regístrate para saberlo primero.',
+      keywords: 'retiro de pádel Dubái, vacaciones de pádel Dubái, clases de pádel Dubái, Courtside Dubái',
     },
     fr: {
-      title: 'Dubaï – Bientôt Disponible – Courtside Padel',
-      description: 'Nous préparons quelque chose de spécial pour Dubaï. Contactez-nous pour être informé en premier.',
-      keywords: 'retraite padel Dubaï, Courtside Dubaï, prochaines destinations padel',
+      title: 'Retraite Padel à Dubaï – Bientôt | Courtside Padel',
+      description: 'Bientôt, une retraite padel Courtside à Dubaï : coaching d\'élite, séjours cinq étoiles et expériences uniques. Inscrivez-vous pour être informé.',
+      keywords: 'retraite padel Dubaï, séjour padel Dubaï, coaching padel Dubaï, Courtside Dubaï',
     },
   },
 };
