@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { srcSet } from '../../lib/responsiveImage';
 import FooterIsland from '../FooterIsland';
 import EnquiryCta from '../EnquiryForm';
 import PhotoStrip from '../PhotoStrip';
@@ -65,6 +66,8 @@ const roomsImages = [
     <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
       <img
         src="/imagenes/cms/menorca-hero-pool.jpg"
+        srcset={srcSet('/imagenes/cms/menorca-hero-pool.jpg')}
+        sizes="100vw"
         alt={c.heroAlt}
         class="absolute inset-0 w-full h-full object-cover"
         fetchpriority="high"
@@ -153,7 +156,7 @@ const roomsImages = [
         <div class="cs-fadein grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           {roomsImages.map((src, i) => (
             <div class="relative rounded-card overflow-hidden aspect-[4/3]">
-              <img src={src} alt={c.roomsImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+              <img src={src} srcset={srcSet(src)} sizes="(min-width: 768px) 50vw, 100vw" alt={c.roomsImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
             </div>
           ))}
         </div>
@@ -183,6 +186,8 @@ const roomsImages = [
         <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/3]">
           <img
             src="/imagenes/cms/menorca-padel-group.jpg"
+            srcset={srcSet('/imagenes/cms/menorca-padel-group.jpg')}
+            sizes="(min-width: 768px) 50vw, 100vw"
             alt={c.padelImageAlt}
             loading="lazy"
             decoding="async"
@@ -218,6 +223,8 @@ const roomsImages = [
         <div class="cs-fadein relative rounded-card overflow-hidden w-full" style="aspect-ratio: 21/9;">
           <img
             src="/imagenes/cms/menorca-sunset-terrace.jpg"
+            srcset={srcSet('/imagenes/cms/menorca-sunset-terrace.jpg')}
+            sizes="100vw"
             alt={c.beyondImageAlt}
             loading="lazy"
             decoding="async"
@@ -240,6 +247,8 @@ const roomsImages = [
     <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
       <img
         src="/imagenes/cms/menorca-closing-dining.jpg"
+        srcset={srcSet('/imagenes/cms/menorca-closing-dining.jpg')}
+        sizes="100vw"
         alt={c.closingImageAlt}
         loading="lazy"
         decoding="async"

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { srcSet } from '../../lib/responsiveImage';
 import FooterIsland from '../FooterIsland';
 import FoundersSection from '../FoundersSection';
 import EnquiryCta from '../EnquiryForm';
@@ -35,6 +36,8 @@ const c = getTranslations(locale).ourStoryPage;
     <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden">
       <img
         src="/imagenes/cms/our-story-hero.jpg"
+        srcset={srcSet('/imagenes/cms/our-story-hero.jpg')}
+        sizes="100vw"
         alt={c.heroAlt}
         class="absolute inset-0 w-full h-full object-cover"
         style="object-position: center 0%;"

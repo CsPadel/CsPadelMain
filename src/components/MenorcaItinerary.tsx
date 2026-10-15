@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { srcSet } from '../lib/responsiveImage';
 
 interface Activity {
   time: string;
@@ -82,6 +83,8 @@ export default function MenorcaItinerary({ eyebrow, title, days }: Readonly<Prop
                 <div className="relative h-56 md:h-64 w-full overflow-hidden">
                   <img
                     src={act.image}
+                    srcSet={srcSet(act.image)}
+                    sizes="(min-width: 768px) 480px, 100vw"
                     alt={act.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     style={{ objectPosition: act.imagePosition ?? 'center' }}

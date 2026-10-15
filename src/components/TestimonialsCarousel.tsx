@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
+import { srcSet } from '../lib/responsiveImage';
 
 interface TestimonialsCarouselProps {
   locale?: Locale;
@@ -75,6 +76,8 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
               <motion.img
                 key={`img-${active}`}
                 src={testimonial.image}
+                srcSet={srcSet(testimonial.image)}
+                sizes="56px"
                 alt={`${testimonial.name} – Courtside Menorca`}
                 initial={{ opacity: 0, scale: 1.04 }}
                 animate={{ opacity: 1, scale: 1 }}

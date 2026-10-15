@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { srcSet } from '../../lib/responsiveImage';
 import FooterIsland from '../FooterIsland';
 import EnquiryCta from '../EnquiryForm';
 import PhotoStrip from '../PhotoStrip';
@@ -56,6 +57,8 @@ const studioImages = [
     <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
       <img
         src="/imagenes/cms/bali-hero-pool.jpg"
+        srcset={srcSet('/imagenes/cms/bali-hero-pool.jpg')}
+        sizes="100vw"
         alt={c.heroAlt}
         class="absolute inset-0 w-full h-full object-cover"
         fetchpriority="high"
@@ -117,7 +120,7 @@ const studioImages = [
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {estateImages.map((src, i) => (
               <div class="relative rounded-card overflow-hidden aspect-[4/5]">
-                <img src={src} alt={c.estateImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+                <img src={src} srcset={srcSet(src)} sizes="(min-width: 768px) 33vw, 100vw" alt={c.estateImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
               </div>
             ))}
           </div>
@@ -137,7 +140,7 @@ const studioImages = [
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-2xl">
             {studioImages.map((src) => (
               <div class="relative rounded-card overflow-hidden aspect-[4/3]">
-                <img src={src} alt={c.studiosImageAlt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+                <img src={src} srcset={srcSet(src)} sizes="(min-width: 768px) 50vw, 100vw" alt={c.studiosImageAlt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
               </div>
             ))}
           </div>
@@ -168,6 +171,8 @@ const studioImages = [
         <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/3]">
           <img
             src="/imagenes/cms/bali-courts-galis.jpg"
+            srcset={srcSet('/imagenes/cms/bali-courts-galis.jpg')}
+            sizes="(min-width: 768px) 50vw, 100vw"
             alt={c.courtsImageAlt}
             loading="lazy"
             decoding="async"
@@ -200,6 +205,8 @@ const studioImages = [
         <div class="cs-fadein relative rounded-card overflow-hidden w-full" style="aspect-ratio: 21/9;">
           <img
             src="/imagenes/cms/bali-beyond.jpg"
+            srcset={srcSet('/imagenes/cms/bali-beyond.jpg')}
+            sizes="100vw"
             alt={c.beyondImageAlt}
             loading="lazy"
             decoding="async"
@@ -222,6 +229,8 @@ const studioImages = [
     <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
       <img
         src="/imagenes/cms/bali-closing-chef.jpg"
+        srcset={srcSet('/imagenes/cms/bali-closing-chef.jpg')}
+        sizes="100vw"
         alt={c.closingImageAlt}
         loading="lazy"
         decoding="async"

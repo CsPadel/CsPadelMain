@@ -4,6 +4,7 @@ import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
 import { useLocalizedHref } from '../i18n/useLocale';
+import { srcSet } from '../lib/responsiveImage';
 
 interface Props {
   locale?: Locale;
@@ -52,6 +53,8 @@ export default function DestinationsPreview({ locale }: Props) {
           <div className="absolute inset-0 skeleton-light" aria-hidden="true" />
           <img
             src="/imagenes/cap roig.jpg"
+            srcSet={srcSet("/imagenes/cap roig.jpg")}
+            sizes="100vw"
             alt="Menorca"
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             loading="lazy"

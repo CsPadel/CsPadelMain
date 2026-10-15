@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { srcSet } from '../../lib/responsiveImage';
 import FooterIsland from '../FooterIsland';
 import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
@@ -34,6 +35,8 @@ const c = getTranslations(locale).executivePage;
     <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
       <img
         src="/imagenes/cms/corporate-hero.png"
+        srcset={srcSet('/imagenes/cms/corporate-hero.png')}
+        sizes="100vw"
         alt={c.heroAlt}
         class="absolute inset-0 w-full h-full object-cover"
         fetchpriority="high"
@@ -90,6 +93,8 @@ const c = getTranslations(locale).executivePage;
         <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/3]">
           <img
             src="/imagenes/cms/corporate-format-empty-court.jpg"
+            srcset={srcSet('/imagenes/cms/corporate-format-empty-court.jpg')}
+            sizes="(min-width: 768px) 50vw, 100vw"
             alt={c.formatImageAlt}
             loading="lazy"
             decoding="async"

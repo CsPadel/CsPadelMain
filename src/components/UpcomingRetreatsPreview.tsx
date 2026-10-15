@@ -4,6 +4,7 @@ import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { useLocalizedHref } from '../i18n/useLocale';
 import { usePageTranslation } from '../i18n/usePageTranslation';
+import { srcSet } from '../lib/responsiveImage';
 
 interface Props {
   readonly locale?: Locale;
@@ -81,6 +82,8 @@ export default function UpcomingRetreatsPreview({ locale }: Props) {
               {r.image ? (
                 <img
                   src={r.image}
+                  srcSet={srcSet(r.image)}
+                  sizes="(min-width: 768px) 50vw, 100vw"
                   alt={r.name}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"

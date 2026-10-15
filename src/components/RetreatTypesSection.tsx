@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
+import { srcSet } from '../lib/responsiveImage';
 
 interface Props {
   locale?: Locale;
@@ -82,6 +83,8 @@ export default function RetreatTypesSection({ locale }: Props) {
                 {/* Background image */}
                 <img
                   src={retreat.image}
+                  srcSet={srcSet(retreat.image)}
+                  sizes="(min-width: 768px) 33vw, 100vw"
                   alt={name}
                   loading="lazy"
                   decoding="async"

@@ -52,3 +52,7 @@ skills-lock.json
 # Audit scratch output
 audit/_*.csv
 audit/_*.md
+
+# generated responsive images (scripts/responsive-images.mjs)
+public/_img/
+src/generated/
