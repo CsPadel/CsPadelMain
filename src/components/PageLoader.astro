@@ -36,7 +36,7 @@ const c = getTranslations(locale).pageLoader;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: cs-exit 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.7s both;
+    animation: cs-exit 0.35s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
   }
 
   #cs-inner {
@@ -76,10 +76,11 @@ const c = getTranslations(locale).pageLoader;
 
   #cs-bar {
     height: 100%;
-    width: 0%;
+    width: 100%;
     background: #D9AD62;
     border-radius: 9999px;
-    animation: cs-fill 1.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+    transform-origin: left;
+    animation: cs-fill 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.05s both;
   }
 
   @keyframes cs-enter {
@@ -88,13 +89,13 @@ const c = getTranslations(locale).pageLoader;
   }
 
   @keyframes cs-fill {
-    from { width: 0%; }
-    to   { width: 100%; }
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
   }
 
   @keyframes cs-exit {
     from { opacity: 1; }
-    to   { opacity: 0; pointer-events: none; }
+    to   { opacity: 0; }
   }
 </style>
 

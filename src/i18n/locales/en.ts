@@ -1,5 +1,7 @@
 const en = {
       navbar: {
+        openMenu: "Open menu",
+        closeMenu: "Close menu",
         ourStory: "Our Story",
         experience: "The Experience",
         destinations: "Destinations",
@@ -490,7 +492,7 @@ const en = {
       cookieConsent: {
         title: "We use cookies",
         description: "We use essential cookies to run this site and optional cookies to understand how it is used. You can accept all cookies or reject non-essential ones.",
-        policyLink: "Learn more",
+        policyLink: "Read our cookie policy",
         accept: "Accept all",
         reject: "Reject non-essential"
       },

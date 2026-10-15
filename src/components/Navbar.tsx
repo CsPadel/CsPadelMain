@@ -156,6 +156,8 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
           <button
             className={`md:hidden z-50 transition-colors ${isScrolled ? 'text-brand-dark' : 'text-brand-light'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? t('navbar.closeMenu') : t('navbar.openMenu')}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

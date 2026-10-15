@@ -154,16 +154,20 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
             ‹
           </button>
 
-          <div className="flex gap-2">
+          <div className="flex">
             {testimonials.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => go(idx)}
                 aria-label={`Review ${idx + 1}`}
-                className={`rounded-full transition-all duration-200 ${
-                  active === idx ? 'w-6 h-1.5 bg-brand-gold' : 'w-1.5 h-1.5 bg-brand-dark/20 hover:bg-brand-dark/40'
-                }`}
-              />
+                className="group p-[9px]"
+              >
+                <span
+                  className={`block rounded-full transition-all duration-200 ${
+                    active === idx ? 'w-6 h-1.5 bg-brand-gold' : 'w-1.5 h-1.5 bg-brand-dark/20 group-hover:bg-brand-dark/40'
+                  }`}
+                />
+              </button>
             ))}
           </div>
 
