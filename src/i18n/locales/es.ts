@@ -686,6 +686,18 @@ const es = {
         ctaBtn: "Reserva tu Plaza",
         ctaSecondaryBtn: "Habla con el Concierge",
         landing: {
+          heroEyebrow: "Retiro de Pádel en Dubái",
+          expectEyebrow: "Qué Esperar",
+          expectTitle: "El formato Courtside, llegando a Dubái.",
+          expectText: "Estamos diseñando un retiro de pádel en Dubái construido como todos los retiros Courtside: gestionado de principio a fin por nuestro equipo, con todo resuelto desde la llegada hasta la salida.",
+          pillars: [
+            { title: "Entrenamiento para todos los niveles", text: "Sesiones guiadas por entrenadores y partidos competitivos, adaptados a cada jugador, tanto si empiezas como si quieres perfeccionar tu juego." },
+            { title: "Alojamiento cinco estrellas", text: "Alojamiento elegido a mano, para que el tiempo fuera de la pista sea tan bueno como el de dentro." },
+            { title: "Más allá de la pista", text: "Gastronomía y experiencias seleccionadas que te muestran la ciudad, no un buffet de resort." },
+          ],
+          interestTitle: "Sé el primero en saberlo.",
+          interestText: "Las fechas y los detalles se están cerrando. Regístrate o cuéntanos sobre tu grupo y te enviaremos el programa de Dubái antes que a nadie.",
+          interestBtn: "Quiero Más Información",
           heroAlt: "El skyline de Dubái a la hora dorada",
           title: "Dubái.<br/>Próximamente.",
           text: "Estamos preparando algo especial para Dubái. Escríbenos si quieres ser de los primeros en saberlo cuando esté listo.",

@@ -57,8 +57,12 @@ const c = getTranslations(locale).dubaiPage.landing;
         <h1
           class="text-4xl md:text-6xl font-light text-white leading-none mb-6"
           style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.4s both;"
-          set:html={c.title}
-        />
+        >
+          <span class="block text-[10px] md:text-xs uppercase tracking-[0.38em] text-brand-gold font-semibold mb-5 md:mb-6" style="font-family: var(--font-inter); font-style: normal;">
+            {c.heroEyebrow}
+          </span>
+          <Fragment set:html={c.title} />
+        </h1>
 
         <p
           class="text-white/50 text-base md:text-lg font-light leading-relaxed mb-12 max-w-sm"
@@ -70,6 +74,52 @@ const c = getTranslations(locale).dubaiPage.landing;
         <div style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.8s both;">
           <EnquiryCta client:visible locale={locale} label={c.ctaBtn} destination="dubai" />
         </div>
+      </div>
+    </section>
+
+    {/* ── What to Expect ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 md:mb-16 max-w-3xl">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">{c.expectEyebrow}</p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            {c.expectTitle}
+          </h2>
+          <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed">{c.expectText}</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
+          {c.pillars.map((pillar) => (
+            <div class="border-t border-brand-gold/30 pt-6">
+              <h3
+                class="text-2xl font-light text-brand-dark leading-snug mb-4"
+                style="font-family: var(--font-display); font-style: italic;"
+              >
+                {pillar.title}
+              </h3>
+              <p class="text-brand-dark/55 text-base font-light leading-relaxed">{pillar.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ── Register interest ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 text-center bg-brand-dark">
+      <div class="max-w-2xl mx-auto">
+        <h2
+          class="text-4xl md:text-5xl font-light text-white mb-5"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          {c.interestTitle}
+        </h2>
+        <p class="text-white/60 text-base font-light leading-relaxed mb-10 max-w-md mx-auto">{c.interestText}</p>
+        <EnquiryCta client:visible locale={locale} label={c.interestBtn} destination="dubai" />
       </div>
     </section>
 
