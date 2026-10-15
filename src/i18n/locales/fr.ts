@@ -1,5 +1,7 @@
 const fr = {
       navbar: {
+        openMenu: "Ouvrir le menu",
+        closeMenu: "Fermer le menu",
         ourStory: "Notre Histoire",
         experience: "L'Expérience",
         destinations: "Destinations",
@@ -490,7 +492,7 @@ const fr = {
       cookieConsent: {
         title: "Nous utilisons des cookies",
         description: "Nous utilisons des cookies essentiels pour faire fonctionner ce site et des cookies optionnels pour comprendre son utilisation. Vous pouvez accepter tous les cookies ou refuser ceux qui ne sont pas essentiels.",
-        policyLink: "En savoir plus",
+        policyLink: "Lire notre politique de cookies",
         accept: "Tout accepter",
         reject: "Refuser les non essentiels"
       },
