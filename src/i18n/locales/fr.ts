@@ -747,7 +747,7 @@ const fr = {
           menorca: {
             name: "Minorque",
             location: "Îles Baléares · Espagne",
-            dates: ["Octobre 2026", "Avril 2027", "Mai 2027", "Juin 2027", "Septembre 2027", "Octobre 2027"],
+            dates: ["Avril 2027", "Mai 2027", "Juin 2027", "Septembre 2027", "Octobre 2027"],
             cta: "Découvrir Minorque"
           },
           bali: {
