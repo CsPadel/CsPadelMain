@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FooterIsland from '../components/FooterIsland';
+---
+
+<Layout
+  title="Page not found | Courtside Padel"
+  description="This page does not exist. Explore Courtside padel retreats in Menorca, East Sussex and Bali."
+  noindex
+>
+  <main class="w-full bg-white flex flex-col relative">
+    <section class="relative w-full min-h-[80vh] flex items-center justify-center px-8 md:px-16 bg-brand-dark text-center">
+      <div class="max-w-2xl">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">Error 404</p>
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+        </div>
+        <h1
+          class="text-5xl md:text-7xl font-light text-white leading-none mb-6"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          Out of bounds.
+        </h1>
+        <p class="text-white/55 text-base md:text-lg font-light leading-relaxed mb-12">
+          The page you were looking for has moved or no longer exists.
+        </p>
+        <nav aria-label="Popular pages" class="flex flex-wrap justify-center gap-3">
+          <a href="/" class="inline-flex items-center justify-center text-xs uppercase tracking-[0.2em] font-semibold rounded-full px-7 py-3.5 border transition-colors text-brand-gold border-brand-gold/60 hover:bg-brand-gold hover:text-brand-dark">Home</a>
+          <a href="/menorca" class="inline-flex items-center justify-center text-xs uppercase tracking-[0.2em] font-semibold rounded-full px-7 py-3.5 border transition-colors text-white/70 border-white/15 hover:text-brand-gold hover:border-brand-gold/50">Menorca</a>
+          <a href="/upcoming-retreats" class="inline-flex items-center justify-center text-xs uppercase tracking-[0.2em] font-semibold rounded-full px-7 py-3.5 border transition-colors text-white/70 border-white/15 hover:text-brand-gold hover:border-brand-gold/50">Upcoming Retreats</a>
+        </nav>
+      </div>
+    </section>
+    <FooterIsland client:visible locale="en" />
+  </main>
+</Layout>

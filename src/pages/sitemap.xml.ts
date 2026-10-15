@@ -18,7 +18,7 @@ const STANDALONE_PAGES = [
   { path: '/legal/terms-and-conditions', changefreq: 'yearly', priority: '0.3' },
 ];
 
-const LASTMOD = '2026-09-05';
+const LASTMOD = '2026-10-14';
 
 export const GET: APIRoute = () => {
   const entries = getSitemapEntries(SITE_URL).map((e) => ({ ...e, lastmod: LASTMOD }));
