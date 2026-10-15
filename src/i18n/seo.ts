@@ -12,23 +12,20 @@ export interface PageSeo {
 const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
   home: {
     en: {
-      title: 'Courtside | Premium Padel Experience',
-      description:
-        'Premium padel retreats in the Mediterranean. Book a private suite or exclusive villa. Courtside – where world-class padel meets ultra-luxury.',
+      title: 'Luxury Padel Retreats | Courtside Padel',
+      description: 'Luxury padel retreats in Menorca, East Sussex and Bali: elite coaching, five-star stays and curated experiences beyond the court.',
       keywords:
         'padel retreat, luxury padel holiday, Menorca padel, padel experience, private padel villa, Courtside padel',
     },
     es: {
-      title: 'Courtside | Experiencia Premium de Pádel',
-      description:
-        'Retiros de pádel premium en el Mediterráneo. Reserve una suite privada o una villa exclusiva. Courtside – donde el pádel de clase mundial se encuentra con el ultra-lujo.',
+      title: 'Retiros de Pádel de Lujo | Courtside Padel',
+      description: 'Retiros de pádel de lujo en Menorca, East Sussex y Bali: entrenamiento de élite, hoteles de cinco estrellas y experiencias más allá de la pista.',
       keywords:
         'retiro de pádel, vacaciones de pádel de lujo, pádel Menorca, experiencia de pádel, villa privada de pádel, Courtside pádel',
     },
     fr: {
-      title: 'Courtside | Expérience Padel Premium',
-      description:
-        'Retraites padel premium en Méditerranée. Réservez une suite privée ou une villa exclusive. Courtside – là où le padel d\'exception rencontre l\'ultra-luxe.',
+      title: 'Retraites Padel de Luxe | Courtside Padel',
+      description: 'Retraites padel de luxe à Minorque, dans l\'East Sussex et à Bali : coaching d\'élite, hôtels cinq étoiles et expériences au-delà du court.',
       keywords:
         'retraite padel, séjour padel luxe, padel Minorque, expérience padel, villa padel privée, Courtside padel',
     },
@@ -42,14 +39,12 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
     },
     es: {
       title: 'La Experiencia – Courtside Padel',
-      description:
-        'Más allá de la pista. Verdadera experiencia en pádel, gestionada de principio a fin por nuestro equipo, con salidas en barco, viñedos y atardeceres en cada retiro.',
+      description: 'Más allá de la pista: pádel de verdad, gestionado de principio a fin por nuestro equipo, con salidas en barco, viñedos y atardeceres en cada retiro.',
       keywords: 'experiencia retiro pádel, coaching pádel de lujo, experiencias fuera de pista Menorca, experiencia Courtside pádel',
     },
     fr: {
       title: 'L\'Expérience – Courtside Padel',
-      description:
-        'Au-delà du terrain. Une véritable expertise padel, orchestrée de bout en bout par notre équipe, avec sorties en bateau, vignobles et couchers de soleil à chaque retraite.',
+      description: 'Au-delà du court : une vraie expertise padel, gérée de bout en bout par notre équipe, avec bateau, vignobles et couchers de soleil à chaque retraite.',
       keywords: 'expérience retraite padel, coaching padel luxe, expériences hors terrain Minorque, expérience Courtside padel',
     },
   },
@@ -72,18 +67,18 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
   },
   executiveRetreat: {
     en: {
-      title: 'Corporate & Executive – Courtside Padel',
+      title: 'Corporate & Executive Padel Retreats | Courtside Padel',
       description: 'From leadership offsites and team building to rewards trips and board retreats, we build closed, bespoke padel retreats for companies of every kind.',
       keywords: 'corporate padel retreat, executive padel retreat, C-suite retreat, leadership offsite Menorca, board retreat padel',
     },
     es: {
-      title: 'Corporativo y Ejecutivo – Courtside Padel',
-      description: 'Desde offsites de liderazgo y team building hasta viajes de incentivo y retiros de consejo, creamos retiros de pádel cerrados y a medida para empresas de todo tipo.',
+      title: 'Retiros de Pádel Corporativos | Courtside Padel',
+      description: 'Offsites de liderazgo, team building, viajes de incentivo y retiros de consejo: creamos retiros de pádel cerrados y a medida para empresas.',
       keywords: 'retiro pádel corporativo, retiro ejecutivo pádel, retiro C-suite, offsite liderazgo Menorca',
     },
     fr: {
-      title: 'Corporate & Exécutif – Courtside Padel',
-      description: 'Des séminaires de leadership et du team building aux voyages de récompense et retraites de conseil, nous créons des retraites padel fermées et sur mesure pour tout type d\'entreprise.',
+      title: 'Retraites Padel Corporate | Courtside Padel',
+      description: 'Séminaires de leadership, team building, voyages de récompense et retraites de conseil : des retraites padel privées et sur mesure pour les entreprises.',
       keywords: 'retraite padel corporate, retraite padel exécutive, retraite C-suite, séminaire leadership Minorque',
     },
   },
@@ -107,68 +102,68 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
   upcomingRetreats: {
     en: {
       title: 'Upcoming Retreats – Courtside Padel',
-      description: 'Three new Courtside destinations arriving over the next 12–18 months – Bali, Dubai and Mykonos. Elite padel retreats. Register your interest.',
+      description: 'Upcoming Courtside padel retreats in Menorca and Bali, plus bespoke private retreats on your own dates. Find your next retreat.',
       keywords: 'upcoming padel retreats, Courtside Bali, Courtside Dubai, Courtside Mykonos, new padel destinations',
     },
     es: {
       title: 'Próximos Retiros – Courtside Padel',
-      description: 'Tres nuevos destinos Courtside llegan en los próximos 12 a 18 meses – Bali, Dubái y Mykonos. Retiros de pádel de élite. Regístrate para más información.',
+      description: 'Próximos retiros de pádel Courtside en Menorca y Bali, y retiros privados a medida en tus propias fechas. Encuentra tu próximo retiro.',
       keywords: 'próximos retiros pádel, Courtside Bali, Courtside Dubái, Courtside Mykonos, nuevos destinos pádel',
     },
     fr: {
       title: 'Prochaines Retraites – Courtside Padel',
-      description: 'Trois nouvelles destinations Courtside arrivent dans les 12 à 18 prochains mois – Bali, Dubaï et Mykonos. Retraites padel d\'élite. Inscrivez votre intérêt.',
+      description: 'Prochaines retraites padel Courtside à Minorque et à Bali, et retraites privées sur mesure à vos dates. Trouvez votre prochaine retraite.',
       keywords: 'prochaines retraites padel, Courtside Bali, Courtside Dubaï, Courtside Mykonos, nouvelles destinations padel',
     },
   },
   bali: {
     en: {
-      title: 'Bali – Courtside Padel',
+      title: 'Bali Padel Retreat in Uluwatu | Courtside Padel',
       description: 'A private cliff-top estate on the Bukit Peninsula, home to the only WPT-recognised padel courts in Bali. A Mandarin Oriental Home.',
       keywords: 'Bali padel retreat, Uluwatu padel, Padel Galis courts Bali, luxury Bali estate padel',
     },
     es: {
-      title: 'Bali – Courtside Padel',
+      title: 'Retiro de Pádel en Bali (Uluwatu) | Courtside Padel',
       description: 'Una finca privada en los acantilados de la península de Bukit, sede de las únicas pistas de pádel reconocidas por el WPT en Bali. Una Mandarin Oriental Home.',
       keywords: 'retiro pádel Bali, pádel Uluwatu, pistas Padel Galis Bali, finca de lujo pádel Bali',
     },
     fr: {
-      title: 'Bali – Courtside Padel',
+      title: 'Retraite Padel à Bali (Uluwatu) | Courtside Padel',
       description: 'Un domaine privé en falaise sur la péninsule de Bukit, abritant les seuls courts de padel reconnus par le WPT à Bali. Une Mandarin Oriental Home.',
       keywords: 'retraite padel Bali, padel Uluwatu, courts Padel Galis Bali, domaine de luxe padel Bali',
     },
   },
   eastSussex: {
     en: {
-      title: 'East Sussex – Courtside Padel',
-      description: 'Crafted at Powdermills, a boutique country hotel on a private lake 70 minutes from London, with its own established padel club. Two courts, coaching and classes.',
+      title: 'East Sussex Padel Retreat near London | Courtside Padel',
+      description: 'Crafted at Powdermills: a boutique country hotel on a private lake, 70 minutes from London, with its own padel club, coaching and classes.',
       keywords: 'East Sussex padel retreat, Crafted at Powdermills, Crafted Padel Club, UK padel retreat, corporate padel offsite England',
     },
     es: {
-      title: 'East Sussex – Courtside Padel',
-      description: 'Crafted at Powdermills, un hotel boutique de campo junto a un lago privado a 70 minutos de Londres, con su propio club de pádel. Dos pistas, entrenamiento y clases.',
+      title: 'Retiro de Pádel en East Sussex | Courtside Padel',
+      description: 'Crafted at Powdermills: hotel boutique junto a un lago privado, a 70 minutos de Londres, con su propio club de pádel, entrenamiento y clases.',
       keywords: 'retiro pádel East Sussex, Crafted at Powdermills, Crafted Padel Club, retiro pádel Reino Unido, offsite corporativo pádel Inglaterra',
     },
     fr: {
-      title: 'East Sussex – Courtside Padel',
-      description: 'Crafted at Powdermills, un hôtel de campagne boutique au bord d\'un lac privé à 70 minutes de Londres, avec son propre club de padel. Deux courts, coaching et cours.',
+      title: 'Retraite Padel dans l\'East Sussex | Courtside Padel',
+      description: 'Crafted at Powdermills : hôtel boutique au bord d\'un lac privé, à 70 minutes de Londres, avec son propre club de padel, coaching et cours.',
       keywords: 'retraite padel East Sussex, Crafted at Powdermills, Crafted Padel Club, retraite padel Royaume-Uni, séminaire padel Angleterre',
     },
   },
   menorca: {
     en: {
-      title: 'Menorca – Courtside Padel',
-      description: 'Five days of padel, island lifestyle and tranquility in Menorca, based at the five-star Barceló Nura. Elite coaching, boat tours, vineyard visits and fine dining, all-inclusive.',
+      title: 'Menorca Padel Retreat | Courtside Padel',
+      description: 'Five-day padel retreat in Menorca at the five-star Barceló Nura: elite coaching, boat tours, vineyard visits and fine dining, all-inclusive.',
       keywords: 'Menorca padel retreat, luxury padel holiday Menorca, Barceló Nura padel, padel Balearic Islands, Courtside Menorca',
     },
     es: {
-      title: 'Menorca – Courtside Padel',
-      description: 'Cinco días de pádel, estilo de vida isleño y tranquilidad en Menorca, con base en el Barceló Nura de cinco estrellas. Entrenamiento de élite, paseos en barco, visitas a viñedos y alta gastronomía, todo incluido.',
+      title: 'Retiro de Pádel en Menorca | Courtside Padel',
+      description: 'Retiro de pádel de cinco días en Menorca, en el Barceló Nura cinco estrellas: entrenamiento de élite, barco, viñedos y alta gastronomía.',
       keywords: 'retiro pádel Menorca, vacaciones de pádel de lujo Menorca, pádel Barceló Nura, pádel Islas Baleares, Courtside Menorca',
     },
     fr: {
-      title: 'Menorca – Courtside Padel',
-      description: 'Cinq jours de padel, d\'art de vivre insulaire et de sérénité à Minorque, au cœur du Barceló Nura 5 étoiles. Coaching d\'élite, croisières, visites de vignobles et gastronomie raffinée, tout compris.',
+      title: 'Retraite Padel à Minorque | Courtside Padel',
+      description: 'Retraite padel de cinq jours à Minorque, au Barceló Nura 5 étoiles : coaching d\'élite, bateau, vignobles et gastronomie raffinée, tout compris.',
       keywords: 'retraite padel Minorque, vacances padel de luxe Minorque, padel Barceló Nura, padel îles Baléares, Courtside Minorque',
     },
   },
@@ -203,6 +198,24 @@ const pagePaths: Record<PageId, string> = {
   eastSussex: '/east-sussex',
   menorca: '/menorca',
 };
+
+const pageOgImages: Record<PageId, string> = {
+  home: '/imagenes/cms/menorca-padel-group.jpg',
+  experience: '/imagenes/cms/menorca-sunset-terrace.jpg',
+  cookies: '/imagenes/cms/menorca-padel-group.jpg',
+  executiveRetreat: '/imagenes/cms/corporate-format-empty-court.jpg',
+  ourStory: '/imagenes/cms/our-story-hero.jpg',
+  upcomingRetreats: '/imagenes/cms/bali-estate-aerial.jpg',
+  bali: '/imagenes/cms/bali-hero-pool.jpg',
+  dubai: '/imagenes/cms/dubai-skyline.jpg',
+  eastSussex: '/imagenes/cms/east-sussex-hero-house-lake.jpg',
+  menorca: '/imagenes/cms/menorca-hero-pool.jpg',
+};
+
+/** Landscape image used when the page is shared (Open Graph / Twitter). */
+export function getPageOgImage(page: PageId): string {
+  return pageOgImages[page];
+}
 
 export function getPageSeo(page: PageId, locale: Locale): PageSeo {
   return seoContent[page][locale];

@@ -5,7 +5,8 @@ import EnquiryCta from '../EnquiryForm';
 import PhotoStrip from '../PhotoStrip';
 import { BALI_GALLERY } from '../../constants/baliGallery';
 import type { Locale } from '../../i18n/locales';
-import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { touristTripSchema } from '../../i18n/schema';
+import { getPageSeo, getAlternateUrls, getPageOgImage } from '../../i18n/seo';
 import { SITE_URL } from '../../constants/site';
 import { getTranslations } from '../../i18n/getTranslations';
 
@@ -18,6 +19,14 @@ const seo = getPageSeo('bali', locale);
 const siteURL = Astro.site ?? new URL(SITE_URL);
 const alternateUrls = getAlternateUrls(siteURL.href, 'bali');
 const c = getTranslations(locale).baliPage.landing;
+const schema = touristTripSchema({
+  locale,
+  url: alternateUrls[locale],
+  name: c.heroEyebrow,
+  description: seo.description,
+  image: getPageOgImage('bali'),
+  place: { name: 'Uluwatu, Bali', locality: 'Uluwatu', region: 'Bali', country: 'ID' },
+});
 
 const estateImages = [
   '/imagenes/cms/bali-estate-aerial.jpg',
@@ -34,6 +43,8 @@ const studioImages = [
   title={seo.title}
   description={seo.description}
   keywords={seo.keywords}
+  ogImage={getPageOgImage('bali')}
+  schema={schema}
   lang={locale}
   locale={locale}
   canonical={alternateUrls[locale]}
@@ -60,6 +71,9 @@ const studioImages = [
           class="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-none mb-6"
           style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s both;"
         >
+          <span class="block text-[10px] md:text-xs uppercase tracking-[0.38em] text-brand-gold font-semibold mb-5 md:mb-6" style="font-family: var(--font-inter); font-style: normal;">
+            {c.heroEyebrow}
+          </span>
           {c.heroTitle}
         </h1>
         <p

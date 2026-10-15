@@ -79,6 +79,7 @@ const en = {
       menorcaPage: {
         landing: {
           heroAlt: "The pool and terraces at Barceló Nura, Menorca, under a clear Mediterranean sky",
+          heroEyebrow: "Menorca Padel Retreat",
           heroTitle: "A Mediterranean Sanctuary.",
           heroSubtitle: "Five days of padel, island lifestyle and tranquility on Menorca, based at the five-star Barceló Nura. All-inclusive, from arrival to farewell.",
           includedEyebrow: "What's Included",
@@ -572,6 +573,7 @@ const en = {
         ctaSecondaryBtn: "Speak with Concierge",
         landing: {
           heroAlt: "Infinity pool at dusk – Courtside Bali estate",
+          heroEyebrow: "Bali Padel Retreat",
           heroTitle: "An Escape to Bali.",
           heroSubtitle: "A private cliff-top estate on the Bukit Peninsula, home to the only WPT-recognised padel courts on the island. A Mandarin Oriental Home.",
           stayEyebrow: "Where You Stay",
@@ -610,6 +612,7 @@ const en = {
       eastSussexPage: {
         landing: {
           heroAlt: "The main house at Crafted at Powdermills, seen across the private lake at golden hour",
+          heroEyebrow: "East Sussex Padel Retreat",
           heroTitle: "The English Countryside, 70 Minutes from London.",
           heroSubtitle: "Crafted at Powdermills is a boutique country hotel on a private lake, with its own dedicated padel club.",
           roomsEyebrow: "Where You Stay",

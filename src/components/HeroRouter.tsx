@@ -107,13 +107,13 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
           </motion.div>
 
           {/* Headline – two-line stagger slide-up reveal from overflow-hidden */}
-          <div role="heading" aria-level={1}>
-            <div className="overflow-hidden mb-1 md:mb-2">
-              <motion.div
+          <h1>
+            <span className="block overflow-hidden mb-1 md:mb-2">
+              <motion.span
                 initial={{ y: '110%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1.08, delay: 0.44, ease: [0.22, 1, 0.36, 1] }}
-                className="text-white font-light tracking-tight"
+                className="block text-white font-light tracking-tight"
                 style={{
                   fontFamily: 'var(--font-display)',
                   fontStyle: 'italic',
@@ -121,15 +121,15 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
                   lineHeight: 0.9,
                 }}
               >
-                {t('gateway.hero.headlineLine1')}
-              </motion.div>
-            </div>
-            <div className="overflow-hidden mb-9 md:mb-11">
-              <motion.div
+                {t('gateway.hero.headlineLine1')}{' '}
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden mb-9 md:mb-11">
+              <motion.span
                 initial={{ y: '110%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1.08, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="text-white font-light tracking-tight"
+                className="block text-white font-light tracking-tight"
                 style={{
                   fontFamily: 'var(--font-display)',
                   fontStyle: 'italic',
@@ -138,9 +138,9 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
                 }}
               >
                 {t('gateway.hero.headlineLine2')}
-              </motion.div>
-            </div>
-          </div>
+              </motion.span>
+            </span>
+          </h1>
 
           {/* Gold line divider */}
           <motion.div

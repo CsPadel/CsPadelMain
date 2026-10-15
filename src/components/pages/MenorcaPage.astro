@@ -7,7 +7,8 @@ import MenorcaItinerary from '../MenorcaItinerary';
 import { MENORCA_GALLERY } from '../../constants/menorcaGallery';
 import { MENORCA_ITINERARY_IMAGES } from '../../constants/menorcaItinerary';
 import type { Locale } from '../../i18n/locales';
-import { getPageSeo, getAlternateUrls } from '../../i18n/seo';
+import { touristTripSchema } from '../../i18n/schema';
+import { getPageSeo, getAlternateUrls, getPageOgImage } from '../../i18n/seo';
 import { SITE_URL } from '../../constants/site';
 import { getTranslations } from '../../i18n/getTranslations';
 
@@ -20,6 +21,15 @@ const seo = getPageSeo('menorca', locale);
 const siteURL = Astro.site ?? new URL(SITE_URL);
 const alternateUrls = getAlternateUrls(siteURL.href, 'menorca');
 const c = getTranslations(locale).menorcaPage.landing;
+const schema = touristTripSchema({
+  locale,
+  url: alternateUrls[locale],
+  name: c.heroEyebrow,
+  description: seo.description,
+  image: getPageOgImage('menorca'),
+  place: { name: 'Menorca', region: 'Balearic Islands', country: 'ES' },
+  itinerary: c.journey.map((day) => `${day.day}: ${day.title}`),
+});
 
 const itineraryDays = c.journey.map((day, i) => ({
   dayStr: day.day,
@@ -42,7 +52,8 @@ const roomsImages = [
   title={seo.title}
   description={seo.description}
   keywords={seo.keywords}
-  ogImage="/imagenes/cms/menorca-hero-pool.jpg"
+  ogImage={getPageOgImage('menorca')}
+  schema={schema}
   lang={locale}
   locale={locale}
   canonical={alternateUrls[locale]}
@@ -69,6 +80,9 @@ const roomsImages = [
           class="text-4xl md:text-6xl lg:text-7xl font-light text-white leading-none mb-6 max-w-4xl"
           style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s both;"
         >
+          <span class="block text-[10px] md:text-xs uppercase tracking-[0.38em] text-brand-gold font-semibold mb-5 md:mb-6" style="font-family: var(--font-inter); font-style: normal;">
+            {c.heroEyebrow}
+          </span>
           {c.heroTitle}
         </h1>
         <p

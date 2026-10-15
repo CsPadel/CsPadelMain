@@ -79,6 +79,7 @@ const es = {
       menorcaPage: {
         landing: {
           heroAlt: "La piscina y las terrazas del Barceló Nura, en Menorca, bajo un cielo mediterráneo despejado",
+          heroEyebrow: "Retiro de Pádel en Menorca",
           heroTitle: "Un Santuario Mediterráneo.",
           heroSubtitle: "Cinco días de pádel, estilo de vida isleño y tranquilidad en Menorca, con base en el Barceló Nura de cinco estrellas. Todo incluido, de la llegada a la despedida.",
           includedEyebrow: "Qué Incluye",
@@ -572,6 +573,7 @@ const es = {
         ctaSecondaryBtn: "Habla con el Concierge",
         landing: {
           heroAlt: "Piscina infinita al atardecer – finca Courtside en Bali",
+          heroEyebrow: "Retiro de Pádel en Bali",
           heroTitle: "Una Escapada a Bali.",
           heroSubtitle: "Una finca privada sobre el acantilado en la península de Bukit, hogar de las únicas pistas de pádel reconocidas por la WPT en la isla. A Mandarin Oriental Home.",
           stayEyebrow: "Dónde te Alojas",
@@ -610,6 +612,7 @@ const es = {
       eastSussexPage: {
         landing: {
           heroAlt: "La casa principal de Crafted at Powdermills, vista desde el otro lado del lago privado a la hora dorada",
+          heroEyebrow: "Retiro de Pádel en East Sussex",
           heroTitle: "La Campiña Inglesa, a 70 Minutos de Londres.",
           heroSubtitle: "Crafted at Powdermills es un hotel boutique de campo junto a un lago privado, con su propio club de pádel.",
           roomsEyebrow: "Dónde te Alojas",
