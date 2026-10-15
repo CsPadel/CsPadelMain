@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
+import { srcSet } from '../lib/responsiveImage';
 
 interface Props {
   locale?: Locale;
@@ -60,6 +61,8 @@ export default function FoundersSection({ locale }: Readonly<Props>) {
               >
                 <img
                   src={founder.photo}
+                  srcSet={srcSet(founder.photo)}
+                  sizes="(min-width: 768px) 50vw, 100vw"
                   alt={`${founder.name} – ${t('ourStoryPage.founderAlt')}`}
                   loading="lazy"
                   decoding="async"

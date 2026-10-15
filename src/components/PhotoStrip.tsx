@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
+import { srcSet } from '../lib/responsiveImage';
 
 export interface PhotoStripItem {
   /** File under `imageDir`, without extension. */
@@ -159,6 +160,8 @@ export default function PhotoStrip({ locale, items, imageDir, tPrefix }: Readonl
             >
               <img
                 src={`/imagenes/${imageDir}/${item.slug}.jpg`}
+                srcSet={srcSet(`/imagenes/${imageDir}/${item.slug}.jpg`)}
+                sizes="(min-width: 768px) 300px, 240px"
                 alt={`${item.title} – ${item.location}`}
                 loading={i < 3 ? 'eager' : 'lazy'}
                 decoding="async"

@@ -3,6 +3,7 @@ import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
 import EnquiryCta from './EnquiryForm';
+import { srcSet } from '../lib/responsiveImage';
 
 interface ExperienceViewProps {
   locale?: Locale;
@@ -32,6 +33,8 @@ export default function ExperienceView({ locale }: ExperienceViewProps) {
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center pt-24 pb-24 px-8 md:px-16 text-center overflow-hidden bg-brand-dark">
         <img
           src="/imagenes/cms/experience-hero.jpg"
+          srcSet={srcSet("/imagenes/cms/experience-hero.jpg")}
+          sizes="100vw"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
@@ -173,6 +176,8 @@ export default function ExperienceView({ locale }: ExperienceViewProps) {
                 tasting or cliffside sunset. */}
             <img
               src="/imagenes/EM-43.jpg"
+              srcSet={srcSet("/imagenes/EM-43.jpg")}
+              sizes="(min-width: 768px) 50vw, 100vw"
               alt="Off the court on a Courtside retreat"
               loading="lazy"
               decoding="async"
