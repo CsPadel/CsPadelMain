@@ -16,6 +16,8 @@ interface Props {
 	ogImage?: string;
 	ogType?: string;
 	canonical?: string;
+	/** Keeps the page out of search results (e.g. the 404 page). */
+	noindex?: boolean;
 	schema?: object;
 	lang?: string;
 	locale?: Locale;
@@ -29,6 +31,7 @@ const {
 	ogImage = "/imagenes/cms/menorca-padel-group.jpg",
 	ogType = "website",
 	canonical,
+	noindex = false,
 	schema,
 	lang = "en",
 	locale = "en",
@@ -58,7 +61,7 @@ const hreflangEntries = Object.entries(alternateUrls).filter(
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<meta name="keywords" content={keywords} />
-		<link rel="canonical" href={canonicalURL} />
+		{!noindex && <link rel="canonical" href={canonicalURL} />}
 
 		{hreflangEntries.map(([hrefLang, href]) => (
 			<link rel="alternate" hreflang={hrefLang} href={href} />
@@ -85,7 +88,10 @@ const hreflangEntries = Object.entries(alternateUrls).filter(
 		<meta name="twitter:image" content={ogImageAbsolute} />
 		<meta name="twitter:image:alt" content={title} />
 
-		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta
+			name="robots"
+			content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+		/>
 		<meta name="theme-color" content="#01192C" />
 
 		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
