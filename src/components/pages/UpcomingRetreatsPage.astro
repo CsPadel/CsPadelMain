@@ -4,6 +4,7 @@ import { srcSet } from '../../lib/responsiveImage';
 import FooterIsland from '../FooterIsland';
 import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
+import { upcomingRetreatsSchema } from '../../i18n/schema';
 import { getPageSeo, getAlternateUrls, getPageOgImage } from '../../i18n/seo';
 import { SITE_URL } from '../../constants/site';
 import { localizedPath } from '../../i18n/routing';
@@ -36,6 +37,14 @@ const destinations = [
     href: baliHref,
   },
 ];
+
+const schema = upcomingRetreatsSchema(
+  locale,
+  alternateUrls[locale],
+  seo.title,
+  seo.description,
+  destinations.map((d) => ({ name: d.name, url: new URL(d.href, siteURL).href })),
+);
 ---
 
 <Layout
@@ -43,6 +52,7 @@ const destinations = [
   description={seo.description}
   keywords={seo.keywords}
   ogImage={getPageOgImage('upcomingRetreats')}
+  schema={schema}
   lang={locale}
   locale={locale}
   canonical={alternateUrls[locale]}

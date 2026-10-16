@@ -150,7 +150,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
           </div>
 
           <div className="hidden md:flex items-center z-50">
-            <LanguageToggle variant={isScrolled ? 'light' : 'dark'} />
+            <LanguageToggle variant={isScrolled ? 'light' : 'dark'} locale={localeProp} pathname={pathname || undefined} />
           </div>
 
           <button
@@ -192,7 +192,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
               <div className="w-full h-px bg-brand-gold/20 my-4" />
 
               <div className="scale-125 mt-4">
-                <LanguageToggle />
+                <LanguageToggle locale={localeProp} pathname={pathname || undefined} />
               </div>
             </div>
           </motion.div>

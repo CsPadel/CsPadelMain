@@ -32,7 +32,7 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
   return (
     <section
       id="testimonials"
-      aria-label="Guest reviews of Courtside Menorca padel retreat"
+      aria-label={t('testimonials.ariaLabel')}
       className="bg-white py-24 md:py-32 px-6 md:px-16"
     >
       <div className="max-w-7xl mx-auto">
@@ -77,7 +77,7 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
                 key={`img-${active}`}
                 src={testimonial.image}
                 srcSet={srcSet(testimonial.image)}
-                sizes="56px"
+                sizes="(min-width: 768px) 520px, 100vw"
                 alt={`${testimonial.name} – Courtside Menorca`}
                 initial={{ opacity: 0, scale: 1.04 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -128,7 +128,7 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
                     <p className="text-brand-dark font-semibold text-sm">{testimonial.name}</p>
                     <p className="text-brand-dark/45 text-xs">{testimonial.role}</p>
                   </div>
-                  <div className="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
+                  <div className="ml-auto flex gap-0.5" aria-label={t('testimonials.starsAriaLabel')}>
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-brand-gold text-sm">★</span>
                     ))}
@@ -148,7 +148,7 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
         <div className="flex items-center justify-center gap-6 mt-10">
           <button
             onClick={goPrev}
-            aria-label="Previous review"
+            aria-label={t('testimonials.prevAriaLabel')}
             className="w-9 h-9 rounded-full border border-brand-dark/20 hover:border-brand-gold flex items-center justify-center text-brand-dark/40 hover:text-brand-gold transition-all duration-150 text-lg"
           >
             ‹
@@ -159,7 +159,7 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
               <button
                 key={idx}
                 onClick={() => go(idx)}
-                aria-label={`Review ${idx + 1}`}
+                aria-label={`${t('testimonials.dotAriaLabel')} ${idx + 1}`}
                 className="group p-[9px]"
               >
                 <span
@@ -173,7 +173,7 @@ export default function TestimonialsCarousel({ locale }: TestimonialsCarouselPro
 
           <button
             onClick={goNext}
-            aria-label="Next review"
+            aria-label={t('testimonials.nextAriaLabel')}
             className="w-9 h-9 rounded-full border border-brand-dark/20 hover:border-brand-gold flex items-center justify-center text-brand-dark/40 hover:text-brand-gold transition-all duration-150 text-lg"
           >
             ›

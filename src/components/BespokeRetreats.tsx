@@ -15,7 +15,7 @@ export default function BespokeRetreats({ locale }: BespokeRetreatsProps) {
   return (
     <motion.section
       id="bespoke"
-      aria-label="Bespoke Private Retreats in Menorca"
+      aria-label={t('bespokeRetreats.ariaLabel')}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}

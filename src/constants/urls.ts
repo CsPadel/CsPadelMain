@@ -1,6 +1,6 @@
 export const SOCIAL_URLS = {
   instagram: 'https://www.instagram.com/padelcourtside/',
-  linkedin: 'https://www.linkedin.com/company/https-cspadel.com-/',
+  linkedin: 'https://www.linkedin.com/company/courtside-padel/',
 } as const;
 
 export const WHATSAPP_CONCIERGE_NUMBER = '447786694723';

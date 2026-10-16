@@ -18,17 +18,18 @@ interface Day {
 interface Props {
   eyebrow: string;
   title: string;
+  ariaLabel?: string;
   days: Day[];
 }
 
-export default function MenorcaItinerary({ eyebrow, title, days }: Readonly<Props>) {
+export default function MenorcaItinerary({ eyebrow, title, ariaLabel = 'Menorca padel retreat 5-day itinerary', days }: Readonly<Props>) {
   const [activeDay, setActiveDay] = useState(0);
 
   const current = days[activeDay];
   const acts = current.activities;
 
   return (
-    <section id="itinerary" aria-label="Menorca padel retreat 5-day itinerary" className="bg-brand-dark py-24 md:py-32 overflow-hidden">
+    <section id="itinerary" aria-label={ariaLabel} className="bg-brand-dark py-24 md:py-32 overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 md:px-8">
 
         {/* Header */}

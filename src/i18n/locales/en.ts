@@ -13,6 +13,7 @@ const en = {
         eastSussex: "UK (East Sussex)"
       },
       experiencePage: {
+        heroAlt: "Players on a sunlit padel court during a Courtside retreat",
         heroEyebrow: "The Experience",
         heroTitle: "Beyond the Court.",
         heroSubtitle: "It's not just about the padel. It's about where you play, who you play with, and everything that happens around the game.",
@@ -34,6 +35,7 @@ const en = {
         offCourtEyebrow: "Off the Court",
         offCourtTitle: "It doesn't stop at the final point.",
         offCourtText: "Boat tours along hidden coastlines. Wine and cheese tastings at local vineyards. Cliffside sunsets. Mountain and beach hikes. Handpicked dining that reflects each destination, not a resort buffet. The court is where it starts. It's not where it ends.",
+        offCourtImageAlt: "Off the court on a Courtside padel retreat",
         quoteEyebrow: "In Their Words",
         quote: "We've always been passionate about padel, travel, and the experience of discovering new places and meeting new people. We realised how easily the game creates connection, no matter your level or background. Through shared experiences on and off the court, we want to bring people together in beautiful locations and create moments that go beyond just playing padel.",
         quoteAuthor: "Alexi & Oliver Watelet, Co-Founders",
@@ -102,6 +104,7 @@ const en = {
           padelImageAlt: "Guests and coaches gathered on court at a padel club in Menorca",
           itineraryEyebrow: "Programme",
           itineraryTitle: "The Sample Itinerary",
+          itineraryAriaLabel: "Menorca padel retreat 5-day itinerary",
           journey: [
             { day: "Day 01", title: "Arrival & Welcome", activities: [{ time: "Morning", title: "Arrival & Check-In" }, { time: "17:00 – 18:30", title: "Warm-Up Padel Session" }, { time: "20:00", title: "Group Welcome Dinner" }] },
             { day: "Day 02", title: "Padel & Boat Tour", activities: [{ time: "08:30 – 09:15", title: "Breakfast — Barceló Nura" }, { time: "10:00 – 12:00", title: "Padel Coaching & Matchplay" }, { time: "13:45 – 17:30", title: "Lunch & Boat Tour" }, { time: "20:00", title: "Dinner — Hotel / Free Evening" }] },
@@ -528,6 +531,7 @@ const en = {
         ]
       },
       bespokeRetreats: {
+        ariaLabel: "Bespoke Private Retreats in Menorca",
         eyebrow: "Bespoke Private Retreats",
         title: "Have Your Own Dates in Mind?",
         description: "Already have your group and your dates? Tell us your plans and we'll build the retreat around them – any week of the year, in Menorca.",
@@ -870,6 +874,11 @@ const en = {
         ctaBtn: "Enquire About a Corporate Retreat"
       },
       testimonials: {
+        ariaLabel: "Guest reviews of Courtside Menorca padel retreat",
+        starsAriaLabel: "5 out of 5 stars",
+        prevAriaLabel: "Previous review",
+        nextAriaLabel: "Next review",
+        dotAriaLabel: "Review",
         label: "What Guests Have To Say",
         title: "Remembered long after.",
         subtitle: "Guests arrive as players. They leave part of the Courtside community.",
