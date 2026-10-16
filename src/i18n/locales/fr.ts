@@ -13,6 +13,7 @@ const fr = {
         eastSussex: "UK (East Sussex)"
       },
       experiencePage: {
+        heroAlt: "Joueurs sur un court de padel ensoleillé lors d'une retraite Courtside",
         heroEyebrow: "L'Expérience",
         heroTitle: "Au-delà du court.",
         heroSubtitle: "Il ne s'agit pas seulement de padel. Il s'agit de l'endroit où vous jouez, des personnes avec qui vous jouez, et de tout ce qui se passe autour du jeu.",
@@ -34,6 +35,7 @@ const fr = {
         offCourtEyebrow: "En Dehors du Court",
         offCourtTitle: "Cela ne s'arrête pas au dernier point.",
         offCourtText: "Sorties en bateau le long de criques cachées. Dégustations de vins et de fromages dans les vignobles locaux. Couchers de soleil sur les falaises. Randonnées en montagne et en bord de mer. Une restauration choisie une à une qui reflète chaque destination, pas un buffet d'hôtel. Le court est le point de départ. Ce n'est pas le point d'arrivée.",
+        offCourtImageAlt: "Hors du court lors d'une retraite padel Courtside",
         quoteEyebrow: "Dans Leurs Mots",
         quote: "Nous avons toujours été passionnés par le padel, les voyages et l'expérience de découvrir de nouveaux endroits et de rencontrer de nouvelles personnes. Nous avons réalisé à quel point ce jeu crée facilement du lien, quel que soit votre niveau ou votre parcours. À travers des expériences partagées sur et en dehors du court, nous voulons réunir les gens dans de beaux endroits et créer des moments qui vont bien au-delà du simple fait de jouer au padel.",
         quoteAuthor: "Alexi & Oliver Watelet, Co-fondateurs",
@@ -102,6 +104,7 @@ const fr = {
           padelImageAlt: "Clients et coachs réunis sur le court d'un club de padel à Minorque",
           itineraryEyebrow: "Programme",
           itineraryTitle: "Itinéraire",
+          itineraryAriaLabel: "Programme de 5 jours de la retraite padel à Minorque",
           journey: [
             { day: "Jour 01", title: "Arrivée & Accueil", activities: [{ time: "Matin", title: "Arrivée & Check-In" }, { time: "17:00 – 18:30", title: "Session de Padel d'Échauffement" }, { time: "20:00", title: "Dîner de Bienvenue en Groupe" }] },
             { day: "Jour 02", title: "Padel & Croisière", activities: [{ time: "08:30 – 09:15", title: "Petit-Déjeuner — Barceló Nura" }, { time: "10:00 – 12:00", title: "Coaching Padel & Matchs" }, { time: "13:45 – 17:30", title: "Déjeuner & Tour en Bateau" }, { time: "20:00", title: "Dîner — Hôtel / Soirée Libre" }] },
@@ -528,6 +531,7 @@ const fr = {
         ]
       },
       bespokeRetreats: {
+        ariaLabel: "Retraites privées sur mesure à Minorque",
         eyebrow: "Retraites Privées Sur Mesure",
         title: "Vous Avez Déjà Vos Propres Dates ?",
         description: "Vous avez déjà votre groupe et vos dates ? Dites-nous vos projets et nous construirons la retraite autour d'eux – toutes les semaines de l'année, à Minorque.",
@@ -870,6 +874,11 @@ const fr = {
         ctaBtn: "Se Renseigner sur une Retraite d'Entreprise"
       },
       testimonials: {
+        ariaLabel: "Avis des convives sur la retraite padel Courtside à Minorque",
+        starsAriaLabel: "5 étoiles sur 5",
+        prevAriaLabel: "Avis précédent",
+        nextAriaLabel: "Avis suivant",
+        dotAriaLabel: "Avis",
         label: "Ce Que Disent Nos Convives",
         title: "Longtemps après le retour.",
         subtitle: "Les convives arrivent en joueurs. Ils repartent membres de la communauté Courtside.",

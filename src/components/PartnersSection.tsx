@@ -47,12 +47,12 @@ export default function PartnersSection({ locale }: Props) {
           </p>
           <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
         </div>
-        <h3
+        <h2
           className="text-2xl md:text-3xl font-light text-brand-dark"
           style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
         >
           {t('homePage.partners.title')}
-        </h3>
+        </h2>
       </motion.div>
 
       {/* Marquee */}

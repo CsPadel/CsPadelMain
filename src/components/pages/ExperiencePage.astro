@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import ExperienceView from '../ExperienceView';
 import FooterIsland from '../FooterIsland';
 import type { Locale } from '../../i18n/locales';
+import { servicePageSchema } from '../../i18n/schema';
 import { getPageSeo, getAlternateUrls, getPageOgImage } from '../../i18n/seo';
 import { SITE_URL } from '../../constants/site';
 
@@ -14,13 +15,16 @@ const { locale } = Astro.props;
 const seo = getPageSeo('experience', locale);
 const siteURL = Astro.site ?? new URL(SITE_URL);
 const alternateUrls = getAlternateUrls(siteURL.href, 'experience');
+const ogImage = getPageOgImage('experience');
+const schema = servicePageSchema(locale, alternateUrls[locale], seo.title, seo.description, ogImage);
 ---
 
 <Layout
   title={seo.title}
   description={seo.description}
   keywords={seo.keywords}
-  ogImage={getPageOgImage('experience')}
+  ogImage={ogImage}
+  schema={schema}
   lang={locale}
   locale={locale}
   canonical={alternateUrls[locale]}

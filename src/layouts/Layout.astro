@@ -48,6 +48,10 @@ const ogImageAbsolute = ogImage.startsWith("http")
 const hreflangEntries = Object.entries(alternateUrls).filter(
 	([, href]) => Boolean(href)
 ) as Array<[Locale, string]>;
+
+const alternateOgLocales = hreflangEntries
+	.filter(([hrefLang]) => hrefLang !== locale)
+	.map(([hrefLang]) => ogLocales[hrefLang]);
 ---
 
 <!doctype html>
@@ -80,6 +84,9 @@ const hreflangEntries = Object.entries(alternateUrls).filter(
 		<meta property="og:image:alt" content={title} />
 		<meta property="og:site_name" content="Courtside Padel Retreats" />
 		<meta property="og:locale" content={ogLocales[locale]} />
+		{alternateOgLocales.map((altLocale) => (
+			<meta property="og:locale:alternate" content={altLocale} />
+		))}
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@courtsidepadel" />

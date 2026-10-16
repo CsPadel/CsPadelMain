@@ -35,8 +35,7 @@ export default function ExperienceView({ locale }: ExperienceViewProps) {
           src="/imagenes/cms/experience-hero.jpg"
           srcSet={srcSet("/imagenes/cms/experience-hero.jpg")}
           sizes="100vw"
-          alt=""
-          aria-hidden="true"
+          alt={t('experiencePage.heroAlt')}
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div
@@ -178,7 +177,7 @@ export default function ExperienceView({ locale }: ExperienceViewProps) {
               src="/imagenes/EM-43.jpg"
               srcSet={srcSet("/imagenes/EM-43.jpg")}
               sizes="(min-width: 768px) 50vw, 100vw"
-              alt="Off the court on a Courtside retreat"
+              alt={t('experiencePage.offCourtImageAlt')}
               loading="lazy"
               decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center"

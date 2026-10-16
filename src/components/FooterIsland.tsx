@@ -58,7 +58,7 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             className="col-span-2 md:col-span-4 flex flex-col"
           >
             <img
-              src="/logogold.webp"
+              src="/imagenes/Logo Gold.svg"
               alt="Courtside Padel"
               className="h-9 object-contain object-left mb-8"
               loading="lazy"

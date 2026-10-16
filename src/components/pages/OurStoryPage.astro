@@ -5,6 +5,7 @@ import FooterIsland from '../FooterIsland';
 import FoundersSection from '../FoundersSection';
 import EnquiryCta from '../EnquiryForm';
 import type { Locale } from '../../i18n/locales';
+import { aboutPageSchema } from '../../i18n/schema';
 import { getPageSeo, getAlternateUrls, getPageOgImage } from '../../i18n/seo';
 import { SITE_URL } from '../../constants/site';
 import { getTranslations } from '../../i18n/getTranslations';
@@ -18,13 +19,16 @@ const seo = getPageSeo('ourStory', locale);
 const siteURL = Astro.site ?? new URL(SITE_URL);
 const alternateUrls = getAlternateUrls(siteURL.href, 'ourStory');
 const c = getTranslations(locale).ourStoryPage;
+const ogImage = getPageOgImage('ourStory');
+const schema = aboutPageSchema(locale, alternateUrls[locale], seo.title, seo.description, ogImage);
 ---
 
 <Layout
   title={seo.title}
   description={seo.description}
   keywords={seo.keywords}
-  ogImage={getPageOgImage('ourStory')}
+  ogImage={ogImage}
+  schema={schema}
   lang={locale}
   locale={locale}
   canonical={alternateUrls[locale]}

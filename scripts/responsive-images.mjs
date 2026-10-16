@@ -15,7 +15,7 @@ export const WIDTHS = [480, 960, 1600];
 const QUALITY = 70;
 const SOURCE_EXT = /\.(jpe?g|png)$/i;
 /** Whole folders whose files are referenced by building paths at runtime. */
-const FOLDERS = ['cms', 'menorca-gallery', 'menorca-itinerary', 'east-sussex-gallery', 'bali-gallery', 'about-us'];
+const FOLDERS = ['cms', 'menorca-gallery', 'menorca-itinerary', 'east-sussex-gallery', 'bali-gallery'];
 
 async function walk(dir) {
   const out = [];

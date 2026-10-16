@@ -13,6 +13,7 @@ const es = {
         eastSussex: "UK (East Sussex)"
       },
       experiencePage: {
+        heroAlt: "Jugadores en una pista de pádel soleada durante un retiro Courtside",
         heroEyebrow: "La Experiencia",
         heroTitle: "Más allá de la pista.",
         heroSubtitle: "No se trata solo del pádel. Se trata de dónde juegas, con quién juegas y de todo lo que ocurre alrededor del juego.",
@@ -34,6 +35,7 @@ const es = {
         offCourtEyebrow: "Fuera de la Pista",
         offCourtTitle: "No termina en el último punto.",
         offCourtText: "Salidas en barco por calas escondidas. Catas de vino y queso en bodegas locales. Atardeceres sobre los acantilados. Rutas por la montaña y la playa. Restaurantes escogidos uno a uno que reflejan cada destino, no un bufé de hotel. La pista es donde empieza. No es donde termina.",
+        offCourtImageAlt: "Fuera de la pista en un retiro de pádel Courtside",
         quoteEyebrow: "En Sus Palabras",
         quote: "Siempre nos ha apasionado el pádel, viajar y la experiencia de descubrir lugares nuevos y conocer gente nueva. Nos dimos cuenta de la facilidad con la que este juego crea conexión, sea cual sea tu nivel o tu procedencia. A través de experiencias compartidas dentro y fuera de la pista, queremos reunir a la gente en lugares hermosos y crear momentos que van mucho más allá de jugar al pádel.",
         quoteAuthor: "Alexi y Oliver Watelet, Co-Fundadores",
@@ -102,6 +104,7 @@ const es = {
           padelImageAlt: "Huéspedes y entrenadores reunidos en la pista de un club de pádel en Menorca",
           itineraryEyebrow: "Programa",
           itineraryTitle: "Itinerario",
+          itineraryAriaLabel: "Itinerario de 5 días del retiro de pádel en Menorca",
           journey: [
             { day: "Día 01", title: "Llegada y Bienvenida", activities: [{ time: "Mañana", title: "Llegada & Check-In" }, { time: "17:00 – 18:30", title: "Sesión de Pádel (Calentamiento)" }, { time: "20:00", title: "Cena de Bienvenida en Grupo" }] },
             { day: "Día 02", title: "Pádel y Paseo en Barco", activities: [{ time: "08:30 – 09:15", title: "Desayuno — Barceló Nura" }, { time: "10:00 – 12:00", title: "Pádel (Entrenamiento y Partidos)" }, { time: "13:45 – 17:30", title: "Almuerzo y Paseo en Barco" }, { time: "20:00", title: "Cena — Hotel / Tarde Libre" }] },
@@ -528,6 +531,7 @@ const es = {
         ]
       },
       bespokeRetreats: {
+        ariaLabel: "Retiros privados a medida en Menorca",
         eyebrow: "Retiros Privados a Medida",
         title: "¿Ya Tienes Tus Propias Fechas?",
         description: "¿Ya tienes tu grupo y tus fechas? Cuéntanos tus planes y construiremos el retiro a su alrededor – cualquier semana del año, en Menorca.",
@@ -870,6 +874,11 @@ const es = {
         ctaBtn: "Consulta sobre un Retiro Corporativo"
       },
       testimonials: {
+        ariaLabel: "Opiniones de invitados del retiro de pádel Courtside en Menorca",
+        starsAriaLabel: "5 de 5 estrellas",
+        prevAriaLabel: "Opinión anterior",
+        nextAriaLabel: "Siguiente opinión",
+        dotAriaLabel: "Opinión",
         label: "Lo Que Dicen Nuestros Invitados",
         title: "Recordado mucho después.",
         subtitle: "Los invitados llegan como jugadores. Se van formando parte de la comunidad Courtside.",
