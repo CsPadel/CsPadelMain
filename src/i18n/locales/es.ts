@@ -112,14 +112,20 @@ const es = {
             { day: "Día 04", title: "Torneo y Atardecer", activities: [{ time: "07:30 – 08:15", title: "Desayuno Temprano — Barceló Nura" }, { time: "09:00 – 13:00", title: "Torneo de Pádel" }, { time: "13:00 – 14:30", title: "Almuerzo & Entrega de Premios" }, { time: "17:00 – 19:00", title: "Atardecer & Tapas — Cova d'en Xoroi" }] },
             { day: "Día 05", title: "Sesión Final y Despedida", activities: [{ time: "08:30 – 09:15", title: "Desayuno Final — Barceló Nura" }, { time: "10:30 – 13:00", title: "Sesión de Pádel Opcional — Padelin" }, { time: "Desde 11:00", title: "Check-Out & Traslados al Aeropuerto" }] }
           ],
+          hotelImageAlts: ["La entrada del Barceló Nura, en Menorca", "Palmeras alrededor de una de las piscinas del hotel", "Camas balinesas junto a la piscina del Barceló Nura", "Una huésped llegando a su habitación", "Huéspedes en la piscina junto al Wellness & Spa", "Una tarde tranquila junto a la piscina"],
+          culinaryEyebrow: "Gastronomía",
+          culinaryTitle: "La Experiencia Gastronómica",
+          culinaryText: "Desayunos diarios en el Barceló Nura, largas comidas junto al mar, una mesa entre viñedos en una bodega local y restaurantes elegidos a mano, incluidos algunos reconocidos por la guía Michelin. Cada comida forma parte del retiro.",
+          culinaryImageAlts: ["Barcos en el puerto, vistos desde una terraza", "Una paella de arroz negro con marisco", "Huéspedes en una mesa larga junto al mar", "Un chef trabajando en la cocina", "Vino sirviéndose en la mesa", "Un plato para compartir durante la comida"],
           beyondEyebrow: "Más Allá de la Pista",
-          beyondTitle: "Menorca, a su propio ritmo.",
+          beyondTitle: "Las Actividades",
           beyondText: "Paseos en barco privados por la costa, visitas a viñedos con cata de vinos y quesos, tapas al atardecer en los acantilados, tratamientos de spa y restaurantes locales elegidos a mano. La pista es donde empieza. La isla es lo que recuerdas.",
-          beyondImageAlt: "La terraza del Barceló Nura a la hora dorada, con vistas al mar",
+          beyondImageAlt: "El bar de la Cova d'en Xoroi, excavado en el acantilado sobre el mar",
+          activitiesImageAlts: ["Un sumiller sirviendo vino en una bodega", "Viñedos y una casa blanca en una bodega local", "Huéspedes visitando una bodega en una cueva", "Huéspedes en una mesa de cata"],
           closingImageAlt: "Una mesa preparada para cenar junto a una ventana con vistas al mar",
           ctaEyebrow: "Empecemos a Hablar",
           ctaTitle: "¿Listo para Menorca?",
-          ctaText: "Un depósito de £150 asegura tu plaza en el retiro de 2027. Escríbenos para reservar la tuya, o planifica un retiro privado para tu propio grupo, cualquier semana del año.",
+          ctaText: "Un depósito de £150 asegura tu plaza en un retiro de 2027. Escríbenos para reservar la tuya, o planifica un retiro privado para tu propio grupo, cualquier semana del año.",
           ctaBtn: "Consulta sobre Menorca",
           gallery: {
             eyebrow: "La Galería",
@@ -794,7 +800,7 @@ const es = {
         },
         destinations: {
           eyebrow: "Reservas 2027",
-          title: "Nuestro Destino",
+          title: "Nuestro Destino Insignia",
           location: "Islas Baleares · España",
           tagline: "Santuario Mediterráneo",
           dates: "5 Días · Todo Incluido",
@@ -802,13 +808,14 @@ const es = {
           explore: "Descubrir"
         },
         upcoming: {
-          eyebrow: "Fechas por Confirmar",
-          title: "Próximos Retiros",
+          eyebrow: "Calendario 2027",
+          title: "Otros Próximos Retiros",
           subtitle: "Nuevos destinos en desarrollo para nuestro calendario de 2027. Regístrate y sé el primero en saberlo.",
           viewAll: "Ver todos",
           explore: "Descubrir",
           items: {
             bali: { tagline: "Una finca privada sobre el acantilado. Pádel de élite.", location: "Uluwatu · Bali" },
+            eastSussex: { tagline: "La campiña inglesa, a 70 minutos de Londres.", location: "Reino Unido · East Sussex" },
             dubai: { tagline: "Próximamente.", location: "Próximamente" }
           }
         },

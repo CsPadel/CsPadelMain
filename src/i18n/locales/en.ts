@@ -112,14 +112,20 @@ const en = {
             { day: "Day 04", title: "Tournament & Sunset", activities: [{ time: "07:30 – 08:15", title: "Early Breakfast — Barceló Nura" }, { time: "09:00 – 13:00", title: "Padel Tournament" }, { time: "13:00 – 14:30", title: "Tournament Lunch & Awards" }, { time: "17:00 – 19:00", title: "Sunset & Tapas — Cova d'en Xoroi" }] },
             { day: "Day 05", title: "Final Session & Farewell", activities: [{ time: "08:30 – 09:15", title: "Final Breakfast — Barceló Nura" }, { time: "10:30 – 13:00", title: "Optional Padel Session — Padelin" }, { time: "From 11:00", title: "Check-Out & Transfers to Airport" }] }
           ],
+          hotelImageAlts: ["The entrance to Barceló Nura, Menorca", "Palm trees around one of the hotel pools", "Poolside cabanas at Barceló Nura", "A guest being shown to her room", "Guests in the pool outside the Wellness & Spa", "A quiet afternoon by the pool"],
+          culinaryEyebrow: "Dining",
+          culinaryTitle: "The Culinary Experience",
+          culinaryText: "Daily breakfasts at Barceló Nura, long lunches by the sea, a table among the vines at a local winery and hand-picked restaurants, including Michelin-recognised dining. Every meal is part of the retreat.",
+          culinaryImageAlts: ["Boats in the harbour, seen from a lunch terrace", "A pan of black rice with seafood", "Guests at a long table by the sea", "A chef at work in the kitchen", "Wine being poured at the table", "A sharing platter at lunch"],
           beyondEyebrow: "Beyond the Court",
-          beyondTitle: "Menorca, at its own pace.",
+          beyondTitle: "The Activities",
           beyondText: "Private boat tours along the coast, vineyard visits with wine and cheese tastings, sunset tapas on the cliffs, spa treatments and hand-picked local restaurants. The court is where it starts. The island is what you remember.",
-          beyondImageAlt: "The rooftop terrace at Barceló Nura at golden hour, looking out to sea",
+          beyondImageAlt: "The clifftop bar at Cova d'en Xoroi, set into the rock above the sea",
+          activitiesImageAlts: ["A sommelier pouring wine in a cellar", "Vineyards and a white farmhouse at a local winery", "Guests on a tour of a cave cellar", "Guests at a wine tasting table"],
           closingImageAlt: "A table set for dinner by a window overlooking the sea",
           ctaEyebrow: "Start the Conversation",
           ctaTitle: "Ready for Menorca?",
-          ctaText: "A £150 deposit secures your place on the 2027 retreat. Get in touch to reserve yours, or plan a private retreat for your own group, any week of the year.",
+          ctaText: "A £150 deposit secures your place on a 2027 retreat. Get in touch to reserve yours, or plan a private retreat for your own group, any week of the year.",
           ctaBtn: "Enquire About Menorca",
           gallery: {
             eyebrow: "The Gallery",
@@ -794,7 +800,7 @@ const en = {
         },
         destinations: {
           eyebrow: "Booking 2027",
-          title: "Our Destination",
+          title: "Our Flagship Destination",
           location: "Balearic Islands · Spain",
           tagline: "Mediterranean Sanctuary",
           dates: "5 Days · All-Inclusive",
@@ -802,13 +808,14 @@ const en = {
           explore: "Explore"
         },
         upcoming: {
-          eyebrow: "Dates TBA",
-          title: "Upcoming Retreats",
+          eyebrow: "2027 Calendar",
+          title: "Other Upcoming Retreats",
           subtitle: "New destinations in development for our 2027 calendar. Register your interest to hear first.",
           viewAll: "View all",
           explore: "Explore",
           items: {
             bali: { tagline: "A private cliff-top estate. Elite padel.", location: "Uluwatu · Bali" },
+            eastSussex: { tagline: "The English countryside, 70 minutes from London.", location: "UK · East Sussex" },
             dubai: { tagline: "Coming soon.", location: "Coming Soon" }
           }
         },

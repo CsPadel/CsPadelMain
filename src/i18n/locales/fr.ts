@@ -112,14 +112,20 @@ const fr = {
             { day: "Jour 04", title: "Tournoi & Coucher de soleil", activities: [{ time: "07:30 – 08:15", title: "Petit-Déjeuner Matinal — Barceló Nura" }, { time: "09:00 – 13:00", title: "Tournoi de Padel" }, { time: "13:00 – 14:30", title: "Déjeuner du Tournoi & Remise des Prix" }, { time: "17:00 – 19:00", title: "Coucher de Soleil & Tapas — Cova d'en Xoroi" }] },
             { day: "Jour 05", title: "Dernière session & Adieux", activities: [{ time: "08:30 – 09:15", title: "Dernier Petit-Déjeuner — Barceló Nura" }, { time: "10:30 – 13:00", title: "Session de Padel Optionnelle — Padelin" }, { time: "Dès 11:00", title: "Check-Out & Transferts vers l'Aéroport" }] }
           ],
+          hotelImageAlts: ["L'entrée du Barceló Nura, à Minorque", "Des palmiers autour d'une des piscines de l'hôtel", "Des cabanas au bord de la piscine du Barceló Nura", "Une cliente accompagnée jusqu'à sa chambre", "Des clients dans la piscine devant le Wellness & Spa", "Un après-midi calme au bord de la piscine"],
+          culinaryEyebrow: "Gastronomie",
+          culinaryTitle: "L'Expérience Culinaire",
+          culinaryText: "Petits-déjeuners au Barceló Nura, longs déjeuners en bord de mer, une table au milieu des vignes dans un domaine local et des restaurants sélectionnés avec soin, dont une adresse reconnue par le guide Michelin. Chaque repas fait partie de la retraite.",
+          culinaryImageAlts: ["Des bateaux dans le port, vus depuis une terrasse", "Une poêle de riz noir aux fruits de mer", "Des clients à une grande table au bord de la mer", "Un chef en cuisine", "Du vin servi à table", "Un plat à partager au déjeuner"],
           beyondEyebrow: "Au-delà du Court",
-          beyondTitle: "Minorque, à son propre rythme.",
+          beyondTitle: "Les Activités",
           beyondText: "Croisières privées le long de la côte, visites de vignobles avec dégustations de vins et fromages, tapas au coucher du soleil sur les falaises, soins au spa et restaurants locaux sélectionnés avec soin. Le court est le point de départ. L'île est ce dont on se souvient.",
-          beyondImageAlt: "La terrasse du Barceló Nura à l'heure dorée, avec vue sur la mer",
+          beyondImageAlt: "Le bar de la Cova d'en Xoroi, creusé dans la falaise au-dessus de la mer",
+          activitiesImageAlts: ["Un sommelier servant du vin dans une cave", "Des vignes et une maison blanche dans un domaine local", "Des clients visitant une cave creusée dans la roche", "Des clients autour d'une table de dégustation"],
           closingImageAlt: "Une table dressée pour le dîner près d'une fenêtre donnant sur la mer",
           ctaEyebrow: "Entamons la Conversation",
           ctaTitle: "Prêt pour Minorque ?",
-          ctaText: "Un acompte de 150 £ garantit votre place pour la retraite 2027. Contactez-nous pour réserver la vôtre, ou organisez une retraite privée pour votre propre groupe, n'importe quelle semaine de l'année.",
+          ctaText: "Un acompte de 150 £ garantit votre place pour une retraite 2027. Contactez-nous pour réserver la vôtre, ou organisez une retraite privée pour votre propre groupe, n'importe quelle semaine de l'année.",
           ctaBtn: "Se Renseigner sur Minorque",
           gallery: {
             eyebrow: "La Galerie",
@@ -794,7 +800,7 @@ const fr = {
         },
         destinations: {
           eyebrow: "Réservations 2027",
-          title: "Notre Destination",
+          title: "Notre Destination Phare",
           location: "Îles Baléares · Espagne",
           tagline: "Sanctuaire Méditerranéen",
           dates: "5 Jours · Tout Compris",
@@ -802,13 +808,14 @@ const fr = {
           explore: "Découvrir"
         },
         upcoming: {
-          eyebrow: "Dates à Confirmer",
-          title: "Prochaines Retraites",
+          eyebrow: "Calendrier 2027",
+          title: "Autres Retraites à Venir",
           subtitle: "De nouvelles destinations en préparation pour notre calendrier 2027. Inscrivez votre intérêt pour être informé en premier.",
           viewAll: "Voir tout",
           explore: "Découvrir",
           items: {
             bali: { tagline: "Un domaine privé en bord de falaise. Padel d'élite.", location: "Uluwatu · Bali" },
+            eastSussex: { tagline: "La campagne anglaise, à 70 minutes de Londres.", location: "Royaume-Uni · East Sussex" },
             dubai: { tagline: "Bientôt disponible.", location: "Bientôt Disponible" }
           }
         },

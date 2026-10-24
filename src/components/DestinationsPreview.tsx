@@ -52,8 +52,8 @@ export default function DestinationsPreview({ locale }: Props) {
         >
           <div className="absolute inset-0 skeleton-light" aria-hidden="true" />
           <img
-            src="/imagenes/cap roig.jpg"
-            srcSet={srcSet("/imagenes/cap roig.jpg")}
+            src="/imagenes/cms/menorca-cliffs-cova-den-xoroi.jpg"
+            srcSet={srcSet("/imagenes/cms/menorca-cliffs-cova-den-xoroi.jpg")}
             sizes="100vw"
             alt="Menorca"
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
