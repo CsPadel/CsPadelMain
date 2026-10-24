@@ -12,20 +12,20 @@ export interface PageSeo {
 const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
   home: {
     en: {
-      title: 'Luxury Padel Retreats | Courtside Padel',
-      description: 'Luxury padel retreats in Menorca, East Sussex and Bali: elite coaching, five-star stays and curated experiences beyond the court.',
+      title: 'Curated Padel Retreats | Courtside Padel',
+      description: 'Curated padel retreats in Menorca, East Sussex and Bali: elite coaching, five-star stays and curated experiences beyond the court.',
       keywords:
         'padel retreat, luxury padel holiday, Menorca padel, padel experience, private padel villa, Courtside padel',
     },
     es: {
-      title: 'Retiros de Pádel de Lujo | Courtside Padel',
-      description: 'Retiros de pádel de lujo en Menorca, East Sussex y Bali: entrenamiento de élite, hoteles de cinco estrellas y experiencias más allá de la pista.',
+      title: 'Retiros de Pádel Exclusivos | Courtside Padel',
+      description: 'Retiros de pádel exclusivos en Menorca, East Sussex y Bali: entrenamiento de élite, hoteles de cinco estrellas y experiencias más allá de la pista.',
       keywords:
         'retiro de pádel, vacaciones de pádel de lujo, pádel Menorca, experiencia de pádel, villa privada de pádel, Courtside pádel',
     },
     fr: {
-      title: 'Retraites Padel de Luxe | Courtside Padel',
-      description: 'Retraites padel de luxe à Minorque, dans l\'East Sussex et à Bali : coaching d\'élite, hôtels cinq étoiles et expériences au-delà du court.',
+      title: 'Retraites de Padel d\'Exception | Courtside Padel',
+      description: 'Retraites padel d\'exception à Minorque, dans l\'East Sussex et à Bali : coaching d\'élite, hôtels cinq étoiles et expériences au-delà du court.',
       keywords:
         'retraite padel, séjour padel luxe, padel Minorque, expérience padel, villa padel privée, Courtside padel',
     },

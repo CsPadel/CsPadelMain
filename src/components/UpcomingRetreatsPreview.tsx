@@ -18,6 +18,12 @@ const retreats = [
     href: '/bali',
   },
   {
+    id: 'eastSussex',
+    name: 'EAST SUSSEX',
+    image: '/imagenes/cms/east-sussex-hero-house-lake.jpg' as string | null,
+    href: '/east-sussex',
+  },
+  {
     id: 'dubai',
     name: 'DUBAI',
     image: '/imagenes/cms/dubai-skyline.jpg' as string | null,
@@ -67,7 +73,7 @@ export default function UpcomingRetreatsPreview({ locale }: Props) {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {retreats.map((r, i) => (
             <motion.a
               key={r.id}
@@ -83,7 +89,7 @@ export default function UpcomingRetreatsPreview({ locale }: Props) {
                 <img
                   src={r.image}
                   srcSet={srcSet(r.image)}
-                  sizes="(min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 768px) 33vw, 100vw"
                   alt={r.name}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"

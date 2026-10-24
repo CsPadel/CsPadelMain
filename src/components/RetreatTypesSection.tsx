@@ -103,7 +103,7 @@ export default function RetreatTypesSection({ locale }: Props) {
 
                 {/* Content */}
                 <div className="relative z-10 p-7 md:p-8">
-                  <span className="text-[10px] uppercase tracking-[0.28em] text-brand-gold font-semibold mb-3 block">
+                  <span className="text-[10px] uppercase tracking-[0.28em] text-brand-gold font-medium mb-3 block">
                     {tag}
                   </span>
                   <h3
@@ -113,13 +113,13 @@ export default function RetreatTypesSection({ locale }: Props) {
                     {name}
                   </h3>
                   <p
-                    className="text-white text-[15px] md:text-base font-medium leading-relaxed mb-6 max-w-[34ch]"
+                    className="text-white/90 text-[15px] md:text-base font-light leading-relaxed mb-6 max-w-[34ch]"
                     style={{ textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}
                   >
                     {desc}
                   </p>
 
-                  <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-white/70 group-hover:text-brand-gold transition-colors duration-300">
+                  <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-normal text-white/70 group-hover:text-brand-gold transition-colors duration-300">
                     {t('homePage.retreatTypes.explore')}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
