@@ -12,6 +12,10 @@ export interface PhotoStripItem {
   /** Not rendered; forms the alt text together with `location`. */
   title: string;
   location: string;
+  /** Full image path, for photos that don't follow the `imageDir`/slug layout. */
+  src?: string;
+  /** Overrides the generated alt text. */
+  alt?: string;
 }
 
 interface PhotoStripProps {
@@ -24,12 +28,16 @@ interface PhotoStripProps {
    * `.dragHint`, `.prev` and `.next` beneath it.
    */
   tPrefix: string;
+  /** Section copy passed in directly instead of read from `tPrefix`. */
+  copy?: { eyebrow: string; title: string; text?: string };
+  /** Classes for the outer section; defaults to a padded white band. */
+  className?: string;
 }
 
 /** How far the arrows move the strip: one card plus its gap. */
 const SCROLL_STEP = 320;
 
-export default function PhotoStrip({ locale, items, imageDir, tPrefix }: Readonly<PhotoStripProps>) {
+export default function PhotoStrip({ locale, items, imageDir, tPrefix, copy, className = 'py-24 md:py-32 bg-white' }: Readonly<PhotoStripProps>) {
   const { t } = usePageTranslation(locale);
   const scroller = useRef<HTMLDivElement>(null);
   const [atStart, setAtStart] = useState(true);
@@ -88,7 +96,7 @@ export default function PhotoStrip({ locale, items, imageDir, tPrefix }: Readonl
   };
 
   return (
-    <section className="py-24 md:py-32 bg-white overflow-hidden">
+    <section className={`${className} overflow-hidden`}>
       {/* Header — title, rule and arrows, matching the editorial reference */}
       <motion.div
         initial={{ opacity: 0, y: 22 }}
@@ -100,16 +108,16 @@ export default function PhotoStrip({ locale, items, imageDir, tPrefix }: Readonl
         <div className="flex items-center gap-4 mb-6">
           <span className="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
           <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-            {t(`${tPrefix}.eyebrow`)}
+            {copy?.eyebrow ?? t(`${tPrefix}.eyebrow`)}
           </p>
         </div>
 
         <div className="flex items-end gap-6 md:gap-10">
           <h2
-            className="text-4xl md:text-5xl font-light text-brand-dark leading-none flex-shrink-0"
+            className="text-4xl md:text-5xl font-light text-brand-dark leading-tight min-w-0"
             style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
           >
-            {t(`${tPrefix}.title`)}
+            {copy?.title ?? t(`${tPrefix}.title`)}
           </h2>
 
           <span className="hidden md:block flex-1 h-px bg-brand-dark/12 mb-3" aria-hidden="true" />
@@ -135,6 +143,10 @@ export default function PhotoStrip({ locale, items, imageDir, tPrefix }: Readonl
             </button>
           </div>
         </div>
+
+        {copy?.text && (
+          <p className="mt-8 text-brand-dark/55 text-lg font-light leading-relaxed max-w-3xl">{copy.text}</p>
+        )}
       </motion.div>
 
       {/* Strip */}
@@ -159,10 +171,10 @@ export default function PhotoStrip({ locale, items, imageDir, tPrefix }: Readonl
               style={{ scrollSnapAlign: 'start' }}
             >
               <img
-                src={`/imagenes/${imageDir}/${item.slug}.jpg`}
-                srcSet={srcSet(`/imagenes/${imageDir}/${item.slug}.jpg`)}
+                src={item.src ?? `/imagenes/${imageDir}/${item.slug}.jpg`}
+                srcSet={srcSet(item.src ?? `/imagenes/${imageDir}/${item.slug}.jpg`)}
                 sizes="(min-width: 768px) 300px, 240px"
-                alt={`${item.title} – ${item.location}`}
+                alt={item.alt ?? `${item.title} – ${item.location}`}
                 loading={i < 3 ? 'eager' : 'lazy'}
                 decoding="async"
                 width={1000}

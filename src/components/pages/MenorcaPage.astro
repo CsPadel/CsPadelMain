@@ -9,9 +9,9 @@ import { MENORCA_GALLERY } from '../../constants/menorcaGallery';
 import { MENORCA_ITINERARY_IMAGES } from '../../constants/menorcaItinerary';
 import {
   MENORCA_HOTEL_PHOTOS,
+  MENORCA_PADEL_PHOTOS,
   MENORCA_CULINARY_PHOTOS,
   MENORCA_ACTIVITY_PHOTOS,
-  MENORCA_XOROI_PHOTO,
 } from '../../constants/menorcaPhotos';
 import type { Locale } from '../../i18n/locales';
 import { touristTripSchema } from '../../i18n/schema';
@@ -49,10 +49,15 @@ const itineraryDays = c.journey.map((day, i) => ({
   })),
 }));
 
-const roomsImages = [
-  '/imagenes/cms/menorca-suite-sea-view.jpg',
-  '/imagenes/cms/menorca-spa.jpg',
-];
+/** Every section uses the same photo strip as the gallery; alts come from the locale, in order. */
+const toStrip = (photos: string[], alts: readonly string[]) =>
+  photos.map((src, i) => ({
+    slug: src.split('/').pop()!.replace(/\.jpg$/, ''),
+    title: alts[i],
+    location: 'Menorca',
+    alt: alts[i],
+    src,
+  }));
 ---
 
 <Layout
@@ -139,151 +144,49 @@ const roomsImages = [
     </section>
 
     {/* ── Where You Stay ── */}
-    <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
-      <div class="max-w-7xl mx-auto">
-        <div class="mb-12 md:mb-16 cs-fadein">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              {c.roomsEyebrow}
-            </p>
-          </div>
-          <h2
-            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
-            style="font-family: var(--font-display); font-style: italic;"
-          >
-            {c.roomsTitle}
-          </h2>
-          <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed max-w-3xl">
-            {c.roomsText}
-          </p>
-        </div>
-
-        <div class="cs-fadein grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          {roomsImages.map((src, i) => (
-            <div class="relative rounded-card overflow-hidden aspect-[4/3]">
-              <img src={src} srcset={srcSet(src)} sizes="(min-width: 768px) 50vw, 100vw" alt={c.roomsImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
-            </div>
-          ))}
-        </div>
-
-        <div class="cs-fadein grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5 mt-4 md:mt-5">
-          {MENORCA_HOTEL_PHOTOS.map((src, i) => (
-            <div class="relative rounded-card overflow-hidden aspect-[2/3]">
-              <img src={src} srcset={srcSet(src)} sizes="(min-width: 1024px) 17vw, (min-width: 768px) 33vw, 50vw" alt={c.hotelImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={toStrip(MENORCA_HOTEL_PHOTOS, c.hotelImageAlts)}
+      imageDir="menorca-hotel"
+      tPrefix="menorcaPage.landing.gallery"
+      copy={{ eyebrow: c.roomsEyebrow, title: c.roomsTitle, text: c.roomsText }}
+      className="py-24 md:py-32 bg-brand-ivory"
+    />
 
     {/* ── The Padel ── */}
-    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
-        <div class="cs-fadein">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              {c.padelEyebrow}
-            </p>
-          </div>
-          <h2
-            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
-            style="font-family: var(--font-display); font-style: italic;"
-          >
-            {c.padelTitle}
-          </h2>
-          <p class="text-brand-dark/55 text-lg font-light leading-relaxed">
-            {c.padelText}
-          </p>
-        </div>
-        <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/3]">
-          <img
-            src="/imagenes/cms/menorca-padel-group.jpg"
-            srcset={srcSet('/imagenes/cms/menorca-padel-group.jpg')}
-            sizes="(min-width: 768px) 50vw, 100vw"
-            alt={c.padelImageAlt}
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </section>
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={toStrip(MENORCA_PADEL_PHOTOS, c.padelImageAlts)}
+      imageDir="menorca-padel"
+      tPrefix="menorcaPage.landing.gallery"
+      copy={{ eyebrow: c.padelEyebrow, title: c.padelTitle, text: c.padelText }}
+    />
+
+    {/* ── The Culinary Experience ── */}
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={toStrip(MENORCA_CULINARY_PHOTOS, c.culinaryImageAlts)}
+      imageDir="menorca-culinary"
+      tPrefix="menorcaPage.landing.gallery"
+      copy={{ eyebrow: c.culinaryEyebrow, title: c.culinaryTitle, text: c.culinaryText }}
+      className="py-24 md:py-32 bg-brand-ivory"
+    />
+
+    {/* ── The Activities ── */}
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={toStrip(MENORCA_ACTIVITY_PHOTOS, c.activitiesImageAlts)}
+      imageDir="menorca-activities"
+      tPrefix="menorcaPage.landing.gallery"
+      copy={{ eyebrow: c.beyondEyebrow, title: c.beyondTitle, text: c.beyondText }}
+    />
 
     {/* ── The Itinerary ── */}
     <MenorcaItinerary client:visible eyebrow={c.itineraryEyebrow} title={c.itineraryTitle} ariaLabel={c.itineraryAriaLabel} days={itineraryDays} />
-
-    {/* ── The Culinary Experience ── */}
-    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <div class="mb-12 md:mb-16 cs-fadein">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              {c.culinaryEyebrow}
-            </p>
-          </div>
-          <h2
-            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
-            style="font-family: var(--font-display); font-style: italic;"
-          >
-            {c.culinaryTitle}
-          </h2>
-          <p class="text-brand-dark/55 text-lg font-light leading-relaxed max-w-3xl">
-            {c.culinaryText}
-          </p>
-        </div>
-        <div class="cs-fadein grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-          {MENORCA_CULINARY_PHOTOS.map((src, i) => (
-            <div class="relative rounded-card overflow-hidden aspect-[4/5]">
-              <img src={src} srcset={srcSet(src)} sizes="(min-width: 768px) 33vw, 50vw" alt={c.culinaryImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* ── The Activities ── */}
-    <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
-      <div class="max-w-7xl mx-auto">
-        <div class="mb-12 md:mb-16 cs-fadein">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-              {c.beyondEyebrow}
-            </p>
-          </div>
-          <h2
-            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
-            style="font-family: var(--font-display); font-style: italic;"
-          >
-            {c.beyondTitle}
-          </h2>
-          <p class="text-brand-dark/55 text-lg font-light leading-relaxed max-w-3xl">
-            {c.beyondText}
-          </p>
-        </div>
-        <div class="cs-fadein grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
-          {MENORCA_ACTIVITY_PHOTOS.map((src, i) => (
-            <div class="relative rounded-card overflow-hidden aspect-[2/3]">
-              <img src={src} srcset={srcSet(src)} sizes="(min-width: 768px) 25vw, 50vw" alt={c.activitiesImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
-            </div>
-          ))}
-        </div>
-        <div class="cs-fadein relative rounded-card overflow-hidden w-full mt-4 md:mt-5" style="aspect-ratio: 21/9;">
-          <img
-            src={MENORCA_XOROI_PHOTO}
-            srcset={srcSet(MENORCA_XOROI_PHOTO)}
-            sizes="100vw"
-            alt={c.beyondImageAlt}
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </section>
 
     {/* ── Gallery ── */}
     <PhotoStrip

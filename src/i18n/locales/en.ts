@@ -88,20 +88,16 @@ const en = {
           heroSubtitle: "Five days of padel, island lifestyle and tranquility on Menorca, based at the five-star Barceló Nura. All-inclusive, from arrival to farewell.",
           includedEyebrow: "What's Included",
           includedTitle: "Everything, taken care of.",
-          includedText: "From arrival to departure, every detail of your retreat is handled: coaching, dining, transport and activities, all included.",
+          includedText: "From arrival to departure, every detail of your retreat is handled: coaching, accommodation, dining, transport and activities, all included.",
           included: ["Accommodation at Barceló Nura", "All meals", "Elite coaching and matchplay", "Local transport", "Activities and island experiences", "Private airport transfers"],
-          includedNote: "Flights are not included. Our concierge can advise on routes or arrange a private charter on request.",
+          includedNote: "Flights are not included. Our team can advise on the best routes.",
           roomsEyebrow: "Where You Stay",
           roomsTitle: "Five-star comfort at Barceló Nura.",
           roomsText: "Light-filled rooms with private terraces or semi-private pools, a full-service spa, and Mediterranean cuisine. Private transfers to and from Mahón Airport are included.",
-          roomsImageAlts: [
-            "A sea-view room at Barceló Nura, with a terrace above the pool",
-            "The indoor spa and pool at Barceló Nura"
-          ],
           padelEyebrow: "The Padel",
           padelTitle: "Coaching and matchplay for every level.",
           padelText: "Sessions are led by former professionals at one of Menorca's premier padel venues, home club of one of the world's top players. Coach-led drills, skill-grouped sessions and competitive matchplay, from beginners building foundations to advanced players refining strategy. The week builds to a mixed doubles round-robin tournament.",
-          padelImageAlt: "Guests and coaches gathered on court at a padel club in Menorca",
+          padelImageAlts: ["A coach working with a guest on court", "Group drills at the net", "A guest playing a forehand", "An overhead smash during matchplay", "Net drills with a coach", "Guests laughing between points", "A guest serving", "The group together at the padel club"],
           itineraryEyebrow: "Programme",
           itineraryTitle: "The Sample Itinerary",
           itineraryAriaLabel: "Menorca padel retreat 5-day itinerary",
@@ -112,16 +108,15 @@ const en = {
             { day: "Day 04", title: "Tournament & Sunset", activities: [{ time: "07:30 – 08:15", title: "Early Breakfast — Barceló Nura" }, { time: "09:00 – 13:00", title: "Padel Tournament" }, { time: "13:00 – 14:30", title: "Tournament Lunch & Awards" }, { time: "17:00 – 19:00", title: "Sunset & Tapas — Cova d'en Xoroi" }] },
             { day: "Day 05", title: "Final Session & Farewell", activities: [{ time: "08:30 – 09:15", title: "Final Breakfast — Barceló Nura" }, { time: "10:30 – 13:00", title: "Optional Padel Session — Padelin" }, { time: "From 11:00", title: "Check-Out & Transfers to Airport" }] }
           ],
-          hotelImageAlts: ["The entrance to Barceló Nura, Menorca", "Palm trees around one of the hotel pools", "Poolside cabanas at Barceló Nura", "A guest being shown to her room", "Guests in the pool outside the Wellness & Spa", "A quiet afternoon by the pool"],
+          hotelImageAlts: ["The entrance to Barceló Nura, Menorca", "Palm trees around one of the hotel pools", "Poolside cabanas at Barceló Nura", "A guest being shown to her room", "Guests in the pool outside the Wellness & Spa", "A quiet afternoon by the pool", "The Heaven bar terrace, framed by palm trees", "A morning swim in the hotel pool"],
           culinaryEyebrow: "Dining",
           culinaryTitle: "The Culinary Experience",
           culinaryText: "Daily breakfasts at Barceló Nura, long lunches by the sea, a table among the vines at a local winery and hand-picked restaurants, including Michelin-recognised dining. Every meal is part of the retreat.",
-          culinaryImageAlts: ["Boats in the harbour, seen from a lunch terrace", "A pan of black rice with seafood", "Guests at a long table by the sea", "A chef at work in the kitchen", "Wine being poured at the table", "A sharing platter at lunch"],
+          culinaryImageAlts: ["Boats in the harbour, seen from a lunch terrace", "A pan of black rice with seafood", "Guests at a long table by the sea", "A chef at work in the kitchen", "Wine being poured at the table", "A sharing platter at lunch", "A long table set for lunch in a vineyard garden", "Slow-roasted lamb served at the table"],
           beyondEyebrow: "Beyond the Court",
           beyondTitle: "The Activities",
           beyondText: "Private boat tours along the coast, vineyard visits with wine and cheese tastings, sunset tapas on the cliffs, spa treatments and hand-picked local restaurants. The court is where it starts. The island is what you remember.",
-          beyondImageAlt: "The clifftop bar at Cova d'en Xoroi, set into the rock above the sea",
-          activitiesImageAlts: ["A sommelier pouring wine in a cellar", "Vineyards and a white farmhouse at a local winery", "Guests on a tour of a cave cellar", "Guests at a wine tasting table"],
+          activitiesImageAlts: ["Vineyards and a white farmhouse at a local winery", "A path through the vines", "A sommelier pouring wine in a cellar", "Guests on a tour of a cave cellar", "The winemaker leading a tasting", "Guests at a wine tasting table", "Local wines lined up for tasting", "The clifftop bar at Cova d'en Xoroi, set into the rock above the sea"],
           closingImageAlt: "A table set for dinner by a window overlooking the sea",
           ctaEyebrow: "Start the Conversation",
           ctaTitle: "Ready for Menorca?",
@@ -889,35 +884,70 @@ const en = {
         label: "What Guests Have To Say",
         title: "Remembered long after.",
         subtitle: "Guests arrive as players. They leave part of the Courtside community.",
-        // Real guest testimonials with real photos, dated 2026 (after "Est. 2025").
+        // Real guest testimonials: the October 2026 retreat first (quoted from the guests' video testimonials), then October 2025.
         items: [
           {
+            name: "Chloe Gibson",
+            role: "October 2026 Guest - Menorca",
+            text: "It has quite literally been the best five days of my entire life. I've built confidence and technique, and the whole experience is 10 out of 10. It's exceptional from the second you step off the plane to the second you go home.",
+            initials: "C",
+            image: "/imagenes/cms/testimonial-chloe-gibson.jpg"
+          },
+          {
+            name: "Jason King",
+            role: "October 2026 Guest - Menorca",
+            text: "It's been absolutely amazing, a once-in-a-lifetime opportunity. Alexi and Ollie were amazing from the get-go, so attentive to our needs, and everything we did each day, from the padel to the restaurants, is something to remember. I'd recommend it to anyone.",
+            initials: "J",
+            image: "/imagenes/cms/testimonial-jason-king.jpg"
+          },
+          {
+            name: "Hedi Ketari",
+            role: "October 2026 Guest - Menorca",
+            text: "This was one step beyond whatever I expected. The synergy in the group was amazing, and Alexi and Oliver took care of us, always there to provide everything we needed. It's not only padel: vineyards, a boat trip, the local people. It's a 10 out of 10.",
+            initials: "H",
+            image: "/imagenes/cms/testimonial-hedi-ketari.jpg"
+          },
+          {
+            name: "Aziz Ketari",
+            role: "October 2026 Guest - Menorca",
+            text: "You come here thinking you're just going to play padel, but it's so much more than that. The restaurants have been exceptional, you can really feel they've been hand-picked. Everything went so smoothly, not a single hiccup in five days.",
+            initials: "A",
+            image: "/imagenes/cms/testimonial-aziz-ketari.jpg"
+          },
+          {
+            name: "Shazna Muzammil",
+            role: "October 2026 Guest - Menorca",
+            text: "This has been an insane holiday for me. Everything was a unique experience, and you can see a lot of thought has gone into it. You've shown us a side of Menorca we wouldn't have been able to see. I'm in next year already.",
+            initials: "S",
+            image: "/imagenes/cms/testimonial-shazna-muzammil.jpg"
+          },
+          {
+            name: "Mohamed Benarbia",
+            role: "October 2026 Guest - Menorca",
+            text: "Honestly, incredible. Alexi and Oliver were fantastic hosts, and everything around the padel was so good: the food, the wine tasting, the best experiences of the island, things you wouldn't find on your own. And the coaches were amazing.",
+            initials: "M",
+            image: "/imagenes/cms/testimonial-mohamed-benarbia.jpg"
+          },
+          {
             name: "Dylan Sweidan",
-            role: "Guest · Menorca",
+            role: "October 2025 Guest - Menorca",
             text: "Menorca was the perfect setting for a padel retreat. The balance between time on court, great food, exploring the island and relaxing by the sea made it feel like so much more than just a coaching trip.",
             initials: "D",
             image: "/imagenes/cms/testimonial-dylan-sweidan.jpg"
           },
           {
             name: "Katja Bonnavion",
-            role: "Guest · Menorca",
+            role: "October 2025 Guest - Menorca",
             text: "I had an amazing 5 days. The hotel, restaurants and activities were all brilliant, and the coaching was adapted to everyone's level, which made every session enjoyable.",
             initials: "K",
             image: "/imagenes/cms/testimonial-katja-bonnavion.jpg"
           },
           {
             name: "Anatole Levy",
-            role: "Guest · Menorca",
+            role: "October 2025 Guest - Menorca",
             text: "What stood out most was how well-rounded the experience was. We played plenty of padel, but also got to experience the best of Menorca, eat at some fantastic places and meet genuinely great people. I'd book again without hesitation.",
             initials: "A",
             image: "/imagenes/cms/testimonial-anatole-levy.jpg"
-          },
-          {
-            name: "Sergi Pons",
-            role: "Guest · Menorca",
-            text: "If you're looking to improve your padel, I'd definitely recommend it. The coaching was high quality, the sessions were engaging, and I left feeling much more confident on court.",
-            initials: "S",
-            image: "/imagenes/cms/testimonial-sergi-pons.jpg"
           }
         ]
       },

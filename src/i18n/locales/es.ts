@@ -88,20 +88,16 @@ const es = {
           heroSubtitle: "Cinco días de pádel, estilo de vida isleño y tranquilidad en Menorca, con base en el Barceló Nura de cinco estrellas. Todo incluido, de la llegada a la despedida.",
           includedEyebrow: "Qué Incluye",
           includedTitle: "Todo, resuelto.",
-          includedText: "Desde la llegada hasta la salida, cada detalle de tu retiro está cubierto: entrenamiento, gastronomía, transporte y actividades; todo incluido.",
+          includedText: "Desde la llegada hasta la salida, cada detalle de tu retiro está cubierto: entrenamiento, alojamiento, gastronomía, transporte y actividades; todo incluido.",
           included: ["Alojamiento en el Barceló Nura", "Todas las comidas", "Entrenamiento de élite y partidos", "Transporte local", "Actividades y experiencias en la isla", "Traslados privados al aeropuerto"],
-          includedNote: "Los vuelos no están incluidos. Nuestro concierge puede asesorarte sobre rutas o gestionar un chárter privado bajo petición.",
+          includedNote: "Los vuelos no están incluidos. Nuestro equipo puede asesorarte sobre las mejores rutas.",
           roomsEyebrow: "Dónde te Alojas",
           roomsTitle: "Confort cinco estrellas en el Barceló Nura.",
           roomsText: "Habitaciones luminosas con terrazas privadas o piscinas semiprivadas, spa de servicio completo y cocina mediterránea. Los traslados privados desde y hacia el aeropuerto de Mahón están incluidos.",
-          roomsImageAlts: [
-            "Una habitación con vistas al mar en el Barceló Nura, con terraza sobre la piscina",
-            "El spa y la piscina interior del Barceló Nura"
-          ],
           padelEyebrow: "El Pádel",
           padelTitle: "Entrenamiento y partidos para todos los niveles.",
           padelText: "Las sesiones las dirigen exprofesionales en uno de los mejores clubes de pádel de Menorca, hogar de una de las mejores jugadoras del mundo. Ejercicios guiados por el entrenador, sesiones por nivel y partidos competitivos, desde principiantes que sientan las bases hasta jugadores avanzados que afinan su estrategia. La semana culmina en un torneo mixto de dobles todos contra todos.",
-          padelImageAlt: "Huéspedes y entrenadores reunidos en la pista de un club de pádel en Menorca",
+          padelImageAlts: ["Un entrenador trabajando con una huésped en la pista", "Ejercicios en grupo junto a la red", "Una huésped golpeando de derecha", "Un remate durante un partido", "Ejercicios de red con un entrenador", "Huéspedes riendo entre puntos", "Un huésped sacando", "El grupo reunido en el club de pádel"],
           itineraryEyebrow: "Programa",
           itineraryTitle: "Itinerario",
           itineraryAriaLabel: "Itinerario de 5 días del retiro de pádel en Menorca",
@@ -112,16 +108,15 @@ const es = {
             { day: "Día 04", title: "Torneo y Atardecer", activities: [{ time: "07:30 – 08:15", title: "Desayuno Temprano — Barceló Nura" }, { time: "09:00 – 13:00", title: "Torneo de Pádel" }, { time: "13:00 – 14:30", title: "Almuerzo & Entrega de Premios" }, { time: "17:00 – 19:00", title: "Atardecer & Tapas — Cova d'en Xoroi" }] },
             { day: "Día 05", title: "Sesión Final y Despedida", activities: [{ time: "08:30 – 09:15", title: "Desayuno Final — Barceló Nura" }, { time: "10:30 – 13:00", title: "Sesión de Pádel Opcional — Padelin" }, { time: "Desde 11:00", title: "Check-Out & Traslados al Aeropuerto" }] }
           ],
-          hotelImageAlts: ["La entrada del Barceló Nura, en Menorca", "Palmeras alrededor de una de las piscinas del hotel", "Camas balinesas junto a la piscina del Barceló Nura", "Una huésped llegando a su habitación", "Huéspedes en la piscina junto al Wellness & Spa", "Una tarde tranquila junto a la piscina"],
+          hotelImageAlts: ["La entrada del Barceló Nura, en Menorca", "Palmeras alrededor de una de las piscinas del hotel", "Camas balinesas junto a la piscina del Barceló Nura", "Una huésped llegando a su habitación", "Huéspedes en la piscina junto al Wellness & Spa", "Una tarde tranquila junto a la piscina", "La terraza del bar Heaven entre palmeras", "Un baño matinal en la piscina del hotel"],
           culinaryEyebrow: "Gastronomía",
           culinaryTitle: "La Experiencia Gastronómica",
           culinaryText: "Desayunos diarios en el Barceló Nura, largas comidas junto al mar, una mesa entre viñedos en una bodega local y restaurantes elegidos a mano, incluidos algunos reconocidos por la guía Michelin. Cada comida forma parte del retiro.",
-          culinaryImageAlts: ["Barcos en el puerto, vistos desde una terraza", "Una paella de arroz negro con marisco", "Huéspedes en una mesa larga junto al mar", "Un chef trabajando en la cocina", "Vino sirviéndose en la mesa", "Un plato para compartir durante la comida"],
+          culinaryImageAlts: ["Barcos en el puerto, vistos desde una terraza", "Una paella de arroz negro con marisco", "Huéspedes en una mesa larga junto al mar", "Un chef trabajando en la cocina", "Vino sirviéndose en la mesa", "Un plato para compartir durante la comida", "Una mesa larga preparada para comer en el jardín de una bodega", "Cordero asado a fuego lento servido en la mesa"],
           beyondEyebrow: "Más Allá de la Pista",
           beyondTitle: "Las Actividades",
           beyondText: "Paseos en barco privados por la costa, visitas a viñedos con cata de vinos y quesos, tapas al atardecer en los acantilados, tratamientos de spa y restaurantes locales elegidos a mano. La pista es donde empieza. La isla es lo que recuerdas.",
-          beyondImageAlt: "El bar de la Cova d'en Xoroi, excavado en el acantilado sobre el mar",
-          activitiesImageAlts: ["Un sumiller sirviendo vino en una bodega", "Viñedos y una casa blanca en una bodega local", "Huéspedes visitando una bodega en una cueva", "Huéspedes en una mesa de cata"],
+          activitiesImageAlts: ["Viñedos y una casa blanca en una bodega local", "Un camino entre las viñas", "Un sumiller sirviendo vino en una bodega", "Huéspedes visitando una bodega en una cueva", "El enólogo guiando una cata", "Huéspedes en una mesa de cata", "Vinos locales preparados para la cata", "El bar de la Cova d'en Xoroi, excavado en el acantilado sobre el mar"],
           closingImageAlt: "Una mesa preparada para cenar junto a una ventana con vistas al mar",
           ctaEyebrow: "Empecemos a Hablar",
           ctaTitle: "¿Listo para Menorca?",
@@ -889,36 +884,70 @@ const es = {
         label: "Lo Que Dicen Nuestros Invitados",
         title: "Recordado mucho después.",
         subtitle: "Los invitados llegan como jugadores. Se van formando parte de la comunidad Courtside.",
-        // Testimonios reales de invitados con fotos reales, fechados en 2026
-        // (posterior a "Est. 2025").
+        // Testimonios reales: primero el retiro de octubre de 2026 (citas de sus vídeos), después octubre de 2025.
         items: [
           {
+            name: "Chloe Gibson",
+            role: "Invitada de octubre de 2026 - Menorca",
+            text: "Han sido, literalmente, los mejores cinco días de mi vida. He ganado confianza y técnica, y la experiencia completa es un 10 sobre 10. Es excepcional desde el momento en que bajas del avión hasta que vuelves a casa.",
+            initials: "C",
+            image: "/imagenes/cms/testimonial-chloe-gibson.jpg"
+          },
+          {
+            name: "Jason King",
+            role: "Invitado de octubre de 2026 - Menorca",
+            text: "Ha sido absolutamente increíble, una oportunidad única en la vida. Alexi y Ollie estuvieron geniales desde el primer momento, siempre atentos a lo que necesitábamos, y todo lo que hicimos cada día, del pádel a los restaurantes, es para recordar. Se lo recomendaría a cualquiera.",
+            initials: "J",
+            image: "/imagenes/cms/testimonial-jason-king.jpg"
+          },
+          {
+            name: "Hedi Ketari",
+            role: "Invitado de octubre de 2026 - Menorca",
+            text: "Fue un paso más allá de todo lo que esperaba. La sintonía del grupo fue increíble, y Alexi y Oliver nos cuidaron, siempre pendientes de todo lo que necesitábamos. No es solo pádel: viñedos, una excursión en barco, la gente local. Es un 10 sobre 10.",
+            initials: "H",
+            image: "/imagenes/cms/testimonial-hedi-ketari.jpg"
+          },
+          {
+            name: "Aziz Ketari",
+            role: "Invitado de octubre de 2026 - Menorca",
+            text: "Vienes pensando que solo vas a jugar al pádel, pero es mucho más que eso. Los restaurantes han sido excepcionales, se nota que están elegidos uno a uno. Todo salió perfecto, ni un solo contratiempo en cinco días.",
+            initials: "A",
+            image: "/imagenes/cms/testimonial-aziz-ketari.jpg"
+          },
+          {
+            name: "Shazna Muzammil",
+            role: "Invitada de octubre de 2026 - Menorca",
+            text: "Han sido unas vacaciones increíbles. Todo fue una experiencia única, y se nota que hay mucho cuidado detrás. Nos habéis enseñado una Menorca que no habríamos podido descubrir por nuestra cuenta. Ya me apunto para el año que viene.",
+            initials: "S",
+            image: "/imagenes/cms/testimonial-shazna-muzammil.jpg"
+          },
+          {
+            name: "Mohamed Benarbia",
+            role: "Invitado de octubre de 2026 - Menorca",
+            text: "Sinceramente, increíble. Alexi y Oliver fueron unos anfitriones fantásticos, y todo lo que rodea al pádel estuvo genial: la comida, la cata de vinos, lo mejor de la isla, cosas que no encontrarías por tu cuenta. Y los entrenadores, espectaculares.",
+            initials: "M",
+            image: "/imagenes/cms/testimonial-mohamed-benarbia.jpg"
+          },
+          {
             name: "Dylan Sweidan",
-            role: "Invitado · Menorca",
+            role: "Invitado de octubre de 2025 - Menorca",
             text: "Menorca fue el escenario perfecto para un retiro de pádel. El equilibrio entre el tiempo en pista, la buena comida, explorar la isla y relajarse junto al mar hizo que se sintiera como mucho más que un simple viaje de entrenamiento.",
             initials: "D",
             image: "/imagenes/cms/testimonial-dylan-sweidan.jpg"
           },
           {
             name: "Katja Bonnavion",
-            role: "Invitada · Menorca",
+            role: "Invitada de octubre de 2025 - Menorca",
             text: "Pasé unos 5 días increíbles. El hotel, los restaurantes y las actividades fueron excelentes, y el coaching se adaptó al nivel de cada uno, lo que hizo que cada sesión fuera disfrutable.",
             initials: "K",
             image: "/imagenes/cms/testimonial-katja-bonnavion.jpg"
           },
           {
             name: "Anatole Levy",
-            role: "Invitado · Menorca",
+            role: "Invitado de octubre de 2025 - Menorca",
             text: "Lo que más destacó fue lo completa que fue la experiencia. Jugamos mucho al pádel, pero también conocimos lo mejor de Menorca, comimos en lugares fantásticos y conocimos a gente estupenda. Volvería a reservar sin dudarlo.",
             initials: "A",
             image: "/imagenes/cms/testimonial-anatole-levy.jpg"
-          },
-          {
-            name: "Sergi Pons",
-            role: "Invitado · Menorca",
-            text: "Si buscas mejorar tu pádel, lo recomiendo sin duda. El coaching fue de gran calidad, las sesiones eran dinámicas y salí sintiéndome mucho más seguro en la pista.",
-            initials: "S",
-            image: "/imagenes/cms/testimonial-sergi-pons.jpg"
           }
         ]
       },
