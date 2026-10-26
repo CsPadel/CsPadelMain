@@ -88,20 +88,16 @@ const fr = {
           heroSubtitle: "Cinq jours de padel, d'art de vivre insulaire et de sérénité à Minorque, au cœur du Barceló Nura 5 étoiles. Tout compris, de l'arrivée aux adieux.",
           includedEyebrow: "Ce Qui Est Inclus",
           includedTitle: "Tout est pris en charge.",
-          includedText: "De votre arrivée à votre départ, chaque détail de votre retraite est pris en charge : coaching, gastronomie, transport et activités, le tout inclus.",
+          includedText: "De votre arrivée à votre départ, chaque détail de votre retraite est pris en charge : coaching, hébergement, gastronomie, transport et activités, le tout inclus.",
           included: ["Hébergement au Barceló Nura", "Tous les repas", "Coaching d'élite et matchplay", "Transport local", "Activités et expériences sur l'île", "Transferts privés depuis et vers l'aéroport"],
-          includedNote: "Les vols ne sont pas inclus. Notre concierge peut vous conseiller sur les trajets ou organiser un vol privé sur demande.",
+          includedNote: "Les vols ne sont pas inclus. Notre équipe peut vous conseiller sur les meilleurs trajets.",
           roomsEyebrow: "Où Vous Séjournez",
           roomsTitle: "Le confort cinq étoiles du Barceló Nura.",
           roomsText: "Chambres lumineuses avec terrasses privées ou piscines semi-privées, spa complet et cuisine méditerranéenne. Les transferts privés depuis et vers l'aéroport de Mahón sont inclus.",
-          roomsImageAlts: [
-            "Une chambre avec vue sur la mer au Barceló Nura, avec terrasse au-dessus de la piscine",
-            "Le spa et la piscine intérieure du Barceló Nura"
-          ],
           padelEyebrow: "Le Padel",
           padelTitle: "Coaching et matchplay pour tous les niveaux.",
           padelText: "Les séances sont animées par d'anciens professionnels dans l'un des établissements padel les plus prestigieux de Minorque, club d'attache de l'un des meilleurs joueurs mondiaux. Exercices dirigés par le coach, séances par niveau et matchplay compétitif, des débutants qui construisent leurs bases aux joueurs avancés qui affinent leur stratégie. La semaine culmine avec un tournoi de doubles mixtes en poule unique.",
-          padelImageAlt: "Clients et coachs réunis sur le court d'un club de padel à Minorque",
+          padelImageAlts: ["Un coach avec une cliente sur le court", "Exercices en groupe au filet", "Une cliente frappant un coup droit", "Un smash pendant un match", "Exercices au filet avec un coach", "Des clients qui rient entre deux points", "Un client au service", "Le groupe réuni au club de padel"],
           itineraryEyebrow: "Programme",
           itineraryTitle: "Itinéraire",
           itineraryAriaLabel: "Programme de 5 jours de la retraite padel à Minorque",
@@ -112,16 +108,15 @@ const fr = {
             { day: "Jour 04", title: "Tournoi & Coucher de soleil", activities: [{ time: "07:30 – 08:15", title: "Petit-Déjeuner Matinal — Barceló Nura" }, { time: "09:00 – 13:00", title: "Tournoi de Padel" }, { time: "13:00 – 14:30", title: "Déjeuner du Tournoi & Remise des Prix" }, { time: "17:00 – 19:00", title: "Coucher de Soleil & Tapas — Cova d'en Xoroi" }] },
             { day: "Jour 05", title: "Dernière session & Adieux", activities: [{ time: "08:30 – 09:15", title: "Dernier Petit-Déjeuner — Barceló Nura" }, { time: "10:30 – 13:00", title: "Session de Padel Optionnelle — Padelin" }, { time: "Dès 11:00", title: "Check-Out & Transferts vers l'Aéroport" }] }
           ],
-          hotelImageAlts: ["L'entrée du Barceló Nura, à Minorque", "Des palmiers autour d'une des piscines de l'hôtel", "Des cabanas au bord de la piscine du Barceló Nura", "Une cliente accompagnée jusqu'à sa chambre", "Des clients dans la piscine devant le Wellness & Spa", "Un après-midi calme au bord de la piscine"],
+          hotelImageAlts: ["L'entrée du Barceló Nura, à Minorque", "Des palmiers autour d'une des piscines de l'hôtel", "Des cabanas au bord de la piscine du Barceló Nura", "Une cliente accompagnée jusqu'à sa chambre", "Des clients dans la piscine devant le Wellness & Spa", "Un après-midi calme au bord de la piscine", "La terrasse du bar Heaven entre les palmiers", "Une baignade matinale dans la piscine de l'hôtel"],
           culinaryEyebrow: "Gastronomie",
           culinaryTitle: "L'Expérience Culinaire",
           culinaryText: "Petits-déjeuners au Barceló Nura, longs déjeuners en bord de mer, une table au milieu des vignes dans un domaine local et des restaurants sélectionnés avec soin, dont une adresse reconnue par le guide Michelin. Chaque repas fait partie de la retraite.",
-          culinaryImageAlts: ["Des bateaux dans le port, vus depuis une terrasse", "Une poêle de riz noir aux fruits de mer", "Des clients à une grande table au bord de la mer", "Un chef en cuisine", "Du vin servi à table", "Un plat à partager au déjeuner"],
+          culinaryImageAlts: ["Des bateaux dans le port, vus depuis une terrasse", "Une poêle de riz noir aux fruits de mer", "Des clients à une grande table au bord de la mer", "Un chef en cuisine", "Du vin servi à table", "Un plat à partager au déjeuner", "Une grande table dressée pour le déjeuner dans le jardin d'un domaine viticole", "De l'agneau rôti servi à table"],
           beyondEyebrow: "Au-delà du Court",
           beyondTitle: "Les Activités",
           beyondText: "Croisières privées le long de la côte, visites de vignobles avec dégustations de vins et fromages, tapas au coucher du soleil sur les falaises, soins au spa et restaurants locaux sélectionnés avec soin. Le court est le point de départ. L'île est ce dont on se souvient.",
-          beyondImageAlt: "Le bar de la Cova d'en Xoroi, creusé dans la falaise au-dessus de la mer",
-          activitiesImageAlts: ["Un sommelier servant du vin dans une cave", "Des vignes et une maison blanche dans un domaine local", "Des clients visitant une cave creusée dans la roche", "Des clients autour d'une table de dégustation"],
+          activitiesImageAlts: ["Des vignes et une maison blanche dans un domaine local", "Un chemin entre les vignes", "Un sommelier servant du vin dans une cave", "Des clients visitant une cave creusée dans la roche", "Le vigneron menant une dégustation", "Des clients autour d'une table de dégustation", "Des vins locaux alignés pour la dégustation", "Le bar de la Cova d'en Xoroi, creusé dans la falaise au-dessus de la mer"],
           closingImageAlt: "Une table dressée pour le dîner près d'une fenêtre donnant sur la mer",
           ctaEyebrow: "Entamons la Conversation",
           ctaTitle: "Prêt pour Minorque ?",
@@ -889,36 +884,70 @@ const fr = {
         label: "Ce Que Disent Nos Convives",
         title: "Longtemps après le retour.",
         subtitle: "Les convives arrivent en joueurs. Ils repartent membres de la communauté Courtside.",
-        // Vrais témoignages de convives avec de vraies photos, datés de 2026
-        // (postérieur à « Est. 2025 »).
+        // Vrais témoignages : d'abord la retraite d'octobre 2026 (extraits de leurs vidéos), puis octobre 2025.
         items: [
           {
+            name: "Chloe Gibson",
+            role: "Convive d'octobre 2026 - Minorque",
+            text: "Ce sont littéralement les cinq meilleurs jours de ma vie. J'ai gagné en confiance et en technique, et l'expérience dans son ensemble mérite un 10 sur 10. C'est exceptionnel de la seconde où l'on descend de l'avion jusqu'au retour à la maison.",
+            initials: "C",
+            image: "/imagenes/cms/testimonial-chloe-gibson.jpg"
+          },
+          {
+            name: "Jason King",
+            role: "Convive d'octobre 2026 - Minorque",
+            text: "C'était absolument incroyable, une occasion unique dans une vie. Alexi et Ollie ont été formidables dès le départ, toujours attentifs à nos besoins, et tout ce que nous avons fait chaque jour, du padel aux restaurants, restera gravé. Je le recommanderais à tout le monde.",
+            initials: "J",
+            image: "/imagenes/cms/testimonial-jason-king.jpg"
+          },
+          {
+            name: "Hedi Ketari",
+            role: "Convive d'octobre 2026 - Minorque",
+            text: "C'était un cran au-dessus de tout ce que j'imaginais. L'alchimie du groupe était incroyable, et Alexi et Oliver ont pris soin de nous, toujours là pour nous apporter tout ce dont nous avions besoin. Ce n'est pas que du padel : les vignobles, une sortie en bateau, les gens du coin. C'est un 10 sur 10.",
+            initials: "H",
+            image: "/imagenes/cms/testimonial-hedi-ketari.jpg"
+          },
+          {
+            name: "Aziz Ketari",
+            role: "Convive d'octobre 2026 - Minorque",
+            text: "On vient en pensant juste jouer au padel, mais c'est tellement plus que ça. Les restaurants étaient exceptionnels, on sent qu'ils ont été choisis avec soin. Tout s'est déroulé parfaitement, pas un seul accroc en cinq jours.",
+            initials: "A",
+            image: "/imagenes/cms/testimonial-aziz-ketari.jpg"
+          },
+          {
+            name: "Shazna Muzammil",
+            role: "Convive d'octobre 2026 - Minorque",
+            text: "Ces vacances ont été folles. Tout était une expérience unique, et on voit qu'il y a beaucoup de réflexion derrière. Vous nous avez montré un visage de Minorque que nous n'aurions jamais pu découvrir seuls. Je suis déjà partante pour l'année prochaine.",
+            initials: "S",
+            image: "/imagenes/cms/testimonial-shazna-muzammil.jpg"
+          },
+          {
+            name: "Mohamed Benarbia",
+            role: "Convive d'octobre 2026 - Minorque",
+            text: "Honnêtement, incroyable. Alexi et Oliver ont été des hôtes fantastiques, et tout ce qui entoure le padel était génial : la cuisine, la dégustation de vins, le meilleur de l'île, des choses qu'on ne trouverait pas seul. Et les coachs étaient formidables.",
+            initials: "M",
+            image: "/imagenes/cms/testimonial-mohamed-benarbia.jpg"
+          },
+          {
             name: "Dylan Sweidan",
-            role: "Convive · Minorque",
+            role: "Convive d'octobre 2025 - Minorque",
             text: "Minorque était le cadre parfait pour une retraite padel. L'équilibre entre le temps sur le court, la bonne cuisine, la découverte de l'île et la détente au bord de mer en a fait bien plus qu'un simple stage de coaching.",
             initials: "D",
             image: "/imagenes/cms/testimonial-dylan-sweidan.jpg"
           },
           {
             name: "Katja Bonnavion",
-            role: "Convive · Minorque",
+            role: "Convive d'octobre 2025 - Minorque",
             text: "J'ai passé 5 jours incroyables. L'hôtel, les restaurants et les activités étaient excellents, et le coaching était adapté au niveau de chacun, ce qui rendait chaque session agréable.",
             initials: "K",
             image: "/imagenes/cms/testimonial-katja-bonnavion.jpg"
           },
           {
             name: "Anatole Levy",
-            role: "Convive · Minorque",
+            role: "Convive d'octobre 2025 - Minorque",
             text: "Ce qui a le plus marqué, c'est à quel point l'expérience était complète. Nous avons beaucoup joué au padel, mais nous avons aussi découvert le meilleur de Minorque, mangé dans des endroits fantastiques et rencontré des gens formidables. Je réserverais à nouveau sans hésiter.",
             initials: "A",
             image: "/imagenes/cms/testimonial-anatole-levy.jpg"
-          },
-          {
-            name: "Sergi Pons",
-            role: "Convive · Minorque",
-            text: "Si vous cherchez à progresser au padel, je le recommande vivement. Le coaching était de grande qualité, les sessions engageantes, et je suis reparti bien plus confiant sur le court.",
-            initials: "S",
-            image: "/imagenes/cms/testimonial-sergi-pons.jpg"
           }
         ]
       },
