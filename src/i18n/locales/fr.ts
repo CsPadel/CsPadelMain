@@ -9,6 +9,7 @@ const fr = {
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubai",
+        tunisia: "Tunisie",
         mykonos: "Mykonos",
         eastSussex: "UK (East Sussex)"
       },
@@ -711,6 +712,31 @@ const fr = {
           ctaBtn: "Nous Contacter"
         }
       },
+      tunisiaPage: {
+        landing: {
+          heroEyebrow: "Retraite Padel en Tunisie",
+          expectEyebrow: "À Quoi S'attendre",
+          expectTitle: "Le format Courtside arrive en Tunisie.",
+          expectText: "Nous concevons une retraite padel sur la côte, juste au nord de Tunis, construite comme toutes les retraites Courtside : gérée de bout en bout par notre équipe, avec tout pris en charge de l'arrivée au départ.",
+          pillars: [
+            { title: "Coaching pour tous les niveaux", text: "Séances encadrées par des coachs et matchplay compétitif, adaptés à chaque joueur, que vous découvriez le padel ou que vous l'affiniez." },
+            { title: "Cinq étoiles, les pieds dans l'eau", text: "Le Mövenpick Hotel Gammarth est au bord de la Méditerranée, avec des chambres vue mer et des restaurants tournés vers le large." },
+            { title: "Au-delà du court", text: "Les ruelles bleues et blanches de Sidi Bou Saïd, les ruines de Carthage et la médina de Tunis, à quelques minutes en voiture." },
+          ],
+          stayEyebrow: "Où Vous Séjournez",
+          stayTitle: "Mövenpick Hotel Gammarth Tunis.",
+          stayText: "Un hôtel cinq étoiles sur la plage de Gammarth, sur la côte juste au nord de Tunis. Les chambres et suites donnent sur la mer et la piscine, deux restaurants font face à la Méditerranée et le village de Sidi Bou Saïd est à quelques minutes.",
+          stayLink: "Voir le site de l'hôtel",
+          stayImageAlt: "La côte de Sidi Bou Saïd, à quelques minutes de Gammarth",
+          interestTitle: "Soyez le premier informé.",
+          interestText: "Les dates et les détails sont en cours de finalisation. Inscrivez-vous ou parlez-nous de votre groupe, et nous vous enverrons le programme Tunisie en premier.",
+          interestBtn: "Être Informé",
+          heroAlt: "Coupoles blanches et palmiers au-dessus de la mer à Sidi Bou Saïd, près de Tunis",
+          title: "Tunisie.<br/>Bientôt Disponible.",
+          text: "Nous amenons Courtside sur la côte méditerranéenne de la Tunisie. Écrivez-nous si vous souhaitez être parmi les premiers informés dès que les dates seront annoncées.",
+          ctaBtn: "Nous Contacter",
+        }
+      },
       mykonosPage: {
         heroTitle: "MYKONOS",
         heroTagline: "Élégance Égéenne. Padel d'Élite.",
@@ -811,7 +837,8 @@ const fr = {
           items: {
             bali: { tagline: "Un domaine privé en bord de falaise. Padel d'élite.", location: "Uluwatu · Bali" },
             eastSussex: { tagline: "La campagne anglaise, à 70 minutes de Londres.", location: "Royaume-Uni · East Sussex" },
-            dubai: { tagline: "Bientôt disponible.", location: "Bientôt Disponible" }
+            dubai: { tagline: "Bientôt disponible.", location: "Bientôt Disponible" },
+            tunisia: { tagline: "La côte méditerranéenne, à quelques minutes de Sidi Bou Saïd.", location: "Gammarth · Tunisie" }
           }
         },
         partners: {
@@ -970,6 +997,7 @@ const fr = {
               eastSussex: "UK (East Sussex)",
               bali: "Bali",
               dubai: "Dubai",
+              tunisia: "Tunisie",
               undecided: "Je n'ai pas encore décidé"
             }
           },

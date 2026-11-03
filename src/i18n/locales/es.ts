@@ -9,6 +9,7 @@ const es = {
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubái",
+        tunisia: "Túnez",
         mykonos: "Mykonos",
         eastSussex: "UK (East Sussex)"
       },
@@ -711,6 +712,31 @@ const es = {
           ctaBtn: "Contacta con Nosotros"
         }
       },
+      tunisiaPage: {
+        landing: {
+          heroEyebrow: "Retiro de Pádel en Túnez",
+          expectEyebrow: "Qué Esperar",
+          expectTitle: "El formato Courtside, llegando a Túnez.",
+          expectText: "Estamos diseñando un retiro de pádel en la costa, justo al norte de la ciudad de Túnez, construido como todos los retiros Courtside: gestionado de principio a fin por nuestro equipo, con todo resuelto desde la llegada hasta la salida.",
+          pillars: [
+            { title: "Entrenamiento para todos los niveles", text: "Sesiones guiadas por entrenadores y partidos competitivos, adaptados a cada jugador, tanto si empiezas como si quieres perfeccionar tu juego." },
+            { title: "Cinco estrellas, frente al mar", text: "El Mövenpick Hotel Gammarth está junto al Mediterráneo, con habitaciones con vistas al mar y restaurantes que miran al agua." },
+            { title: "Más allá de la pista", text: "Las calles blancas y azules de Sidi Bou Said, las ruinas de Cartago y la medina de Túnez, a pocos minutos en coche." },
+          ],
+          stayEyebrow: "Dónde Te Alojas",
+          stayTitle: "Mövenpick Hotel Gammarth Tunis.",
+          stayText: "Un hotel de cinco estrellas en la playa de Gammarth, en la costa justo al norte de la ciudad de Túnez. Las habitaciones y suites miran al mar y a la piscina, dos restaurantes dan al Mediterráneo y el pueblo de Sidi Bou Said está a pocos minutos.",
+          stayLink: "Ver la web del hotel",
+          stayImageAlt: "La costa de Sidi Bou Said, a pocos minutos de Gammarth",
+          interestTitle: "Sé el primero en saberlo.",
+          interestText: "Las fechas y los detalles se están cerrando. Regístrate o cuéntanos sobre tu grupo y te enviaremos el programa de Túnez antes que a nadie.",
+          interestBtn: "Quiero Más Información",
+          heroAlt: "Cúpulas blancas y palmeras sobre el mar en Sidi Bou Said, cerca de Túnez",
+          title: "Túnez.<br/>Próximamente.",
+          text: "Llevamos Courtside a la costa mediterránea de Túnez. Escríbenos si quieres ser de los primeros en saber cuándo anunciamos las fechas.",
+          ctaBtn: "Contacta con Nosotros",
+        }
+      },
       mykonosPage: {
         heroTitle: "MYKONOS",
         heroTagline: "Elegancia del Egeo. Pádel de Élite.",
@@ -811,7 +837,8 @@ const es = {
           items: {
             bali: { tagline: "Una finca privada sobre el acantilado. Pádel de élite.", location: "Uluwatu · Bali" },
             eastSussex: { tagline: "La campiña inglesa, a 70 minutos de Londres.", location: "Reino Unido · East Sussex" },
-            dubai: { tagline: "Próximamente.", location: "Próximamente" }
+            dubai: { tagline: "Próximamente.", location: "Próximamente" },
+            tunisia: { tagline: "La costa mediterránea, a minutos de Sidi Bou Said.", location: "Gammarth · Túnez" }
           }
         },
         partners: {
@@ -970,6 +997,7 @@ const es = {
               eastSussex: "UK (East Sussex)",
               bali: "Bali",
               dubai: "Dubái",
+              tunisia: "Túnez",
               undecided: "Aún lo estoy decidiendo"
             }
           },

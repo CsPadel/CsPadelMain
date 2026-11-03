@@ -9,6 +9,7 @@ const en = {
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubai",
+        tunisia: "Tunisia",
         mykonos: "Mykonos",
         eastSussex: "UK (East Sussex)"
       },
@@ -711,6 +712,31 @@ const en = {
           ctaBtn: "Get in Touch"
         }
       },
+      tunisiaPage: {
+        landing: {
+          heroEyebrow: "Tunisia Padel Retreat",
+          expectEyebrow: "What to Expect",
+          expectTitle: "The Courtside format, coming to Tunisia.",
+          expectText: "We're designing a padel retreat on the coast just north of Tunis, built the same way as every Courtside retreat: run end to end by our own team, with everything handled from arrival to departure.",
+          pillars: [
+            { title: "Coaching for every level", text: "Coach-led sessions and competitive matchplay, tailored player by player, whether you're new to the game or refining it." },
+            { title: "Five-star, on the beach", text: "Mövenpick Hotel Gammarth sits right on the Mediterranean, with sea-view rooms and restaurants that look out over the water." },
+            { title: "Beyond the court", text: "The blue-and-white streets of Sidi Bou Said, the ruins of Carthage and the medina of Tunis, all a short drive away." },
+          ],
+          stayEyebrow: "Where You Stay",
+          stayTitle: "Mövenpick Hotel Gammarth Tunis.",
+          stayText: "A five-star hotel on the beach at Gammarth, on the coast just north of Tunis. Rooms and suites look out over the sea and pool, two restaurants face the Mediterranean, and the village of Sidi Bou Said is minutes away.",
+          stayLink: "Visit the hotel website",
+          stayImageAlt: "The coastline at Sidi Bou Said, a few minutes from Gammarth",
+          interestTitle: "Be the first to know.",
+          interestText: "Dates and details are being finalised. Register your interest, or tell us about your group, and we'll share the Tunisia programme with you first.",
+          interestBtn: "Register Your Interest",
+          heroAlt: "Whitewashed domes and palm trees above the sea in Sidi Bou Said, near Tunis",
+          title: "Tunisia.<br/>Coming Soon.",
+          text: "We're bringing Courtside to the Mediterranean coast of Tunisia. Get in touch if you'd like to be the first to know when dates are announced.",
+          ctaBtn: "Get in Touch",
+        }
+      },
       mykonosPage: {
         heroTitle: "MYKONOS",
         heroTagline: "Aegean Elegance. Elite Padel.",
@@ -811,7 +837,8 @@ const en = {
           items: {
             bali: { tagline: "A private cliff-top estate. Elite padel.", location: "Uluwatu · Bali" },
             eastSussex: { tagline: "The English countryside, 70 minutes from London.", location: "UK · East Sussex" },
-            dubai: { tagline: "Coming soon.", location: "Coming Soon" }
+            dubai: { tagline: "Coming soon.", location: "Coming Soon" },
+            tunisia: { tagline: "The Mediterranean coast, minutes from Sidi Bou Said.", location: "Gammarth · Tunisia" }
           }
         },
         partners: {
@@ -970,6 +997,7 @@ const en = {
               eastSussex: "UK (East Sussex)",
               bali: "Bali",
               dubai: "Dubai",
+              tunisia: "Tunisia",
               undecided: "Still deciding"
             }
           },

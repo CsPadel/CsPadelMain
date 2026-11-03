@@ -66,9 +66,9 @@ function runTestSubmission() {
     lastName: 'User ' + id,
     email: TEST_EMAIL,
     phone: '+34600' + (100000 + id),
-    destination: 'menorca',
+    destination: 'eastSussex',
     month: 'june',
-    year: '2026',
+    year: '2027',
     groupSize: '4',
     priorities: ['coaching', 'dining', 'boatAndSea'],
     notes: 'Test enquiry – please ignore.',
@@ -140,7 +140,7 @@ function labelFor(map, key) {
 // reaches the sheet as "eastSussex" rather than a readable name.
 const DESTINATION_LABELS = {
   menorca: 'Menorca', eastSussex: 'UK (East Sussex)', bali: 'Bali', dubai: 'Dubai',
-  undecided: 'Undecided',
+  tunisia: 'Tunisia (Tunis)', undecided: 'Undecided',
 };
 
 const MONTH_LABELS = {
