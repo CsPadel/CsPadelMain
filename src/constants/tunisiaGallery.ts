@@ -13,7 +13,7 @@ export const TUNISIA_GALLERY: readonly PhotoStripItem[] = [
   { slug: '02-the-blue-door', title: 'The Blue Door', location: 'Sidi Bou Said' },
   { slug: '03-whitewashed-lane', title: 'Whitewashed Lane', location: 'Sidi Bou Said' },
   { slug: '04-tiled-arches', title: 'Tiled Arches', location: 'Tunisia' },
-  { slug: '05-the-souk', title: 'The Souk', location: 'Tunisia' },
+  { slug: '05-blue-window', title: 'Blue Window', location: 'Sidi Bou Said' },
   { slug: '06-mosque-courtyard', title: 'Mosque Courtyard', location: 'Tunisia' },
   { slug: '07-studded-door', title: 'Studded Door', location: 'Sidi Bou Said' },
   { slug: '08-lane-to-the-sea', title: 'Lane to the Sea', location: 'Sidi Bou Said' },

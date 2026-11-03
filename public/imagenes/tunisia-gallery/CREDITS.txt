@@ -6,7 +6,7 @@ tunisia-gallery/01-palm-at-dusk.jpg        https://images.unsplash.com/photo-173
 tunisia-gallery/02-the-blue-door.jpg       https://images.unsplash.com/photo-1551357002-0f5890d59d90
 tunisia-gallery/03-whitewashed-lane.jpg    https://images.unsplash.com/photo-1726428977623-39f687724a40
 tunisia-gallery/04-tiled-arches.jpg        https://images.unsplash.com/photo-1726428977847-b739e1b0c5e5
-tunisia-gallery/05-the-souk.jpg            https://images.unsplash.com/photo-1632005922610-96bc09c96115
+tunisia-gallery/05-blue-window.jpg         https://images.unsplash.com/photo-1713425987202-b94fcf0ccc0f
 tunisia-gallery/06-mosque-courtyard.jpg    https://images.unsplash.com/photo-1591291614180-7f26d97411a6
 tunisia-gallery/07-studded-door.jpg        https://images.unsplash.com/photo-1689430719647-22b16c82bb4f
 tunisia-gallery/08-lane-to-the-sea.jpg     https://images.unsplash.com/photo-1725371212643-a6dee4c1a3d2
