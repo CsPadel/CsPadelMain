@@ -1024,7 +1024,7 @@ const fr = {
             lastName: "Nom",
             email: "E-mail",
             phone: "Téléphone",
-            phoneOptional: "Facultatif",
+            phonePlaceholder: "Avec l'indicatif, ex. +33",
             consent: "J'accepte que Courtside Padel utilise ces informations pour répondre à ma demande."
           }
         },
@@ -1034,6 +1034,7 @@ const fr = {
           group: "Veuillez nous indiquer combien de convives voyagent.",
           name: "Veuillez saisir votre prénom et votre nom.",
           email: "Veuillez saisir une adresse e-mail valide.",
+          phone: "Veuillez saisir un numéro de téléphone, avec l'indicatif du pays.",
           consent: "Veuillez accepter l'utilisation de vos informations pour que nous puissions vous répondre.",
           submit: "Nous n'avons pas pu envoyer votre demande depuis cette page. Envoyez-la nous sur WhatsApp — nous l'avons déjà remplie pour vous.",
           submitWhatsapp: "Envoyer sur WhatsApp"
