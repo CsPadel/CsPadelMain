@@ -8,6 +8,8 @@
  * once supplied. Sources: `public/imagenes/tunisia-gallery/CREDITS.txt`.
  */
 export const TUNISIA_HOTEL_PHOTOS = [
+  // The one free-licence photo of the hotel itself: its terrace over the bay.
+  '/imagenes/tunisia-hotel/00-hotel-terrace-over-the-bay.jpg',
   '/imagenes/tunisia-hotel/01-the-coast.jpg',
   '/imagenes/tunisia-hotel/02-boardwalk-to-the-beach.jpg',
   '/imagenes/tunisia-hotel/03-beach-parasols.jpg',

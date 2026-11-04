@@ -735,7 +735,7 @@ const es = {
           stayTitle: "Mövenpick Hotel Gammarth Tunis.",
           stayText: "Un hotel de cinco estrellas en la playa de Gammarth, en la costa justo al norte de la ciudad de Túnez. Las habitaciones y suites miran al mar y a la piscina, dos restaurantes dan al Mediterráneo y el pueblo de Sidi Bou Said está a pocos minutos.",
           stayLink: "Ver la web del hotel",
-          hotelImageAlts: ["Casas blancas y una palmera sobre el mar en Sidi Bou Said", "Una pasarela de madera hacia una playa de arena", "Sombrillas de paja y mesas en la playa bajo las palmeras", "Terrazas blancas sobre el mar en Sidi Bou Said", "Una palmera y una cúpula blanca sobre el mar al atardecer"],
+          hotelImageAlts: ["Una terraza del Mövenpick Hotel Gammarth sobre la playa y la bahía", "Casas blancas y una palmera sobre el mar en Sidi Bou Said", "Una pasarela de madera hacia una playa de arena", "Sombrillas de paja y mesas en la playa bajo las palmeras", "Terrazas blancas sobre el mar en Sidi Bou Said", "Una palmera y una cúpula blanca sobre el mar al atardecer"],
           padelEyebrow: "El Pádel",
           padelTitle: "Entrenamiento y partidos para todos los niveles.",
           padelText: "Todas las sesiones las dirigen nuestros propios entrenadores: ejercicios por niveles, partidos competitivos y correcciones jugador a jugador, tanto si coges una pala por primera vez como si quieres afinar tu juego. Las pistas se confirmarán con el programa completo.",

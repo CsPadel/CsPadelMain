@@ -1,6 +1,7 @@
 Tunisia page photography: Unsplash (https://unsplash.com/license), free for
-commercial use, no attribution required. These are destination photos, not
-pictures of Mövenpick Hotel Gammarth Tunis; swap in hotel shots once supplied.
+commercial use, no attribution required. Apart from tunisia-hotel/00 (the
+hotel's terrace), these are destination photos, not pictures of Mövenpick
+Hotel Gammarth Tunis; swap in hotel shots once supplied.
 
 tunisia-gallery/01-palm-at-dusk.jpg        https://images.unsplash.com/photo-1737276679387-ac18cbca095e
 tunisia-gallery/02-the-blue-door.jpg       https://images.unsplash.com/photo-1551357002-0f5890d59d90
@@ -14,6 +15,7 @@ cms/tunisia-sidi-bou-said.jpg              https://images.unsplash.com/photo-159
 cms/tunisia-sidi-bou-said-coast.jpg        https://images.unsplash.com/photo-1607869861980-da5f9b8b4969
 cms/tunisia-bay-aerial.jpg                 https://images.unsplash.com/photo-1624300179940-0dd409d8343b
 cms/tunisia-view-over-the-bay.jpg          https://images.unsplash.com/photo-1726428977637-ba8fc5a5047d
+tunisia-hotel/00-hotel-terrace-over-the-bay.jpg https://unsplash.com/photos/_flxtLvSPAs (Geoffrey Arduini; Mövenpick Gammarth, also on Wikimedia Commons as CC0)
 tunisia-hotel/01-the-coast.jpg             https://images.unsplash.com/photo-1607869861980-da5f9b8b4969
 tunisia-hotel/02-boardwalk-to-the-beach.jpg https://images.unsplash.com/photo-1729002492795-3b0af726729a
 tunisia-hotel/03-beach-parasols.jpg        https://images.unsplash.com/photo-1753385926128-d22b5c9370b6

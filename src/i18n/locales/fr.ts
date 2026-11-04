@@ -735,7 +735,7 @@ const fr = {
           stayTitle: "Mövenpick Hotel Gammarth Tunis.",
           stayText: "Un hôtel cinq étoiles sur la plage de Gammarth, sur la côte juste au nord de Tunis. Les chambres et suites donnent sur la mer et la piscine, deux restaurants font face à la Méditerranée et le village de Sidi Bou Saïd est à quelques minutes.",
           stayLink: "Voir le site de l'hôtel",
-          hotelImageAlts: ["Maisons blanches et palmier au-dessus de la mer à Sidi Bou Saïd", "Un ponton en bois menant à une plage de sable", "Parasols en paille et tables sur la plage sous les palmiers", "Terrasses blanches au-dessus de la mer à Sidi Bou Saïd", "Un palmier et une coupole blanche au-dessus de la mer au crépuscule"],
+          hotelImageAlts: ["Une terrasse du Mövenpick Hotel Gammarth au-dessus de la plage et de la baie", "Maisons blanches et palmier au-dessus de la mer à Sidi Bou Saïd", "Un ponton en bois menant à une plage de sable", "Parasols en paille et tables sur la plage sous les palmiers", "Terrasses blanches au-dessus de la mer à Sidi Bou Saïd", "Un palmier et une coupole blanche au-dessus de la mer au crépuscule"],
           padelEyebrow: "Le Padel",
           padelTitle: "Coaching et matchplay pour tous les niveaux.",
           padelText: "Chaque séance est menée par nos propres coachs : exercices par niveau, matchplay compétitif et conseils joueur par joueur, que vous preniez une raquette pour la première fois ou que vous affiniez votre jeu. Les courts seront confirmés avec le programme complet.",
