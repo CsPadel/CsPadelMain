@@ -5,6 +5,7 @@ import FooterIsland from '../FooterIsland';
 import EnquiryCta from '../EnquiryForm';
 import PhotoStrip from '../PhotoStrip';
 import { TUNISIA_GALLERY } from '../../constants/tunisiaGallery';
+import { TUNISIA_HOTEL_PHOTOS, TUNISIA_DINING_PHOTOS } from '../../constants/tunisiaPhotos';
 import type { Locale } from '../../i18n/locales';
 import { touristTripSchema } from '../../i18n/schema';
 import { getPageSeo, getAlternateUrls, getPageOgImage } from '../../i18n/seo';
@@ -28,6 +29,16 @@ const schema = touristTripSchema({
   image: getPageOgImage('tunisia'),
   place: { name: 'Mövenpick Hotel Gammarth Tunis', locality: 'Gammarth', region: 'Tunis', country: 'TN' },
 });
+
+/** Hotel and dining use the same photo strip as the gallery; alts come from the locale, in order. */
+const toStrip = (photos: string[], alts: readonly string[]) =>
+  photos.map((src, i) => ({
+    slug: src.split('/').pop()!.replace(/\.jpg$/, ''),
+    title: alts[i],
+    location: 'Tunisia',
+    alt: alts[i],
+    src,
+  }));
 
 // Real Courtside coaching from the Menorca retreats: the Tunisia courts aren't confirmed yet.
 const padelImages = [
@@ -123,51 +134,20 @@ const padelImages = [
     </section>
 
     {/* ── Where You Stay ── */}
-    <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div class="cs-fadein relative rounded-card overflow-hidden aspect-[4/5]">
-          <img
-            src="/imagenes/cms/tunisia-sidi-bou-said-coast.jpg"
-            srcset={srcSet('/imagenes/cms/tunisia-sidi-bou-said-coast.jpg')}
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            alt={c.stayImageAlt}
-            loading="lazy"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <div class="cs-fadein">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">{c.stayEyebrow}</p>
-          </div>
-          <h2
-            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
-            style="font-family: var(--font-display); font-style: italic;"
-          >
-            {c.stayTitle}
-          </h2>
-          <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed mb-8">{c.stayText}</p>
-          <ul class="mb-10">
-            {c.stayHighlights.map((item) => (
-              <li class="flex items-center gap-4 border-t border-brand-dark/10 py-4 text-brand-dark/75 text-base font-light">
-                <span class="block h-1.5 w-1.5 rounded-full bg-brand-gold flex-shrink-0" aria-hidden="true" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <a
-            href="https://movenpick.accor.com/en/hotels/tunis/B4I5.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-semibold text-brand-dark hover:text-brand-gold transition-colors duration-250 border-b border-brand-dark/15 hover:border-brand-gold pb-1"
-          >
-            {c.stayLink}
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg>
-          </a>
-        </div>
-      </div>
-    </section>
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={toStrip(TUNISIA_HOTEL_PHOTOS, c.hotelImageAlts)}
+      imageDir="tunisia-hotel"
+      tPrefix="tunisiaPage.landing.gallery"
+      copy={{
+        eyebrow: c.stayEyebrow,
+        title: c.stayTitle,
+        text: c.stayText,
+        link: { href: 'https://movenpick.accor.com/en/hotels/tunis/B4I5.html', label: c.stayLink },
+      }}
+      className="py-24 md:py-32 bg-brand-ivory"
+    />
 
     {/* ── The Padel ── */}
     <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
@@ -199,8 +179,19 @@ const padelImages = [
       </div>
     </section>
 
+    {/* ── The Culinary Experience ── */}
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={toStrip(TUNISIA_DINING_PHOTOS, c.diningImageAlts)}
+      imageDir="tunisia-dining"
+      tPrefix="tunisiaPage.landing.gallery"
+      copy={{ eyebrow: c.diningEyebrow, title: c.diningTitle, text: c.diningText }}
+      className="py-24 md:py-32 bg-brand-ivory"
+    />
+
     {/* ── Beyond the Court ── */}
-    <section class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
       <div class="max-w-7xl mx-auto">
         <div class="mb-12 md:mb-16 cs-fadein">
           <div class="flex items-center gap-4 mb-6">
@@ -240,6 +231,7 @@ const padelImages = [
       items={TUNISIA_GALLERY}
       imageDir="tunisia-gallery"
       tPrefix="tunisiaPage.landing.gallery"
+      className="py-24 md:py-32 bg-brand-ivory"
     />
 
     {/* ── Closing ── */}
