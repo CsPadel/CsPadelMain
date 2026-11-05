@@ -60,6 +60,8 @@ const emptyAnswers: Answers = {
 };
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Loose on purpose: any format, as long as it holds a real number's worth of digits.
+const MIN_PHONE_DIGITS = 7;
 
 /* ─── Shared field styles ─────────────────────────────────── */
 
@@ -197,6 +199,9 @@ export function EnquiryFormModal({
         if (!EMAIL_PATTERN.test(answers.email.trim())) {
           return t('enquiryForm.errors.email');
         }
+        if (answers.phone.replace(/\D/g, '').length < MIN_PHONE_DIGITS) {
+          return t('enquiryForm.errors.phone');
+        }
         if (!answers.consent) return t('enquiryForm.errors.consent');
         return null;
     }
@@ -224,7 +229,7 @@ export function EnquiryFormModal({
     const lines = [
       `${t('enquiryForm.steps.contact.firstName')}: ${payload.firstName} ${payload.lastName}`,
       `${t('enquiryForm.steps.contact.email')}: ${payload.email}`,
-      `${t('enquiryForm.steps.contact.phone')}: ${payload.phone || '–'}`,
+      `${t('enquiryForm.steps.contact.phone')}: ${payload.phone}`,
       '',
       `${t('enquiryForm.steps.destination.question')} ${t(`enquiryForm.steps.destination.options.${payload.destination}`)}`,
       `${t('enquiryForm.steps.dates.question')} ${t(`enquiryForm.steps.dates.months.${payload.month}`)} ${payload.year}`,
@@ -541,7 +546,7 @@ export function EnquiryFormModal({
                             autoComplete="tel"
                             value={answers.phone}
                             onChange={(e) => set('phone', e.target.value)}
-                            placeholder={t('enquiryForm.steps.contact.phoneOptional')}
+                            placeholder={t('enquiryForm.steps.contact.phonePlaceholder')}
                             className={inputClass}
                           />
                         </div>

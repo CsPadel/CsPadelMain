@@ -6,6 +6,11 @@
  * Brevo emails: an internal new-lead notification and a confirmation to the
  * visitor in their own language.
  *
+ * The new-lead notification must never be lost: if Brevo rejects it (bad key,
+ * blocked IP – Apps Script's outgoing IPs change constantly – unverified
+ * sender) or Brevo isn't configured, it is sent again through the Google
+ * account that owns this script (MailApp), with the failure reason attached.
+ *
  * Setup:
  * 1. Open the Google Sheet → Extensions → Apps Script.
  * 2. Replace the default code with this file's contents.
@@ -79,6 +84,24 @@ function runTestSubmission() {
   const fakeEvent = { postData: { contents: JSON.stringify(fakeData) } };
   const result = doPost(fakeEvent);
   Logger.log('runTestSubmission result: ' + result.getContent());
+}
+
+/**
+ * Sends only the Google backup notification to OWNER_EMAIL. Run it once from
+ * the editor after pasting this version: it asks for the "send email as you"
+ * permission MailApp needs, and proves the backup path reaches the inbox.
+ */
+function testOwnerFallback() {
+  const ownerEmail = PropertiesService.getScriptProperties().getProperty('OWNER_EMAIL') || 'awatelet@cspadel.com';
+  sendOwnerFallback(ownerEmail, {
+    firstName: 'Test',
+    lastName: 'Backup',
+    email: 'hansalazar04@gmail.com',
+    destination: 'menorca',
+    notes: 'Test of the Google backup notification – please ignore.',
+    locale: 'en',
+  }, 'Manual test from testOwnerFallback().');
+  Logger.log('Backup notification sent to ' + ownerEmail + ' (MailApp quota left today: ' + MailApp.getRemainingDailyQuota() + ')');
 }
 
 /**
@@ -174,19 +197,31 @@ function getSpreadsheet() {
 }
 
 function notifyBrevo(data) {
-  if (!data.email) return; // Nothing Brevo can do without an email.
-
   const props = PropertiesService.getScriptProperties();
   const apiKey = props.getProperty('BREVO_API_KEY');
-  if (!apiKey) return; // Brevo not configured yet – sheet write above still succeeded.
-
   const listId = props.getProperty('BREVO_LIST_ID');
   const senderEmail = props.getProperty('BREVO_SENDER_EMAIL') || 'awatelet@cspadel.com';
   const ownerEmail = props.getProperty('OWNER_EMAIL') || 'awatelet@cspadel.com';
 
-  upsertContact(apiKey, listId, data);
-  sendOwnerNotification(apiKey, senderEmail, ownerEmail, data);
-  sendClientConfirmation(apiKey, senderEmail, data);
+  if (!apiKey) {
+    sendOwnerFallback(ownerEmail, data, 'BREVO_API_KEY is not set in Script Properties.');
+    return;
+  }
+
+  const problems = [];
+  if (data.email) {
+    const contact = brevoRequest('/contacts', apiKey, contactPayload(listId, data));
+    if (!contact.ok) problems.push('Brevo contact: ' + contact.error);
+  }
+  const owner = sendOwnerNotification(apiKey, senderEmail, ownerEmail, data);
+  if (data.email) {
+    const client = sendClientConfirmation(apiKey, senderEmail, data);
+    if (!client.ok) problems.push('Client confirmation was NOT sent: ' + client.error);
+  }
+  if (!owner.ok) {
+    problems.unshift('Brevo notification: ' + owner.error);
+    sendOwnerFallback(ownerEmail, data, problems.join('\n'));
+  }
 }
 
 function brevoRequest(path, apiKey, payload) {
@@ -197,15 +232,18 @@ function brevoRequest(path, apiKey, payload) {
     payload: JSON.stringify(payload),
     muteHttpExceptions: true,
   });
-  // Brevo failures (bad key, unverified sender, unknown list) never break the
-  // sheet write – they're only visible here, in Executions, for debugging.
-  if (res.getResponseCode() >= 400) {
-    Logger.log('Brevo ' + path + ' failed (' + res.getResponseCode() + '): ' + res.getContentText());
+  // Brevo failures (bad key, blocked IP, unverified sender, unknown list) never
+  // break the sheet write – the caller decides whether to fall back to MailApp.
+  const code = res.getResponseCode();
+  if (code >= 400) {
+    const error = '(' + code + ') ' + res.getContentText();
+    Logger.log('Brevo ' + path + ' failed ' + error);
+    return { ok: false, error: error };
   }
-  return res;
+  return { ok: true };
 }
 
-function upsertContact(apiKey, listId, data) {
+function contactPayload(listId, data) {
   const payload = {
     email: data.email,
     attributes: {
@@ -216,25 +254,64 @@ function upsertContact(apiKey, listId, data) {
     updateEnabled: true,
   };
   if (listId) payload.listIds = [Number(listId)];
-  brevoRequest('/contacts', apiKey, payload);
+  return payload;
 }
 
 function sendOwnerNotification(apiKey, senderEmail, ownerEmail, data) {
   const fullName = ((data.firstName || '') + ' ' + (data.lastName || '')).trim();
-  const destination = labelFor(DESTINATION_LABELS, data.destination) || 'Unknown';
-  brevoRequest('/smtp/email', apiKey, {
+  const payload = {
     sender: { name: 'Courtside Padel – Web', email: senderEmail },
     to: [{ email: ownerEmail }],
-    subject: 'New retreat enquiry – ' + (fullName || 'Unknown') + ' (' + destination + ')',
+    subject: ownerSubject(data),
     htmlContent: emailShell(ownerEmailBody(data)),
-  });
+  };
+  // Hitting "Reply" on the notification answers the lead directly.
+  if (data.email) payload.replyTo = { email: data.email, name: fullName || data.email };
+  return brevoRequest('/smtp/email', apiKey, payload);
+}
+
+function ownerSubject(data) {
+  const fullName = ((data.firstName || '') + ' ' + (data.lastName || '')).trim();
+  const destination = labelFor(DESTINATION_LABELS, data.destination) || 'Unknown';
+  return 'New retreat enquiry – ' + (fullName || 'Unknown') + ' (' + destination + ')';
+}
+
+/**
+ * Sends the new-lead notification from the Google account that owns this
+ * script. Used only when Brevo can't deliver it, so a lead is never sitting
+ * unseen in the sheet. The reason is shown at the top so the Brevo problem
+ * gets fixed rather than silently relied on.
+ */
+function sendOwnerFallback(ownerEmail, data, reason) {
+  const warning =
+    '<div style="margin:0 0 24px;padding:14px 16px;border-radius:8px;background:#FDF3E1;color:#7A4B00;font-size:13px;line-height:1.5;">' +
+    '<strong>Sent by Google as a backup – Brevo could not deliver it.</strong><br>' +
+    escapeHtml(reason).replace(/\n/g, '<br>') +
+    '</div>';
+  const options = {
+    name: 'Courtside Padel – Web',
+    htmlBody: emailShell(warning + ownerEmailBody(data)),
+  };
+  if (data.email) options.replyTo = data.email;
+  try {
+    MailApp.sendEmail(ownerEmail, ownerSubject(data), reason, options);
+  } catch (err) {
+    Logger.log('MailApp fallback failed too: ' + err);
+  }
+}
+
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
 function sendClientConfirmation(apiKey, senderEmail, data) {
   const lang = (data.locale || 'en').slice(0, 2);
   const copy = CLIENT_EMAIL_COPY[lang] || CLIENT_EMAIL_COPY.en;
   const firstName = (data.firstName || '').trim();
-  brevoRequest('/smtp/email', apiKey, {
+  return brevoRequest('/smtp/email', apiKey, {
     sender: { name: 'Courtside Padel', email: senderEmail },
     to: [{ email: data.email, name: (firstName + ' ' + (data.lastName || '')).trim() }],
     subject: copy.subject,
