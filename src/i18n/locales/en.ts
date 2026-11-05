@@ -9,6 +9,7 @@ const en = {
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubai",
+        tunisia: "Tunisia",
         mykonos: "Mykonos",
         eastSussex: "UK (East Sussex)"
       },
@@ -711,6 +712,59 @@ const en = {
           ctaBtn: "Get in Touch"
         }
       },
+      tunisiaPage: {
+        landing: {
+          heroEyebrow: "Tunisia Padel Retreat · Coming 2027",
+          heroTitle: "The Mediterranean Coast of Tunis.",
+          heroSubtitle: "A five-star beachfront stay in Gammarth, padel coached by our own team, and the blue-and-white streets of Sidi Bou Said minutes away. Dates to be announced.",
+          heroCta: "Register Your Interest",
+          heroAlt: "Whitewashed domes and palm trees above the sea in Sidi Bou Said, near Tunis",
+          includedEyebrow: "The Plan",
+          includedTitle: "Everything, taken care of.",
+          includedText: "We're building the Tunisia retreat the way we build every Courtside retreat: from arrival to departure, every detail handled by our own team.",
+          included: [
+            "Accommodation at Mövenpick Hotel Gammarth",
+            "Coaching and matchplay for every level",
+            "Daily breakfast and curated dining",
+            "Private airport transfers",
+            "Local transport throughout",
+            "Experiences in Sidi Bou Said, Carthage and Tunis",
+          ],
+          includedNote: "Dates, pricing and the full programme will be announced soon. Register your interest to hear first.",
+          stayEyebrow: "Where You Stay",
+          stayTitle: "Mövenpick Hotel Gammarth Tunis.",
+          stayText: "A five-star hotel on the beach at Gammarth, on the coast just north of Tunis. Rooms and suites look out over the sea and pool, two restaurants face the Mediterranean, and the village of Sidi Bou Said is minutes away.",
+          stayLink: "Visit the hotel website",
+          hotelImageAlts: ["A terrace at Mövenpick Hotel Gammarth above the beach and the bay", "Whitewashed houses and a palm tree above the sea at Sidi Bou Said", "A boardwalk down to a sandy beach", "Straw parasols and tables on the beach under palm trees", "Whitewashed terraces above the sea in Sidi Bou Said", "A palm tree and whitewashed dome above the sea at dusk"],
+          padelEyebrow: "The Padel",
+          padelTitle: "Coaching and matchplay for every level.",
+          padelText: "Every session is run by our own coaches: drills grouped by level, competitive matchplay and feedback player by player, whether you're picking up a racket for the first time or sharpening your game. Courts will be confirmed with the full programme.",
+          padelImageAlts: [
+            "A Courtside coach working with a guest on court",
+            "A guest hitting an overhead during a Courtside session",
+          ],
+          diningEyebrow: "Dining",
+          diningTitle: "The Culinary Experience",
+          diningText: "Dinners chosen for the view as much as the food: Dar Zarrouk, high above the bay in Sidi Bou Said; The Cliff and Le Golfe on the waterfront at La Marsa; and Fondouk El Attarine, in the heart of the Tunis medina. Fresh seafood, Tunisian classics and Mediterranean cooking, every night somewhere worth remembering.",
+          diningImageAlts: ["A terrace above the marina at Sidi Bou Said", "Small plates to share on a wooden table", "Pastries, salads and grilled meats on a shared table", "Grilled fish with salad and lime", "Bowls of dips and chickpeas with olive oil", "A minaret above the arcades of the medina", "A flatbread and salad on a patterned plate", "Plates of rice, salads and bread on a long table"],
+          beyondEyebrow: "Beyond the Court",
+          beyondTitle: "Three thousand years of history, minutes from the beach.",
+          beyondText: "Wander the blue-and-white lanes of Sidi Bou Said, walk the ruins of ancient Carthage, get lost in the souks of the Tunis medina, and end the day over fresh seafood and mint tea, looking out across the Gulf of Tunis.",
+          beyondImageAlt: "The marina and beach below Sidi Bou Said, on the Gulf of Tunis",
+          closingImageAlt: "Whitewashed houses of Sidi Bou Said above the bay",
+          ctaEyebrow: "Start the Conversation",
+          ctaTitle: "Ready for Tunisia?",
+          ctaText: "Dates and details are being finalised. Register your interest, or tell us about your group, and we'll share the Tunisia programme with you first.",
+          ctaBtn: "Register Your Interest",
+          gallery: {
+            eyebrow: "The Gallery",
+            title: "A Taste of Tunisia",
+            dragHint: "Click & drag",
+            prev: "Previous images",
+            next: "Next images"
+          }
+        }
+      },
       mykonosPage: {
         heroTitle: "MYKONOS",
         heroTagline: "Aegean Elegance. Elite Padel.",
@@ -811,7 +865,8 @@ const en = {
           items: {
             bali: { tagline: "A private cliff-top estate. Elite padel.", location: "Uluwatu · Bali" },
             eastSussex: { tagline: "The English countryside, 70 minutes from London.", location: "UK · East Sussex" },
-            dubai: { tagline: "Coming soon.", location: "Coming Soon" }
+            dubai: { tagline: "Coming soon.", location: "Coming Soon" },
+            tunisia: { tagline: "The Mediterranean coast, minutes from Sidi Bou Said.", location: "Gammarth · Tunisia" }
           }
         },
         partners: {
@@ -970,6 +1025,7 @@ const en = {
               eastSussex: "UK (East Sussex)",
               bali: "Bali",
               dubai: "Dubai",
+              tunisia: "Tunisia",
               undecided: "Still deciding"
             }
           },

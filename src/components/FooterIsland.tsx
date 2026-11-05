@@ -133,6 +133,11 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
                   {t('navbar.dubai')}
                 </a>
               </li>
+              <li>
+                <a href={localizedHref('/tunisia')} className={linkClass}>
+                  {t('navbar.tunisia')}
+                </a>
+              </li>
             </ul>
 
             <a

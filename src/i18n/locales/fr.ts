@@ -9,6 +9,7 @@ const fr = {
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubai",
+        tunisia: "Tunisie",
         mykonos: "Mykonos",
         eastSussex: "UK (East Sussex)"
       },
@@ -711,6 +712,59 @@ const fr = {
           ctaBtn: "Nous Contacter"
         }
       },
+      tunisiaPage: {
+        landing: {
+          heroEyebrow: "Retraite Padel en Tunisie · Bientôt en 2027",
+          heroTitle: "La Côte Méditerranéenne de Tunis.",
+          heroSubtitle: "Un hôtel cinq étoiles sur la plage de Gammarth, du padel encadré par nos propres coachs et les ruelles bleues et blanches de Sidi Bou Saïd à quelques minutes. Dates à venir.",
+          heroCta: "Être Informé",
+          heroAlt: "Coupoles blanches et palmiers au-dessus de la mer à Sidi Bou Saïd, près de Tunis",
+          includedEyebrow: "Le Programme",
+          includedTitle: "Tout est pris en charge.",
+          includedText: "Nous construisons la retraite en Tunisie comme toutes les retraites Courtside : de l'arrivée au départ, chaque détail est géré par notre équipe.",
+          included: [
+            "Hébergement au Mövenpick Hotel Gammarth",
+            "Coaching et matchplay pour tous les niveaux",
+            "Petit-déjeuner quotidien et gastronomie sélectionnée",
+            "Transferts privés depuis l'aéroport",
+            "Transport local pendant tout le séjour",
+            "Expériences à Sidi Bou Saïd, Carthage et Tunis",
+          ],
+          includedNote: "Les dates, les tarifs et le programme complet seront annoncés prochainement. Inscrivez-vous pour être informé en premier.",
+          stayEyebrow: "Où Vous Séjournez",
+          stayTitle: "Mövenpick Hotel Gammarth Tunis.",
+          stayText: "Un hôtel cinq étoiles sur la plage de Gammarth, sur la côte juste au nord de Tunis. Les chambres et suites donnent sur la mer et la piscine, deux restaurants font face à la Méditerranée et le village de Sidi Bou Saïd est à quelques minutes.",
+          stayLink: "Voir le site de l'hôtel",
+          hotelImageAlts: ["Une terrasse du Mövenpick Hotel Gammarth au-dessus de la plage et de la baie", "Maisons blanches et palmier au-dessus de la mer à Sidi Bou Saïd", "Un ponton en bois menant à une plage de sable", "Parasols en paille et tables sur la plage sous les palmiers", "Terrasses blanches au-dessus de la mer à Sidi Bou Saïd", "Un palmier et une coupole blanche au-dessus de la mer au crépuscule"],
+          padelEyebrow: "Le Padel",
+          padelTitle: "Coaching et matchplay pour tous les niveaux.",
+          padelText: "Chaque séance est menée par nos propres coachs : exercices par niveau, matchplay compétitif et conseils joueur par joueur, que vous preniez une raquette pour la première fois ou que vous affiniez votre jeu. Les courts seront confirmés avec le programme complet.",
+          padelImageAlts: [
+            "Un coach Courtside avec une cliente sur le court",
+            "Un client frappant un smash pendant une séance Courtside",
+          ],
+          diningEyebrow: "Gastronomie",
+          diningTitle: "L'Expérience Culinaire",
+          diningText: "Des dîners choisis autant pour la vue que pour la cuisine : Dar Zarrouk, au-dessus de la baie à Sidi Bou Saïd ; The Cliff et Le Golfe, face à la mer à La Marsa ; et Fondouk El Attarine, au cœur de la médina de Tunis. Poissons frais, classiques tunisiens et cuisine méditerranéenne, chaque soir dans un lieu mémorable.",
+          diningImageAlts: ["Une terrasse au-dessus du port de Sidi Bou Saïd", "Des petites assiettes à partager sur une table en bois", "Feuilletés, salades et grillades sur une table partagée", "Poisson grillé avec salade et citron vert", "Des bols de sauces et de pois chiches à l'huile d'olive", "Un minaret au-dessus des arcades de la médina", "Un pain plat et une salade dans une assiette décorée", "Des plats de riz, de salades et de pain sur une grande table"],
+          beyondEyebrow: "Au-delà du Court",
+          beyondTitle: "Trois mille ans d'histoire, à quelques minutes de la plage.",
+          beyondText: "Flânez dans les ruelles bleues et blanches de Sidi Bou Saïd, parcourez les ruines de l'antique Carthage, perdez-vous dans les souks de la médina de Tunis et terminez la journée autour de poissons frais et de thé à la menthe, face au golfe de Tunis.",
+          beyondImageAlt: "Le port de plaisance et la plage au pied de Sidi Bou Saïd, sur le golfe de Tunis",
+          closingImageAlt: "Les maisons blanches de Sidi Bou Saïd au-dessus de la baie",
+          ctaEyebrow: "Lancer la Conversation",
+          ctaTitle: "Prêt pour la Tunisie ?",
+          ctaText: "Les dates et les détails sont en cours de finalisation. Inscrivez-vous ou parlez-nous de votre groupe, et nous vous enverrons le programme Tunisie en premier.",
+          ctaBtn: "Être Informé",
+          gallery: {
+            eyebrow: "La Galerie",
+            title: "Un Avant-Goût de la Tunisie",
+            dragHint: "Cliquez & glissez",
+            prev: "Images précédentes",
+            next: "Images suivantes"
+          }
+        }
+      },
       mykonosPage: {
         heroTitle: "MYKONOS",
         heroTagline: "Élégance Égéenne. Padel d'Élite.",
@@ -811,7 +865,8 @@ const fr = {
           items: {
             bali: { tagline: "Un domaine privé en bord de falaise. Padel d'élite.", location: "Uluwatu · Bali" },
             eastSussex: { tagline: "La campagne anglaise, à 70 minutes de Londres.", location: "Royaume-Uni · East Sussex" },
-            dubai: { tagline: "Bientôt disponible.", location: "Bientôt Disponible" }
+            dubai: { tagline: "Bientôt disponible.", location: "Bientôt Disponible" },
+            tunisia: { tagline: "La côte méditerranéenne, à quelques minutes de Sidi Bou Saïd.", location: "Gammarth · Tunisie" }
           }
         },
         partners: {
@@ -970,6 +1025,7 @@ const fr = {
               eastSussex: "UK (East Sussex)",
               bali: "Bali",
               dubai: "Dubai",
+              tunisia: "Tunisie",
               undecided: "Je n'ai pas encore décidé"
             }
           },

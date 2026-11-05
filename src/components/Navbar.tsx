@@ -133,6 +133,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
                       <a href={localizedHref('/east-sussex')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all whitespace-nowrap">{t('navbar.eastSussex')}</a>
                       <a href={localizedHref('/bali')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.bali')}</a>
                       <a href={localizedHref('/dubai')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.dubai')}</a>
+                      <a href={localizedHref('/tunisia')} className="px-4 py-3 text-sm tracking-widest uppercase text-brand-light/60 hover:text-brand-gold hover:bg-brand-gold/5 transition-all">{t('navbar.tunisia')}</a>
                     </div>
                   </motion.div>
                 )}
@@ -184,6 +185,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
               <a href={localizedHref('/east-sussex')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.eastSussex')}</a>
               <a href={localizedHref('/bali')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
               <a href={localizedHref('/dubai')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
+              <a href={localizedHref('/tunisia')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.tunisia')}</a>
 
               <div className="w-full h-px bg-brand-gold/20 my-4" />
 

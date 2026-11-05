@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 import '../i18n/config';
 import type { Locale } from '../i18n/locales';
 import { usePageTranslation } from '../i18n/usePageTranslation';
@@ -29,7 +29,7 @@ interface PhotoStripProps {
    */
   tPrefix: string;
   /** Section copy passed in directly instead of read from `tPrefix`. */
-  copy?: { eyebrow: string; title: string; text?: string };
+  copy?: { eyebrow: string; title: string; text?: string; link?: { href: string; label: string } };
   /** Classes for the outer section; defaults to a padded white band. */
   className?: string;
 }
@@ -146,6 +146,18 @@ export default function PhotoStrip({ locale, items, imageDir, tPrefix, copy, cla
 
         {copy?.text && (
           <p className="mt-8 text-brand-dark/55 text-lg font-light leading-relaxed max-w-3xl">{copy.text}</p>
+        )}
+
+        {copy?.link && (
+          <a
+            href={copy.link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 mt-8 text-xs uppercase tracking-[0.2em] font-semibold text-brand-dark hover:text-brand-gold transition-colors duration-250 border-b border-brand-dark/15 hover:border-brand-gold pb-1"
+          >
+            {copy.link.label}
+            <ArrowUpRight size={16} strokeWidth={1.5} aria-hidden="true" />
+          </a>
         )}
       </motion.div>
 

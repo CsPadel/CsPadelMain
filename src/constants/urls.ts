@@ -15,6 +15,7 @@ const RETREAT_URLS: Record<string, string> = {
   eastSussex: '/east-sussex',
   bali: '/bali',
   dubai: '/dubai',
+  tunisia: '/tunisia',
   mykonos: '/upcoming-retreats',
 };
 

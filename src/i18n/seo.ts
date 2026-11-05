@@ -1,7 +1,7 @@
 import type { Locale } from './locales';
 import { localizedPath } from './routing';
 
-export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory' | 'upcomingRetreats' | 'bali' | 'dubai' | 'eastSussex' | 'menorca';
+export type PageId = 'home' | 'experience' | 'cookies' | 'executiveRetreat' | 'ourStory' | 'upcomingRetreats' | 'bali' | 'dubai' | 'eastSussex' | 'menorca' | 'tunisia';
 
 export interface PageSeo {
   title: string;
@@ -184,6 +184,23 @@ const seoContent: Record<PageId, Record<Locale, PageSeo>> = {
       keywords: 'retraite padel Dubaï, séjour padel Dubaï, coaching padel Dubaï, Courtside Dubaï',
     },
   },
+  tunisia: {
+    en: {
+      title: 'Tunisia Padel Retreat – Coming Soon | Courtside Padel',
+      description: 'A Courtside padel retreat in Tunis is coming soon, at the five-star Mövenpick Hotel Gammarth on the Mediterranean. Register your interest to hear first.',
+      keywords: 'Tunisia padel retreat, Tunis padel holiday, padel Gammarth, Mövenpick Gammarth padel, Courtside Tunisia',
+    },
+    es: {
+      title: 'Retiro de Pádel en Túnez – Próximamente | Courtside Padel',
+      description: 'Pronto, un retiro de pádel Courtside en Túnez, en el Mövenpick Hotel Gammarth cinco estrellas junto al Mediterráneo. Regístrate para saberlo primero.',
+      keywords: 'retiro de pádel Túnez, vacaciones de pádel Túnez, pádel Gammarth, Mövenpick Gammarth pádel, Courtside Túnez',
+    },
+    fr: {
+      title: 'Retraite Padel en Tunisie – Bientôt | Courtside Padel',
+      description: 'Bientôt, une retraite padel Courtside à Tunis, au Mövenpick Hotel Gammarth cinq étoiles, face à la Méditerranée. Inscrivez-vous pour être informé.',
+      keywords: 'retraite padel Tunisie, séjour padel Tunis, padel Gammarth, Mövenpick Gammarth padel, Courtside Tunisie',
+    },
+  },
 };
 
 const pagePaths: Record<PageId, string> = {
@@ -197,6 +214,7 @@ const pagePaths: Record<PageId, string> = {
   dubai: '/dubai',
   eastSussex: '/east-sussex',
   menorca: '/menorca',
+  tunisia: '/tunisia',
 };
 
 const pageOgImages: Record<PageId, string> = {
@@ -210,6 +228,7 @@ const pageOgImages: Record<PageId, string> = {
   dubai: '/imagenes/cms/dubai-skyline.jpg',
   eastSussex: '/imagenes/cms/east-sussex-hero-house-lake.jpg',
   menorca: '/imagenes/cms/menorca-hero-pool.jpg',
+  tunisia: '/imagenes/cms/tunisia-sidi-bou-said.jpg',
 };
 
 /** Landscape image used when the page is shared (Open Graph / Twitter). */
@@ -245,6 +264,7 @@ export function getSitemapEntries(siteUrl: string): Array<{ loc: string; lastmod
     { page: 'menorca', changefreq: 'monthly', priority: '0.7' },
     { page: 'eastSussex', changefreq: 'monthly', priority: '0.7' },
     { page: 'dubai', changefreq: 'monthly', priority: '0.5' },
+    { page: 'tunisia', changefreq: 'monthly', priority: '0.5' },
     { page: 'cookies', changefreq: 'yearly', priority: '0.3' },
   ];
 

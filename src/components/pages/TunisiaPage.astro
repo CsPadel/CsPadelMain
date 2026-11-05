@@ -1,0 +1,305 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { srcSet } from '../../lib/responsiveImage';
+import FooterIsland from '../FooterIsland';
+import EnquiryCta from '../EnquiryForm';
+import PhotoStrip from '../PhotoStrip';
+import { TUNISIA_GALLERY } from '../../constants/tunisiaGallery';
+import { TUNISIA_HOTEL_PHOTOS, TUNISIA_DINING_PHOTOS } from '../../constants/tunisiaPhotos';
+import type { Locale } from '../../i18n/locales';
+import { touristTripSchema } from '../../i18n/schema';
+import { getPageSeo, getAlternateUrls, getPageOgImage } from '../../i18n/seo';
+import { SITE_URL } from '../../constants/site';
+import { getTranslations } from '../../i18n/getTranslations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const seo = getPageSeo('tunisia', locale);
+const siteURL = Astro.site ?? new URL(SITE_URL);
+const alternateUrls = getAlternateUrls(siteURL.href, 'tunisia');
+const c = getTranslations(locale).tunisiaPage.landing;
+const schema = touristTripSchema({
+  locale,
+  url: alternateUrls[locale],
+  name: c.heroEyebrow,
+  description: seo.description,
+  image: getPageOgImage('tunisia'),
+  place: { name: 'Mövenpick Hotel Gammarth Tunis', locality: 'Gammarth', region: 'Tunis', country: 'TN' },
+});
+
+/** Hotel and dining use the same photo strip as the gallery; alts come from the locale, in order. */
+const toStrip = (photos: string[], alts: readonly string[]) =>
+  photos.map((src, i) => ({
+    slug: src.split('/').pop()!.replace(/\.jpg$/, ''),
+    title: alts[i],
+    location: 'Tunisia',
+    alt: alts[i],
+    src,
+  }));
+
+// Real Courtside coaching from the Menorca retreats: the Tunisia courts aren't confirmed yet.
+const padelImages = [
+  '/imagenes/menorca-padel/01-coaching-session.jpg',
+  '/imagenes/menorca-padel/04-overhead-smash.jpg',
+];
+---
+
+<Layout
+  title={seo.title}
+  description={seo.description}
+  keywords={seo.keywords}
+  ogImage={getPageOgImage('tunisia')}
+  schema={schema}
+  lang={locale}
+  locale={locale}
+  canonical={alternateUrls[locale]}
+  alternateUrls={alternateUrls}
+>
+  <main class="w-full bg-white flex flex-col relative">
+
+    {/* ── Hero ── */}
+    <section class="relative w-full min-h-screen flex items-end pb-24 md:pb-32 px-8 md:px-16 overflow-hidden bg-brand-dark">
+      <img
+        src="/imagenes/cms/tunisia-sidi-bou-said.jpg"
+        srcset={srcSet('/imagenes/cms/tunisia-sidi-bou-said.jpg')}
+        sizes="100vw"
+        alt={c.heroAlt}
+        class="absolute inset-0 w-full h-full object-cover"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="absolute inset-0 noise-section" aria-hidden="true" />
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(to bottom, rgba(1,25,44,0.15) 0%, rgba(1,25,44,0.45) 50%, rgba(1,25,44,0.98) 100%);"
+      />
+      <div class="relative z-10 max-w-7xl mx-auto w-full">
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl font-light text-white leading-none mb-6 max-w-4xl"
+          style="font-family: var(--font-display); font-style: italic; animation: cs-enter 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s both;"
+        >
+          <span class="block text-[10px] md:text-xs uppercase tracking-[0.38em] text-brand-gold font-semibold mb-5 md:mb-6" style="font-family: var(--font-inter); font-style: normal;">
+            {c.heroEyebrow}
+          </span>
+          {c.heroTitle}
+        </h1>
+        <p
+          class="text-white/55 text-lg md:text-xl font-light max-w-xl leading-relaxed mb-10"
+          style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s both;"
+        >
+          {c.heroSubtitle}
+        </p>
+        <div style="animation: cs-enter 0.8s cubic-bezier(0.22,1,0.36,1) 0.7s both;">
+          <EnquiryCta client:visible locale={locale} label={c.heroCta} destination="tunisia" />
+        </div>
+      </div>
+    </section>
+
+    {/* ── The Plan ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 md:mb-16 cs-fadein">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+              {c.includedEyebrow}
+            </p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            {c.includedTitle}
+          </h2>
+          <p class="text-brand-dark/58 text-base md:text-lg font-light leading-relaxed max-w-3xl">
+            {c.includedText}
+          </p>
+        </div>
+
+        <ul class="cs-fadein grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-0 max-w-5xl">
+          {c.included.map((item) => (
+            <li class="flex items-center gap-4 border-t border-brand-dark/10 py-5 text-brand-dark/75 text-lg font-light">
+              <span class="block h-1.5 w-1.5 rounded-full bg-brand-gold flex-shrink-0" aria-hidden="true" />
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p class="cs-fadein mt-8 text-brand-dark/45 text-sm font-light leading-relaxed max-w-2xl">
+          {c.includedNote}
+        </p>
+      </div>
+    </section>
+
+    {/* ── Where You Stay ── */}
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={toStrip(TUNISIA_HOTEL_PHOTOS, c.hotelImageAlts)}
+      imageDir="tunisia-hotel"
+      tPrefix="tunisiaPage.landing.gallery"
+      copy={{
+        eyebrow: c.stayEyebrow,
+        title: c.stayTitle,
+        text: c.stayText,
+        link: { href: 'https://movenpick.accor.com/en/hotels/tunis/B4I5.html', label: c.stayLink },
+      }}
+      className="py-24 md:py-32 bg-brand-ivory"
+    />
+
+    {/* ── The Padel ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 md:mb-16 cs-fadein">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+              {c.padelEyebrow}
+            </p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            {c.padelTitle}
+          </h2>
+          <p class="text-brand-dark/55 text-lg font-light leading-relaxed max-w-3xl">
+            {c.padelText}
+          </p>
+        </div>
+        <div class="cs-fadein grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          {padelImages.map((src, i) => (
+            <div class="relative rounded-card overflow-hidden aspect-[4/5]">
+              <img src={src} srcset={srcSet(src)} sizes="(min-width: 768px) 50vw, 100vw" alt={c.padelImageAlts[i]} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ── The Culinary Experience ── */}
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={toStrip(TUNISIA_DINING_PHOTOS, c.diningImageAlts)}
+      imageDir="tunisia-dining"
+      tPrefix="tunisiaPage.landing.gallery"
+      copy={{ eyebrow: c.diningEyebrow, title: c.diningTitle, text: c.diningText }}
+      className="py-24 md:py-32 bg-brand-ivory"
+    />
+
+    {/* ── Beyond the Court ── */}
+    <section class="py-24 md:py-32 px-8 md:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 md:mb-16 cs-fadein">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+            <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+              {c.beyondEyebrow}
+            </p>
+          </div>
+          <h2
+            class="text-4xl md:text-5xl font-light text-brand-dark leading-tight mb-8"
+            style="font-family: var(--font-display); font-style: italic;"
+          >
+            {c.beyondTitle}
+          </h2>
+          <p class="text-brand-dark/55 text-lg font-light leading-relaxed max-w-3xl">
+            {c.beyondText}
+          </p>
+        </div>
+        <div class="cs-fadein relative rounded-card overflow-hidden w-full" style="aspect-ratio: 21/9;">
+          <img
+            src="/imagenes/cms/tunisia-bay-aerial.jpg"
+            srcset={srcSet('/imagenes/cms/tunisia-bay-aerial.jpg')}
+            sizes="100vw"
+            alt={c.beyondImageAlt}
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* ── Gallery ── */}
+    <PhotoStrip
+      client:visible
+      locale={locale}
+      items={TUNISIA_GALLERY}
+      imageDir="tunisia-gallery"
+      tPrefix="tunisiaPage.landing.gallery"
+      className="py-24 md:py-32 bg-brand-ivory"
+    />
+
+    {/* ── Closing ── */}
+    <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
+      <img
+        src="/imagenes/cms/tunisia-view-over-the-bay.jpg"
+        srcset={srcSet('/imagenes/cms/tunisia-view-over-the-bay.jpg')}
+        sizes="100vw"
+        alt={c.closingImageAlt}
+        loading="lazy"
+        decoding="async"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(to bottom, rgba(1,25,44,0.55) 0%, rgba(1,25,44,0.7) 50%, rgba(1,25,44,0.95) 100%);"
+        aria-hidden="true"
+      />
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+            {c.ctaEyebrow}
+          </p>
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+        </div>
+        <h2
+          class="text-4xl md:text-5xl font-light text-white mb-5"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          {c.ctaTitle}
+        </h2>
+        <p class="text-white/50 text-base font-light leading-relaxed mb-10 max-w-sm mx-auto">
+          {c.ctaText}
+        </p>
+        <EnquiryCta client:visible locale={locale} label={c.ctaBtn} destination="tunisia" />
+      </div>
+    </section>
+
+    <FooterIsland client:visible locale={locale} />
+  </main>
+</Layout>
+
+<style is:global>
+  .cs-fadein {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .cs-fadein.cs-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cs-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '-40px' }
+  );
+
+  document.querySelectorAll('.cs-fadein').forEach((el) => observer.observe(el));
+</script>

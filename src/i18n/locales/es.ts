@@ -9,6 +9,7 @@ const es = {
         menorca: "Menorca",
         bali: "Bali",
         dubai: "Dubái",
+        tunisia: "Túnez",
         mykonos: "Mykonos",
         eastSussex: "UK (East Sussex)"
       },
@@ -711,6 +712,59 @@ const es = {
           ctaBtn: "Contacta con Nosotros"
         }
       },
+      tunisiaPage: {
+        landing: {
+          heroEyebrow: "Retiro de Pádel en Túnez · Próximamente 2027",
+          heroTitle: "La Costa Mediterránea de Túnez.",
+          heroSubtitle: "Un hotel cinco estrellas frente al mar en Gammarth, pádel con nuestro propio equipo de entrenadores y las calles blancas y azules de Sidi Bou Said a pocos minutos. Fechas por anunciar.",
+          heroCta: "Quiero Más Información",
+          heroAlt: "Cúpulas blancas y palmeras sobre el mar en Sidi Bou Said, cerca de Túnez",
+          includedEyebrow: "El Plan",
+          includedTitle: "Todo, resuelto.",
+          includedText: "Estamos preparando el retiro de Túnez como preparamos todos los retiros Courtside: desde la llegada hasta la salida, cada detalle en manos de nuestro equipo.",
+          included: [
+            "Alojamiento en el Mövenpick Hotel Gammarth",
+            "Entrenamiento y partidos para todos los niveles",
+            "Desayuno diario y gastronomía seleccionada",
+            "Traslados privados al aeropuerto",
+            "Transporte local durante toda la estancia",
+            "Experiencias en Sidi Bou Said, Cartago y Túnez",
+          ],
+          includedNote: "Las fechas, el precio y el programa completo se anunciarán pronto. Regístrate para saberlo antes que nadie.",
+          stayEyebrow: "Dónde Te Alojas",
+          stayTitle: "Mövenpick Hotel Gammarth Tunis.",
+          stayText: "Un hotel de cinco estrellas en la playa de Gammarth, en la costa justo al norte de la ciudad de Túnez. Las habitaciones y suites miran al mar y a la piscina, dos restaurantes dan al Mediterráneo y el pueblo de Sidi Bou Said está a pocos minutos.",
+          stayLink: "Ver la web del hotel",
+          hotelImageAlts: ["Una terraza del Mövenpick Hotel Gammarth sobre la playa y la bahía", "Casas blancas y una palmera sobre el mar en Sidi Bou Said", "Una pasarela de madera hacia una playa de arena", "Sombrillas de paja y mesas en la playa bajo las palmeras", "Terrazas blancas sobre el mar en Sidi Bou Said", "Una palmera y una cúpula blanca sobre el mar al atardecer"],
+          padelEyebrow: "El Pádel",
+          padelTitle: "Entrenamiento y partidos para todos los niveles.",
+          padelText: "Todas las sesiones las dirigen nuestros propios entrenadores: ejercicios por niveles, partidos competitivos y correcciones jugador a jugador, tanto si coges una pala por primera vez como si quieres afinar tu juego. Las pistas se confirmarán con el programa completo.",
+          padelImageAlts: [
+            "Un entrenador de Courtside trabajando con una huésped en la pista",
+            "Un huésped ejecutando un remate en una sesión de Courtside",
+          ],
+          diningEyebrow: "Gastronomía",
+          diningTitle: "La Experiencia Gastronómica",
+          diningText: "Cenas elegidas tanto por las vistas como por la comida: Dar Zarrouk, sobre la bahía en Sidi Bou Said; The Cliff y Le Golfe, frente al mar en La Marsa; y Fondouk El Attarine, en pleno corazón de la medina de Túnez. Pescado fresco, clásicos tunecinos y cocina mediterránea, cada noche en un lugar para recordar.",
+          diningImageAlts: ["Una terraza sobre el puerto deportivo de Sidi Bou Said", "Platos pequeños para compartir sobre una mesa de madera", "Hojaldres, ensaladas y carnes a la parrilla en una mesa compartida", "Pescado a la parrilla con ensalada y lima", "Cuencos de salsas y garbanzos con aceite de oliva", "Un minarete sobre los arcos de la medina", "Un pan plano y ensalada en un plato decorado", "Platos de arroz, ensaladas y pan en una mesa larga"],
+          beyondEyebrow: "Más Allá de la Pista",
+          beyondTitle: "Tres mil años de historia, a minutos de la playa.",
+          beyondText: "Pasea por las callejuelas blancas y azules de Sidi Bou Said, recorre las ruinas de la antigua Cartago, piérdete en los zocos de la medina de Túnez y termina el día con pescado fresco y té a la menta mirando al golfo de Túnez.",
+          beyondImageAlt: "El puerto deportivo y la playa bajo Sidi Bou Said, en el golfo de Túnez",
+          closingImageAlt: "Las casas blancas de Sidi Bou Said sobre la bahía",
+          ctaEyebrow: "Empieza la Conversación",
+          ctaTitle: "¿Listo para Túnez?",
+          ctaText: "Las fechas y los detalles se están cerrando. Regístrate o cuéntanos sobre tu grupo y te enviaremos el programa de Túnez antes que a nadie.",
+          ctaBtn: "Quiero Más Información",
+          gallery: {
+            eyebrow: "La Galería",
+            title: "Un Sabor de Túnez",
+            dragHint: "Clic y arrastra",
+            prev: "Imágenes anteriores",
+            next: "Imágenes siguientes"
+          }
+        }
+      },
       mykonosPage: {
         heroTitle: "MYKONOS",
         heroTagline: "Elegancia del Egeo. Pádel de Élite.",
@@ -811,7 +865,8 @@ const es = {
           items: {
             bali: { tagline: "Una finca privada sobre el acantilado. Pádel de élite.", location: "Uluwatu · Bali" },
             eastSussex: { tagline: "La campiña inglesa, a 70 minutos de Londres.", location: "Reino Unido · East Sussex" },
-            dubai: { tagline: "Próximamente.", location: "Próximamente" }
+            dubai: { tagline: "Próximamente.", location: "Próximamente" },
+            tunisia: { tagline: "La costa mediterránea, a minutos de Sidi Bou Said.", location: "Gammarth · Túnez" }
           }
         },
         partners: {
@@ -970,6 +1025,7 @@ const es = {
               eastSussex: "UK (East Sussex)",
               bali: "Bali",
               dubai: "Dubái",
+              tunisia: "Túnez",
               undecided: "Aún lo estoy decidiendo"
             }
           },
