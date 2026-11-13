@@ -509,7 +509,8 @@ const en = {
         rights: "© 2026 Courtside Padel. All rights reserved.",
         privacy: "Privacy Policy",
         terms: "Terms of Service",
-        cookies: "Cookie Policy"
+        cookies: "Cookie Policy",
+        cookieSettings: "Cookie settings"
       },
       cookieConsent: {
         title: "We use cookies",
@@ -525,7 +526,7 @@ const en = {
       },
       cookiePolicy: {
         title: "Cookie Policy",
-        intro: "This policy explains how Courtside Padel uses cookies and similar technologies on courtsidepadel.com.",
+        intro: "This policy explains how Courtside Padel uses cookies and similar technologies on cspadel.com.",
         sections: [
           {
             title: "What are cookies?",
@@ -536,12 +537,12 @@ const en = {
             body: "These cookies are required for the website to function. They include your language preference and your cookie consent choice. They cannot be disabled."
           },
           {
-            title: "Analytics cookies",
-            body: "If you accept non-essential cookies, we may use analytics tools to measure traffic and improve our services. These cookies are only activated after you give consent."
+            title: "Advertising cookies",
+            body: "If you accept non-essential cookies, we use Google Ads and the Meta Pixel (Facebook and Instagram) to measure our advertising and show our ads to people who have visited the site. These tools are only loaded after you click \"Accept all\". If you reject non-essential cookies, they are never loaded."
           },
           {
             title: "Managing your preferences",
-            body: "You can accept or reject non-essential cookies via the banner shown on your first visit. To change your choice later, clear your browser data for this site or message us on WhatsApp and we will change it for you."
+            body: "You can accept or reject non-essential cookies via the banner shown on your first visit. To change your choice at any time, click \"Cookie settings\" at the bottom of any page."
           },
           {
             title: "Updates",

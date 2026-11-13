@@ -509,7 +509,8 @@ const es = {
         rights: "© 2026 Courtside Padel. Todos los derechos reservados.",
         privacy: "Privacidad",
         terms: "Términos",
-        cookies: "Política de cookies"
+        cookies: "Política de cookies",
+        cookieSettings: "Configurar cookies"
       },
       cookieConsent: {
         title: "Usamos cookies",
@@ -525,7 +526,7 @@ const es = {
       },
       cookiePolicy: {
         title: "Política de cookies",
-        intro: "Esta política explica cómo Courtside Padel utiliza cookies y tecnologías similares en courtsidepadel.com.",
+        intro: "Esta política explica cómo Courtside Padel utiliza cookies y tecnologías similares en cspadel.com.",
         sections: [
           {
             title: "¿Qué son las cookies?",
@@ -536,12 +537,12 @@ const es = {
             body: "Estas cookies son necesarias para que el sitio funcione correctamente. Incluyen tu preferencia de idioma y tu elección de consentimiento de cookies. No pueden desactivarse."
           },
           {
-            title: "Cookies analíticas",
-            body: "Si aceptas las cookies no esenciales, podemos utilizar herramientas analíticas para medir el tráfico y mejorar nuestros servicios. Estas cookies solo se activan tras tu consentimiento."
+            title: "Cookies publicitarias",
+            body: "Si aceptas las cookies no esenciales, utilizamos Google Ads y el Píxel de Meta (Facebook e Instagram) para medir nuestra publicidad y mostrar nuestros anuncios a quienes han visitado el sitio. Estas herramientas solo se cargan después de que pulses \"Aceptar todas\". Si rechazas las cookies no esenciales, nunca se cargan."
           },
           {
             title: "Gestionar tus preferencias",
-            body: "Puedes aceptar o rechazar las cookies no esenciales mediante el banner que aparece en tu primera visita. Para cambiar tu elección más adelante, borra los datos del navegador para este sitio o escríbenos por WhatsApp y lo cambiamos por ti."
+            body: "Puedes aceptar o rechazar las cookies no esenciales mediante el banner que aparece en tu primera visita. Para cambiar tu elección en cualquier momento, pulsa \"Configurar cookies\" al pie de cualquier página."
           },
           {
             title: "Actualizaciones",

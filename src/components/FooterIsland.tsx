@@ -7,6 +7,7 @@ import { usePageTranslation } from '../i18n/usePageTranslation';
 import { useLocalizedHref } from '../i18n/useLocale';
 import { SOCIAL_URLS, getWhatsAppConciergeUrl } from '../constants/urls';
 import { EnquiryFormModal } from './EnquiryForm';
+import { OPEN_COOKIE_SETTINGS_EVENT } from '../lib/cookieConsent';
 
 interface FooterIslandProps {
   readonly locale?: Locale;
@@ -255,6 +256,14 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
             <a href={localizedHref('/cookies')} className="text-white/22 text-xs font-light tracking-wide hover:text-white/50 transition-colors">
               {t('footer.cookies')}
             </a>
+            <span className="text-white/12" aria-hidden="true">·</span>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS_EVENT))}
+              className="text-white/22 text-xs font-light tracking-wide hover:text-white/50 transition-colors"
+            >
+              {t('footer.cookieSettings')}
+            </button>
           </div>
         </motion.div>
 
