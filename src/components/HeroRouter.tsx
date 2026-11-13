@@ -13,6 +13,10 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
   const heroRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  // The video only starts downloading once the rest of the page has loaded:
+  // with autoplay it competed with the fonts, scripts and images, and phones
+  // took ~6s to finish loading. The poster (its first frame) shows until then.
+  //
   // iOS refuses autoplay in Low Power Mode and similar states, and only a tap
   // can start the video then. Retry on the first gesture so it still plays.
   useEffect(() => {
@@ -27,12 +31,21 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
     function resume() {
       video?.play().then(stop).catch(() => {});
     }
+    function start() {
+      if (!video) return;
+      video.preload = 'auto';
+      video.play().catch(() => {
+        events.forEach((e) => window.addEventListener(e, resume, { passive: true }));
+      });
+    }
 
-    video.play().catch(() => {
-      events.forEach((e) => window.addEventListener(e, resume, { passive: true }));
-    });
+    if (document.readyState === 'complete') start();
+    else window.addEventListener('load', start, { once: true });
 
-    return stop;
+    return () => {
+      window.removeEventListener('load', start);
+      stop();
+    };
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -60,15 +73,19 @@ export const HeroRouter = ({ locale: localeProp }: HeroRouterProps) => {
         >
           <video
             ref={videoRef}
-            autoPlay loop muted playsInline
+            loop muted playsInline
             disablePictureInPicture
             poster="/hero-poster.jpg"
-            preload="auto"
+            preload="none"
             className="hero-video absolute inset-0 w-full h-full object-cover"
           >
             {/* Portrait screens only ever show the centre of the frame, so they get
-                a 9:16 crop. Browsers that ignore `media` take the first source. */}
+                a 9:16 crop. Browsers that ignore `media` take the first source.
+                HEVC first (about half the size, played by Safari and most phones),
+                H.264 for everything else. */}
+            <source src="/hero-video.hevc.mp4" type='video/mp4; codecs="hvc1"' media="(min-aspect-ratio: 1/1)" />
             <source src="/hero-video.mp4" type="video/mp4" media="(min-aspect-ratio: 1/1)" />
+            <source src="/hero-video-mobile.hevc.mp4" type='video/mp4; codecs="hvc1"' />
             <source src="/hero-video-mobile.mp4" type="video/mp4" />
           </video>
         </motion.div>
