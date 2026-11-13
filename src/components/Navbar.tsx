@@ -172,28 +172,31 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '-100%' }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 bg-brand-dark flex flex-col items-center justify-center pt-24 pb-12 px-6"
+            // Scrolls when the menu is taller than the screen; my-auto still
+            // centres it when it fits. justify-center would push the first
+            // links above the top edge where they can't be reached.
+            className="fixed inset-0 z-40 bg-brand-dark flex flex-col items-center overflow-y-auto overscroll-contain pt-24 pb-10 px-6"
           >
-            <div className="flex flex-col items-center gap-8 w-full max-w-sm">
-              <a href={localizedHref('/our-story')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.ourStory')}</a>
-              <a href={localizedHref('/the-experience')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.experience')}</a>
+            <div className="my-auto flex flex-col items-center gap-4 w-full max-w-sm">
+              <a href={localizedHref('/our-story')} className="text-2xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.ourStory')}</a>
+              <a href={localizedHref('/the-experience')} className="text-2xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.experience')}</a>
 
-              <div className="w-full h-px bg-brand-gold/20 my-4" />
+              <div className="w-full h-px bg-brand-gold/20 my-2" />
 
               <span className="text-xs tracking-[0.3em] uppercase text-brand-gold">{t('navbar.destinations')}</span>
-              <a href={localizedHref('/menorca')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
-              <a href={localizedHref('/east-sussex')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.eastSussex')}</a>
-              <a href={localizedHref('/bali')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
-              <a href={localizedHref('/dubai')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
-              <a href={localizedHref('/tunisia')} className="text-2xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.tunisia')}</a>
+              <a href={localizedHref('/menorca')} className="text-xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.menorca')}</a>
+              <a href={localizedHref('/east-sussex')} className="text-xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.eastSussex')}</a>
+              <a href={localizedHref('/bali')} className="text-xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.bali')}</a>
+              <a href={localizedHref('/dubai')} className="text-xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.dubai')}</a>
+              <a href={localizedHref('/tunisia')} className="text-xl font-light text-white/70 hover:text-white transition-colors">{t('navbar.tunisia')}</a>
 
-              <div className="w-full h-px bg-brand-gold/20 my-4" />
+              <div className="w-full h-px bg-brand-gold/20 my-2" />
 
-              <a href={localizedHref('/upcoming-retreats')} className="text-3xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.upcomingRetreats')}</a>
+              <a href={localizedHref('/upcoming-retreats')} className="text-2xl font-light tracking-wide text-white hover:text-brand-gold transition-colors" style={{ fontFamily: 'var(--font-display)' }}>{t('navbar.upcomingRetreats')}</a>
 
-              <div className="w-full h-px bg-brand-gold/20 my-4" />
+              <div className="w-full h-px bg-brand-gold/20 my-2" />
 
-              <div className="scale-125 mt-4">
+              <div className="scale-125 mt-2">
                 <LanguageToggle locale={localeProp} pathname={pathname || undefined} />
               </div>
             </div>

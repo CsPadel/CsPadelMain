@@ -62,9 +62,11 @@ interface TripOptions {
   place: { name: string; locality?: string; region: string; country: string };
   /** Day-by-day titles, when the retreat has a fixed itinerary. */
   itinerary?: string[];
+  /** Questions and answers shown on the page, published as a FAQPage. */
+  faq?: { q: string; a: string }[];
 }
 
-export function touristTripSchema({ locale, url, name, description, image, place, itinerary }: TripOptions) {
+export function touristTripSchema({ locale, url, name, description, image, place, itinerary, faq }: TripOptions) {
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -103,6 +105,20 @@ export function touristTripSchema({ locale, url, name, description, image, place
             }
           : {}),
       },
+      ...(faq
+        ? [
+            {
+              '@type': 'FAQPage',
+              '@id': `${url}#faq`,
+              inLanguage: locale,
+              mainEntity: faq.map(({ q, a }) => ({
+                '@type': 'Question',
+                name: q,
+                acceptedAnswer: { '@type': 'Answer', text: a },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 }
