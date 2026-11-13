@@ -1,5 +1,8 @@
 export const COOKIE_CONSENT_KEY = 'cs-cookie-consent';
 
+/** Dispatched on window to reopen the consent banner (footer "Cookie settings"). */
+export const OPEN_COOKIE_SETTINGS_EVENT = 'open-cookie-settings';
+
 export type CookieConsentStatus = 'accepted' | 'rejected';
 
 export function getCookieConsent(): CookieConsentStatus | null {

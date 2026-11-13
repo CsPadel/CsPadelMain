@@ -509,7 +509,8 @@ const fr = {
         rights: "© 2026 Courtside Padel. Tous droits réservés.",
         privacy: "Politique de confidentialité",
         terms: "Conditions d'utilisation",
-        cookies: "Politique de cookies"
+        cookies: "Politique de cookies",
+        cookieSettings: "Paramètres des cookies"
       },
       cookieConsent: {
         title: "Nous utilisons des cookies",
@@ -525,7 +526,7 @@ const fr = {
       },
       cookiePolicy: {
         title: "Politique de cookies",
-        intro: "Cette politique explique comment Courtside Padel utilise les cookies et technologies similaires sur courtsidepadel.com.",
+        intro: "Cette politique explique comment Courtside Padel utilise les cookies et technologies similaires sur cspadel.com.",
         sections: [
           {
             title: "Que sont les cookies ?",
@@ -536,12 +537,12 @@ const fr = {
             body: "Ces cookies sont indispensables au fonctionnement du site. Ils incluent votre préférence linguistique et votre choix de consentement aux cookies. Ils ne peuvent pas être désactivés."
           },
           {
-            title: "Cookies analytiques",
-            body: "Si vous acceptez les cookies non essentiels, nous pouvons utiliser des outils d'analyse pour mesurer le trafic et améliorer nos services. Ces cookies ne sont activés qu'après votre consentement."
+            title: "Cookies publicitaires",
+            body: "Si vous acceptez les cookies non essentiels, nous utilisons Google Ads et le Pixel Meta (Facebook et Instagram) pour mesurer nos publicités et les montrer aux personnes qui ont visité le site. Ces outils ne sont chargés qu'après un clic sur \"Tout accepter\". Si vous refusez les cookies non essentiels, ils ne sont jamais chargés."
           },
           {
             title: "Gérer vos préférences",
-            body: "Vous pouvez accepter ou refuser les cookies non essentiels via la bannière affichée lors de votre première visite. Pour modifier votre choix ultérieurement, effacez les données de votre navigateur pour ce site ou écrivez-nous sur WhatsApp et nous le modifierons pour vous."
+            body: "Vous pouvez accepter ou refuser les cookies non essentiels via la bannière affichée lors de votre première visite. Pour modifier votre choix à tout moment, cliquez sur \"Paramètres des cookies\" en bas de n'importe quelle page."
           },
           {
             title: "Mises à jour",
