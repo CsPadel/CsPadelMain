@@ -36,6 +36,7 @@ const schema = touristTripSchema({
   image: getPageOgImage('menorca'),
   place: { name: 'Menorca', region: 'Balearic Islands', country: 'ES' },
   itinerary: c.journey.map((day) => `${day.day}: ${day.title}`),
+  faq: c.faq,
 });
 
 const itineraryDays = c.journey.map((day, i) => ({
@@ -197,6 +198,41 @@ const toStrip = (photos: string[], alts: readonly string[]) =>
       tPrefix="menorcaPage.landing.gallery"
     />
 
+    {/* ── FAQ ── */}
+    <section id="faq" class="py-24 md:py-32 px-8 md:px-16 bg-brand-ivory">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+            {c.faqEyebrow}
+          </p>
+        </div>
+        <h2
+          class="text-4xl md:text-5xl font-light text-brand-dark mb-12"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          {c.faqTitle}
+        </h2>
+        <div class="border-t border-brand-dark/10">
+          {c.faq.map((item) => (
+            <details class="faq-item group border-b border-brand-dark/10">
+              <summary class="flex items-center justify-between gap-6 py-6 cursor-pointer list-none text-lg md:text-xl font-light text-brand-dark hover:text-brand-gold transition-colors">
+                {item.q}
+                <span class="faq-icon shrink-0 text-brand-gold text-2xl leading-none transition-transform duration-300" aria-hidden="true">+</span>
+              </summary>
+              <p class="pb-6 pr-10 text-brand-dark/60 font-light leading-relaxed">{item.a}</p>
+            </details>
+          ))}
+        </div>
+        <a
+          href="/legal/terms-and-conditions"
+          class="inline-block mt-10 text-[11px] uppercase tracking-[0.2em] text-brand-dark/50 hover:text-brand-gold border-b border-brand-dark/20 hover:border-brand-gold pb-1 transition-colors"
+        >
+          {c.faqTermsLink}
+        </a>
+      </div>
+    </section>
+
     {/* ── Closing ── */}
     <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
       <img
@@ -231,6 +267,10 @@ const toStrip = (photos: string[], alts: readonly string[]) =>
           {c.ctaText}
         </p>
         <EnquiryCta client:visible locale={locale} label={c.ctaBtn} destination="menorca" />
+        <p class="mt-8 text-white/80 text-lg font-light" style="font-family: var(--font-display); font-style: italic;">
+          {c.ctaPrice}
+        </p>
+        <p class="mt-1 text-white/40 text-xs font-light tracking-wide">{c.ctaPriceNote}</p>
       </div>
     </section>
 
@@ -239,6 +279,12 @@ const toStrip = (photos: string[], alts: readonly string[]) =>
 </Layout>
 
 <style is:global>
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+  }
   .cs-fadein {
     opacity: 0;
     transform: translateY(24px);
