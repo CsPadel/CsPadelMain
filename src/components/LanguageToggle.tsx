@@ -5,7 +5,8 @@ import { getLocaleFromDocument, localizedPath } from '../i18n/routing';
 import type { Locale } from '../i18n/locales';
 
 interface LanguageToggleProps {
-  variant?: 'dark' | 'light';
+  /** `onDark` is for dark panels such as the mobile menu. */
+  variant?: 'dark' | 'light' | 'onDark';
   locale?: Locale;
   pathname?: string;
 }
@@ -19,10 +20,10 @@ export default function LanguageToggle({ variant = 'dark', locale: localeProp, p
     setCurrentPath(window.location.pathname + window.location.search + window.location.hash);
   }, [localeProp]);
 
-  const isLight = variant === 'light';
+  const onDark = variant === 'onDark';
 
   return (
-    <div className="flex items-center border border-brand-dark/10 rounded-full px-1 py-1 bg-white/10 backdrop-blur-sm">
+    <div className={`flex items-center border rounded-full px-1 py-1 bg-white/10 backdrop-blur-sm ${onDark ? 'border-white/15' : 'border-brand-dark/10'}`}>
       {locales.map((lang) => {
         const href = localizedPath(currentPath, lang);
         return (
@@ -39,7 +40,9 @@ export default function LanguageToggle({ variant = 'dark', locale: localeProp, p
             className={`px-3 py-1.5 rounded-full text-xs font-semibold tracking-widest transition-all duration-200 ${
               currentLang === lang
                 ? 'bg-brand-gold text-brand-dark shadow-sm'
-                : 'text-brand-dark/50 hover:text-brand-dark'
+                : onDark
+                  ? 'text-white/60 hover:text-white'
+                  : 'text-brand-dark/50 hover:text-brand-dark'
             }`}
             aria-current={currentLang === lang ? 'true' : undefined}
           >

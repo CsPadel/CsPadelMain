@@ -197,7 +197,7 @@ export default function Navbar({ locale: localeProp }: NavbarProps) {
               <div className="w-full h-px bg-brand-gold/20 my-2" />
 
               <div className="scale-125 mt-2">
-                <LanguageToggle locale={localeProp} pathname={pathname || undefined} />
+                <LanguageToggle variant="onDark" locale={localeProp} pathname={pathname || undefined} />
               </div>
             </div>
           </motion.div>
