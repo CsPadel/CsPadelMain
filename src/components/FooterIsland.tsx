@@ -41,7 +41,9 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
         style={{ background: 'linear-gradient(to right, transparent, rgba(217,173,98,0.45), transparent)' }}
       />
 
-      <div className="max-w-7xl mx-auto px-8 md:px-16 pt-20 md:pt-28 pb-10">
+      {/* Extra bottom room on phones so the floating chat button doesn't sit on
+          top of the legal links. */}
+      <div className="max-w-7xl mx-auto px-8 md:px-16 pt-20 md:pt-28 pb-28 md:pb-10">
 
         {/* ── Main grid ─────────────────────────────────────── */}
         <motion.div
@@ -242,21 +244,21 @@ export default function FooterIsland({ locale: localeProp }: FooterIslandProps) 
           <p className="text-white/22 text-xs font-light tracking-wide">
             {t('footer.rights')}
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
             {/* Legal pages are published in English only, so they are not
                 passed through localizedHref. */}
             <a href="/legal/privacy-policy" className="text-white/22 text-xs font-light tracking-wide hover:text-white/50 transition-colors">
               {t('footer.privacy')}
             </a>
-            <span className="text-white/12" aria-hidden="true">·</span>
+            <span className="hidden md:inline text-white/12" aria-hidden="true">·</span>
             <a href="/legal/terms-and-conditions" className="text-white/22 text-xs font-light tracking-wide hover:text-white/50 transition-colors">
               {t('footer.terms')}
             </a>
-            <span className="text-white/12" aria-hidden="true">·</span>
+            <span className="hidden md:inline text-white/12" aria-hidden="true">·</span>
             <a href={localizedHref('/cookies')} className="text-white/22 text-xs font-light tracking-wide hover:text-white/50 transition-colors">
               {t('footer.cookies')}
             </a>
-            <span className="text-white/12" aria-hidden="true">·</span>
+            <span className="hidden md:inline text-white/12" aria-hidden="true">·</span>
             <button
               type="button"
               onClick={() => window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS_EVENT))}
