@@ -11,8 +11,10 @@ import {
   MENORCA_2027_DATES,
   MAX_GUESTS,
   ROOM_TYPES,
+  findDiscount,
   isBookable,
   quote,
+  type Discount,
   type RetreatDate,
   type RoomType,
 } from '../constants/menorcaBooking';
@@ -41,11 +43,14 @@ function formatRange(date: RetreatDate, locale: Locale) {
   return `${formatDate(date.start, locale, { day: 'numeric', month: 'short' })} – ${end}`;
 }
 
+/** £1,850, or £1,572.50 once a discount leaves pence. */
 function gbp(amount: number, locale: Locale) {
+  const digits = Number.isInteger(amount) ? 0 : 2;
   return new Intl.NumberFormat(INTL_LOCALE[locale], {
     style: 'currency',
     currency: 'GBP',
-    maximumFractionDigits: 0,
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
   }).format(amount);
 }
 
@@ -175,6 +180,9 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
   const [room, setRoom] = useState<RoomType>('shared');
   const [guests, setGuests] = useState(1);
   const [details, setDetails] = useState<Details>(emptyDetails);
+  const [discount, setDiscount] = useState<Discount | undefined>();
+  const [codeInput, setCodeInput] = useState('');
+  const [codeError, setCodeError] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<'idle' | 'sending' | 'requested' | 'failed'>('idle');
   const [waHref, setWaHref] = useState<string | null>(null);
@@ -190,6 +198,9 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
     setRoom('shared');
     setGuests(1);
     setDetails(emptyDetails);
+    setDiscount(undefined);
+    setCodeInput('');
+    setCodeError(false);
     setError(null);
     setStatus('idle');
   }, [open, firstOpen]);
@@ -212,7 +223,19 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
   }, [stepIndex, status]);
 
   const step: Step = STEPS[stepIndex];
-  const q = quote(date, room, guests);
+  const q = quote(date, room, guests, discount);
+
+  const applyCode = () => {
+    const found = findDiscount(codeInput);
+    setDiscount(found);
+    setCodeError(!found && codeInput.trim() !== '');
+  };
+
+  const removeCode = () => {
+    setDiscount(undefined);
+    setCodeInput('');
+    setCodeError(false);
+  };
 
   const setDetail = <K extends keyof Details>(key: K, value: Details[K]) => {
     setDetails((prev) => ({ ...prev, [key]: value }));
@@ -233,6 +256,7 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
     `${t('bookingForm.whatsappIntro')} (${ref})`,
     '',
     `${formatRange(date, locale)} · ${t(`bookingForm.retreat.rooms.${room}.name`)} · ${guests}`,
+    discount ? `${t('bookingForm.summary.discount', { code: discount.code, percent: discount.percent })}: -${gbp(q.discount, locale)}` : '',
     `${t('bookingForm.summary.total')}: ${gbp(q.total, locale)}`,
     `${details.firstName.trim()} ${details.lastName.trim()} · ${details.email.trim()} · ${details.phone.trim()}`,
     details.notes.trim(),
@@ -250,6 +274,10 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
       room,
       guests,
       pricePerPerson: q.pricePerPerson,
+      subtotal: q.subtotal,
+      discountCode: discount?.code ?? '',
+      discountPercent: q.discountPercent,
+      discount: q.discount,
       total: q.total,
       dueNow: q.dueNow,
       balance: q.balance,
@@ -626,6 +654,20 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                       {t('bookingForm.summary.guests', { count: guests })}
                     </p>
                     <dl className="flex flex-col gap-2 text-sm font-light">
+                      {discount && (
+                        <>
+                          <div className="flex justify-between gap-4 text-white/40">
+                            <dt>{t('bookingForm.summary.subtotal')}</dt>
+                            <dd className="line-through">{gbp(q.subtotal, locale)}</dd>
+                          </div>
+                          <div className="flex justify-between gap-4 text-brand-gold/90">
+                            <dt>
+                              {t('bookingForm.summary.discount', { code: discount.code, percent: discount.percent })}
+                            </dt>
+                            <dd>−{gbp(q.discount, locale)}</dd>
+                          </div>
+                        </>
+                      )}
                       <div className="flex justify-between gap-4 text-white/55">
                         <dt>{t('bookingForm.summary.total')}</dt>
                         <dd>{gbp(q.total, locale)}</dd>
@@ -645,6 +687,73 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                         </div>
                       )}
                     </dl>
+
+                    {/* Discount code */}
+                    <div className="mt-5 pt-5 border-t border-white/8">
+                      <label className={labelClass} htmlFor="booking-discount">
+                        {t('bookingForm.discount.label')}
+                      </label>
+                      {discount ? (
+                        <div className="flex items-center justify-between gap-4">
+                          <p className="flex items-center gap-2 text-sm font-light text-white">
+                            <Check className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                            <span>
+                              <span className="text-brand-gold">{discount.code}</span>{' '}
+                              <span className="text-white/55">
+                                {t('bookingForm.discount.applied', { percent: discount.percent })}
+                              </span>
+                            </span>
+                          </p>
+                          <button
+                            type="button"
+                            onClick={removeCode}
+                            className="text-[10px] uppercase tracking-[0.22em] font-semibold text-white/35 hover:text-white/75 transition-colors"
+                          >
+                            {t('bookingForm.discount.remove')}
+                          </button>
+                        </div>
+                      ) : (
+                        <>
+                          <div className="flex items-end gap-3">
+                            <input
+                              id="booking-discount"
+                              type="text"
+                              autoComplete="off"
+                              autoCapitalize="characters"
+                              spellCheck={false}
+                              value={codeInput}
+                              onChange={(e) => {
+                                setCodeInput(e.target.value);
+                                setCodeError(false);
+                              }}
+                              onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                  e.preventDefault();
+                                  applyCode();
+                                }
+                              }}
+                              placeholder={t('bookingForm.discount.placeholder')}
+                              aria-invalid={codeError}
+                              aria-describedby={codeError ? 'booking-discount-error' : undefined}
+                              className={`${inputClass} uppercase placeholder:normal-case`}
+                            />
+                            <button
+                              type="button"
+                              onClick={applyCode}
+                              disabled={!codeInput.trim()}
+                              className="flex-shrink-0 px-4 py-2 rounded-full border border-brand-gold/60 text-brand-gold text-[10px] uppercase tracking-[0.22em] font-semibold hover:bg-brand-gold hover:text-brand-dark disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                            >
+                              {t('bookingForm.discount.apply')}
+                            </button>
+                          </div>
+                          {codeError && (
+                            <p id="booking-discount-error" role="alert" className="text-brand-gold text-xs font-light mt-3">
+                              {t('bookingForm.discount.invalid')}
+                            </p>
+                          )}
+                        </>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               )}

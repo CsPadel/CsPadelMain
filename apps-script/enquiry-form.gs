@@ -45,7 +45,8 @@ const HEADERS = [
 const BOOKINGS_SHEET_NAME = 'Bookings';
 const BOOKING_HEADERS = [
   'Timestamp', 'Booking Ref', 'Status', 'First Name', 'Last Name', 'Email', 'Phone',
-  'Retreat', 'Dates', 'Room', 'Guests', 'Price per Person (£)', 'Retreat Total (£)',
+  'Retreat', 'Dates', 'Room', 'Guests', 'Price per Person (£)', 'Discount Code',
+  'Discount (£)', 'Retreat Total (£)',
   'Due at Booking (£)', 'Balance (£)', 'Balance Due', 'Padel Level', 'Notes',
   'Language', 'Source Page',
 ];
@@ -213,6 +214,8 @@ function appendBookingToSheet(data) {
     data.room === 'private' ? 'Private room' : 'Shared room',
     data.guests || '',
     data.pricePerPerson || '',
+    data.discountCode ? data.discountCode + ' (' + data.discountPercent + '%)' : '',
+    data.discount || '',
     data.total || '',
     data.dueNow || '',
     data.balance || 0,
@@ -491,6 +494,7 @@ function bookingEmailBody(data) {
     ['Dates', 'Menorca, ' + (data.dates || '')],
     ['Room', data.room === 'private' ? 'Private room' : 'Shared room'],
     ['Guests', data.guests],
+    ['Discount', data.discountCode ? data.discountCode + ' (' + data.discountPercent + '%): -£' + data.discount : ''],
     ['Retreat Total', '£' + data.total],
     ['Due at Booking', '£' + data.dueNow],
     ['Balance', data.balance ? '£' + data.balance + ' by ' + data.balanceDue : 'Paid in full'],

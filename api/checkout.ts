@@ -15,6 +15,7 @@
 import {
   MAX_GUESTS,
   ROOM_TYPES,
+  findDiscount,
   findRetreatDate,
   isBookable,
   quote,
@@ -35,6 +36,7 @@ interface CheckoutRequest {
   email?: string;
   phone?: string;
   locale?: string;
+  discountCode?: string;
 }
 
 function json(body: object, status = 200): Response {
@@ -56,6 +58,14 @@ function formatDateRange(start: string, end: string): string {
     return `${new Date(`${start}T00:00:00Z`).getUTCDate()}–${fmt(end, true)}`;
   }
   return `${fmt(start, false)} – ${fmt(end, true)}`;
+}
+
+/** £1,572.50, or £1,850 for whole pounds. */
+function gbp(amount: number): string {
+  return `£${amount.toLocaleString('en-GB', {
+    minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+    maximumFractionDigits: 2,
+  })}`;
 }
 
 function formatLongDate(iso: string): string {
@@ -92,7 +102,10 @@ export async function POST(request: Request): Promise<Response> {
   }
   if (!EMAIL_PATTERN.test(email)) return json({ error: 'invalid_email' }, 400);
 
-  const q = quote(date, room, guests);
+  const discount = body.discountCode ? findDiscount(body.discountCode) : undefined;
+  if (body.discountCode && !discount) return json({ error: 'invalid_discount' }, 400);
+
+  const q = quote(date, room, guests, discount);
   const dates = formatDateRange(date.start, date.end);
   const roomLabel = room === 'shared' ? 'Shared room' : 'Private room';
   const name = `${body.firstName ?? ''} ${body.lastName ?? ''}`.trim().slice(0, 200);
@@ -109,6 +122,7 @@ export async function POST(request: Request): Promise<Response> {
     name,
     phone: (body.phone ?? '').slice(0, 40),
     retreat_total_gbp: String(q.total),
+    discount_code: discount ? `${discount.code} (${discount.percent}% off, -${gbp(q.discount)})` : '',
     balance_gbp: String(q.balance),
     balance_due: q.payingInFull ? 'paid in full' : q.balanceDue,
   };
@@ -120,18 +134,20 @@ export async function POST(request: Request): Promise<Response> {
   if (ref) params.set('client_reference_id', ref);
   params.set('line_items[0][quantity]', String(guests));
   params.set('line_items[0][price_data][currency]', 'gbp');
-  params.set('line_items[0][price_data][unit_amount]', String((q.dueNow / guests) * 100));
+  params.set('line_items[0][price_data][unit_amount]', String(Math.round((q.dueNow * 100) / guests)));
   params.set(
     'line_items[0][price_data][product_data][name]',
     `${q.payingInFull ? 'Menorca Padel Retreat' : 'Deposit – Menorca Padel Retreat'}, ${dates}`,
   );
+  const discountNote = discount ? ` Includes ${discount.percent}% off with code ${discount.code}.` : '';
   params.set(
     'line_items[0][price_data][product_data][description]',
     q.payingInFull
-      ? `${roomLabel}, paid in full.`
-      : `${roomLabel}. Retreat total £${q.total.toLocaleString('en-GB')}; balance of £${q.balance.toLocaleString('en-GB')} due by ${formatLongDate(q.balanceDue)}.`,
+      ? `${roomLabel}, paid in full.${discountNote}`
+      : `${roomLabel}. Retreat total ${gbp(q.total)}; balance of ${gbp(q.balance)} due by ${formatLongDate(q.balanceDue)}.${discountNote}`,
   );
   for (const [key, value] of Object.entries(metadata)) {
+    if (!value) continue;
     params.set(`metadata[${key}]`, value);
     params.set(`payment_intent_data[metadata][${key}]`, value);
   }

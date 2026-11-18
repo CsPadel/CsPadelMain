@@ -42,6 +42,28 @@ export const BOOKING_CLOSES_DAYS_BEFORE = 15;
 /** Larger groups are a private retreat, handled through an enquiry. */
 export const MAX_GUESTS = 6;
 
+/**
+ * Discount codes, as percent off the whole retreat price. Codes are matched
+ * ignoring case and spaces. The deposit stays £150 per person; the discount
+ * comes off the balance (or off the full amount when paying in full).
+ * To add one: 'CODE': percent. To stop one: delete its line.
+ */
+export const DISCOUNT_CODES: Record<string, number> = {
+  'PADEL&RESTORE': 15,
+};
+
+export interface Discount {
+  code: string;
+  percent: number;
+}
+
+/** The discount for a code the guest typed, or undefined if it isn't valid. */
+export function findDiscount(input: string | undefined | null): Discount | undefined {
+  const code = (input ?? '').replace(/\s+/g, '').toUpperCase();
+  const percent = DISCOUNT_CODES[code];
+  return code && percent ? { code, percent } : undefined;
+}
+
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 function utcDate(iso: string): Date {
@@ -66,9 +88,15 @@ export function isBookable(date: RetreatDate, now: Date = new Date()): boolean {
 }
 
 export interface BookingQuote {
-  /** Price per person for the chosen room. */
+  /** Price per person for the chosen room, before any discount. */
   pricePerPerson: number;
-  /** Whole retreat, all guests. */
+  /** Whole retreat, all guests, before any discount. */
+  subtotal: number;
+  /** Percent off from a discount code (0 without one). */
+  discountPercent: number;
+  /** Amount taken off the subtotal by the discount code. */
+  discount: number;
+  /** What the guests pay for the retreat, after any discount. */
   total: number;
   /** Charged now: the deposit, or the full amount once the balance is due. */
   dueNow: number;
@@ -82,13 +110,27 @@ export function quote(
   date: RetreatDate,
   room: RoomType,
   guests: number,
+  discount?: Discount,
   now: Date = new Date(),
 ): BookingQuote {
   const pricePerPerson = date.prices[room];
-  const total = pricePerPerson * guests;
+  const discountPercent = discount?.percent ?? 0;
+  // Worked out in pence so a discounted price like £1,572.50 stays exact.
+  const subtotalPence = pricePerPerson * 100 * guests;
+  const totalPence = pricePerPerson * (100 - discountPercent) * guests;
   const balanceDue = balanceDueDate(date);
   // Inside the 21-day window the balance is already due, so pay it all now.
   const payingInFull = now.getTime() >= utcDate(balanceDue).getTime();
-  const dueNow = payingInFull ? total : DEPOSIT_PER_PERSON * guests;
-  return { pricePerPerson, total, dueNow, balance: total - dueNow, balanceDue, payingInFull };
+  const dueNowPence = payingInFull ? totalPence : DEPOSIT_PER_PERSON * 100 * guests;
+  return {
+    pricePerPerson,
+    subtotal: subtotalPence / 100,
+    discountPercent,
+    discount: (subtotalPence - totalPence) / 100,
+    total: totalPence / 100,
+    dueNow: dueNowPence / 100,
+    balance: (totalPence - dueNowPence) / 100,
+    balanceDue,
+    payingInFull,
+  };
 }
