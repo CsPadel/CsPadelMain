@@ -106,6 +106,16 @@
 .btn-luxury:active {
   transform: scale(0.98);
 }
+/* Filled gold: the primary action when two buttons sit side by side
+   (e.g. "Book your spot" next to "Enquire"). */
+.btn-luxury-gold {
+  background-color: #D9AD62;
+  color: #01192C;
+  font-weight: 600;
+}
+.btn-luxury-gold::after {
+  background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.35) 50%, transparent 65%);
+}
 
 /* ─── Cookie consent — paired equal-weight buttons (AEPD) ─ */
 .btn-consent {

@@ -39,10 +39,26 @@ const HEADERS = [
   'Language', 'Source Page',
 ];
 
+// Menorca bookings from the "Book your spot" modal (src/components/BookingForm.tsx)
+// land in their own tab. They are recorded just before the guest is sent to
+// Stripe, so a row means "checkout started": confirm the payment in Stripe.
+const BOOKINGS_SHEET_NAME = 'Bookings';
+const BOOKING_HEADERS = [
+  'Timestamp', 'Booking Ref', 'Status', 'First Name', 'Last Name', 'Email', 'Phone',
+  'Retreat', 'Dates', 'Room', 'Guests', 'Price per Person (£)', 'Retreat Total (£)',
+  'Due at Booking (£)', 'Balance (£)', 'Balance Due', 'Padel Level', 'Notes',
+  'Language', 'Source Page',
+];
+
+function isBooking(data) {
+  return data.type === 'booking';
+}
+
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
-    appendToSheet(data);
+    if (isBooking(data)) appendBookingToSheet(data);
+    else appendToSheet(data);
     notifyBrevo(data);
     return jsonResponse({ status: 'success' });
   } catch (err) {
@@ -179,6 +195,35 @@ const PRIORITY_LABELS = {
   celebration: 'Celebration', corporate: 'Corporate',
 };
 
+function appendBookingToSheet(data) {
+  const ss = getSpreadsheet();
+  let sheet = ss.getSheetByName(BOOKINGS_SHEET_NAME);
+  if (!sheet) sheet = ss.insertSheet(BOOKINGS_SHEET_NAME);
+  if (sheet.getLastRow() === 0) sheet.appendRow(BOOKING_HEADERS);
+  sheet.appendRow([
+    new Date(),
+    data.ref || '',
+    'Checkout started – check payment in Stripe',
+    data.firstName || '',
+    data.lastName || '',
+    data.email || '',
+    formatPhoneForSheet(data.phone),
+    labelFor(DESTINATION_LABELS, data.destination),
+    data.dates || '',
+    data.room === 'private' ? 'Private room' : 'Shared room',
+    data.guests || '',
+    data.pricePerPerson || '',
+    data.total || '',
+    data.dueNow || '',
+    data.balance || 0,
+    data.balance ? data.balanceDue : 'Paid in full',
+    data.level || '',
+    data.notes || '',
+    data.locale || '',
+    data.source || '',
+  ]);
+}
+
 function getOrCreateSheet() {
   const ss = getSpreadsheet();
   let sheet = ss.getSheetByName(SHEET_NAME);
@@ -214,7 +259,8 @@ function notifyBrevo(data) {
     if (!contact.ok) problems.push('Brevo contact: ' + contact.error);
   }
   const owner = sendOwnerNotification(apiKey, senderEmail, ownerEmail, data);
-  if (data.email) {
+  // Bookings get their receipt from Stripe and a confirmation page instead.
+  if (data.email && !isBooking(data)) {
     const client = sendClientConfirmation(apiKey, senderEmail, data);
     if (!client.ok) problems.push('Client confirmation was NOT sent: ' + client.error);
   }
@@ -272,6 +318,9 @@ function sendOwnerNotification(apiKey, senderEmail, ownerEmail, data) {
 
 function ownerSubject(data) {
   const fullName = ((data.firstName || '') + ' ' + (data.lastName || '')).trim();
+  if (isBooking(data)) {
+    return 'New booking – ' + (fullName || 'Unknown') + ' – Menorca ' + (data.dates || '') + ' (' + (data.ref || '') + ')';
+  }
   const destination = labelFor(DESTINATION_LABELS, data.destination) || 'Unknown';
   return 'New retreat enquiry – ' + (fullName || 'Unknown') + ' (' + destination + ')';
 }
@@ -433,7 +482,37 @@ function clientEmailBody(copy, firstName, data) {
   );
 }
 
+function bookingEmailBody(data) {
+  const rows = summaryRows([
+    ['Booking Ref', data.ref],
+    ['Name', ((data.firstName || '') + ' ' + (data.lastName || '')).trim()],
+    ['Email', data.email],
+    ['Phone', data.phone],
+    ['Dates', 'Menorca, ' + (data.dates || '')],
+    ['Room', data.room === 'private' ? 'Private room' : 'Shared room'],
+    ['Guests', data.guests],
+    ['Retreat Total', '£' + data.total],
+    ['Due at Booking', '£' + data.dueNow],
+    ['Balance', data.balance ? '£' + data.balance + ' by ' + data.balanceDue : 'Paid in full'],
+    ['Padel Level', data.level],
+    ['Notes', data.notes],
+    ['Language', data.locale],
+  ]);
+  return (
+    '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 22px;"><tr>' +
+    '<td style="background:#FDF3E1;padding:8px 16px;border-radius:999px;font-size:12px;font-weight:700;color:#7A4B00;">&#9679;&nbsp; Checkout started</td>' +
+    '</tr></table>' +
+    '<h1 style="margin:0 0 12px;font-size:22px;font-weight:400;color:' + BRAND.dark + ';">New Menorca booking</h1>' +
+    '<p style="margin:0 0 24px;font-size:14px;line-height:1.6;color:#555;">The guest was sent to Stripe to pay. Check Stripe for the payment with this booking reference; if it is not there, they stopped before paying and it is worth a follow-up.</p>' +
+    summaryTable(rows) +
+    '<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:28px;"><tr><td style="border-radius:8px;background:' + BRAND.dark + ';">' +
+    '<a href="' + sheetUrl() + '" style="display:inline-block;padding:13px 26px;color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:0.04em;">View in Google Sheet &rarr;</a>' +
+    '</td></tr></table>'
+  );
+}
+
 function ownerEmailBody(data) {
+  if (isBooking(data)) return bookingEmailBody(data);
   const rows = summaryRows([
     ['Name', ((data.firstName || '') + ' ' + (data.lastName || '')).trim()],
     ['Email', data.email],

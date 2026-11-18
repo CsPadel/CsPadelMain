@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FooterIsland from '../FooterIsland';
+import type { Locale } from '../../i18n/locales';
+import { getTranslations } from '../../i18n/getTranslations';
+
+interface Props {
+  locale: Locale;
+}
+
+/** Where Stripe sends a guest after paying their Menorca deposit. */
+const { locale } = Astro.props;
+const c = getTranslations(locale).bookingForm.confirmed;
+const menorcaHref = locale === 'en' ? '/menorca' : `/${locale}/menorca`;
+---
+
+<Layout title={`${c.eyebrow} | Courtside Padel`} description={c.body} locale={locale} lang={locale} noindex>
+  <main class="w-full bg-white flex flex-col relative">
+    <section class="relative w-full min-h-[80vh] flex items-center justify-center px-8 md:px-16 py-32 bg-brand-dark text-center">
+      <div class="max-w-xl">
+        <div class="w-16 h-16 rounded-full border border-brand-gold/40 bg-brand-gold/10 flex items-center justify-center mx-auto mb-8">
+          <svg class="w-7 h-7 text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+        </div>
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">{c.eyebrow}</p>
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+        </div>
+        <h1
+          class="text-5xl md:text-6xl font-light text-white leading-tight mb-6"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          {c.title}
+        </h1>
+        <p class="text-white/60 text-base md:text-lg font-light leading-relaxed mb-8">{c.body}</p>
+        <p id="booking-ref" class="hidden text-white/40 text-xs uppercase tracking-[0.2em] mb-10">
+          {c.ref}: <span class="text-brand-gold"></span>
+        </p>
+        <a
+          href={menorcaHref}
+          class="inline-flex items-center justify-center text-xs uppercase tracking-[0.2em] font-semibold rounded-full px-7 py-3.5 border transition-colors text-brand-gold border-brand-gold/60 hover:bg-brand-gold hover:text-brand-dark"
+        >
+          {c.back}
+        </a>
+      </div>
+    </section>
+    <FooterIsland client:visible locale={locale} />
+  </main>
+</Layout>
+
+<script>
+  // Show the booking reference Stripe passes back in the URL.
+  const ref = new URLSearchParams(window.location.search).get('ref');
+  const el = document.getElementById('booking-ref');
+  if (ref && el && /^[A-Za-z0-9-]{1,40}$/.test(ref)) {
+    el.querySelector('span')!.textContent = ref;
+    el.classList.remove('hidden');
+  }
+</script>
