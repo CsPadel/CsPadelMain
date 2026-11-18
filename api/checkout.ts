@@ -12,6 +12,8 @@
  * Write" is enough). Without it this answers 503 and the booking modal tells
  * the guest we'll send their payment link by email instead.
  */
+// The .js extension is needed: the project is an ES module and Node does not
+// guess extensions at runtime. Vercel compiles the .ts file to .js.
 import {
   MAX_GUESTS,
   ROOM_TYPES,
@@ -20,7 +22,7 @@ import {
   isBookable,
   quote,
   type RoomType,
-} from '../src/constants/menorcaBooking';
+} from '../src/constants/menorcaBooking.js';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const LOCALES = ['en', 'es', 'fr'] as const;
