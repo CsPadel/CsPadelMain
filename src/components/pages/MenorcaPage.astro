@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { srcSet } from '../../lib/responsiveImage';
 import FooterIsland from '../FooterIsland';
 import EnquiryCta from '../EnquiryForm';
+import BookingCta from '../BookingForm';
 import PhotoStrip from '../PhotoStrip';
 import MenorcaItinerary from '../MenorcaItinerary';
 import { MENORCA_GALLERY } from '../../constants/menorcaGallery';
@@ -266,7 +267,10 @@ const toStrip = (photos: string[], alts: readonly string[]) =>
         <p class="text-white/70 text-base font-light leading-relaxed mb-10 max-w-md mx-auto">
           {c.ctaText}
         </p>
-        <EnquiryCta client:visible locale={locale} label={c.ctaBtn} destination="menorca" />
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 max-w-sm sm:max-w-none mx-auto">
+          <BookingCta client:visible locale={locale} className="w-full sm:w-auto" />
+          <EnquiryCta client:visible locale={locale} label={c.ctaBtn} destination="menorca" className="w-full sm:w-auto" />
+        </div>
         <p class="mt-8 text-white/80 text-lg font-light" style="font-family: var(--font-display); font-style: italic;">
           {c.ctaPrice}
         </p>
