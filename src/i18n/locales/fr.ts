@@ -1109,7 +1109,7 @@ const fr = {
         confirmed: {
           eyebrow: "Réservation confirmée",
           title: "Rendez-vous à Minorque.",
-          body: "Merci : votre acompte a bien été reçu et votre place est garantie. Stripe vous enverra votre reçu par e-mail, et l'un des fondateurs vous contactera sous 24 heures avec tout ce qu'il vous faut pour votre retraite.",
+          body: "Merci : votre paiement a bien été reçu et votre place est garantie. Nous vous avons envoyé un e-mail de confirmation avec tous les détails, et l'un des fondateurs vous contactera sous 24 heures avec tout ce qu'il vous faut pour votre retraite.",
           ref: "Référence de réservation",
           back: "Retour à Minorque",
         },

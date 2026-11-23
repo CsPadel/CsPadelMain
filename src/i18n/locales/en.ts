@@ -1109,7 +1109,7 @@ const en = {
         confirmed: {
           eyebrow: "Booking confirmed",
           title: "See you in Menorca.",
-          body: "Thank you – your deposit has been received and your place is secured. Stripe will email your receipt, and one of the founders will be in touch within 24 hours with everything you need for your retreat.",
+          body: "Thank you – your payment has been received and your place is secured. We have emailed you a confirmation with all the details, and one of the founders will be in touch within 24 hours with everything you need for your retreat.",
           ref: "Booking reference",
           back: "Back to Menorca",
         },
