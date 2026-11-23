@@ -66,11 +66,11 @@ const MIN_PHONE_DIGITS = 7;
 /* ─── Shared field styles ─────────────────────────────────── */
 
 const inputClass =
-  'w-full bg-transparent border-b border-white/18 pb-3 text-white text-base font-light ' +
-  'focus:outline-none focus:border-brand-gold transition-colors placeholder:text-white/25';
+  'w-full bg-transparent border-b border-brand-dark/25 pb-3 text-brand-dark text-base font-light ' +
+  'focus:outline-none focus:border-brand-gold transition-colors placeholder:text-brand-dark/40';
 
 const labelClass =
-  'block text-[9px] uppercase tracking-[0.28em] text-white/40 mb-3 font-semibold';
+  'block text-[9px] uppercase tracking-[0.28em] text-brand-dark/55 mb-3 font-semibold';
 
 /* ─── Choice chip ─────────────────────────────────────────── */
 
@@ -90,12 +90,12 @@ function Choice({
       aria-pressed={selected}
       className={`flex items-center justify-between gap-3 px-5 py-3.5 rounded-card border text-left text-sm font-light tracking-wide transition-all duration-200 ${
         selected
-          ? 'border-brand-gold bg-brand-gold/10 text-white'
-          : 'border-white/12 text-white/70 hover:border-brand-gold/45 hover:text-white'
+          ? 'border-brand-gold bg-brand-gold/10 text-brand-dark'
+          : 'border-brand-dark/15 text-brand-dark/75 hover:border-brand-gold/45 hover:text-brand-dark'
       }`}
     >
       <span>{label}</span>
-      {selected && <Check className="w-3.5 h-3.5 text-brand-gold flex-shrink-0" />}
+      {selected && <Check className="w-3.5 h-3.5 text-brand-gold-deep flex-shrink-0" />}
     </button>
   );
 }
@@ -312,7 +312,7 @@ export function EnquiryFormModal({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             onClick={onClose}
-            className="fixed inset-0 bg-brand-dark/85 backdrop-blur-sm z-[100]"
+            className="fixed inset-0 bg-brand-dark/70 backdrop-blur-sm z-[100]"
           />
 
           <motion.div
@@ -324,18 +324,18 @@ export function EnquiryFormModal({
             exit={{ opacity: 0, scale: 0.97, y: 16 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-xl
-                       bg-brand-dark-2 z-[110] border border-white/10 rounded-card shadow-2xl
+                       bg-brand-ivory z-[110] border border-brand-dark/12 rounded-card shadow-2xl
                        flex flex-col max-h-[88vh] overflow-hidden"
           >
             {/* ── Header ── */}
-            <div className="flex-shrink-0 px-7 md:px-10 pt-7 pb-5 border-b border-white/8">
+            <div className="flex-shrink-0 px-7 md:px-10 pt-7 pb-5 border-b border-brand-dark/10">
               <div className="flex items-start justify-between gap-4 mb-5">
                 <div>
-                  <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold mb-2">
+                  <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold-deep font-semibold mb-2">
                     {t('enquiryForm.eyebrow')}
                   </p>
                   <h2
-                    className="text-2xl md:text-3xl font-light text-white leading-tight"
+                    className="text-2xl md:text-3xl font-light text-brand-dark leading-tight"
                     style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
                   >
                     {t('enquiryForm.title')}
@@ -345,14 +345,14 @@ export function EnquiryFormModal({
                   type="button"
                   onClick={onClose}
                   aria-label={t('enquiryForm.close')}
-                  className="text-white/40 hover:text-white transition-colors p-1.5 -mr-1.5 -mt-1 rounded-md hover:bg-white/5"
+                  className="text-brand-dark/55 hover:text-brand-dark transition-colors p-1.5 -mr-1.5 -mt-1 rounded-md hover:bg-brand-dark/5"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
               {/* Progress bar */}
-              <div className="h-px w-full bg-white/10" aria-hidden="true">
+              <div className="h-px w-full bg-brand-dark/10" aria-hidden="true">
                 <motion.div
                   className="h-px bg-brand-gold"
                   animate={{ width: `${progress}%` }}
@@ -366,15 +366,15 @@ export function EnquiryFormModal({
               {status === 'sent' ? (
                 <div className="py-10 text-center">
                   <div className="w-14 h-14 rounded-full border border-brand-gold/40 bg-brand-gold/10 flex items-center justify-center mx-auto mb-7">
-                    <Check className="w-6 h-6 text-brand-gold" />
+                    <Check className="w-6 h-6 text-brand-gold-deep" />
                   </div>
                   <h3
-                    className="text-2xl font-light text-white mb-4"
+                    className="text-2xl font-light text-brand-dark mb-4"
                     style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
                   >
                     {t('enquiryForm.success.title')}
                   </h3>
-                  <p className="text-white/50 text-sm font-light leading-relaxed max-w-sm mx-auto">
+                  <p className="text-brand-dark/60 text-sm font-light leading-relaxed max-w-sm mx-auto">
                     {t('enquiryForm.success.body')}
                   </p>
                 </div>
@@ -388,10 +388,10 @@ export function EnquiryFormModal({
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.25, ease: 'easeOut' }}
                 >
-                    <p className="text-white text-lg md:text-xl font-light leading-snug mb-2">
+                    <p className="text-brand-dark text-lg md:text-xl font-light leading-snug mb-2">
                       {t(`enquiryForm.steps.${step}.question`)}
                     </p>
-                    <p className="text-white/40 text-sm font-light leading-relaxed mb-8">
+                    <p className="text-brand-dark/55 text-sm font-light leading-relaxed mb-8">
                       {t(`enquiryForm.steps.${step}.help`)}
                     </p>
 
@@ -457,7 +457,7 @@ export function EnquiryFormModal({
                           placeholder={t('enquiryForm.steps.group.placeholder')}
                           className={inputClass}
                         />
-                        <p className="text-white/30 text-xs font-light mt-4 leading-relaxed">
+                        <p className="text-brand-dark/45 text-xs font-light mt-4 leading-relaxed">
                           {t('enquiryForm.steps.group.note')}
                         </p>
                       </div>
@@ -558,7 +558,7 @@ export function EnquiryFormModal({
                             onChange={(e) => set('consent', e.target.checked)}
                             className="mt-1 w-4 h-4 flex-shrink-0 accent-[#D9AD62]"
                           />
-                          <span className="text-white/45 text-xs font-light leading-relaxed group-hover:text-white/65 transition-colors">
+                          <span className="text-brand-dark/60 text-xs font-light leading-relaxed group-hover:text-brand-dark/75 transition-colors">
                             {t('enquiryForm.steps.contact.consent')}
                           </span>
                         </label>
@@ -568,14 +568,14 @@ export function EnquiryFormModal({
               )}
 
               {error && (
-                <p role="alert" className="text-brand-gold text-xs font-light mt-6">
+                <p role="alert" className="text-brand-gold-deep text-xs font-light mt-6">
                   {error}
                 </p>
               )}
 
               {status === 'failed' && (
                 <div role="alert" className="mt-6 rounded-card border border-brand-gold/30 bg-brand-gold/5 p-5">
-                  <p className="text-brand-gold text-xs font-light leading-relaxed mb-4">
+                  <p className="text-brand-gold-deep text-xs font-light leading-relaxed mb-4">
                     {t('enquiryForm.errors.submit')}
                   </p>
                   {waHref && (
@@ -595,13 +595,13 @@ export function EnquiryFormModal({
 
             {/* ── Footer ── */}
             {status !== 'sent' && (
-              <div className="flex-shrink-0 px-7 md:px-10 py-5 border-t border-white/8 flex items-center justify-between gap-4">
+              <div className="flex-shrink-0 px-7 md:px-10 py-5 border-t border-brand-dark/10 flex items-center justify-between gap-4">
                 <button
                   type="button"
                   onClick={goBack}
                   disabled={stepIndex === 0}
                   className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] font-semibold
-                             text-white/35 hover:text-white/75 disabled:opacity-0 disabled:pointer-events-none
+                             text-brand-dark/50 hover:text-brand-dark/85 disabled:opacity-0 disabled:pointer-events-none
                              transition-colors"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
@@ -609,7 +609,7 @@ export function EnquiryFormModal({
                 </button>
 
                 <div className="flex items-center gap-5">
-                  <span className="text-[9px] uppercase tracking-[0.22em] text-white/25 hidden sm:block">
+                  <span className="text-[9px] uppercase tracking-[0.22em] text-brand-dark/40 hidden sm:block">
                     {stepIndex + 1} / {STEPS.length}
                   </span>
                   <button

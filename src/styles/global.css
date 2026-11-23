@@ -9,6 +9,8 @@
   --color-brand-gold: #D9AD62;
   --color-brand-gold-light: #F4C068;
   --color-brand-gold-dark: #b88645;
+  /* Gold for text on light backgrounds (readable on ivory). */
+  --color-brand-gold-deep: #8A5A1C;
   --color-brand-dark: #01192C;
   --color-brand-dark-2: #041E36;
   --color-brand-light: #FFFFFF;

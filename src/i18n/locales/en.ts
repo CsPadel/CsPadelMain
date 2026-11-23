@@ -1077,6 +1077,13 @@ const en = {
           dueNowFull: "Due today (paid in full)",
           balance: "Balance, due by {{date}}",
         },
+        payment: {
+          label: "How would you like to pay?",
+          deposit: "Deposit",
+          depositNote: "{{amount}} today, the rest later",
+          full: "Full amount",
+          fullNote: "{{amount}} today, nothing later",
+        },
         discount: {
           label: "Discount code",
           placeholder: "Have a code? Enter it here",

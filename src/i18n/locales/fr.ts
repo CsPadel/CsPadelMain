@@ -1077,6 +1077,13 @@ const fr = {
           dueNowFull: "À régler aujourd'hui (montant total)",
           balance: "Solde, à régler avant le {{date}}",
         },
+        payment: {
+          label: "Comment souhaitez-vous payer ?",
+          deposit: "Acompte",
+          depositNote: "{{amount}} aujourd'hui, le reste plus tard",
+          full: "Montant total",
+          fullNote: "{{amount}} aujourd'hui, rien ensuite",
+        },
         discount: {
           label: "Code de réduction",
           placeholder: "Vous avez un code ? Saisissez-le ici",

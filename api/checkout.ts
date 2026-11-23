@@ -39,6 +39,8 @@ interface CheckoutRequest {
   phone?: string;
   locale?: string;
   discountCode?: string;
+  /** 'full' to pay the whole retreat now; anything else pays the deposit. */
+  payment?: string;
 }
 
 function json(body: object, status = 200): Response {
@@ -107,7 +109,7 @@ export async function POST(request: Request): Promise<Response> {
   const discount = body.discountCode ? findDiscount(body.discountCode) : undefined;
   if (body.discountCode && !discount) return json({ error: 'invalid_discount' }, 400);
 
-  const q = quote(date, room, guests, discount);
+  const q = quote(date, room, guests, discount, { payInFull: body.payment === 'full' });
   const dates = formatDateRange(date.start, date.end);
   const roomLabel = room === 'shared' ? 'Shared room' : 'Private room';
   const name = `${body.firstName ?? ''} ${body.lastName ?? ''}`.trim().slice(0, 200);

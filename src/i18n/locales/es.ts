@@ -1077,6 +1077,13 @@ const es = {
           dueNowFull: "A pagar hoy (importe total)",
           balance: "Saldo, a pagar antes del {{date}}",
         },
+        payment: {
+          label: "¿Cómo quieres pagar?",
+          deposit: "Depósito",
+          depositNote: "{{amount}} hoy, el resto más adelante",
+          full: "Importe total",
+          fullNote: "{{amount}} hoy, nada más adelante",
+        },
         discount: {
           label: "Código de descuento",
           placeholder: "¿Tienes un código? Escríbelo aquí",

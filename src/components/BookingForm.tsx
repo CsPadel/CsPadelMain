@@ -8,6 +8,7 @@ import { usePageTranslation } from '../i18n/usePageTranslation';
 import { ENQUIRY_ENDPOINT } from '../constants/forms';
 import { getWhatsAppConciergeUrl } from '../constants/urls';
 import {
+  DEPOSIT_PER_PERSON,
   MENORCA_2027_DATES,
   MAX_GUESTS,
   ROOM_TYPES,
@@ -61,10 +62,10 @@ function newBookingRef(date: RetreatDate) {
 }
 
 const inputClass =
-  'w-full bg-transparent border-b border-white/18 pb-3 text-white text-base font-light ' +
-  'focus:outline-none focus:border-brand-gold transition-colors placeholder:text-white/25';
+  'w-full bg-transparent border-b border-brand-dark/25 pb-3 text-brand-dark text-base font-light ' +
+  'focus:outline-none focus:border-brand-gold transition-colors placeholder:text-brand-dark/40';
 
-const labelClass = 'block text-[9px] uppercase tracking-[0.28em] text-white/40 mb-3 font-semibold';
+const labelClass = 'block text-[9px] uppercase tracking-[0.28em] text-brand-dark/55 mb-3 font-semibold';
 
 interface Details {
   firstName: string;
@@ -111,24 +112,24 @@ function DatePicker({
         aria-haspopup="listbox"
         aria-expanded={open}
         className={`w-full flex items-center justify-between gap-4 px-5 py-4 rounded-card border text-left transition-colors ${
-          open ? 'border-brand-gold bg-brand-gold/5' : 'border-white/15 hover:border-brand-gold/50'
+          open ? 'border-brand-gold bg-brand-gold/5' : 'border-brand-dark/20 hover:border-brand-gold/50'
         }`}
       >
         <span>
-          <span className="block text-white text-base font-light">{formatRange(value, locale)}</span>
-          <span className="block text-white/40 text-xs font-light mt-0.5">
+          <span className="block text-brand-dark text-base font-light">{formatRange(value, locale)}</span>
+          <span className="block text-brand-dark/55 text-xs font-light mt-0.5">
             {t('bookingForm.retreat.fromPrice', { price: gbp(value.prices.shared, locale) })}
           </span>
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-brand-gold flex-shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-brand-gold-deep flex-shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
         />
       </button>
 
       {open && (
         <ul
           role="listbox"
-          className="mt-2 rounded-card border border-white/12 bg-brand-dark overflow-hidden divide-y divide-white/6"
+          className="mt-2 rounded-card border border-brand-dark/15 bg-white overflow-hidden divide-y divide-brand-dark/8"
         >
           {MENORCA_2027_DATES.map((date) => {
             const available = isBookable(date);
@@ -143,15 +144,15 @@ function DatePicker({
                     setOpen(false);
                   }}
                   className={`w-full flex items-center justify-between gap-4 px-5 py-3.5 text-left transition-colors ${
-                    selected ? 'bg-brand-gold/10' : 'hover:bg-white/5'
+                    selected ? 'bg-brand-gold/10' : 'hover:bg-brand-dark/5'
                   } disabled:opacity-40 disabled:cursor-not-allowed`}
                 >
-                  <span className="text-sm font-light text-white">{formatRange(date, locale)}</span>
-                  <span className="flex items-center gap-3 text-xs font-light text-white/50">
+                  <span className="text-sm font-light text-brand-dark">{formatRange(date, locale)}</span>
+                  <span className="flex items-center gap-3 text-xs font-light text-brand-dark/60">
                     {available
                       ? t('bookingForm.retreat.fromPrice', { price: gbp(date.prices.shared, locale) })
                       : t('bookingForm.retreat.soldOut')}
-                    {selected && <Check className="w-3.5 h-3.5 text-brand-gold" />}
+                    {selected && <Check className="w-3.5 h-3.5 text-brand-gold-deep" />}
                   </span>
                 </button>
               </li>
@@ -183,6 +184,7 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
   const [discount, setDiscount] = useState<Discount | undefined>();
   const [codeInput, setCodeInput] = useState('');
   const [codeError, setCodeError] = useState(false);
+  const [payInFull, setPayInFull] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<'idle' | 'sending' | 'requested' | 'failed'>('idle');
   const [waHref, setWaHref] = useState<string | null>(null);
@@ -201,6 +203,7 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
     setDiscount(undefined);
     setCodeInput('');
     setCodeError(false);
+    setPayInFull(false);
     setError(null);
     setStatus('idle');
   }, [open, firstOpen]);
@@ -223,7 +226,9 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
   }, [stepIndex, status]);
 
   const step: Step = STEPS[stepIndex];
-  const q = quote(date, room, guests, discount);
+  const q = quote(date, room, guests, discount, { payInFull });
+  // Inside the 21-day window the full amount is due anyway: no choice to make.
+  const mustPayInFull = quote(date, room, guests).payingInFull;
 
   const applyCode = () => {
     const found = findDiscount(codeInput);
@@ -279,6 +284,7 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
       discountPercent: q.discountPercent,
       discount: q.discount,
       total: q.total,
+      payment: q.payingInFull ? 'full' : 'deposit',
       dueNow: q.dueNow,
       balance: q.balance,
       balanceDue: q.balanceDue,
@@ -367,7 +373,7 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             onClick={onClose}
-            className="fixed inset-0 bg-brand-dark/85 backdrop-blur-sm z-[100]"
+            className="fixed inset-0 bg-brand-dark/70 backdrop-blur-sm z-[100]"
           />
 
           <motion.div
@@ -379,18 +385,18 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
             exit={{ opacity: 0, scale: 0.97, y: 16 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-xl
-                       bg-brand-dark-2 z-[110] border border-white/10 rounded-card shadow-2xl
+                       bg-brand-ivory z-[110] border border-brand-dark/12 rounded-card shadow-2xl
                        flex flex-col max-h-[88vh] overflow-hidden"
           >
             {/* ── Header ── */}
-            <div className="flex-shrink-0 px-7 md:px-10 pt-7 pb-5 border-b border-white/8">
+            <div className="flex-shrink-0 px-7 md:px-10 pt-7 pb-5 border-b border-brand-dark/10">
               <div className="flex items-start justify-between gap-4 mb-5">
                 <div>
-                  <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold mb-2">
+                  <p className="text-[9px] uppercase tracking-[0.38em] text-brand-gold-deep font-semibold mb-2">
                     {t('bookingForm.eyebrow')}
                   </p>
                   <h2
-                    className="text-2xl md:text-3xl font-light text-white leading-tight"
+                    className="text-2xl md:text-3xl font-light text-brand-dark leading-tight"
                     style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
                   >
                     {t('bookingForm.title')}
@@ -400,12 +406,12 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                   type="button"
                   onClick={onClose}
                   aria-label={t('enquiryForm.close')}
-                  className="text-white/40 hover:text-white transition-colors p-1.5 -mr-1.5 -mt-1 rounded-md hover:bg-white/5"
+                  className="text-brand-dark/55 hover:text-brand-dark transition-colors p-1.5 -mr-1.5 -mt-1 rounded-md hover:bg-brand-dark/5"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              <div className="h-px w-full bg-white/10" aria-hidden="true">
+              <div className="h-px w-full bg-brand-dark/10" aria-hidden="true">
                 <motion.div
                   className="h-px bg-brand-gold"
                   animate={{ width: `${progress}%` }}
@@ -419,15 +425,15 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
               {status === 'requested' ? (
                 <div className="py-10 text-center">
                   <div className="w-14 h-14 rounded-full border border-brand-gold/40 bg-brand-gold/10 flex items-center justify-center mx-auto mb-7">
-                    <Check className="w-6 h-6 text-brand-gold" />
+                    <Check className="w-6 h-6 text-brand-gold-deep" />
                   </div>
                   <h3
-                    className="text-2xl font-light text-white mb-4"
+                    className="text-2xl font-light text-brand-dark mb-4"
                     style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
                   >
                     {t('bookingForm.requested.title')}
                   </h3>
-                  <p className="text-white/50 text-sm font-light leading-relaxed max-w-sm mx-auto">
+                  <p className="text-brand-dark/60 text-sm font-light leading-relaxed max-w-sm mx-auto">
                     {t('bookingForm.requested.body', { amount: gbp(q.dueNow, locale) })}
                   </p>
                 </div>
@@ -438,10 +444,10 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.25, ease: 'easeOut' }}
                 >
-                  <p className="text-white text-lg md:text-xl font-light leading-snug mb-2">
+                  <p className="text-brand-dark text-lg md:text-xl font-light leading-snug mb-2">
                     {t(`bookingForm.${step}.question`)}
                   </p>
-                  <p className="text-white/40 text-sm font-light leading-relaxed mb-8">
+                  <p className="text-brand-dark/55 text-sm font-light leading-relaxed mb-8">
                     {t(`bookingForm.${step}.help`)}
                   </p>
 
@@ -466,25 +472,25 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                                 className={`text-left px-5 py-4 rounded-card border transition-all duration-200 ${
                                   selected
                                     ? 'border-brand-gold bg-brand-gold/10'
-                                    : 'border-white/12 hover:border-brand-gold/45'
+                                    : 'border-brand-dark/15 hover:border-brand-gold/45'
                                 }`}
                               >
                                 <span className="flex items-center justify-between gap-3">
-                                  <span className="text-white text-sm font-light tracking-wide">
+                                  <span className="text-brand-dark text-sm font-light tracking-wide">
                                     {t(`bookingForm.retreat.rooms.${value}.name`)}
                                   </span>
-                                  {selected && <Check className="w-3.5 h-3.5 text-brand-gold" />}
+                                  {selected && <Check className="w-3.5 h-3.5 text-brand-gold-deep" />}
                                 </span>
                                 <span
-                                  className="block text-brand-gold text-xl mt-1"
+                                  className="block text-brand-gold-deep text-xl mt-1"
                                   style={{ fontFamily: 'var(--font-display)' }}
                                 >
                                   {gbp(date.prices[value], locale)}
-                                  <span className="text-white/40 text-xs font-light ml-1.5" style={{ fontFamily: 'inherit' }}>
+                                  <span className="text-brand-dark/55 text-xs font-light ml-1.5" style={{ fontFamily: 'inherit' }}>
                                     {t('bookingForm.retreat.perPerson')}
                                   </span>
                                 </span>
-                                <span className="block text-white/45 text-xs font-light leading-relaxed mt-2">
+                                <span className="block text-brand-dark/60 text-xs font-light leading-relaxed mt-2">
                                   {t(`bookingForm.retreat.rooms.${value}.description`)}
                                 </span>
                               </button>
@@ -501,11 +507,11 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                             onClick={() => setGuests((g) => Math.max(1, g - 1))}
                             disabled={guests <= 1}
                             aria-label={t('bookingForm.retreat.fewerGuests')}
-                            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-brand-gold disabled:opacity-30 transition-colors"
+                            className="w-10 h-10 rounded-full border border-brand-dark/25 flex items-center justify-center text-brand-dark hover:border-brand-gold disabled:opacity-30 transition-colors"
                           >
                             <Minus className="w-4 h-4" />
                           </button>
-                          <span className="text-white text-2xl font-light w-6 text-center" aria-live="polite">
+                          <span className="text-brand-dark text-2xl font-light w-6 text-center" aria-live="polite">
                             {guests}
                           </span>
                           <button
@@ -513,12 +519,12 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                             onClick={() => setGuests((g) => Math.min(MAX_GUESTS, g + 1))}
                             disabled={guests >= MAX_GUESTS}
                             aria-label={t('bookingForm.retreat.moreGuests')}
-                            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-brand-gold disabled:opacity-30 transition-colors"
+                            className="w-10 h-10 rounded-full border border-brand-dark/25 flex items-center justify-center text-brand-dark hover:border-brand-gold disabled:opacity-30 transition-colors"
                           >
                             <Plus className="w-4 h-4" />
                           </button>
                         </div>
-                        <p className="text-white/35 text-xs font-light mt-3">
+                        <p className="text-brand-dark/50 text-xs font-light mt-3">
                           {t('bookingForm.retreat.groupNote', { max: MAX_GUESTS })}
                         </p>
                       </div>
@@ -593,8 +599,8 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                               aria-pressed={details.level === value}
                               className={`px-3 py-3 rounded-card border text-sm font-light transition-all duration-200 ${
                                 details.level === value
-                                  ? 'border-brand-gold bg-brand-gold/10 text-white'
-                                  : 'border-white/12 text-white/70 hover:border-brand-gold/45 hover:text-white'
+                                  ? 'border-brand-gold bg-brand-gold/10 text-brand-dark'
+                                  : 'border-brand-dark/15 text-brand-dark/75 hover:border-brand-gold/45 hover:text-brand-dark'
                               }`}
                             >
                               {t(`bookingForm.details.levels.${value}`)}
@@ -622,13 +628,13 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                           onChange={(e) => setDetail('terms', e.target.checked)}
                           className="mt-0.5 w-4 h-4 accent-brand-gold flex-shrink-0"
                         />
-                        <span className="text-white/45 text-xs font-light leading-relaxed group-hover:text-white/65 transition-colors">
+                        <span className="text-brand-dark/60 text-xs font-light leading-relaxed group-hover:text-brand-dark/75 transition-colors">
                           {t('bookingForm.details.termsBefore')}{' '}
                           <a
                             href="/legal/terms-and-conditions"
                             target="_blank"
                             rel="noopener"
-                            className="text-brand-gold underline underline-offset-2"
+                            className="text-brand-gold-deep underline underline-offset-2"
                           >
                             {t('bookingForm.details.termsLink')}
                           </a>{' '}
@@ -637,7 +643,7 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                             href="/legal/privacy-policy"
                             target="_blank"
                             rel="noopener"
-                            className="text-brand-gold underline underline-offset-2"
+                            className="text-brand-gold-deep underline underline-offset-2"
                           >
                             {t('bookingForm.details.privacyLink')}
                           </a>
@@ -648,19 +654,55 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                   )}
 
                   {/* Price summary, on both steps */}
-                  <div className="mt-9 rounded-card border border-white/10 bg-white/[0.03] p-5">
-                    <p className="text-white text-sm font-light mb-4">
+                  <div className="mt-9 rounded-card border border-brand-dark/12 bg-white p-5">
+                    <p className="text-brand-dark text-sm font-light mb-4">
                       {formatRange(date, locale)} · {t(`bookingForm.retreat.rooms.${room}.name`)} ·{' '}
                       {t('bookingForm.summary.guests', { count: guests })}
                     </p>
+
+                    {!mustPayInFull && (
+                      <fieldset className="mb-5">
+                        <legend className={labelClass}>{t('bookingForm.payment.label')}</legend>
+                        <div className="grid grid-cols-2 gap-2.5">
+                          {([false, true] as const).map((full) => {
+                            const selected = payInFull === full;
+                            return (
+                              <button
+                                key={String(full)}
+                                type="button"
+                                onClick={() => setPayInFull(full)}
+                                aria-pressed={selected}
+                                className={`text-left px-4 py-3 rounded-card border transition-all duration-200 ${
+                                  selected
+                                    ? 'border-brand-gold bg-brand-gold/10'
+                                    : 'border-brand-dark/15 hover:border-brand-gold/45'
+                                }`}
+                              >
+                                <span className="flex items-center justify-between gap-2 text-brand-dark text-sm font-light">
+                                  {t(full ? 'bookingForm.payment.full' : 'bookingForm.payment.deposit')}
+                                  {selected && <Check className="w-3.5 h-3.5 text-brand-gold-deep flex-shrink-0" />}
+                                </span>
+                                <span className="block text-brand-dark/60 text-xs font-light leading-relaxed mt-1">
+                                  {full
+                                    ? t('bookingForm.payment.fullNote', { amount: gbp(q.total, locale) })
+                                    : t('bookingForm.payment.depositNote', {
+                                        amount: gbp(DEPOSIT_PER_PERSON * guests, locale),
+                                      })}
+                                </span>
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </fieldset>
+                    )}
                     <dl className="flex flex-col gap-2 text-sm font-light">
                       {discount && (
                         <>
-                          <div className="flex justify-between gap-4 text-white/40">
+                          <div className="flex justify-between gap-4 text-brand-dark/55">
                             <dt>{t('bookingForm.summary.subtotal')}</dt>
                             <dd className="line-through">{gbp(q.subtotal, locale)}</dd>
                           </div>
-                          <div className="flex justify-between gap-4 text-brand-gold/90">
+                          <div className="flex justify-between gap-4 text-brand-gold-deep">
                             <dt>
                               {t('bookingForm.summary.discount', { code: discount.code, percent: discount.percent })}
                             </dt>
@@ -668,16 +710,16 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                           </div>
                         </>
                       )}
-                      <div className="flex justify-between gap-4 text-white/55">
+                      <div className="flex justify-between gap-4 text-brand-dark/65">
                         <dt>{t('bookingForm.summary.total')}</dt>
                         <dd>{gbp(q.total, locale)}</dd>
                       </div>
-                      <div className="flex justify-between gap-4 text-white">
+                      <div className="flex justify-between gap-4 text-brand-dark">
                         <dt>{q.payingInFull ? t('bookingForm.summary.dueNowFull') : t('bookingForm.summary.dueNow')}</dt>
-                        <dd className="text-brand-gold">{gbp(q.dueNow, locale)}</dd>
+                        <dd className="text-brand-gold-deep">{gbp(q.dueNow, locale)}</dd>
                       </div>
                       {!q.payingInFull && (
-                        <div className="flex justify-between gap-4 text-white/40 text-xs">
+                        <div className="flex justify-between gap-4 text-brand-dark/55 text-xs">
                           <dt>
                             {t('bookingForm.summary.balance', {
                               date: formatDate(q.balanceDue, locale, { day: 'numeric', month: 'long', year: 'numeric' }),
@@ -689,17 +731,17 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                     </dl>
 
                     {/* Discount code */}
-                    <div className="mt-5 pt-5 border-t border-white/8">
+                    <div className="mt-5 pt-5 border-t border-brand-dark/10">
                       <label className={labelClass} htmlFor="booking-discount">
                         {t('bookingForm.discount.label')}
                       </label>
                       {discount ? (
                         <div className="flex items-center justify-between gap-4">
-                          <p className="flex items-center gap-2 text-sm font-light text-white">
-                            <Check className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                          <p className="flex items-center gap-2 text-sm font-light text-brand-dark">
+                            <Check className="w-4 h-4 text-brand-gold-deep flex-shrink-0" />
                             <span>
-                              <span className="text-brand-gold">{discount.code}</span>{' '}
-                              <span className="text-white/55">
+                              <span className="text-brand-gold-deep">{discount.code}</span>{' '}
+                              <span className="text-brand-dark/65">
                                 {t('bookingForm.discount.applied', { percent: discount.percent })}
                               </span>
                             </span>
@@ -707,7 +749,7 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                           <button
                             type="button"
                             onClick={removeCode}
-                            className="text-[10px] uppercase tracking-[0.22em] font-semibold text-white/35 hover:text-white/75 transition-colors"
+                            className="text-[10px] uppercase tracking-[0.22em] font-semibold text-brand-dark/50 hover:text-brand-dark/85 transition-colors"
                           >
                             {t('bookingForm.discount.remove')}
                           </button>
@@ -741,13 +783,13 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
                               type="button"
                               onClick={applyCode}
                               disabled={!codeInput.trim()}
-                              className="flex-shrink-0 px-4 py-2 rounded-full border border-brand-gold/60 text-brand-gold text-[10px] uppercase tracking-[0.22em] font-semibold hover:bg-brand-gold hover:text-brand-dark disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                              className="flex-shrink-0 px-4 py-2 rounded-full border border-brand-gold/60 text-brand-gold-deep text-[10px] uppercase tracking-[0.22em] font-semibold hover:bg-brand-gold hover:text-brand-dark disabled:opacity-30 disabled:pointer-events-none transition-colors"
                             >
                               {t('bookingForm.discount.apply')}
                             </button>
                           </div>
                           {codeError && (
-                            <p id="booking-discount-error" role="alert" className="text-brand-gold text-xs font-light mt-3">
+                            <p id="booking-discount-error" role="alert" className="text-brand-gold-deep text-xs font-light mt-3">
                               {t('bookingForm.discount.invalid')}
                             </p>
                           )}
@@ -759,14 +801,14 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
               )}
 
               {error && (
-                <p role="alert" className="text-brand-gold text-xs font-light mt-6">
+                <p role="alert" className="text-brand-gold-deep text-xs font-light mt-6">
                   {error}
                 </p>
               )}
 
               {status === 'failed' && (
                 <div role="alert" className="mt-6 rounded-card border border-brand-gold/30 bg-brand-gold/5 p-5">
-                  <p className="text-brand-gold text-xs font-light leading-relaxed mb-4">
+                  <p className="text-brand-gold-deep text-xs font-light leading-relaxed mb-4">
                     {t('bookingForm.errors.submit')}
                   </p>
                   {waHref && (
@@ -786,13 +828,13 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
 
             {/* ── Footer ── */}
             {status !== 'requested' && (
-              <div className="flex-shrink-0 px-7 md:px-10 py-5 border-t border-white/8 flex items-center justify-between gap-4">
+              <div className="flex-shrink-0 px-7 md:px-10 py-5 border-t border-brand-dark/10 flex items-center justify-between gap-4">
                 <button
                   type="button"
                   onClick={goBack}
                   disabled={stepIndex === 0}
                   className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] font-semibold
-                             text-white/35 hover:text-white/75 disabled:opacity-0 disabled:pointer-events-none
+                             text-brand-dark/50 hover:text-brand-dark/85 disabled:opacity-0 disabled:pointer-events-none
                              transition-colors"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
