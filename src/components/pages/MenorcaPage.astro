@@ -190,6 +190,50 @@ const toStrip = (photos: string[], alts: readonly string[]) =>
     {/* ── The Itinerary ── */}
     <MenorcaItinerary client:visible eyebrow={c.itineraryEyebrow} title={c.itineraryTitle} ariaLabel={c.itineraryAriaLabel} days={itineraryDays} />
 
+    {/* ── Book your spot (above the gallery) ── */}
+    <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
+      <img
+        src="/imagenes/cms/menorca-closing-dining.jpg"
+        srcset={srcSet('/imagenes/cms/menorca-closing-dining.jpg')}
+        sizes="100vw"
+        alt={c.closingImageAlt}
+        loading="lazy"
+        decoding="async"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(to bottom, rgba(1,25,44,0.55) 0%, rgba(1,25,44,0.7) 50%, rgba(1,25,44,0.95) 100%);"
+        aria-hidden="true"
+      />
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+          <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
+            {c.ctaEyebrow}
+          </p>
+          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
+        </div>
+        <h2
+          class="text-4xl md:text-5xl font-light text-white mb-5"
+          style="font-family: var(--font-display); font-style: italic;"
+        >
+          {c.ctaTitle}
+        </h2>
+        <p class="text-white/70 text-base font-light leading-relaxed mb-10 max-w-md mx-auto">
+          {c.ctaText}
+        </p>
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 max-w-sm sm:max-w-none mx-auto">
+          <BookingCta client:visible locale={locale} className="w-full sm:w-auto" />
+          <EnquiryCta client:visible locale={locale} label={c.ctaBtn} destination="menorca" className="w-full sm:w-auto" />
+        </div>
+        <p class="mt-8 text-white/80 text-lg font-light" style="font-family: var(--font-display); font-style: italic;">
+          {c.ctaPrice}
+        </p>
+        <p class="mt-1 text-white/40 text-xs font-light tracking-wide">{c.ctaPriceNote}</p>
+      </div>
+    </section>
+
     {/* ── Gallery ── */}
     <PhotoStrip
       client:visible
@@ -234,49 +278,6 @@ const toStrip = (photos: string[], alts: readonly string[]) =>
       </div>
     </section>
 
-    {/* ── Closing ── */}
-    <section class="relative py-32 px-8 md:px-16 text-center bg-brand-dark overflow-hidden">
-      <img
-        src="/imagenes/cms/menorca-closing-dining.jpg"
-        srcset={srcSet('/imagenes/cms/menorca-closing-dining.jpg')}
-        sizes="100vw"
-        alt={c.closingImageAlt}
-        loading="lazy"
-        decoding="async"
-        class="absolute inset-0 w-full h-full object-cover"
-      />
-      <div
-        class="absolute inset-0"
-        style="background: linear-gradient(to bottom, rgba(1,25,44,0.55) 0%, rgba(1,25,44,0.7) 50%, rgba(1,25,44,0.95) 100%);"
-        aria-hidden="true"
-      />
-      <div class="relative z-10 max-w-2xl mx-auto">
-        <div class="flex items-center justify-center gap-4 mb-6">
-          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-          <p class="text-[9px] uppercase tracking-[0.38em] text-brand-gold font-semibold">
-            {c.ctaEyebrow}
-          </p>
-          <span class="block h-px w-7 bg-brand-gold/40" aria-hidden="true" />
-        </div>
-        <h2
-          class="text-4xl md:text-5xl font-light text-white mb-5"
-          style="font-family: var(--font-display); font-style: italic;"
-        >
-          {c.ctaTitle}
-        </h2>
-        <p class="text-white/70 text-base font-light leading-relaxed mb-10 max-w-md mx-auto">
-          {c.ctaText}
-        </p>
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 max-w-sm sm:max-w-none mx-auto">
-          <BookingCta client:visible locale={locale} className="w-full sm:w-auto" />
-          <EnquiryCta client:visible locale={locale} label={c.ctaBtn} destination="menorca" className="w-full sm:w-auto" />
-        </div>
-        <p class="mt-8 text-white/80 text-lg font-light" style="font-family: var(--font-display); font-style: italic;">
-          {c.ctaPrice}
-        </p>
-        <p class="mt-1 text-white/40 text-xs font-light tracking-wide">{c.ctaPriceNote}</p>
-      </div>
-    </section>
 
     <FooterIsland client:visible locale={locale} />
   </main>
