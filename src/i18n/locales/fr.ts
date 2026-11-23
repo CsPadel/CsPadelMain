@@ -133,7 +133,7 @@ const fr = {
             { q: "Combien coûte la retraite ?", a: "À partir de 1 850 £ par personne. Le prix dépend des dates choisies et peut changer jusqu'à la confirmation de votre réservation." },
             { q: "Qu'est-ce qui est inclus ?", a: "L'hébergement au Barceló Nura, tous les repas, le coaching et les matchs, le transport local, les activités et expériences sur l'île, et les transferts privés depuis et vers l'aéroport de Mahón." },
             { q: "Les vols sont-ils inclus ?", a: "Non. Les vols et l'assurance voyage ne sont pas inclus. Notre équipe peut vous conseiller sur les meilleurs itinéraires." },
-            { q: "Comment réserver ma place ?", a: "Un acompte de 150 £ par personne garantit votre place. Le solde total est dû 21 jours avant la date de début." },
+            { q: "Comment réserver ma place ?", a: "Un acompte de 150 £ par personne garantit votre place. Le solde total est dû 30 jours avant la date de début." },
             { q: "Et si je dois annuler ?", a: "Si vous annulez plus d'un mois avant la date de début, vous êtes intégralement remboursé, acompte compris. Les annulations à moins d'un mois de la date de début ne sont pas remboursées." },
             { q: "Un partenaire qui ne joue pas peut-il venir ?", a: "Oui. Les partenaires non joueurs sont les bienvenus, et leurs journées peuvent être pensées autour de ce qu'ils aiment." },
             { q: "Et les régimes alimentaires ?", a: "Indiquez-le-nous à la réservation et nous veillerons à ce que chaque repas de la retraite en tienne compte." },

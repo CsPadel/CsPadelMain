@@ -35,8 +35,8 @@ export const ROOM_TYPES: RoomType[] = ['shared', 'private'];
 
 /** From the booking terms: a £150 deposit per person secures a place. */
 export const DEPOSIT_PER_PERSON = 150;
-/** The total balance is due 21 days before the start date. */
-export const BALANCE_DUE_DAYS_BEFORE = 21;
+/** The total balance is due 30 days before the start date. */
+export const BALANCE_DUE_DAYS_BEFORE = 30;
 /** Bookings close 15 days before the start date. */
 export const BOOKING_CLOSES_DAYS_BEFORE = 15;
 /** Larger groups are a private retreat, handled through an enquiry. */
@@ -120,7 +120,7 @@ export function quote(
   const subtotalPence = pricePerPerson * 100 * guests;
   const totalPence = pricePerPerson * (100 - discountPercent) * guests;
   const balanceDue = balanceDueDate(date);
-  // Guests can choose to pay everything now. Inside the 21-day window the
+  // Guests can choose to pay everything now. Inside the 30-day window the
   // balance is already due, so they always pay it all.
   const payingInFull = Boolean(options.payInFull) || now.getTime() >= utcDate(balanceDue).getTime();
   const dueNowPence = payingInFull ? totalPence : DEPOSIT_PER_PERSON * 100 * guests;
