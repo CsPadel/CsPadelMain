@@ -1077,6 +1077,13 @@ const en = {
           dueNowFull: "Due today (paid in full)",
           balance: "Balance, due by {{date}}",
         },
+        payment: {
+          label: "How would you like to pay?",
+          deposit: "Deposit",
+          depositNote: "{{amount}} today, the rest later",
+          full: "Full amount",
+          fullNote: "{{amount}} today, nothing later",
+        },
         discount: {
           label: "Discount code",
           placeholder: "Have a code? Enter it here",
@@ -1102,7 +1109,7 @@ const en = {
         confirmed: {
           eyebrow: "Booking confirmed",
           title: "See you in Menorca.",
-          body: "Thank you – your deposit has been received and your place is secured. Stripe will email your receipt, and one of the founders will be in touch within 24 hours with everything you need for your retreat.",
+          body: "Thank you – your payment has been received and your place is secured. We have emailed you a confirmation with all the details, and one of the founders will be in touch within 24 hours with everything you need for your retreat.",
           ref: "Booking reference",
           back: "Back to Menorca",
         },

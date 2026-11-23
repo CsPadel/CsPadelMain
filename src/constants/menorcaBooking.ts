@@ -98,7 +98,7 @@ export interface BookingQuote {
   discount: number;
   /** What the guests pay for the retreat, after any discount. */
   total: number;
-  /** Charged now: the deposit, or the full amount once the balance is due. */
+  /** Charged now: the deposit, or the full amount (chosen, or once the balance is due). */
   dueNow: number;
   /** Left to pay after today (0 when paying in full). */
   balance: number;
@@ -111,16 +111,18 @@ export function quote(
   room: RoomType,
   guests: number,
   discount?: Discount,
-  now: Date = new Date(),
+  options: { payInFull?: boolean; now?: Date } = {},
 ): BookingQuote {
+  const now = options.now ?? new Date();
   const pricePerPerson = date.prices[room];
   const discountPercent = discount?.percent ?? 0;
   // Worked out in pence so a discounted price like £1,572.50 stays exact.
   const subtotalPence = pricePerPerson * 100 * guests;
   const totalPence = pricePerPerson * (100 - discountPercent) * guests;
   const balanceDue = balanceDueDate(date);
-  // Inside the 21-day window the balance is already due, so pay it all now.
-  const payingInFull = now.getTime() >= utcDate(balanceDue).getTime();
+  // Guests can choose to pay everything now. Inside the 21-day window the
+  // balance is already due, so they always pay it all.
+  const payingInFull = Boolean(options.payInFull) || now.getTime() >= utcDate(balanceDue).getTime();
   const dueNowPence = payingInFull ? totalPence : DEPOSIT_PER_PERSON * 100 * guests;
   return {
     pricePerPerson,

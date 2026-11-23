@@ -1077,6 +1077,13 @@ const es = {
           dueNowFull: "A pagar hoy (importe total)",
           balance: "Saldo, a pagar antes del {{date}}",
         },
+        payment: {
+          label: "¿Cómo quieres pagar?",
+          deposit: "Depósito",
+          depositNote: "{{amount}} hoy, el resto más adelante",
+          full: "Importe total",
+          fullNote: "{{amount}} hoy, nada más adelante",
+        },
         discount: {
           label: "Código de descuento",
           placeholder: "¿Tienes un código? Escríbelo aquí",
@@ -1102,7 +1109,7 @@ const es = {
         confirmed: {
           eyebrow: "Reserva confirmada",
           title: "Nos vemos en Menorca.",
-          body: "Gracias: hemos recibido tu depósito y tu plaza está asegurada. Stripe te enviará el recibo por email, y uno de los fundadores se pondrá en contacto contigo en menos de 24 horas con todo lo que necesitas para tu retiro.",
+          body: "Gracias: hemos recibido tu pago y tu plaza está asegurada. Te hemos enviado un email de confirmación con todos los detalles, y uno de los fundadores se pondrá en contacto contigo en menos de 24 horas con todo lo que necesitas para tu retiro.",
           ref: "Referencia de la reserva",
           back: "Volver a Menorca",
         },
