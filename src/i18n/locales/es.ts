@@ -133,7 +133,7 @@ const es = {
             { q: "¿Cuánto cuesta el retiro?", a: "Desde £1.850 por persona. El precio depende de las fechas que elijas y está sujeto a cambios hasta que se confirme tu reserva." },
             { q: "¿Qué incluye?", a: "Alojamiento en el Barceló Nura, todas las comidas, coaching y partidos, transporte local, actividades y experiencias en la isla, y traslados privados desde y hasta el aeropuerto de Mahón." },
             { q: "¿Están incluidos los vuelos?", a: "No. Los vuelos y el seguro de viaje no están incluidos. Nuestro equipo puede aconsejarte sobre las mejores rutas." },
-            { q: "¿Cómo reservo mi plaza?", a: "Un depósito de £150 por persona asegura tu plaza. El saldo total se paga 21 días antes de la fecha de inicio." },
+            { q: "¿Cómo reservo mi plaza?", a: "Un depósito de £150 por persona asegura tu plaza. El saldo total se paga 30 días antes de la fecha de inicio." },
             { q: "¿Y si tengo que cancelar?", a: "Si cancelas con más de 1 mes de antelación a la fecha de inicio, te devolvemos todo, incluido el depósito. Las cancelaciones con menos de 1 mes de antelación no tienen reembolso." },
             { q: "¿Puede venir una pareja que no juegue?", a: "Sí. Las parejas que no juegan son bienvenidas, y sus días se pueden adaptar a lo que más disfruten." },
             { q: "¿Y si tengo restricciones alimentarias?", a: "Indícanoslo al reservar y nos aseguraremos de que todas las comidas del retiro las tengan en cuenta." },

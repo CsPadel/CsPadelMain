@@ -133,7 +133,7 @@ const en = {
             { q: "How much does the retreat cost?", a: "From £1,850 per person. The price depends on the dates you choose, and is subject to change until your booking is confirmed." },
             { q: "What's included?", a: "Accommodation at Barceló Nura, all meals, coaching and matchplay, local transport, activities and island experiences, and private transfers to and from Mahón Airport." },
             { q: "Are flights included?", a: "No. Flights and travel insurance are not included. Our team can advise on the best routes." },
-            { q: "How do I secure my place?", a: "A £150 deposit per person secures your place. The total balance is due 21 days before the start date." },
+            { q: "How do I secure my place?", a: "A £150 deposit per person secures your place. The total balance is due 30 days before the start date." },
             { q: "What if I need to cancel?", a: "Cancel more than 1 month before the start date and you get a full refund, including your deposit. Cancellations less than 1 month before the start date are not refunded." },
             { q: "Can a non-playing partner come along?", a: "Yes. Non-playing partners are welcome, and their days can be shaped around what they enjoy." },
             { q: "What about dietary requirements?", a: "Tell us when you book and we will make sure every meal on the retreat accounts for them." },

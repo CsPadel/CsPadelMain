@@ -227,7 +227,7 @@ export function BookingFormModal({ open, onClose, locale: localeProp }: BookingF
 
   const step: Step = STEPS[stepIndex];
   const q = quote(date, room, guests, discount, { payInFull });
-  // Inside the 21-day window the full amount is due anyway: no choice to make.
+  // Inside the 30-day window the full amount is due anyway: no choice to make.
   const mustPayInFull = quote(date, room, guests).payingInFull;
 
   const applyCode = () => {
