@@ -1039,7 +1039,7 @@ const fr = {
           rooms: {
             shared: {
               name: "Chambre partagée",
-              description: "Deux personnes par chambre. Réservez avec votre partenaire ou un ami, ou nous vous associons à un autre participant.",
+              description: "Deux personnes par chambre.",
             },
             private: {
               name: "Chambre individuelle",

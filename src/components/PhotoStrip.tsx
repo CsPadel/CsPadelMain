@@ -66,6 +66,23 @@ export default function PhotoStrip({ locale, items, imageDir, tPrefix, copy, cla
     };
   }, [syncEdges]);
 
+  // On a laptop trackpad a gesture that starts over the strip latches onto it,
+  // so scrolling down the page stalls while the pointer is over the photos.
+  // Mostly-vertical wheel movement goes to the page; sideways swipes and
+  // dragging still move the strip.
+  useEffect(() => {
+    const el = scroller.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (e.ctrlKey || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+      e.preventDefault();
+      const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? window.innerHeight : 1;
+      window.scrollBy({ top: e.deltaY * unit, behavior: 'instant' });
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, []);
+
   const scrollBy = (direction: 1 | -1) => {
     scroller.current?.scrollBy({ left: direction * SCROLL_STEP, behavior: 'smooth' });
   };

@@ -1039,7 +1039,7 @@ const en = {
           rooms: {
             shared: {
               name: "Shared room",
-              description: "Two guests per room. Book with a partner or a friend, or we will pair you with another guest.",
+              description: "Two guests per room.",
             },
             private: {
               name: "Private room",
