@@ -29,13 +29,13 @@ export default function MenorcaItinerary({ eyebrow, title, ariaLabel = 'Menorca 
   const acts = current.activities;
 
   return (
-    <section id="itinerary" aria-label={ariaLabel} className="bg-brand-dark py-24 md:py-32 overflow-hidden">
+    <section id="itinerary" aria-label={ariaLabel} className="bg-brand-ivory py-24 md:py-32 overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 md:px-8">
 
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">{eyebrow}</p>
-          <h2 className="text-5xl md:text-6xl font-light text-white tracking-wide">{title}</h2>
+          <h2 className="text-5xl md:text-6xl font-light text-brand-dark tracking-wide">{title}</h2>
         </div>
 
         {/* Day tabs */}
@@ -48,7 +48,7 @@ export default function MenorcaItinerary({ eyebrow, title, ariaLabel = 'Menorca 
             >
               <span className="block text-[10px] font-mono text-brand-gold mb-1 tracking-widest">{day.dayStr}</span>
               <span className={`block text-[11px] md:text-xs uppercase tracking-[0.18em] font-medium transition-colors duration-150 ${
-                activeDay === idx ? 'text-white' : 'text-white/50 group-hover:text-white/70'
+                activeDay === idx ? 'text-brand-dark' : 'text-brand-dark/50 group-hover:text-brand-dark/70'
               }`}>
                 {day.label}
               </span>
@@ -61,7 +61,7 @@ export default function MenorcaItinerary({ eyebrow, title, ariaLabel = 'Menorca 
             </button>
           ))}
         </div>
-        <div className="w-full h-px bg-white/8 mb-12" />
+        <div className="w-full h-px bg-brand-dark/10 mb-12" />
 
         {/* Grid of Activities */}
         <AnimatePresence mode="wait">
@@ -79,7 +79,7 @@ export default function MenorcaItinerary({ eyebrow, title, ariaLabel = 'Menorca 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="flex flex-col bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden shadow-2xl hover:bg-white/10 transition-colors duration-300"
+                className="flex flex-col bg-white border border-brand-dark/8 rounded-2xl overflow-hidden shadow-[0_18px_40px_-24px_rgba(1,25,44,0.35)] transition-shadow duration-300 hover:shadow-[0_24px_50px_-24px_rgba(1,25,44,0.45)]"
               >
                 <div className="relative h-56 md:h-64 w-full overflow-hidden">
                   <img
@@ -102,7 +102,7 @@ export default function MenorcaItinerary({ eyebrow, title, ariaLabel = 'Menorca 
                   </div>
                 </div>
                 <div className="p-6 md:p-8 flex-1 flex flex-col justify-start">
-                  <h3 className="text-white text-2xl font-light leading-snug">
+                  <h3 className="text-brand-dark text-2xl font-light leading-snug">
                     {act.title}
                   </h3>
                 </div>
