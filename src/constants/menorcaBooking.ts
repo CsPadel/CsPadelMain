@@ -49,7 +49,7 @@ export const MAX_GUESTS = 6;
  * To add one: 'CODE': percent. To stop one: delete its line.
  */
 export const DISCOUNT_CODES: Record<string, number> = {
-  'PADEL&RESTORE': 15,
+  'PADEL&RESTORE': 10,
 };
 
 export interface Discount {
